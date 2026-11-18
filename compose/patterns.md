@@ -584,3 +584,126 @@ here because the buyer is public-sector and acceptance is formal.
   tracks is English- or Chinese-first — in India and Saudi Arabia that is a localisation
   project, not a dependency.
 
+
+## P11 — Read-only-first Moodle agent tier over MCP (added p893)
+
+### Why this pattern exists
+
+P2 already covers putting a governed AI tier over an existing Moodle or Canvas **without
+forking it**, and it does so over LTI 1.3. p893 established that a second seam now exists and is
+better suited to agents: **MCP** (see **T13**). LTI ships your tool *into* the LMS; MCP exposes
+the LMS *to* your agent. P11 is the MCP half, and it exists as its own pattern because of one
+property the LTI route does not have — **the community has already split read and write across
+two separately-maintained MIT servers**, which makes a genuinely read-only pilot a
+configuration choice rather than a promise.
+
+Use this when the client runs Moodle (the most-installed LMS on earth), wants agent access to
+real coursework, and has a data-protection function that will not approve write access to a
+gradebook on day one. Which is most of them.
+
+### Stack
+
+Every repo named is API-verified and licence byte-read in this KB as at 2026-11-18.
+
+**1. The LMS tool surface — staged by access posture**
+
+| Stage | Component | Repo | Licence | ★ |
+|---|---|---|---|---|
+| Pilot | **Read-only** Moodle MCP — courses, assignments, quizzes, deadlines, files | `Faixiang/Moodle-MCP` | MIT | 208 |
+| Pilot | Companion agent skill: diff new coursework, list unsubmitted work | `Faixiang/Moodle-Course-Watch` | MIT | 0 |
+| Graduation | **Read-write** Moodle MCP — forums, grades, files-as-markdown | `G36maid/moodle-mcp` | MIT | 30 |
+| Graduation (alt) | Write path with explicit idempotency guarantees | `MarcosNahuel/moodle-mcp` | MIT | 1 |
+| Open edX variant | Staff/superuser admin facade (Ulmo) + Tutor plugin | `blend-ed/openedx-mcp` · `blend-ed/tutor-contrib-openedxmcp` | AGPL-3.0 | 3 · 2 |
+
+**Do not use** `loyaniu/moodle-mcp` (58 ★) or `onbirdev/moodle-webservice_mcp` (19 ★): both
+were licence-checked this pass and **have no licence file**, which means all rights reserved
+regardless of how they are described elsewhere.
+
+**2. The agent tier — unchanged from P2, reused deliberately**
+
+| Component | Repo | Licence |
+|---|---|---|
+| Auditable orchestration — policy checks as explicit graph nodes | `langchain-ai/langgraph` | MIT |
+| Gateway, per-institution keys, budget caps, model portability | `BerriAI/litellm` | **MIT except `litellm/enterprise/`** |
+| Local / sovereign inference | `ollama/ollama` · `vllm-project/vllm` | MIT / Apache-2.0 |
+| Retrieval over course material the institution owns | `qdrant/qdrant` | Apache-2.0 |
+
+**3. The user-facing surface — still LTI, not MCP**
+
+| Component | Repo | Licence |
+|---|---|---|
+| LTI 1.3 / Advantage tool provider | `Cvmcosta/ltijs` | Apache-2.0 |
+
+MCP is how the agent reads the LMS. LTI is how the learner reaches the agent inside the LMS.
+A serious build uses both; using MCP for the user surface means rebuilding auth and launch
+context the LTI spec already solved.
+
+**4. The evaluation gate — non-optional**
+
+| Component | Repo | Licence |
+|---|---|---|
+| Pedagogical-ability benchmark | `AI-for-Education/pedagogy-benchmark` | MIT |
+| Prompt/LLM regression testing in CI | `promptfoo/promptfoo` | MIT |
+
+### How it wires together
+
+1. Stand up `Faixiang/Moodle-MCP` against a **non-production Moodle clone** with a scoped
+   service token. Read-only by construction, so the first conversation with the client's DPO is
+   about token scope, not about what the agent might overwrite.
+2. Put LangGraph in front of it. Every tool call the agent makes to the LMS passes a policy
+   node — which courses, which fields, whose data — and that node writes an audit record. This
+   is the part that is reusable when the client's regime changes; keep policy in configuration.
+3. Expose the learner-facing surface through `ltijs` so launch, identity and course context come
+   from the LTI launch rather than being reimplemented.
+4. Gate every release on `promptfoo` suites plus `pedagogy-benchmark`. A tutor that regresses
+   pedagogically but passes unit tests will ship otherwise.
+5. **Graduate to write scope as a separate, documented decision** — swap in `G36maid/moodle-mcp`
+   behind the same policy nodes. The audit trail from the read-only phase is the evidence that
+   makes that approval obtainable.
+
+### The design rules that make it defensible
+
+- **Scope the token, not the prompt.** These servers typically run with the operator's own API
+  token, so the agent inherits every permission that human has. A prompt instruction not to
+  touch grades is not a control. A token without the grade capability is.
+- **Read-only is a deployment artefact, not a claim.** The reason to use two separate servers
+  rather than one with a flag is that a flag is a configuration error away from being wrong,
+  and a server with no write code is not.
+- **Keep the agent out of the gradebook of record for as long as possible.** Under the EU AI
+  Act, assessment is Annex III high-risk from **2 December 2027**; under Oklahoma's rule AI-only
+  grading is already barred; California AB 1159 forecloses training on student data entirely.
+  Reading coursework to help a learner is a different regulatory object from writing a grade.
+- **Pin versions.** Five of the seven Moodle MCP servers were created in the last six months and
+  the ecosystem is unconsolidated. Vendor the one you choose.
+
+### Deliverables
+
+- A read-only Moodle agent tier running against the client's own course data, with a policy
+  node per tool call and a complete audit log.
+- A token-scoping specification and a DPO-facing note explaining why read-only is structural.
+- Eval suites wired into CI with a recorded pre-deployment baseline.
+- A written graduation plan to write scope, with the evidence requirements named up front.
+
+### Licence posture
+
+Clean. The Moodle servers, `ltijs`, LangGraph, Qdrant and both eval tools are MIT or
+Apache-2.0, and nothing here forks Moodle — so Moodle's GPL-3.0 stays on Moodle's side of the
+boundary and the client's tier can be closed. **Two exceptions to state explicitly:** the
+Open edX variant is **AGPL-3.0** and is vendor-maintained rather than foundation-maintained, and
+`litellm/enterprise/` must not be vendored.
+
+### Estimate
+
+**5–7 weeks** to a read-only pilot on a Moodle clone with policy nodes, audit and eval gates.
+Add **3–4 weeks** for the graduation to write scope, most of it approval rather than code.
+
+### Where it does not apply
+
+- **Not on Canvas** — use `vishalsachdev/canvas-mcp` (MIT, read-write) or `boyuchengz/canvas-mcp`
+  (MIT, read-only) in the same shape; the pattern transfers, the repos do not.
+- **Not where the client wants a closed derivative of the platform itself.** That is Mentingo
+  (MIT) or Artemis (MIT) and pattern **P1**, not an integration over somebody else's GPL core.
+- **Not as a shortcut past LTI.** If the deliverable is a learner-facing tool inside the LMS,
+  MCP alone will cost more than it saves.
+- **Not where Moodle HQ support is a procurement requirement.** Moodle HQ has published no MCP
+  server; every option here is community-maintained, and that must be said before signature.

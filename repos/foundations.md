@@ -45,6 +45,9 @@ same agent ships into Canvas, Moodle and Open edX.
 | https://github.com/1EdTech/openbadges-validator-core | Apache-2.0 | Open Badges validation; the credentialing/micro-credential layer, 61 ★. **Last push 2025-11-04 (379 days idle)** — the spec is stable, but expect to maintain this yourself. |
 | https://github.com/Citolab/qti-components | GPL-3.0 | QTI 3 web components for assessment item rendering. Copyleft — keep it at arm's length in a proprietary build. |
 | https://github.com/apereo/cas | Apache-2.0 | Central Authentication Service. The SSO incumbent in higher education. |
+| https://github.com/Faixiang/Moodle-MCP | MIT | **Added p893.** Zero-dependency MCP server over the Moodle Web Service API — **read-only**. The MCP counterpart to LTI: where `ltijs` ships your tool *into* the LMS, this exposes the LMS *to* an agent. |
+| https://github.com/G36maid/moodle-mcp | MIT | **Added p893.** Read-**write** Moodle MCP — courses, assignments, forums, grades, files-as-markdown. The graduation step from the read-only server above. |
+| https://github.com/blend-ed/openedx-mcp | AGPL-3.0 | **Added p893.** Open edX staff/superuser admin as an MCP facade (Ulmo), native platform APIs only. Vendor-maintained, not a foundation project — see `agents/top.md`. |
 
 ## Learning analytics (xAPI / LRS)
 
@@ -139,6 +142,7 @@ identified.
 | https://github.com/HumanSignal/label-studio | Apache-2.0 | Human annotation across modalities — rubric calibration, grading gold sets. |
 | https://github.com/argilla-io/argilla | Apache-2.0 | Feedback collection and dataset curation with domain experts (here: teachers). |
 | https://github.com/AI-for-Education/pedagogy-benchmark | MIT | Pedagogical-ability benchmark. Pairs with the harness above as an education-specific eval gate. |
+| https://github.com/acheamponge/wassce-benchmark | MIT | **Added p893.** Open LLMs scored against the **WASSCE**, the West African school-leaving exam ~2 million candidates sit annually. The only African-curriculum open eval asset found in four regional legs. Small (4 ★) and last pushed 2026-04-07 — a starting corpus, not a maintained harness. |
 
 ## Other infrastructure
 

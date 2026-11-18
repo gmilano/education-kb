@@ -24,6 +24,15 @@ routes that work. Stars are as at 2026-11-18, **remeasured in pass p890** (DeepT
 60,000-star repo. Star counts are a **daily** metric; remeasuring hourly buys nothing and the
 call budget belongs in regional research instead.
 
+**p893 (this pass) ran a full discovery leg and it changed the table's shape.** Ten agents were
+added — the largest single-pass addition this KB has made — including **LearnHarness
+(AGPL-3.0, 10,002 ★)**, which did not exist on 16 October 2026 and is now the third-largest open
+education agent in the world. p893 also closed the table's most embarrassing hole: **there was
+no Moodle MCP server in it**, despite Moodle being the most-installed LMS on earth. There are
+now two, MIT, read-only and read-write. The two giants were spot-checked rather than fully
+swept (`DeepTutor` 60,235 → **60,258**, `OpenMAIC` 43,868 → **43,874**), consistent with the
+daily cadence finding below. **Full sweep still due 2026-11-19.**
+
 **p892 spot-checked again** (`DeepTutor` 60,210 → **60,235**, `OpenMAIC` 43,859 → **43,868**,
 every row below 40k ★ unchanged) — a third consecutive confirmation of the daily cadence. p892
 spent its budget on the two gaps `intel/market.md` named highest-value (**India**, **Saudi
@@ -44,8 +53,15 @@ Sorted by stars.
 
 | Agent | Repo | Licence | ★ | Last push | What it does | Origin |
 |---|---|---|---|---|---|---|
-| **DeepTutor** | https://github.com/HKUDS/DeepTutor | Apache-2.0 | 60,186 | 2026-11-15 | Agentic personalised tutoring grounded in the student's own material, with persistent learning history. Hit #1 on GitHub trending 28 Oct 2026; first released Dec 2025. Paper: arXiv 2604.26962. **The single largest open education agent in existence.** | APAC — HKU Data Intelligence Lab |
-| **OpenMAIC** | https://github.com/THU-MAIC/OpenMAIC | MIT | 43,859 | 2026-11-18 | Multi-agent AI classroom: agents generate slides, quizzes and project-based activities and grade quiz answers. `v1.4.2` (2026-11-09) added course-level undo for manual edits and agent runs. Relicensed to MIT at `v0.3.0`, Jun 2026. | APAC — Tsinghua University |
+| **DeepTutor** | https://github.com/HKUDS/DeepTutor | Apache-2.0 | 60,258 | 2026-11-18 | Agentic personalised tutoring grounded in the student's own material, with persistent learning history. Hit #1 on GitHub trending 28 Oct 2026; first released Dec 2025. Paper: arXiv 2604.26962. **The single largest open education agent in existence.** | APAC — HKU Data Intelligence Lab |
+| **OpenMAIC** | https://github.com/THU-MAIC/OpenMAIC | MIT | 43,874 | 2026-11-18 | Multi-agent AI classroom: agents generate slides, quizzes and project-based activities and grade quiz answers. `v1.4.2` (2026-11-09) added course-level undo for manual edits and agent runs. Relicensed to MIT at `v0.3.0`, Jun 2026. | APAC — Tsinghua University |
+| **LearnHarness** | https://github.com/amosblomqvist/learnharness | **AGPL-3.0** | 10,002 | 2026-11-12 | Desktop agent harness that *measures* what the learner understands before it teaches: probe → dependency-map the route to the goal → teach one reasoning step at a time → separate retrieval-practice sessions, all carried across sessions by a persistent knowledge graph. **Added p893. Created 2026-10-16 — 0 → 10,002 ★ in 27 days, the fastest growth this KB has recorded for any education repo**, and now the third-largest open education agent in existence. **AGPL-3.0, byte-read from `LICENSE@main`. Not usable in a closed derivative** — read it as the reference design for learner-state modelling, the capability every other tutor in this table lacks. No published learning-outcome study; users report being tested before being taught. | Global |
+| **frametell** | https://github.com/sitor-ai/frametell | **AGPL-3.0** | 513 | 2026-11-12 | Turns source material into explainer videos via an "AI director" agent. Local-first and model-agnostic. **Added p893.** The only open *content-production* agent in this table — courseware generation rather than tutoring. AGPL. | Global |
+| **ai-shifu** | https://github.com/ai-shifu/ai-shifu | Apache-2.0 | 332 | 2026-11-18 | Author a course by typing it: the AI delivers the teaching and answers questions inside the flow the author scripted. **Added p893.** Permissive, pushed today, and the clearest open example of *authored* AI teaching — the script constrains the model, which is the control structure Oklahoma-style "no AI-only" rules actually require. | APAC |
+| **Moodle-MCP** (Faixiang) | https://github.com/Faixiang/Moodle-MCP | MIT | 208 | 2026-11-01 | Zero-dependency MCP server over the Moodle Web Service API: courses, assignments, quizzes, deadlines, files. **Read-only by design.** **Added p893 — the first Moodle MCP server this table has ever carried**, which was a hole given Moodle is the most-installed LMS on earth. Ships a companion agent skill, https://github.com/Faixiang/Moodle-Course-Watch (MIT, 0 ★), that diffs new coursework and lists what is still unsubmitted. README localised into 10 languages. | APAC |
+| **edumcp** | https://github.com/aieducations/edumcp | Apache-2.0 | 155 | 2025-05-05 | An attempt to standardise MCP for education applications. **Added p893 as a cautionary entry: 155 ★ and untouched since May 2025.** The idea was early and right; the project is dormant. Read the protocol sketch, do not depend on it. | Global |
+| **gen-mentor** | https://github.com/GeminiLight/gen-mentor | **CC0-1.0** | 137 | 2026-10-23 | Reference implementation for *GenMentor* (WWW '25 oral): a multi-agent framework for goal-oriented, skill-gap-aware learning — it infers the gap between the learner's current skills and a target role, then plans content against it. **Added p893.** **Licence is CC0-1.0, byte-read** — a public-domain dedication, not a software licence, so it carries no patent grant and no warranty disclaimer. Legally the most permissive row here and the least conventional; have counsel confirm before shipping it. | APAC |
+| **Mentingo** | https://github.com/Selleo/mentingo | MIT | 109 | 2026-11-18 | Self-hosted **AI-native LMS** with a built-in AI mentor and role-play, white-label and multi-tenant, Postgres + pgvector, one-click AWS Marketplace deploy. **Added p893.** Listed here *and* in `verticals/solutions.md` because it is genuinely both. **Its significance is the licence: an MIT LMS.** This KB's first structural finding is that the platforms clients run are copyleft — Mentingo is the counter-example, and therefore the shortest route to a closed, branded derivative. Corporate L&D and compliance training, not K-12. | EMEA — Poland |
 | **canvas-mcp** (Sachdev) | https://github.com/vishalsachdev/canvas-mcp | MIT | 334 | 2026-11-18 | MCP server exposing Canvas LMS — courses, assignments, submissions — as agent tools. | North America — USA |
 | **BloomTutor** | https://github.com/Li-Evan/BloomTutor | MIT | 315 | 2026-11-17 | Tutor that structures interaction around Bloom's taxonomy levels. | APAC |
 | **OATutor** | https://github.com/CAHLR/OATutor | MIT | 282 | 2026-11-17 | Intelligent tutoring system with open problem banks and tutoring-effect instrumentation; built for A/B-testable learning research. | North America — UC Berkeley |
@@ -59,6 +75,9 @@ Sorted by stars.
 | **TeachMeCoding** | https://github.com/liangxiao777/TeachMeCoding | Apache-2.0 | 73 | 2026-10-30 | Local-first AI coding tutor: personalised roadmaps, lessons, hands-on practice with execution. | APAC |
 | **aula** | https://github.com/luumlabs/aula | AGPL-3.0 | 66 | 2026-11-17 | Turns notes, slides and past exams into lessons. **AGPL — not usable in a closed derivative.** | Global |
 | **Claw-ED** | https://github.com/SirhanMacx/Claw-ED | MIT | 65 | 2026-09-19 | Local-first AI teaching assistant: editable lesson drafts, student materials and slides, generated from the teacher's own curriculum with a model of their choice. Self-described teacher-reviewed beta. **Teacher-facing**, which this table is otherwise thin on, and **local-first + bring-your-own-model**, which is the posture EMEA sovereignty procurement now asks for. **Caveat: trending on stars through Oct 2026 while its last commit is 2026-09-19** — read it as a design reference, not a dependency. Licence byte-read from `LICENSE@main` (`Copyright (c) 2026 EDUagent Contributors`). | Global |
+| **moodle-mcp** | https://github.com/G36maid/moodle-mcp | MIT | 30 | 2026-10-20 | Second Moodle MCP server, and the **read-write** counterpart to `Faixiang/Moodle-MCP`: it operates courses, assignments, forums and grades, and serves files as markdown. **Added p893.** The read-only/read-write split across two MIT servers is the useful part — pilot on the read-only one, graduate to this when the client accepts write scope. | APAC — Taiwan |
+| **usp-mcp** | https://github.com/CaioCastro1/usp-mcp | MIT | 28 | 2026-11-13 | Portuguese-language MCP server over Universidade de São Paulo's student systems: e-Disciplinas (Moodle) coursework and deadlines, course catalogue, refectory menus. **Added p893.** **This is the second LATAM-origin education agent this KB has verified, and at 28 ★ it is nearly 3× the first** (`warleysr/ankipa`, 10 ★) — see `agents/trending.md` for what that does to the standing regional finding. | LATAM — Brazil |
+| **wassce-benchmark** | https://github.com/acheamponge/wassce-benchmark | MIT | 4 | 2026-04-07 | Benchmark evaluating open LLMs on the **WASSCE**, the school-leaving exam about two million West Africans sit each year. **Added p893.** Not an agent — an eval gate, like `pedagogy-benchmark`. **It is the only African-curriculum open evaluation asset this KB has found**, and it is the thing to measure against before any West African claim. Licence byte-read MIT. | EMEA — Africa |
 | **wenflow** | https://github.com/wenflow-org/wenflow | MIT | 72 | 2026-11-12 | Writing-feedback workflow agent. | APAC |
 | **wiki-rag** | https://github.com/moodlehq/wiki-rag | BSD-3-Clause | 54 | 2026-06-15 | **Moodle HQ's own** RAG service over Moodle documentation. Low stars, high significance: the Moodle organisation shipping a first-party retrieval agent. | EMEA — Moodle HQ |
 | **ECNU EduWork** | https://github.com/ECNU/EduWork | MulanPSL-2.0 | 378 | 2026-11-18 | Education workflow agent. **Licence note:** Mulan Permissive Software License v2 is OSI-approved and permissive, but it is not MIT/Apache — check your client's approved-licence list. | APAC — ECNU, China |
@@ -70,8 +89,15 @@ Sorted by stars.
 | **EDU AI Agent Suite** | https://github.com/virtualryder/edu-ai-agents | MIT (SPDX: NOASSERTION; licence text reads MIT) | 4 | 2026-10-10 | Eight reference agent workflows with deny-by-default authorisation, student-PII masking, human-in-the-loop enforcement and tamper-evident audit, aligned to FERPA, COPPA, IDEA/504 and ADA Title II. **Grading uses a deterministic rubric service, not an LLM** — which is what makes it legally usable in several US states. Targets Amazon Bedrock. Tiny and new; valuable as an architecture, not as a dependency. | North America |
 | **ai-tutor-agent** | https://github.com/vulinh1704/ai-tutor-agent | MIT | 0 | 2026-11-16 | FastAPI + LangGraph tutoring starter: Socratic hints, rubric grading, session memory, offline demo mode; checks every draft for answer leaks. Zero stars — a skeleton to read, not a dependency. | APAC — Vietnam |
 
-**24 education-specific agents, every URL and licence verified.** (22 at p891; `tutor-mcp` and
-`EduAgent` added in p892, both licence byte-read.)
+**34 education-specific agents, every URL and licence verified.** (22 at p891; `tutor-mcp` and
+`EduAgent` added in p892; **ten added in p893** — `LearnHarness`, `frametell`, `ai-shifu`,
+`Moodle-MCP`, `edumcp`, `gen-mentor`, `Mentingo`, `moodle-mcp`, `usp-mcp` and
+`wassce-benchmark` — every one of them star-measured via batched `repo:` qualifiers and
+licence byte-read from `raw.githubusercontent.com`.)
+
+**Three of p893's ten are AGPL or CC0, not MIT/Apache.** The table is no longer
+overwhelmingly permissive at the top, and the largest new entrant is the least usable one.
+Read the licence column before the star column.
 
 **How to read the star column.** The distribution is extremely bimodal: two repos above 40k,
 then a cliff to the low hundreds. Stars here measure consumer discovery, not institutional
@@ -85,6 +111,7 @@ origin column as evidence of durability.
 |---|---|---|---|---|
 | https://github.com/openedx/openedx-ai-extensions | AGPL-3.0 | 17 | 2026-11 | **First-party Open edX AI extension point.** Newly surfaced this pass. AGPL, like the platform — fine for hosting, a problem for a closed derivative. |
 | https://github.com/openedx/edx-ora2 | AGPL-3.0 | 64 | 2026-11-13 | Open-response assessment (peer/self/staff grading). The natural seam for an AI grading assist. |
+| https://github.com/blend-ed/openedx-mcp | AGPL-3.0 | 3 | 2026-10-22 | Open edX admin operations (staff/superuser) as an MCP facade, native `openedx-platform` APIs only, targeting the **Ulmo** release. Paired with its Tutor plugin https://github.com/blend-ed/tutor-contrib-openedxmcp (AGPL-3.0, 2 ★). **Added p893 — and with a correction.** Secondary coverage of the September 2026 Open edX blog announcement reads as though this is a first-party `openedx/*` project. **It is not**: both repos live under `blend-ed`, a vendor org. It is announced-on-the-official-blog, which is not the same as governed-by-the-foundation. Treat it as a credible vendor contribution with no foundation maintenance guarantee. |
 
 ## General-purpose agents worth composing into education work
 

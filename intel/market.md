@@ -219,6 +219,55 @@ student work never leaves the institution. The integrity engagement must be pitc
 counts and institutional positions are corroborated across more than one source, the specific
 legal citations are not primary-verified.*
 
+#### p893 additions — North America: the buyer has started building a procurement gate
+
+**Delaware's AI Assurance Lab is the first state-run evaluation body for classroom AI**, and
+the state's own stated reason for building it is the commercially important part: Delaware's
+education department found AI adoption already happening across its schools **"in ways that
+went beyond what vendors described."** The lab evaluates tools centrally so that every district
+gets the same vetted options instead of each one researching vendors alone, and the 2025
+coverage says it is also intended to feed state AI standards for schools. Membership was still
+being formed at announcement — school technologists, superintendents, teachers, students and
+the state technology department.
+
+**Why this is the North America finding of the pass.** Until now this KB has tracked US
+regulation as *restrictions on use* (Oklahoma's no-AI-grading rule, California AB 1159's ban on
+training over student data). Delaware is a different instrument: **a conformity gate in front of
+procurement.** A vendor does not argue with it after deployment; it either passes the
+evaluation or it is not on the menu. If the model spreads — and "first-of-its-kind" invites
+copying — the deliverable shifts from a compliance memo to **an evidence pack built to survive
+third-party evaluation**, which is a larger and more defensible engagement.
+
+**The burden it exists to remove is real and measured.** Stateline (12 August 2026) found that
+districts still carry most AI vetting themselves, and the standard gauntlet is a data
+processing agreement, a security questionnaire, and legal, privacy and security reviews. That
+is per-district, per-tool, and most districts cannot staff it.
+
+**Legislative volume has roughly doubled year over year.** An AAAS EPI Center policy briefing
+(July 2026) counts **53 AI-in-education bills across 21 states in 2025**, rising to **118 bills
+across 32 states in 2026, with 25 enacted laws in 16 states**. A MultiState count from March
+2026 tracked 134 bills across 31 states for the session — the counts differ by date and
+methodology, so treat the direction as firm and the absolute numbers as approximate.
+**Idaho, Maryland, Oklahoma and Virginia** enacted education-specific AI measures in 2026,
+clustering in three areas: governance frameworks, student-use restrictions and student-data
+privacy. Roughly **35 state education agencies** have issued AI guidance.
+
+**The federal layer now pulls in two directions, and that is a planning risk to name.** The US
+Department of Education finalised an **AI in Education grant priority** directing discretionary
+funds to AI literacy, personalised learning and educator development, with first competitions
+expected in the **2026-27 cycle**. Simultaneously a White House framework recommends that
+Congress **pre-empt state AI laws** to avoid a 50-state patchwork. A client building to the
+50-state-configurable pattern (`compose/patterns.md` P3) should be told plainly that the
+configurability may become unnecessary — and that this is a reason to keep policy in
+configuration rather than in code, not a reason to delay.
+
+**Opportunity — North America.** Two distinct offers now exist, and they go to different
+buyers. To **districts**: the vetting pack — DPA, security questionnaire responses, privacy and
+legal review evidence — productised once and reused, because the Stateline finding says they
+are all doing it badly and separately. To **states and vendors**: readiness for an
+assurance-lab-style evaluation. The second is the higher-margin one and almost nobody is
+selling it yet.
+
 ### EMEA
 
 **Regulatory posture: one regime, and a deadline that moved.** The EU AI Act became generally
@@ -448,6 +497,104 @@ education press); low on timing — **no dataset name, licence or release date h
 published**, and an open-release *intent* is not an open release. Do not promise a client an
 asset that does not yet exist. Re-check next pass.*
 
+#### Africa — p893 re-check of the Gemma commitment: still unshipped, but the surrounding shelf is real
+
+p891 instructed a re-check before any client-facing claim. Done, and the answer splits in two.
+
+**The named programme has still shipped nothing.** The November 2026 Google announcement —
+**Google, Fab AI, Google.org and the Gates Foundation**, supporting open Gemma-based tools and
+teacher training for foundational learning in **Kenya, Ghana and South Africa**, with Fab AI
+leading a cohort of local innovators — remains a commitment. The datasets, evaluation suites
+and open-source models are **promised, not published**: still **no name, no licence, no release
+date**. The p891 caution stands unchanged. **Do not promise a client this asset.**
+
+**But the question "is there open, African-curriculum AI material to build on?" now has a
+different answer than "wait and see."** Adjacent work has already shipped under open terms:
+
+| Artefact | What it is | Status |
+|---|---|---|
+| **NILEAGI-SUB** (Cohere Labs, 2026) | Swahili language-understanding evaluation built **from school curriculum questions** — first release **2,569 expert-reviewed multiple-choice items** from the Swahili-subject curriculum, scored across eight small open models (Gemma led six of eight grade bands) | Released; private held-out split and human baselines planned |
+| **AfriMMT-EA** (EACL 2026 Findings) | Multi-domain machine translation for low-resource East African languages; authors fine-tuned Gemma-3 270M/1B into **Safari-270M / Safari-1B** | Dataset and models released |
+| **AfriqueLLM** (arXiv 2601.06395) | Gemma-3-12B continued-pretrained on ~26B tokens across **20 African languages** | Model suite released |
+| **WAXAL** (Google) | Open speech dataset covering **21 Sub-Saharan African languages** | Released; no clear Gemma linkage |
+| **`acheamponge/wassce-benchmark`** | MIT, 4 ★ — open LLMs scored on the **WASSCE**, sat by ~2 million West Africans a year | On GitHub; verified this pass, see `repos/foundations.md` |
+
+**The revision that matters.** This KB has twice recorded Africa as a region with policy and
+programmes but no technical assets. **That is no longer accurate.** Two of the five rows above
+are *curriculum-derived evaluations* — NILEAGI-SUB from the Swahili curriculum, wassce-benchmark
+from the West African school-leaving exam — and an evaluation built from the actual curriculum
+is the single hardest artefact to produce in any education engagement. The models are
+Gemma-derived and the evals are curriculum-grounded, which is exactly the pairing a localisation
+build needs.
+
+**Opportunity — Africa, revised again.** Stop waiting for the Google datasets. **The
+evaluation layer already exists and nobody is building products against it.** An offline-first
+Kolibri/Ollama tutor running an AfriqueLLM or Safari derivative, gated on NILEAGI-SUB and
+wassce-benchmark scores, is buildable today with licensed components and is measurable against
+the curriculum learners are actually examined on — which answers the efficacy-evidence hole
+(**P7**) in the one region where this KB had assumed no evidence base existed.
+
+*Confidence: high on the existence, licensing and content of the five artefacts (ACL Anthology,
+arXiv and GitHub are reachable; `wassce-benchmark` was API-verified and licence byte-read).
+Moderate on NILEAGI-SUB's item count and the AfriqueLLM token figure, which are from the
+projects' own descriptions and were not independently reproduced.*
+
+
+#### p893 additions — EMEA: the Commission has published the AI-literacy benchmark it was missing
+
+**The AILit Framework was launched on 19 June 2026** — a joint **European Commission and OECD**
+framework for AI literacy in **primary and secondary education**, developed with Code.org
+(CodeAI) and international experts. It is organised in four domains — **engage with, create
+with, manage, and shape AI** — and it feeds the **Innovative Domain of PISA 2029**.
+
+**This materially changes the Article 4 position recorded in `intel/trends.md`.** That file has
+carried, across several passes, the finding that *no education-specific guidance on the AI Act's
+Article 4 AI-literacy duty exists* and that clients are therefore designing compliance packages
+with no safe harbour. **That finding is now half wrong and needs reading precisely:**
+
+- **What AILit is:** the first Commission-co-published, education-specific statement of what AI
+  literacy actually consists of, with a competence structure a school can be assessed against.
+  For the *content* of an Article 4 programme, the benchmark now exists, and a client's package
+  should be mapped to its four domains rather than invented.
+- **What AILit is not:** a legal safe harbour. It is a curriculum and competence framework, not
+  guidance issued under the AI Act, and it names no compliance threshold. Regulation (EU)
+  2026/1744 lowered Article 4 to a duty to *take measures to support* AI literacy while
+  expressly disclaiming any required level for any individual — so "proportionate and
+  documented" is still undefined by any authority.
+
+**The honest formulation for a client is therefore: there is now a defensible benchmark to
+build to, and still no authority that will certify you met it.** Mapping to AILit is the
+strongest available evidence of proportionality. Say that, and do not oversell it.
+
+**The Commission has also quantified the implementation gap (Eurydice, September 2026).**
+Roughly **two-thirds of European education systems** now address AI through a national strategy,
+guidance or policy framework, but **only about one-third include AI-related skills in the
+national curriculum** — concentrated in Western and Southern Europe — and implementation remains
+early-stage with uneven access to advanced AI tools. Eunews, reporting the same release, leads
+on the binding constraint: **fewer than 30% of EU teachers have received AI training.**
+
+**Read those three numbers together and they describe a single sellable sequence:** policy
+exists (two-thirds), curriculum does not (one-third), and the teachers who would deliver either
+are untrained (under 30%). The strategy work is largely done and the delivery work is almost
+entirely undone. This is the same shape as the Saudi and Indian findings — **AI-in-education in
+2026 is a delivery-capacity market, not a strategy market** — and it now holds inside the EU too.
+
+**Country detail.** **Italy** issued school AI guidelines under its 2024–2026 national AI
+strategy. **Slovakia** updates national education programmes to include AI from the **2026/27
+school year**. **Romania** is reported by Romanian coverage of the Commission study as one of
+only four EU countries with no AI-in-school integration policy — single-source and not verified
+against the Commission text, so treat it as a lead rather than a fact. The **Council of
+Europe** presented a *Compass for AI and education* in October 2025, which sits alongside the EU
+instruments rather than inside them. Separately, the AI Act's **prohibition on emotion
+recognition in education has applied since 2 February 2025** — already a hard design constraint,
+not a forthcoming one.
+
+**Opportunity — EMEA, sharpened.** The teacher-training number is the wedge and AILit is the
+spec. An **AILit-mapped teacher AI-literacy programme with per-institution evidence of
+delivery** answers the Article 4 duty with the only benchmark a regulator is likely to
+recognise, and it addresses the 70%+ of EU teachers who have had no training. It is sellable in
+every member state at once because the framework is supranational — which is rare in EMEA
+education and is the reason to lead with it.
 
 ### APAC
 
@@ -634,6 +781,60 @@ primary documents are blocked by this session's network policy and were read thr
 snippets.*
 
 
+#### Southeast Asia — first dedicated leg (the region this KB had least coverage of)
+
+APAC coverage in this KB has been China, Japan, Korea, Singapore, Australia/NZ, Vietnam and —
+since p892 — India. **Southeast Asia as a bloc had never been run as its own leg.** It has now,
+and it produced the largest single national programme found in any region this pass.
+
+**The Philippines: Project AGAP.AI, launched 9 January 2026 by the Department of Education**,
+with President Marcos at the launch. Named from the Filipino *agapay*, "to support or
+accompany". Verified details:
+
+| Field | Value |
+|---|---|
+| Scale | Up to **1.5 million participants** — ~1.05M learners, ~300,000 teachers, ~150,000 parents, phased through 2026 |
+| Instrument | **DepEd Order 003, s. 2026** — *Foundational Guidelines on AI in Basic Education* (responsible use, learner protection, inclusivity, ethics, data privacy) |
+| Training arm | Branded **"AI Ready ASEAN Philippines"**; modules on AI fundamentals, misinformation detection, privacy and ethical use |
+| Partners | **ASEAN Foundation**; **MIT RAISE** and **Day of AI** on curriculum integration and teacher training; **Microsoft** (February 2026) on AI literacy and learning recovery, and separately an ARAL programme reaching ~3,000 teachers across ~1,500 schools |
+| Curriculum | AI concepts and computational thinking to be integrated into the basic education curriculum |
+
+*Sourcing note: January coverage described the guidelines as forthcoming; February coverage
+reports DepEd Order 003 s. 2026 as issued. The order number is from a single secondary report
+and the Philippine government primary sources are blocked by this session's network policy —
+**confirm the order number before citing it to a client.***
+
+**Why the Philippines matters commercially more than its size suggests.** It is the only
+national programme found anywhere that **names the parents as a trained cohort** (150,000 of
+them). Every stakeholder-consent failure this KB has recorded (trend **T8**) has been a failure
+to bring guardians along. The Philippines has made that an explicit, budgeted workstream — so
+it is both a reference model to cite elsewhere and, right now, a delivery contract with 300,000
+teachers in it and no obvious local capacity to serve them.
+
+**The regional picture (ASEAN Foundation *Digital Outlook* / AI Ready ASEAN, February 2026).**
+**Thailand has the highest AI adoption rate in ASEAN**, driven by rapid uptake among students
+and teachers. But **fewer than half of educators across the bloc express strong confidence in
+their institution's AI policies and governance frameworks**, and EdTech Hub describes teachers
+across Southeast Asia already using AI largely without formal training or institutional
+support. The Jakarta Post's framing of the same report — *a region eager for AI but lacking
+guidance* — is the whole finding in six words.
+
+**Public opinion is not a tailwind (Ipsos Education Monitor 2026, nine markets: Australia,
+India, Indonesia, Japan, Malaysia, New Zealand, Singapore, South Korea, Thailand).** Globally
+**39% think AI should be banned in schools outright**. Support for a ban runs lower in the
+Asian markets than the global figure, but it is not negligible anywhere, and it is not uniform
+across APAC. Any national programme pitched here needs a public-legitimacy workstream, not just
+a technical one — which is **T8** again, measured.
+
+**Opportunity — Southeast Asia.** This is the **adoption-outran-governance pattern (T4) in its
+purest form**: highest-in-bloc adoption in Thailand, under-half confidence in governance
+region-wide, and teachers improvising without support. The LATAM "governance and enablement, not
+adoption" offer (`compose/patterns.md` P5) transfers here essentially unchanged, and the
+Philippines national-mandate delivery pattern (**P10**) has a live, funded, named buyer. The
+ASEAN Foundation's bloc-level convening role means a reference built in one member state is
+visible in the other nine — the regional leverage that EMEA's AILit framework provides in
+Europe.
+
 ### LATAM
 
 **Adoption is genuinely ahead of the OECD — governance is not.** This is the region's defining
@@ -777,6 +978,60 @@ retrofit at higher-education scale** (P5 applies, resized), attach **multi-juris
 against the 716-instrument fragmentation, and position against accreditation rather than against
 legislation — the former has a budget owner.
 
+#### p893 additions — LATAM: a far larger adoption dataset, and the governance gap holds at scale
+
+The LATAM section's headline numbers have been the Brazilian 53%/22% school figure and the
+87%/26% regional-university figure. **A larger and better-sourced dataset now corroborates both
+and raises the adoption side.**
+
+**Digital Education Council × Tecnológico de Monterrey, *AI in Higher Education LATAM Survey
+2026*:** **92% of students and 79% of faculty are actively engaging with AI**, from **7,319
+faculty respondents across 29 higher-education institutions** in the region. Against that,
+coverage of the same survey reports **only ~30% of Latin American universities have published
+policies on how AI should be used**.
+
+**So the gap is now measured three times, at three sample sizes, and it widens as the sample
+grows:**
+
+| Source | Use | Governance | Gap |
+|---|---|---|---|
+| Brazilian school administrators | 53% | 22% have guidelines | 31 pts |
+| Regional universities (earlier pass) | 87% institutional use | 26% have a strategy | 61 pts |
+| **DEC × Tec de Monterrey, 7,319 faculty / 29 institutions** | **79% faculty / 92% students** | **~30% have published policies** | **~49 pts (faculty), ~62 pts (students)** |
+
+**This is the most robust finding in the LATAM section and it should lead the pitch.** Three
+independent instruments, three different populations, one result: **use is near-universal,
+governance is at roughly a quarter to a third, and nothing in the trend suggests governance is
+catching up.** The DEC survey also characterises LATAM faculty as *high adoption, conservative
+usage* — they are using it cautiously and without institutional cover, which is precisely the
+population a governance-and-enablement engagement serves.
+
+**UNESCO IESALC working paper (September 2026)** maps AI use across universities on five
+dimensions — teaching and learning, research, community engagement, administration, and
+governance — and finds adoption "neither uniform nor evenly distributed", calling for stronger
+governance and greater investment in digital literacy. A UNESCO-linked survey of **200
+institutions across 19 countries** reports the adoption/governance divergence as especially
+pronounced in the region.
+
+**Institutional players to know, because in LATAM the convenors are the route to market:**
+**UNESCO IESALC** and **UNU-IAS** (research and policy); **Digital Education Council** with
+**Tec de Monterrey's Institute for the Future of Education** (the survey instrument);
+**UNESCO and Chile's CENIA**, who have signed a cooperation agreement on ethical AI in
+education **that explicitly covers integrating Latam-GPT**, the regional open LLM; **EdTech Hub
+and Fundación Ceibal**, who announced a regional AI-in-education partnership in September 2026;
+the **IDB**; and **ECLAC** through the eLAC digital agenda.
+
+**The UNESCO–CENIA agreement is the one to act on.** Latam-GPT moving from a research artefact
+into a UNESCO-blessed education deployment path is the first time this KB has seen a regional
+sovereign model with an institutional channel into classrooms. Pattern **P5** already names
+Latam-GPT in its stack; this gives that choice an endorsement to cite in a procurement document,
+which is usually what it lacks.
+
+**Caveat.** There is **no binding regional AI-in-education regulation**; the regulatory picture
+is national and institutional. The ~30% policy figure is reported second-hand from survey
+coverage, and a separate finding that ~30% of students believe their institution responded
+effectively is a *different* statistic — do not conflate them, as some coverage does.
+
 ### Global
 
 Cross-regional plays that do not depend on one jurisdiction.
@@ -843,17 +1098,38 @@ Cross-regional plays that do not depend on one jurisdiction.
   content labelling (20 February 2026), not system conformity. **India is a delivery-capacity
   market, not a conformity market.** Contested: whether Classes 9–10 become compulsory in
   2027–28.
-- **No open-source education agent originates from India, Africa or the Middle East.** Three
-  dedicated regional legs across p891 and p892 produced rich policy and programme evidence and
-  **not one repository**. India mandates AI across Classes III–VIII, Saudi Arabia is training
-  240,000 teachers, and neither has produced an open education agent this KB can find. Together
-  with the standing LATAM finding (`warleysr/ankipa`, 10 ★, the only LATAM-origin agent), the
-  pattern is now firm: **open education agents come from APAC-East and European universities,
-  and every other region is a consumer.** That is a localisation market, and it is stated here
-  as a positive finding rather than a hole.
-- **The Gemma-for-African-education datasets have no name, licence or date.** An open-release
-  *intent* was announced; nothing has shipped. Tracked under EMEA/Africa; re-check next pass
-  before any client-facing claim.
+- ~~**No open-source education agent originates from India, Africa or the Middle East**~~ —
+  **corrected in p893, and the correction is a sharpening rather than a reversal.** A dedicated
+  repository-discovery leg across Swahili, African, Indian/NCERT, Arabic, Nigerian and
+  Hindi education-AI search terms found that **such repositories do exist in all three
+  regions** — the earlier statement was too strong. What they do not have is traction or, in
+  most cases, a licence. Verified examples: `acheamponge/wassce-benchmark` (MIT, **4 ★**),
+  `7irelo/aptiverse` (South Africa, CAPS-aligned, **no licence**, 4 ★),
+  `thesavvybyjude/Offline-First-Android-AI-Tutoring-App` (MIT, 1 ★, on-device RAG over the
+  WAEC/NERDC curriculum), `kadioko/ElimuAI` (Tanzania/Swahili, no licence, 1 ★),
+  `codingbilla/ShikshaSetu-Ai` (MIT, 0 ★, Gemma Hindi/Hinglish for rural learners),
+  `devilking7x/guruji` (MIT, 0 ★, Hindi-first Classes 6–10),
+  `Dhananjay-234/shikshaedge-app` (no licence, 0 ★, Gemma-3 fine-tuned on NCERT, offline).
+  **The accurate finding: the ceiling across all three regions is 4 ★, and roughly half carry
+  no licence at all.** The commercial conclusion is unchanged and now better evidenced —
+  these are consumer markets for agents built elsewhere, and a localisation market — but the
+  reason is *absence of traction and licence hygiene*, not absence of builders. **Note the
+  shared architecture:** nearly every one is offline-first, small-model and RAG-over-national-
+  curriculum. That is a reusable reference design, and it is the design the regions converged
+  on independently.
+- **Correction to the standing LATAM-origin finding.** `warleysr/ankipa` (10 ★) is no longer
+  the only verified LATAM-origin education agent, nor the largest. **`CaioCastro1/usp-mcp`
+  (MIT, 28 ★, pushed 2026-11-13)** — a Portuguese-language MCP server over Universidade de São
+  Paulo's e-Disciplinas (Moodle) coursework, catalogue and campus services — is roughly 3×
+  its size. Both are small; the point is that the "one agent" formulation was a search artefact,
+  and it has now been wrong twice in the same direction.
+- **The Gemma-for-African-education datasets have no name, licence or date — re-checked in
+  p893 and still true.** The Google / Fab AI / Google.org / Gates Foundation programme for
+  Kenya, Ghana and South Africa remains a commitment with nothing published. **Do not promise
+  a client this asset.** What changed is the context, not the gap: p893 found five adjacent
+  African-language and African-curriculum artefacts that *have* shipped under open terms
+  (NILEAGI-SUB, AfriMMT-EA/Safari, AfriqueLLM, WAXAL, `wassce-benchmark`). See the Africa
+  p893 re-check subsection. Re-check the Google programme again next pass.
 - **Saudi Arabia's primary sources were not reachable.** The Ministry of Education and National
   Curriculum Center publications are blocked by this session's network policy; the 50-unit and
   240,000-teacher figures are from SPA, Saudi Gazette and regional trade press. Corroborated
@@ -863,3 +1139,35 @@ Cross-regional plays that do not depend on one jurisdiction.
   session; the South African retraction is well-corroborated, the UAE curriculum start date is
   contested across sources, and 2026 African edtech adoption figures were omitted as
   unverifiable rather than reported with a caveat.
+
+- **No Southeast Asian primary source was reachable (p893).** The Philippine DepEd order number
+  (**003, s. 2026**), the AGAP.AI participant breakdown and the ASEAN Foundation *Digital
+  Outlook* figures all come from regional press and secondary coverage; `deped.gov.ph`,
+  `aseanfoundation.org` and the Philippine government portals are blocked by this session's
+  network policy. **Confirm DepEd Order 003 s. 2026 before citing it in a client document.**
+- **The AILit Framework was not byte-read (p893).** Its existence, 19 June 2026 launch date,
+  four-domain structure, EC/OECD joint authorship and PISA 2029 linkage are corroborated across
+  the Commission's own EACEA newsroom item and secondary analysis, but `ailiteracyframework.org`
+  and the Commission PDF could not be opened here. The **18 vs 19 June** launch date is
+  contested across sources. Before an AILit-mapped engagement is scoped, the framework document
+  itself must be read — a competence mapping built from summaries will not survive review.
+- **No vendor-share, pricing or win/loss data — still absent after six passes (p893).** Six
+  consecutive passes have searched for it in every region and found market *size* only. This
+  should now be treated as a structural property of the sector rather than a research failure:
+  the buyers are public institutions, the procurements are not aggregated anywhere, and no
+  analyst publishes share. **Stop re-searching it every pass.** The Jisc specification and the
+  Delaware assurance-lab criteria are better proxies for competitive position and are
+  actionable; vendor share is not coming.
+- **No learning-outcome evidence base, and p893 found the measurement of that absence (new).**
+  One 2026 edtech review reports that **only ~45% of the most-used education tools have
+  published research meeting an ESSA evidence tier**, and the OECD's 2026 *Digital Education
+  Outlook* is reported as warning that AI helps learning only when pedagogy stays in control.
+  Both are secondary-sourced and the ESSA figure's methodology was not obtainable. If it
+  survives verification it is the strongest single argument for the efficacy tier in
+  `compose/patterns.md` **P7** — **verify it before using it in a pitch.**
+- **LearnHarness has 10,002 ★ and no published efficacy study (new, p893).** The
+  fastest-growing education repo this KB has ever measured has a documented design, an active
+  plugin ecosystem, and **no learning-outcome evidence whatsoever** — and user reports describe
+  being tested before being taught. This is the industry's evidence problem reproduced at speed
+  in open source, and it is worth watching as a test case: if a 10k-star project cannot produce
+  outcome data, the "measure it" argument gets harder to sell, not easier.

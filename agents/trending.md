@@ -4,6 +4,145 @@ region: Global
 updated: 2026-11-18
 ---
 
+## `2026-11-18` (p893) — three passes said no education agent launched this month; one had, and it is now the third-largest in the world
+
+**Channel:** batched `repo:` qualifiers against `gh api search/repositories` (stars, SPDX,
+`pushed_at`, `created_at`) plus `raw.githubusercontent.com` licence byte-reads. Non-GitHub hosts
+remain blocked by this session's network policy. This pass ran a **repository-discovery leg
+across six independent search families** rather than re-measuring known cohorts.
+
+### The finding: `amosblomqvist/learnharness` (AGPL-3.0, 10,002 ★, created 2026-10-16)
+
+| Field | Value |
+|---|---|
+| Repo | https://github.com/amosblomqvist/learnharness |
+| Licence | **AGPL-3.0** — byte-read from `LICENSE@main` |
+| ★ | **10,002** |
+| Created | **2026-10-16** |
+| Last push | 2026-11-12 |
+| What | Desktop agent harness that probes what the learner understands, dependency-maps a route to the goal, teaches one reasoning step at a time, then runs separate retrieval-practice sessions — all carried across sessions by a persistent knowledge graph |
+
+**0 → 10,002 ★ in 27 days. That is the fastest growth this KB has recorded for any education
+repo, by a wide margin**, and it makes LearnHarness the third-largest open education agent in
+existence behind DeepTutor (60,258) and OpenMAIC (43,874).
+
+**`intel/trends.md` carried "no November 2026 education-agent launch" as a substantiated
+negative across p890, p891 and p892.** That entry is now struck. The reason it was missed is
+worth more than the correction: **LearnHarness is not a tutor, an LMS plug-in or a classroom
+service.** It is a desktop harness. Every discovery leg before this one searched tutor- and
+LMS-shaped terms, so the category that produced 2026's fastest-growing education repo was never
+in the query set.
+
+**Method lesson — the third of this exact shape in four passes.** p891 learned not to trust an
+SPDX field without reading the licence. p892 learned that a cohort finding is only as good as
+the cohort you re-enumerated. p893 learns that **"nothing launched" is only ever a statement
+about the queries you ran.** A negative claim about a whole category must be re-derived from
+independent search terms before it is written down as fact, because a stable negative across
+passes is exactly what repeating the same queries produces.
+
+### The part that is structural, not just large: a plugin ecosystem formed around it
+
+| Repo | Licence | ★ | What |
+|---|---|---|---|
+| https://github.com/kerr-mwv/learning-path-plugin | AGPL-3.0 | 12 | Pedagogical learning path grounded in a canonical source |
+| https://github.com/kkgosu/reasoned | AGPL-3.0 | 11 | Native Android reimplementation — AI lessons, practice, personal knowledge graph |
+| https://github.com/tn-lorenz/awesome-learnharness | none | 7 | Community plugin/theme list |
+| https://github.com/heohlee/learnharness-git | AGPL-3.0 | 6 | Git backup and sync of learning data |
+| https://github.com/808arc/meme-plugin | AGPL-3.0 | 2 | Concepts → memes |
+
+**No other agent in `agents/top.md` has third parties building on it.** DeepTutor has six times
+the stars and no plugins. This is the difference between a product and a platform, and it is a
+stronger durability signal than any star count. Promoted to **T12** in `intel/trends.md` with a
+watch condition: a plugin crossing 100 ★, or any plugin under a *permissive* licence — which
+would mean the ecosystem is routing around the AGPL core.
+
+**Two cautions, stated because the growth curve invites skipping them.** The whole stack is
+**AGPL-3.0**, so none of it enters a closed client derivative; its value to an engagement is as
+the reference design for learner-state modelling, which almost every permissive tutor lacks.
+And there is **no published learning-outcome study** — users report being tested before being
+taught. Velocity is not efficacy.
+
+### Second finding: the table had no Moodle MCP server, and there were seven
+
+Moodle is the most-installed LMS on earth. `agents/top.md` carried two `canvas-mcp` servers and
+**nothing for Moodle**. A discovery leg found seven independent servers; four are usable:
+
+| Repo | Licence | ★ | Posture |
+|---|---|---|---|
+| https://github.com/Faixiang/Moodle-MCP | MIT | 208 | **Read-only**, zero-dependency, 10-language README, companion skill `Faixiang/Moodle-Course-Watch` (MIT) |
+| https://github.com/peancor/moodle-mcp-server | MIT | 45 | The original (2025-03), idle since 2026-02 |
+| https://github.com/G36maid/moodle-mcp | MIT | 30 | **Read-write** — courses, assignments, forums, grades |
+| https://github.com/MarcosNahuel/moodle-mcp | MIT | 1 | Write path with idempotency guarantees |
+| https://github.com/loyaniu/moodle-mcp | **none** | 58 | **Unusable — no licence file on `main` or `master`** |
+| https://github.com/onbirdev/moodle-webservice_mcp | **none** | 19 | **Unusable** — server-side Moodle plugin, pushed 2026-11-18, no licence |
+| https://github.com/stojandev/moodle-downloader-mcp | MIT | 0 | Bulk export for offline/agent use |
+
+The **read-only / read-write split across two separately-maintained MIT servers** is the
+commercially useful part: it makes a genuinely read-only pilot a deployment fact rather than a
+promise. Written up as **T13** and as a new build recipe, **P11**, in `compose/patterns.md`.
+
+### Third finding: the "only one LATAM-origin agent" claim was a search artefact
+
+`warleysr/ankipa` (10 ★) has been recorded across several passes as the only verified
+LATAM-origin education agent. **It is neither the only one nor the largest.**
+
+| Repo | Licence | ★ | Last push |
+|---|---|---|---|
+| https://github.com/CaioCastro1/usp-mcp | MIT | **28** | 2026-11-13 |
+
+A Portuguese-language MCP server over Universidade de São Paulo's systems — e-Disciplinas
+(Moodle) coursework and deadlines, course catalogue, campus services. Licence byte-read,
+`Copyright (c) 2026 Caio Castro e João Pedro Barreto do Prado`. Roughly 3× `ankipa`.
+
+Both are small and the commercial conclusion does not move: **LATAM is a consumer market for
+agents built elsewhere.** What moves is confidence in single-instance claims. A finding of the
+form "there is exactly one X" has now been wrong twice in this KB in the same direction, and
+both times the missing instance was found by one additional query.
+
+### Fourth finding: India, Africa and the Middle East *do* produce education agents — at a 4 ★ ceiling
+
+`intel/market.md` declared, after three regional legs: *no open-source education agent
+originates from India, Africa or the Middle East.* A dedicated repository leg across Swahili,
+African, NCERT/Indian, Arabic, Nigerian and Hindi search terms shows that **too strong**:
+
+| Repo | Licence | ★ | Note |
+|---|---|---|---|
+| https://github.com/acheamponge/wassce-benchmark | MIT | 4 | Open LLMs scored on the **WASSCE**, sat by ~2M West Africans a year. An eval asset — now in `repos/foundations.md` |
+| https://github.com/7irelo/aptiverse | **none** | 4 | South Africa, CAPS-aligned practice tests, self-described auditable |
+| https://github.com/thesavvybyjude/Offline-First-Android-AI-Tutoring-App | MIT | 1 | On-device LLM, RAG over the WAEC/NERDC curriculum |
+| https://github.com/kadioko/ElimuAI | **none** | 1 | Tanzania, Swahili, gamified |
+| https://github.com/codingbilla/ShikshaSetu-Ai | MIT | 0 | Gemma Hindi/Hinglish tutor for rural learners |
+| https://github.com/devilking7x/guruji | MIT | 0 | Hindi-first, Classes 6–10, maths and science |
+| https://github.com/Dhananjay-234/shikshaedge-app | **none** | 0 | Gemma-3 fine-tuned on NCERT, offline multilingual |
+
+**The builders exist; the traction and the licence hygiene do not.** The ceiling across all
+three regions is **4 ★** and roughly half carry no licence at all. The commercial conclusion is
+unchanged and now better evidenced. **The genuinely useful observation is architectural:**
+nearly every one of these converged independently on the same design — **offline-first, small
+model, RAG over the national curriculum**. That is a reusable reference design for exactly the
+markets this KB has been describing as consumers.
+
+### Also added to `agents/top.md` this pass
+
+`sitor-ai/frametell` (AGPL-3.0, 513 ★ — explainer-video production, the only open *content
+production* agent in the table), `ai-shifu/ai-shifu` (Apache-2.0, 332 ★ — authored AI teaching,
+where the author's script constrains the model), `aieducations/edumcp` (Apache-2.0, 155 ★ —
+**dormant since 2025-05-05**, listed as a cautionary entry), `GeminiLight/gen-mentor`
+(**CC0-1.0**, 137 ★ — WWW '25 oral, skill-gap-aware learning; CC0 is a public-domain dedication,
+not a software licence, so no patent grant and no warranty disclaimer — have counsel confirm),
+and `Selleo/mentingo` (MIT, 109 ★ — see `repos/trending.md` and `verticals/solutions.md`).
+
+**Ten agents added in one pass, the largest single-pass addition this KB has made.** Three of
+the ten are AGPL or CC0. The table is no longer overwhelmingly permissive at the top, and the
+largest new entrant is the least usable one.
+
+### Spot check rather than full sweep
+
+`DeepTutor` 60,235 → **60,258**; `OpenMAIC` 43,868 → **43,874**. Consistent with the daily
+cadence established in p890–p892, so the budget went to discovery instead. **Full sweep due
+2026-11-19.**
+
+
 ## `2026-11-18` (p892) — the agent-skill cohort was measured incomplete: a 104 ★ MIT member was missing from it
 
 **Channel:** batched `repo:` qualifiers against `gh api search/repositories` (stars, SPDX,

@@ -30,7 +30,21 @@ engagement usually touches at least two.
 | **OpenOLAT** | https://github.com/OpenOLAT/OpenOLAT | Apache-2.0 | Switzerland, Germany, Austria | Permissive — under-used given its maturity |
 | **Oppia** | https://github.com/oppia/oppia | Apache-2.0 | Foundational literacy/numeracy, emerging markets | Exploration framework with misconception modelling |
 | **Frappe LMS** | https://github.com/frappe/lms | AGPL-3.0 | SMB/corporate training on the Frappe stack | Frappe app hooks; integrates with ERPNext |
+| **Mentingo** | https://github.com/Selleo/mentingo | **MIT** (`LICENSE@main`, `Copyright (c) 2024 Selleo`) | Corporate L&D, onboarding and compliance training; white-label, multi-tenant | **No layering needed — the AI mentor is first-party.** Postgres + pgvector is already the retrieval substrate; one-click AWS Marketplace deploy |
 | **Tutor** | https://github.com/overhangio/tutor | AGPL-3.0 | The de facto Open edX deployment/ops tool | Plugin system for injecting services into an Open edX cluster |
+
+**Added p893 — the copyleft rule now has a real exception.** Every other LMS in the table above
+is GPL, AGPL or ECL. **Mentingo (109 ★, pushed 2026-11-18) is MIT**, licence byte-read, and it
+is *AI-native* rather than AI-retrofitted: the mentor and role-play tiers ship with the
+platform. That matters for exactly one question, and it is the question clients ask most —
+*"can we brand this and keep it closed?"* On Moodle, Open edX or Canvas the answer is no without
+an LTI/MCP separation. On Mentingo it is yes.
+
+Two cautions before it displaces Artemis as the default permissive pick. It is **corporate L&D,
+not K-12 or higher ed** — there is no gradebook-of-record, no SIS integration and no
+accreditation story. And at 109 ★ with a single vendor (Selleo) behind it, the governance risk
+is the mirror image of Moodle's: permissive licence, thin community. **Use it where the client
+wants a product; use Artemis or OpenOLAT where the client wants an institution.**
 
 ## Student information systems and school ERP
 

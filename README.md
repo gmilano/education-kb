@@ -31,11 +31,24 @@ and concrete recipes that name specific repos.
    or **OpenOLAT (Apache-2.0)**. **Content assets invert this** (added p890): curriculum data and
    learning-content apps arrive under data or copyleft licences — `os-taxonomy` is **ODbL-1.0**
    with share-alike on derived databases. Run licence triage per artefact class, not once.
+   **There is now one real exception to the copyleft rule** (added p893): **Mentingo
+   (MIT, 109 ★)** is a self-hosted *AI-native* LMS — the shortest route to a closed, branded
+   learning product. It is corporate L&D only: no gradebook of record, no SIS, no accreditation
+   story. **And a second seam opened**: Moodle now has seven community MCP servers, with
+   read-only and read-write split across two separately maintained MIT projects. MCP exposes the
+   LMS to your agent the way LTI ships your tool into the LMS — use both (`compose/patterns.md`
+   P11).
 
-2. **The best open education agents are academic, not commercial.** DeepTutor (HKU,
-   Apache-2.0, 60,235 ★), OpenMAIC (Tsinghua, MIT, 43,868 ★), the Artemis/EduTelligence/Pyris
-   stack (TU Munich, MIT), OATutor (UC Berkeley, MIT). The commercial tutors are closed. These
-   projects want implementation partners — which is the opening.
+2. **The best open education agents are academic, not commercial — with one loud new
+   exception.** DeepTutor (HKU, Apache-2.0, **60,258 ★**), OpenMAIC (Tsinghua, MIT,
+   **43,874 ★**), the Artemis/EduTelligence/Pyris stack (TU Munich, MIT), OATutor (UC Berkeley,
+   MIT). The commercial tutors are closed. These projects want implementation partners — which
+   is the opening. **The exception, added p893: LearnHarness (AGPL-3.0, 10,002 ★)** went from
+   creation on 16 October 2026 to third-largest open education agent in the world in 27 days,
+   and is the first to grow a **third-party plugin ecosystem** — five independent extensions,
+   an Android reimplementation and an awesome-list. AGPL, so it cannot enter a closed
+   derivative; read it as the reference design for learner-state modelling, which almost every
+   permissive tutor lacks. **No published learning-outcome study.** See `intel/trends.md` T12.
 
 3. **Regulation now constrains *use*, not existence, and the rules differ by region.**
    Oklahoma bars AI-only grading. **California AB 1159 bars training models on student data at

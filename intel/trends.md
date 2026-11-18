@@ -299,17 +299,107 @@ tutor sold against a teacher-capacity mandate is the wrong deliverable answering
 need, and every open tutor in `agents/top.md` is English- or Chinese-first anyway.
 
 
+## T12 — An open education agent has acquired a third-party plugin ecosystem, which has not happened before
+
+**The observation.** `amosblomqvist/learnharness` (AGPL-3.0) went from creation on **2026-10-16**
+to **10,002 ★ on 2026-11-18** — 27 days. That alone is only a popularity fact. The structural
+fact is what grew around it in the same window, all independently owned:
+
+| Repo | Licence | ★ | What it is |
+|---|---|---|---|
+| https://github.com/kerr-mwv/learning-path-plugin | AGPL-3.0 | 12 | Plugin: build and follow a pedagogical learning path grounded in a canonical source |
+| https://github.com/kkgosu/reasoned | AGPL-3.0 | 11 | Native **Android** learning app inspired by LearnHarness — AI lessons, practice, personal knowledge graph |
+| https://github.com/tn-lorenz/awesome-learnharness | none | 7 | Community plugin and theme list |
+| https://github.com/heohlee/learnharness-git | AGPL-3.0 | 6 | Back up and sync LearnHarness learning data with Git |
+| https://github.com/808arc/meme-plugin | AGPL-3.0 | 2 | Turns LearnHarness concepts into memes |
+
+**Why this is a trend and not a curiosity.** Every other agent in `agents/top.md` is a
+destination: you adopt DeepTutor, or OpenMAIC, or Artemis. **None of them has third parties
+building on top of it.** DeepTutor has 60,258 ★ and no plugin ecosystem. LearnHarness has a
+sixth of the stars and five independent extensions, a reimplementation on another platform, and
+an awesome-list — within a month. That is the difference between a product people use and a
+**platform people build on**, and in open source the second is a far stronger durability signal
+than stars.
+
+**Three things follow for an engagement.**
+
+1. **The extension points are where the standard forms.** The plugin set is already clustering
+   around the same three concerns — pedagogical path construction, persistence/portability of
+   the learner's knowledge graph, and an alternative client. Those are exactly the seams a
+   client will need. If a platform-shaped standard emerges in open education tooling in 2027,
+   this is currently the most likely place it comes from.
+2. **The licence forecloses the obvious play.** LearnHarness and every substantial plugin are
+   **AGPL-3.0**. You cannot take this into a closed client derivative. What you *can* do is
+   read it as the reference design for **learner-state modelling** — probe before teaching,
+   dependency-map to the goal, persist the model across sessions — which is the capability
+   almost every permissive tutor in `agents/top.md` lacks, and which is reimplementable from
+   the design rather than the code.
+3. **It is unproven as pedagogy.** There is no published learning-outcome study and users
+   report being tested before being taught. **The ecosystem is evidence of developer
+   enthusiasm, not of learning.** Do not present velocity as efficacy — that conflation is the
+   industry's standing failure (see the ESSA-tier finding in `intel/market.md`).
+
+**Watch condition.** Two signals would promote this from "interesting" to "plan around it":
+a plugin crossing **100 ★**, or any plugin appearing under a **permissive** licence, which
+would mean the ecosystem is routing around the AGPL core. Neither has happened. Re-check
+weekly — at this growth rate the monthly cadence this KB uses for stars is too slow for
+this one repo.
+
+## T13 — The LMS is becoming an agent tool surface via MCP, and Moodle got there through the community
+
+**The observation.** Until p893 this KB tracked exactly one LMS-to-agent bridge pattern — two
+`canvas-mcp` servers. A discovery leg found that **Moodle, the most-installed LMS on earth, now
+has at least seven independent MCP servers**, none of them from Moodle HQ:
+
+| Repo | Licence | ★ | Access posture |
+|---|---|---|---|
+| https://github.com/Faixiang/Moodle-MCP | MIT | 208 | **Read-only**, zero-dependency, 10-language README |
+| https://github.com/loyaniu/moodle-mcp | **none** | 58 | — (unusable, no grant) |
+| https://github.com/peancor/moodle-mcp-server | MIT | 45 | The original (2025-03), now idle since 2026-02 |
+| https://github.com/G36maid/moodle-mcp | MIT | 30 | **Read-write** — courses, assignments, forums, grades |
+| https://github.com/onbirdev/moodle-webservice_mcp | **none** | 19 | A Moodle *plugin* implementing MCP server-side; pushed 2026-11-18 |
+| https://github.com/MarcosNahuel/moodle-mcp | MIT | 1 | Write path with idempotency guarantees |
+| https://github.com/stojandev/moodle-downloader-mcp | MIT | 0 | Bulk export for offline/agent use |
+
+Open edX has its own, **`blend-ed/openedx-mcp`** (AGPL-3.0) plus a Tutor plugin — announced via
+the official Open edX blog in September 2026 but **owned by a vendor org, not the foundation**.
+
+**What this changes.** The KB's structural rule has been *integrate over LTI 1.3 and your tool
+stays a separate work*. **MCP is now a second such seam, and it is the better one for agents.**
+LTI ships your tool into the LMS; MCP exposes the LMS to your agent. They are complementary and
+a serious build will use both — LTI for the user-facing surface, MCP for the agent's reach into
+coursework, deadlines and grades.
+
+**The governance point is the sellable one.** The read-only/read-write split is already explicit
+across two MIT servers from different authors, which means a client can run a **genuinely
+read-only pilot** against real coursework and graduate to write scope as a deliberate, separate
+decision. That maps onto FERPA and onto the EU's assessment-related high-risk classification
+far more cleanly than a single server with a permissions flag. And the caution travels with it:
+these servers typically run on the user's machine with that user's API token, so **the agent
+inherits every permission the human has**. Scope the token, do not scope the prompt.
+
+**The absence worth naming: Moodle HQ has published no MCP server.** It shipped `wiki-rag`
+(BSD-3-Clause) for its own documentation but has left the LMS-to-agent bridge entirely to the
+community, where three of the seven servers have no licence at all. **For a client standardising
+on Moodle this is a real risk and a real opening** — first-party-grade MCP for Moodle, built to
+the organisation's conventions, is unclaimed work.
+
 ## Trends we looked for and could not substantiate
 
 - **Measured learning-outcome gains from AI.** The widely circulated figures ("42% improvement
   in learning outcomes", "54% higher test scores") trace to secondary blogs with no primary
   study. We found no credible primary evidence of learning gains at scale. This is a real
   evidentiary hole, and it is why the measurement tier in T3/`compose/patterns.md` matters.
-- **A November 2026 education-agent launch.** The newest dated artefact is OpenMAIC `v1.4.2`
-  (2026-11-09). No new launch confirmed this month — re-checked in pass p890 against four fresh
-  search legs. The nearest thing is `tutor-agent` on PyPI (MIT, released 2026-11-16), which
-  teaches the concepts behind what a coding agent just did; it is developer upskilling, not
-  classroom software.
+- ~~**A November 2026 education-agent launch.**~~ **Overturned in p893, and not marginally.**
+  Three passes concluded nothing had launched. A repository-discovery leg found
+  **`amosblomqvist/learnharness`** — **AGPL-3.0, 10,002 ★, created 2026-10-16**, pushed
+  2026-11-12 — now the **third-largest open education agent in existence** behind only DeepTutor
+  and OpenMAIC. It was missed because it is a *desktop learning harness*, not an LMS plug-in or
+  a tutor service, and the earlier legs searched for tutors. **Method lesson, and it is the
+  third of this shape in four passes:** p892 learned that cohort findings need the cohort
+  re-enumerated; p893 learns that **"nothing launched" is only ever a statement about the
+  queries you ran.** A negative finding about an entire category needs the category
+  re-enumerated by independent search terms before it is reported as fact. See **T12**.
 - **Traction for the "tutor as an agent skill" form.** Measured again in p890: the whole cohort
   tops out at **118 ★** and not one member gained a star since the previous measurement. The
   form is real and the time-to-pilot argument holds, but it has no adoption. Demo material, not
@@ -319,10 +409,18 @@ need, and every open tutor in `agents/top.md` is English- or Chinese-first anywa
   AI law is promotion-focused with voluntary guidelines and there is **no education-specific
   statute or classroom regime**. Confirmed absence, which is why Japan is the lowest-friction
   APAC pilot geography.
-- **Any education-specific guidance on EU AI Act Article 4.** The duty is live and
-  unenforced-by-guidance; neither the Commission nor a national authority has told schools what
-  compliance looks like. Searched directly and found nothing. This is an opportunity, but it
-  also means a client's Article 4 package is being designed without a safe harbour — say so.
+- ~~**Any education-specific guidance on EU AI Act Article 4.**~~ **Half-resolved in p893, and
+  the half matters.** The **AILit Framework**, launched **19 June 2026** by the **European
+  Commission jointly with the OECD** (with Code.org/CodeAI), *is* education-specific,
+  Commission-co-published, structured in four competence domains — engage with, create with,
+  manage, shape AI — and wired into the **PISA 2029** Innovative Domain. For the **content** of
+  an Article 4 programme there is now a benchmark, and a client's package should be mapped to
+  it rather than invented. **What is still missing is the legal half:** AILit is a curriculum
+  and competence framework, not guidance issued under the AI Act, and it sets no compliance
+  threshold — so "proportionate and documented" remains undefined by any authority. **The
+  correct client sentence is: there is now a defensible benchmark to build to, and still no
+  authority that will certify you met it.** Previous passes said no guidance existed at all;
+  that was true when written and is no longer true. See `intel/market.md` EMEA.
 - ~~**Whether the Digital Omnibus softened Article 4.**~~ **Resolved in p891: yes, and it did
   not repeal it.** Regulation (EU) 2026/1744, in force 27 July 2026, replaced Article 4 with a
   duty to *take measures to support* AI literacy and expressly disclaims any required level for

@@ -4,6 +4,103 @@ region: Global
 updated: 2026-11-18
 ---
 
+## `2026-11-18` (p893) — an MIT-licensed AI-native LMS exists, and a 4,258 ★ learning repo has no licence at all
+
+**Channel:** `gh api search/repositories` batched `repo:` metrics plus `raw.githubusercontent.com`
+licence byte-reads on `main` and `master`. Non-GitHub hosts remain blocked by this session's
+network policy.
+
+### `Selleo/mentingo` — MIT, 109 ★, pushed today: the exception to this KB's first structural rule
+
+This KB's opening finding, stated in the README and repeated in every pass, is: **the platforms
+are copyleft; the tooling is permissive.** Moodle is GPL-3.0, Open edX and Canvas are AGPL-3.0,
+ILIAS and Chamilo are GPL-3.0, Sakai is ECL-2.0. The advice that follows is to integrate over
+LTI 1.3 or MCP so your work stays a separate work, and to start from Artemis, Kolibri, Oppia or
+OpenOLAT when a client needs a closed derivative.
+
+| Field | Value |
+|---|---|
+| Repo | https://github.com/Selleo/mentingo |
+| Licence | **MIT** — byte-read from `LICENSE@main`, `Copyright (c) 2024 Selleo` |
+| ★ | 109 |
+| Created / last push | 2024-08-01 / **2026-11-18** |
+| What | Self-hosted **AI-native** LMS: built-in AI mentor and role-play, white-label, multi-tenant, Postgres + pgvector, one-click AWS Marketplace deploy |
+
+**Why it is worth a section rather than a row.** It is not an LMS with AI bolted on; the mentor
+tier ships with the platform, and the vector store is already the retrieval substrate. Combined
+with MIT, that makes it the shortest route this KB has found from zero to a **branded, closed,
+AI-native learning product** — the thing clients ask for most and that every other platform in
+`verticals/solutions.md` forecloses without an integration boundary.
+
+**Two cautions, and they are why it does not displace Artemis as the default.** It targets
+**corporate L&D, onboarding and compliance training** — there is no gradebook of record, no SIS
+integration and no accreditation story, so it is not a K-12 or higher-ed answer. And at 109 ★
+with a single vendor (Selleo) behind it, the governance risk is the mirror image of Moodle's:
+permissive licence, thin community. **Use it where the client wants a product; use Artemis or
+OpenOLAT where the client wants an institution.** Added to `verticals/solutions.md` and
+`agents/top.md`.
+
+### `amosblomqvist/learn` — 4,258 ★, licence `NONE`, and it is the sibling of this month's biggest repo
+
+| Check | Result |
+|---|---|
+| `gh api search/repositories` | **4,258 ★**, licence **`NONE`**, `pushed_at` **2026-08-25** |
+| `LICENSE` / `LICENSE.md` / `LICENSE.txt` / `COPYING` on `main` and `master` | **404 on all eight** |
+
+This is the same author's separate "AI learning system", distinct from `learnharness`. **No
+licence file of any kind means all rights reserved** — 4,258 stars confer no right to use it.
+
+**This is the third instance of the same trap in three passes**, and the trend is worth naming
+explicitly. p891 found `TapXWorld/ChinaTextbook` at **84,728 ★** with no licence. p892 found
+`projectfedena/fedena` at **547 ★** listed as Apache-2.0 by comparison tables with no licence
+file at all. p893 finds `amosblomqvist/learn` at 4,258 ★, in the most visible corner of
+education AI this month, with nothing.
+
+**The generalisation has earned its place as a rule:** in education specifically, **star count
+is uncorrelated with licence hygiene**, and the most-starred artefacts are disproportionately
+*content* and *personal learning systems* — curricula, textbooks, study systems — which are the
+categories whose authors are least likely to think about a software grant. A licence byte-read
+is not a formality in this industry; it is the first check, before the repo is even described.
+
+**Two more found this pass, both in the Moodle MCP cohort:** `loyaniu/moodle-mcp` (**58 ★**,
+no licence) and `onbirdev/moodle-webservice_mcp` (**19 ★**, no licence, pushed 2026-11-18).
+Both are excluded from `compose/patterns.md` **P11** for that reason, with the exclusion stated
+in the pattern so they are not re-proposed.
+
+### The Moodle MCP layer appeared without Moodle HQ
+
+Seven independent MCP servers for Moodle now exist. **None is from Moodle HQ**, which has
+shipped `moodlehq/wiki-rag` (BSD-3-Clause) for its own documentation and left the LMS-to-agent
+bridge entirely to the community — where three of the seven have no licence. Full table in
+`agents/trending.md` and `intel/trends.md` **T13**; the build recipe is **P11**.
+
+The useful structure is that the community split read from write across two separately
+maintained MIT servers — `Faixiang/Moodle-MCP` (208 ★, read-only, zero-dependency, README in 10
+languages) and `G36maid/moodle-mcp` (30 ★, read-write). That is a procurement gift: a read-only
+pilot becomes a deployment fact rather than a promise. **For a client standardising on Moodle,
+first-party-grade MCP built to Moodle HQ conventions is unclaimed work.**
+
+### Open edX: announced on the official blog, owned by a vendor
+
+`blend-ed/openedx-mcp` (**AGPL-3.0, 3 ★**) and its Tutor plugin
+`blend-ed/tutor-contrib-openedxmcp` (**AGPL-3.0, 2 ★**) expose Open edX staff/superuser admin
+over MCP, native platform APIs only, targeting the **Ulmo** release. Secondary coverage of the
+September 2026 Open edX blog announcement reads as though this is a first-party `openedx/*`
+project. **It is not** — both repos live under `blend-ed`, a vendor org. Announced-on-the-
+official-blog is not governed-by-the-foundation, and the distinction decides who maintains it
+in two years. Recorded in `agents/top.md` with the correction attached.
+
+### Added to `repos/foundations.md`
+
+`Faixiang/Moodle-MCP` and `G36maid/moodle-mcp` under **Interoperability and standards** — MCP is
+now a second seam alongside LTI 1.3, and the two are complementary rather than competing (LTI
+ships your tool into the LMS; MCP exposes the LMS to your agent). `blend-ed/openedx-mcp`
+alongside them with its vendor caveat. And `acheamponge/wassce-benchmark` (MIT, 4 ★) under
+**Evaluation, labelling and quality** — open LLMs scored against the West African school-leaving
+exam, **the only African-curriculum open evaluation asset found across four regional legs**.
+Small and last pushed 2026-04-07: a starting corpus, not a maintained harness.
+
+
 ## `2026-11-18` (p892) — a 547 ★ school ERP that third-party tables call Apache-2.0 has no licence at all
 
 **Channel:** `gh api search/repositories` batched `repo:` metrics plus `raw.githubusercontent.com`
