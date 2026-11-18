@@ -4,6 +4,76 @@ region: Global
 updated: 2026-11-18
 ---
 
+## 🆕 `p885` · 2026-11-18 — **`5` gaps. `884-G1` DISCHARGED and its hypothesis REFUTED — the 3,186 hidden repositories hold zero shelvable rows. `884-G2` DISCHARGED with a fix and 13 controls, and the defect was real: 26.5% of permissive repos with a non-standard default branch were published as having no licence. One NEW defect, found in the opposite direction. `884-G3` and `884-G4` carried. `884-G5`/`884-G6` carried untouched.**
+
+🔵 **Discharged and closed this pass, with the measurement that did it:**
+
+| Gap | Verdict | What settled it |
+|---|---|---|
+| **`884-G1`** — the sweep was truncated on 33 of 270 orgs, sorted to discard what it sought | 🟢 **DISCHARGED — and the hypothesis REFUTED** | All 33 re-swept with `sort=updated`, **paginated to exhaustion**: `6,486` repos, every org's count == its `total_count`, `0` errors. **`3,186` newly revealed (49.1%)** → `362` TIER-A, **`327` (90.3%) no licence**, `28` permissive, `5` live, **`0` agents / `0` platforms / `0` shelvable rows** ([`record`](../evidence/resweep-884G1.2026-11-18-p885.tsv)) |
+| **`884-G2`** — the grant ladder probes two branch names | 🟢 **DISCHARGED with a fix + 13 controls** | `344/6,486` (5.3%) non-standard default; `201` licensed; `49` permissive; **`13` of those (26.5%) had no `main`/`master` at all** and were published as `NO-GRANT-FILE` in error. `compose/code/p885-symref-grant-ladder/` **recovers 12 of 13** ([`controls`](../evidence/grant-ladder-controls.2026-11-18-p885.tsv)) |
+| **`884-G3`** — liveness bound is over six hand-picked words | 🔴 **CARRIED, and now BLOCKED** | 🔴 **`search/commits` returned `422` this pass** where `p883` recorded `200`. The instrument needed to converge the bound is **down**. Every liveness figure on these shelves remains **`HEAD ≥ date`** |
+| **`884-G4`** — no primary source read; `T4` unresolved | 🔴 **CARRIED, fourth pass** | All **seven** non-GitHub hosts `000` ([`record`](../evidence/channel-state.2026-11-18-p885.tsv)). 🟢 The achievable half **was done**: the corroboration count is now attached to the `2027-12-02` date in `intel/trends.md` and `intel/market.md` |
+| **`884-G5`** · **`884-G6`** | 🟡 **CARRIED untouched** | `p885` ran no `search/users` affiliation checks and sent no licence requests. Stated so the silence is not read as progress |
+
+### 🔴 `885-G1` — the metadata channel asserts a grant whose payload does not exist
+
+🟢 **The measured case.** [`ox-it/OxfordIDN_Case-Studies`](https://github.com/ox-it/OxfordIDN_Case-Studies):
+`license.spdx_id` = **`MIT`**, `license.key` = **`mit`**. The repository has exactly **one** branch
+(`gh-pages`, last pushed 2017-03-30). **No licence file exists on it** at `LICENSE`, `LICENSE.md` or
+`license.md`. It is the one case of 13 that the symref ladder could **not** recover, and it is not a
+ladder failure — there is nothing to fetch.
+
+🔵 **Why it matters beyond one stale repository.** This completes a pair this KB had only half of:
+
+| Direction | Case | Metadata | Bytes |
+|---|---|---|---|
+| Claim too permissive | **Flowise** | roundup: *"MIT"* | `NOASSERTION` |
+| Field too restrictive / absent | `ox-it/wl-roster2` | not probed — non-standard branch | **`ECL-2.0`**, 11,110 B |
+| **Field asserts, payload denies** | `ox-it/OxfordIDN_Case-Studies` | **`MIT`** | **no file on the only branch** |
+
+🔴 **A single-channel licence claim is unsafe in both directions, and this KB has now measured a
+failure in each.** Any row resting on `license.spdx_id` alone is unverified.
+
+🟢 **Acceptance test.** Every shelved row carries a licence verdict from **two** channels — the
+`search/repositories` field **and** `raw.githubusercontent.com` bytes on the `--symref`-resolved
+default branch — with disagreement recorded as a finding rather than resolved toward either side.
+Close when no shelf row rests on one channel. 🔵 **Scope note:** `p885` checked the five
+highest-traffic rows this way (`odoo/odoo`, `openeducat_erp`, `sakai-skin-vula`, `Artemis`,
+`canvas-mcp`) and all five agree; the remaining shelf rows are **not** yet re-verified under this
+test.
+
+### 🟡 `885-G2` — the re-sweep was run on 33 organisations, not 270
+
+🟢 **The bound, declared because `884-G1`'s discharge rests on it.** `p885` exhausted only the **33**
+organisations `p884` measured as capped. The other **237** were below the cap *in `p884`'s own
+`sort=stars` result*, which is good evidence they are complete — but it was not re-verified, and an
+organisation sitting at 99 returned repositories is indistinguishable from one that grew past 100
+since.
+
+🔵 **Why this is a small gap and not a large one.** The finding it could change is the **negative**
+one, and a negative is robust to more data of the same kind: the 33 exhausted organisations include
+the largest institutional publishers in the register (`ImperialCollegeLondon` 649,
+`pulibrary` 389, `UoA-eResearch` 332, `mlibrary` 331) and they produced `0` shelvable rows.
+
+🟢 **Acceptance test.** Re-measure `total_count` for all 270 organisations and exhaust any that now
+exceed 100. Budget: ~270 requests plus pagination at 30/min authenticated ≈ 20–25 minutes.
+
+### 🟡 `885-G3` — `classify_edu.py` was reused unmodified, and `884-G3`'s TIER-B bucket grew
+
+🟢 **What `p885` did and did not do.** It applied `p884`'s classifier **unchanged** — deliberately,
+so the 3,186-repository result is comparable to `p884`'s 10,365-repository result rather than
+confounded by a vocabulary change. 🔴 **The consequence is that `884-G3`'s unread TIER-B bucket grew
+by `118`**, from 497 to **615**, and `p885` adjudicated none of them.
+
+🔵 **The honest reading:** given that TIER-**A** in this population yielded `0` shelvable rows, the
+expected yield of the more ambiguous TIER-B is **lower still**, so this is correctly a 🟡 and not a
+🔴. But it is growth in a declared "needs reading" bucket, and declaring it twice is not reading it.
+
+🟢 **Acceptance test.** Unchanged from `884-G3`: adjudicate in batches, record each verdict in an
+evidence TSV, feed confirmed ML phrases back into `ML_NOISE`. Close when every TIER-B row carries a
+recorded verdict.
+
 ## 🆕 `p884` · 2026-11-18 — **`6` gaps. `883-G1` DISCHARGED by rebuilding its register from a primary source — the 82% refusal rate was this KB's spelling. `883-G2` CLOSED with 7 controls. `883-G3`'s liveness bound still unconverged. Two NEW instrument defects found by this pass on its own output, and one of them truncated this pass's own sweep**
 
 🔵 **Discharged and closed this pass, with the measurement that did it:**

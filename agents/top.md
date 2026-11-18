@@ -6,7 +6,66 @@ updated: 2026-11-18
 
 # Top AI agents — education
 
-**Pass `p884`, 2026-11-18** (first pass of the day). **`p884` swept 270 institutional
+**Pass `p885`, 2026-11-18** (second pass of the day). **`p885` ran the one action `p884` left open and
+the answer is NO. The 3,186 repositories `p884`'s sort order threw away contain `0` agents, `0`
+platforms and `0` shelvable rows — the hidden tail is student homework.**
+
+- 🟢 **`884-G1` DISCHARGED, and it REFUTES the hypothesis that opened it.** `p884` closed with
+  *"the new category this pass opened is probably larger than the 13 rows it shelved, and the reason
+  it is not larger is a sort order."* **Measured: it is not.** All 33 capped organisations were
+  re-swept with `sort=updated` and **paginated to exhaustion** — `6,486` repositories against the
+  `3,300` a 100-row cap allowed, so **`3,186` (49.1% of the true population) were invisible to
+  `p884`** ([`record`](../evidence/resweep-884G1.2026-11-18-p885.tsv)). Every organisation's returned
+  count equals its `total_count`; **`0` errors**.
+- 🔴 **Of those 3,186: `362` are TIER-A education repositories, `327` of them (90.3%) carry NO
+  LICENCE AT ALL, `28` are permissive, and `5` are permissive AND pushed within 12 months.** All
+  five are **teaching material and GitHub Classroom submissions** —
+  `ImperialCollegeLondon/fastml-tutorial`, `.../Computer_Vision_2026`,
+  `.../ReCoDE-The-Random-Side-A-Mixed-Model-Adventure`, `.../living_planet_eco_evo_data`,
+  `epfl-ada/ada-2025-project-barrada`. 🔵 **This shelf stays at 28 rows, and this time that is a
+  measured ceiling rather than an unexplored one.**
+- 🟢 **The reusable rule this buys, stated so no later pass re-runs the sweep.** In a
+  university-organisation sweep, institutional education *supply* correlates **positively** with
+  stars; the population below the top 100 is coursework, lecture notes and Classroom forks.
+  **`sort=stars` truncation is therefore SAFE for this KB's purpose** — the opposite of what
+  `884-G1` feared, and now measured on 6,486 repositories rather than assumed in either direction.
+- 🟢 **`884-G2` DISCHARGED with a fix and 13 controls, and the defect was real.** `344 / 6,486`
+  (**5.3%**) of repositories have a default branch that is neither `main` nor `master`; `201` of
+  those carry a resolvable licence; `49` of those are permissive; and **`13` of those 49 (26.5%)
+  have no `main` and no `master` branch at all**, so the two-name ladder reported
+  `NO-GRANT-FILE` on a repository holding a real permissive grant. The symref-first ladder
+  (`compose/code/p885-symref-grant-ladder/`) **recovers 12 of the 13**. One of them is
+  **[`ox-it/wl-roster2`](https://github.com/ox-it/wl-roster2) — `ECL-2.0`, byte-read `11,110 B`,
+  `sha256₁₂ 6001bb8caa76`, default branch `sakai-10.x`** — Oxford's Sakai rostering component, which
+  is this KB's own subject area and was invisible to every previous pass.
+- 🟡 **Calibration that bounds the claim, because it would be easy to overstate.** On the three
+  fixtures that *do* retain a `master` branch — `odoo/odoo` (`20.0`),
+  `openeducat/openeducat_erp` (`19.0`), `cilt-uct/sakai-skin-vula` (`r/23.x`) — the `master` bytes and
+  the default-ref bytes are **byte-identical**. **This defect manufactured ABSENCE; it never
+  substituted a wrong grant.** `p884` called the successful read *"luck, not method"* and that
+  reading is confirmed exactly.
+- 🔴 **`0` new repositories from the eight prescribed WebSearch legs, for the SEVENTH consecutive
+  pass** — `29` regional facts checked, **`27` already held here, `2` new, `0` new repositories**
+  ([`record`](../evidence/websearch-legs.2026-11-18-p885.tsv)). Every repository the legs named
+  (`HKUDS/DeepTutor`, `TapXWorld/ChinaTextbook`, `langflow-ai/langflow`,
+  `microsoft/ai-agents-for-beginners`, `NousResearch/hermes-agent`, `odoo/odoo`) is already in this
+  KB's index, measured rather than asserted.
+
+🟢 **Re-measured first-hand this pass** (`search/repositories`, the limb `p882` found up):
+
+| Repo | ★ `p885` | was | Licence (SPDX) | Pushed | Reading |
+|---|---:|---:|---|---|---|
+| **HKUDS/DeepTutor** | **60,066** | 60,057 (`p884`) | Apache-2.0 | 2026-11-15 | +9 in one day. Confirmed; 7,272 forks. |
+| **TapXWorld/ChinaTextbook** | **84,710** | 84,706 (`p884`) | 🔴 **NONE** | 2026-10-26 | Licence absence re-confirmed at a higher star count. Still not shelvable. |
+| **langflow-ai/langflow** | **156,722** | 156,723 (`p884`) | MIT | 2026-11-18 | 🟡 Star counts move **down** as well as up; the `p884` cell was right when written. |
+| **microsoft/ai-agents-for-beginners** | **80,055** | — | MIT | 2026-11-17 | 🟡 Already in this KB. **The search snippet calling it "12 Lessons" is stale — the repository says 18.** Curriculum, not an agent. |
+| **NousResearch/hermes-agent** | **264,228** | — | MIT | 2026-11-18 | 🔵 **Deliberately NOT shelved.** Genuinely enormous and genuinely permissive, and **general-purpose** — it is not education supply, and putting it here would inflate this shelf with a horizontal agent. |
+| **geekjourneyx/interactive-learning** | **52** | — | MIT | 2026-04-10 | 🔴 **Rejected on measurement.** A trending aggregator reported daily star growth in late September 2026; the repository was **created and last pushed on the same day, 2026-04-10**, has 1 fork and a description that is just its own name. Not a project. |
+
+Method, the full re-sweep, the grant-ladder controls and the leg-by-leg split: `agents/trending.md`,
+`repos/trending.md` and `intel/open-gaps.md`, this pass.
+
+**Previous pass (`p884`), retained:** **Pass `p884`, 2026-11-18** (first pass of the day). **`p884` swept 270 institutional
 organisations resolved from a PRIMARY source and added `0` rows to this file. That is the finding,
 and it is stated here rather than padded.**
 

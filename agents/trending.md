@@ -4,6 +4,114 @@ region: Global
 updated: 2026-11-18
 ---
 
+## 🔴 `2026-11-18` (`p885`) — **the eight prescribed legs nilled for a SEVENTH pass, and the one open action that promised new supply came back empty on measurement: the 3,186 repositories `p884`'s sort order discarded hold zero agents. The pass's real yield came from a BRANCH NAME, not a keyword**
+
+🔵 **The eight legs, run global-then-regional as prescribed, with the held/new split measured against
+this KB's index rather than asserted.** `29` facts checked · **`27` held** · `2` new · **`0` new
+repositories**.
+
+| Leg | Facts | Held | New | New repos | What it returned |
+|---|---:|---:|---:|---:|---|
+| `top open source AI agents education 2026 github MIT` | 4 | 4 | 0 | **0** | Vendor roundups. Named `NousResearch/hermes-agent`, `OpenHands`, `browser-use`, `OpenClaw` — all horizontal, all already indexed. 🔴 One source called OpenClaw's licence *"Other"* and another MIT; this KB carries MIT, byte-read. |
+| `github trending education AI 2026` | 5 | 5 | 0 | **0** | `HKUDS/DeepTutor` (trending 2026-10-30), `TapXWorld/ChinaTextbook`, `microsoft/ai-agents-for-beginners`, `geekjourneyx/interactive-learning`. All indexed. |
+| `open source platform education ERP CRM MIT Apache` | 3 | 3 | 0 | **0** | 🔴 **Ten of ten results were OpenEduCat's own marketing pages.** Confirms this KB's standing finding: **there is no MIT/Apache education ERP.** |
+| `AI education industry trends 2026` | 4 | 4 | 0 | **0** | Market sizing with 100× dispersion between sources ($10.6B vs $1,169B by 2035). Already carried as low-authority. |
+| **North America** | 6 | 6 | 0 | **0** | Stanford AI Index 2026 (*6% of teachers say their policy is clear*), ~100 state bills, ≥15 states legislating, Illinois `S.B. 1920`, NC `Session Law 2026-41`, Virginia `S.B. 394`, `$169M` FIPSE. |
+| **EMEA** | 7 | 6 | **1** | **0** | Digital Omnibus agreed 2026-05-07; high-risk education from **`2027-12-02`**; Eurydice *Digital education at school in Europe 2026*; Fosway; Epson (n≈3,360, 6 countries); Futuresource 67%. 🆕 **DEC Leadership Summit EMEA 2026** (Paris, 41 leaders / 30 institutions / 14 countries). |
+| **APAC** | 5 | 5 | 0 | **0** | Ipsos Education Monitor 2026, THE April-2026 *30% virtual-tutor adoption*, World Bank Policy Academy (Seoul, 2026-08-31→09-04), Cambridge English KL summit, Acer Edu Summit. |
+| **LATAM** | 8 | 7 | **1** | **0** | DEC LATAM (92% students / 79% faculty), UNESCO+CENIA / **Latam-GPT**, Fundación Ceibal + EdTech Hub, Google.org / Raspberry Pi `$4.6M`, Luca `$8M`, PowerSchool, LATAM AI VC `$3.2B` (conflicting `~$2B`). 🆕 **only ~30% of LATAM universities have a published AI-use policy.** |
+
+🔴 **Both new facts are search-snippet-sourced and could not be primary-verified.** All seven
+non-GitHub hosts this KB cites returned `000` this pass
+([`record`](../evidence/channel-state.2026-11-18-p885.tsv)). `884-G4` stands.
+
+🟡 **One mis-regionalisation caught at intake.** The APAC leg returned the **UAE's 25 generative-AI
+school restrictions (Feb 2026)** as APAC. Under this KB's closed region vocabulary the UAE is
+**EMEA**, where it is already carried. Not double-counted.
+
+### 🟢 `ACTION 884-G1` DISCHARGED — and it refutes the expectation that created it
+
+`p884` ended with: *"The new category this pass opened is probably larger than the 13 rows it
+shelved, and the reason it is not larger is a sort order."* **Measured, and it is not.**
+
+🟢 **The re-sweep.** All 33 capped organisations, `sort=updated`, **paginated to exhaustion**
+([`record`](../evidence/resweep-884G1.2026-11-18-p885.tsv)):
+
+```
+true population            6,486 repositories   (every org's returned count == its total_count, 0 errors)
+p884 captured (cap=100)    3,300
+newly revealed             3,186   = 49.1% of the population was invisible to p884
+```
+
+🔴 **And the 3,186 are homework.** Classified with `p884`'s own `classify_edu.py`, unmodified:
+
+| Measure | Count | Share |
+|---|---:|---:|
+| TIER-A (publishable education candidates) | 362 | 11.4% |
+| TIER-B (ambiguous, needs a read) | 118 | 3.7% |
+| — of TIER-A: **no licence at all** | **327** | **90.3%** |
+| — of TIER-A: permissive | 28 | 7.7% |
+| — permissive **and** pushed within 12 months | **5** | **1.4%** |
+| — of those 5: **agents or platforms** | **0** | **0%** |
+
+Per-repo classification:
+[`TIER-A (362)`](../evidence/resweep-tierA.2026-11-18-p885.tsv) ·
+[`TIER-B (118, unread — `885-G3`)`](../evidence/resweep-tierB.2026-11-18-p885.tsv).
+
+All five are teaching material: `ImperialCollegeLondon/fastml-tutorial`,
+`.../Computer_Vision_2026`, `.../ReCoDE-The-Random-Side-A-Mixed-Model-Adventure`,
+`.../living_planet_eco_evo_data`, `epfl-ada/ada-2025-project-barrada` (a GitHub Classroom
+submission). 🔵 **The shelf stays at 28 rows, now against a measured ceiling.**
+
+🟢 **The rule this buys, so no later pass pays for it twice.** In a university-organisation sweep,
+institutional education **supply correlates positively with stars**; the tail is coursework,
+lecture notes and Classroom forks. **`sort=stars` truncation is SAFE when hunting liftable
+components** — and fatal only if the target is the tail itself, which for this KB it is not.
+
+### 🟢 The pass's actual find came from a branch name — `ox-it/wl-roster2`
+
+🔵 **`p883` found supply behind the OWNER. `p885` found supply behind the BRANCH.** Discharging
+`884-G2` surfaced **[`ox-it/wl-roster2`](https://github.com/ox-it/wl-roster2) — `ECL-2.0`, byte-read
+`sakai-10.x/LICENSE`, `11,110 B`, `sha256₁₂ 6001bb8caa76`** — Oxford's Sakai rostering component,
+invisible to every previous pass because its default branch is `sakai-10.x` and this KB probed only
+`main` and `master`.
+
+🟡 **The common cause across both finds, stated as a rule.** `ECNU/EduWork` was invisible because its
+**description was empty**; `ox-it/wl-roster2` because its **default branch was non-standard**.
+**Neither project was absent — the metadata field the query read was.** Keyword discovery is
+exhausted for this industry (seven passes); **structural** channels are not.
+
+### 🟢 Re-measured first-hand
+
+| Repo | ★ `p885` | was | Licence | Pushed | Note |
+|---|---:|---:|---|---|---|
+| `HKUDS/DeepTutor` | 60,066 | 60,057 | Apache-2.0 | 2026-11-15 | +9 in a day; 7,272 forks. |
+| `TapXWorld/ChinaTextbook` | 84,710 | 84,706 | 🔴 NONE | 2026-10-26 | Absence re-confirmed. |
+| `langflow-ai/langflow` | 156,722 | 156,723 | MIT | 2026-11-18 | 🟡 Counts move **down** too. |
+| `microsoft/ai-agents-for-beginners` | 80,055 | — | MIT | 2026-11-17 | 🔴 Snippet said *"12 Lessons"*; repo says **18**. |
+| `NousResearch/hermes-agent` | 264,228 | — | MIT | 2026-11-18 | 🔵 Horizontal. **Deliberately not shelved.** |
+| `vishalsachdev/canvas-mcp` | 334 | 333 | MIT `1,071 B` `5385a26e2fac` | 2026-11-17 | Row confirmed to the byte. |
+| `ls1intum/Artemis` | 832 | 832 | MIT `1,091 B` `63a0a2b4d6d9` | 2026-11-18 | 🟡 Default branch is **`develop`**, not `main` as the row says. Bytes identical on all three refs — **verdict right, ref label imprecise.** |
+| `cilt-uct/tsugi-request-gradebook-upload` | 0 | 0 | Apache-2.0 | 2026-10-06 | P25/P26 component. Confirmed. |
+| `geekjourneyx/interactive-learning` | 52 | — | MIT | 2026-04-10 | 🔴 **Rejected.** Created *and* last pushed 2026-04-10; 1 fork; description is its own name. An aggregator reported Sept-2026 star growth; the repository has not moved since April. |
+
+### 🔴 Channel state, `p885`
+
+| Channel | Result | Reading |
+|---|---|---|
+| `api.github.com/search/repositories` | **`200`** | UP — stars, SPDX, pushed, created, forks, canonical `full_name`, `default_branch` |
+| `api.github.com/search/users` | **`200`** | UP — `883-G1`'s instrument still open |
+| `api.github.com/search/commits` | 🔴 **`422`** | **DOWN this pass** — `p883` recorded `200`. `883-G3`'s liveness bound cannot be re-run until it returns. |
+| `api.github.com/repos/<slug>` | `403` | DOWN — session scope |
+| `raw.githubusercontent.com` | `200` | UP — grant bytes |
+| `git ls-remote --symref` | UP | UP — **refs and default branch; the channel that paid this pass** |
+| 7 non-GitHub hosts (EUR-Lex, EC ×2, DEC ×2, THE, UNU) | **`000`** | **ALL UNREACHABLE** — `884-G4` |
+
+🟡 **Rate limit, recorded because it bounds any future sweep:** the search limb is **authenticated at
+30 requests/minute** (`X-RateLimit-Resource: search`), core at 15,000/hour. The 6,486-repository
+re-sweep cost **84 paginated requests** at ~2.2 s spacing. A full 270-organisation exhaustive sweep
+is therefore feasible but should be budgeted at roughly **20–25 minutes** of wall clock.
+
 ## 🟢 `2026-11-18` (`p884`) — **the owner channel's inputs are now PRIMARY-SOURCED, and the refusal rate `883-G1` was written to explain collapses from 82% to 9%: it was this KB's spelling, not the institutions. The first new supply it returns is not agents at all — it is university teaching-and-learning centres' production LMS/SIS integration estates**
 
 🔵 **`ACTION 883-G1` is DISCHARGED, and its acceptance test is met on its own terms.** `p883` built

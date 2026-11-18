@@ -4,6 +4,116 @@ region: Global
 updated: 2026-11-18
 ---
 
+## 🟢 `2026-11-18` (`p885`) — **the truncated sweep is finished: 6,486 repositories, 3,186 of them never seen before, and the default-branch census inside it exposed a grant probe that was blind to one permissive repository in four**
+
+🔵 **`884-G1`'s acceptance test, met exactly as written.** `p884` swept 270 organisations but
+`search/repositories` caps at 100 results and passed `sort=stars`, so **33 organisations were
+truncated and the discarded half was the low-star tail — precisely the population the sweep existed
+to find.** `p885` re-swept all 33 with `sort=updated`, **paginated to exhaustion**
+([`record`](../evidence/resweep-884G1.2026-11-18-p885.tsv)).
+
+```
+33 capped organisations
+true population        6,486   every org's returned count == its total_count; 0 errors; none exceeded the 1,000 search ceiling
+p884 captured          3,300
+newly revealed         3,186   49.1% of the population was invisible
+largest single org       649   ImperialCollegeLondon  (p884 saw 100)
+```
+
+🔴 **The verdict is NEGATIVE for the sell shelves, and that is the finding.** Of the 3,186: `362`
+TIER-A education repositories, **`327` (90.3%) with no licence whatsoever**, `28` permissive, `5`
+permissive and live — and **`0` agents, `0` platforms, `0` shelvable rows.** The tail is lecture
+material and GitHub Classroom submissions.
+
+🟢 **Two independent populations now agree on the licence-absence rate, in the expected direction:**
+
+| Population | Repos | No grant at all |
+|---|---:|---:|
+| `p884` — top-100 slice of 270 orgs | 10,365 | **76.4%** |
+| `p885` — the discarded tail, TIER-A only | 362 | **90.3%** |
+
+🔵 **The tail is worse-licensed than the head.** That is the single clearest argument in this KB for
+why a university's own GitHub organisation cannot be treated as a supply shelf without a grant gate
+in front of it — and it is now measured rather than asserted.
+
+### 🟢 Default-branch census over all 6,486 repositories — the instrument finding of the pass
+
+| Default branch | Repos | Share |
+|---|---:|---:|
+| `main` | 3,976 | 61.3% |
+| `master` | 2,166 | 33.4% |
+| **neither** | **344** | **5.3%** |
+
+Full census: [`default-branch-census`](../evidence/default-branch-census.2026-11-18-p885.tsv); the
+49 permissive non-standard-default repositories and their per-repo probe:
+[`nonstd-default-permissive`](../evidence/nonstd-default-permissive.2026-11-18-p885.tsv).
+
+Composition of the 344: `gh-pages` 151 · `sakai-10.x` 47 · `develop` 31 · `dev` 22 ·
+`sakai_2-5-x` 14 · `development` 13 · `devel` 6 · `production` 4 · `principal` 4 · `trunk` 2 ·
+50 others (`quest`, `publish`, `staging`, `half-tree`, `crowdbot`, `Branch_August`, `v1`, `11.x`, …).
+
+🔴 **`884-G2`, measured rather than reasoned about.** `p884` found the defect on one repository
+(`cilt-uct/sakai-skin-vula`, default `r/23.x`) and correctly called the read that succeeded *"luck,
+not method."* `p885` quantified the luck:
+
+```
+344  non-standard default branch
+└── 201  carry a resolvable licence
+    └──  49  are PERMISSIVE
+        └──  13  have NO `main` and NO `master` at all
+                 -> the two-name ladder published NO-GRANT-FILE on a real permissive grant   (26.5%)
+```
+
+🟢 **The fix and its 13 controls** ([`controls`](../evidence/grant-ladder-controls.2026-11-18-p885.tsv)).
+`compose/code/p885-symref-grant-ladder/fetch_grants.sh` resolves the default branch over
+`git ls-remote --symref` and probes **that ref first**. **12 of 13 recovered**, every one via the
+symref arm:
+
+| Repo | Default branch | Grant recovered | Bytes | `sha256₁₂` |
+|---|---|---|---:|---|
+| **`ox-it/wl-roster2`** | `sakai-10.x` | **`ECL-2.0`** | 11,110 | `6001bb8caa76` |
+| `kmc-jp/reikai-log` | `trunk` | Apache-2.0 | 11,357 | `c71d239df917` |
+| `pulibrary/scarlettiger` | `trunk` | BSD-2-Clause | 1,338 | `ee98594397fd` |
+| `pulibrary/sipper` | `development` | BSD-2-Clause (Princeton copyright-first) | 1,312 | `2d30c3e50bc2` |
+| `ImperialCollegeLondon/sam-ahadi` | `develop` | MIT | 1,101 | `417bc5d717f0` |
+| `ImperialCollegeLondon/pytest_template_application` | `develop` | MIT | 1,080 | `b3f5e88c5c8b` |
+| `ImperialCollegeLondon/poetry_template` | `develop` | MIT | 1,080 | `b3f5e88c5c8b` |
+| `UoA-eResearch/unity_vr_swim` | `quest` | MIT | 1,101 | `338694c5bd58` |
+| `epfl-lasa/obstacleAvoidance_Cpp` | `Branch_August` | MIT (`LICENSE.txt`) | 1,078 | `1a686fd370eb` |
+| `eth-sri/abstraqt` | `publish` | MIT (SRI-Lab copyright-first) | 1,054 | `d4bfabce0a1c` |
+| `ox-it/OxfordIDN_Shiny-App-Templates` | `gh-pages` | MIT | 1,086 | `2edaa8acc9a4` |
+| `uspdev/laravel-printing` | `v1` | MIT (`LICENSE.md`) | 1,100 | `8c7f6f587bfc` |
+| 🔴 `ox-it/OxfordIDN_Case-Studies` | `gh-pages` | **none found** — see `885-G1` | — | — |
+
+🟡 **Calibration, so the claim is not overstated.** On the five fixtures that **do** retain a
+`master` or `main` branch — `odoo/odoo` (`20.0`), `openeducat/openeducat_erp` (`19.0`),
+`cilt-uct/sakai-skin-vula` (`r/23.x`), `ls1intum/Artemis` (`develop`),
+`vishalsachdev/canvas-mcp` (`main`) — **the fallback-ref bytes and the default-ref bytes are
+byte-identical in every case.** 🟢 **This defect manufactured ABSENCE; it never substituted a wrong
+grant.** Every existing shelf row read off `main` or `master` is therefore **substantively safe** —
+`p885` checked rather than assumed, which is the only reason that sentence can be written.
+
+### 🔴 `885-G1` — the metadata channel asserts a grant the byte channel denies
+
+[`ox-it/OxfordIDN_Case-Studies`](https://github.com/ox-it/OxfordIDN_Case-Studies) is not a ladder
+failure. `license.spdx_id` is **`MIT`** and `license.key` is **`mit`**; the repository has exactly
+**one** branch (`gh-pages`, last pushed 2017-03-30); and **no licence file exists on it** at
+`LICENSE`, `LICENSE.md` or `license.md`.
+
+🔵 **This completes a pair this KB had only half of.** Flowise: the roundups said MIT and the field
+said `NOASSERTION` (metadata too *restrictive* relative to the claim). Here: the field says MIT and
+**the payload does not exist** (metadata too *permissive*). **A licence claim needs two channels, and
+disagreement is a finding, not a tie to break toward whichever is convenient.** Filed in
+`intel/open-gaps.md`.
+
+### 🟡 Regional composition of the newly revealed 3,186
+
+Every one of the five permissive-and-live finds is **EMEA** (Imperial College London ×4, EPFL ×1).
+🔵 **The institutional-supply question is now CLOSED in all four regions** rather than open in EMEA —
+not because the other regions returned nothing, but because the exhaustive sweep shows the category
+itself tops out at teaching material. No regional sell in `intel/market.md` changes as a result, and
+that is stated there explicitly rather than left to inference.
+
 ## 🟢 `2026-11-18` (`p884`) — **270 institutional organisations swept by primary-resolved name, 10,365 repositories measured, and the finding is about the GRANT: three quarters of the education code universities publish carries no licence at all — and it is WORST in EMEA, not in the Global South**
 
 🔵 **The sweep, and what makes it different from every previous one.** `p883` built the owner

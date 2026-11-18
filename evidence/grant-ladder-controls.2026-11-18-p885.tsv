@@ -1,0 +1,14 @@
+slug	default_branch	has_main	has_master	old_ladder_verdict	new_ladder_ref	new_ladder_path	new_ladder_code	bytes	sha256_12	via
+ImperialCollegeLondon/poetry_template	develop	0	0	MANUFACTURED-ABSENCE	develop	LICENSE	200	1080	b3f5e88c5c8b	symref
+ImperialCollegeLondon/pytest_template_application	develop	0	0	MANUFACTURED-ABSENCE	develop	LICENSE	200	1080	b3f5e88c5c8b	symref
+ImperialCollegeLondon/sam-ahadi	develop	0	0	MANUFACTURED-ABSENCE	develop	LICENSE	200	1101	417bc5d717f0	symref
+UoA-eResearch/unity_vr_swim	quest	0	0	MANUFACTURED-ABSENCE	quest	LICENSE	200	1101	338694c5bd58	symref
+epfl-lasa/obstacleAvoidance_Cpp	Branch_August	0	0	MANUFACTURED-ABSENCE	Branch_August	LICENSE.txt	200	1078	1a686fd370eb	symref
+eth-sri/abstraqt	publish	0	0	MANUFACTURED-ABSENCE	publish	LICENSE	200	1054	d4bfabce0a1c	symref
+kmc-jp/reikai-log	trunk	0	0	MANUFACTURED-ABSENCE	trunk	LICENSE	200	11357	c71d239df917	symref
+ox-it/OxfordIDN_Case-Studies	gh-pages	0	0	MANUFACTURED-ABSENCE	gh-pages	-	404	-	-	no-grant
+ox-it/OxfordIDN_Shiny-App-Templates	gh-pages	0	0	MANUFACTURED-ABSENCE	gh-pages	LICENSE	200	1086	2edaa8acc9a4	symref
+ox-it/wl-roster2	sakai-10.x	0	0	MANUFACTURED-ABSENCE	sakai-10.x	LICENSE	200	11110	6001bb8caa76	symref
+pulibrary/scarlettiger	trunk	0	0	MANUFACTURED-ABSENCE	trunk	LICENSE	200	1338	ee98594397fd	symref
+pulibrary/sipper	development	0	0	MANUFACTURED-ABSENCE	development	LICENSE	200	1312	2d30c3e50bc2	symref
+uspdev/laravel-printing	v1	0	0	MANUFACTURED-ABSENCE	v1	LICENSE.md	200	1100	8c7f6f587bfc	symref

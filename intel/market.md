@@ -6,7 +6,61 @@ updated: 2026-11-18
 
 # Market intelligence — education
 
-**Pass `p884`, 2026-11-18** (first pass of the day). **`p884` ran all four regional legs and they
+**Pass `p885`, 2026-11-18** (second pass of the day). **All four regional legs ran. `29` facts
+checked against this file, `27` already held, `2` new, `0` new repositories. This KB stays ahead of
+its secondary sources for the second consecutive pass — and `p885` states what that does NOT mean.**
+
+🔴 **It does not mean the regional picture is verified.** `p885` re-probed every non-GitHub host this
+file cites and **all seven returned `000`** — `eur-lex.europa.eu`, `digital-strategy.ec.europa.eu`,
+`education.ec.europa.eu`, `www.digitaleducationcouncil.com`, `digitaleducationcouncil.com`,
+`www.timeshighereducation.com`, `unu.edu`
+([`record`](../evidence/channel-state.2026-11-18-p885.tsv)). **`884-G4` is unresolved and has now
+survived `p875`, `p883`, `p884` and `p885`.** Every regulatory date below remains
+**secondary-sourced**, and the two new facts this pass adds are **search-snippet-sourced only** and
+carry no primary confirmation. They are marked as such in place rather than blended in.
+
+### 🟢 The held/new split, per leg — `p885`
+
+| Leg | Facts checked | Held | New | New repos |
+|---|---:|---:|---:|---:|
+| Open-source agents (global) | 4 | 4 | 0 | **0** |
+| GitHub trending education AI | 5 | 5 | 0 | **0** |
+| Education ERP/CRM platforms | 3 | 3 | 0 | **0** |
+| AI education industry trends | 4 | 4 | 0 | **0** |
+| **North America** — adoption/regulation/players | 6 | 6 | 0 | **0** |
+| **EMEA** — adoption/regulation/players | 7 | 6 | **1** | **0** |
+| **APAC** — adoption/regulation/players | 5 | 5 | 0 | **0** |
+| **LATAM** — adoption/regulation/players | 8 | 7 | **1** | **0** |
+| **Total** (facts counted once across legs) | **29** | **27** | **2** | **0** |
+
+🔵 **The two new facts, with their provenance stated plainly:**
+
+| Region | Fact | Provenance | Reading |
+|---|---|---|---|
+| **EMEA** | **DEC Leadership Summit EMEA 2026**, Paris — **41 senior leaders from 30 institutions across 14 countries**, producing a report on *"ten signals shaping higher education's AI agenda"*. | 🔴 Search snippet only; `digitaleducationcouncil.com` is `000` on both the apex and `www` host. **Not primary-verified.** | 🟡 Useful as a **named convening of European HE decision-makers** — i.e. a route to the buyer, not a market fact. Attendee counts from a vendor-run summit are self-reported. |
+| **LATAM** | **Only ~30% of Latin American universities have a published AI-use policy**, against this file's held figure of **92% of students / 79% of faculty actively using AI**. | 🔴 Search snippet only, attributed to a panel citing the DEC LATAM survey whose headline figures this file already holds. | 🟢 **This is the adoption–governance gap quantified from the institutional side**, and it sharpens the existing LATAM sell rather than changing it: ~7 in 10 universities have users but no policy. Treat the number as directional. |
+
+🔴 **Regional legs that returned NOTHING NEW, named rather than left as silence** — North America
+(6/6 held: Stanford AI Index 2026's *6% of teachers say their school's AI policy is clear*, ~100
+state bills tracked, ≥15 states legislating, Illinois `S.B. 1920`, North Carolina
+`Session Law 2026-41`, Virginia `S.B. 394`, the `$169M` FIPSE awards) and APAC (5/5 held: Ipsos
+Education Monitor 2026, the Times Higher Education April-2026 *30% virtual-tutor adoption*, the World
+Bank Global EdTech Policy Academy in Seoul, the UAE's 25 generative-AI school restrictions, Cambridge
+English's Kuala Lumpur summit). 🔵 **An informed gap is information; silence looks exactly like
+coverage.**
+
+🟡 **One mis-regionalisation corrected at the source, not propagated.** The APAC leg returned the
+**UAE's 25 generative-AI restrictions (February 2026)** as an APAC item. **The UAE is EMEA/GCC under
+this KB's closed region vocabulary**, and the source itself flagged the mismatch. It is carried in
+the EMEA regulatory set, where it already was, and **not** double-counted into APAC.
+
+🔵 **Supply-side regional movement this pass** — the `3,186` repositories recovered by exhausting
+`p884`'s truncated sweep break down **EMEA-heavy** and change no regional sell, because none of them
+is shelvable: all five permissive-and-live finds are EMEA teaching material (Imperial College London
+×4, EPFL ×1). **The institutional-supply story is now closed in every region** rather than open in
+EMEA. Full breakdown in `repos/trending.md`, this pass.
+
+**Previous pass (`p884`), retained:** **Pass `p884`, 2026-11-18** (first pass of the day). **`p884` ran all four regional legs and they
 returned `0` new facts — this KB is now AHEAD of its own secondary sources, and that is the finding.**
 Every regulatory and adoption figure the legs produced is already carried here, and Brazil's
 instrument is carried *more precisely* here (`Parecer CNE/CP nº 15/2026`, homologated `2026-11-10`,

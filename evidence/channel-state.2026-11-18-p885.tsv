@@ -1,0 +1,15 @@
+channel	result	reading
+api.github.com/search/repositories	200	UP - stars, SPDX, pushed, created, forks, full_name, default_branch
+api.github.com/search/users	200	UP - 883-G1 instrument open
+api.github.com/search/commits	422	DOWN this pass (p883 recorded 200); 883-G3 cannot be re-run
+api.github.com/repos/<slug>	403	DOWN - session repository scope
+raw.githubusercontent.com	200	UP - grant bytes
+git ls-remote --symref	UP	UP - refs and default branch; the channel that paid this pass
+eur-lex.europa.eu	000	UNREACHABLE - 884-G4
+digital-strategy.ec.europa.eu	000	UNREACHABLE - 884-G4
+education.ec.europa.eu	000	UNREACHABLE - 884-G4
+www.digitaleducationcouncil.com	000	UNREACHABLE - blocks primary check of the EMEA new fact
+digitaleducationcouncil.com	000	UNREACHABLE - apex also fails
+www.timeshighereducation.com	000	UNREACHABLE
+unu.edu	000	UNREACHABLE
+rate_limit search	30/min authenticated	84 paginated requests spent on the re-sweep

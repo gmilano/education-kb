@@ -6,7 +6,73 @@ updated: 2026-11-18
 
 # Current trends — education AI
 
-**Pass `p884`, 2026-11-18** (first pass of the day). `p884` adds **T23** — channel state is a
+**Pass `p885`, 2026-11-18** (second pass of the day). **The trend this pass establishes is not about
+AI in education — it is about where education supply actually lives, and `p885` closed that question
+with a measurement instead of a hypothesis.**
+
+### 🟢 T-`p885`-1 — University GitHub organisations are a teaching archive, not a software estate
+
+**Measured, not inferred.** 6,486 repositories across 33 university organisations, paginated to
+exhaustion. The `3,186` that a star-ranked cap had hidden classify as:
+**`362` education repositories, `327` of them (90.3%) with no licence at all, `28` permissive, `5`
+permissive and pushed within 12 months — and all five are lecture material or GitHub Classroom
+submissions.**
+
+🔵 **Why this is a trend and not bookkeeping.** This KB has spent several passes treating the
+institutional owner channel as an under-explored supply shelf — and it was right to: `p883` found
+`ECNU/EduWork` there and `p884` found 13 LMS/SIS integration rows. **`p885` establishes the shape of
+the shelf: the value is in the *top* of each organisation, and the tail is pedagogy, not product.**
+A studio sweeping a client university's own org should expect **one or two liftable components and
+several hundred homework repositories**, and should budget the grant gate accordingly.
+
+🟢 **The corollary is the sellable one.** The 90.3% no-grant rate in the tail (against `p884`'s 76.4%
+in the head) means **a university's own code is mostly unusable by its own contractors**, not for
+technical reasons but for licensing ones. 🔵 **"Put a grant and liveness gate in front of your own
+repositories" is a real, small, fundable engagement** that no vendor is selling, and `p885` has both
+the instrument (`compose/code/p885-symref-grant-ladder/`) and the measurement to justify it.
+
+### 🔴 T-`p885`-2 — Discovery saturation is now a seven-pass trend, and the channel that still pays is structural, not lexical
+
+**Seven consecutive passes of `0` new repositories from eight prescribed WebSearch legs.** `p885`
+measured `29` regional facts, `27` held, `2` new. 🔵 **Every repository the legs named this pass was
+already indexed here** — including the two the aggregators pushed hardest, `HKUDS/DeepTutor` (real,
+60,066 ★) and `TapXWorld/ChinaTextbook` (84,710 ★ and **no licence**).
+
+🟡 **The pattern across `p883`–`p885` is consistent and worth stating as a rule.** Keyword discovery
+is exhausted for this industry. The finds since `p882` came from **structural** channels instead:
+`p883` queried by **owner** (`ECNU/EduWork`, invisible because its description is empty); `p885`
+queried by **branch** (`ox-it/wl-roster2`, `ECL-2.0`, invisible because its default branch is
+`sakai-10.x`). 🔵 **Both were invisible to keywords for the same underlying reason — the metadata
+field the query read was empty or non-standard, not the project absent.** The next productive channel
+is likely to be another structural one, not another vocabulary.
+
+### 🟡 T-`p885`-3 — Metadata and bytes now have a measured failure in BOTH directions
+
+This pass completes a pair this KB had only half of:
+
+| Direction | Case | What the metadata said | What the bytes said |
+|---|---|---|---|
+| Metadata **too permissive** | **Flowise** (held) | vendor roundup: *"MIT license"* | `NOASSERTION` — **not** usable as MIT |
+| Metadata **too restrictive** | `ox-it/wl-roster2` (`p885`) | invisible — default branch not probed | **`ECL-2.0`**, 11,110 B — build-safe |
+| Metadata **asserts what bytes deny** | `ox-it/OxfordIDN_Case-Studies` (`p885`, 🆕 `885-G1`) | `license.spdx_id = MIT`, `key = mit` | **no licence file on the only branch** |
+
+🔵 **Operational consequence for every proposal built from this KB: a licence claim needs two
+channels, and this KB should name which two.** The pairing that held up across all three cases is
+**`search/repositories` for the field + `raw.githubusercontent.com` on the `--symref`-resolved
+default branch for the payload**, with disagreement treated as a finding rather than resolved toward
+whichever is convenient.
+
+### 🔴 T-`p885`-4 — Still no primary legal source, four passes running
+
+All seven non-GitHub hosts this KB cites returned `000` this pass. **The EU's `2027-12-02` high-risk
+date for education — the single most load-bearing regulatory fact in this KB, and the clock behind
+patterns P4 and P11 — has never been read from the instrument.** It now rests on ten converging
+secondary sources, which is corroboration, not verification. 🔵 `884-G4`'s own acceptance test says
+the achievable half of the fix needs no network change: **attach the corroboration count to the date
+every time it is used.** `p885` does that above and in `intel/market.md`, and the gap stays open
+until the practice is uniform.
+
+**Previous pass (`p884`), retained:** **Pass `p884`, 2026-11-18** (first pass of the day). `p884` adds **T23** — channel state is a
 property of the **credential**, not of the host, and three passes mistook one for the other at a cost
 of five passes of keyword-only discovery — and **T24**: the education and machine-learning
 vocabularies collide exactly where this KB sweeps, at a ~89% false-positive rate, which means the

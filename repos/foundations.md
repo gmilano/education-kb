@@ -6,7 +6,66 @@ updated: 2026-11-18
 
 # Foundational repos — education
 
-**Pass `p884`, 2026-11-18** (first pass of the day). **`p884` rebuilt the owner register from a
+**Pass `p885`, 2026-11-18** (second pass of the day). **`p885` finished the sweep `p884` started and
+the institutional category does NOT grow. It also found that this KB's grant probe was blind to one
+repository in nineteen, and fixed it.**
+
+- 🔴 **The institutional estate is fully enumerated now, and it adds `0` rows.** `p884` shelved 13
+  LMS/SIS integration rows from a sweep it knew was truncated, and expected more behind the cap.
+  `p885` paginated all 33 capped organisations to exhaustion — **`3,186` previously invisible
+  repositories** — and the education-classified remainder is **coursework, not estate**: `362`
+  TIER-A repositories of which **`327` (90.3%) carry no licence at all** and only `5` are both
+  permissive and pushed within 12 months, all five teaching material
+  ([`record`](../evidence/resweep-884G1.2026-11-18-p885.tsv)).
+- 🟢 **The licence-absence rate is now measured on two independent populations and it AGREES.**
+  `p884` measured 76.4% no-grant across 10,365 repositories from the top-100 slice. `p885` measures
+  **90.3% no-grant across the 362 TIER-A repositories in the discarded tail**. 🔵 **The tail is
+  *worse* licensed than the head**, which is the expected direction for coursework and is the
+  clearest single argument for why a university's own GitHub organisation cannot be treated as a
+  supply shelf without a grant gate in front of it.
+
+### 🟢 Default-branch census — new in `p885`, and it repaired a real blind spot
+
+Measured over all 6,486 repositories, not sampled:
+
+| Default branch | Repos | Share |
+|---|---:|---:|
+| `main` | 3,976 | 61.3% |
+| `master` | 2,166 | 33.4% |
+| **neither** (`gh-pages` 151 · `sakai-10.x` 47 · `develop` 31 · `dev` 22 · `sakai_2-5-x` 14 · `development` 13 · `devel` 6 · `production` 4 · `principal` 4 · `trunk` 2 · 50 others) | **344** | **5.3%** |
+
+🔴 **The two-name grant ladder could not see any of those 344 except by luck.** Narrowing to the
+population where it costs something:
+
+```
+344 non-standard default branch
+└── 201 carry a resolvable licence
+    └──  49 are PERMISSIVE
+        └──  13 have NO `main` and NO `master` at all   ->  reported NO-GRANT-FILE in error (26.5%)
+```
+
+🟢 **`compose/code/p885-symref-grant-ladder/fetch_grants.sh` resolves the default branch over
+`git ls-remote --symref` and probes THAT ref first. It recovers 12 of the 13**, each via the symref
+arm ([`controls`](../evidence/grant-ladder-controls.2026-11-18-p885.tsv)). The recovered grants are
+real licence payloads, not inferred: MIT ×7, `ECL-2.0` ×1, Apache-2.0 ×1, BSD-2-Clause ×2,
+SRI-Lab-copyright-first MIT ×1.
+
+🟢 **The one that matters to this KB is a foundation, not a curiosity:**
+
+| Repo | ★ | Licence (byte-read) | Default branch | Role |
+|---|---:|---|---|---|
+| https://github.com/ox-it/wl-roster2 | 0 | **`ECL-2.0`** — `sakai-10.x/LICENSE`, **11,110 B**, `sha256₁₂ 6001bb8caa76` | **`sakai-10.x`** | **Oxford's Sakai rostering component.** `ECL-2.0` is the Apache-2.0-derived licence written *for* education consortia and is build-safe. 🔴 **Zero stars and a Sakai-10-era branch: this is a reference implementation of institutional rostering, not a dependency to pin.** Its value is that it shows how a real university wired roster sync — see `compose/patterns.md` **P26**. |
+
+🔴 **`885-G1`, found while discharging `884-G2`.** The thirteenth case,
+[`ox-it/OxfordIDN_Case-Studies`](https://github.com/ox-it/OxfordIDN_Case-Studies), is **not** a
+ladder failure: `license.spdx_id` is `MIT` and `license.key` is `mit`, the repository has exactly
+**one** branch (`gh-pages`), and **no licence file exists on it at any probed path**. The metadata
+channel asserts a grant the byte channel cannot confirm — the mirror image of this KB's Flowise row,
+where the roundups claimed MIT and the SPDX field said `NOASSERTION`. 🔵 **Neither channel alone is
+sufficient, and this KB has now measured a failure in each direction.** Filed in
+`intel/open-gaps.md`.
+
+**Previous pass (`p884`), retained:** **Pass `p884`, 2026-11-18** (first pass of the day). **`p884` rebuilt the owner register from a
 PRIMARY source and swept 270 institutional organisations. The new supply is a layer this shelf did
 not have — and the headline measurement is about the GRANT, not the code.**
 

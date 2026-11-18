@@ -1,0 +1,363 @@
+region	login	full_name	stars	spdx	pushed	created	forks	archived	default_branch	description
+EMEA	ImperialCollegeLondon	ImperialCollegeLondon/quiz-tool-lite	3	NONE	2022-11-04T12:37:40Z	2018-12-11T10:38:26Z	1	False	master	
+EMEA	ImperialCollegeLondon	ImperialCollegeLondon/fastml-tutorial	2	MIT	2026-03-30T10:06:58Z	2026-03-25T15:18:25Z	2	False	main	A repo to store material for the Fast ML UK tutorial on 27/3/26
+EMEA	ImperialCollegeLondon	ImperialCollegeLondon/Computer_Vision_2026	2	Apache-2.0	2026-02-05T14:41:44Z	2026-01-12T10:56:59Z	16	False	main	Computer-based courseworks for Computer Vision (Term 2), Department of Computing, Imperial College London.
+EMEA	ImperialCollegeLondon	ImperialCollegeLondon/intro2opt-tutorial	2	NONE	2022-03-09T12:54:16Z	2021-03-08T15:09:18Z	0	False	main	"Hands-on tutorial for the lecture ""Optimization Models and Applications"" "
+EMEA	ImperialCollegeLondon	ImperialCollegeLondon/VeriTINY	2	NONE	2020-03-30T11:24:11Z	2020-02-16T23:27:22Z	1	False	master	Verilog Block Simulator (EE3 HLP 2020 coursework)
+EMEA	ImperialCollegeLondon	ImperialCollegeLondon/Aeronautics_Report_Templates	1	NONE	2026-09-29T15:13:11Z	2026-09-29T15:07:24Z	1	False	main	LaTeX and Word templates adhering to the Department of Aeronautics style guide for written coursework submissions (where no other specific guidance has been provided)
+EMEA	ImperialCollegeLondon	ImperialCollegeLondon/ReCoDE-The-Random-Side-A-Mixed-Model-Adventure	1	BSD-3-Clause	2026-03-09T11:32:38Z	2025-10-22T07:30:29Z	0	False	main	Mixed model practical tutorial in R
+EMEA	ImperialCollegeLondon	ImperialCollegeLondon/rcs-snakemake-tutorial	1	NONE	2020-08-04T15:39:17Z	2020-07-16T08:48:08Z	1	False	main	
+EMEA	ImperialCollegeLondon	ImperialCollegeLondon/machine-learning-tutorials	1	NONE	2019-11-25T08:37:48Z	2019-11-13T14:04:51Z	0	False	master	
+EMEA	EPCCed	EPCCed/exdci_workshop	0	NONE	2019-07-04T08:46:42Z	2019-06-19T13:38:57Z	0	False	master	EXDCI Teacher Workshop
+EMEA	ImperialCollegeLondon	ImperialCollegeLondon/living_planet_eco_evo_data	0	MIT	2026-10-06T18:31:29Z	2025-11-28T13:03:36Z	0	False	main	Teaching materials for the Ecological and Evolutionary Data Science module of the Living Planet Masters programmes.
+EMEA	ImperialCollegeLondon	ImperialCollegeLondon/foe-edtechlab-flashcards	0	NONE	2026-03-19T15:17:41Z	2026-03-19T15:17:01Z	0	False	main	flashcards activity demo
+EMEA	ImperialCollegeLondon	ImperialCollegeLondon/django-tutorial	0	NONE	2026-02-04T10:27:19Z	2026-01-29T10:23:57Z	0	False	main	Django tutorial 2026
+EMEA	ImperialCollegeLondon	ImperialCollegeLondon/Bioinformatics_MRES_Tutorial_2026	0	NONE	2026-01-23T15:34:39Z	2026-01-22T16:41:02Z	0	False	main	Repo for GitHub tutorial - Bioinformatics MRes 2026
+EMEA	ImperialCollegeLondon	ImperialCollegeLondon/hcr2024_tutorial	0	NONE	2024-02-15T16:29:31Z	2024-02-12T15:44:50Z	0	False	main	
+EMEA	ImperialCollegeLondon	ImperialCollegeLondon/replication_abadie_et_al_2023	0	NONE	2024-01-11T16:17:44Z	2024-01-11T16:17:43Z	0	False	main	Replication of Abadie et al. 2023 as part of PhD coursework.
+EMEA	ImperialCollegeLondon	ImperialCollegeLondon/replication_Abadie_2023	0	NONE	2024-01-11T16:13:11Z	2024-01-11T16:13:10Z	0	False	main	Replication of Abadie et al. 2023 as part of PhD coursework.
+EMEA	ImperialCollegeLondon	ImperialCollegeLondon/image-overlay-demo	0	BSD-3-Clause	2022-06-26T13:58:12Z	2022-06-24T15:43:35Z	4	False	main	A demonstration repository for a tutorial on effective collaboration via GitHub
+EMEA	ImperialCollegeLondon	ImperialCollegeLondon/qih-statistics-mooc	0	NONE	2021-10-18T12:31:04Z	2021-10-18T11:06:14Z	0	False	main	Public repository containing the data and source files for the Colab versions of QIH MOOC notebooks
+EMEA	UCL	UCL/moodle2portico	0	GPL-3.0	2023-04-26T17:24:15Z	2022-08-25T13:03:38Z	1	False	main	A library (or collection of scripts) to ease the process to collect marks on moodle to pass them to portico
+EMEA	UCL	UCL/PHAS0100LSAAssignment1	0	BSD-3-Clause	2021-02-01T11:39:45Z	2021-02-01T10:59:41Z	1	False	main	Starting point for PHAS0100 Assignment 1 Linear Regression coursework
+EMEA	UCL	UCL/mphy0021-2019-data-clustering-sukrire	0	NONE	2020-03-03T14:16:49Z	2020-02-25T13:29:05Z	0	False	master	mphy0021-2019-data-clustering-sukrire created by GitHub Classroom
+EMEA	UCL	UCL/mphy0021-2019-data-clustering-yue1101	0	NONE	2020-03-03T12:47:14Z	2020-03-03T00:57:11Z	0	False	master	mphy0021-2019-data-clustering-yue1101 created by GitHub Classroom
+EMEA	UCL	UCL/mphy0021-2019-travel-planner-sukrire	0	MIT	2020-01-20T19:11:17Z	2020-01-13T12:14:11Z	0	False	master	mphy0021-2019-travel-planner-sukrire created by GitHub Classroom
+EMEA	UCL	UCL/mphy0021-2019-travel-planner-SWang999	0	MIT	2020-01-20T18:51:37Z	2020-01-09T21:33:32Z	0	False	master	mphy0021-2019-travel-planner-SWang999 created by GitHub Classroom
+EMEA	UCL	UCL/mphy0021-2019-travel-planner-zululwarrior	0	MIT	2020-01-20T00:22:25Z	2019-12-25T02:41:43Z	0	False	master	mphy0021-2019-travel-planner-zululwarrior created by GitHub Classroom
+EMEA	UCL	UCL/mphy0021-2019-travel-planner-yue1101	0	NOASSERTION	2019-12-29T23:47:57Z	2019-12-11T21:36:10Z	0	False	master	mphy0021-2019-travel-planner-yue1101 created by GitHub Classroom
+EMEA	UCL	UCL/comp0130_test	0	NONE	2019-02-28T07:31:44Z	2019-02-28T07:31:43Z	0	False	master	Coursework support for Module COMP0130
+APAC	UoA-eResearch	UoA-eResearch/resbaz_arvr_tutorial	0	MIT	2018-06-29T01:48:45Z	2018-06-29T01:41:39Z	0	False	master	Source code for the AR/VR tutorial at ResBaz Auckland 2018
+NorthAmerica	caltechlibrary	caltechlibrary/glaser-1	0	NONE	2022-06-09T02:11:06Z	2022-06-09T02:04:01Z	0	False	main	Donald Glaser: Education at Caltech
+EMEA	epfl-ada	epfl-ada/ada-2025-project-farzmcollective2025	0	NONE	2025-12-22T02:12:20Z	2025-10-10T14:37:15Z	0	False	main	ada-2025-project-farzmcollective2025 created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2025-project-adastraperaspera	0	NONE	2025-12-22T00:41:55Z	2025-10-16T17:36:13Z	1	False	main	ada-2025-project-adastraperaspera created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2025-project-barrada	0	MIT	2025-12-21T23:54:27Z	2025-11-01T16:58:52Z	0	False	main	ada-2025-project-barrada created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2025-project-datasentinels	0	NONE	2025-12-21T22:59:51Z	2025-10-15T12:36:38Z	0	False	main	ada-2025-project-datasentinels created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/EPFL_ADACoreV2	0	NONE	2025-12-21T21:45:32Z	2025-10-10T13:22:36Z	0	False	main	ada-2025-project-adacore42 created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2025-project-djnpsgroup2025	0	NONE	2025-12-21T20:22:02Z	2025-10-14T14:39:07Z	1	False	main	ada-2025-project-djnpsgroup2025 created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2025-project-gaiec	0	NONE	2025-12-21T20:08:53Z	2025-10-31T06:56:10Z	0	False	main	ada-2025-project-gaiec created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2025-project-adanalysts	0	NONE	2025-12-21T18:13:28Z	2025-10-18T13:20:41Z	2	False	main	ada-2025-project-adanalysts created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2025-project-data_dinosaur	0	NONE	2025-12-21T16:28:49Z	2025-10-08T09:50:34Z	0	False	main	ada-2025-project-data_dinosaur created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-theadacuates	0	NONE	2025-02-19T19:10:02Z	2024-11-01T10:49:49Z	1	False	main	ada-2024-project-theadacuates created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-adadasurmonbidet2024	0	NONE	2025-01-31T18:30:44Z	2024-10-31T09:00:22Z	1	False	main	ada-2024-project-adadasurmonbidet2024 created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-databrewers	0	NONE	2025-01-07T08:14:00Z	2024-10-30T11:36:30Z	1	False	main	ada-2024-project-databrewers created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-madayam	0	NONE	2025-01-05T10:04:15Z	2024-11-01T15:19:14Z	0	False	main	ada-2024-project-madayam created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-advanceddestroyers0fall	0	NONE	2025-01-01T18:35:53Z	2024-11-12T20:19:54Z	2	False	main	ada-2024-project-advanceddestroyers0fall created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-plottwisters	0	NONE	2024-12-30T01:57:25Z	2024-11-06T09:37:37Z	0	False	main	ada-2024-project-plottwisters created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-the5outliers	0	NONE	2024-12-24T10:53:58Z	2024-10-17T14:23:03Z	1	False	main	ada-2024-project-the5outliers created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-hotada	0	NONE	2024-12-21T11:00:03Z	2024-11-13T09:39:07Z	1	False	main	ada-2024-project-hotada created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-onceuponatimeindata	0	NONE	2024-12-21T01:01:15Z	2024-10-27T17:05:10Z	0	False	main	ada-2024-project-onceuponatimeindata created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-alpacadreamagency	0	MIT	2024-12-21T00:23:39Z	2024-10-31T08:13:29Z	0	False	main	ada-2024-project-alpacadreamagency created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-bigdada	0	BSD-3-Clause	2024-12-21T00:16:46Z	2024-10-26T15:58:45Z	0	False	main	ada-2024-project-bigdada created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-thelordsofdata	0	NONE	2024-12-20T23:57:18Z	2024-10-30T07:18:15Z	1	False	main	ada-2024-project-thelordsofdata created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-databand	0	NONE	2024-12-20T23:49:14Z	2024-10-23T08:26:33Z	1	False	main	ada-2024-project-databand created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-adaholiks	0	NONE	2024-12-20T23:27:30Z	2024-10-30T09:50:16Z	1	False	main	ada-2024-project-adaholiks created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-thedataminions	0	NONE	2024-12-20T23:13:09Z	2024-10-18T12:40:50Z	0	False	main	ada-2024-project-thedataminions created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-dataffoneurs	0	NONE	2024-12-20T23:06:33Z	2024-10-30T09:24:13Z	1	False	main	ada-2024-project-dataffoneurs created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-outliars	0	NONE	2024-12-20T23:00:53Z	2024-11-08T11:52:18Z	0	False	main	ada-2024-project-outliars created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-authenticdataaddicts	0	NONE	2024-12-20T23:00:17Z	2024-10-17T16:15:21Z	0	False	main	ada-2024-project-authenticdataaddicts created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-robodatapioneers2024	0	NONE	2024-12-20T23:00:02Z	2024-10-22T14:17:58Z	1	False	main	ada-2024-project-robodatapioneers2024 created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-astonishingdataavengers24	0	NONE	2024-12-20T22:59:11Z	2024-11-05T12:07:00Z	0	False	main	ada-2024-project-astonishingdataavengers24 created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-majcj2024	0	NONE	2024-12-20T22:59:03Z	2024-11-01T12:59:41Z	1	False	main	ada-2024-project-majcj2024 created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-lil0mohammadali	0	NONE	2024-12-20T22:58:55Z	2024-10-28T17:37:40Z	0	False	main	ada-2024-project-lil0mohammadali created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-melyn	0	NONE	2024-12-20T22:58:45Z	2024-11-05T12:43:57Z	1	False	main	ada-2024-project-melyn created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-sigma-squad	0	NONE	2024-12-20T22:58:22Z	2024-10-27T05:17:08Z	2	False	main	ada-2024-project-sigma-squad created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-gear5	0	NONE	2024-12-20T22:56:25Z	2024-11-11T16:10:02Z	0	False	main	ada-2024-project-gear5 created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-dynamosdata	0	NONE	2024-12-20T22:55:12Z	2024-11-01T12:21:06Z	0	False	main	ada-2024-project-dynamosdata created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-importnumpyaspd	0	NONE	2024-12-20T22:55:11Z	2024-10-25T10:45:01Z	0	False	main	ada-2024-project-importnumpyaspd created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-alligatorsdontapologize24	0	NONE	2024-12-20T22:54:39Z	2024-10-24T15:51:42Z	1	False	main	ada-2024-project-alligatorsdontapologize24 created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-sickada	0	NONE	2024-12-20T22:53:06Z	2024-10-19T16:55:53Z	0	False	main	ada-2024-project-sickada created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-genshinstart	0	NONE	2024-12-20T22:51:15Z	2024-10-28T13:04:49Z	0	False	main	ada-2024-project-genshinstart created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-badax	0	NONE	2024-12-20T22:51:08Z	2024-11-02T16:46:01Z	0	False	main	ada-2024-project-badax created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-phpjj1	0	NONE	2024-12-20T22:50:58Z	2024-10-24T12:32:37Z	0	False	main	ada-2024-project-phpjj1 created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-casiervert952	0	NONE	2024-12-20T22:50:10Z	2024-11-03T14:31:17Z	0	False	main	ada-2024-project-casiervert952 created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-microbiotaandco	0	NONE	2024-12-20T22:48:07Z	2024-10-24T07:37:44Z	0	False	main	ada-2024-project-microbiotaandco created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-spaghettisolution	0	NONE	2024-12-20T22:44:08Z	2024-10-31T17:28:33Z	0	False	main	ada-2024-project-spaghettisolution created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-dynamictitans	0	NONE	2024-12-20T22:43:35Z	2024-11-02T17:05:46Z	0	False	main	ada-2024-project-dynamictitans created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-ada212	0	NONE	2024-12-20T22:42:59Z	2024-10-19T09:39:00Z	2	False	main	ada-2024-project-ada212 created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-bradaframanadamada	0	NONE	2024-12-20T22:35:06Z	2024-11-08T12:55:07Z	0	False	main	ada-2024-project-bradaframanadamada created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-adavengers	0	NONE	2024-12-20T22:31:34Z	2024-10-28T17:24:08Z	1	False	main	ada-2024-project-adavengers created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-skibidata	0	NONE	2024-12-20T22:15:07Z	2024-10-20T05:44:32Z	0	False	main	ada-2024-project-skibidata created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-grenobelgium	0	NONE	2024-12-20T22:04:23Z	2024-11-10T15:52:33Z	0	False	main	ada-2024-project-grenobelgium created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-standarddeviants	0	NONE	2024-12-20T21:49:24Z	2024-10-22T08:00:57Z	3	False	main	ada-2024-project-standarddeviants created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-l-ekip	0	NONE	2024-12-20T21:48:03Z	2024-11-03T22:18:31Z	0	False	main	ada-2024-project-l-ekip created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-adactylous	0	NONE	2024-12-20T21:35:44Z	2024-10-21T07:10:19Z	0	False	main	ada-2024-project-adactylous created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-badaboum	0	NONE	2024-12-20T21:29:03Z	2024-10-20T09:35:50Z	1	False	main	ada-2024-project-badaboum created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-sadamasochists	0	NONE	2024-12-20T21:19:23Z	2024-10-30T10:20:00Z	0	False	main	ada-2024-project-sadamasochists created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-sar	0	NONE	2024-12-20T21:17:32Z	2024-10-29T17:05:51Z	0	False	main	ada-2024-project-sar created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-inspiration	0	NONE	2024-12-20T21:14:39Z	2024-10-30T10:09:34Z	0	False	main	ada-2024-project-inspiration created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-nostringsadached	0	NONE	2024-12-20T21:10:17Z	2024-10-20T09:53:48Z	0	False	main	ada-2024-project-nostringsadached created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-theblockbusters	0	NONE	2024-12-20T21:00:19Z	2024-11-15T18:00:55Z	0	False	main	ada-2024-project-theblockbusters created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-datapilots	0	NONE	2024-12-20T20:57:44Z	2024-11-03T19:22:32Z	0	False	main	ada-2024-project-datapilots created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-fandemondada	0	NONE	2024-12-20T20:45:08Z	2024-10-31T09:03:12Z	0	False	main	ada-2024-project-fandemondada created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-forzada	0	NONE	2024-12-20T20:44:08Z	2024-10-22T18:10:48Z	0	False	main	ada-2024-project-forzada created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-panada	0	NONE	2024-12-20T20:38:21Z	2024-11-02T10:28:12Z	1	False	main	ada-2024-project-panada created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-tadaa	0	NONE	2024-12-20T20:22:40Z	2024-10-29T11:08:57Z	2	False	main	ada-2024-project-tadaa created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-collectifmetisser	0	NONE	2024-12-20T20:18:05Z	2024-11-03T16:39:02Z	0	False	main	ada-2024-project-collectifmetisser created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-4bigbrains	0	NONE	2024-12-20T20:11:23Z	2024-10-18T14:04:34Z	0	False	main	ada-2024-project-4bigbrains created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-5pebbles	0	NONE	2024-12-20T20:06:33Z	2024-10-23T10:22:32Z	0	False	main	ada-2024-project-5pebbles created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-mediterranean	0	NONE	2024-12-20T20:03:36Z	2024-10-31T10:51:06Z	0	False	main	ada-2024-project-mediterranean created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-x0x0	0	NONE	2024-12-20T19:54:09Z	2024-10-28T13:01:59Z	0	False	main	ada-2024-project-x0x0 created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-analyticaldementialavengers	0	NONE	2024-12-20T19:02:45Z	2024-10-18T11:35:39Z	0	False	main	ada-2024-project-analyticaldementialavengers created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-trendtrackers	0	NONE	2024-12-20T18:59:04Z	2024-11-01T12:39:01Z	0	False	main	ada-2024-project-trendtrackers created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-padawans	0	NONE	2024-12-20T18:47:01Z	2024-11-01T13:37:10Z	0	False	main	ada-2024-project-padawans created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-bada55	0	NONE	2024-12-20T18:41:11Z	2024-10-27T10:44:43Z	0	False	main	ada-2024-project-bada55 created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-theadavengers	0	NONE	2024-12-20T18:31:53Z	2024-10-19T11:20:20Z	0	False	main	ada-2024-project-theadavengers created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-awesomedataanalysts	0	NONE	2024-12-20T18:03:11Z	2024-10-29T13:06:53Z	0	False	main	ada-2024-project-awesomedataanalysts created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-bluesweater	0	NONE	2024-12-20T18:01:42Z	2024-10-28T13:46:03Z	0	False	main	ada-2024-project-bluesweater created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-sparkling	0	NONE	2024-12-20T17:48:59Z	2024-10-25T07:07:59Z	1	False	main	ada-2024-project-sparkling created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-insightmasters24	0	NONE	2024-12-20T17:39:17Z	2024-10-24T16:42:03Z	1	False	main	ada-2024-project-insightmasters24 created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-deep5eekers	0	NONE	2024-12-20T15:59:46Z	2024-11-05T12:10:06Z	0	False	main	ada-2024-project-deep5eekers created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-metal2024	0	NONE	2024-12-20T15:51:42Z	2024-10-30T09:22:41Z	0	False	main	ada-2024-project-metal2024 created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-supercoolteamname2024	0	NONE	2024-12-20T14:24:01Z	2024-11-07T12:52:21Z	0	False	main	ada-2024-project-supercoolteamname2024 created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-thefivedatawranglers	0	NONE	2024-12-20T14:18:51Z	2024-10-19T14:58:22Z	0	False	main	ada-2024-project-thefivedatawranglers created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-abracad4bra	0	NONE	2024-12-20T13:06:56Z	2024-10-31T13:26:45Z	0	False	main	ada-2024-project-abracad4bra created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-kjaaanalytics	0	NONE	2024-12-20T11:12:07Z	2024-10-22T07:19:53Z	1	False	master	ada-2024-project-kjaaanalytics created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-data-crusadas	0	NONE	2024-12-20T10:12:10Z	2024-10-25T05:10:58Z	0	False	main	ada-2024-project-data-crusadas created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-teamcsx24	0	NONE	2024-12-19T15:54:33Z	2024-11-01T13:03:48Z	0	False	main	ada-2024-project-teamcsx24 created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2024-project-laughtodeath666	0	NONE	2024-12-17T08:44:51Z	2024-10-29T19:27:03Z	2	False	main	ada-2024-project-laughtodeath666 created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/brian	0	NOASSERTION	2022-12-23T22:46:48Z	2022-10-31T12:14:55Z	1	False	main	ada-2022-project-brian created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_padamalgame	0	NONE	2021-02-17T23:45:50Z	2020-11-22T15:56:04Z	1	False	main	ada-2020-project-milestone-p3-p3_padamalgame created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_pleutre	0	NONE	2021-02-12T18:50:39Z	2020-11-24T18:49:23Z	0	False	main	ada-2020-project-milestone-p3-p3_pleutre created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_thot	0	MIT	2021-02-08T19:12:53Z	2020-11-24T15:31:44Z	0	False	main	ada-2020-project-milestone-p3-p3_thot created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_greenlight	0	NONE	2021-01-28T09:56:31Z	2020-11-11T17:36:35Z	0	False	main	ada-2020-project-milestone-p3-p3_greenlight created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_bo2s	0	NONE	2020-12-31T12:04:06Z	2020-11-12T23:29:22Z	0	False	main	ada-2020-project-milestone-p3-p3_bo2s created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_adenosine-deaminase	0	NONE	2020-12-27T11:51:38Z	2020-11-27T07:58:46Z	0	False	main	ada-2020-project-milestone-p3-p3_adenosine-deaminase created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-adaispain	0	NONE	2020-12-23T22:57:19Z	2020-11-27T22:16:45Z	0	False	master	ada-2020-project-milestone-p3-adaispain created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_hitwhunb	0	NONE	2020-12-23T12:00:39Z	2020-11-27T16:51:45Z	0	False	main	ada-2020-project-milestone-p3-p3_hitwhunb created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_cadastrophe	0	NONE	2020-12-22T14:25:44Z	2020-11-27T18:14:32Z	0	False	main	ada-2020-project-milestone-p3-p3_cadastrophe created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_rap	0	NONE	2020-12-21T14:49:03Z	2020-11-19T09:40:38Z	0	False	main	ada-2020-project-milestone-p3-p3_rap created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_american-dental-association	0	NONE	2020-12-21T10:29:15Z	2020-11-27T08:21:39Z	0	False	master	ada-2020-project-milestone-p3-p3_american-dental-association created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_beb	0	NONE	2020-12-21T10:10:18Z	2020-11-10T13:04:54Z	1	False	main	ada-2020-project-milestone-p3-p3_beb created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_adanas	0	NONE	2020-12-20T11:41:01Z	2020-11-10T08:43:21Z	1	False	main	ada-2020-project-milestone-p3-p3_adanas created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_aia_les_cactus	0	NONE	2020-12-19T03:28:49Z	2020-11-27T17:54:46Z	0	False	main	ada-2020-project-milestone-p3-p3_aia_les_cactus created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_ada-elite	0	NONE	2020-12-19T00:29:06Z	2020-11-21T22:03:52Z	0	False	main	ada-2020-project-milestone-p3-p3_ada-elite created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_zwyciezcy	0	NONE	2020-12-18T23:56:19Z	2020-11-27T18:00:15Z	1	False	main	ada-2020-project-milestone-p3-p3_zwyciezcy created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_runtime-error	0	NONE	2020-12-18T23:39:21Z	2020-11-27T12:25:13Z	0	False	main	ada-2020-project-milestone-p3-p3_runtime-error created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_acme-corp	0	NONE	2020-12-18T23:23:55Z	2020-11-24T15:08:02Z	0	False	master	ada-2020-project-milestone-p3-p3_acme-corp created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_adagio	0	NONE	2020-12-18T23:12:20Z	2020-11-27T10:34:25Z	0	False	main	ada-2020-project-milestone-p3-p3_adagio created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_crows	0	NONE	2020-12-18T23:11:54Z	2020-11-25T12:15:58Z	0	False	main	ada-2020-project-milestone-p3-p3_crows created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_xuehuapiaopiao	0	NONE	2020-12-18T23:10:45Z	2020-11-27T18:20:55Z	1	False	main	ada-2020-project-milestone-p3-p3_xuehuapiaopiao created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_illusions	0	NONE	2020-12-18T23:06:11Z	2020-11-21T10:16:52Z	0	False	main	ada-2020-project-milestone-p3-p3_illusions created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_jam	0	NONE	2020-12-18T23:00:25Z	2020-11-24T12:08:30Z	0	False	main	ada-2020-project-milestone-p3-p3_jam created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_data-bayes	0	NONE	2020-12-18T22:59:09Z	2020-11-24T17:35:23Z	0	False	master	ada-2020-project-milestone-p3-p3_data-bayes created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_pada1	0	NONE	2020-12-18T22:56:04Z	2020-11-23T13:58:05Z	1	False	main	ada-2020-project-milestone-p3-p3_pada1 created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_musetti-adaletti	0	NONE	2020-12-18T22:54:49Z	2020-11-23T15:49:52Z	0	False	main	ada-2020-project-milestone-p3-p3_musetti-adaletti created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_mojo_team	0	NONE	2020-12-18T22:54:10Z	2020-11-18T17:22:50Z	1	False	main	ada-2020-project-milestone-p3-p3_mojo_team created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_devilllino	0	NONE	2020-12-18T22:53:59Z	2020-11-22T19:43:25Z	0	False	main	ada-2020-project-milestone-p3-p3_devilllino created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_datak	0	NONE	2020-12-18T22:53:32Z	2020-11-23T17:40:04Z	0	False	main	ada-2020-project-milestone-p3-p3_datak created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_datanalyzers	0	NONE	2020-12-18T22:52:23Z	2020-11-09T20:41:45Z	0	False	main	ada-2020-project-milestone-p3-p3_datanalyzers created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_data-nuage	0	NONE	2020-12-18T22:51:31Z	2020-11-26T07:10:34Z	1	False	master	ada-2020-project-milestone-p3-p3_data-nuage created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_a-dope-acronym	0	NONE	2020-12-18T22:49:53Z	2020-11-14T08:22:13Z	0	False	master	ada-2020-project-milestone-p3-p3_a-dope-acronym created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_caxaga	0	NONE	2020-12-18T22:49:39Z	2020-11-25T01:09:07Z	1	False	main	ada-2020-project-milestone-p3-p3_caxaga created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_lovela-data-science	0	NONE	2020-12-18T22:48:53Z	2020-11-26T16:33:37Z	2	False	master	ada-2020-project-milestone-p3-p3_lovela-data-science created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_teampam	0	NONE	2020-12-18T22:48:15Z	2020-11-27T17:46:34Z	0	False	main	ada-2020-project-milestone-p3-p3_teampam created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_explorers	0	NONE	2020-12-18T22:45:44Z	2020-11-24T11:50:42Z	1	False	master	ada-2020-project-milestone-p3-p3_explorers created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_adache	0	NONE	2020-12-18T22:45:38Z	2020-11-14T00:44:15Z	0	False	main	ada-2020-project-milestone-p3-p3_adache created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_tfpandas	0	NONE	2020-12-18T22:44:12Z	2020-11-22T16:03:41Z	0	False	main	ada-2020-project-milestone-p3-p3_tfpandas created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_team-aka	0	NONE	2020-12-18T22:43:53Z	2020-11-24T16:40:30Z	0	False	main	ada-2020-project-milestone-p3-p3_team-aka created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_act	0	NONE	2020-12-18T22:43:48Z	2020-11-26T16:22:43Z	0	False	main	ada-2020-project-milestone-p3-p3_act created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_wara9i	0	NONE	2020-12-18T22:42:39Z	2020-11-27T14:08:04Z	0	False	main	ada-2020-project-milestone-p3-p3_wara9i created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_enchiladas	0	NONE	2020-12-18T22:42:06Z	2020-11-27T14:03:06Z	0	False	main	ada-2020-project-milestone-p3-p3_enchiladas created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_oioioi	0	NONE	2020-12-18T22:40:15Z	2020-11-20T13:51:19Z	0	False	master	ada-2020-project-milestone-p3-p3_oioioi created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_unlimited	0	NONE	2020-12-18T22:37:51Z	2020-11-26T20:25:42Z	1	False	main	ada-2020-project-milestone-p3-p3_unlimited created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_	0	NONE	2020-12-18T22:36:03Z	2020-11-27T16:21:17Z	0	False	main	ada-2020-project-milestone-p3-p3_ created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_kergagnant	0	NONE	2020-12-18T22:33:57Z	2020-11-23T09:16:48Z	0	False	master	ada-2020-project-milestone-p3-p3_kergagnant created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_indita	0	NONE	2020-12-18T22:32:07Z	2020-11-22T18:39:42Z	0	False	main	ada-2020-project-milestone-p3-p3_indita created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_data-surgeons	0	NONE	2020-12-18T22:31:40Z	2020-11-10T14:23:42Z	0	False	master	ada-2020-project-milestone-p3-p3_data-surgeons created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_littlepandas	0	NONE	2020-12-18T22:31:08Z	2020-11-27T12:41:28Z	0	False	main	ada-2020-project-milestone-p3-p3_littlepandas created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_atadata	0	NONE	2020-12-18T22:30:52Z	2020-11-21T18:31:37Z	0	False	master	ada-2020-project-milestone-p3-p3_atadata created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_abracadata	0	NONE	2020-12-18T22:18:47Z	2020-11-27T17:50:25Z	0	False	master	ada-2020-project-milestone-p3-p3_abracadata created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_tak	0	NONE	2020-12-18T22:18:01Z	2020-11-26T08:26:51Z	0	False	main	ada-2020-project-milestone-p3-p3_tak created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_chic	0	NONE	2020-12-18T22:17:30Z	2020-11-24T14:15:04Z	0	False	master	ada-2020-project-milestone-p3-p3_chic created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_halouma	0	NONE	2020-12-18T22:14:36Z	2020-11-25T14:34:25Z	0	False	main	ada-2020-project-milestone-p3-p3_halouma created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_dataurus	0	NONE	2020-12-18T22:13:28Z	2020-11-23T19:44:42Z	0	False	main	ada-2020-project-milestone-p3-p3_dataurus created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_fraises-tagada	0	NONE	2020-12-18T22:12:14Z	2020-11-23T13:28:28Z	0	False	master	ada-2020-project-milestone-p3-p3_fraises-tagada created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_ada-dream-team	0	NONE	2020-12-18T22:06:28Z	2020-11-21T17:39:07Z	2	False	main	ada-2020-project-milestone-p3-p3_ada-dream-team created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_adahn	0	NONE	2020-12-18T22:05:45Z	2020-11-24T07:29:00Z	0	False	main	ada-2020-project-milestone-p3-p3_adahn created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_kung-fu-pandas	0	NONE	2020-12-18T22:02:38Z	2020-11-22T23:59:53Z	0	False	master	ada-2020-project-milestone-p3-p3_kung-fu-pandas created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_daddario	0	NONE	2020-12-18T21:55:28Z	2020-11-24T08:59:48Z	0	False	main	ada-2020-project-milestone-p3-p3_daddario created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_diverse-analysts	0	NONE	2020-12-18T21:52:50Z	2020-11-23T16:53:20Z	1	False	main	ada-2020-project-milestone-p3-p3_diverse-analysts created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_phelma	0	NONE	2020-12-18T21:50:25Z	2020-11-23T19:39:46Z	0	False	main	ada-2020-project-milestone-p3-p3_phelma created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_binging_with_babbage	0	NONE	2020-12-18T21:46:51Z	2020-11-12T09:54:09Z	2	False	master	ada-2020-project-milestone-p3-p3_binging_with_babbage created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_team-fondue	0	NONE	2020-12-18T21:31:45Z	2020-11-24T15:03:13Z	0	False	master	ada-2020-project-milestone-p3-p3_team-fondue created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_chd	0	NONE	2020-12-18T21:28:10Z	2020-11-24T12:35:20Z	0	False	main	ada-2020-project-milestone-p3-p3_chd created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_three_musketeers	0	NONE	2020-12-18T21:16:01Z	2020-11-26T18:32:41Z	0	False	master	ada-2020-project-milestone-p3-p3_three_musketeers created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_rasaras	0	NONE	2020-12-18T21:14:18Z	2020-11-27T12:57:35Z	0	False	main	ada-2020-project-milestone-p3-p3_rasaras created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_datasurferz	0	NONE	2020-12-18T21:12:35Z	2020-11-23T21:57:37Z	0	False	main	ada-2020-project-milestone-p3-p3_datasurferz created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_0x414441	0	NONE	2020-12-18T20:49:57Z	2020-11-23T13:20:46Z	0	False	master	ada-2020-project-milestone-p3-p3_0x414441 created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_slavikpower	0	NONE	2020-12-18T20:49:16Z	2020-11-27T15:50:02Z	1	False	main	ada-2020-project-milestone-p3-p3_slavikpower created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_tshtsh_club	0	NONE	2020-12-18T20:04:56Z	2020-11-25T17:36:49Z	0	False	master	ada-2020-project-milestone-p3-p3_tshtsh_club created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_bcd	0	NONE	2020-12-18T19:57:42Z	2020-11-26T10:10:57Z	0	False	main	ada-2020-project-milestone-p3-p3_bcd created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_datart	0	NONE	2020-12-18T19:56:34Z	2020-11-22T11:07:46Z	0	False	master	ada-2020-project-milestone-p3-p3_datart created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_pia	0	NONE	2020-12-18T19:52:43Z	2020-11-24T14:00:26Z	0	False	main	ada-2020-project-milestone-p3-p3_pia created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_2fast2curious	0	NONE	2020-12-18T19:51:14Z	2020-11-11T13:45:35Z	0	False	master	ada-2020-project-milestone-p3-p3_2fast2curious created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_cgq	0	NONE	2020-12-18T19:37:38Z	2020-11-27T14:53:12Z	0	False	master	ada-2020-project-milestone-p3-p3_cgq created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_improvise-adapt-overcome	0	NONE	2020-12-18T19:18:50Z	2020-11-24T09:44:17Z	0	False	master	ada-2020-project-milestone-p3-p3_improvise-adapt-overcome created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_wild-at-python	0	NONE	2020-12-18T19:08:06Z	2020-11-21T09:44:07Z	0	False	master	ada-2020-project-milestone-p3-p3_wild-at-python created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_les-fraises-tagada	0	NONE	2020-12-18T19:04:13Z	2020-11-22T08:00:01Z	1	False	master	ada-2020-project-milestone-p3-p3_les-fraises-tagada created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_navaja	0	NONE	2020-12-18T18:51:06Z	2020-11-12T12:26:21Z	1	False	main	ada-2020-project-milestone-p3-p3_navaja created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_adam-et-eva	0	NONE	2020-12-18T18:35:06Z	2020-11-26T13:05:46Z	0	False	main	ada-2020-project-milestone-p3-p3_adam-et-eva created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_badass	0	NONE	2020-12-18T18:33:50Z	2020-11-25T10:44:02Z	1	False	main	ada-2020-project-milestone-p3-p3_badass created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_don-dada	0	NONE	2020-12-18T18:21:38Z	2020-11-14T16:20:19Z	0	False	main	ada-2020-project-milestone-p3-p3_don-dada created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_gaussiens	0	NONE	2020-12-18T18:07:00Z	2020-11-17T10:43:56Z	0	False	master	ada-2020-project-milestone-p3-p3_gaussiens created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_bjr	0	NONE	2020-12-18T18:03:59Z	2020-11-21T15:48:23Z	0	False	master	ada-2020-project-milestone-p3-p3_bjr created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_2018	0	NONE	2020-12-18T17:52:04Z	2020-11-26T18:18:05Z	0	False	main	ada-2020-project-milestone-p3-p3_2018 created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_lovely-badasses	0	NONE	2020-12-18T17:24:33Z	2020-11-26T17:41:36Z	4	False	main	ada-2020-project-milestone-p3-p3_lovely-badasses created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_limonada	0	NONE	2020-12-18T17:15:15Z	2020-11-24T09:42:42Z	0	False	master	ada-2020-project-milestone-p3-p3_limonada created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_ada-or-nada	0	NONE	2020-12-18T17:14:55Z	2020-11-23T19:50:00Z	0	False	main	ada-2020-project-milestone-p3-p3_ada-or-nada created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_klr	0	NONE	2020-12-18T17:14:12Z	2020-11-22T15:02:12Z	0	False	main	ada-2020-project-milestone-p3-p3_klr created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_the-devil-wears-prada	0	NONE	2020-12-18T16:58:58Z	2020-11-25T09:19:34Z	1	False	main	ada-2020-project-milestone-p3-p3_the-devil-wears-prada created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_bamboozled-gang	0	NONE	2020-12-18T16:56:36Z	2020-11-15T22:18:20Z	0	False	master	ada-2020-project-milestone-p3-p3_bamboozled-gang created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_gyc	0	NONE	2020-12-18T16:37:02Z	2020-11-23T20:22:24Z	1	False	main	ada-2020-project-milestone-p3-p3_gyc created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_adatada	0	NONE	2020-12-18T16:18:16Z	2020-11-24T16:11:57Z	2	False	main	ada-2020-project-milestone-p3-p3_adatada created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_team-clj	0	NONE	2020-12-18T15:23:08Z	2020-11-22T14:27:56Z	0	False	main	ada-2020-project-milestone-p3-p3_team-clj created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_kali	0	NONE	2020-12-18T15:11:31Z	2020-11-23T14:44:52Z	1	False	master	ada-2020-project-milestone-p3-p3_kali created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_adaimb	0	NONE	2020-12-18T14:56:42Z	2020-11-18T12:59:37Z	0	False	main	ada-2020-project-milestone-p3-p3_adaimb created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_adacadabra	0	NONE	2020-12-18T14:33:57Z	2020-11-11T09:07:55Z	1	False	master	ada-2020-project-milestone-p3-p3_adacadabra created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_the-social-impacters	0	NONE	2020-12-18T12:00:29Z	2020-11-24T17:05:14Z	0	False	master	ada-2020-project-milestone-p3-p3_the-social-impacters created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_betago	0	NONE	2020-12-18T11:23:34Z	2020-11-21T18:48:55Z	0	False	main	ada-2020-project-milestone-p3-p3_betago created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_byjule	0	NONE	2020-12-18T09:39:21Z	2020-11-18T12:21:05Z	0	False	master	ada-2020-project-milestone-p3-p3_byjule created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-p3_datomicdataster	0	NONE	2020-11-27T20:07:16Z	2020-11-27T17:55:14Z	0	False	main	ada-2020-project-milestone-p3-p3_datomicdataster created by GitHub Classroom
+EMEA	epfl-ada	epfl-ada/ada-2020-project-milestone-p3-zwyciezcy-1	0	NONE	2020-11-27T16:50:18Z	2020-11-27T16:45:56Z	0	False	main	ada-2020-project-milestone-p3-zwyciezcy-1 created by GitHub Classroom
+EMEA	epfl-lasa	epfl-lasa/TutorialRSS2018.io	0	Unlicense	2018-07-06T11:38:36Z	2018-05-30T11:28:23Z	0	False	master	This tutorial will introduce students the techniques which are used to program robots through human demonstration. You can find the webpage in the following link: 
+EMEA	kth-ees	kth-ees/il2234ht25-homework-4-rT505	0	NONE	2025-10-24T05:53:56Z	2025-10-13T05:00:07Z	0	False	main	il2234ht25-homework-4-il2234-hw4 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-3-il2234-hw3	0	NONE	2025-10-21T15:04:16Z	2025-09-29T20:04:21Z	0	False	main	il2234ht25-homework-3-il2234-hw3 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-4-oggiv	0	NONE	2025-10-19T22:22:26Z	2025-10-18T00:23:12Z	0	False	main	il2234ht25-homework-4-il2234-hw4 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-4-Ainesh-11	0	NONE	2025-10-19T21:50:20Z	2025-10-19T09:28:18Z	0	False	main	il2234ht25-homework-4-il2234-hw4 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-4-shreya-venkatesh	0	NONE	2025-10-19T21:15:30Z	2025-10-12T12:00:02Z	0	False	main	il2234ht25-homework-4-il2234-hw4 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-4-magnus155	0	NONE	2025-10-19T20:05:40Z	2025-10-14T10:49:10Z	0	False	main	il2234ht25-homework-4-il2234-hw4 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-4-Leoj24500	0	NONE	2025-10-19T19:53:42Z	2025-10-11T09:44:35Z	0	False	main	il2234ht25-homework-4-il2234-hw4 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-4-Gustavke	0	NONE	2025-10-19T19:39:30Z	2025-10-18T08:08:19Z	0	False	main	il2234ht25-homework-4-il2234-hw4 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-4-adelung	0	NONE	2025-10-19T18:58:51Z	2025-10-14T08:47:19Z	0	False	main	il2234ht25-homework-4-il2234-hw4 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-4-NL195	0	NONE	2025-10-19T18:54:03Z	2025-10-12T10:23:01Z	0	False	main	il2234ht25-homework-4-il2234-hw4 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-4-jinye-gong	0	NONE	2025-10-19T17:23:30Z	2025-10-14T09:03:45Z	0	False	main	il2234ht25-homework-4-il2234-hw4 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-4-DianaLiuxx	0	NONE	2025-10-19T15:24:22Z	2025-10-19T07:42:25Z	0	False	main	il2234ht25-homework-4-il2234-hw4 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-4-davidamantunes	0	NONE	2025-10-19T12:32:49Z	2025-10-12T17:13:35Z	0	False	main	il2234ht25-homework-4-il2234-hw4 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-4-fredrik-ui	0	NONE	2025-10-19T10:58:16Z	2025-10-12T12:23:17Z	0	False	main	il2234ht25-homework-4-il2234-hw4 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-4-Yuyang-Chen-1121	0	NONE	2025-10-18T20:37:45Z	2025-10-10T17:42:04Z	0	False	main	il2234ht25-homework-4-il2234-hw4 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-4-ikhtiarhossain	0	NONE	2025-10-18T16:49:34Z	2025-10-18T16:49:31Z	0	False	main	il2234ht25-homework-4-il2234-hw4 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-hw3-ikhtiarhossain	0	NONE	2025-10-18T16:30:33Z	2025-10-07T10:06:11Z	0	False	main	il2234ht25-homework-3-il2234-hw3 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-4-tobiasmederer	0	NONE	2025-10-17T14:40:16Z	2025-10-15T09:48:26Z	0	False	main	il2234ht25-homework-4-il2234-hw4 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-4-KarlStahlgren	0	NONE	2025-10-17T13:36:54Z	2025-10-14T09:25:15Z	0	False	main	il2234ht25-homework-4-il2234-hw4 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-4-longgang2leaf	0	NONE	2025-10-17T12:50:05Z	2025-10-11T12:34:29Z	0	False	main	il2234ht25-homework-4-il2234-hw4 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-2-ikhtiarhossain	0	NONE	2025-10-16T20:04:44Z	2025-09-23T10:27:01Z	0	False	main	il2234ht25-homework-2-il2234-hw2 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-4-rubenvalverde0	0	NONE	2025-10-16T17:52:37Z	2025-10-14T16:02:44Z	0	False	main	il2234ht25-homework-4-il2234-hw4 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-4-pochacco0417	0	NONE	2025-10-16T17:18:05Z	2025-10-11T11:07:18Z	0	False	main	il2234ht25-homework-4-il2234-hw4 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-4-ltrsunny	0	NONE	2025-10-15T18:05:23Z	2025-10-15T18:05:20Z	0	False	main	il2234ht25-homework-4-il2234-hw4 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-4-ammmec	0	NONE	2025-10-15T08:08:37Z	2025-10-11T13:58:06Z	0	False	main	il2234ht25-homework-4-il2234-hw4 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-4-Jet1i	0	NONE	2025-10-14T15:13:39Z	2025-10-12T06:48:03Z	0	False	main	il2234ht25-homework-4-il2234-hw4 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-hw3-rT505	0	NONE	2025-10-12T17:20:21Z	2025-10-05T09:57:31Z	0	False	main	il2234ht25-homework-3-il2234-hw3 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-4-NosratiNooshin	0	NONE	2025-10-10T21:59:48Z	2025-10-10T21:59:44Z	0	False	main	il2234ht25-homework-4-il2234-hw4 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-4-SabaYs	0	NONE	2025-10-10T17:34:49Z	2025-10-10T17:34:46Z	0	False	main	il2234ht25-homework-4-il2234-hw4 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-hw3-frezghi	0	NONE	2025-10-08T23:32:42Z	2025-10-08T02:15:44Z	0	False	main	il2234ht25-homework-3-il2234-hw3 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-hw3-ruiling1	0	NONE	2025-10-08T21:30:29Z	2025-10-03T14:44:35Z	0	False	main	il2234ht25-homework-3-il2234-hw3 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-hw3-tobiasmederer	0	NONE	2025-10-08T21:29:27Z	2025-10-02T10:40:02Z	0	False	main	il2234ht25-homework-3-il2234-hw3 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-hw3-tnaldinho2	0	NONE	2025-10-08T21:24:14Z	2025-10-02T08:48:07Z	0	False	main	il2234ht25-homework-3-il2234-hw3 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-hw3-JoshSadiq	0	NONE	2025-10-08T21:20:20Z	2025-10-08T21:20:17Z	0	False	main	il2234ht25-homework-3-il2234-hw3 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-hw3-DianaLiuxx	0	NONE	2025-10-08T20:42:42Z	2025-10-08T08:31:12Z	0	False	main	il2234ht25-homework-3-il2234-hw3 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-hw3-longgang2leaf	0	NONE	2025-10-08T20:35:15Z	2025-09-30T19:17:38Z	0	False	main	il2234ht25-homework-3-il2234-hw3 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-hw3-NL195	0	NONE	2025-10-08T20:34:00Z	2025-09-30T10:51:27Z	0	False	main	il2234ht25-homework-3-il2234-hw3 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-hw3-Ainesh-11	0	NONE	2025-10-08T20:11:31Z	2025-10-06T23:17:23Z	0	False	main	il2234ht25-homework-3-il2234-hw3 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-hw3-OskarEkbergPettersson	0	NONE	2025-10-08T19:51:23Z	2025-09-30T10:45:21Z	0	False	main	il2234ht25-homework-3-il2234-hw3 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-hw3-little1asian	0	NONE	2025-10-08T15:41:18Z	2025-09-30T05:23:43Z	0	False	main	il2234ht25-homework-3-il2234-hw3 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-hw3-robynsb	0	NONE	2025-10-08T15:39:09Z	2025-09-30T06:45:07Z	0	False	main	il2234ht25-homework-3-il2234-hw3 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-hw3-eiiluwyy-sys	0	NONE	2025-10-08T09:59:44Z	2025-10-05T20:36:32Z	0	False	main	il2234ht25-homework-3-il2234-hw3 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-hw3-Yaowen07	0	NONE	2025-10-07T23:11:59Z	2025-10-06T18:46:50Z	0	False	main	il2234ht25-homework-3-il2234-hw3 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-hw3-oggiv	0	NONE	2025-10-07T23:02:31Z	2025-10-07T08:53:55Z	0	False	main	il2234ht25-homework-3-il2234-hw3 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-hw3-fredrik-ui	0	NONE	2025-10-07T19:25:06Z	2025-09-30T06:13:31Z	0	False	main	il2234ht25-homework-3-il2234-hw3 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-hw3-Dade22-se	0	NONE	2025-10-07T17:02:19Z	2025-09-30T09:10:06Z	0	False	main	il2234ht25-homework-3-il2234-hw3 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-hw3-apedersen00	0	NONE	2025-10-07T13:26:16Z	2025-09-30T06:10:06Z	0	False	main	il2234ht25-homework-3-il2234-hw3 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-hw3-Mob1us-YJ	0	NONE	2025-10-07T12:52:27Z	2025-09-30T10:33:10Z	0	False	main	il2234ht25-homework-3-il2234-hw3 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-hw3-SantiagoJacome-kth	0	NONE	2025-10-06T17:26:22Z	2025-09-30T08:27:38Z	0	False	main	il2234ht25-homework-3-il2234-hw3 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-hw3-PuhaoZhu	0	NONE	2025-10-06T11:18:24Z	2025-10-04T13:52:10Z	0	False	main	il2234ht25-homework-3-il2234-hw3 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-hw3-SamuelMiksits	0	NONE	2025-10-05T13:35:16Z	2025-09-30T14:45:53Z	0	False	main	il2234ht25-homework-3-il2234-hw3 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-hw3-thomasjl-kth	0	NONE	2025-10-04T18:51:30Z	2025-09-30T06:18:15Z	0	False	main	il2234ht25-homework-3-il2234-hw3 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-hw3-HaoranZhai	0	NONE	2025-10-04T12:33:44Z	2025-10-01T11:41:01Z	0	False	main	il2234ht25-homework-3-il2234-hw3 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-hw3-SabaYs	0	NONE	2025-10-03T07:31:33Z	2025-10-03T07:31:29Z	0	False	main	il2234ht25-homework-3-il2234-hw3 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-2-Tamysam	0	NONE	2025-09-30T11:09:16Z	2025-09-16T23:39:21Z	0	False	main	il2234ht25-homework-2-il2234-hw2 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-hw3-NosratiNooshin	0	NONE	2025-09-30T00:49:43Z	2025-09-30T00:49:40Z	0	False	main	il2234ht25-homework-3-il2234-hw3 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-2-ruiling1	0	NONE	2025-09-29T09:11:36Z	2025-09-17T07:24:17Z	0	False	main	il2234ht25-homework-2-il2234-hw2 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-2-pochacco0417	0	NONE	2025-09-28T22:11:09Z	2025-09-25T14:36:53Z	0	False	main	il2234ht25-homework-2-il2234-hw2 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-2-chellyzzz	0	NONE	2025-09-28T17:59:49Z	2025-09-17T19:37:51Z	0	False	main	il2234ht25-homework-2-il2234-hw2 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-2-ammmec	0	NONE	2025-09-28T13:46:35Z	2025-09-22T08:23:02Z	0	False	main	il2234ht25-homework-2-il2234-hw2 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-2-ltrsunny	0	NONE	2025-09-26T16:10:01Z	2025-09-22T15:25:20Z	0	False	main	il2234ht25-homework-2-il2234-hw2 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-2-kthbarnes	0	NONE	2025-09-26T15:13:16Z	2025-09-21T11:48:34Z	0	False	main	il2234ht25-homework-2-il2234-hw2 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-2-magnus155	0	NONE	2025-09-26T14:48:47Z	2025-09-24T15:11:11Z	0	False	main	il2234ht25-homework-2-il2234-hw2 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-2-leolangberg	0	NONE	2025-09-26T11:49:08Z	2025-09-17T07:04:17Z	0	False	main	il2234ht25-homework-2-il2234-hw2 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-2-YunYuLin	0	NONE	2025-09-25T23:15:16Z	2025-09-16T19:14:01Z	0	False	main	il2234ht25-homework-2-il2234-hw2 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-2-ktholiverh	0	NONE	2025-09-25T20:33:50Z	2025-09-24T13:50:32Z	0	False	main	il2234ht25-homework-2-il2234-hw2 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-2-apedersen00	0	NONE	2025-09-25T07:17:46Z	2025-09-21T09:30:36Z	0	False	main	il2234ht25-homework-2-il2234-hw2 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-2-Ainesh-11	0	NONE	2025-09-24T20:12:20Z	2025-09-24T20:08:05Z	0	False	main	il2234ht25-homework-2-il2234-hw2 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-2-tobiasmederer	0	NONE	2025-09-24T18:11:56Z	2025-09-23T18:18:19Z	0	False	main	il2234ht25-homework-2-il2234-hw2 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-2-NL195	0	NONE	2025-09-24T16:35:03Z	2025-09-17T12:54:58Z	0	False	main	il2234ht25-homework-2-il2234-hw2 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-2-robynsb	0	NONE	2025-09-24T15:51:27Z	2025-09-23T09:35:52Z	0	False	main	il2234ht25-homework-2-il2234-hw2 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-2-SamuelMiksits	0	NONE	2025-09-23T20:56:31Z	2025-09-19T16:39:35Z	0	False	main	il2234ht25-homework-2-il2234-hw2 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-2-KarlStahlgren	0	NONE	2025-09-23T16:28:53Z	2025-09-20T12:19:55Z	0	False	main	il2234ht25-homework-2-il2234-hw2 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-2-shreya-venkatesh	0	NONE	2025-09-22T06:49:03Z	2025-09-22T06:40:35Z	0	False	main	il2234ht25-homework-2-il2234-hw2 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-2-Tianyu-Qu	0	NONE	2025-09-20T20:37:42Z	2025-09-20T07:54:27Z	0	False	main	il2234ht25-homework-2-il2234-hw2 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-2-Jet1i	0	NONE	2025-09-20T14:38:18Z	2025-09-20T11:51:26Z	0	False	main	il2234ht25-homework-2-il2234-hw2 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-2-thomasjl-kth	0	NONE	2025-09-20T12:29:28Z	2025-09-17T06:17:12Z	0	False	main	il2234ht25-homework-2-il2234-hw2 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-2-little1asian	0	NONE	2025-09-19T15:09:22Z	2025-09-17T04:01:45Z	0	False	main	il2234ht25-homework-2-il2234-hw2 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234ht25-homework-2-SantiagoJacome-kth	0	NONE	2025-09-17T07:13:07Z	2025-09-17T07:13:03Z	0	False	main	il2234ht25-homework-2-il2234-hw2 created by GitHub Classroom
+EMEA	kth-ees	kth-ees/il2234-hw1	0	NONE	2025-09-05T08:51:19Z	2025-09-05T08:31:48Z	2	False	main	Homework 1 for IL2234 course
+NorthAmerica	mlibrary	mlibrary/docker_with_rails_tutorial	0	NONE	2021-03-19T03:29:47Z	2021-03-19T03:24:08Z	0	False	main	Materials fo Programming Practice session in March 2021
+EMEA	ox-it	ox-it/sentry-sakai	0	ECL-2.0	2018-10-10T10:15:37Z	2018-10-10T10:15:22Z	0	True	master	Re-packaging of sentry-java for Sakai
+EMEA	ox-it	ox-it/wl-11-migration	0	NONE	2016-05-13T09:54:34Z	2016-04-11T10:51:52Z	0	True	master	Scripts for Sakai 11 migration
+EMEA	ox-it	ox-it/wl-syllabus	0	NONE	2016-04-07T11:29:16Z	2012-10-03T11:34:43Z	0	True	sakai-10.x	
+EMEA	ox-it	ox-it/docker-sakai	0	NONE	2016-03-23T14:23:47Z	2015-11-19T10:58:23Z	0	True	master	Docker image for our version of Sakai.
+EMEA	ox-it	ox-it/wl-sakai-mock	0	NONE	2015-12-21T12:30:34Z	2012-10-03T11:33:14Z	0	True	sakai-10.x	
+EMEA	ox-it	ox-it/wl-sakai-run	0	NONE	2015-02-10T18:06:04Z	2012-10-03T11:48:39Z	0	True	master	
+EMEA	ox-it	ox-it/wl-gradebook	0	NONE	2014-10-08T14:49:17Z	2012-10-03T11:29:47Z	0	True	sakai-10.x	
+EMEA	ox-it	ox-it/wl-license	0	NONE	2013-07-17T21:39:53Z	2013-07-17T21:39:13Z	0	True	master	License for Sakai projects
+EMEA	ox-it	ox-it/wl-tomcat-additions	0	NONE	2013-04-25T10:37:08Z	2013-04-25T10:25:00Z	0	True	master	Additional files to be deployed into our Sakai Tomcat.
+EMEA	ox-it	ox-it/wl-sakai-repo	0	NONE	2012-11-05T18:28:27Z	2012-10-03T11:48:35Z	0	True	master	
+EMEA	ox-it	ox-it/wl-sakai-feeds	0	NONE	2012-10-03T11:46:41Z	2012-10-03T11:46:35Z	0	True	master	
+APAC	tsinghua-fib-lab	tsinghua-fib-lab/mobility_class	0	MIT	2024-05-03T03:11:11Z	2024-05-02T12:18:12Z	0	False	main	基于pycityagent构建的移动智能体——移动数据挖掘课程专用
+NorthAmerica	ubcgif	ubcgif/2025-aqgeo-pde-magnetics-tutorial	0	MIT	2025-10-31T22:31:07Z	2025-10-30T14:23:03Z	1	False	main	
+NorthAmerica	ubsuny	ubsuny/compphys-spring2026-compphys-midterm2-spring2026_midterm2	0	NONE	2026-04-15T21:32:11Z	2026-03-31T21:34:53Z	0	False	main	compphys-spring2026-compphys-midterm2-spring2026_midterm2 created by GitHub Classroom
+NorthAmerica	ubsuny	ubsuny/compphys-fall2025-git-hub-fundamentals-github-starter-course	0	NONE	2025-08-25T00:08:55Z	2025-08-25T00:08:52Z	13	False	main	compphys-fall2025-git-hub-fundamentals-github-starter-course created by GitHub Classroom
+NorthAmerica	ubsuny	ubsuny/compphysspring2025-assignment-1-CompPhys	0	NONE	2025-02-14T18:50:26Z	2025-02-14T18:50:14Z	9	False	main	compphysspring2025-assignment-1-CompPhys created by GitHub Classroom
+NorthAmerica	ubsuny	ubsuny/CP1-24-HW1	0	NONE	2024-09-27T13:33:08Z	2024-09-11T12:45:24Z	16	False	main	Homework template for CP1 in 2024
+NorthAmerica	ubsuny	ubsuny/23-Homework7G1	0	MIT	2023-12-03T05:45:41Z	2023-11-22T19:01:07Z	11	False	main	
+NorthAmerica	ubsuny	ubsuny/23-Homework7G2	0	MIT	2023-12-01T18:57:30Z	2023-11-22T19:01:29Z	9	False	main	
+NorthAmerica	ubsuny	ubsuny/23-Homework7G5	0	Apache-2.0	2023-12-01T18:55:39Z	2023-11-22T19:03:10Z	13	False	main	
+NorthAmerica	ubsuny	ubsuny/23-Homework5G2	0	MIT	2023-11-17T11:32:59Z	2023-11-03T15:44:10Z	10	False	main	
+NorthAmerica	ubsuny	ubsuny/23-Homework5G4	0	MIT	2023-11-17T03:25:10Z	2023-11-03T15:45:11Z	7	False	main	
+NorthAmerica	ubsuny	ubsuny/23-Homework4G3	0	Apache-2.0	2023-10-18T18:58:27Z	2023-10-06T14:39:25Z	11	False	main	
+NorthAmerica	ubsuny	ubsuny/23-Homework4G4	0	MIT	2023-10-18T18:16:52Z	2023-10-06T14:39:47Z	10	False	main	
+NorthAmerica	ubsuny	ubsuny/23-Homework4G2	0	GPL-3.0	2023-10-18T17:41:07Z	2023-10-06T14:38:39Z	6	False	main	
+NorthAmerica	ubsuny	ubsuny/23-Homework4G5	0	NOASSERTION	2023-10-18T17:16:56Z	2023-10-06T14:40:16Z	5	False	main	
+NorthAmerica	ubsuny	ubsuny/23-Homework3G4	0	MIT	2023-10-06T18:01:47Z	2023-09-27T14:40:09Z	13	False	main	
+NorthAmerica	ubsuny	ubsuny/23-Homework3G1	0	MIT	2023-10-06T17:49:53Z	2023-09-27T14:38:39Z	10	False	main	
+NorthAmerica	ubsuny	ubsuny/23-Homework2G4	0	Apache-2.0	2023-09-27T15:54:28Z	2023-09-18T17:47:00Z	8	False	main	
+NorthAmerica	ubsuny	ubsuny/23-Homework1G4	0	NONE	2023-09-18T18:00:24Z	2023-09-08T15:28:12Z	7	False	main	Homework 1 Repository Group 4
+NorthAmerica	ubsuny	ubsuny/23-Homework1G1	0	NONE	2023-09-18T17:33:00Z	2023-09-07T18:39:15Z	6	False	main	Homework 1 Repository Group 1
+NorthAmerica	ubsuny	ubsuny/23-Homework1G2	0	NONE	2023-09-18T14:52:00Z	2023-09-08T15:23:34Z	7	False	main	Homework 1 Repository Group 2
+NorthAmerica	ubsuny	ubsuny/23-HWexample	0	GPL-3.0	2023-09-11T21:59:41Z	2023-08-31T14:38:57Z	16	False	main	This is the example homework repository for CompPhys23
+NorthAmerica	ubsuny	ubsuny/test-laserlab	0	GPL-3.0	2021-09-14T20:48:32Z	2021-08-17T13:59:06Z	0	False	main	test-laserlab created by GitHub Classroom
+NorthAmerica	ubsuny	ubsuny/myfavoritequantumexperiment-danofinn	0	NONE	2021-05-03T19:09:34Z	2021-04-23T22:23:35Z	0	True	main	myfavoritequantumexperiment-danofinn created by GitHub Classroom
+NorthAmerica	ubsuny	ubsuny/myfavoritequantumexperiment-akashpatel023	0	NONE	2021-05-01T18:55:16Z	2021-04-30T14:39:16Z	0	True	main	myfavoritequantumexperiment-akashpatel023 created by GitHub Classroom
+NorthAmerica	ubsuny	ubsuny/myfavoritequantumexperiment-k-z-m-r	0	NONE	2021-04-30T05:06:41Z	2021-04-23T23:17:41Z	0	True	main	myfavoritequantumexperiment-k-z-m-r created by GitHub Classroom
+NorthAmerica	ubsuny	ubsuny/myfavoritequantumexperiment-ChanceStarr	0	NONE	2021-04-27T16:40:22Z	2021-04-24T01:44:14Z	0	True	main	myfavoritequantumexperiment-ChanceStarr created by GitHub Classroom
+NorthAmerica	ubsuny	ubsuny/bayesianstatistics-raspi2	0	NONE	2021-04-17T16:12:34Z	2021-04-14T01:16:52Z	0	False	main	bayesianstatistics-raspi2 created by GitHub Classroom
+NorthAmerica	ubsuny	ubsuny/bayesianstatistics-google-coral	0	NONE	2021-04-16T19:55:10Z	2021-04-09T20:07:45Z	0	False	main	bayesianstatistics-google-coral created by GitHub Classroom
+NorthAmerica	ubsuny	ubsuny/bayesianstatistics-pi-zero-w	0	NONE	2021-04-16T04:44:44Z	2021-04-11T05:27:18Z	0	False	main	bayesianstatistics-pi-zero-w created by GitHub Classroom
+NorthAmerica	ubsuny	ubsuny/tensorflow-probability-CarlatBuffalo	0	NONE	2021-04-09T20:05:44Z	2021-04-02T19:49:54Z	0	True	main	tensorflow-probability-CarlatBuffalo created by GitHub Classroom
+NorthAmerica	ubsuny	ubsuny/tensorflow-probability-cebarros	0	NONE	2021-04-09T20:00:24Z	2021-04-02T22:42:14Z	0	True	main	tensorflow-probability-cebarros created by GitHub Classroom
+NorthAmerica	ubsuny	ubsuny/tensorflow-probability-akashpatel023	0	NONE	2021-04-09T18:09:40Z	2021-04-06T18:31:15Z	0	True	main	tensorflow-probability-akashpatel023 created by GitHub Classroom
+NorthAmerica	ubsuny	ubsuny/tensorflow-probability-ChanceStarr	0	NONE	2021-04-09T18:05:22Z	2021-04-05T19:06:47Z	0	True	main	tensorflow-probability-ChanceStarr created by GitHub Classroom
+NorthAmerica	ubsuny	ubsuny/tensorflow-probability-AdroitErudite	0	NONE	2021-04-09T02:47:55Z	2021-04-04T20:43:27Z	0	True	main	tensorflow-probability-AdroitErudite created by GitHub Classroom
+NorthAmerica	ubsuny	ubsuny/tensorflow-probability-danofinn	0	NONE	2021-04-07T22:36:41Z	2021-04-02T20:29:40Z	0	True	main	tensorflow-probability-danofinn created by GitHub Classroom
+NorthAmerica	ubsuny	ubsuny/burgers-equation-rasppi-4	0	NONE	2021-03-23T13:47:05Z	2021-03-19T22:01:46Z	0	False	main	burgers-equation-rasppi-4 created by GitHub Classroom
+NorthAmerica	ubsuny	ubsuny/burgers-equation-raspi2	0	NONE	2021-03-19T16:57:21Z	2021-03-12T20:03:51Z	0	False	main	burgers-equation-raspi2 created by GitHub Classroom
+NorthAmerica	ubsuny	ubsuny/pde-convolution-google-coral	0	NONE	2021-03-18T05:15:00Z	2021-03-05T20:00:33Z	0	False	main	pde-convolution-google-coral created by GitHub Classroom
+NorthAmerica	ubsuny	ubsuny/pde-convolution-raspi2	0	NONE	2021-03-12T19:20:55Z	2021-03-05T20:02:14Z	0	False	main	pde-convolution-raspi2 created by GitHub Classroom
+NorthAmerica	ubsuny	ubsuny/pde-convolution-nvidia-jetson	0	NONE	2021-03-10T22:24:52Z	2021-03-03T20:48:42Z	0	False	main	pde-convolution-nvidia-jetson created by GitHub Classroom
+NorthAmerica	ubsuny	ubsuny/homework-2-rasppi-4	0	NONE	2021-03-03T22:40:44Z	2021-02-24T20:07:07Z	1	False	main	homework-2-rasppi-4 created by GitHub Classroom
+NorthAmerica	ubsuny	ubsuny/homework-2-pi-zero-w	0	NONE	2021-03-03T05:49:16Z	2021-02-24T23:12:33Z	0	False	main	homework-2-pi-zero-w created by GitHub Classroom
+NorthAmerica	ubsuny	ubsuny/homework-2-nvidia-jetson	0	NONE	2021-03-02T18:58:35Z	2021-02-24T21:02:26Z	0	False	main	homework-2-nvidia-jetson created by GitHub Classroom
+NorthAmerica	ubsuny	ubsuny/homework1-google-coral	0	NONE	2021-02-24T19:46:31Z	2021-02-17T20:03:30Z	0	False	main	homework1-google-coral created by GitHub Classroom
+NorthAmerica	ubsuny	ubsuny/homework1-nvidia-jetson	0	NONE	2021-02-19T23:44:16Z	2021-02-17T20:12:45Z	0	False	main	homework1-nvidia-jetson created by GitHub Classroom
+NorthAmerica	waterloo-rocketry	waterloo-rocketry/electrical_tutorials	0	NONE	2026-09-24T22:44:27Z	2019-09-20T01:25:47Z	1	False	master	Hardware & software used in electrical tutorials
+NorthAmerica	waterloo-rocketry	waterloo-rocketry/2026-software-git-tutorial	0	NONE	2026-09-22T06:56:20Z	2026-09-22T05:00:04Z	0	False	main	

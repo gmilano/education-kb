@@ -6,7 +6,39 @@ updated: 2026-11-18
 
 # Vertical platforms — education
 
-**Pass `p883`, 2026-11-17** (thirteenth pass of the day). **`p883` adds a platform class this file
+**Pass `p885`, 2026-11-18** (second pass of the day). **`p885` re-measured the two platform rows this
+file rests on and both came back exactly as carried — but `odoo/odoo` turns out to be the cleanest
+proof this KB has that the SPDX field cannot be trusted on a platform.**
+
+- 🔴 **`odoo/odoo`'s `license.spdx_id` is `NOASSERTION`. Its licence file is LGPL.** Byte-read from
+  the resolved default branch **`20.0`** — `LICENSE`, **43,529 B**, `sha256₁₂ abc09dad5f84`, opening
+  *"For copyright information, please see the COPYRIGHT file. Odoo is published under the GNU LESSER
+  GENERAL PUBLIC LICENSE..."*. 🟢 **55,876 ★, pushed 2026-11-18** (the day of measurement), created
+  2014-05-13, 34,348 forks. 🔵 **A studio reading the metadata field alone would record Odoo as
+  "licence unknown" and either stall the engagement or guess; a studio reading a vendor roundup would
+  record it as "open source" and miss the copyleft.** The bytes answer the only question that
+  matters: **LGPL is weak copyleft — linkable, not re-licensable.**
+- 🟡 **`odoo/odoo`'s default branch is `20.0`, not `main` or `master`.** With
+  `openeducat/openeducat_erp` on **`19.0`** and `cilt-uct/sakai-skin-vula` on **`r/23.x`**, the
+  release-branch default is now measured as the **norm for mature education platforms**, not an
+  exception — and it is exactly the shape that defeated this KB's grant probe until this pass
+  (`884-G2`, discharged; see `repos/foundations.md`).
+- 🟢 **`openeducat/openeducat_erp` re-measured and the existing row is confirmed to the byte:**
+  **913 ★**, `19.0/LICENSE`, **8,241 B**, `sha256₁₂ 528f84036800`, **LGPL**, pushed 2026-11-16. The
+  `771-H` row and the `p884` row agree with first-hand measurement.
+- 🔴 **The ERP conclusion this file has carried is unchanged and is now better evidenced.** The two
+  education ERPs that exist are both **LGPL** (`openeducat_erp`, and `frappe/education`'s 19-byte
+  grant remains unresolvable). **There is no MIT/Apache education ERP.** 🔵 The WebSearch leg
+  `open source platform {industry} ERP CRM MIT Apache` returned **only OpenEduCat's own marketing
+  pages** this pass — its own glossary claims "no vendor lock-in" while the licence is copyleft.
+  **That is the leg working correctly: it confirms an absence this file already declares.**
+
+| Platform | Repo | ★ `p885` | Licence — byte-read from the RESOLVED default branch | Default branch | Posture for a Globant build |
+|---|---|---:|---|---|---|
+| **Odoo** (ERP base) | https://github.com/odoo/odoo | **55,876** | **LGPL** — `43,529 B`, `abc09dad5f84` 🔴 SPDX field says `NOASSERTION` | **`20.0`** | 🟡 **Linkable, not re-licensable.** Build Odoo *modules*; do not fork the core into a proprietary deliverable. |
+| **OpenEduCat** (education ERP on Odoo) | https://github.com/openeducat/openeducat_erp | **913** | **LGPL** — `8,241 B`, `528f84036800` | **`19.0`** | 🟡 Same posture, inherited. The only real education ERP, and it is copyleft. |
+
+**Previous pass (`p883`), retained:** **Pass `p883`, 2026-11-17** (thirteenth pass of the day). **`p883` adds a platform class this file
 has never held: a permissively licensed, institutionally deployed AI DISTRIBUTION — not an LMS with
 AI bolted on, and not an agent, but a desktop agent runtime packaged as a school product.**
 

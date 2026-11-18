@@ -6,7 +6,81 @@ updated: 2026-11-18
 
 # Compose patterns — education
 
-**Pass `p884`, 2026-11-18** (first pass of the day). **Twenty-five recipes** — 🔵 derived recipes: **25**.
+**Pass `p885`, 2026-11-18** (second pass of the day). **Twenty-six recipes** — 🔵 derived recipes:
+**26**. `p885` adds **P26**, and it is the recipe this KB's own instruments have been accumulating
+without anyone writing it down: **when the client IS the university, its own GitHub organisation is a
+supply source — and `p885` measured both what that yields and what it costs to make it safe.**
+
+- 🟢 **P26 is buildable now because this pass built the missing gate.** `884-G2` left this KB's grant
+  probe blind to **5.3%** of repositories and, among permissive ones with a non-standard default
+  branch, **26.5%** were reported as having no licence when they do.
+  `compose/code/p885-symref-grant-ladder/fetch_grants.sh` closes that, with 13 controls.
+- 🟡 **Scope honestly set by measurement, which is the part a proposal usually gets wrong.** A sweep
+  of a university organisation yields **one or two liftable components and several hundred homework
+  repositories** — 6,486 repositories across 33 organisations produced `362` education repos, of
+  which **90.3% carry no licence at all** and `5` were permissive and live. **P26 therefore sells a
+  gate and a shortlist, not a treasure hunt.**
+- 🟢 **One shelved row corrected by applying this pass's own fix to it.** `ls1intum/Artemis`'s
+  default branch is **`develop`**, not `main`; this KB's row says *"byte-read `main/LICENSE`"*. The
+  bytes are **identical on `main`, `master` and `develop`** (`1,091 B`, `sha256₁₂ 63a0a2b4d6d9`,
+  *"MIT License"*), so **the row's verdict was right and only its ref label was imprecise** —
+  recorded because a correction that changes nothing still has to be visible.
+
+---
+
+## P26 — Harvest the client's own institutional estate, behind a grant-and-liveness gate — new in `p885`
+
+🔵 **When to reach for this.** The engagement is with a university, a ministry or a school system
+that **already publishes code** — a Sakai/Moodle/Canvas estate, a library-systems group, a research-IT
+group. The client assumes its own repositories are reusable assets. **Usually they are not, and the
+reason is licensing and liveness, not quality.** This pattern turns that assumption into a measured
+shortlist in days, and it is the cheapest credible opening engagement this KB carries.
+
+🔴 **The two failure modes it exists to prevent**, both measured by `p885` rather than imagined:
+1. **Manufactured absence.** Probing `main` and `master` alone reports *"no licence"* on **26.5%** of
+   permissive repositories whose default branch is something else. Oxford's `ECL-2.0` Sakai rostering
+   component was invisible to this KB for 885 passes for exactly this reason.
+2. **Manufactured presence.** `license.spdx_id` can assert a grant whose payload does not exist
+   (`ox-it/OxfordIDN_Case-Studies`: `MIT` in the field, no licence file on its only branch), and a
+   vendor roundup can assert MIT where the field says `NOASSERTION` (**Flowise**). **Neither channel
+   alone is sufficient.**
+
+### The wiring
+
+| Step | Component | Licence | What it does here |
+|---|---|---|---|
+| 1 · Enumerate | `api.github.com/search/repositories?q=org:<handle>&per_page=100&sort=updated` **paginated to exhaustion** | — | 🔴 **Do not stop at page 1 and do not sort by stars** if the target is the tail: the cap is 100 and silent. `p885` lost `3,186` of `6,486` repositories that way. 🟡 Conversely, if the target is *liftable components*, `sort=stars` is **safe** — measured: the tail is coursework. |
+| 2 · Separate education from ML | `compose/code/p884-edu-vocabulary/classify_edu.py` | KB-internal | TIER-A / TIER-B split. Essential in a university: `curriculum learning`, `gradient`, `coarse` and `example` all collide with education vocabulary. Without it a naive keyword set returns ~326 finds that are almost all false. |
+| 3 · Resolve the grant | `compose/code/p885-symref-grant-ladder/fetch_grants.sh` | KB-internal | `git ls-remote --symref` → probe **that** ref → fall back to `main`/`master` → dual-file (`LICENSE-APACHE`+`LICENSE-MIT`) arm. Emits bytes + `sha256₁₂` per repo, and reports the **unresolved ref** on a miss so a 404 can never read as "no licence". |
+| 4 · Resolve liveness | `git ls-remote --symref` + default-branch `HEAD` | — | 🔴 `pushed_at` **lies about activity**: it moves on any branch. `p883` found three rows with perfect licences and default branches 13–22 months stale. 🟡 Report as **`HEAD ≥ date`** — `883-G3`'s bound is still unconverged, so the figure is a lower bound, and a proposal must say so. |
+| 5 · Cross-check the field | `search/repositories` `license.spdx_id` vs step 3's bytes | — | **Disagreement is a finding, not a tie to break.** Record both and escalate to a human read. |
+| 6 · Wire the shortlist | https://github.com/vishalsachdev/canvas-mcp | **MIT** — `1,071 B`, `5385a26e2fac` | **334 ★**, pushed 2026-11-17. The read/write bridge to the incumbent LMS. 🔴 **Pin ≥ 1.16.0**: `GHSA-7pp5-29mw-9jq3` (CVSS 7.8, CWE-94) is a sandbox escape via `child_process` in local mode. Scope the Canvas token; `GHSA-hmr8-mvr2-mvw5` is grade-changing prompt injection. |
+| 7 · Grading, if assessment is in scope | https://github.com/ls1intum/Artemis | **MIT** — `1,091 B`, `63a0a2b4d6d9` | **832 ★**, pushed 2026-11-18, default branch **`develop`**. Ten years old, OpenSSF Scorecard + Best Practices. The largest permissive education system in this KB. |
+| 8 · Sandboxed execution | https://github.com/ls1intum/Ares | **MIT** | **27 ★**, JUnit 5 secure sandbox. 🔴 **Default-branch `HEAD ≥ 2025-09-11` (~14 months).** Liftable as a **frozen component you own the maintenance of** — or not at all. Do not present it as actively developed. |
+| 9 · Write the mark back | https://github.com/cilt-uct/tsugi-request-gradebook-upload | **Apache-2.0** | **0 ★**, created 2026-08-06, pushed 2026-10-06. UCT's real gradebook→SIS upload scheduler (Brightspace→PeopleSoft). 🔴 **Zero stars: a reference implementation of the boundary, not a dependency.** The credit-award step stays human — see **P25**. |
+| 10 · Rostering reference | https://github.com/ox-it/wl-roster2 | **`ECL-2.0`** — `11,110 B`, `6001bb8caa76` | 🟢 **Recovered by this pass.** Default branch `sakai-10.x`. Shows how a real university wired roster sync. Reference reading; Sakai-10-era. |
+
+### What the client gets, and what to charge for
+
+🟢 **Deliverable 1 — a licence-and-liveness register of their own estate**, every row byte-read and
+`--symref`-resolved, with the disagreements between GitHub's metadata and the actual payload called
+out. 🔵 **No vendor sells this and every university needs it before it can let a contractor touch its
+code.** `p885` measured **76.4% no-grant in the head of the distribution and 90.3% in the tail** —
+expect the client's own number to be in that band, and expect it to surprise them.
+
+🟢 **Deliverable 2 — a shortlist of genuinely liftable components**, typically 1–5 repositories, each
+with its grant, its real default-branch liveness, and an explicit *"frozen, you own maintenance"* or
+*"actively developed"* verdict.
+
+🔴 **The honest sizing, which protects the engagement.** Promise the **gate and the register**, whose
+output is certain, and present the shortlist as **whatever the gate finds** — because across 33
+institutions it found `5` permissive live education repositories and **none of them was an agent or
+a platform.** 🔵 **A pattern that promises a treasure hunt here will fail; one that promises a clean
+inventory will not.**
+
+---
+
+**Previous pass (`p884`), retained:** **Pass `p884`, 2026-11-18** (first pass of the day). **Twenty-five recipes** — 🔵 derived recipes: **25**.
 `p884` adds **P25**, and it closes the gap this file has carried longest: every education engagement
 ends at the **grade-to-record boundary**, and no recipe here addressed writing a mark back into the
 system of record. 🟢 **It is buildable now because `p884` found the missing component** — a real,
