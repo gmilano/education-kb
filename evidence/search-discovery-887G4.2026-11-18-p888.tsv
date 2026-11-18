@@ -1,0 +1,57 @@
+sweep	leg	region	query	status	total_count	note
+sweep1-broad	tutor-mit	Global	ai tutor education in:name,description,readme license:mit stars:>40 pushed:>2026-03-01	OK	57	50 returned
+sweep1-broad	tutor-apache	Global	ai tutor education in:name,description,readme license:apache-2.0 stars:>40 pushed:>2026-03-01	OK	13	13 returned
+sweep1-broad	its	Global	intelligent tutoring system in:name,description,readme stars:>25 pushed:>2026-01-01	OK	223	50 returned
+sweep1-broad	lessonplan	Global	lesson plan generator AI in:name,description,readme stars:>15 pushed:>2026-01-01	OK	762	50 returned
+sweep1-broad	grading	Global	automated grading LLM rubric in:name,description,readme stars:>20 pushed:>2026-01-01	OK	281	50 returned
+sweep1-broad	quizgen	Global	quiz question generation LLM in:name,description,readme stars:>25 pushed:>2026-01-01	OK	222	50 returned
+sweep1-broad	learn-analytics	Global	learning analytics student LLM in:name,description,readme stars:>20 pushed:>2026-01-01	OK	530	50 returned
+sweep1-broad	edu-agent	Global	education agent LLM multi-agent classroom in:name,description,readme stars:>30 pushed:>2026-03-01	OK	39	39 returned
+sweep1-broad	lms-ai	Global	moodle OR canvas OR openedx AI plugin in:name,description,readme stars:>20 pushed:>2026-01-01	OK	23570	50 returned
+sweep1-broad	flashcard	Global	flashcard spaced repetition AI in:name,description,readme stars:>50 pushed:>2026-03-01	OK	147	50 returned
+sweep1-broad	curriculum	Global	curriculum generator syllabus AI in:name,description,readme stars:>15 pushed:>2026-01-01	OK	24	24 returned
+sweep1-broad	topic-edu-ai	Global	topic:ai-in-education stars:>10	OK	7	7 returned
+sweep1-broad	topic-edtech	Global	topic:edtech topic:ai stars:>15	OK	21	21 returned
+sweep1-broad	topic-its	Global	topic:intelligent-tutoring-system	OK	49	49 returned
+sweep1-broad	grader-agent	Global	essay scoring automated feedback in:name,description,readme stars:>20 pushed:>2026-01-01	OK	150	50 returned
+sweep1-broad	study-agent	Global	study assistant notes quiz agent in:name,description,readme license:mit stars:>60 pushed:>2026-05-01	OK	36	36 returned
+sweep1-broad	knowledge-tracing	Global	knowledge tracing deep learning in:name,description,readme stars:>30	OK	1155	50 returned
+sweep1-broad	proctor	Global	exam proctoring open source in:name,description,readme stars:>15	OK	86	50 returned
+sweep1-broad	sped	Global	accessibility special education AI in:name,description,readme stars:>10 pushed:>2026-01-01	OK	335	50 returned
+sweep1-broad	lang-tutor	Global	language learning tutor LLM speech in:name,description,readme stars:>40 pushed:>2026-03-01	OK	143	50 returned
+sweep2-precise	its-live	Global	intelligent tutoring system in:name,description pushed:>2026-06-01	OK	158	50 returned
+sweep2-precise	ai-tutor-name	Global	ai tutor in:name,description pushed:>2026-06-01	OK	7042	50 returned
+sweep2-precise	tutoring-sys	Global	tutoring system agent in:name,description pushed:>2026-06-01	OK	131	50 returned
+sweep2-precise	lesson-plan	Global	lesson plan in:name,description pushed:>2026-06-01	OK	1603	50 returned
+sweep2-precise	autograde	Global	autograder OR autograding in:name,description pushed:>2026-03-01	OK	729	50 returned
+sweep2-precise	rubric	Global	rubric grading in:name,description pushed:>2026-03-01	OK	759	50 returned
+sweep2-precise	knowledge-tr	Global	knowledge tracing in:name,description	OK	761	50 returned
+sweep2-precise	lti	Global	LTI 1.3 in:name,description,readme pushed:>2026-01-01	OK	1452	50 returned
+sweep2-precise	scorm	Global	scorm xapi in:name,description pushed:>2026-01-01	OK	45	45 returned
+sweep2-precise	moodle-plugin	Global	moodle in:name,description pushed:>2026-06-01	OK	7666	50 returned
+sweep2-precise	openedx-xblock	Global	xblock openedx in:name,description	OK	109	50 returned
+sweep2-precise	student-info	Global	student information system in:name,description	OK	5655	50 returned
+sweep2-precise	quiz-gen2	Global	question generation education in:name,description,readme	OK	5338	50 returned
+sweep2-precise	essay-score	Global	automated essay scoring in:name,description,readme	OK	1602	50 returned
+sweep2-precise	pronunciation	Global	pronunciation assessment in:name,description	OK	228	50 returned
+sweep2-precise	edu-rag	Global	education RAG tutor in:name,description pushed:>2026-06-01	OK	30	30 returned
+sweep2-precise	teacher-agent	Global	teacher assistant agent in:name,description pushed:>2026-06-01	OK	50	50 returned
+sweep2-precise	curriculum2	Global	curriculum generator in:name,description pushed:>2026-03-01	OK	254	50 returned
+sweep2-precise	adaptive-learn	Global	adaptive learning platform in:name,description pushed:>2026-03-01	OK	2675	50 returned
+sweep2-precise	sis-erp	Global	school management system in:name,description pushed:>2026-06-01	OK	9906	50 returned
+sweep2-precise	exam-gen	Global	exam generator question bank in:name,description pushed:>2026-03-01	OK	48	48 returned
+sweep2-precise	mastery	Global	mastery learning spaced in:name,description pushed:>2026-03-01	OK	70	50 returned
+sweep3-regional	LATAM-es-tutor	LATAM	tutor educativo inteligencia artificial in:name,description,readme	OK	529	50 returned
+sweep3-regional	LATAM-pt-tutor	LATAM	tutor educacional inteligencia artificial in:name,description,readme	OK	299	50 returned
+sweep3-regional	LATAM-es-docente	LATAM	docente profesor aula plan de clase in:name,description,readme	OK	193	50 returned
+sweep3-regional	LATAM-pt-escola	LATAM	escola professor aluno plano de aula in:name,description,readme	OK	718	50 returned
+sweep3-regional	LATAM-es-eval	LATAM	evaluacion automatica examen rubrica in:name,description,readme	OK	200	50 returned
+sweep3-regional	LATAM-enem	LATAM	ENEM OR vestibular OR SAEB questoes in:name,description,readme	OK	54663	50 returned
+sweep3-regional	EMEA-africa	EMEA	Nigeria OR Kenya OR Ghana OR 'South Africa' curriculum school in:name,description,readme	OK	2084	50 returned
+sweep3-regional	EMEA-fr	EMEA	enseignant eleve cours scolaire IA in:name,description,readme	OK	143	50 returned
+sweep3-regional	EMEA-de	EMEA	Lehrer Schule Unterricht KI in:name,description,readme	OK	42	42 returned
+sweep3-regional	EMEA-ar	EMEA	Arabic curriculum school exam in:name,description,readme	OK	674	50 returned
+sweep3-regional	APAC-india	APAC	NCERT OR CBSE OR 'Indian curriculum' school in:name,description,readme	OK	50898	50 returned
+sweep3-regional	APAC-sea	APAC	Indonesia OR Vietnam OR Thailand OR Philippines curriculum school in:name,description,readme	OK	51001	50 returned
+sweep3-regional	NA-us-standards	North America	'Common Core' OR NGSS OR 'state standards' lesson in:name,description,readme	OK	50614	50 returned
+sweep3-regional	NA-canada	North America	Ontario OR Alberta OR 'British Columbia' curriculum in:name,description,readme	OK	1031	50 returned

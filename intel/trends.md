@@ -6,6 +6,111 @@ updated: 2026-11-18
 
 # Current trends — education AI
 
+**Pass `p888`, 2026-11-18** (fifth pass of the day). **`p886` established that a licence is a SET.
+`p887` found the set can live inside a SINGLE FILE. `p888` found that `|set| > 1` has TWO MEANINGS
+this base had fused — and that the detector `p887` built to find the first one is structurally blind
+to the second.**
+
+## `T29` — `arity > 1` is two different facts, and they impose opposite obligations
+
+🔴 **`p887` named the conjunctive case and this base has been treating arity as if that were the only
+case.** It is not.
+
+| Shape | Operator | Example, byte-read | What the studio owes |
+|---|---|---|---|
+| **CONJUNCTIVE** | `AND` | `apereo/phpCAS` — Apache-2.0 in `LICENSE` (11,357 B) **and** New BSD in `NOTICE` (3,914 B); `apereo/java-cas-client` — both families in **one** 2,321-byte file | **Both** notice sets. Compliance is the **union**. |
+| **DISJUNCTIVE** | `OR` | [`ad1-kamath/coursecraft`](https://github.com/ad1-kamath/coursecraft) — `LICENSE-MIT` (1,081 B, `66d27c2a9dbf`) **and** `LICENSE-APACHE` (10,174 B, `0d542e0c8804`); `Cargo.toml`: `license = "MIT OR Apache-2.0"` | **One**, licensee's choice. Pick MIT and you owe **no Apache `NOTICE` at all**. |
+
+> 🔵 **Same `arity=2`. Opposite obligation. A single `arity` integer cannot carry the difference**, so
+> every arity figure this base publishes must name its operator or it is not actionable.
+
+🟢 **The discriminator is cheap and needs no clone:** **`LICENSE-<FAMILY>` filename pairs** plus a
+package-manifest `license` expression containing **`OR`** (`Cargo.toml`, `package.json`,
+`pyproject.toml`). 🔵 **Conjunctive grants do not use that filename convention** — `phpCAS` hides its
+BSD half in `NOTICE`; `java-cas-client` hides it inside one payload. **The filename convention is
+itself the signal.**
+
+## `T30` — `p887`'s `NOASSERTION` detector is structurally blind to the disjunctive case
+
+`p887` earned this rule and it is correct as far as it goes:
+
+> *"A row whose metadata channel returns `NOASSERTION` while its bytes channel returns a family is a
+> CONJUNCTIVE-GRANT candidate."*
+
+🔴 **`coursecraft`'s metadata channel returns a confident `Apache-2.0`. Not `NOASSERTION`.** It
+simply **drops the MIT half** and reports the remaining family as though it were the whole grant.
+
+> 🔵 **The abstention signal fires only when the metadata channel is CONFUSED. A disjunctive pair does
+> not confuse it — it just loses half of it, silently, and reports the loss as a clean answer.**
+> **An abstention is a detectable failure; a confident half-answer is not.** `T29`'s filename-pair
+> test is the detector for the second case, and it is independent of the first.
+
+## `T31` — a licence-family detector must test for SUBSUMPTION, and this base has now failed it in both directions
+
+🔴 **`p888`'s own verifier reported two conjunctive grants that do not exist.**
+`slp-lab-research/higraph` (`1,497 B`, `464ba80d380e`) and `ICICLE-ai/curriculum-generator`
+(`1,501 B`, `5dbf2c09aee3`) were both reported `BSD-2-Clause + BSD-3-Clause`. **Both are
+single-family BSD-3-Clause**, confirmed by clause-3 presence and the absence of any Apache or MIT
+body.
+
+🔴 **The cause: `BSD-2-Clause`'s signature — *"Redistributions in binary form must reproduce the
+above copyright"* — is clause 2 OF `BSD-3-Clause`.** A strict textual subset. **Presence-matching
+therefore reports `arity=2` on every BSD-3 file ever read.**
+
+> 🔵 **The rule: licence families are not mutually exclusive as TEXT, so detection must test
+> SUBSUMPTION, not presence.** `SUBSUMES = {"BSD-3-Clause": {"BSD-2-Clause"}}`.
+
+🔵 **Read against `p887`, this base has now made both of the two possible errors in one step:**
+
+| Pass | Classifier | Error | Direction |
+|---|---|---|---|
+| `p887` | earliest-title-wins | missed a **real** second family on `apereo/java-cas-client` | **false negative** |
+| `p888` | presence-matching | **invented** a second family on two BSD-3 rows | **false positive** |
+
+> 🔴 **Both live in the single step between bytes and a family label, and no acceptance test in this
+> base constrains that step from both sides at once.** A test that only asks *"did you find all the
+> families?"* drives a classifier toward `p888`'s error; one that only asks *"is this the right
+> family?"* drives it toward `p887`'s. Registered as `888-G3`. `9/9` controls, offline
+> (`compose/code/p888-search-discovery/subsume_test.py`), with the failing case kept as a named
+> regression.
+
+## `T32` — a channel is not closed; a `(channel, caller, argument shape)` triple is
+
+🔴 **This KB carried, for three passes, that star counts were *"unmeasurable across four routes"* and
+that *"no star figure appears anywhere in this KB"*.** One of those four routes was
+`gh api search/repositories`, recorded as returning an **empty set**.
+
+🟢 **The endpoint was open the whole time.** `gh api -X GET search/repositories -f q='…'` returns
+full payloads — `stargazers_count`, `forks_count`, `pushed_at`, `archived`, `fork`,
+`default_branch`, `license.spdx_id` — at 30 requests/minute authenticated. **It was probed through
+one caller shape, without an explicit `-f q=`, and the empty result was generalised into a property
+of the channel.**
+
+> 🔵 **A negative channel result must record the caller and the argument shape that produced it, or it
+> is not reproducible and not falsifiable.** `evidence/channel-state.2026-11-18-p888.tsv` records
+> the probe command beside every verdict for exactly this reason. Registered as `888-G1`.
+
+🔴 **The same discipline retires a carried instruction.** `p873` left *"next pass: try Hugging Face"*
+for **EduNaija AI Tutor** and **AFRILANGTUTOR**. **`huggingface.co` is `connect_rejected`** from this
+session, as are `arxiv.org` and `aclanthology.org`. **The instruction is retired as an action and
+kept as a lead** — it cannot be executed in this environment, and an open action nobody can run is
+indistinguishable from one nobody has tried.
+
+## `T33` — traction and engineering have come apart in education OSS
+
+🟢 **First measured this pass, now that stars are measurable at all.** Of 36 byte-verified rows:
+**`eddiethedean/lessonkit` 389 commits/12mo at 2★**, **`bishoynabilanis/jessica` 212 at 0★**,
+**`Mahmoud-s-Khedr/qbank` 121 at 0★**, **`ICICLE-ai/curriculum-generator` 114 at 0★** — against
+**`bcefghj/multi-agent-education` 1 commit at 165★** and
+**`HowieWang1121/Socratic-Education-System` 2 commits at 137★**.
+
+> 🔵 **Star counts in this vertical measure reach into the English-language developer web, not
+> maintenance.** The two highest-star new rows are both near-dormant portfolio projects with Chinese
+> READMEs; the four highest-commit rows are non-English or institutional and hold 2 stars between
+> them. **Ranking this KB's shelves on stars returns an empty set for EMEA and LATAM while the work
+> is being done there.** Rank on **commits**. Registered as `888-G2`.
+
+
 **Pass `p887`, 2026-11-18** (fourth pass of the day). **`p886` established that a licence is a SET.
 `p887` ran that over 15 repositories and found the harder half: the SET can live inside a SINGLE
 FILE, where no path-keyed map and no metadata field can reach it — and the one channel that signals

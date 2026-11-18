@@ -6,6 +6,100 @@ updated: 2026-11-18
 
 # Compose patterns — education
 
+**Pass `p888`, 2026-11-18** (fifth pass of the day). **Thirty recipes** — 🔵 derived recipes: **30**.
+`p888` adds **P29**, the standards-first education build, and **P30**, the licence-arity triage that
+`T29`–`T31` now make mandatory before any of these recipes ships.
+
+## P29 — the standards-first education build: source the integration surface, build only the tutor
+
+🔵 **Why this pattern exists.** `p888` byte-verified 36 repositories and sorted them by **measured
+12-month commit count**. 🔴 **The top of that list contains no AI tutors.** It contains an LTI 1.3
+implementation, an xAPI/SCORM/cmi5 framework, a package validator, a university autograder and a
+teaching-lab LIMS. **The integration surface a client engagement cannot avoid has live, licensed,
+permissive OSS in every region; the tutor layer is fragmented, mostly unplaced and mostly
+pre-traction.** So the build order most studio instincts suggest — model first, integration last —
+is exactly inverted.
+
+### The stack, all grants byte-read `2026-11-18`
+
+| Layer | Repo | Grant | Commits 12mo | Job in this recipe |
+|---|---|---|---:|---|
+| **Launch / identity** | [`parler-haut-interagir-librement/lti`](https://github.com/parler-haut-interagir-librement/lti) + [`…/lti-bundle`](https://github.com/parler-haut-interagir-librement/lti-bundle) | **MIT**, `1,155 B`, `2da07e888147` (identical bytes on both) | 2 | LTI 1.3 **on both sides**: your tool launches from the client's LMS, *and* you can stand up a platform to launch it while their LMS is still being procured. |
+| **Content in / out** | [`eddiethedean/lessonkit`](https://github.com/eddiethedean/lessonkit) | **Apache-2.0**, `10,174 B`, `69849221bfb9` | **389** | Emits **xAPI, SCORM and cmi5**, accessibility a stated design goal. The export side of every "can it run in our LMS?" question. |
+| **Migration diagnostic** | [`jasonswrench-beep/openstage-package-doctor`](https://github.com/jasonswrench-beep/openstage-package-doctor) | **Apache-2.0**, `11,357 B`, `c71d239df917` | 9 | Opens and validates a SCORM/xAPI/cmi5 package **without the source file**. Run it in week 1 on the client's existing content — it turns a migration guess into an estimate. |
+| **Authoring** | [`ad1-kamath/coursecraft`](https://github.com/ad1-kamath/coursecraft) | 🔴 **DISJUNCTIVE `MIT OR Apache-2.0`** — see **P30** | 25 | Clean-room authoring → SCORM/cmi5, Rust. **Elect MIT** and the Apache notice obligation disappears. |
+| **Assessment** | [`PrairieLearn/grader-python-v2`](https://github.com/PrairieLearn/grader-python-v2) | **MIT**, `1,072 B`, `0677c780ae82` | **110** | University-maintained Python autograder. Inherit UIUC's autograding posture instead of inventing one. |
+| **Platform host** | Moodle (**GPL**) or Open edX (**AGPL-3.0**) | 🔴 copyleft, unchanged by `p888` | — | **Do not replace it.** Put your UI behind it over LTI 1.3 so the platform's accessibility conformance carries the obligation (`agents/top.md`, EAA note). |
+| **Tutor** | the bespoke part | — | — | The only layer you write. Compose from `agents/top.md`; keep the model endpoint **swappable** (see regional note). |
+
+### Wiring
+
+1. **Week 1 — measure, don't design.** Point `openstage-package-doctor` at the client's existing
+   course packages. You now know how much of the estate is cmi5 vs SCORM 1.2 vs broken. 🔵 This is
+   the step that most often changes the shape of the bid.
+2. **Weeks 2–3 — stand up launch.** Deploy `lti` as a **platform** so there is a working launch
+   target before the client's LMS integration is granted. Swap to **tool** mode when it is.
+3. **Weeks 3–5 — content path.** `lessonkit` for authoring/export, `coursecraft` where the client
+   wants a desktop-grade authoring tool. Both emit cmi5, so the content path is testable end to end
+   before any model exists.
+4. **Weeks 5–8 — assessment.** `grader-python-v2` behind a **human decision point**. 🔴 **Assessment
+   is Annex III high-risk at the client in the EU** (obligations deferred to **2027-12-02**, not
+   cancelled), so the human-in-the-loop is a design constraint, not a nicety.
+5. **Weeks 8–12 — the tutor.** Only now. Behind the platform's UI over LTI 1.3.
+
+### Regional elections for this same stack
+
+- **EMEA** — assume the incumbent may be a **state** platform, not a commercial LMS; the
+  `ddesignmedia/ByCS_Dashboard` shape (analytics over **ByCS** + Moodle) is the integration you will
+  be asked for. Prefer **offline-first** inference: `ali-kin4/skillgraph-tutor` (**Apache-2.0**,
+  `11,357 B`, `c71d239df917`) and `bishoynabilanis/jessica` (**MIT**, `1,069 B`, `b345cf910b8e`,
+  **212** commits) are both built that way. Where input is **paper**, `Mahmoud-s-Khedr/qbank`
+  (**MIT**, `1,070 B`, **121** commits) is the only Arabic-first scanned-workbook ingest this KB
+  holds.
+- **APAC** — the model endpoint must be **swappable**: `forgemorrow/Chinese-Teaching-AI-Agent` names
+  a **domestic** model (MiMo), which is `T25`'s sovereignty expectation observed rather than
+  inferred. For reproducibility under a ministry audit, copy
+  `KananatSSN/openthaiknowledge`'s **seeded** problem-set generation (**Apache-2.0**, `11,358 B`,
+  **103** commits) — of 36 rows verified this pass it is the only one stating determinism as a goal.
+- **North America** — lead with institutional provenance: `grader-python-v2` (UIUC) and
+  `ICICLE-ai/curriculum-generator` (**BSD-3-Clause**, NSF AI institute, **114** commits). For Canada,
+  `mayuribagga/ai-worksheet-maker` is the only Ontario-aligned row this KB has.
+- **LATAM** — 🔴 **do not plan to adopt local OSS; plan to build.** All eight new LATAM rows are at
+  0–1 stars. Use `sabrinasiilva/pista-enem`'s rule — *"dá pistas, não respostas"*, **hints not
+  answers** — and `LMS-COMPASSO/lms`'s **BNCC** alignment as **requirements documents**.
+  `giovanebarcelos/ollama-classroom` shows the local-serving shape. `LabSirius/TutorIA` remains the
+  most mature LATAM-origin row and is still a backend in progress.
+
+🔴 **What this recipe does not give you.** No row in it publishes a **learning-outcome** result, and
+`intel/trends.md` **`T9`**'s largest trial (2,379 undergraduates) found a **negative** effect from
+course-integrated AI tutor access. **Sell the integration surface and the teacher-time saving. Do not
+sell an attainment claim.** And no row added this pass publishes a **VPAT/ACR** — `lessonkit` states
+accessibility as a goal, which is not a conformance document.
+
+## P30 — licence-arity triage, to be run before any of P1–P29 ships
+
+🔵 **`T29`–`T31` make this a precondition, not an audit step.** Three outcomes, three different
+obligations, and the cheap tests that separate them — **none of which requires a clone**.
+
+| Step | Test | Verdict |
+|---|---|---|
+| 1 | Metadata returns **`NOASSERTION`** while bytes return a family | 🔴 **CONJUNCTIVE candidate** (`p887`). Both families bind; compliance is the **union** of notice sets. Read **every** licence-ish path *and* scan each payload for **multiple family titles in one file** — `apereo/java-cas-client` carries two families in one 2,321-byte file, so a path-keyed map cannot express it. The key is **`(path, byte span)`**. |
+| 2 | **`LICENSE-<FAMILY>` filename pair** + manifest `license` expression containing **`OR`** | 🟢 **DISJUNCTIVE** (`T29`). **Elect one family, record the election**, and you owe only that one. `ad1-kamath/coursecraft` → elect **MIT**, owe no Apache `NOTICE`. 🔴 Metadata will report only **one** of the two and will not flag the loss. |
+| 3 | Family signatures matched by **presence** | 🔴 **Re-test for SUBSUMPTION** (`T31`). `BSD-2-Clause`'s signature is **clause 2 of `BSD-3-Clause`**; presence-matching reports `arity=2` on every BSD-3 file. Apply `SUBSUMES = {"BSD-3-Clause": {"BSD-2-Clause"}}` **before** reporting any arity. |
+| 4 | A `NOTICE` file carries a family body | 🔵 **A `NOTICE` is not a grant by default** (`p887`), **but it must still be read** — `apereo/phpCAS`'s BSD half lives in `NOTICE` (3,914 B, `2df146a253fa`). Read it; do not count it as the grant unless it is the only payload. |
+| 5 | Byte-count equality against a "pristine" reference | 🔴 **Not a valid test.** `p888` byte-read unmodified Apache-2.0 at **11,357 B** (`c71d239df917`, on four unrelated repos), **11,358 B**, **11,354 B** and the appendix-stripped **10,174 B**. **A byte-count test would have flagged three of six Apache rows as modified.** `11,357 B / c71d239df917` is a usable **positive** fingerprint; its absence proves nothing. |
+
+🔵 **And the governing instruction from `887-G1`, which applies to every step above:** **a shelf note
+is this instrument's test oracle.** Before publishing an arity verdict on a row, grep the shelves for
+that slug — `p887` shipped a wrong family for `java-cas-client` with the right answer sitting two
+lines below the row, and `p880` had made the same error on the same file. **Where no shelf note
+exists** (every row `p888` added), **the substitute oracle is the metadata channel**: diff the byte
+verdict against `license.spdx_id` and chase every disagreement to a declaration. That diff is the
+`api_spdx` vs `bytes_families` column pair in
+[`evidence/grant-verify-888.2026-11-18-p888.tsv`](../evidence/grant-verify-888.2026-11-18-p888.tsv),
+and it is what surfaced `coursecraft`.
+
+
 **Pass `p887`, 2026-11-18** (fourth pass of the day). **Twenty-eight recipes** — 🔵 derived
 recipes: **28**. `p887` adds **P28**, which is `P27`'s recipe applied to the one real estate this
 pass measured end to end: **the Apereo identity stack a university inherits the moment it adopts CAS

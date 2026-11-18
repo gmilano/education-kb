@@ -6,6 +6,45 @@ updated: 2026-11-18
 
 # Vertical platforms — education
 
+**Pass `p888`, 2026-11-18** (fifth pass of the day). **This shelf gains two genuinely new verticals
+and one platform-attached tool, all byte-verified — and the reason it gained them is that `p888`
+re-scoped discovery onto `api.github.com/search/repositories`, which answers `200` in this session.**
+
+- 🟢 **Teaching-laboratory LIMS is a vertical this KB had no row for.**
+  [`Vernum-Projecten/eduLIMS`](https://github.com/Vernum-Projecten/eduLIMS) — **Apache-2.0**,
+  `main/LICENSE`, **11,357 B**, `sha256₁₂ c71d239df917`, **112** commits/12mo, **EMEA** (Dutch-named
+  org). Laboratory information management scoped to **practical teaching labs** rather than research
+  or clinical use. 🔵 For a university engagement this sits beside the LMS, not inside it: lab
+  scheduling, sample/consumable tracking and assessment of practical work are usually a spreadsheet.
+- 🟢 **A state-platform analytics layer, which is the EMEA public-sector shape.**
+  [`ddesignmedia/ByCS_Dashboard`](https://github.com/ddesignmedia/ByCS_Dashboard) — **MIT**,
+  `main/LICENSE`, **1,085 B**, `sha256₁₂ 9a68bc4e6632`, **EMEA** (German). A didactic analysis
+  dashboard for tests from **ByCS — the Bayern Cloud Schule, Bavaria's state school platform — and
+  Moodle**, with grade-distribution and item analysis. 🔴 **1 commit in 12 months**; listed as
+  evidence of the integration *shape*, not as a dependency. 🔵 **The shape matters more than the
+  repo:** in EMEA the incumbent is often a *state* platform, not a commercial LMS, and the
+  addressable work is analytics and reporting on top of it.
+- 🟢 **Moodle gains a question-authoring tool that is not a Moodle plugin.**
+  [`rendicahya/moodler`](https://github.com/rendicahya/moodler) — **MIT**, `main/LICENSE`,
+  **1,078 B**, `sha256₁₂ 70d2e2219531`, **53** commits/12mo. A browser-based editor for Moodle quiz
+  questions: create, import, edit, reorder, export. 🔵 Runs **outside** the Moodle install, so it
+  needs no plugin-approval cycle on the client's production LMS — which is usually the slowest step
+  in a Moodle engagement.
+- 🟢 **An LMS you can embed rather than adopt.**
+  [`RichardMcQuiston01/reactive-lms`](https://github.com/RichardMcQuiston01/reactive-lms) —
+  **MIT**, **1,073 B**, `sha256₁₂ d04e9814dca8`, **159** commits/12mo. 🔵 Relevant where the client
+  already has a product and wants learning *inside* it, which Moodle/Open edX serve badly.
+- 🔴 **Still true, and re-stated because this shelf is where it bites:** the platforms that dominate
+  this vertical remain **copyleft** — Moodle and Chamilo **GPL**, Open edX and Canvas community
+  **AGPL-3.0**. The permissive rows added this pass are **tools and bridges around** those
+  platforms, not replacements for them. **Nothing in `p888` changes the licence posture of the
+  incumbent platform layer.**
+- 🔴 **No conformance document was found for any row added this pass.** `lessonkit` states
+  accessibility as a design goal and `yohperez/Yara` is framed as inclusive, but **neither publishes
+  a VPAT/ACR**. The `agents/top.md` rule stands: **put the agent behind a conformant platform's UI
+  over LTI 1.3 and request the platform's VPAT.**
+
+
 **Pass `p887`, 2026-11-18** (fourth pass of the day). **This shelf took no licence correction this
 pass, and that is a measurement rather than an absence: all of its rows that carry a policy document
 were inside `886-G1`'s 19 and have now been tree-enumerated.**

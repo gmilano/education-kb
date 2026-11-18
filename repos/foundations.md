@@ -6,6 +6,55 @@ updated: 2026-11-18
 
 # Foundational repos — education
 
+**Pass `p888`, 2026-11-18** (fifth pass of the day). **This shelf gains its first STANDARDS-layer
+rows, and they came from a channel this KB had written off. `api.github.com/search/repositories`
+answers `200`; `1,342` repositories this KB had never seen were returned; and when the new rows are
+sorted by 12-month commit count, the top of the list contains no AI tutors at all — it contains LTI
+1.3, SCORM/cmi5 and autograder plumbing.**
+
+- 🟢 **`887-G4` DISCHARGED.** 56 legs, `0` leg errors, **`1,620`** distinct repositories, **`278`**
+  already held, **`1,342`** new, **`36` byte-read with `0` fetch failures**
+  ([`grants`](../evidence/grant-verify-888.2026-11-18-p888.tsv),
+  [`legs`](../evidence/search-discovery-887G4.2026-11-18-p888.tsv),
+  [`channels`](../evidence/channel-state.2026-11-18-p888.tsv)).
+- 🟢 **`11,357 B / sha256₁₂ c71d239df917` is a confirmed fingerprint for unmodified Apache-2.0** —
+  the **same bytes `p887` read on `apereo/phpCAS`**, now seen on three further unrelated repositories
+  (`ali-kin4/skillgraph-tutor`, `jasonswrench-beep/openstage-package-doctor`,
+  `Vernum-Projecten/eduLIMS`). 🔴 **Its absence proves nothing**: `11,358 B`, `11,354 B` and the
+  appendix-stripped `10,174 B` were all read this pass. **A byte-count test for "pristine" would
+  have flagged three of six Apache rows as modified.**
+- 🔴 **A third arity shape — DISJUNCTIVE.** `ad1-kamath/coursecraft` ships `LICENSE-MIT` **and**
+  `LICENSE-APACHE` and declares `license = "MIT OR Apache-2.0"`. **GitHub metadata reports
+  `Apache-2.0` alone.** Same `arity=2` as `p887`'s conjunctive rows; **opposite obligation**; and
+  invisible to `p887`'s `NOASSERTION` detector, which only fires when metadata abstains.
+- 🔴 **This pass mis-read two of its own rows first.** `slp-lab-research/higraph` and
+  `ICICLE-ai/curriculum-generator` were reported conjunctive `BSD-2 + BSD-3`. **Both are
+  single-family BSD-3-Clause.** `BSD-2`'s signature is **clause 2 of `BSD-3`** — a textual subset.
+  **Family detection must test SUBSUMPTION, not presence** (`888-G3`, `9/9` controls green).
+
+## 🆕 Standards & assessment foundations added in `p888` — byte-verified
+
+🔵 **Why these belong on the foundations shelf rather than the agents shelf:** none of them is a
+tutor. Each one is **plumbing a client engagement cannot avoid** — launch, roster, grade passback,
+package export, autograding — and each has a permissive grant read as bytes.
+
+| Repo | Grant (byte-read `2026-11-18`) | ★ | Commits 12mo | Region | Why it is foundational |
+|---|---|---:|---:|---|---|
+| [`parler-haut-interagir-librement/lti`](https://github.com/parler-haut-interagir-librement/lti) | **MIT** — `main/LICENSE`, **1,155 B**, `sha256₁₂ 2da07e888147` | 0 | 2 | **EMEA** | **LTI 1.3 for PHP on both sides** — a tool platforms launch *and* a platform that launches tools, from one configuration. 🔵 The both-sides property is what lets a pilot stand in for the client's LMS while that LMS is still being procured. |
+| [`parler-haut-interagir-librement/lti-bundle`](https://github.com/parler-haut-interagir-librement/lti-bundle) | **MIT** — `main/LICENSE`, **1,155 B**, `sha256₁₂ 2da07e888147` | 0 | 2 | **EMEA** | Symfony binding of the above. 🟢 **Byte-identical grant to its sibling, confirmed rather than assumed.** |
+| [`eddiethedean/lessonkit`](https://github.com/eddiethedean/lessonkit) | **Apache-2.0** — `main/LICENSE`, **10,174 B**, `sha256₁₂ 69849221bfb9` | 2 | **389** | 🔴 REFUSED | React-first framework emitting **xAPI, SCORM and cmi5**, with **accessibility as a stated design goal**. 🟢 **389 commits/12mo — the most actively maintained repository in this pass.** |
+| [`jasonswrench-beep/openstage-package-doctor`](https://github.com/jasonswrench-beep/openstage-package-doctor) | **Apache-2.0** — `main/LICENSE`, **11,357 B**, `sha256₁₂ c71d239df917` | 0 | 9 | 🔴 REFUSED | Opens and **validates** any SCORM/xAPI/cmi5 package **without the source file**. 🔵 Turns a content-migration bid from a guess into an estimate. |
+| [`ad1-kamath/coursecraft`](https://github.com/ad1-kamath/coursecraft) | 🔴 **DISJUNCTIVE `MIT OR Apache-2.0`** — `LICENSE-MIT` **1,081 B** `66d27c2a9dbf`; `LICENSE-APACHE` **10,174 B** `0d542e0c8804`; `Cargo.toml`: `license = "MIT OR Apache-2.0"` | 1 | 25 | 🔴 REFUSED | Clean-room eLearning **authoring** tool in Rust → SCORM/cmi5. 🔵 **Pick MIT and you owe no Apache `NOTICE`** — the practical consequence of disjunction. |
+| [`PrairieLearn/grader-python-v2`](https://github.com/PrairieLearn/grader-python-v2) | **MIT** — `main/LICENSE`, **1,072 B**, `sha256₁₂ 0677c780ae82` | 1 | **110** | **North America** | Next-generation Python **autograder for PrairieLearn** (UIUC). 🟢 **Institutionally maintained under a university org.** |
+| [`RichardMcQuiston01/reactive-lms`](https://github.com/RichardMcQuiston01/reactive-lms) | **MIT** — `main/LICENSE`, **1,073 B**, `sha256₁₂ d04e9814dca8` | 0 | **159** | 🔴 REFUSED | TypeScript LMS package, standalone **or** embeddable into an existing app. |
+| [`Vernum-Projecten/eduLIMS`](https://github.com/Vernum-Projecten/eduLIMS) | **Apache-2.0** — `main/LICENSE`, **11,357 B**, `sha256₁₂ c71d239df917` | 0 | **112** | **EMEA** | **LIMS for practical teaching laboratories.** 🔵 A vertical this KB had no row for in any shelf. |
+| [`ICICLE-ai/curriculum-generator`](https://github.com/ICICLE-ai/curriculum-generator) | **BSD-3-Clause** — `main/LICENSE`, **1,501 B**, `sha256₁₂ 5dbf2c09aee3` | 0 | **114** | **North America** | Curriculum generator from **ICICLE**, an NSF AI institute. 🟢 Institutional, BSD-3, live. |
+| [`rendicahya/moodler`](https://github.com/rendicahya/moodler) | **MIT** — `main/LICENSE`, **1,078 B**, `sha256₁₂ 70d2e2219531` | 0 | 53 | 🔴 REFUSED | Browser editor for **Moodle quiz questions**. 🔵 Attaches to the platform already on `verticals/solutions.md`. |
+
+🔵 **The one-line reading for a bid:** the **integration surface has live licensed OSS and the tutor
+does not need to**. Build order should start at LTI/SCORM, not at the model.
+
+
 **Pass `p887`, 2026-11-18** (fourth pass of the day). **`p887` discharged `886-G1` over the 15 rows
 `p886` left open — `64,641` paths tree-enumerated, `0` failures — and this file took TWO corrections
 from it: one its OWN instruments had been carrying since `p314`, and one that had been hiding one

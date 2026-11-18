@@ -6,6 +6,44 @@ updated: 2026-11-18
 
 # Market intelligence — education
 
+**Pass `p888`, 2026-11-18** (fifth pass of the day). **For nine passes this file recorded that the
+prescribed legs returned `0` new facts, and `p887` concluded they had become a POLICY instrument
+rather than a DISCOVERY one. `p888` acted on that: it left the legs alone and probed the GitHub API
+surface instead. `api.github.com/search/repositories` answers `200` here — so this file now carries
+regional opportunity sections backed by repositories read first-hand, and its first measured star
+counts.**
+
+- 🟢 **`887-G4` DISCHARGED.** 56 legs across three sweeps, **`0` leg errors**; **`1,620`** distinct
+  repositories, **`278`** already held, **`1,342`** new to this KB; **`36` byte-verified with `0`
+  fetch failures** ([`legs`](../evidence/search-discovery-887G4.2026-11-18-p888.tsv),
+  [`grants`](../evidence/grant-verify-888.2026-11-18-p888.tsv)).
+- 🟢 **All four regions returned. None nilled.** North America **3** new placed rows, EMEA **6**,
+  APAC **5**, LATAM **8**. Every placement rests on **in-artefact evidence** — a named national
+  curriculum (Nigerian, Thai, Ontario, BNCC, ENEM, Egyptian Primary/Prep), README language, or a
+  named state platform (ByCS).
+- 🔴 **Region can no longer be taken from an owner profile.** `/users/{login}` returns **`403`** this
+  pass, so `location`/`company` are unavailable. **`9` of `36` verified rows are published REFUSED**
+  rather than guessed.
+- 🔴 **The cross-region finding, and it inverts how a shortlist should be built.** The four rows with
+  the highest measured 12-month commit counts — `jessica` (**212**), `lessonkit` (**389**), `qbank`
+  (**121**), `curriculum-generator` (**114**) — hold **2 stars between them**, while the two
+  highest-star new rows are near-dormant APAC portfolio projects (165★/1 commit, 137★/2 commits).
+  🔵 **Sorting on stars returns an empty set for EMEA and LATAM.** Registered as `888-G2`.
+- 🟢 **The structural read for a bid:** the **standards layer** (LTI 1.3, SCORM/xAPI/cmi5,
+  autograding) **has live permissive OSS in every region**; the **tutor layer** is fragmented,
+  largely unplaced and mostly pre-traction. **Source the integration surface, build the tutor.**
+- 🔴 **The evidential asymmetry in this file is unchanged and worth restating.** `arxiv.org`,
+  `aclanthology.org`, `unesco.org`, `eur-lex.europa.eu` and now **`huggingface.co`** are all
+  `connect_rejected` ([`record`](../evidence/channel-state.2026-11-18-p888.tsv)). **Every
+  regulatory, market-size and survey figure here is a search engine's summary of a page that cannot
+  be opened from this session. Every repository fact is read first-hand.** Do not quote the two with
+  the same confidence.
+- 🟢 **`gate-region-headings` (`p383`) run green on this file after the edit** — `11/11` suite
+  controls, then `0` findings on `intel/market.md`, one canonical block, all five vocabulary regions
+  present. 🔴 **`make hooks` as a whole could not be invoked**, so the `19` red gates `p886` recorded
+  are untouched and `865-G2` is **not** discharged.
+
+
 **Pass `p887`, 2026-11-18** (fourth pass of the day). **All four regional legs ran and all four
 returned relevant material. `0` new facts, `0` new repositories — for the NINTH consecutive pass. And
 `p887` draws the conclusion nine passes of this now support: the prescribed legs have stopped being a
@@ -1087,6 +1125,27 @@ European education-AI vendors, no procurement volumes.** The EMEA picture here r
 
 ### North America
 
+#### 🟢 `p888` — the first Canadian-curriculum row, and two institutionally-maintained US assessment repos
+
+🔵 **This KB's North America rows have been US-only.** `p888` adds the first repository aligned to a
+**Canadian** curriculum: [`mayuribagga/ai-worksheet-maker`](https://github.com/mayuribagga/ai-worksheet-maker)
+(**MIT**, byte-read `1,069 B`, `sha256₁₂ e873cc2a5a16`), aligned to **Ontario**. 🔴 It is a 0-star,
+9-commit repository — it establishes that the Canadian curriculum surface is *addressable in OSS*,
+not that it is *served*.
+
+🟢 **The two rows that matter for a bid are institutional, not hobby:**
+
+| Repo | Grant (byte-read) | Commits 12mo | Why it changes a US engagement |
+|---|---|---:|---|
+| [`PrairieLearn/grader-python-v2`](https://github.com/PrairieLearn/grader-python-v2) | **MIT**, `1,072 B`, `0677c780ae82` | **110** | Next-gen Python autograder for **PrairieLearn** (UIUC). A university-org-maintained autograder is a defensible starting point for an academic-integrity-constrained build. |
+| [`ICICLE-ai/curriculum-generator`](https://github.com/ICICLE-ai/curriculum-generator) | **BSD-3-Clause**, `1,501 B`, `5dbf2c09aee3` | **114** | From **ICICLE**, an NSF AI institute. BSD-3 and federally-funded provenance answer the procurement question before it is asked. |
+
+🔵 **The opportunity, stated against the governance vacuum this section already measures:** US
+districts are under **dated state mandates** with **no binding federal curriculum standard**, and the
+assessment layer is where exposure concentrates. **A bid built on `grader-python-v2` plus an LTI 1.3
+bridge inherits a university's autograding posture instead of inventing one** — see
+`compose/patterns.md` **P29**.
+
 #### 🆕 `p884` — the teaching-grade reference implementation is a North American asset, and it is the engineering-academy sell
 
 🟢 **Measured this pass:** North America's institutional estate yields **120** education
@@ -1325,6 +1384,36 @@ that is where consent, disclosure and logging can actually be enforced (**P15**,
 
 
 ### EMEA
+
+#### 🟢 `p888` — EMEA is the widest-spread region in the new OSS, and the incumbent is often a STATE platform
+
+🟢 **Five EMEA-placed repositories, byte-verified, placed on in-artefact evidence** (a named national
+curriculum, README language, or a named state platform — **not** owner profile, which is `403` this
+pass):
+
+| Repo | Grant (byte-read) | Commits 12mo | Placed by |
+|---|---|---:|---|
+| [`bishoynabilanis/jessica`](https://github.com/bishoynabilanis/jessica) | **MIT**, `1,069 B`, `b345cf910b8e` | **212** | *Egyptian Primary 1 – Prep 3*, named in-repo. **Offline-first.** |
+| [`Mahmoud-s-Khedr/qbank`](https://github.com/Mahmoud-s-Khedr/qbank) | **MIT**, `1,070 B`, `42d0fafc0595` | **121** | *Arabic-first*, stated in-repo. Ingests **scanned workbooks**. |
+| [`Vernum-Projecten/eduLIMS`](https://github.com/Vernum-Projecten/eduLIMS) | **Apache-2.0**, `11,357 B`, `c71d239df917` | **112** | Dutch-named org. **Teaching-laboratory LIMS.** |
+| [`Abdulrahman-hayatu/lessonplan-ng`](https://github.com/Abdulrahman-hayatu/lessonplan-ng) | **Apache-2.0**, `11,354 B`, `b2addd330bdc` | 1 | *Nigerian curriculum*, named in-repo. |
+| [`AdamFiser/oa-autograding`](https://github.com/AdamFiser/oa-autograding) | **MIT**, `1,068 B`, `16f1aada6c28` | **39** | *Czech* student feedback, stated in-repo. |
+| [`ddesignmedia/ByCS_Dashboard`](https://github.com/ddesignmedia/ByCS_Dashboard) | **MIT**, `1,085 B`, `9a68bc4e6632` | 1 | **ByCS — Bayern Cloud Schule**, named in-repo. |
+
+🔵 **The structural finding, and it is a bid-shaping one:** `ByCS_Dashboard` exists because in much
+of EMEA **the incumbent is a state platform, not a commercial LMS**. The addressable work is
+therefore **analytics, reporting and assessment on top of a platform the client cannot replace** —
+not platform replacement. 🔵 **`jessica` and `ali-kin4/skillgraph-tutor` are both offline-first**,
+which is the same constraint arriving from the other direction: data residency and intermittent
+connectivity push the inference local.
+
+🔴 **Against the regulatory timeline this section already holds** — Annex III high-risk obligations
+for education deferred to **2027-12-02**, Article 50 transparency live since **2026-08-02**,
+emotion-recognition in education **banned since Feb 2025** — the practical consequence is unchanged
+and now has repositories attached: **assessment and admissions are the high-risk surfaces**, so a
+2026 engagement should ship the **transparency and logging** layer now and keep the assessment model
+behind a human decision point. **`qbank` and `oa-autograding` are both assessment-side and therefore
+both land in Annex III scope at the client, whatever their licence says.**
 
 #### 🆕 `p884` — EMEA has the worst licence hygiene of any region AND the single best-governed estate, and the engagement follows from the gap between them
 
@@ -1645,6 +1734,32 @@ assume an identity layer they never name.
 
 ### APAC
 
+#### 🟢 `p888` — APAC returned the most sustained engineering of any region, and a domestic-model dependency observed rather than inferred
+
+🟢 **Five APAC-placed rows, byte-verified**, and they are the most actively developed regional set in
+this pass:
+
+| Repo | Grant (byte-read) | Commits 12mo | Placed by |
+|---|---|---:|---|
+| [`KananatSSN/openthaiknowledge`](https://github.com/KananatSSN/openthaiknowledge) | **Apache-2.0**, `11,358 B`, `c95bae1d1ce0` | **103** | *Thai curriculum*, named in-repo |
+| [`lien0219/coder_edu_backend`](https://github.com/lien0219/coder_edu_backend) | **MIT**, `1,061 B`, `e40a678e59da` | **107** | Chinese README |
+| [`Sulthan-eng/Koreksi-in`](https://github.com/Sulthan-eng/Koreksi-in) | **MIT**, `1,079 B`, `c9dbe3c1024f` | **51** | Indonesian, named in-repo |
+| [`HowieWang1121/Socratic-Education-System`](https://github.com/HowieWang1121/Socratic-Education-System) | **MIT**, `1,067 B`, `ab18b4a5d5a7` | 2 | Chinese README, rural-China framing |
+| [`forgemorrow/Chinese-Teaching-AI-Agent`](https://github.com/forgemorrow/Chinese-Teaching-AI-Agent) | **MIT**, `1,068 B`, `2e7ffdde3eb5` | 1 | K-12 Chinese-language, named in-repo |
+
+🟢 **`T25`'s sovereignty prediction is now OBSERVED in an agent, not inferred from policy.**
+`Chinese-Teaching-AI-Agent` names **MiMo**, a Chinese domestic model, as its model dependency. 🔵 For
+a studio this is the concrete form of the compulsory-curriculum regime this section already records
+(China's mandatory AI education across school stages; India's AI from Grade 3 in **2026–27**;
+Singapore's AI@NIE): **the curriculum mandate creates demand, and the model-sovereignty expectation
+constrains which inference endpoint may serve it.** A composed build for APAC must treat the model
+as a **swappable** component — see `compose/patterns.md` **P29**.
+
+🔴 **`openthaiknowledge`'s seeded, reproducible problem-set generation is the property that answers a
+ministry audit**, and it is rare: of 36 rows byte-verified this pass, it is the only one that states
+determinism as a design goal. 🔵 **Thailand and Indonesia both now have a licensed, live OSS row in
+this KB**, where previously APAC coverage was China- and India-centric.
+
 #### 🆕 `p884` — APAC has the BEST licence hygiene of the four regions, and that inverts this file's standing assumption
 
 🟢 **Measured: of APAC's 35 institution-published education repositories, 19 carry no grant — a
@@ -1955,6 +2070,43 @@ with **P8**: Vietnam's law (1 Mar 2026), Korea's (22 Jan 2026) and India's label
 
 
 ### LATAM
+
+#### 🔴 `p888` — LATAM returned, and it returned ONLY pre-traction work. That is the finding, and it is not an absence of search
+
+🟢 **Six in-language legs ran** (`es`/`pt`: tutor educativo, tutor educacional, docente/plan de
+clase, escola/plano de aula, evaluación/rúbrica, ENEM/vestibular) and **all six returned relevant
+material** ([`record`](../evidence/search-discovery-887G4.2026-11-18-p888.tsv)). 🔴 **Every new
+permissive, live, education-relevant LATAM row is at 0–1 stars.** Eight of them.
+
+| Repo | Grant (byte-read) | Commits 12mo | Placed by |
+|---|---|---:|---|
+| [`LMS-COMPASSO/lms`](https://github.com/LMS-COMPASSO/lms) | **MIT**, `1,065 B`, `96b03c09cca5` | **109** | **BNCC**, Brazil's national curriculum base |
+| [`yohperez/Yara`](https://github.com/yohperez/Yara) | **MIT**, `1,074 B`, `1becbee3d59a` | **43** | Spanish, inclusive-education framing |
+| [`sabrinasiilva/pista-enem`](https://github.com/sabrinasiilva/pista-enem) | **MIT**, `1,085 B`, `ad517800ef23` | **23** | **ENEM**, Brazil's national exam |
+| [`zhemaria/evaluador-texto`](https://github.com/zhemaria/evaluador-texto) | **MIT**, `1,065 B`, `8cf11793906b` | 11 | Spanish-language **GED** extended-response evaluator |
+| [`giovanebarcelos/ollama-classroom`](https://github.com/giovanebarcelos/ollama-classroom) | **MIT**, `1,085 B`, `660b3bd93cca` | 5 | Brazilian-named owner; local **Ollama** serving |
+| [`Ti460L0/clareza-digital`](https://github.com/Ti460L0/clareza-digital) | **MIT**, `1,086 B`, `0fee80686c08` | 3 | Portuguese; digital-literacy portal |
+| [`diegodm11/cuaderno-vivo`](https://github.com/diegodm11/cuaderno-vivo) | **MIT**, `1,114 B`, `de4e315e8599` | 2 | Spanish; paper assessments → teacher decisions |
+
+🔵 **`pista-enem` is the row worth naming in a pitch.** Its stated design rule is *"dá pistas, não
+respostas"* — **gives hints, not answers**. That is an explicit anti-answer-leakage stance, and it is
+the integrity posture the negative trial result in `intel/trends.md` **`T9`** actually argues for.
+🔵 **`cuaderno-vivo` is the other one**: it takes **paper** assessments as input, which — with
+`qbank` in EMEA — is the realistic ingest path in systems where paper has not gone away.
+
+> 🔴 **The honest reading, against this section's own measurement that LATAM is the best-measured
+> region in this file.** UNESCO IESALC's **`87%` adoption against `26%` governance across 19 LATAM
+> countries** describes *demand*. The OSS supply side, measured first-hand this pass, is **eight
+> repositories at 0–1 stars**. **There is no licensed, traction-bearing LATAM-origin education agent
+> discoverable through this channel.** `TutorIA` (`LabSirius/TutorIA`, MIT, Universidad Tecnológica
+> de Pereira) remains the most mature LATAM-origin row this KB holds, and it remains a backend in
+> progress.
+>
+> 🔵 **So the LATAM opportunity is not "adopt the local OSS".** It is **compose**: take the
+> standards-layer repositories (`lti`, `lessonkit`, `openstage-package-doctor`), add a Spanish/
+> Portuguese model layer, and use `pista-enem`'s hint-not-answer rule and `LMS-COMPASSO/lms`'s BNCC
+> alignment as **requirements documents** rather than as dependencies. **The gap is maturity, and it
+> is a build opportunity rather than a sourcing one.**
 
 #### 🆕 `p884` — the LATAM supply question is SETTLED, and the answer reverses `p883`: the code exists, it is current, and it is unlicensed
 
@@ -2311,6 +2463,41 @@ binding constraint is connectivity rather than governance — the opposite of th
 
 
 ### Global
+
+#### 🟢 `p888` — the cross-region finding: traction and engineering have come apart, so a star-ranked shortlist returns the wrong region
+
+🟢 **This is the first pass in this KB's history able to measure stars at all** —
+`api.github.com/search/repositories` answers `200` here, where four previously-probed routes did not
+([`record`](../evidence/channel-state.2026-11-18-p888.tsv)). The first thing the new measurement says
+is **not to rank on it**:
+
+| Row | Region | ★ | Commits 12mo |
+|---|---|---:|---:|
+| [`bishoynabilanis/jessica`](https://github.com/bishoynabilanis/jessica) | EMEA | **0** | **212** |
+| [`eddiethedean/lessonkit`](https://github.com/eddiethedean/lessonkit) | REFUSED | 2 | **389** |
+| [`Mahmoud-s-Khedr/qbank`](https://github.com/Mahmoud-s-Khedr/qbank) | EMEA | **0** | **121** |
+| [`ICICLE-ai/curriculum-generator`](https://github.com/ICICLE-ai/curriculum-generator) | North America | **0** | **114** |
+| [`bcefghj/multi-agent-education`](https://github.com/bcefghj/multi-agent-education) | APAC | **165** | **1** |
+| [`HowieWang1121/Socratic-Education-System`](https://github.com/HowieWang1121/Socratic-Education-System) | APAC | **137** | **2** |
+
+> 🔵 **Sort this KB's education rows by stars and EMEA and LATAM return an empty set while the actual
+> engineering is happening there.** The two highest-star new rows are both near-dormant APAC
+> portfolio projects; the four highest-commit rows hold **2 stars between them**. Registered as
+> `888-G2`: **rank on commits, and treat a star count as a popularity artefact of the
+> English-language developer web.**
+
+🟢 **The global opportunity, in one line:** the **standards layer** — LTI 1.3, SCORM/xAPI/cmi5,
+autograding — **has live, licensed, permissive OSS in every region**, while the tutor layer is
+fragmented, unplaced and mostly pre-traction. **Build the integration surface from OSS and treat the
+tutor as the bespoke part.** `compose/patterns.md` **P29** is that build, costed.
+
+🔴 **And the global caveat this section must keep.** `/users/{login}` returns **`403`**, so region
+cannot be read from an owner profile; **`9` of the `36` rows byte-verified this pass carry no
+attributable region at all** and are published as **REFUSED** rather than guessed. Separately,
+`arxiv.org`, `aclanthology.org`, `unesco.org`, `eur-lex.europa.eu` and **`huggingface.co`** are all
+`connect_rejected` from this session, so **every regulatory and survey figure in this file remains a
+search engine's summary of a page that cannot be opened**, while every repository fact is read
+first-hand. **Those two classes of fact are not interchangeable.**
 
 #### 🆕 `p881` — one new forecast, recorded as a spread marker and **not** carried as a number
 

@@ -1,0 +1,14 @@
+channel	probe	result	note
+api.github.com/repos/{slug}	curl + gh api	403	"GitHub access to this repository is not enabled for this session" — session scope, unchanged since p873
+api.github.com/search/repositories	gh api -X GET search/repositories	200	OPEN. Returns stargazers_count, forks_count, pushed_at, archived, fork, default_branch, license.spdx_id. 30 req/min authenticated.
+api.github.com/search/commits	gh api -X GET search/commits	200	OPEN, second consecutive pass. 12-month commit counts measured on 36/36 rows.
+api.github.com/users/{login}	curl + gh api	403	CLOSED. Owner location unavailable, so region cannot be attributed from owner profile.
+api.github.com/rate_limit	gh api rate_limit	200	core 15000/h, search 30/min, code_search 10/min
+raw.githubusercontent.com	curl	200	OPEN. Licence bytes readable; 36/36 rows byte-read this pass.
+arxiv.org	curl	000	connect_rejected by egress proxy
+huggingface.co	curl	000	connect_rejected. p873's planned next step for AFRILANGTUTOR/EduNaija is NOT available from this session.
+unesco.org	curl	000	connect_rejected
+eur-lex.europa.eu	curl	000	connect_rejected
+github.com/{slug} (HTML HEAD)	curl -sI	403 FOR EVERY SLUG	NON-DISCRIMINATING. Returns 403 for torvalds/linux and microsoft/vscode as well as for a slug that does not exist. Cannot be used as an existence test in this session.
+raw.githubusercontent.com/{slug}/{branch}/LICENSE	curl -sI	200 real / 404 fake	DISCRIMINATING. Use this as the existence test.
+api.github.com/search/repositories?q=repo:{slug}	gh api	total_count=1 real / 0 fake	DISCRIMINATING. 42/42 published p888 URLs resolved.

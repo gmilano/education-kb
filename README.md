@@ -6,6 +6,78 @@ updated: 2026-11-18
 
 # Globant AI Studios — Education KB
 
+## 🆕 `p888` · 2026-11-18
+
+🟢 **`887-G4` discharged, and the answer was not a better search engine. The discovery channel this
+base wrote off three passes ago has been open the whole time.**
+
+🔴 **This KB has said, since `p885`, that star counts were *"unmeasurable across four routes"* and
+that *"no star figure appears anywhere in this KB."*** One of those four routes was
+`gh api search/repositories`, recorded as an **empty set**. 🟢 **`gh api -X GET search/repositories
+-f q='…'` returns full payloads** — stars, forks, `pushed_at`, `archived`, `fork`, `default_branch`
+**and** `license.spdx_id` — at 30 req/min. **It had been probed through one caller shape.**
+
+> 🔵 **A channel is not closed; a `(channel, caller, argument shape)` triple is.** A negative channel
+> result that does not record the caller and argument shape is neither reproducible nor falsifiable.
+> Registered as `888-G1`.
+
+### What moved
+
+| | |
+|---|---|
+| **`887-G4`** 🟢 discharged | 56 legs / 3 sweeps, **`0` leg errors**. **`1,620`** distinct repos, **`278`** already held, **`1,342`** new to this KB. **`36` byte-verified, `0` fetch failures.** |
+| **First measured stars** 🟢 | And `888-G2` immediately says not to rank on them. |
+| **Africa gap** 🟢 narrowed | `Abdulrahman-hayatu/lessonplan-ng` — Africa-origin, Nigerian curriculum, **Apache-2.0 byte-read**, **unfunded**. Both halves of the old gap refuted. |
+| **A 3rd licence arity shape** 🟢 | **DISJUNCTIVE** (`MIT OR Apache-2.0`), invisible to `p887`'s detector. |
+| **`888-G3`** 🔴 new | This pass's own verifier **invented** a family. `p887`'s **missed** one. Same step, opposite directions. |
+| **`p873`'s Hugging Face action** 🔴 retired | `huggingface.co` is `connect_rejected` from this session. Not executable here. |
+| **`888-G4`** 🔴 new | **`curl -sI https://github.com/<slug>` returns `403` for `torvalds/linux` too.** The standing *"verify every URL with `curl -sI`"* instruction is **non-discriminating here**; applied literally it would condemn every row in this KB. `42/42` URLs verified by the probes that do discriminate. |
+| 6 gaps 🟡 carried | `887-G1`, `885-G2`, `885-G3`, `884-G4` (seventh pass), `884-G5`, `884-G6`. |
+
+### The finding a bid should act on
+
+🔴 **Sort the 36 verified rows by measured 12-month commits and the top of the list contains no AI
+tutors.** It contains LTI 1.3, xAPI/SCORM/cmi5, a package validator, a university autograder and a
+teaching-lab LIMS. Sort the same rows by stars and you get tutors with **one or two commits a year**.
+
+> 🔵 **The integration surface has live licensed OSS in every region. The tutor layer does not.**
+> **Source the integration surface; build only the tutor.** Costed as `compose/patterns.md` **P29**.
+
+🔴 **And `888-G2`, because it changes how every shortlist in this KB should be built:** `lessonkit`
+**389** commits/12mo at **2★**, `jessica` **212** at **0★**, `qbank` **121** at **0★**,
+`curriculum-generator` **114** at **0★** — against `multi-agent-education` **1** commit at **165★**
+and `Socratic-Education-System` **2** commits at **137★**. **Ranking on stars returns an empty set
+for EMEA and LATAM while the work is being done there. Rank on commits.**
+
+### Regions — all four returned, none nilled
+
+**North America `3`** placed rows · **EMEA `6`** · **APAC `5`** · **LATAM `8`**. 🔴 **LATAM returned
+*only* pre-traction work** — all eight at 0–1 stars — so the LATAM opportunity is a **build**, not a
+**sourcing**, exercise. 🔴 **`/users/{login}` is `403`**, so region cannot come from an owner profile:
+every placement rests on a named national curriculum, README language, or a named state platform, and
+**`9` of 36 rows are published REFUSED** rather than guessed.
+
+### Controls
+
+🟢 **`9 / 9` offline** (`subsume_test.py`), including the `888-G3` regression. 🟢 **`56 / 56` legs
+`200`.** 🟢 **`36 / 36` rows byte-read, `0` failures.** 🟢 **`gate-region-headings` (`p383`) run
+green on `intel/market.md` after this pass's edits** — `11/11` suite, `0` findings, one canonical
+block, all five vocabulary regions. 🔴 **`make hooks` could not be invoked**, so the `19` red gates
+`p886` recorded are **untouched and unmeasured**; **`865-G2` is not discharged.**
+
+### New this pass
+
+- `compose/code/p888-search-discovery/` — the re-scoped discovery channel: 3 sweeps, a byte-reading
+  verifier, and **9 subsumption controls**, with this pass's two self-caught instrument defects
+  recorded in the README rather than quietly fixed
+- `compose/patterns.md` **P29** (standards-first education build, costed, with regional elections)
+  and **P30** (licence-arity triage, a precondition for P1–P29)
+- `intel/trends.md` **`T29`** (arity has two meanings), **`T30`** (`NOASSERTION` is blind to
+  disjunction), **`T31`** (subsumption), **`T32`** (channel ≠ triple), **`T33`** (traction ≠
+  maintenance)
+- `evidence/search-discovery-887G4…`, `evidence/grant-verify-888…`, `evidence/channel-state…`
+
+
 ## 🆕 `p887` · 2026-11-18
 
 🟢 **Four gaps discharged — `886-G1`, `886-G3`, `886-G5` and `884-G3`. And the pass's best finding is

@@ -4,6 +4,247 @@ region: Global
 updated: 2026-11-18
 ---
 
+## 🟢 `2026-11-18` (`p888`) — **`887-G4` discharged: the discovery channel is OPEN and it was never a search engine. `api.github.com/search/repositories` answers `200` in this session, which makes this the first pass in this KB's history to carry a MEASURED star count — and the first to find new education repositories in ten passes.**
+
+🔵 **`887-G4` asked for a channel that is not the eight prescribed legs.** The legs nilled for nine
+consecutive passes. `p888` did **not** re-run them as a discovery instrument. It probed the GitHub
+API surface instead, and found that the shelf's own three-pass-old conclusion was **too strong**.
+
+### 🔴 The standing conclusion that was wrong, and exactly how it was wrong
+
+`agents/top.md` has carried this since `p885`:
+
+> *"Star counts unmeasurable for the third consecutive pass, now across four routes — `api.github.com`,
+> `github.com` HTML, the `gh` CLI (*"not in this session's authorized repository set"*) and
+> `gh api search/repositories` (empty set). … **No star figure appears anywhere in this KB.**"*
+
+🟢 **Three of those four routes are still closed, re-probed this pass**
+([`record`](../evidence/channel-state.2026-11-18-p888.tsv)). `api.github.com/repos/{slug}` returns
+**`403`** — *"GitHub access to this repository is not enabled for this session"*. `/users/{login}`
+returns **`403`** too, which matters separately and is recorded below.
+
+🔴 **But `search/repositories` returns `200` with a full payload.** `gh api -X GET
+search/repositories -f q='…'` returns `stargazers_count`, `forks_count`, `pushed_at`, `archived`,
+`fork`, `default_branch` **and** `license.spdx_id` — all of it, in the same call that returns the
+candidate. Rate limit **30/min authenticated**, `core` 15,000/h.
+
+> 🔵 **The lesson is not "the channel came back".** The four-route probe tested `search/repositories`
+> through **one** caller (`gh api` without an explicit `-f q=`) and recorded an empty set. The
+> endpoint was open the whole time. **A channel is not closed; a (channel, caller, argument shape)
+> triple is.** Registered as `888-G1`.
+
+### The sweep — three sweeps, 56 legs, `0` leg errors
+
+| Sweep | Legs | Shape | Distinct rows |
+|---|---:|---|---:|
+| `sweep1-broad` | 20 | broad keywords, `sort=stars` | 591 |
+| `sweep2-precise` | 22 | precise education-native, `sort=updated` | 1,053 |
+| `sweep3-regional` | 14 | **in-language**, region declared per leg | 692 |
+
+**Union `1,620` distinct repositories; `278` already in this KB's index; `1,342` never seen here.**
+After permissive-licence + not-archived + not-fork + `pushed ≥ 2026-01-01` + education-token +
+not-a-curated-list: **`155` candidate rows**, of which **`36` were byte-verified this pass**
+([`record`](../evidence/grant-verify-888.2026-11-18-p888.tsv), [`legs`](../evidence/search-discovery-887G4.2026-11-18-p888.tsv)).
+
+🟢 **`36 / 36` byte-read, `0` fetch failures.** Every row below carries licence bytes, `sha256₁₂`, a
+measured 12-month commit count and a measured star count.
+
+### 🟢 The rows worth a shelf — education-native, permissive, live
+
+| Agent | Repo | Grant (byte-read `2026-11-18`) | ★ / forks | Commits 12mo | Region | What it is |
+|---|---|---|---:|---:|---|---|
+| **OpenPronounce** | [`OpenPronounce/OpenPronounce`](https://github.com/OpenPronounce/OpenPronounce) | **MIT** — `main/LICENSE`, **1,113 B**, `sha256₁₂ 6f4d9645aa9f` | **221★ / 40** | **42** | 🔴 **REFUSED** | Phoneme-level English **pronunciation assessment**, Wav2Vec2 + DTW, self-hosted. 🟢 **The highest-star genuinely education-native repository this KB has added since `p873`**, and the only new row with three-figure stars that is not a tutorial collection. |
+| **Socratic-Education-System** | [`HowieWang1121/Socratic-Education-System`](https://github.com/HowieWang1121/Socratic-Education-System) | **MIT** — `main/LICENSE`, **1,067 B**, `sha256₁₂ ab18b4a5d5a7` | **137★ / 14** | 2 | **APAC** | Socratic tutor built explicitly to serve **rural Chinese schools**; its README argues education is a right, not an obligation, and targets the urban/rural resource gap. 🔴 **2 commits in 12 months — the stars are real and the project is nearly dormant.** |
+| **multi-agent-education** | [`bcefghj/multi-agent-education`](https://github.com/bcefghj/multi-agent-education) | **MIT** — `main/LICENSE`, **1,056 B**, `sha256₁₂ 1126322e2cc8` | **165★ / 21** | 1 | **APAC** | 5-agent mesh + event-driven personalised learning, Java/Go/Python. 🔴 **Its own README calls it 面试项目 — an interview-portfolio project.** Admitted as a design reference, **not** as a dependency. |
+| **lessonplan-ng** | [`Abdulrahman-hayatu/lessonplan-ng`](https://github.com/Abdulrahman-hayatu/lessonplan-ng) | **Apache-2.0** — `main/LICENSE`, **11,354 B**, `sha256₁₂ b2addd330bdc` | 0★ / 0 | 1 | **EMEA** | Lesson-plan generator for the **Nigerian curriculum**, with an LLM-judge evaluation harness. 🟢 **This row narrows a standing gap — see below.** |
+| **openthaiknowledge** | [`KananatSSN/openthaiknowledge`](https://github.com/KananatSSN/openthaiknowledge) | **Apache-2.0** — `main/LICENSE`, **11,358 B**, `sha256₁₂ c95bae1d1ce0` | 2★ / 3 | **103** | **APAC** | Open **Thai curriculum** knowledge: seeded problem-set generators and knowledge units. 🟢 **103 commits in 12 months against 2 stars — the most actively developed new row, and traction-invisible.** |
+| **qbank** | [`Mahmoud-s-Khedr/qbank`](https://github.com/Mahmoud-s-Khedr/qbank) | **MIT** — `main/LICENSE`, **1,070 B**, `sha256₁₂ 42d0fafc0595` | 0★ / 0 | **121** | **EMEA** | **Arabic-first** scanned-workbook → question-bank and exam generator. 🟢 One of only two new rows that take **scanned paper** as the input format. |
+| **skillgraph-tutor** | [`ali-kin4/skillgraph-tutor`](https://github.com/ali-kin4/skillgraph-tutor) | **Apache-2.0** — `main/LICENSE`, **11,357 B**, `sha256₁₂ c71d239df917` | 0★ / 0 | 7 | 🔴 **REFUSED** | **Offline-first** tutoring engine + learning-analytics dashboard over a concept graph. 🔵 Offline-first is the property that matters for the sovereignty bids in `intel/market.md`. |
+| **ankipa** | [`warleysr/ankipa`](https://github.com/warleysr/ankipa) | **MIT** — `main/LICENSE`, **1,065 B**, `sha256₁₂ 7cfb75d75766` | 10★ / 3 | 5 | 🔴 **REFUSED** | **Anki add-on** for pronunciation assessment. 🔵 Pairs directly with OpenPronounce: the assessment engine and the spaced-repetition host, separately licensed MIT. |
+| **Chinese-Teaching-AI-Agent** | [`forgemorrow/Chinese-Teaching-AI-Agent`](https://github.com/forgemorrow/Chinese-Teaching-AI-Agent) | **MIT** — `main/LICENSE`, **1,068 B**, `sha256₁₂ 2e7ffdde3eb5` | 8★ / 0 | 1 | **APAC** | K-12 Chinese-language lesson prep, Streamlit + MiMo. 🔵 Named model dependency is a **Chinese domestic model**, which is the sovereignty pattern `T25` predicts. |
+| **coder_edu_backend** | [`lien0219/coder_edu_backend`](https://github.com/lien0219/coder_edu_backend) | **MIT** — `main/LICENSE`, **1,061 B**, `sha256₁₂ e40a678e59da` | 4★ / 1 | **107** | **APAC** | Go programming-education backend with RAG + SSE-streamed tutoring. |
+
+### 🟢 A standing gap NARROWS — Africa-origin education OSS now has a licensed member
+
+`agents/top.md` carries, as a declared gap:
+
+> *"**Africa-origin education agents exist, and not one of them has a licence.** … The discriminating
+> variable appears to be **funding**: the one regional project that *is* licensed, documented and
+> branch-managed (TutorIA) is the one with a national science ministry behind it."*
+
+🟢 **[`Abdulrahman-hayatu/lessonplan-ng`](https://github.com/Abdulrahman-hayatu/lessonplan-ng) is
+Africa-origin, targets the Nigerian national curriculum, and carries a complete Apache-2.0 grant —
+byte-read, 11,354 B, `sha256₁₂ b2addd330bdc`.** It is an individual's repository with no visible
+institutional funder.
+
+> 🔵 **So the gap's *existence* claim is refuted and its *explanation* is refuted with it.** Licensing
+> is not downstream of national funding; `lessonplan-ng` is unfunded and licensed. 🔴 **What survives
+> is the maturity claim**: 1 commit in 12 months, 0 stars, and an LLM-judge harness that has not been
+> run against a published baseline. **Africa-origin education OSS is licensed and real; it is not yet
+> production-grade.** The gap is rewritten, not closed, on `agents/top.md`.
+
+### 🔴 Region cannot be attributed from an owner profile — and that is new this pass
+
+`/users/{login}` returns **`403`** in this session, so the owner's `location`, `company` and `bio`
+are all unavailable. 🔵 **Every region in the table above is therefore placed on in-artefact
+evidence only** — a **named national curriculum** (Nigerian, Thai, Ontario, BNCC, ENEM, Egyptian
+Primary/Prep), the **language of the README**, or a **named state platform** (ByCS). Where neither
+was present, the cell reads **REFUSED**, following `p870`'s rule. 🔴 **`9` of the 36 verified rows are
+unplaced**, and that is a measurement, not an omission.
+
+### What the three sweeps say about each region — all four returned, none nilled
+
+- 🟢 **LATAM returned, and it returned only pre-traction work.** 6 in-language legs
+  (`es`/`pt`: tutor, docente, escola, evaluación, ENEM/vestibular) → **8 new permissive live rows,
+  every one at 0–1 stars.** Best of them: [`sabrinasiilva/pista-enem`](https://github.com/sabrinasiilva/pista-enem)
+  (**MIT**, 1,085 B, `ad517800ef23`, **23** commits/12mo) — a Socratic **ENEM** tutor whose stated
+  design is *"dá pistas, não respostas"*, gives hints, not answers; and
+  [`LMS-COMPASSO/lms`](https://github.com/LMS-COMPASSO/lms) (**MIT**, 1,065 B, `96b03c09cca5`,
+  **109** commits/12mo), an LMS built to **BNCC**, Brazil's national curriculum base.
+- 🟢 **EMEA returned the widest spread** — Nigeria (`lessonplan-ng`), Egypt
+  ([`bishoynabilanis/jessica`](https://github.com/bishoynabilanis/jessica), **MIT**, 1,069 B,
+  `b345cf910b8e`, **212** commits/12mo — offline-first study app for Egyptian Primary 1–Prep 3, and
+  **the highest commit count of any row in this pass**), Arabic-first (`qbank`), Czech
+  ([`AdamFiser/oa-autograding`](https://github.com/AdamFiser/oa-autograding), **MIT**, 1,068 B,
+  `16f1aada6c28`, **39** commits/12mo), Bavaria
+  ([`ddesignmedia/ByCS_Dashboard`](https://github.com/ddesignmedia/ByCS_Dashboard), **MIT**, 1,085 B,
+  `9a68bc4e6632` — a didactic analysis dashboard for **ByCS**, the Bayern Cloud Schule state
+  platform, **and Moodle**).
+- 🟢 **APAC returned the most sustained engineering** — `openthaiknowledge` (103), `coder_edu_backend`
+  (107), [`Sulthan-eng/Koreksi-in`](https://github.com/Sulthan-eng/Koreksi-in) (**MIT**, 1,079 B,
+  `c9dbe3c1024f`, **51** commits/12mo — Indonesian semantic-similarity essay autograding).
+- 🟢 **North America returned institutional rows, not hobby rows** —
+  [`PrairieLearn/grader-python-v2`](https://github.com/PrairieLearn/grader-python-v2) (**MIT**,
+  1,072 B, `0677c780ae82`, **110** commits/12mo; PrairieLearn is the UIUC assessment platform) and
+  [`ICICLE-ai/curriculum-generator`](https://github.com/ICICLE-ai/curriculum-generator)
+  (**BSD-3-Clause**, 1,501 B, `5dbf2c09aee3`, **114** commits/12mo; ICICLE is an NSF AI institute).
+  Plus [`mayuribagga/ai-worksheet-maker`](https://github.com/mayuribagga/ai-worksheet-maker)
+  (**MIT**, 1,069 B, `e873cc2a5a16`), aligned to the **Ontario** curriculum.
+
+> 🔵 **The regional finding, stated once: traction and engineering have come apart.** The three rows
+> with the highest 12-month commit counts in this pass — `jessica` (212), `qbank` (121),
+> `curriculum-generator` (114) — hold **`0` stars between them.** Any regional shortlist built by
+> sorting on stars will return an empty set for EMEA and LATAM while the actual work is being done.
+> Sort on commits. Registered as `888-G2`.
+
+### 🔴 Two defects in `p888`'s OWN instruments, both caught before they reached a shelf
+
+1. **`sort=stars` over a broad keyword leg does not return education repositories.** Sweep 1's
+   `lms-ai` leg (`moodle OR canvas OR openedx AI plugin`) matched **23,570** rows and its
+   star-sorted head is `awesome-go`, `gin`, `frp`, `NextChat`. **178 of sweep 1's 215 new permissive
+   live rows carried no education token at all.** Sweep 1 is kept in
+   `compose/code/p888-search-discovery/` as the **negative control**.
+2. **A bare `learning` token is poisoned, and it is what made defect 1 invisible.** `learn|learning`
+   matches *machine learning*. Sweep 1's gate used it and admitted ML tutorials as education
+   software — `machine-learning-for-trading`, `start-machine-learning`, satellite-imagery
+   techniques. 🔵 **`learn`/`learning` are now excluded from the strong-token set**, and the reason
+   is kept in the source rather than in a commit message.
+
+### 🔴 And the one that is the exact mirror of `p887`'s finding
+
+`verify.py` first reported **two conjunctive grants** that are not conjunctive:
+`slp-lab-research/higraph` and `ICICLE-ai/curriculum-generator`, both as
+`BSD-2-Clause + BSD-3-Clause`. **Both are single-family BSD-3-Clause**, confirmed by clause-3
+presence and the absence of any Apache or MIT body.
+
+> 🔴 **`BSD-2-Clause`'s signature — *"Redistributions in binary form must reproduce the above
+> copyright"* — is clause 2 OF `BSD-3-Clause`.** A strict textual subset. Presence-matching therefore
+> reports `arity=2` on **every** BSD-3 file ever read.
+>
+> 🔵 **The rule: family detection must test for SUBSUMPTION, not presence.**
+> `SUBSUMES = {"BSD-3-Clause": {"BSD-2-Clause"}}`, with the failing case kept as a named regression
+> control (`subsume_test.py`, **9/9 green, offline**).
+
+🔵 **Read against `p887`, this is the same defect failing in the opposite direction.** `p887`'s
+classifier was **earliest-title-wins** and **missed a real second family** on
+`apereo/java-cas-client`. `p888`'s was **presence-matching** and **invented one** on two BSD-3 rows.
+**Both live in the single step between bytes and a family label, and no acceptance test in this base
+constrains that step from both sides at once.** Registered as `888-G3`.
+
+### 🟢 A THIRD licence arity shape, which `p887`'s detector cannot see
+
+[`ad1-kamath/coursecraft`](https://github.com/ad1-kamath/coursecraft) — an eLearning authoring tool
+in Rust that publishes SCORM/cmi5 — carries **two grant files**: `LICENSE-MIT` (**1,081 B**,
+`sha256₁₂ 66d27c2a9dbf`) and `LICENSE-APACHE` (**10,174 B**, `sha256₁₂ 0d542e0c8804`). Its
+`Cargo.toml` declares, verbatim:
+
+```toml
+license = "MIT OR Apache-2.0"
+```
+
+🔴 **The GitHub metadata channel reports `Apache-2.0` alone and silently drops the MIT half.**
+
+> 🔵 **This is DISJUNCTIVE, not conjunctive — `OR`, not `AND` — and this base has had no name for it.**
+> `p887`'s cases (`java-cas-client`, `phpCAS`) are **conjunctive**: both families bind at once, and
+> the studio owes both notice sets. `coursecraft` is **disjunctive**: the licensee **chooses one**,
+> and a studio that picks MIT owes no Apache `NOTICE` at all. **Same `arity=2`, opposite obligation.**
+>
+> 🔴 **And it defeats `p887`'s detector by construction.** That rule reads: *"a row whose metadata
+> channel returns `NOASSERTION` while its bytes channel returns a family is a conjunctive-grant
+> candidate."* `coursecraft`'s metadata returns a **clean single family**, `Apache-2.0` — not
+> `NOASSERTION`. **The abstention signal only fires when the metadata channel is confused, and a
+> disjunctive pair does not confuse it; it just loses half of it.**
+>
+> 🟢 **The discriminator is cheap and needs no clone:** `LICENSE-<FAMILY>` **filename pairs** plus a
+> package-manifest `license` expression containing `OR`. Conjunctive grants do not use that
+> filename convention — `phpCAS` hides its BSD half in `NOTICE`, `java-cas-client` inside one file.
+
+See `intel/trends.md` **`T29`**, **`T30`**, **`T31`** and `compose/patterns.md` **P29**.
+
+### 🔴 `curl -sI https://github.com/<slug>` is NON-DISCRIMINATING in this session, and following the standing instruction literally would condemn this entire KB
+
+🔵 **The standing ingest instruction says: *"Verify every URL before writing it (`curl -sI`). A 404
+is not a finding."*** `p888` ran it over all **42** GitHub URLs this pass publishes.
+
+🔴 **All 42 returned `403`. So did `torvalds/linux`. So did `microsoft/vscode`. So did a slug
+invented to not exist.**
+
+| Probe | `curl -sI` status |
+|---|---|
+| `github.com/OpenPronounce/OpenPronounce` | `403` |
+| `github.com/torvalds/linux` | `403` |
+| `github.com/microsoft/vscode` | `403` |
+| `github.com/definitely-not-a-real-org-xyz99/nope-does-not-exist-12345` | `403` |
+
+> 🔴 **The test has zero discriminating power here — it returns the same verdict for the Linux kernel
+> and for a slug that has never existed.** A pass that applied the instruction literally and treated
+> non-`200` as refutation would mark **every row in this KB as unverifiable and delete the base.**
+> 🔵 **An instruction that names a specific command inherits that command's blind spots in whatever
+> environment actually runs it, and `403` is not `404`.** Registered as `888-G4`.
+
+🟢 **The two tests that DO discriminate, and the result of running them over all 42:**
+
+| Test | Real slug | Invented slug |
+|---|---|---|
+| `curl -sI raw.githubusercontent.com/<slug>/<branch>/LICENSE` | **`200`** | **`404`** |
+| `gh api -X GET search/repositories -f q=repo:<slug>` | **`total_count=1`** | **`0`** |
+
+🟢 **`42 / 42` published URLs resolved to real repositories**, by the `search/repositories` exact-slug
+probe ([`record`](../evidence/url-existence.2026-11-18-p888.tsv)), and **`36 / 36`** of the
+byte-verified rows additionally returned `200` on a real licence payload at
+`raw.githubusercontent.com`. **No URL in this pass is asserted on a 403.**
+
+
+### Controls
+
+🟢 **`9 / 9` PASS, offline** (`subsume_test.py`), including the regression that caught `888-G3`.
+🟢 **`42 / 42` published URLs resolved** by the discriminating probe ([`record`](../evidence/url-existence.2026-11-18-p888.tsv)); 🔴 `curl -sI` returned `403` on all 42 and is non-discriminating in this session (`888-G4`).
+🟢 **`0` header-rows-as-data and `0` malformed tables** across the `10` tables this pass adds; the `47` hits a loose regex produced are all pre-existing **transposed key-value** tables (`| | |` + `|---|---|`), which is a false-positive class of the detector, not a defect in the base.
+🟢 **`56 / 56` legs returned `200`**, `0` errors. 🟢 **`36 / 36` rows byte-read**, `0` fetch failures.
+🔴 **`make hooks` could not be invoked in this session**, so the `19` red gates `p886` recorded are
+**untouched and unmeasured by this pass**; `865-G2` is **not** discharged.
+
+### 🔴 One planned next step is now known to be impossible
+
+`p873` left *"Next pass: try Hugging Face"* for **EduNaija AI Tutor** and **AFRILANGTUTOR**, the two
+Africa-origin research systems whose repository addresses could not be resolved.
+🔴 **`huggingface.co` returns `000` — `connect_rejected` by this session's egress proxy**
+([`record`](../evidence/channel-state.2026-11-18-p888.tsv)). Together with `arxiv.org` and
+`aclanthology.org`, **every channel that could resolve those two addresses is closed from here.**
+🔵 **The instruction is retired, not carried forward**: it cannot be executed in this environment and
+should not reappear as an open action. It needs the hosts allowed in the session's network settings.
+
+
 ## 🔴 `2026-11-18` (`p887`) — **the eight prescribed legs nilled for a NINTH pass. So the pass went after the open gaps and found the finding against ITSELF: a new instrument, built in literal compliance with `886-G2`, reproduced on `apereo/java-cas-client` the exact error this base's own shelf note records `p880` making on that same row**
 
 🔵 **The eight legs, run global-then-regional as prescribed, with the held/new split measured against

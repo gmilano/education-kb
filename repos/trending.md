@@ -4,6 +4,97 @@ region: Global
 updated: 2026-11-18
 ---
 
+## 🟢 `2026-11-18` (`p888`) — **The standards layer is where the new repositories are. `p888`'s re-scoped discovery channel returned `1,342` repositories this KB had never seen, and the live, licensed, institutionally-maintained ones are not tutors — they are LTI 1.3, SCORM/xAPI/cmi5 and autograder plumbing.**
+
+🔵 **Channel:** `api.github.com/search/repositories`, which answers **`200`** in this session.
+56 legs across three sweeps, **`0` leg errors**; **`1,620`** distinct repositories, **`278`**
+already held, **`1,342`** new; **`36`** byte-verified, **`0`** fetch failures
+([`legs`](../evidence/search-discovery-887G4.2026-11-18-p888.tsv),
+[`grants`](../evidence/grant-verify-888.2026-11-18-p888.tsv),
+[`channels`](../evidence/channel-state.2026-11-18-p888.tsv)). Full method and this pass's two
+self-caught instrument defects: `compose/code/p888-search-discovery/README.md`.
+
+### 🟢 The finding this file exists to record
+
+🔴 **Sort the new rows by 12-month commit count and the top of the list contains no AI tutors at
+all.** It contains an **LTI 1.3 implementation**, a **SCORM/cmi5 authoring tool**, a **package
+validator**, an **xAPI course framework**, a university **autograder**, and a **LIMS for teaching
+labs**. Sort the same rows by stars and you get tutors with two commits a year.
+
+> 🔵 **The agent layer is where the attention is; the standards layer is where the maintenance is.**
+> For a studio this inverts the build order: the integration surface a client actually needs — launch,
+> roster, grade passback, package export — has live licensed OSS, while the tutor is the part you
+> were going to write anyway.
+
+### 🟢 Standards-layer repositories — byte-verified, permissive, live
+
+| Repo | Grant (byte-read `2026-11-18`) | ★ / forks | Commits 12mo | Region | What it gives a build |
+|---|---|---:|---:|---|---|
+| [`parler-haut-interagir-librement/lti`](https://github.com/parler-haut-interagir-librement/lti) | **MIT** — `main/LICENSE`, **1,155 B**, `sha256₁₂ 2da07e888147` | 0★ / 0 | 2 | **EMEA** | **LTI 1.3 for PHP on BOTH sides** — a *tool* that platforms launch **and** a *platform* that launches tools, from one configuration. 🔵 The both-sides property is rare and is exactly what a pilot needs when the client's LMS is the thing under test. |
+| [`parler-haut-interagir-librement/lti-bundle`](https://github.com/parler-haut-interagir-librement/lti-bundle) | **MIT** — `main/LICENSE`, **1,155 B**, `sha256₁₂ 2da07e888147` | 0★ / 0 | 2 | **EMEA** | The Symfony binding of the above. 🔵 **Identical licence bytes and `sha256₁₂` to its sibling** — same holder, same grant, independently confirmed rather than assumed. |
+| [`eddiethedean/lessonkit`](https://github.com/eddiethedean/lessonkit) | **Apache-2.0** — `main/LICENSE`, **10,174 B**, `sha256₁₂ 69849221bfb9` | 2★ / 1 | **389** | 🔴 **REFUSED** | React-first framework for **accessible** learning experiences emitting **xAPI, SCORM and cmi5**. 🟢 **389 commits in 12 months — the highest of any repository in this pass, at 2 stars.** 🔵 Accessibility is a stated design goal, which is directly relevant to the EAA obligation on `agents/top.md`. |
+| [`ad1-kamath/coursecraft`](https://github.com/ad1-kamath/coursecraft) | 🔴 **DISJUNCTIVE `MIT OR Apache-2.0`** — `LICENSE-MIT` **1,081 B** `sha256₁₂ 66d27c2a9dbf` **and** `LICENSE-APACHE` **10,174 B** `sha256₁₂ 0d542e0c8804`; `Cargo.toml` declares `license = "MIT OR Apache-2.0"` | 1★ / 0 | 25 | 🔴 **REFUSED** | Clean-room eLearning **authoring** tool in Rust, publishes SCORM/cmi5. 🔴 **GitHub metadata reports `Apache-2.0` alone and drops the MIT half** — see the arity note below. |
+| [`jasonswrench-beep/openstage-package-doctor`](https://github.com/jasonswrench-beep/openstage-package-doctor) | **Apache-2.0** — `main/LICENSE`, **11,357 B**, `sha256₁₂ c71d239df917` | 0★ / 0 | 9 | 🔴 **REFUSED** | Opens and **validates** any SCORM, xAPI or cmi5 package **without the source file**. 🔵 The diagnostic that makes a migration bid estimable instead of a guess. |
+| [`RichardMcQuiston01/reactive-lms`](https://github.com/RichardMcQuiston01/reactive-lms) | **MIT** — `main/LICENSE`, **1,073 B**, `sha256₁₂ d04e9814dca8` | 0★ / 0 | **159** | 🔴 **REFUSED** | TypeScript LMS package, standalone **or** embeddable. 🟢 159 commits/12mo. |
+| [`jaiminnair-hub/orbit-learning`](https://github.com/jaiminnair-hub/orbit-learning) | **MIT** — `main/LICENSE`, **1,068 B**, `sha256₁₂ 284abd7c6840` | 2★ / 0 | 1 | 🔴 **REFUSED** | Course authoring + **SCORM/xAPI/cmi5** + assessment. 🔴 1 commit/12mo — listed for its format coverage, not its liveness. |
+| [`PrairieLearn/grader-python-v2`](https://github.com/PrairieLearn/grader-python-v2) | **MIT** — `main/LICENSE`, **1,072 B**, `sha256₁₂ 0677c780ae82` | 1★ / 0 | **110** | **North America** | The **next-generation Python autograder for PrairieLearn**, the UIUC assessment platform. 🟢 **Institutionally maintained**: 110 commits/12mo under a university org. |
+| [`Vernum-Projecten/eduLIMS`](https://github.com/Vernum-Projecten/eduLIMS) | **Apache-2.0** — `main/LICENSE`, **11,357 B**, `sha256₁₂ c71d239df917` | 0★ / 0 | **112** | **EMEA** | **LIMS for practical teaching laboratories** — lab information management scoped to education. 🔵 A vertical this KB had no row for at all. |
+| [`rendicahya/moodler`](https://github.com/rendicahya/moodler) | **MIT** — `main/LICENSE`, **1,078 B**, `sha256₁₂ 70d2e2219531` | 0★ / 0 | 53 | 🔴 **REFUSED** | Browser editor for **Moodle quiz questions** — create, import, edit, reorder. 🔵 Attaches to the platform already in `verticals/solutions.md`. |
+| [`ICICLE-ai/curriculum-generator`](https://github.com/ICICLE-ai/curriculum-generator) | **BSD-3-Clause** — `main/LICENSE`, **1,501 B**, `sha256₁₂ 5dbf2c09aee3` | 0★ / 0 | **114** | **North America** | Curriculum generator from **ICICLE**, an NSF AI institute. 🔴 **This row was briefly mis-read by this pass's own instrument as conjunctive BSD-2+BSD-3 — see `888-G3`.** |
+| [`slp-lab-research/higraph`](https://github.com/slp-lab-research/higraph) | **BSD-3-Clause** — `main/LICENSE`, **1,497 B**, `sha256₁₂ 464ba80d380e` | 2★ / 0 | 1 | 🔴 **REFUSED** | **HiGraph**, *Findings of EMNLP 2026* — hierarchical discrepancy reasoning. 🔵 A published-paper artefact with a real grant, which the gap note on `agents/top.md` says is the rare case. |
+
+### 🟢 Three Apache texts, one hash — and it matches a row `p887` byte-read
+
+🔵 **`ali-kin4/skillgraph-tutor`, `jasonswrench-beep/openstage-package-doctor` and
+`Vernum-Projecten/eduLIMS` all carry `LICENSE` at `11,357 B` with `sha256₁₂ c71d239df917`** — the
+**same bytes `p887` recorded for `apereo/phpCAS`**. That is the pristine, unmodified Apache-2.0
+text, independently confirmed across four unrelated repositories.
+
+🔴 **But the pristine text is not a single byte count.** Also byte-read this pass:
+`KananatSSN/openthaiknowledge` at **11,358 B** (`c95bae1d1ce0`),
+`Abdulrahman-hayatu/lessonplan-ng` at **11,354 B** (`b2addd330bdc`), and `coursecraft`'s
+`LICENSE-APACHE` at **10,174 B** (`0d542e0c8804`) — the last being the **appendix-stripped** variant.
+
+> 🔵 **So `11,357 B / c71d239df917` is usable as a positive fingerprint for "unmodified Apache-2.0",
+> but its ABSENCE proves nothing.** Trailing-newline and filled-in-appendix variants differ by 1–4
+> bytes, and the appendix-stripped form differs by 1,183. **A byte-count equality test for "pristine"
+> would have flagged three of this pass's six Apache rows as modified.** `p887`'s note that
+> apache.org's own served text is `11,358 B / cfc7749b96f6` is consistent with this: **the steward's
+> own copy is not the modal repository copy.**
+
+### 🔴 A third licence-arity shape, which this base had no name for
+
+[`ad1-kamath/coursecraft`](https://github.com/ad1-kamath/coursecraft) declares
+`license = "MIT OR Apache-2.0"` in `Cargo.toml` and ships **both** texts as `LICENSE-MIT` +
+`LICENSE-APACHE`. **GitHub metadata reports `Apache-2.0` alone.**
+
+- `p887`'s rows (`java-cas-client`, `phpCAS`) are **CONJUNCTIVE** — `AND`. Both families bind; the
+  studio owes **both** notice sets.
+- `coursecraft` is **DISJUNCTIVE** — `OR`. The licensee **picks one**; a studio that picks MIT owes
+  **no Apache `NOTICE` at all**.
+- 🔴 **Identical `arity=2`. Opposite obligation. And `p887`'s `NOASSERTION` detector cannot see it**,
+  because the metadata channel returns a confident single family rather than abstaining.
+- 🟢 **Discriminator, no clone required:** `LICENSE-<FAMILY>` **filename pairs** + a manifest
+  `license` expression containing `OR`.
+
+See `intel/trends.md` **`T29`**–**`T31`** and `compose/patterns.md` **P29**.
+
+### 🔴 What this channel does NOT fix
+
+- 🔴 **`api.github.com/repos/{slug}` is still `403`** and `/users/{login}` is **`403`** too, so
+  **region cannot be read from an owner profile**. All regions above rest on in-artefact evidence —
+  a named national curriculum, README language, or a named state platform — and **`9` of 36 rows are
+  REFUSED**.
+- 🔴 **`huggingface.co` is `connect_rejected`**, so `p873`'s *"next pass: try Hugging Face"* for
+  **EduNaija AI Tutor** and **AFRILANGTUTOR** is **not executable from this session**. Retired as an
+  action, kept as a lead.
+- 🔴 **`make hooks` was not invokable**, so the `19` red gates `p886` recorded are untouched by this
+  pass. **`865-G2` is not discharged.**
+- 🔴 **Stars are now measurable but nearly useless on this shelf.** `jessica` (212 commits/12mo),
+  `qbank` (121) and `curriculum-generator` (114) hold **0 stars between them**. Registered as
+  `888-G2`: **rank this KB's shelves on commits, not stars.**
+
+
 ## 🟢 `2026-11-18` (`p887`) — **`886-G1` discharged over the 15 remaining rows: `64,641` paths tree-enumerated, `0` clone failures, `22` policy documents pinned. `886-G5`'s class measured at `1` of `206` instrument claims. `884-G3` unblocked after two passes and converged. And `886-G2` recurred against this pass's own new instrument.**
 
 🔵 **`886-G2(a)` COMPLIANCE RECORD, filed first because the gap requires it.** `make ladder-audit`
