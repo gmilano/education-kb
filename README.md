@@ -28,22 +28,40 @@ and concrete recipes that name specific repos.
    (AGPL-3.0) and Canvas (AGPL-3.0) are what clients run. Integrate over **LTI 1.3** or **MCP**
    and your tool stays a separate work; fork the platform and it does not. When a client needs a
    proprietary derivative, start from **Artemis (MIT)**, **Kolibri (MIT)**, **Oppia (Apache-2.0)**
-   or **OpenOLAT (Apache-2.0)**.
+   or **OpenOLAT (Apache-2.0)**. **Content assets invert this** (added p890): curriculum data and
+   learning-content apps arrive under data or copyleft licences — `os-taxonomy` is **ODbL-1.0**
+   with share-alike on derived databases. Run licence triage per artefact class, not once.
 
 2. **The best open education agents are academic, not commercial.** DeepTutor (HKU,
-   Apache-2.0, 60,165 ★), OpenMAIC (Tsinghua, MIT, 43,856 ★), the Artemis/EduTelligence/Pyris
+   Apache-2.0, 60,186 ★), OpenMAIC (Tsinghua, MIT, 43,859 ★), the Artemis/EduTelligence/Pyris
    stack (TU Munich, MIT), OATutor (UC Berkeley, MIT). The commercial tutors are closed. These
    projects want implementation partners — which is the opening.
 
 3. **Regulation now constrains *use*, not existence, and the rules differ by region.**
-   Oklahoma bars AI-only grading. The EU postponed high-risk education obligations to
-   **2 December 2027** (Regulation (EU) 2026/1744) while Article 50 disclosure already applies.
-   Korea's AI Basic Act is in force. India and China require AI-content labelling on dated
-   schedules. **Auditable human oversight is the product.** See `intel/market.md`.
+   Oklahoma bars AI-only grading. **California AB 1159 bars training models on student data at
+   all** — which forecloses an architecture, not just a workflow. The EU postponed high-risk
+   education obligations to **2 December 2027** (Regulation (EU) 2026/1744) while Article 50
+   disclosure already applies and the **Article 4 AI-literacy duty has been live since
+   2 February 2025** for every organisation using any AI. Korea's AI Basic Act is in force.
+   India and China require AI-content labelling on dated schedules. **Auditable human oversight
+   is the product.** See `intel/market.md`.
+
+   **The nearest deadlines are closer than 2027** (added p890): **North Carolina** needs a state
+   model AI policy by **31 December 2026** and local policies by **30 June 2027**, and
+   **Vietnam** has made education AI *statutorily* high-risk — new systems comply by
+   **1 March 2027**, existing ones by **1 September 2027**, both ahead of the EU date.
 
 4. **Adoption has outrun governance, and that is the fastest sale.** In Brazil 53% of school
    administrators use AI and 22% have guidelines; 87% of regional universities use AI and 26%
-   have a strategy. The offer is governance for AI already in use, not adoption.
+   have a strategy. **PISA 2025: across 13 LAC countries, nine in ten 15-year-olds have already
+   used AI chatbots for schoolwork**, while CENIA finds 13 of 19 LAC countries do not teach AI in
+   schools at all. The offer is governance for AI already in use, not adoption.
+
+5. **Buyers have started writing the spec themselves** (added p890). Jisc, with Universities UK,
+   GuildHE and the Association of Colleges, asked AI suppliers for transparent pricing, granular
+   per-institution usage and cost controls, data portability and no lock-in — driven by
+   usage-based pricing replacing per-seat licences. It is the closest thing to a published tender
+   in this KB. `compose/patterns.md` **P8** answers it with named repos.
 
 ## How findings in this KB are verified
 
@@ -63,12 +81,24 @@ guessing.
 **Star counts and `last push` are both recorded, because stars alone mislead:**
 `stanford-oval/storm` has 31,906 ★ and has not been pushed in 414 days.
 
+**Stars are a daily metric, not an hourly one** (measured in p890): across ~30 tracked repos the
+largest intra-day move was +21 stars on a 60,000-star repo.
+
+**One channel was unavailable in pass p890 and it matters.** Every non-GitHub host is blocked by
+this session's network policy (`403` on CONNECT, `getaddrinfo ENOTFOUND` via fetch), so the legal
+and statistical facts in `intel/market.md` and `intel/trends.md` are **search-snippet evidence
+with the source named and corroboration stated**, not byte-read primary text. GitHub facts remain
+byte-verified. The affected hosts are listed under *Declared gaps* in `intel/market.md`.
+
 ## What this KB does not cover
 
 - **No LATAM-origin education agent exists at scale** — only `warleysr/ankipa` (10 ★, Brazil).
   LATAM engagements mean localising APAC- or EMEA-origin assets.
 - **No Africa or Middle East coverage.** This KB's closed region vocabulary files both under
-  EMEA, and the EMEA evidence is in practice European.
+  EMEA, and the EMEA evidence is in practice European. Four passes old; it needs its own search
+  leg rather than waiting for an EMEA query to surface it.
+- **Canada is covered by one pilot and one adjacent statute.** "North America" in this KB has
+  been US-only; p890 started the Canadian leg but did not finish it.
 - **No open agent for student information systems, admissions, financial aid or proctoring.**
   The largest build-vs-adopt gap in the industry — and the most defensible studio IP, with the
   caveat that several of these are EU Annex III high-risk categories.
@@ -87,3 +117,17 @@ append-only and retain their full history below the newest dated section.
 
 One substantive error was corrected: **`openedx/openedx-platform` does not exist** (404 on every
 branch) and had propagated through four files. The real slug is `openedx/edx-platform`.
+
+### Pass p890 (same day, later)
+
+Research-led rather than structural. Four regional legs plus four global legs; no file was
+rewritten. Added: **T9** (procurement economics — the Jisc buyer-side specification) and **P8**
+(per-institution metering, cost attribution and exit). Filled three regional holes — **Vietnam**
+(education is statutory high-risk, with deadlines ahead of the EU's), **Australia** (TEQSA now
+regulatory-led) and the start of **Canada**. Closed two declared gaps with answers rather than
+silence: **Japan has no education-specific AI regime** (confirmed absence) and **star counts are
+measurable** (that gap line was stale). Two licence-class corrections: `os-taxonomy` is
+**ODbL-1.0**, a database licence with share-alike, and `langfuse` is a **split licence now owned
+by ClickHouse, Inc.** Resolved the previous pass's own open question: the "tutor as an agent
+skill" cohort tops out at **118 ★** and gained nothing, so the form stays in the demo kit and off
+the roadmap.

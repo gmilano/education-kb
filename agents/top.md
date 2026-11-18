@@ -16,7 +16,13 @@ Every repo below was verified on 2026-11-18 on two independent channels:
 
 Where the two disagree, both are shown. `github.com` HTML returns `403` through this
 environment's proxy and `api.github.com/repos/` is session-scoped, so these are the two
-routes that work. Stars are as at 2026-11-18.
+routes that work. Stars are as at 2026-11-18, **remeasured in pass p890** (DeepTutor
+60,165 → 60,186; OpenMAIC 43,856 → 43,859; BloomTutor 313 → 315; whiteboard-ai-tutor
+222 → 223; every other row unchanged).
+
+**Cadence note.** The largest intra-day move across ~30 tracked repos was +21 stars on a
+60,000-star repo. Star counts are a **daily** metric; remeasuring hourly buys nothing and the
+call budget belongs in regional research instead.
 
 ## Education-specific agents
 
@@ -25,12 +31,12 @@ Sorted by stars.
 
 | Agent | Repo | Licence | ★ | Last push | What it does | Origin |
 |---|---|---|---|---|---|---|
-| **DeepTutor** | https://github.com/HKUDS/DeepTutor | Apache-2.0 | 60,165 | 2026-11-15 | Agentic personalised tutoring grounded in the student's own material, with persistent learning history. Hit #1 on GitHub trending 28 Oct 2026; first released Dec 2025. Paper: arXiv 2604.26962. **The single largest open education agent in existence.** | APAC — HKU Data Intelligence Lab |
-| **OpenMAIC** | https://github.com/THU-MAIC/OpenMAIC | MIT | 43,856 | 2026-11-18 | Multi-agent AI classroom: agents generate slides, quizzes and project-based activities and grade quiz answers. `v1.4.2` (2026-11-09) added course-level undo for manual edits and agent runs. Relicensed to MIT at `v0.3.0`, Jun 2026. | APAC — Tsinghua University |
+| **DeepTutor** | https://github.com/HKUDS/DeepTutor | Apache-2.0 | 60,186 | 2026-11-15 | Agentic personalised tutoring grounded in the student's own material, with persistent learning history. Hit #1 on GitHub trending 28 Oct 2026; first released Dec 2025. Paper: arXiv 2604.26962. **The single largest open education agent in existence.** | APAC — HKU Data Intelligence Lab |
+| **OpenMAIC** | https://github.com/THU-MAIC/OpenMAIC | MIT | 43,859 | 2026-11-18 | Multi-agent AI classroom: agents generate slides, quizzes and project-based activities and grade quiz answers. `v1.4.2` (2026-11-09) added course-level undo for manual edits and agent runs. Relicensed to MIT at `v0.3.0`, Jun 2026. | APAC — Tsinghua University |
 | **canvas-mcp** (Sachdev) | https://github.com/vishalsachdev/canvas-mcp | MIT | 334 | 2026-11-18 | MCP server exposing Canvas LMS — courses, assignments, submissions — as agent tools. | North America — USA |
-| **BloomTutor** | https://github.com/Li-Evan/BloomTutor | MIT | 313 | 2026-11-17 | Tutor that structures interaction around Bloom's taxonomy levels. | APAC |
+| **BloomTutor** | https://github.com/Li-Evan/BloomTutor | MIT | 315 | 2026-11-17 | Tutor that structures interaction around Bloom's taxonomy levels. | APAC |
 | **OATutor** | https://github.com/CAHLR/OATutor | MIT | 282 | 2026-11-17 | Intelligent tutoring system with open problem banks and tutoring-effect instrumentation; built for A/B-testable learning research. | North America — UC Berkeley |
-| **molly554/whiteboard-ai-tutor** | https://github.com/molly554/whiteboard-ai-tutor | MIT | 222 | 2026-11-17 | Whiteboard tutor with animated lessons and interactive playback. Created after Aug 2026 — one of the fastest-growing new entrants. | Global |
+| **molly554/whiteboard-ai-tutor** | https://github.com/molly554/whiteboard-ai-tutor | MIT | 223 | 2026-11-17 | Whiteboard tutor with animated lessons and interactive playback. Created after Aug 2026 — one of the fastest-growing new entrants. | Global |
 | **OpenPronounce** | https://github.com/OpenPronounce/OpenPronounce | MIT | 221 | 2026-11-09 | Open pronunciation assessment — the language-learning niche where open source is genuinely competitive with commercial APIs. | Global |
 | **OpenTutor** | https://github.com/zijinz456/OpenTutor | MIT | 181 | 2026-11-17 | Open tutoring agent. | APAC |
 | **canvas-mcp** (Cheng) | https://github.com/boyuchengz/canvas-mcp | MIT | 118 | 2026-10-27 | **Read-only** MCP server connecting Claude/ChatGPT to Canvas LMS. A second, independent `canvas-mcp` — read-only by design, which is the safer default for a student-data pilot. | North America |
@@ -77,6 +83,13 @@ Not education products, but what an engagement will actually reach for.
 | **OpenHands** | https://github.com/All-Hands-AI/OpenHands | MIT | *(unavailable — see note)* | Coding agent; the practical choice for automating LMS plugin and migration work. Canonical slug is `All-Hands-AI/OpenHands`; `OpenHands/OpenHands` is **not** the repo. Org also ships https://github.com/OpenHands/software-agent-sdk (MIT, 1,406 ★). |
 | **LibreChat** | https://github.com/danny-avila/LibreChat | MIT | *(unavailable — see note)* | Multi-model chat front end with auth and per-user quotas; fastest route to a governed institutional chat tier. Canonical slug is `danny-avila/LibreChat`. |
 
+**Teaching assets, measured for the first time in p890.** Not agents and not education
+products, but the two largest permissively licensed *curricula* relevant to this KB, and both
+usable as client-enablement or staff-upskilling courseware that can be rebranded and extended:
+https://github.com/microsoft/ai-agents-for-beginners (MIT, **80,197 ★**, pushed 2026-11-17 —
+larger than any education agent that exists) and https://github.com/huggingface/agents-course
+(Apache-2.0, **35,115 ★**, pushed 2026-11-17).
+
 **Note on three unavailable star counts.** `All-Hands-AI/OpenHands`, `danny-avila/LibreChat`
 and `openedx/edx-platform` are consistently absent from `search/repositories` results in this
 session across repeated query shapes, while their `LICENSE` files return `200` on
@@ -107,7 +120,15 @@ Recording gaps because an unrecorded gap looks exactly like coverage.
 - **Nothing from Africa or the Middle East**, which this KB's closed region vocabulary files
   under EMEA — so "EMEA" coverage here is in practice European coverage.
 - **No confirmed November 2026 *launch*.** The newest dated release artefact is OpenMAIC
-  `v1.4.2` (2026-11-09).
+  `v1.4.2` (2026-11-09). Re-checked in pass p890 across four global and four regional search
+  legs: unchanged.
+- **The "tutor as an agent skill" cohort has no traction.** The previous pass set a watch
+  threshold of 1,000 ★. Remeasured in p890: the cohort maximum is **118 ★**
+  (`boyuchengz/canvas-mcp`) and **not one member gained a single star** in the interval. The
+  form shortens time-to-pilot and belongs in the demo kit; it does not belong on a client
+  roadmap yet.
+- **No locatable repository for `AcademiClaw`** (arXiv 2605.02661, students setting challenges
+  for AI agents). Paper only. Recorded so a later pass does not re-chase it.
 
 ## Corrections made this pass
 

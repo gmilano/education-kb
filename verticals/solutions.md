@@ -99,7 +99,23 @@ deliverable at all.
 | **JupyterHub** | https://github.com/jupyterhub/jupyterhub | BSD-3-Clause | Multi-user computational classrooms. |
 | **Appsmith** | https://github.com/appsmithorg/appsmith | Apache-2.0 | Builds the teacher review queue that makes human-in-the-loop real rather than aspirational. |
 
-**41 platforms, all URL- and licence-verified.**
+## Curriculum data and learning-content assets
+
+**Added in pass p890.** Not platforms, but deployable/extensible content assets — and the
+category where this KB's MIT/Apache/BSD screen needs a different question asked, because a
+*data* licence is not a *software* licence.
+
+| Asset | Repo | Licence | Note |
+|---|---|---|---|
+| **os-taxonomy** | https://github.com/withmarbleapp/os-taxonomy | **ODbL-1.0** | Open curriculum graph for children's learning, 7,724 ★, pushed 2026-11-17. **Licence warning:** the Open Database Licence carries a **share-alike obligation on derived databases**. Extend the taxonomy and the extension may have to be published under ODbL. Excellent as a reference or an input; **not** a base for a proprietary curriculum data asset without counsel. |
+| **jiangshan-map** | https://github.com/DeanChensj/jiangshan-map | GPL-3.0 | 江山时序 — interactive historical atlas of China, 403 BCE to present, 18 dynasties, with quiz modes. 7,708 ★, pushed 2026-11-18. The largest new education *content application* found. APAC-origin. GPL-3.0 blocks a closed derivative; deployable as-is. |
+
+**Pattern worth noting.** Content assets in education are increasingly published under data or
+copyleft licences while the *tooling* stays permissive — the inverse of the platform/tooling
+split in this KB's headline fact. Licence triage therefore has to be run per artefact class,
+not once per engagement.
+
+**43 platforms and content assets, all URL- and licence-verified.**
 
 ## Honest gaps
 

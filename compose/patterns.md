@@ -195,10 +195,22 @@ the pedagogical localisation is itself the billable differentiation.
 
 ```
 langchain-ai/langgraph (MIT)  — one graph, per-jurisdiction policy nodes:
-    KR  → AI Basic Act (in force 22 Jan 2026): risk classification + oversight duties
+    VN  → Law on AI 134/2025/QH15 + Decree 142 + Decision 33/2026/QD-TTg (eff. 15 Aug 2026):
+          EDUCATION IS STATUTORY HIGH-RISK (3 of 46 listed systems — behavioural monitoring,
+          learner ranking, automated assessment). Existing systems: comply by 1 Sep 2027.
+          New systems: 1 Mar 2027. Notification to MOST; registration can be refused.
+          *** Build this node FIRST: it is the earliest statutory deadline in the region. ***
+    KR  → AI Basic Act (in force 22 Jan 2026): risk classification + oversight duties.
+          2026 is a guidance-first grace period; decrees still being finalised.
     CN  → service-type rules + AI-content labelling; Cybersecurity Law AI clause (1 Jan 2026)
     IN  → IT Rules: prominent labels + provenance markers on generated content (20 Feb 2026)
-    JP  → promotion-first + voluntary guidelines → lowest-friction pilot geography
+    AU  → no AI statute, but TEQSA moved to a REGULATORY-LED posture in 2026 and inspects the
+          genAI action plan the provider already filed (all 203 providers, 2024, 100% response).
+          The client's own action plan is the requirements document — read it before scoping.
+          Binding layer: Higher Education Standards Framework (Threshold Standards).
+          Schools: Australian Framework for Generative AI in Schools + state additions.
+    JP  → promotion-first + voluntary guidelines, NO education-specific statute (confirmed
+          absence, p890) → lowest-friction pilot geography
 
 Provenance emitted at generation time (NOT retrofitted):
     every generated item carries model, version, prompt hash, timestamp, generator identity
@@ -225,7 +237,15 @@ from 2025 and reduced it to optional status within a year after teacher and pare
 Budget a named teacher- and parent-consent workstream. **Cite Korea when a client wants to skip
 it** — the failure was social, not technical, and it is the cheapest lesson available.
 
-**Estimate:** 12–14 weeks for two jurisdictions; ~3 weeks per additional jurisdiction.
+**Sequencing added in p890.** Vietnam's clock (1 March 2027 for new systems) expires **before**
+the EU's 2 December 2027, so an Annex-III-grade oversight architecture built for EMEA should be
+*reused* here rather than rebuilt — and it is needed sooner. Australia inverts the usual sales
+motion: the provider has already written and filed a genAI plan and is now being held to it, so
+the engagement is implementation of an existing commitment, not persuasion.
+
+**Estimate:** 12–14 weeks for two jurisdictions; ~3 weeks per additional jurisdiction. Add
+~2 weeks for the Vietnam node (the high-risk list is closed and specific, so classification is
+quick, but notification and registration are procedural).
 
 ---
 
@@ -258,3 +278,87 @@ demanding one, and a client who can answer the question has something their comp
 buy.
 
 **Estimate:** 3–4 weeks, and it makes every other pattern defensible.
+
+---
+
+## P8 — Per-institution AI metering, cost attribution and exit (the Jisc specification)
+
+**For:** any institutional engagement in the UK, and increasingly anywhere a procurement office
+reviews an AI contract. **Region:** EMEA primarily; the architecture is Global.
+**New in pass p890.**
+
+**Why this pattern exists.** Jisc, with Universities UK, GuildHE and the Association of
+Colleges, published what is effectively a buyer-side specification: transparent pricing,
+demonstrable value, meaningful institutional choice, protection of existing functionality,
+**granular usage and cost controls**, interoperability, **data portability** and safeguards
+against **vendor lock-in**. The trigger is usage-based pricing replacing per-seat licences, and
+institutions paying several times over for overlapping AI embedded in different platforms. A
+companion Jisc/EAUC report found vendors seldom publish institution-level usage at all. Every
+other pattern in this file answers a regulator; **this one answers the person who signs the
+cheque**, and they have written the requirements down.
+
+```
+Request path — attribution is established before inference, not inferred afterwards:
+
+  apereo/cas (Apache-2.0)            — SSO; the identity that carries
+                                       institution / faculty / course / role claims
+    └── Cvmcosta/ltijs (Apache-2.0)  — LTI 1.3 launch; course + role context from the LMS,
+                                       so the tool detaches from any one platform
+        └── BerriAI/litellm (MIT)    — gateway: ONE virtual key per cost centre
+                                       (institution → faculty → course), hard budget caps,
+                                       provider-agnostic so the model layer stays swappable
+            ├── ollama/ollama (MIT)  — local inference: the zero-marginal-cost tier
+            ├── vllm-project/vllm (Apache-2.0) — self-hosted at throughput
+            └── hosted API           — the exception, and now a visibly priced one
+
+Metering and export — OpenTelemetry, because OTel IS the portability answer:
+
+  traceloop/openllmetry (Apache-2.0, 7,541★)  — PREFERRED. OTel-native LLM tracing: the
+                                                usage data lands in the observability stack
+                                                the institution already runs. Nothing to
+                                                migrate on exit because nothing was captive.
+  openlit/openlit (Apache-2.0, 3,088★)        — OTel-native alternative with cost tracking
+  Helicone/helicone (Apache-2.0, 6,287★)      — gateway-level logging and cost attribution
+  (langfuse/langfuse, 37,577★ — LARGEST BUT SPLIT LICENCE: "MIT Expat" core, separate
+   enterprise licence on ee/, web/src/ee/, worker/src/ee/, packages/shared/src/server/ee/;
+   copyright now ClickHouse, Inc. Diligence before it enters a client deliverable.)
+
+Evidence that the spend bought something:
+
+  yetanalytics/lrsql (Apache-2.0)             — xAPI: usage joined to learning interactions,
+                                                which is how "demonstrable value" stops being
+                                                a slide and becomes a query
+  qdrant/qdrant (Apache-2.0)                  — embeddings in a store the CLIENT owns
+```
+
+**Wiring.**
+
+1. **Mint one `litellm` virtual key per cost centre, not per application.** Attribution has to
+   exist at request time; a report that infers which faculty spent what is the thing the Jisc
+   statement is complaining about.
+2. **Carry institution/faculty/course/role from CAS and the LTI 1.3 launch into the gateway
+   key** — the LMS already knows the context, so do not rebuild a hierarchy beside it.
+3. **Emit OTel spans, not vendor events.** This is the single decision that satisfies data
+   portability: the institution can point the exporter at its own collector on day one, and
+   nothing has to be extracted on exit.
+4. **Set hard caps, not alerts.** Usage-based pricing without a ceiling is the exposure; a
+   budget cap that returns a graceful degradation (local `ollama` model instead of a hosted
+   call) keeps the service up while the cost stays bounded.
+5. **Write the exit into the build:** documented export of usage data, embeddings, prompts and
+   content, plus an LTI 1.3 integration that the client can repoint at another tool. Deliver it
+   as a runbook, because an untested exit is not an exit.
+6. **Price per learner-outcome, not per token.** The buyer has stated publicly they will not
+   sign per-token exposure.
+
+**What makes this defensible.** None of the four metering repos is built for education: they
+know about users and projects, not institutions, faculties, courses and cohorts. **Mapping an
+OTel LLM-metering layer onto an academic hierarchy, with LTI-derived context and per-cost-centre
+budget enforcement, is genuine studio IP** — it answers a published, signed, sector-wide
+requirement, and no vendor currently ships it.
+
+**Caveat.** The Jisc statement is a request to suppliers, not a regulation. It carries no
+penalty. Its force is commercial: it is signed by the bodies representing most of UK higher and
+further education, and it tells you precisely what a tender will ask.
+
+**Estimate:** 5–7 weeks on top of an existing AI tier; ~9 weeks standalone. The exit runbook
+and the per-cost-centre hierarchy are the long poles, not the tracing.

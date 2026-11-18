@@ -4,6 +4,95 @@ region: Global
 updated: 2026-11-18
 ---
 
+## `2026-11-18` (p890) — the skill-cohort prediction resolves "not yet"; two licence-class corrections
+
+**Channel:** batched `repo:` qualifiers against `gh api search/repositories` (stars, SPDX,
+`pushed_at`, `archived`) plus `raw.githubusercontent.com` byte-reads of licence grants. Four
+regional WebSearch legs (North America / EMEA / APAC / LATAM) plus four global legs.
+**Fetch note for this pass:** non-GitHub hosts are blocked at the network policy in this
+session (`403` on CONNECT; `getaddrinfo ENOTFOUND` via WebFetch), so primary legal and
+statistical texts could not be byte-read. Facts sourced that way are labelled with their
+channel in `intel/market.md` rather than presented as primary-verified.
+
+### The previous pass's open question, answered: the agent-skill tutor is still experimental
+
+The 2026-11-18 (earlier) entry named a watch condition — *"watch whether any of these clears
+1,000 ★; that would mark the form as established rather than experimental."* Re-measured today:
+
+| Repo | ★ then | ★ now | Licence |
+|---|---|---|---|
+| `boyuchengz/canvas-mcp` | 118 | **118** | MIT |
+| `BaronCyrus/dsh-aha-tutor` | 46 | **46** | MIT |
+| `smashburger-dev/socratic-workshop` | 24 | **24** | MIT |
+| `bayshores/godspeed` | 22 | **22** | AGPL-3.0 |
+| `Aisland-SJL/Aisland-teach` | 18 | **18** | MIT |
+| `xx-hub/dsh-craft-your-textbook` | 15 | **15** | MIT |
+
+Cohort maximum **118 ★** — an order of magnitude below the threshold, and not one member moved
+a single star in the interval. **Verdict: the form is real but has no traction yet.** Keep it in
+the demo toolkit, do not put it on a roadmap a client depends on. Re-test at 1,000 ★.
+
+### The top two have plateaued within the day
+
+| Repo | ★ earlier today | ★ now | Δ |
+|---|---|---|---|
+| `HKUDS/DeepTutor` | 60,165 | **60,186** | +21 |
+| `THU-MAIC/OpenMAIC` | 43,856 | **43,859** | +3 |
+| `Crosstalk-Solutions/project-nomad` | 43,902 | **43,905** | +3 |
+| `patchy631/ai-engineering-hub` | 41,974 | **41,975** | +1 |
+
+For context, `DeepTutor` went from ~48k (late Oct) to ~52.8k (1 Nov) to 60.2k (now) — so the
+growth is real at month scale and flat at hour scale. **Hourly re-measurement of star counts
+adds no information.** Daily is the right cadence; this is recorded so later passes stop
+spending the call.
+
+### Correction 1 — `withmarbleapp/os-taxonomy` is under a *database* licence, not a software licence
+
+Tracked in this KB at 7,724 ★ (verified today, up from the ~5,900 a trend blog reported in
+October). Its licence is **ODbL-1.0** — the Open Database Licence. That is not a software
+licence and it is not in the MIT/Apache/BSD set this KB screens for: it carries a **share-alike
+obligation on derived databases**. A curriculum graph is exactly the kind of asset a studio
+would extend and ship, so this matters: extend the taxonomy and the extended taxonomy may have
+to be published under ODbL. Usable as a reference or an input; **not** a safe base for a
+proprietary curriculum data asset without counsel.
+
+### Correction 2 — `langfuse/langfuse` is now ClickHouse-owned, and its licence is split
+
+SPDX reports `NOASSERTION` (37,577 ★, pushed today), so the grant was read as text. It is
+**"MIT Expat" for the core**, with everything under `ee/`, `web/src/ee/`, `worker/src/ee/` and
+`packages/shared/src/server/ee/` under a **separate enterprise licence** — and the copyright
+line now reads **"Copyright (c) 2023-2026 ClickHouse, Inc."** Two consequences: the permissive
+grant covers less than the repo, and the project's ownership has changed hands. Where the
+requirement is per-institution AI usage metering (see the new EMEA procurement finding in
+`intel/trends.md` T9), prefer fully Apache-2.0 options:
+
+| Repo | ★ | Licence | Last push |
+|---|---|---|---|
+| https://github.com/traceloop/openllmetry | 7,541 | Apache-2.0 | 2026-11-18 |
+| https://github.com/Helicone/helicone | 6,287 | Apache-2.0 | 2026-11-17 |
+| https://github.com/openlit/openlit | 3,088 | Apache-2.0 | 2026-11-17 |
+
+### New entrant not previously tracked
+
+| Repo | ★ | Licence | Last push | Note |
+|---|---|---|---|---|
+| https://github.com/DeanChensj/jiangshan-map | 7,708 | **GPL-3.0** | 2026-11-18 | 江山时序 — interactive historical atlas of China, 403 BCE to present, 18 dynasties, with quiz modes. Not an agent: a **learning-content application**, and the largest such new entrant found. APAC-origin. GPL-3.0 blocks a closed derivative. Listed for completeness and as evidence that the "domain-expertise app" wave reaches education content, not only tutoring. |
+
+### Searched and not found this pass
+
+- **No new education-specific agent above 1,000 ★ created since the last pass.** Global and
+  per-region searches returned the same cohort already tracked here (`AI-Teaching-Agent`,
+  `AI_Tutor_Release`/EduAgent, `AITutor-EvalKit`, `tutor-agent`, `ai-tutor-agent` are all
+  already in this KB).
+- **`AcademiClaw`** (arXiv 2605.02661 — students setting challenges for AI agents) surfaced as
+  a paper with **no locatable repository**. Recorded so a later pass does not re-chase it.
+- **No LATAM-origin education agent beyond `warleysr/ankipa`.** Fifth consecutive pass with
+  this result. The LATAM regional leg returns institutions, surveys and now a regional
+  *model* (Latam-GPT — see `intel/market.md`), but no agent repositories. Treat as a settled
+  structural fact, not a search failure.
+
+---
+
 ## `2026-11-18` — stars are measurable after all; and a new delivery form for tutoring
 
 **Method correction first, because it invalidates two earlier conclusions.** Earlier passes of

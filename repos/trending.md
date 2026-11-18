@@ -4,6 +4,79 @@ region: Global
 updated: 2026-11-18
 ---
 
+## `2026-11-18` (p890) — remeasure confirms stability; the observability tier gets a licence flag
+
+**Channel:** batched `repo:` metric harvest via `gh api search/repositories`, plus
+`raw.githubusercontent.com` licence byte-reads. Non-GitHub hosts are blocked by this session's
+network policy, so no trend-blog figures were used — every number below was measured.
+
+### Remeasured, education-tracked set (same day, later pass)
+
+| Repo | ★ | Licence | Last push | Δ since earlier pass |
+|---|---|---|---|---|
+| `HKUDS/DeepTutor` | 60,186 | Apache-2.0 | 2026-11-15 | +21 |
+| `THU-MAIC/OpenMAIC` | 43,859 | MIT | 2026-11-18 | +3 |
+| `Crosstalk-Solutions/project-nomad` | 43,905 | Apache-2.0 | 2026-11-18 | +3 |
+| `patchy631/ai-engineering-hub` | 41,975 | MIT | 2026-11-01 | +1 |
+| `ECNU/EduWork` | 378 | MulanPSL-2.0 | 2026-11-18 | 0 |
+| `vishalsachdev/canvas-mcp` | 334 | MIT | 2026-11-18 | 0 |
+| `Li-Evan/BloomTutor` | 315 | MIT | 2026-11-17 | +2 |
+| `CAHLR/OATutor` | 282 | MIT | 2026-11-17 | 0 |
+| `molly554/whiteboard-ai-tutor` | 223 | MIT | 2026-11-17 | +1 |
+| `OpenPronounce/OpenPronounce` | 221 | MIT | 2026-11-09 | 0 |
+| `ls1intum/edutelligence` | 17 | MIT | 2026-11-17 | 0 |
+
+**Finding about the method, not the repos:** across ~30 tracked repos, the largest intra-day
+move was +21 stars on a 60,000-star repo. Star counts are a **daily** metric in this KB from
+now on. The call budget is better spent on regional regulatory research, where facts actually
+changed this pass (`intel/market.md`).
+
+### Two education-adjacent repos measured for the first time
+
+| Repo | ★ | Licence | Last push | Why recorded |
+|---|---|---|---|---|
+| https://github.com/microsoft/ai-agents-for-beginners | 80,197 | MIT | 2026-11-17 | 18-lesson agent curriculum. **The largest MIT-licensed teaching asset relevant to this KB** — 80k ★, bigger than any education agent. Not a product: use it as staff-upskilling and client-enablement courseware, which is a billable workstream in its own right. |
+| https://github.com/huggingface/agents-course | 35,115 | Apache-2.0 | 2026-11-17 | Hugging Face agents course. Same use: enablement content with a permissive grant, so it can be rebranded and extended for a client academy. |
+
+Both were already noted in this KB's prose; neither had a measured star count or a verified
+licence until now.
+
+### Observability / usage-metering tier — new, and one licence flag
+
+Prompted by the EMEA procurement finding this pass (Jisc + Universities UK + GuildHE +
+Association of Colleges asking suppliers for **granular per-institution usage and cost data,
+data portability and no lock-in** — see `intel/trends.md` T9). That requirement needs a metering
+layer, which this KB did not previously name:
+
+| Repo | ★ | Licence (verified) | Last push | Note |
+|---|---|---|---|---|
+| https://github.com/traceloop/openllmetry | 7,541 | Apache-2.0 | 2026-11-18 | OpenTelemetry-native LLM tracing. **Preferred pick:** OTel means the usage data lands in whatever observability stack the institution already runs, which is itself the portability answer. |
+| https://github.com/Helicone/helicone | 6,287 | Apache-2.0 | 2026-11-17 | Gateway-level logging and cost attribution. |
+| https://github.com/openlit/openlit | 3,088 | Apache-2.0 | 2026-11-17 | OTel-native LLM observability with cost tracking. |
+| https://github.com/langfuse/langfuse | 37,577 | **Split: "MIT Expat" core + separate enterprise licence on `ee/` paths** | 2026-11-18 | Much the largest and SPDX reports `NOASSERTION`, so the grant was read as text. Copyright line now reads **"Copyright (c) 2023-2026 ClickHouse, Inc."** — ownership has changed. Core is usable; anything under `ee/`, `web/src/ee/`, `worker/src/ee/` or `packages/shared/src/server/ee/` is not. Diligence required before it goes in a client deliverable. |
+
+Pair any of these with `BerriAI/litellm` (MIT, already in `repos/foundations.md`), which supplies
+the per-key budget caps; the metering layer supplies the per-institution attribution and export.
+
+### Licence-class correction carried from `agents/trending.md`
+
+`withmarbleapp/os-taxonomy` (7,724 ★, up from the ~5,900 an October trend blog reported) is
+**ODbL-1.0** — an open *database* licence with share-alike on derived databases, not a software
+licence. It is outside this KB's MIT/Apache/BSD screen and must not be treated as a permissive
+base for a proprietary curriculum data asset.
+
+### Not found this pass
+
+- **No new foundational repo** (serving, retrieval, interop, LRS, assessment) displaced anything
+  in `repos/foundations.md`. The foundations set is stable.
+- **Still no Ed-Fi-grade open SIS core.** Unchanged across every pass; see
+  `verticals/solutions.md` gaps.
+- **No open-source per-institution AI cost-allocation tool built for education.** The four
+  rows above are general-purpose; adapting one to institution/faculty/course hierarchies is
+  genuine studio build work, and the Jisc statement is the demand signal for it.
+
+---
+
 ## `2026-11-18` — measured trending set, and the maintenance risk hiding in the foundations
 
 **Channel:** `gh api search/repositories` with `sort=stars`, five discovery legs over

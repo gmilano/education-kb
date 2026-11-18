@@ -111,6 +111,25 @@ education RAG projects actually fail.
 | https://github.com/mem0ai/mem0 | Apache-2.0 | Persistent memory layer — the mechanism behind "the tutor remembers what this learner struggled with". |
 | https://github.com/temporalio/temporal | MIT | Durable workflow execution. Grading runs and term-long tutoring loops need to survive restarts. |
 
+## Usage metering, cost attribution and portability
+
+**Added in pass p890**, prompted by the Jisc / Universities UK / GuildHE / Association of
+Colleges joint statement asking AI suppliers for granular per-institution usage and cost data,
+data portability and no vendor lock-in (see `intel/trends.md` T9 and `compose/patterns.md` P8).
+`litellm` above supplies per-key budget caps; this tier supplies attribution and export.
+
+| Repo | Licence | Note |
+|---|---|---|
+| https://github.com/traceloop/openllmetry | Apache-2.0 | OpenTelemetry-native LLM tracing, 7,541 ★, pushed 2026-11-18. **The default pick:** OTel means usage data lands in whatever observability stack the institution already runs, which is itself the portability answer — nothing is captive, so nothing has to be migrated on exit. |
+| https://github.com/Helicone/helicone | Apache-2.0 | Gateway-level logging and cost attribution, 6,287 ★, pushed 2026-11-17. |
+| https://github.com/openlit/openlit | Apache-2.0 | OTel-native LLM observability with cost tracking, 3,088 ★, pushed 2026-11-17. |
+| https://github.com/langfuse/langfuse | **Split — see note** | Much the largest at 37,577 ★ (pushed 2026-11-18), and SPDX reports `NOASSERTION`, so the grant was read as text: **"MIT Expat" for the core, with a separate enterprise licence covering `ee/`, `web/src/ee/`, `worker/src/ee/` and `packages/shared/src/server/ee/`**. The copyright line now reads **"Copyright (c) 2023-2026 ClickHouse, Inc."** — ownership has changed hands. Usable, but it needs licence diligence before it enters a client deliverable, and the permissive grant covers less than the repository. |
+
+**None of these is education-aware.** They model users and projects, not institutions,
+faculties, courses and cohorts. Mapping them onto an academic hierarchy with LTI 1.3-derived
+context is build work — and, per P8, the most defensible small piece of studio IP this pass
+identified.
+
 ## Evaluation, labelling and quality
 
 | Repo | Licence | Role |
