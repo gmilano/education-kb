@@ -49,6 +49,21 @@ client wants a closed derivative.
 | **Odoo** | https://github.com/odoo/odoo | LGPL-3.0 | The general ERP underneath OpenEduCat; the actual "Odoo for education" answer is Odoo plus OpenEduCat. |
 | **Frappe Education** | https://github.com/frappe/education | GPL-3.0 (`license.txt`: "License: GNU GPL V3") | Education module on the ERPNext/Frappe stack. |
 
+**Rejected this pass, recorded so it is not re-proposed (p892).** A fresh search for
+open-source school ERP returned **Fedena** in a licence comparison table under **Apache-2.0**,
+alongside OpenEduCat and openSIS. It verifies as neither usable nor maintained:
+https://github.com/projectfedena/fedena has **547 ★**, SPDX **`NONE`**, **no `LICENSE`,
+`LICENSE.md`, `LICENSE.txt` or `COPYING` on `main` or `master` (404 on all eight)**, and a last
+push of **2020-05-18** — roughly 2,375 days idle. No licence file means **all rights reserved**.
+The comparison table's Apache-2.0 claim has no basis in the repository. See `repos/trending.md`
+for the method note: this is the second aggregator-sourced licence error caught in two passes.
+
+**Negative result worth recording (p892).** An independent search leg for open-source SIS and
+campus ERP surfaced **no platform this KB was missing**, and every row above re-verified
+unchanged. The category is small, static, and copyleft or licence-unclear end to end. That
+*strengthens* the opportunity note at the top of this section rather than weakening it: the
+platform layer beneath the missing registrarial AI agent is not moving either.
+
 ## Repositories, libraries and scholarly publishing
 
 | Platform | Repo | Licence | Notes |

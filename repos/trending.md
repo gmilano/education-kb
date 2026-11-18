@@ -4,6 +4,71 @@ region: Global
 updated: 2026-11-18
 ---
 
+## `2026-11-18` (p892) — a 547 ★ school ERP that third-party tables call Apache-2.0 has no licence at all
+
+**Channel:** `gh api search/repositories` batched `repo:` metrics plus `raw.githubusercontent.com`
+licence byte-reads. Non-GitHub hosts remain blocked by this session's network policy.
+
+### `projectfedena/fedena` — listed as Apache-2.0 by comparison tables, licence `NONE`, dead since 2020
+
+A search leg for open-source school ERP and student information systems returned **Fedena** in
+a licence comparison table, under **Apache-2.0**, alongside OpenEduCat, openSIS and SchoolTool.
+Verified:
+
+| Check | Result |
+|---|---|
+| `gh api search/repositories` | **547 ★**, licence **`NONE`**, `pushed_at` **2020-05-18** |
+| `LICENSE` / `LICENSE.md` / `LICENSE.txt` / `COPYING` on `main` and `master` | **404 on all eight** |
+| Days idle | **~2,375** |
+
+So the comparison table is wrong twice over: there is **no Apache-2.0 grant** — no licence file
+of any kind, which means **all rights reserved** — and the project has not been touched in over
+six years. It is not a candidate for `verticals/solutions.md` and a note has been added there
+so it is not re-proposed.
+
+**This is the second instance of the same trap in two passes.** p891 found
+`TapXWorld/ChinaTextbook` at 84,728 ★ with no licence; p892 finds Fedena at 547 ★ with a licence
+that exists only in third-party prose. **The rule p891 proposed now has a second confirmation:
+byte-read the licence before recording anything else about a repo.** Both failures came from
+trusting an aggregator's licence column — in one case a trending list, in the other a vendor
+comparison table.
+
+### `tutornew/OpenTutor` — unlicensed namesake of a repo this KB already carries
+
+`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING` all 404 on `main` and `master`; SPDX `NONE`;
+8 ★; last push 2026-02-27. Not to be confused with **`zijinz456/OpenTutor`** (MIT, 181 ★, pushed
+2026-11-17), which is the repo in `agents/top.md`. Recorded in `agents/trending.md` too, because
+the collision is the kind of thing that merges silently across passes.
+
+### SIS and school-ERP set re-verified (no changes, which is itself the finding)
+
+The search leg surfaced the same platforms this KB already carries, and every one verified as
+recorded:
+
+| Repo | ★ | SPDX | Last push | Standing |
+|---|---|---|---|---|
+| `openeducat/openeducat_erp` | 913 | NOASSERTION (LGPL-3.0 byte-read p891) | 2026-11-16 | unchanged |
+| `frappe/education` | 712 | NOASSERTION | 2026-10-30 | unchanged |
+| `francoisjacquet/rosariosis` | 654 | GPL-2.0 | 2026-11-16 | unchanged |
+| `GibbonEdu/core` | 641 | GPL-3.0 | 2026-11-18 | unchanged |
+| `OS4ED/openSIS-Classic` | 351 | **NONE** | 2026-10-26 | licence-unclear, as already flagged |
+
+**The negative result is worth stating plainly:** a fresh, independent search for open-source
+SIS and campus ERP produced **no platform this KB was missing**. The category is small, it is
+copyleft or licence-unclear end to end, and it has not moved. That strengthens — it does not
+weaken — the standing gap recorded in `agents/top.md`: **there is still no open AI agent for
+registrarial workflow**, and now there is evidence the *platform* layer beneath it is static
+too. The build-vs-adopt gap is real and it is not closing on its own.
+
+### Licence posture unchanged elsewhere
+
+No new foundation repo was promoted this pass. `BerriAI/litellm` remains **MIT except
+`litellm/enterprise/`** (byte-verified p891) and that carve-out still governs every compose
+pattern that routes through it.
+
+---
+
+
 ## `2026-11-18` (p891) — the trending-list trap: star count is not usability
 
 **Channel:** `gh api search/repositories` batched `repo:` metrics plus

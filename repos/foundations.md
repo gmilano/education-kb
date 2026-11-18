@@ -165,6 +165,10 @@ identified.
   inherits the platform's licence. `OS4ED/openSIS-Classic` has no licence file **and** SPDX
   reports `NONE` (351 ★); third parties list GPL-2.0 but nothing in the repo says so. Treat
   openSIS as licence-unclear and get written clarification before shipping it to a client.
+- **`projectfedena/fedena` is not a candidate, despite third-party tables listing it as
+  Apache-2.0 (p892).** SPDX `NONE`, no licence file under any of four names on either branch,
+  last push 2020-05-18. All rights reserved and abandoned. Recorded here and in
+  `verticals/solutions.md` so it is not re-proposed.
 - **No open-source student information system qualifies as a *foundation*.** The SIS options
   (RosarioSIS, openSIS, Gibbon, i-educar, GegoK12) are in `verticals/solutions.md` — they are
   deployable products, not libraries to build on. There is no Ed-Fi-grade open SIS core.

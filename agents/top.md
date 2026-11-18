@@ -24,6 +24,12 @@ routes that work. Stars are as at 2026-11-18, **remeasured in pass p890** (DeepT
 60,000-star repo. Star counts are a **daily** metric; remeasuring hourly buys nothing and the
 call budget belongs in regional research instead.
 
+**p892 spot-checked again** (`DeepTutor` 60,210 → **60,235**, `OpenMAIC` 43,859 → **43,868**,
+every row below 40k ★ unchanged) — a third consecutive confirmation of the daily cadence. p892
+spent its budget on the two gaps `intel/market.md` named highest-value (**India**, **Saudi
+Arabia**) plus an agent-discovery leg, which found the two rows marked *Added p892*. **Full
+sweep due 2026-11-19.**
+
 **p891 acted on that note.** This pass ran **no full star sweep** — it spent the budget on four
 gap-directed regional legs instead (Article 4 / Africa / Middle East / Canada), all four of
 which closed a declared gap in `intel/market.md` or `intel/trends.md`. One spot check:
@@ -48,6 +54,8 @@ Sorted by stars.
 | **OpenTutor** | https://github.com/zijinz456/OpenTutor | MIT | 181 | 2026-11-17 | Open tutoring agent. | APAC |
 | **canvas-mcp** (Cheng) | https://github.com/boyuchengz/canvas-mcp | MIT | 118 | 2026-10-27 | **Read-only** MCP server connecting Claude/ChatGPT to Canvas LMS. A second, independent `canvas-mcp` — read-only by design, which is the safer default for a student-data pilot. | North America |
 | **Open TutorAI (CE)** | https://github.com/Open-TutorAi/open-tutor-ai-CE | BSD-3-Clause | 118 | 2026-06-26 | Community edition of a self-hostable tutor platform. Licence text carries an "All rights reserved" header over a BSD-style grant; SPDX confirms BSD-3-Clause. | EMEA |
+| **tutor-mcp** | https://github.com/ArnaudGuiovanna/tutor-mcp | MIT | 104 | 2026-11-17 | MCP server that turns any LLM into an Intelligent Tutoring System — the ITS loop (learner model, next-item selection, graduated hints) exposed as **tools** rather than as an application. **Added p892.** The most actively developed member of the "tutor as an agent skill" cohort, and it was missing from the cohort p890/p891 measured — see `agents/trending.md`. | Global |
+| **EduAgent** (`AI_Tutor_Release`) | https://github.com/Zenglian990/AI_Tutor_Release | MIT | 93 | 2026-11-10 | RAG tutor built specifically for **K-9** (grades 1–9), self-described as the first open-source RAG tutor targeted at that band in China. **Added p892.** Notable because it is **age-banded by design** — a product requirement under the UAE's under-13 prohibition and several US state statutes — and because it is retrieval-over-curriculum, not training-on-student-data. | APAC — China |
 | **TeachMeCoding** | https://github.com/liangxiao777/TeachMeCoding | Apache-2.0 | 73 | 2026-10-30 | Local-first AI coding tutor: personalised roadmaps, lessons, hands-on practice with execution. | APAC |
 | **aula** | https://github.com/luumlabs/aula | AGPL-3.0 | 66 | 2026-11-17 | Turns notes, slides and past exams into lessons. **AGPL — not usable in a closed derivative.** | Global |
 | **Claw-ED** | https://github.com/SirhanMacx/Claw-ED | MIT | 65 | 2026-09-19 | Local-first AI teaching assistant: editable lesson drafts, student materials and slides, generated from the teacher's own curriculum with a model of their choice. Self-described teacher-reviewed beta. **Teacher-facing**, which this table is otherwise thin on, and **local-first + bring-your-own-model**, which is the posture EMEA sovereignty procurement now asks for. **Caveat: trending on stars through Oct 2026 while its last commit is 2026-09-19** — read it as a design reference, not a dependency. Licence byte-read from `LICENSE@main` (`Copyright (c) 2026 EDUagent Contributors`). | Global |
@@ -62,7 +70,8 @@ Sorted by stars.
 | **EDU AI Agent Suite** | https://github.com/virtualryder/edu-ai-agents | MIT (SPDX: NOASSERTION; licence text reads MIT) | 4 | 2026-10-10 | Eight reference agent workflows with deny-by-default authorisation, student-PII masking, human-in-the-loop enforcement and tamper-evident audit, aligned to FERPA, COPPA, IDEA/504 and ADA Title II. **Grading uses a deterministic rubric service, not an LLM** — which is what makes it legally usable in several US states. Targets Amazon Bedrock. Tiny and new; valuable as an architecture, not as a dependency. | North America |
 | **ai-tutor-agent** | https://github.com/vulinh1704/ai-tutor-agent | MIT | 0 | 2026-11-16 | FastAPI + LangGraph tutoring starter: Socratic hints, rubric grading, session memory, offline demo mode; checks every draft for answer leaks. Zero stars — a skeleton to read, not a dependency. | APAC — Vietnam |
 
-**22 education-specific agents, every URL and licence verified.**
+**24 education-specific agents, every URL and licence verified.** (22 at p891; `tutor-mcp` and
+`EduAgent` added in p892, both licence byte-read.)
 
 **How to read the star column.** The distribution is extremely bimodal: two repos above 40k,
 then a cliff to the low hundreds. Stars here measure consumer discovery, not institutional
@@ -107,11 +116,22 @@ not retrievable here. Recorded as unavailable rather than filled from a blog.
 ## Emerging pattern worth naming: the tutor as an agent *skill*
 
 A distinct cohort of repos created since August 2026 delivers tutoring not as a web app but as
-a **skill or MCP server inside an existing coding agent** — `smashburger-dev/socratic-workshop`
-(MIT, 24 ★), `Aisland-SJL/Aisland-teach` (MIT, 18 ★), `boyuchengz/canvas-mcp` (MIT, 118 ★),
-`BaronCyrus/dsh-aha-tutor` (MIT, 46 ★), `bayshores/godspeed` (AGPL-3.0, 22 ★). All are small,
-but the direction is consistent and it shortens time-to-pilot dramatically: no front end to
-build, and the learner already has the client installed. Tracked in `agents/trending.md`.
+a **skill or MCP server inside an existing coding agent** — `ArnaudGuiovanna/tutor-mcp`
+(MIT, 104 ★), `boyuchengz/canvas-mcp` (MIT, 118 ★), `BaronCyrus/dsh-aha-tutor` (MIT, 46 ★),
+`smashburger-dev/socratic-workshop` (MIT, 24 ★), `bayshores/godspeed` (AGPL-3.0, 22 ★),
+`Aisland-SJL/Aisland-teach` (MIT, 18 ★). All are small, but the direction is consistent and it
+shortens time-to-pilot dramatically: no front end to build, and the learner already has the
+client installed.
+
+**p892 revised this cohort's reading, and the revision is about method.** p890 and p891 both
+measured the cohort, found every member unmoved, and concluded the form had no traction.
+**`tutor-mcp` (104 ★) was not in the set either pass measured** — it was found this pass by a
+fresh discovery search rather than by re-measuring known rows. Including it, the cohort maximum
+is unchanged at 118 ★, but the cohort is **not** static: `tutor-mcp` was pushed 2026-11-17 while
+`boyuchengz/canvas-mcp` has been idle since 2026-10-27. **Star traction is still absent;
+development activity is not.** The lesson is that re-measuring a set you did not re-enumerate
+produces "nothing changed" by construction. Watch condition unchanged — 1,000 ★ marks the form
+established — but re-enumerate before re-measuring. Tracked in `agents/trending.md`.
 
 ## What we searched for and did not find
 
@@ -135,6 +155,16 @@ Recording gaps because an unrecorded gap looks exactly like coverage.
   (`boyuchengz/canvas-mcp`) and **not one member gained a single star** in the interval. The
   form shortens time-to-pilot and belongs in the demo kit; it does not belong on a client
   roadmap yet.
+- **No open education agent originates from India, Africa or the Middle East.** p891 and p892
+  ran dedicated legs for Africa, the Middle East, Saudi Arabia and India. All four returned
+  substantial policy and national-programme evidence (see `intel/market.md`) and **not one
+  repository.** India mandates AI across Classes III–VIII from 2026–27 and Saudi Arabia is
+  training 240,000 teachers; neither has produced an open education agent this pass could find.
+  With the standing LATAM result (`warleysr/ankipa`, 10 ★) the pattern is firm: **open education
+  agents come from East-Asian and European universities; every other region is a consumer of
+  them.** Stated as a finding rather than a hole — it defines the localisation market, and it
+  is why `compose/patterns.md` **P10** treats language and curriculum corpus as the swappable
+  parts.
 - **No locatable repository for `AcademiClaw`** (arXiv 2605.02661, students setting challenges
   for AI agents). Paper only. Recorded so a later pass does not re-chase it.
 

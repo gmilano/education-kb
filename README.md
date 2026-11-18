@@ -33,7 +33,7 @@ and concrete recipes that name specific repos.
    with share-alike on derived databases. Run licence triage per artefact class, not once.
 
 2. **The best open education agents are academic, not commercial.** DeepTutor (HKU,
-   Apache-2.0, 60,186 ★), OpenMAIC (Tsinghua, MIT, 43,859 ★), the Artemis/EduTelligence/Pyris
+   Apache-2.0, 60,235 ★), OpenMAIC (Tsinghua, MIT, 43,868 ★), the Artemis/EduTelligence/Pyris
    stack (TU Munich, MIT), OATutor (UC Berkeley, MIT). The commercial tutors are closed. These
    projects want implementation partners — which is the opening.
 
@@ -92,13 +92,19 @@ byte-verified. The affected hosts are listed under *Declared gaps* in `intel/mar
 
 ## What this KB does not cover
 
-- **No LATAM-origin education agent exists at scale** — only `warleysr/ankipa` (10 ★, Brazil).
-  LATAM engagements mean localising APAC- or EMEA-origin assets.
-- **No Africa or Middle East coverage.** This KB's closed region vocabulary files both under
-  EMEA, and the EMEA evidence is in practice European. Four passes old; it needs its own search
-  leg rather than waiting for an EMEA query to surface it.
-- **Canada is covered by one pilot and one adjacent statute.** "North America" in this KB has
-  been US-only; p890 started the Canadian leg but did not finish it.
+- **No education agent originates from LATAM, India, Africa or the Middle East** (sharpened
+  p892). Only `warleysr/ankipa` (10 ★, Brazil) in LATAM, and four dedicated regional legs across
+  p891–p892 produced rich national-programme evidence and **zero repositories**. Open education
+  agents come from East-Asian and European universities; every other region localises them.
+  That is the shape of the localisation market, not a hole in the research.
+- **Africa and the Middle East are covered thinly, not absently** (updated p892). Dedicated
+  legs ran in p891 (Africa, UAE/Dubai) and p892 (**Saudi Arabia**). Both regions file under
+  **EMEA** because the region vocabulary is closed to five values; the country is in the prose.
+  Primary government sources in both regions are blocked by this session's network policy, so
+  the evidence is corroborated secondary reporting, labelled as such.
+- **Canada has its own subsection as of p891**, and it is the clearest evidence for T10: no
+  national rule, formal educator guidance in four provinces only, and a higher-education sector
+  that has broadly refused AI-detection tooling on privacy grounds.
 - **No open agent for student information systems, admissions, financial aid or proctoring.**
   The largest build-vs-adopt gap in the industry — and the most defensible studio IP, with the
   caveat that several of these are EU Annex III high-risk categories.
@@ -117,6 +123,31 @@ append-only and retain their full history below the newest dated section.
 
 One substantive error was corrected: **`openedx/openedx-platform` does not exist** (404 on every
 branch) and had propagated through four files. The real slug is `openedx/edx-platform`.
+
+### Pass p892 (same day, latest)
+
+Research-led; no file rewritten. Spent the budget on the two gaps `intel/market.md` itself named
+highest-value, and closed both:
+
+- **India** — first coverage in any pass. NCERT/CBSE Computational Thinking and AI curriculum for
+  **Classes III–VIII from 2026–27**, a 15-hour SOAR module already in 18,000+ CBSE schools, and
+  **no education-specific AI statute**: the compliance surface is IT-Rules content labelling, not
+  system conformity. **India is a delivery-capacity market, not a conformity market.**
+- **Saudi Arabia** — p891 called its silence a search-reach failure rather than an absence, and
+  that was right. AI units in public education since 2025–26, **50 further units across 22
+  revised subjects for 2026–27**, MoE/SDAIA ethics guidance, and **240,000 teachers in training**.
+
+Those two legs produced the pass's one structural addition, **T11**: AI literacy is becoming a
+statutory *curriculum* mandate across India, Saudi Arabia, Vietnam, the UAE, North Carolina and
+the AU strategy, and in every case the binding constraint is teacher capacity rather than
+technology. **P10** answers it with named repos, written once for both markets.
+
+Also: two agents added (`tutor-mcp`, MIT, 104 ★; `EduAgent`, MIT, 93 ★, age-banded by design);
+one method correction — the "tutor as a skill" cohort was declared flat in two passes while a
+104 ★ actively-developed member was **missing from the set being measured**, so re-enumerate
+before re-measuring; and one rejected platform — `projectfedena/fedena` (547 ★) is listed as
+Apache-2.0 by comparison tables but has **no licence file at all** and has been idle since 2020.
+That is the second aggregator-sourced licence error caught in two passes, both by byte-reading.
 
 ### Pass p890 (same day, later)
 

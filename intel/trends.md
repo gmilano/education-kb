@@ -6,8 +6,9 @@ updated: 2026-11-18
 
 # Current trends — education
 
-Nine trends, each with the evidence behind it and what it implies for delivery. Researched
-2026-11-18; T9 added and T1/T3/T6 extended in pass **p890** the same day. Legal facts here were
+Eleven trends, each with the evidence behind it and what it implies for delivery. Researched
+2026-11-18; T9 added and T1/T3/T6 extended in **p890**, T10 added in **p891**, and **T11 added in
+p892** from the India and Saudi Arabia legs — all the same day. Legal facts here were
 sourced through search snippets with the source named — every non-GitHub host is blocked by this
 session's network policy, so primary texts could not be byte-read. See the verification note in
 `intel/market.md`.
@@ -252,6 +253,52 @@ tracks. See **P9** in `compose/patterns.md`.
 named institutional positions (UBC, Concordia) are the strongest part of it. The direction is
 corroborated across four regions, the specific count is not primary-verified.
 
+## T11 — AI literacy is becoming a statutory *curriculum* mandate, and teacher capacity is the binding constraint
+
+**New in pass p892**, and it is the trend the two gap-closing legs (India, Saudi Arabia) made
+visible. Every other trend in this file is about constraining AI *use*. This one is about
+states compelling AI *teaching* — a different buyer, a different deliverable, and dates that
+are mostly nearer than the conformity deadlines in T1 and T3.
+
+| Jurisdiction | Mandate | From |
+|---|---|---|
+| **India** | NCERT/CBSE Computational Thinking + AI curriculum, **Classes III–VIII**, integrated into existing subjects; 15-hour SOAR module already in **18,000+ CBSE schools**; NCERT writing Grade 11–12 AI textbooks | **2026–27** |
+| **Saudi Arabia** | AI units across public education; **50 further AI units across 22 revised subjects**; **240,000 teachers** in training under the Human Capability Development Program | 2025–26, expanding **2026–27** |
+| **Vietnam** | **12 periods per class per year of AI content, grades 1–12** (Ministry of Education; distinct from its high-risk classification) | in force |
+| **UAE** | Cabinet-approved AI curriculum across public *and* private schools (2 September 2026); start date contested across sources | 2025–26 / 2026 |
+| **North Carolina** | Specified **professional development for teachers** | by **30 June 2028** |
+| **EU** | Article 4 AI-literacy duty — staff and contractors, not students, but the same direction | live since 2 Feb 2025 |
+| **Africa** | AU Continental Education Strategy 2026–2035 treats AI as cross-cutting; Ghana's strategy calls for primary-level coding; Kenya's curriculum review includes AI literacy | drafting / phased |
+
+**What makes it a trend rather than a list.** Four of these were found in separate regional legs
+run for unrelated reasons, and they converge on the same deliverable. The mandates are
+**curriculum-shaped, not compliance-shaped**: a ministry has written or commissioned the
+content, so the buyer is not asking for courseware. What every one of them lacks is the capacity
+to deliver it to teachers.
+
+**The constraint is explicit in the evidence, not inferred.** Saudi Arabia is funding 240,000
+teacher trainings and has reached 60,000. India's own commentary makes the point plainly —
+adding a subject to the curriculum is not the same as preparing teachers to teach it — and CBSE
+schools additionally carry an infrastructure obligation for AI as a subject. North Carolina
+legislated the teacher-development deadline separately from the policy deadline, which is a
+legislature conceding the same thing.
+
+**Implication — and it inverts this KB's usual sales motion.** T4's motion is *"govern the AI
+you are already using"*; T3's is *"conform before the deadline"*. T11's is **"deliver the
+programme the state has already funded"**. The buyer is a ministry or a board rather than an
+institution, the content is given rather than authored, and the work is enablement, assessment
+and evidence at national scale. It also travels: the same build answers India and Saudi Arabia
+with the curriculum corpus and the language swapped, which is why `compose/patterns.md` **P10**
+is written once rather than per-country.
+
+**Two cautions.** First, **this is public-sector delivery** — procurement cycles, local-partner
+requirements and political risk, not the quarter-length engagements T4 implies. Second,
+**resist the temptation to sell a tutor into it.** The mandate is for teaching AI, and the
+product the gap calls for is teacher enablement and evidence of coverage. A student-facing
+tutor sold against a teacher-capacity mandate is the wrong deliverable answering the right
+need, and every open tutor in `agents/top.md` is English- or Chinese-first anyway.
+
+
 ## Trends we looked for and could not substantiate
 
 - **Measured learning-outcome gains from AI.** The widely circulated figures ("42% improvement
@@ -285,10 +332,15 @@ corroborated across four regions, the specific count is not primary-verified.
 - **Whether any member state has issued an Article 4 safe harbour since the amendment.** The
   rewrite lowered the standard but named no benchmark, so "proportionate and documented" is
   still undefined by any authority. Searched this pass; nothing found. Unresolved.
-- **Saudi Arabia's position on AI in education.** The Middle East leg returned detailed UAE
-  federal and Dubai material and **nothing at all on KSA** — no ministry guidance, no
-  curriculum mandate, no prohibition list. Given Vision 2030's education spend this is an
-  implausible true absence; read it as a search-reach failure, not a finding, and run it as its
-  own leg next pass.
-- **India.** Not covered by the APAC leg this pass or the last. The world's largest school
-  system and this KB has no position on it. Named here so it stops being invisible.
+- ~~**Saudi Arabia's position on AI in education.**~~ **Resolved in p892**, and the suspicion
+  was right: it was a search-reach failure, not an absence. KSA has ministry/SDAIA ethics
+  guidance, a national curriculum mandate and a 240,000-teacher training programme. See **T11**
+  and the Saudi Arabia subsection in `intel/market.md`. **The method point generalises:** a
+  named gap needs a dedicated leg, because the regional query that missed it the first time
+  will miss it again.
+- ~~**India.**~~ **Resolved in p892.** Covered as its own leg: NCERT/CBSE Computational Thinking
+  and AI curriculum for **Classes III–VIII from 2026–27**, no education-specific AI statute, and
+  content-labelling duties under the amended IT Rules since 20 February 2026. See **T11** and
+  `intel/market.md`. **Still open within India:** whether Classes 9–10 become compulsory in
+  2027–28 — sources conflict — and whether the July 2026 signal toward dedicated AI legislation
+  produces a bill.

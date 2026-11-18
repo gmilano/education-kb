@@ -449,3 +449,138 @@ the sales cycle considerably, because the budget already exists.
 Where a regulator has mandated proctoring or automated assessment outright — **Vietnam**, where
 automated assessment is statutorily high-risk under Decision 33/2026/QD-TTg with an 18-month
 education transition. There the engagement is **P6** plus conformity work, not this pattern.
+
+## P10 — National curriculum-mandate delivery: teacher enablement at system scale
+
+**New in pass p892.** Written once for **India** and **Saudi Arabia** because the two
+engagements are the same build with the curriculum corpus and the language swapped. Also fits
+Vietnam's 12-periods-per-year mandate and, with the student tier removed, the EU Article 4
+staff-literacy duty.
+
+### Why this pattern exists
+
+Every other pattern in this file answers a constraint on AI *use*. This one answers a state
+mandate to *teach* AI, which T11 establishes across India, Saudi Arabia, Vietnam, the UAE,
+North Carolina and the African Union strategy. The distinguishing facts:
+
+- **The curriculum already exists and the client owns it.** NCERT/CBSE in India; the National
+  Curriculum Center in Saudi Arabia. **Do not author courseware.** Authoring it is both out of
+  scope and politically unwinnable.
+- **The constraint is teacher capacity, stated explicitly by the buyers** — 240,000 teachers in
+  training in KSA (60,000 reached), and India's own commentary that adding a subject is not the
+  same as preparing teachers to teach it.
+- **The buyer is a ministry or board**, so evidence of coverage is a contractual artefact, not
+  a nice-to-have.
+
+### Stack
+
+Every repo named is verified in this KB with licence and last-push date.
+
+**1. Curriculum ingestion — the client's own documents, never a generic corpus**
+
+| Component | Repo | Licence |
+|---|---|---|
+| PDF/DOCX curriculum → structured text | `docling-project/docling` | MIT |
+| Heavier layout/formula extraction | `opendatalab/MinerU` | Apache-2.0 (SPDX NOASSERTION) |
+| Retrieval over the ingested curriculum | `HKUDS/LightRAG` or `infiniflow/ragflow` | MIT / Apache-2.0 |
+| Vector store the client owns | `qdrant/qdrant` | Apache-2.0 |
+
+**2. Model layer — swappable, because sovereignty differs by market**
+
+| Component | Repo | Licence |
+|---|---|---|
+| Gateway, per-district keys and budget caps | `BerriAI/litellm` | **MIT except `litellm/enterprise/` — do not vendor that path** |
+| Local/self-hosted inference | `ollama/ollama` · `vllm-project/vllm` | MIT / Apache-2.0 |
+
+Keep the gateway even if the first deployment calls a hosted API. It is what lets the Saudi
+build answer a national-AI-company requirement and the Indian build answer a data-residency
+one without re-architecture (T6).
+
+**3. Teacher-facing generation — the actual deliverable**
+
+| Component | Repo | Licence |
+|---|---|---|
+| Lesson/slide/quiz generation from curriculum | `THU-MAIC/OpenMAIC` | MIT |
+| Local-first lesson-prep design reference | `SirhanMacx/Claw-ED` | MIT — **read it, do not pin it** (last push 2026-09-19) |
+| Exercise/item rendering | `Khan/perseus` | MIT |
+| Orchestration with explicit policy nodes | `langchain-ai/langgraph` | MIT |
+| Durable long-running enrolment/cohort workflows | `temporalio/temporal` | MIT |
+
+**4. Delivery and reach**
+
+| Component | Repo | Licence |
+|---|---|---|
+| Training delivery to teachers | `oppia/oppia` (Apache-2.0) if greenfield; integrate to the client's LMS over **LTI 1.3** with `Cvmcosta/ltijs` (Apache-2.0) if not | Apache-2.0 |
+| Low-bandwidth / offline cohorts | `learningequality/kolibri` | MIT |
+| Admin and cohort-tracking console | `appsmithorg/appsmith` | Apache-2.0 |
+
+**5. Evidence — the part that gets the contract renewed**
+
+| Component | Repo | Licence |
+|---|---|---|
+| Pedagogical-quality eval gate on generated material | `AI-for-Education/pedagogy-benchmark` | MIT |
+| Per-district/per-cohort usage and cost attribution, OTel-native | `traceloop/openllmetry` | Apache-2.0 |
+
+### How it wires together
+
+1. Ingest the ministry's curriculum with `docling` → chunk → embed → `qdrant`. **This corpus is
+   the only authority the generation tier may cite.**
+2. `langgraph` runs the generation flow with the policy checks as explicit nodes: grade-band
+   check, curriculum-citation check, provenance-label emission, language check. Explicit nodes
+   are what make the flow auditable to a ministry.
+3. `litellm` fronts every model call, keyed per district so cost attribution exists from day one.
+4. `OpenMAIC` generates the teacher's lesson, slides and quiz items; `perseus` renders items.
+5. `pedagogy-benchmark` gates output on pedagogical quality before a teacher ever sees it.
+6. Delivery through `oppia`, or into the client's existing LMS over LTI 1.3 via `ltijs`;
+   `kolibri` carries the offline cohorts.
+7. `openllmetry` emits coverage and cost per district into whatever observability stack the
+   ministry already runs — which is also the portability answer (T9).
+
+### The design rules that make it defensible
+
+- **Retrieval over the ministry's curriculum, never training on it, and never on student or
+  teacher data.** California AB 1159 forecloses the training architecture outright; building
+  the no-training version once makes the same stack sellable in every market.
+- **Emit provenance labels at generation time.** India's amended IT Rules require prominent
+  labels and provenance markers on AI-generated content from **20 February 2026** (T7).
+  Retrofitting a national content library is the expensive path.
+- **Grade-banding is a policy node, not a prompt.** India's mandate is Classes III–VIII; the
+  UAE prohibits under-13 and below-Grade-7 use entirely. The same deployment must be able to
+  answer both, and a prompt instruction is not an answer a regulator accepts.
+- **Teacher-in-the-loop is the product.** Generated material is a draft a teacher edits and
+  approves, and the approval is logged. This is T1's oversight requirement and also the only
+  posture that survives T8's consent problem.
+
+### Deliverables
+
+1. Curriculum-grounded lesson-preparation service, grade-banded, provenance-labelled.
+2. Teacher training-delivery tier with per-cohort completion evidence.
+3. Coverage and cost dashboard by district, exportable (the ministry's reporting obligation).
+4. Policy-node configuration per jurisdiction — grade bands, prohibitions, labelling.
+5. Evaluation report from `pedagogy-benchmark` on generated material, as an acceptance gate.
+
+### Licence posture
+
+Clean. Every component is MIT or Apache-2.0 except the carve-out in `litellm/enterprise/` (do
+not vendor it) and `kolibri`'s MIT core, which is fine. **If the client's LMS is Moodle
+(GPL-3.0) or Canvas (AGPL-3.0), integrate over LTI 1.3 and the deliverable stays a separate
+work** — the single most important licence decision in this pattern (see `README.md`, fact 1).
+
+### Estimate
+
+**14–18 weeks** to a first district or regional cohort: 3–4 weeks curriculum ingestion and
+retrieval quality, 4–5 weeks generation tier and policy nodes, 3–4 weeks delivery integration,
+2–3 weeks evidence tier, 2 weeks evaluation and acceptance. Longer than every other pattern
+here because the buyer is public-sector and acceptance is formal.
+
+### Where it does not apply
+
+- **Not for institutional self-service markets.** If the buyer is a single university, this is
+  P2 or P8, not P10.
+- **Not where no mandate exists.** Without a funded state programme this becomes speculative
+  courseware, which is a product business and not a services engagement.
+- **Not as a route to selling a student tutor.** The mandate is teacher capacity (T11). A
+  student-facing tutor sold against it is the wrong deliverable, and every open tutor this KB
+  tracks is English- or Chinese-first — in India and Saudi Arabia that is a localisation
+  project, not a dependency.
+

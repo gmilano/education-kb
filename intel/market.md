@@ -370,7 +370,84 @@ KHDA primary publications are blocked in this session. The 25-prohibition figure
 under-13 rule appear in more than one outlet; the curriculum start date does not agree across
 sources and is recorded as contested.*
 
-**Saudi Arabia returned nothing** — see Declared gaps. Treat as unsearched, not as absent.
+#### Saudi Arabia — first dedicated leg (closing the gap p891 declared a search-reach failure)
+
+p891 recorded *"Saudi Arabia returned nothing — treat as unsearched, not as absent"* and judged
+a true absence implausible given Vision 2030 education spending. **That judgement was correct.**
+Run as its own leg this pass, KSA returns the most concretely specified national AI-in-education
+*programme* in this entire file — more specified than the UAE's, and specified as delivery
+rather than as prohibition.
+
+- **It is a curriculum build, already shipping.** The **National Curriculum Center**, with the
+  **Ministry of Education**, the **Ministry of Communications and Information Technology** and
+  **SDAIA**, introduced AI units across public education from the **2025–26 academic year**,
+  explicitly under the **Human Capability Development Program** of **Vision 2030**. A
+  foundational *Introduction to Artificial Intelligence* course for third-year secondary
+  students preceded it.
+- **2026–27 is an expansion, not a pilot.** Education Minister **Yousef Al-Benyan** stated that
+  **22 subjects have been revised and 50 AI educational units added** for the coming academic
+  year (reported 18 August 2026).
+- **Teacher capacity is the stated bottleneck and is being funded as such.** **More than 240,000
+  teachers** are being trained under the Human Capability Development Program, **60,000 of them
+  in the past year**.
+- **There is ethics guidance, and it is pro-teacher rather than prohibitive.** The Ministry of
+  Education and SDAIA have issued guidance on the ethical and responsible use of generative AI
+  in general education, framed around keeping teachers central to instruction.
+- **SDAIA is building teacher-workload tooling with a national AI company.** Tools to reduce
+  teachers' administrative burden are in technical trials with **SDAIA** and **Humain**, with
+  **HADAF** involved on the workforce side.
+
+**Opportunity — Saudi Arabia.** This is the opposite profile to every other market in this file.
+Elsewhere the KB sells *governance for AI already in use* (LATAM), *conformity against a
+deadline* (EMEA), or *policy configuration* (North America). **Here the state is the buyer, the
+programme is funded, the curriculum is written, and the gap is delivery capacity at national
+scale** — 240,000 teachers, 22 revised subjects, 50 units. The commercial shapes that fit:
+
+1. **Teacher-enablement delivery at scale** — not courseware authoring, which the National
+   Curriculum Center owns, but the training-delivery, assessment and evidence tier underneath a
+   240,000-teacher programme. `moodle` or `frappe/lms` plus a retrieval tier over the Center's
+   own curriculum; see **P10** in `compose/patterns.md`.
+2. **Teacher administrative-workload automation**, which SDAIA has publicly named as the target
+   and is trialling with Humain. An integration and assurance role around a national
+   programme, not a competing product.
+3. **Arabic-first retrieval and assessment.** Every tutor in `agents/top.md` is English- or
+   Chinese-first. Arabic curriculum alignment is a localisation gap, not a model gap.
+
+*Confidence: moderate. SPA (state news agency) and Saudi Gazette carry the curriculum and
+minister's statements and agree with each other; the 240,000/60,000 teacher-training figures and
+the SDAIA–Humain trial come from regional trade outlets. Ministry and National Curriculum Center
+primary documents are blocked by this session's network policy. The 50-unit figure for 2026–27
+should be confirmed against the Ministry's own announcement before it enters a client deck.*
+
+#### Africa — addendum to the p891 leg: an open-model programme with a publication commitment
+
+p891's Africa leg was thin by its own admission. One material addition, and it is directly
+relevant because it produces **assets this KB can track rather than policy it can only cite**:
+
+**Google DeepMind, Fab AI, Google.org and the Gates Foundation** have partnered to build
+education tooling on **open Gemma models** with local innovator cohorts in **Kenya, Ghana and
+South Africa**, stating an intent to **publish the resulting datasets, evaluation suites and
+open-source models publicly** so others can adapt them. Google's free **AI Educator Series**
+begins in **South Africa**, with **Nigeria, Kenya and Ghana in 2027**. This sits alongside the
+separate **AI Research Foundations** programme already recorded (30 universities; a March 2026
+DeepMind programme put Gemma and Gemini access into 15 African universities with ~$4M).
+
+**Why it changes the Africa entry.** The continent's gap in this KB has been the absence of
+*usable artefacts* — policy to cite, nothing to build on. `google-deepmind/gemma`
+(**Apache-2.0**, 5,856 ★) and `google/gemma.cpp` (**Apache-2.0**, 7,088 ★) are permissive and
+already verified in this KB's stack, and the partnership's output is promised under open terms.
+
+**Opportunity — Africa, revised.** The offline-first play (`kolibri`, MIT) and the
+provenance-governance play (the withdrawn South African draft policy) both stand. Add a third:
+**be the integration partner for Gemma-based African education tooling** before the datasets
+land. The asset is coming, it is permissively licensed, and the cohorts are local innovators
+who will need delivery capacity.
+
+*Confidence: moderate on the partnership (Google's own announcement, corroborated by regional
+education press); low on timing — **no dataset name, licence or release date has been
+published**, and an open-release *intent* is not an open release. Do not promise a client an
+asset that does not yet exist. Re-check next pass.*
+
 
 ### APAC
 
@@ -496,6 +573,66 @@ relies on existing law plus voluntary adoption guidance rather than a standalone
 and a dated curriculum obligation running to grade 1. That is a scoped, biddable programme
 rather than a readiness conversation. Australia's rising ban sentiment (52%) makes
 **human-in-the-loop evidence a sales requirement**, not a design preference.
+
+#### India — first dedicated leg (closing the gap p891 called "the highest-value remaining")
+
+p891 recorded: *"India has never been covered by this KB, in any pass. The largest school system
+in the world, and this file has no position on it."* Run as its own leg this pass. **India is
+not a regulation story — it is a curriculum-mandate and teacher-capacity story, and the dates
+are now.**
+
+- **AI and Computational Thinking enter the school curriculum from the 2026–27 academic year.**
+  A **Press Information Bureau** release (August 2026) states that **NCERT**, working with
+  **CBSE**, has introduced a Computational Thinking and AI curriculum for **Classes III to
+  VIII** from 2026–27, designed for integration with existing subjects from the foundational
+  stage rather than as a bolt-on subject. A **CBSE circular dated 1 April 2026** formally
+  launched the framework. The expert committee that drafted it was chaired by an IIT Madras
+  professor, with NCERT review and an NCF-SE coordination committee for quality assurance.
+- **The upper grades are already further along than the new mandate.** CBSE has offered **AI as
+  an elective in Classes 9–12** for several years, and a **15-hour SOAR module** runs for
+  Classes 6–8 in **more than 18,000 CBSE schools**. **NCERT has formed a team to write AI
+  textbooks for Grades 11–12.** Reporting on whether Classes 9–10 become compulsory in 2027–28
+  conflicts across sources and is recorded as contested.
+- **Infrastructure is a stated school obligation.** The PIB release notes CBSE schools must
+  ensure adequate infrastructure for students taking AI as a subject — which, across a system of
+  this size, is the binding constraint rather than the pedagogy.
+- **Content rules already bind, and this KB already tracks them.** India's amended IT Rules
+  require prominent labelling and provenance markers on AI-generated content from **20 February
+  2026** (T7). In **July 2026** the government signalled it may pursue **dedicated AI
+  legislation** rather than continuing to regulate through the intermediary framework — so the
+  regulatory posture is live and could change inside a delivery window.
+- **Scale context.** India is the fastest-growing AI market in APAC at a **38.9% CAGR**, against
+  Singapore's regional lead on diffusion (60.9% among working-age adults).
+
+**Opportunity — India.** The mandate is dated, national and already in force for the coming
+academic year, and the honest constraint is the one a secondary source put most plainly:
+**adding a subject to the curriculum is not the same as preparing teachers to teach it.** That
+is the engagement.
+
+1. **Teacher enablement and content localisation at system scale**, against a curriculum
+   somebody else owns (NCERT/CBSE) — the same shape as the Saudi opportunity above, and the
+   reason **P10** in `compose/patterns.md` is written once for both.
+2. **Provenance-by-construction is non-optional here.** Any generated courseware for an Indian
+   classroom must carry labels and provenance markers under the IT Rules from February 2026.
+   Emit at generation time; retrofitting across a national content library is the expensive
+   path (T7, **P6**).
+3. **Low-bandwidth and multilingual delivery.** The offline stack this KB tracks for Africa
+   (`kolibri` MIT, `iiab`) applies directly, and Indian language coverage is a localisation
+   gap in every tutor in `agents/top.md`.
+
+**And note what India is not.** There is no education-specific AI statute, no high-risk
+classification like Vietnam's, and no prohibition regime like the UAE's. The compliance surface
+is content labelling, not system conformity. **India is a delivery-capacity market, not a
+conformity market** — which makes it closer to Saudi Arabia than to the EU, and that is the
+single most useful sentence in this subsection for engagement planning.
+
+*Confidence: moderate-to-good on the mandate (PIB is a primary government channel, corroborated
+by careers360 and multiple education outlets; the CBSE circular date appears in secondary
+reporting only). Low on the Classes 9–10 timeline, which conflicts across sources. The 38.9%
+CAGR is an analyst figure from a regional AI report, not an education-specific one. PIB and CBSE
+primary documents are blocked by this session's network policy and were read through search
+snippets.*
+
 
 ### LATAM
 
@@ -692,11 +829,35 @@ Cross-regional plays that do not depend on one jurisdiction.
   no national rule, formal educator guidance in only four provinces (BC, New Brunswick,
   Newfoundland and Labrador, Quebec), nothing from Ontario's ministry, and a higher-education
   sector that has broadly refused AI detection on privacy grounds.
-- **Saudi Arabia is unsearched, not absent.** The Middle East leg returned detailed UAE federal
-  and Dubai material and **nothing on KSA**. Given Vision 2030 education spending, read this as
-  a search-reach failure. Own leg next pass.
-- **India has never been covered** by this KB, in any pass. The largest school system in the
-  world, and this file has no position on it. Highest-value remaining gap.
+- ~~**Saudi Arabia is unsearched, not absent**~~ — **closed in p892.** Run as its own leg, as
+  p891 directed. The judgement that a true absence was implausible was correct: KSA has AI units
+  in public education from 2025–26, **50 further AI units across 22 revised subjects for
+  2026–27**, MoE/SDAIA ethics guidance, **240,000 teachers in training**, and an SDAIA–Humain
+  trial on teacher administrative workload. See the Saudi Arabia subsection under EMEA. **The
+  gap was in the search, not in the world** — which is the argument for running named gaps as
+  dedicated legs rather than hoping a regional query surfaces them.
+- ~~**India has never been covered**~~ — **closed in p892.** India now has its own subsection
+  under APAC. The headline: **NCERT/CBSE Computational Thinking and AI curriculum for Classes
+  III–VIII from 2026–27**, a CBSE circular of 1 April 2026, a 15-hour SOAR module already in
+  18,000+ schools, and **no education-specific AI statute** — the compliance surface is IT-Rules
+  content labelling (20 February 2026), not system conformity. **India is a delivery-capacity
+  market, not a conformity market.** Contested: whether Classes 9–10 become compulsory in
+  2027–28.
+- **No open-source education agent originates from India, Africa or the Middle East.** Three
+  dedicated regional legs across p891 and p892 produced rich policy and programme evidence and
+  **not one repository**. India mandates AI across Classes III–VIII, Saudi Arabia is training
+  240,000 teachers, and neither has produced an open education agent this KB can find. Together
+  with the standing LATAM finding (`warleysr/ankipa`, 10 ★, the only LATAM-origin agent), the
+  pattern is now firm: **open education agents come from APAC-East and European universities,
+  and every other region is a consumer.** That is a localisation market, and it is stated here
+  as a positive finding rather than a hole.
+- **The Gemma-for-African-education datasets have no name, licence or date.** An open-release
+  *intent* was announced; nothing has shipped. Tracked under EMEA/Africa; re-check next pass
+  before any client-facing claim.
+- **Saudi Arabia's primary sources were not reachable.** The Ministry of Education and National
+  Curriculum Center publications are blocked by this session's network policy; the 50-unit and
+  240,000-teacher figures are from SPA, Saudi Gazette and regional trade press. Corroborated
+  across outlets, not primary-verified.
 - **Africa and Middle East findings are low-to-moderate confidence.** Primary government
   sources (WAM, UAE Ministry of Education, KHDA, South African DCDT) are blocked in this
   session; the South African retraction is well-corroborated, the UAE curriculum start date is

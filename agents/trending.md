@@ -4,6 +4,87 @@ region: Global
 updated: 2026-11-18
 ---
 
+## `2026-11-18` (p892) — the agent-skill cohort was measured incomplete: a 104 ★ MIT member was missing from it
+
+**Channel:** batched `repo:` qualifiers against `gh api search/repositories` (stars, SPDX,
+`pushed_at`) plus `raw.githubusercontent.com` licence byte-reads. Research budget went to the
+two gaps `intel/market.md` named as highest-value — **India** and **Saudi Arabia** — plus a
+discovery leg for agents created or pushed this month.
+
+### The correction that matters: `ArnaudGuiovanna/tutor-mcp` (MIT, 104 ★)
+
+| Field | Value |
+|---|---|
+| Repo | https://github.com/ArnaudGuiovanna/tutor-mcp |
+| Licence | **MIT** — byte-read from `LICENSE@main`, `Copyright (c) 2026 Arnaud Guiovanna` |
+| ★ | 104 |
+| Last push | **2026-11-17** |
+| What | MCP server that turns any LLM into an Intelligent Tutoring System — the ITS loop (model the learner, select the next item, give graduated hints) exposed as tools rather than as an application. |
+
+This repo is a member of the "tutor as an agent skill" cohort that p890 and p891 both measured
+and declared flat. **It was not in the cohort either pass measured.** That changes the finding,
+not just the count:
+
+- p891 reported the cohort maximum as **118 ★** (`boyuchengz/canvas-mcp`) with **not one member
+  gaining a star**. With `tutor-mcp` included the maximum is still 118, but the cohort is no
+  longer static: `tutor-mcp` was **pushed yesterday**, while `boyuchengz/canvas-mcp` has been
+  idle since 2026-10-27 and `smashburger-dev/socratic-workshop` since 2026-10-28.
+- The cohort's *development* activity and its *star* activity point in opposite directions. The
+  previous two passes measured only stars and concluded "no traction". The honest statement is
+  **narrower: no star traction, but the form is still being built.**
+
+**Method lesson, and it is the same shape as p891's `NOASSERTION` lesson.** A cohort finding is
+only as good as cohort membership, and membership here was assembled from earlier passes'
+discoveries rather than re-derived. A "nothing changed" result across a set you did not
+re-enumerate is not evidence of stasis — it is evidence you measured the same rows twice.
+**Next pass should re-enumerate the cohort by search before re-measuring it.**
+
+The watch condition stays as p890 set it: **1,000 ★ marks the form as established.** Nothing is
+close. But the reason to re-check is now active development, not star drift.
+
+### New entrant — `Zenglian990/AI_Tutor_Release` ("EduAgent", MIT, 93 ★)
+
+| Field | Value |
+|---|---|
+| Repo | https://github.com/Zenglian990/AI_Tutor_Release |
+| Licence | **MIT** — byte-read from `LICENSE@main`, `Copyright (c) 2026 Zenglian990` |
+| ★ | 93 |
+| Last push | 2026-11-10 |
+| What | RAG tutor for **K-9** education, self-described as the first open-source RAG tutor built specifically for grades 1–9 in China. |
+
+Worth recording for two reasons beyond the star count. It is **age-banded by design** — this KB
+has repeatedly noted that age-gating is a product requirement in the UAE (under-13 / below
+Grade 7 prohibition) and increasingly in US state law, and almost every open tutor it tracks is
+age-agnostic. And it is **retrieval-over-curriculum, not training-on-student-data**, which is
+the architecture California AB 1159 forces anyway.
+
+### Name collision, recorded so a later pass does not merge them
+
+`agents/top.md` carries **`zijinz456/OpenTutor`** (MIT, 181 ★, pushed 2026-11-17). Search for
+"OpenTutor" and a *different* repo surfaces: **`tutornew/OpenTutor`** (8 ★, pushed 2026-02-27),
+which has **no licence file** — `LICENSE`, `LICENSE.md`, `LICENSE.txt` and `COPYING` all 404 on
+`main` and `master`, and the API reports SPDX `NONE`. Two unrelated projects, same name, and
+only one of them is usable. The KB's row is the right one; this note exists so the wrong one is
+not merged into it.
+
+### Spot re-measure
+
+| Repo | ★ at p891 | ★ now | Δ |
+|---|---|---|---|
+| `HKUDS/DeepTutor` | 60,210 | **60,235** | +25 |
+| `THU-MAIC/OpenMAIC` | 43,859 | **43,868** | +9 |
+| `vishalsachdev/canvas-mcp` | 334 | 334 | 0 |
+| `Li-Evan/BloomTutor` | 315 | 315 | 0 |
+| `CAHLR/OATutor` | 282 | 282 | 0 |
+| `molly554/whiteboard-ai-tutor` | 223 | 223 | 0 |
+| `boyuchengz/canvas-mcp` | 118 | 118 | 0 |
+
+Third consecutive pass confirming the daily cadence: everything below ~40k stars is flat
+intra-day. **Stop re-measuring within a calendar day.** Full sweep due 2026-11-19.
+
+---
+
+
 ## `2026-11-18` (p891) — a new MIT teaching agent, and the largest "education" repo on GitHub turns out to be unusable
 
 **Channel:** batched `repo:` qualifiers against `gh api search/repositories` plus
