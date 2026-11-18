@@ -6,7 +6,7 @@ updated: 2026-11-18
 
 # Current trends — education
 
-Fifteen trends, each with the evidence behind it and what it implies for delivery. **T14 and T15 added in p894** — the first from the operative content of China's anthropomorphic-AI Measures, which this file had been carrying as a bare date; the second from four repository cohorts measured in a single batch, which is the only way the correlation it names becomes visible. Researched
+Sixteen trends, each with the evidence behind it and what it implies for delivery. **T16 added in p895**, from four cohort measurements that only become one finding when read together. **T14 and T15 added in p894** — the first from the operative content of China's anthropomorphic-AI Measures, which this file had been carrying as a bare date; the second from four repository cohorts measured in a single batch, which is the only way the correlation it names becomes visible. Researched
 2026-11-18; T9 added and T1/T3/T6 extended in **p890**, T10 added in **p891**, and **T11 added in
 p892** from the India and Saudi Arabia legs — all the same day. Legal facts here were
 sourced through search snippets with the source named — every non-GitHub host is blocked by this
@@ -463,6 +463,50 @@ possible, which is precisely what Annex III demands.
 **Watch condition:** any repository in the grading or accommodation rows crossing **100 ★** with
 a permissive licence. That would mean the correlation is breaking, and the build-vs-adopt advice
 for the most valuable categories in this industry would have to be rewritten.
+
+## T16 — Published open education AI and deployable open education AI are two different
+populations, and the published one is systematically unlicensed (new p895)
+
+Across four cohorts this KB has now measured in a batch, a pattern holds that matters more for
+procurement than any star count: **the repositories attached to papers, conferences and course
+capstones are overwhelmingly unlicensed, and the repositories that are actually deployed are
+overwhelmingly permissive.** They barely overlap.
+
+| Cohort (measured) | Population | Licence reality |
+|---|---|---|
+| African-curriculum agents, p895 (`WAEC`/`KCSE`/`BECE`/`CAPS` channels) | ~1 ★ ceiling | Almost all **no licence**, including the 223 ★ `aloc-endpoints` |
+| ACL AfricaNLP 2026's EduNaija tutor, p895 | 1 ★ | **No licence** on 8 candidate paths; idle 11 months |
+| Automated grading, p894 | all **0 ★** | **3 of 7 no licence**, one GPL-3.0 |
+| Special education / IEP, p894 | **1 ★** ceiling | Half **unlicensed or AGPL** |
+| Deployed platforms (`elimu-ai`, `kolibri`, `oppia`, `Artemis`, `UniTime`) | 41–360 ★, fork-heavy, pushed this week | **MIT / Apache-2.0**, byte-verified |
+
+**Why this happens is structural, not careless.** A paper's artefact is evidence for a claim;
+its author's incentive ends at publication, and adding a licence is a step nobody's career
+requires. A deployed platform cannot be installed by a ministry or a school district without
+one. **So licence presence is a proxy for deployment intent** — and a better one than stars,
+which measure discovery.
+
+**Three consequences for delivery.**
+
+1. **A citation is not a supply chain.** The strongest-sounding regional signal — a
+   peer-reviewed agent built for the exact curriculum a client teaches — can be legally
+   unusable and technically a prototype at the same time. p895 found precisely this: the
+   EduNaija paper is real, and the code behind it has no licence, no evaluation beyond
+   *"design-based"*, and a web-search grounding that fails in the low-connectivity setting it
+   targets. **Read the artefact before you cite the venue.**
+2. **In an under-served region, the agent tier is studio IP by default.** Not as a
+   positioning choice — as an arithmetic consequence of there being nothing licensed to adopt.
+   That raises the defensible-IP share of such an engagement and should raise its price.
+3. **Licence-read the cohort before you scope, not after.** Eight candidate paths
+   (`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING` × `main`/`master`) against
+   `raw.githubusercontent.com` costs seconds and has repeatedly changed this KB's verdict on a
+   whole category. **It is the cheapest high-value check in this entire knowledge base.**
+
+**Signal to watch:** whether any funder attaches a licence requirement to education-AI research
+output. Google's Fab AI programme (Kenya/Ghana/South Africa) states an intent to release
+datasets, evaluation suites and **open-source models** publicly — if that commitment lands with
+an actual OSI licence, it would be the first mechanism to merge these two populations. Tracked
+in `intel/market.md`.
 
 ## Trends we looked for and could not substantiate
 

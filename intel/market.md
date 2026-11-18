@@ -133,6 +133,21 @@ report a centralised institutional AI strategy** *(single source; the survey pop
 stated in the snippet, so treat the ratio as indicative)*. It is the same adoption/governance
 asymmetry this KB documents for LATAM, in a market with far more money.
 
+**Policy clarity is the measured gap, not policy existence (added p895).** The Stanford **AI
+Index 2026** reports that **only 6% of teachers say their school's AI policy is clear.** Set
+that beside the 25-state legislative picture above and the conclusion inverts the usual
+reading: **the US problem is not an absence of rules, it is rules that never reach a
+classroom-operable form.** Corroborating adoption figures from the same window: **more than 4
+in 5 teens have used AI tools** with over two-thirds using them regularly (June 2026), against
+reports that **about half of schools have no policy at all**.
+
+🔵 **Commercial read.** This is the single best-evidenced opening in the North America
+section, because it is a *translation* problem a studio can actually deliver: statute →
+configuration → classroom-visible behaviour, with the conformance evidence attached. It is
+exactly what **P3** (50-state configurable policy conformance) builds, and the 6% figure is the
+number to open that conversation with. *Confidence: moderate — the AI Index figure came via
+secondary reporting; the report itself was not read in this session.*
+
 **Opportunity.** The binding constraint is *human oversight you can prove*, not model
 quality. Oklahoma's "no AI-only grading" rule and the general teacher-review mandates make
 **auditable human-in-the-loop architecture the product**. Build on
@@ -390,6 +405,66 @@ retraction created live demand and a named failure mode to sell against.
 *Confidence: low-to-moderate. The South African retraction is well-corroborated; the Nigerian
 and Kenyan adoption figures circulating in 2026 edtech reports could not be verified and are
 deliberately omitted.*
+
+##### Africa — the supply side, measured for the first time (p895)
+
+Every Africa leg before this one measured **demand**. This one measured **what a studio can
+actually pick up**, and the answer reshapes the opportunity above.
+
+- 🟢 **One adoptable platform, and it is Africa-origin.**
+  https://github.com/elimu-ai/webapp — **MIT** (byte-read, 1,065 B), **41 ★ / 67 forks**,
+  created 2016, **pushed 2026-11-17** — early-grade literacy for out-of-school children,
+  Tanzania/Kenya. Its sibling https://github.com/elimu-ai/appstore (MIT, 29 ★) **installs and
+  updates Android apps with no app store and no network**. **This changes play (1) above:** the
+  offline-first answer is no longer `kolibri` alone — it is `kolibri` *or* `elimu-ai`, and
+  `elimu-ai` carries the regional provenance that wins a public-sector procurement. Note the
+  org ships on-device **face-recognition student login** (`ml-authentication`): exclude it
+  explicitly — biometric identification of children is a regime nobody budgets for.
+- 🔴 **No adoptable agent layer.** The published Africa-origin tutor
+  (ACL AfricaNLP 2026's EduNaija, https://github.com/Eddy-Emmanuel/EduNaija-LLM) is
+  **unlicensed, 1 ★ and idle since 2025-12-22**, and its retrieval is general web search
+  requiring OpenAI + Tavily — unusable where connectivity is the constraint. National-exam
+  channels (`WAEC`, `KCSE`, `BECE`, `CAPS`/`IEB`) return a **~1 ★ ceiling with almost nothing
+  licensed**; the highest-star find, https://github.com/Seunope/aloc-endpoints (223 ★), is an
+  exam question bank with **no licence and third-party exam copyright**.
+- **Therefore: adopt the platform, build the agent tier.** The agent tier is **defensible
+  studio IP in this region**, not a commodity integration — the same verdict p894 reached for
+  registrarial work. Delivery recipe: `compose/patterns.md` **P14**. The eval gate already
+  exists: https://github.com/acheamponge/wassce-benchmark (MIT), the only African-curriculum
+  open evaluation asset this KB has found.
+
+**Governance correction worth carrying into a proposal (p895).** A 2026 governance review
+(CASRAI) finds **no binding AI-specific law** across the eight MEA governments it covers —
+Saudi Arabia, UAE, Egypt, Nigeria, Kenya, Rwanda, Morocco, South Africa — only strategies and
+frameworks, **and it warns that some compliance trackers wrongly list these countries as
+regulated.** Nigeria has a National AI Strategy and the **Nigeria Data Protection Act 2023**
+(which reaches AI that processes personal data) but **no AI-specific statute**; Kenya's
+Ministry of ICT published the **Kenya National AI Strategy 2025–2030 Implementation Roadmap in
+December 2025**, which is policy, not law. 🔴 **Commercial consequence: do not price an
+African engagement off a compliance tracker.** The binding constraints are data-protection law
+and procurement rules, not an AI act — and a proposal that claims otherwise will be corrected
+by the client. *Confidence: moderate; single-source for the CASRAI framing, and the primary
+instruments were not read (`aclanthology.org` and most non-GitHub hosts do not resolve here).*
+
+#### EMEA demand — three measures added p895
+
+- **Adoption has crossed from pilots to programmes.** Futuresource Consulting puts **67% of
+  teachers now using AI tools** and describes the shift as experimentation → **structured
+  implementation** backed by formal policy and professional development. It also forecasts
+  **AI-capable PCs at ~15% of institutional PC shipments in 2026**, higher education leading.
+  🔵 **Read that as a budget signal:** structured implementation is where enablement and
+  governance work gets funded, and it is what `compose/patterns.md` **P10** sells into.
+- **Teacher confidence is the brake, and it is measured.** A six-country European survey of
+  ~3,360 respondents (Jul–Aug 2026, commissioned by Epson) found **~80% of teachers worry AI
+  is entering classrooms faster than schools can manage.** Pair with T11: capacity, not
+  licensing, is the binding constraint.
+- **Institutional leadership names its own gaps.** The Digital Education Council's EMEA summit
+  (Paris, 2026; 41 senior leaders from 30 institutions) reported **governance and measurement**
+  as the unresolved agenda items — which is the demand statement for **P7** (evidence-of-efficacy)
+  and **P8** (metering and cost attribution).
+
+*Confidence: moderate. All three are vendor- or council-commissioned research; the underlying
+instruments were not read.*
 
 #### Middle East — first dedicated leg
 

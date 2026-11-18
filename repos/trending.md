@@ -4,6 +4,98 @@ region: Global
 updated: 2026-11-18
 ---
 
+## `2026-11-18` (p895) — an MIT, fork-heavy, Africa-deployed platform is missing from every live shelf, and the history says it was placed there
+
+**Channel:** `gh api search/repositories` (`org:` and exam-name qualifiers) plus
+`raw.githubusercontent.com` licence byte-reads on **8 candidate paths** per repo. `github.com`
+HTML is `403` and `aclanthology.org` does not resolve in this session.
+
+### 🔴 `elimu-ai/webapp` — restored to `repos/foundations.md` and `verticals/solutions.md`, region corrected to EMEA
+
+| Field | Value (measured 2026-11-18) |
+|---|---|
+| Repo | [`elimu-ai/webapp`](https://github.com/elimu-ai/webapp) |
+| Licence | 🟢 **MIT**, byte-read `main/LICENSE`, **1,065 B** |
+| Stars / forks | **41 ★ / 67 forks** — a fork-heavy ratio that reads like deployment, not stargazing |
+| Last push | **2026-11-17** |
+| Created | 2016-01-02 — a ten-year-old project, not a weekend one |
+| Region | 🟢 **EMEA** (Sub-Saharan: Tanzania/Kenya) — **not APAC, as `agents/trending.md:7722` has it** |
+
+🔴 **It was on no live shelf when this pass started.** `grep -c elimu`: `agents/top.md` **0**,
+`repos/foundations.md` **0**, `verticals/solutions.md` **0** — while `agents/trending.md:7722`
+names `repos/foundations.md` as its shelf, `:19909` counts it among four rows placed there, and
+the archived `archive/2026-11-04-p650-pre-rewrite/repos/foundations.md:1911` **still carries the
+row, correctly regioned EMEA**. The `2026-11-04` rewrite deleted it.
+
+🔵 **This is the second consecutive pass to find a row deleted by a rewrite** — `p894` found the
+same for [`UniTime/unitime`](https://github.com/UniTime/unitime) (Apache-2.0, 360 ★). **Two in
+two passes is a process defect.** The failure is self-concealing: the deleted row's trending
+entry still reads as current, so the history asserts coverage the shelf does not have. The
+durable fix is a **shelf-vs-history slug diff** in `compose/code/` run before any rewrite
+ships; it is the recommended first job of the next pass, and it would have caught both rows.
+
+### The `elimu-ai` organisation, 12 repos byte-read
+
+🟢 Ten serve the **identical 1,065 B MIT** text. 🟡 `web3-aragon-connect` is a **1,079 B** MIT
+variant. 🔴 [`web3-wiki`](https://github.com/elimu-ai/web3-wiki) (4 ★, pushed **2026-11-18**) is
+**CC0-1.0, 7,048 B** — *"Creative Commons Legal Code"*, a public-domain dedication with **no
+patent grant and no warranty disclaimer**. The org is **predominantly**, not entirely, MIT.
+
+Notable members beyond `webapp`:
+[`appstore`](https://github.com/elimu-ai/appstore) (29 ★, MIT, 2026-11-15) delivers and updates
+**APKs with no app store and no network** — the single most useful component for a
+low-connectivity engagement; [`launcher`](https://github.com/elimu-ai/launcher) (9 ★, MIT) is an
+Android launcher enforcing an **EGRA/EGMA** literacy-and-numeracy path;
+[`ml-storybook-reading-level`](https://github.com/elimu-ai/ml-storybook-reading-level) (8 ★, MIT,
+pushed **2026-11-17**) and
+[`ml-storybook-recommender`](https://github.com/elimu-ai/ml-storybook-recommender) (3 ★, MIT,
+pushed **2026-11-18**) are the levelling and recommendation tier;
+[`vitabu`](https://github.com/elimu-ai/vitabu) (2 ★, MIT) and
+[`keyboard`](https://github.com/elimu-ai/keyboard) (3 ★, MIT) cover books and input.
+
+🔴 **One component is a liability, not an asset.**
+[`ml-authentication`](https://github.com/elimu-ai/ml-authentication) (16 ★, MIT) is **student
+login by on-device face recognition** — **biometric identification of children.** It is also
+the one repo in the org idle since **2025-02-25**. Treat it as a deliberate *removal* in any
+client derivative and say so in the proposal; under the EU AI Act it drags an otherwise
+ordinary literacy deployment toward a regime nobody budgeted for.
+
+🟡 **`Gap 486-J` is not discharged.** Everything above is licence bytes, stars, forks, push
+dates and descriptions. **No source was read.** The EGRA/EGMA path, the face-recognition
+pipeline and the Aragon DAO governance remain unverified claims; the 67:41 fork-to-star ratio
+is *suggestive* of deployment and is not evidence of it.
+
+### 🟡 African-curriculum repo census by national-exam channel — a ~1 ★ ceiling, almost nothing licensed
+
+| Channel | Total hits | Best relevant | ★ | Licence (byte-read) |
+|---|---|---|---|---|
+| `WAEC` | 45 | [`Seunope/aloc-endpoints`](https://github.com/Seunope/aloc-endpoints) — self-described **"20,000 past questions API end points for POST-UTME, UTME, WASSCE, NECO"**; created 2018-08-13, pushed 2026-11-17, default branch `master` | **223** | 🔴 **none** — 8 × 404 |
+| `WAEC` | | [`idoqo/waec`](https://github.com/idoqo/waec) | 24 | 🟢 MIT — **idle since 2018-12-06** |
+| `KCSE` | 102 (mostly `KCSession`/`KCSetGNN` false positives) | [`mistidevs/KNEC-School-Results-Checker`](https://github.com/mistidevs/KNEC-School-Results-Checker) | 7 | 🔴 **none** |
+| `KCSE` | | [`kisugez/results-finder`](https://github.com/kisugez/results-finder) | 5 | 🟢 MIT · 1,069 B |
+| `BECE` | 60 | nothing above 2 ★; `bece-prep`, `ghanalearn`, `Adesuah` | ≤2 | 🔴 **none** |
+| `CAPS`/`IEB` | **3** | [`munaops/AI-Teaching-Assistant-for-South-African-Curriculum-CAPS-IEB`](https://github.com/munaops/AI-Teaching-Assistant-for-South-African-Curriculum-CAPS-IEB) | **0** | 🔴 **none** |
+
+🔴 **The highest-star African education repo found is a question bank with no licence.**
+`aloc-endpoints` at 223 ★ is the most *useful-looking* asset in the census and the least
+usable: no licence means all rights reserved, and its payload is **exam questions**, i.e.
+third-party copyright on top of the licence absence. It is the `ChinaTextbook` lesson
+(`verticals/solutions.md` → Honest gaps) in a second region: **content corpora are where star
+count and usability diverge hardest.**
+
+🔴 **Method: `JAMB` is an unusable channel.** 415 hits led by `awesome-newsletters` (4,511 ★),
+`JamBrain` and `BIMCraft`. **An exam-name channel works only when the acronym is rare.**
+`WAEC`, `KCSE` and `BECE` are rare enough; `JAMB` and `CAPS` collide with ordinary words, so
+`CAPS`'s three hits are a scoping artefact and **not** a census of South African supply.
+Pair a colliding acronym with a country or curriculum term, or do not run the leg.
+
+🔵 **Standing conclusion, now measured:** African supply splits into an **unlicensed
+published-paper layer** and a **permissive deployed-platform layer**, and they do not overlap.
+`repos/foundations.md` should carry the platform layer — `elimu-ai/webapp` (MIT),
+[`learningequality/kolibri`](https://github.com/learningequality/kolibri) (MIT),
+[`oppia/oppia`](https://github.com/oppia/oppia) (Apache-2.0) — and the agent tier is studio IP.
+See new pattern **P14** in `compose/patterns.md`.
+
 ## `2026-11-18` (p894) — a 360 ★ Apache-2.0 registrarial system was verified by an earlier pass and is missing from the shelf a studio opens
 
 **Channel:** batched `repo:` qualifiers against `gh api search/repositories` plus

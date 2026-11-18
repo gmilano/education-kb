@@ -130,6 +130,7 @@ deliverable at all.
 | **Kiwix** | https://github.com/kiwix/kiwix-tools | GPL-3.0 | Offline Wikipedia and ZIM content serving. |
 | **Project NOMAD** | https://github.com/Crosstalk-Solutions/project-nomad | Apache-2.0 | Offline-first knowledge/education server. Permissive alternative to the above. |
 | **Kolibri** | https://github.com/learningequality/kolibri | MIT | See LMS table — designed offline-first from the start. |
+| **elimu.ai** | https://github.com/elimu-ai/webapp | MIT (byte-read `main/LICENSE`, 1,065 B) | **Restored p895; region EMEA.** Early-grade literacy for **out-of-school children**, Sub-Saharan (Tanzania/Kenya). 41 ★ / **67 forks**, pushed **2026-11-17**. **Africa-origin and permissive — the only such platform this KB has verified.** The component that matters here is https://github.com/elimu-ai/appstore (MIT, 29 ★): **installs and updates APKs with no app store and no network**, which is a harder problem than offline content and is already solved. `launcher` (MIT, 9 ★) enforces an EGRA/EGMA path. 🔴 **Exclude `ml-authentication` (face-recognition student login — biometric identification of children).** 🟡 Licence and metadata verified; **source not read** (`Gap 486-J`). |
 
 ## Supporting platform services
 
@@ -169,6 +170,15 @@ not once per engagement.
   larger than every platform in this file and usable in none of them. **Byte-read the licence of
   any content asset before it reaches a client deck** — curriculum corpora are where star count
   and usability diverge most sharply.
+
+  **A second region, measured p895.** The highest-star African education repo this KB has found is
+  https://github.com/Seunope/aloc-endpoints (**223 ★**, pushed 2026-11-17), a Nigerian
+  **past-questions API** — self-described *"20,000 past questions API end points for POST-UTME,
+  UTME, WASSCE, NECO"* — and it has **no licence on any of 8 candidate paths**
+  (`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING` × `main`/`master`, all 404). Same shape as
+  `ChinaTextbook` on a different continent: the most useful-looking asset in the category is the
+  least usable, and it carries **third-party exam copyright on top of the licence absence**.
+  **The rule generalises: for content, byte-read the licence *and* ask who owns the payload.**
 
 - **No open-source education CRM.** Searches for one returned SIS and school-management
   products only. Student-recruitment and alumni CRM is proprietary (Salesforce Education

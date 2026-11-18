@@ -37,6 +37,20 @@ gap entries below are rewritten with today's measurements, and the detail is in
 43,874 → **43,878**, `LearnHarness` 10,002 → **10,020**) — a fifth consecutive confirmation of
 the daily cadence. **Full sweep still due 2026-11-19.**
 
+
+**p895 (this pass) ran the first dedicated *supply-side* leg on Africa and the Middle East — the
+oldest standing gap in this file — and it moved three ways.** The Africa-origin agent two passes
+had failed to locate **exists** (`Eddy-Emmanuel/EduNaija-LLM`) and is **unlicensed, 1 ★ and
+eleven months idle**, so it earns no row; reading it **corrected this KB's own description of
+the paper behind it**. The second standing lead, `AFRILANGTUTOR`, **is not on GitHub at all**.
+And the "nothing from Africa" claim was refuted by this base's **own deleted row** —
+`elimu-ai/webapp`, MIT, 41 ★ / 67 forks, pushed 2026-11-17, **absent from every live shelf**
+though the history records it as placed. **That is the second consecutive pass to find a row
+deleted by a rewrite** (p894 found the same for `UniTime/unitime`), which makes it a process
+defect rather than an accident: the recommended next job is a shelf-vs-history slug diff in
+`compose/code/`. The LATAM gap bullet was also **stale against the table directly above it**
+and is corrected. No row was added to the table this pass.
+
 **p893 ran a full discovery leg and it changed the table's shape.** Ten agents were
 added — the largest single-pass addition this KB has made — including **LearnHarness
 (AGPL-3.0, 10,002 ★)**, which did not exist on 16 October 2026 and is now the third-largest open
@@ -229,11 +243,50 @@ Recording gaps because an unrecorded gap looks exactly like coverage.
   evidence extraction and keep scoring deterministic, and anchor evidence per criterion with a
   separate regrade path — the second is what makes an appeal procedure possible, which is what
   Annex III actually requires.
-- **Almost nothing from LATAM.** `warleysr/ankipa` (10 ★, Brazil) is the only LATAM-origin
-  education agent verified. LATAM edtech searches returned companies (Teachy, Vetto, Ginia),
-  not repos. For a LATAM engagement, expect to localise an APAC- or EMEA-origin agent.
-- **Nothing from Africa or the Middle East**, which this KB's closed region vocabulary files
-  under EMEA — so "EMEA" coverage here is in practice European coverage.
+- **Thin from LATAM — and this bullet was stale against the table above it (corrected p895).**
+  It read *"`warleysr/ankipa` (10 ★, Brazil) is the only LATAM-origin education agent
+  verified"*, while the table has carried https://github.com/CaioCastro1/usp-mcp
+  (**MIT, 28 ★, pushed 2026-11-13**, Universidade de São Paulo) since p893 — **2.8× ankipa's
+  stars.** Both remeasured today: `usp-mcp` **28 ★**, `ankipa` **10 ★**. So LATAM has **two**
+  verified origin agents, both MIT, both Brazilian, both small. The honest statement is that
+  LATAM supply is **thin and Brazil-only** — nothing verified from Spanish-speaking Latin
+  America, where most of the region's students are. LATAM edtech searches still return
+  companies (Teachy, Vetto, Ginia), not repos. For a LATAM engagement, expect to localise an
+  APAC- or EMEA-origin agent. **A gap bullet that contradicts its own table is worse than no
+  bullet: it is read as a measurement.**
+- **Africa: the agent layer is unlicensed, the platform layer is MIT — and this file's
+  "nothing from Africa" was wrong (rewritten p895 after the first dedicated supply-side leg).**
+  The previous text read *"Nothing from Africa or the Middle East ... so 'EMEA' coverage here
+  is in practice European coverage."* Measured today:
+  - 🟢 **The agent this KB hunted for two passes exists.**
+    https://github.com/Eddy-Emmanuel/EduNaija-LLM is the code behind ACL AfricaNLP 2026's
+    EduNaija AI Tutor (WAEC/NECO/JAMB; English, Nigerian Pidgin, Yorùbá, Igbo, Hausa),
+    which `intel/open-gaps.md` recorded as *"code this pass could not locate at all."*
+    **It earns no row: no licence on any of 8 candidate paths (8 × 404, byte-read), 1 ★,
+    untouched since 2025-12-22.** Reading it also **corrected this KB's description of the
+    paper** — three LangGraph nodes and Tavily *web* search, not "five agents and FAISS", and
+    an evaluation the README itself calls *"design-based"*. **Grounding on general web search
+    and requiring OpenAI + Tavily connectivity is the wrong design for the one region where
+    offline capability decides deliverability.** Detail in `agents/trending.md` (p895).
+  - 🔴 **`AFRILANGTUTOR`, the other standing lead, is not on GitHub** —
+    `in:name,description,readme` returns **`total_count: 0`**. Closed, negatively.
+  - 🟢 **The platform layer is real, permissive and was on no shelf.**
+    https://github.com/elimu-ai/webapp — **MIT (byte-read, 1,065 B), 41 ★ / 67 forks, pushed
+    2026-11-17**, created 2016 — plus eleven sibling repos, ten sharing that identical MIT
+    text. **Restored to `repos/foundations.md` and `verticals/solutions.md` this pass**, with
+    its region corrected from **APAC to EMEA**.
+  - 🟡 **Exam-channel census: a ~1 ★ ceiling and almost nothing licensed.** `WAEC` 45 hits,
+    `KCSE` 102 (mostly false positives), `BECE` 60, `CAPS`/`IEB` **3 in total**. The
+    highest-star find, https://github.com/Seunope/aloc-endpoints (**223 ★**, pushed 2026-11-17),
+    is a **20,000-question POST-UTME/UTME/WASSCE/NECO bank** with **no licence**. **`JAMB` is an unusable channel** — 415 hits headed by
+    `awesome-newsletters` — so an exam-name leg needs a rare acronym or a country term.
+  - **Build-vs-adopt, Africa:** adopt the platform, build the agent tier. Same verdict p894
+    reached for registrarial work via UniTime, from the opposite direction. See
+    `compose/patterns.md` **P14**.
+- **Still nothing from the Middle East on the *supply* side.** `intel/market.md` carries
+  dedicated Saudi and UAE legs on **demand** — 50 new curriculum units for 2026-27, a federal
+  UAE mandate — and this pass found **no corresponding repository**. The untried channel is
+  Arabic-language search (the `elimu` Swahili trick applied to `تعليم`); it was not run.
 - **No confirmed November 2026 *launch*.** The newest dated release artefact is OpenMAIC
   `v1.4.2` (2026-11-09). Re-checked in pass p890 across four global and four regional search
   legs: unchanged.

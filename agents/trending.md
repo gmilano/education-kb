@@ -4,6 +4,165 @@ region: Global
 updated: 2026-11-18
 ---
 
+## `2026-11-18` (p895) — the Africa-origin agent this KB hunted for two passes exists, and reading it cost it most of its value
+
+**Channel:** `gh api search/repositories` with batched `repo:` and exam-name qualifiers, plus
+`raw.githubusercontent.com` licence byte-reads across **8 candidate paths** (`LICENSE`,
+`LICENSE.md`, `LICENSE.txt`, `COPYING` × `main`/`master`). `aclanthology.org` does **not
+resolve** in this session, so the ACL paper itself could not be read — the paper↔repo link was
+closed by **reading the code's own README** instead, which is `p351`'s rule applied to
+provenance rather than to licences. This pass ran **one discovery leg against this KB's
+oldest standing gap** — Africa and the Middle East on the *supply* side — rather than
+re-measuring known cohorts.
+
+### 🟢 `EduNaija AI Tutor`'s code is located. `p873`'s "next pass: try Hugging Face" is discharged, and the answer was on GitHub all along
+
+[`Eddy-Emmanuel/EduNaija-LLM`](https://github.com/Eddy-Emmanuel/EduNaija-LLM) — **1 ★**,
+created `2025-12-15`, **pushed `2025-12-22`**, **no licence at any of 8 candidate paths (8 × 404,
+byte-read)**. Its README opens *"This paper presents EduNaijaAgent"*, targets **WAEC, NECO and
+JAMB**, and answers in **English, Nigerian Pidgin, Yorùbá, Igbo and Hausa**. That is the system
+of ACL AfricaNLP 2026 (DOI `10.18653/v1/2026.africanlp-main.11`), and `intel/open-gaps.md`
+recorded it as *"whose code this pass could not locate at all."* **It is located.**
+
+🔴 **But reading it contradicts this KB's own recorded description of the paper, and in the
+direction that matters.** This base carried the paper as *"a five-agent LangChain + FAISS
+tutor."* The code is **three** LangGraph nodes — main agent, verifier agent, web-search agent —
+and retrieval is **Tavily web search, not FAISS over a curriculum corpus**:
+
+| What the KB recorded | What the code is |
+|---|---|
+| Five agents | **Three** nodes: main → verifier → conditional web search |
+| LangChain + **FAISS** | LangGraph + **Tavily API**. No vector store, no curriculum corpus |
+| English / Yoruba / Hausa / Igbo | **Five** languages — adds **Nigerian Pidgin** |
+| (unstated) | Evaluation is **"design-based"**; the README says *"As a prototype"* and *"Preliminary design analysis suggests potential"* — **no empirical result at all** |
+| (unstated) | README itself flags `gpt-5-mini` in code as *"likely a placeholder"* for GPT-4o-mini |
+
+🔵 **The three consequences are worth more than the row.**
+
+1. **It is not adoptable.** No licence means all rights reserved. 1 ★, untouched for eleven
+   months. It earns **no row in `agents/top.md`** under the `p893` rule, and it is recorded here
+   instead.
+2. **Retrieval-over-web, not retrieval-over-curriculum, inverts the design this KB recommends
+   for exactly this market.** A Nigerian exam tutor whose grounding is a general web search is
+   the thing `EduAgent`/`AI_Tutor_Release` was praised in `agents/top.md` for *not* doing.
+   Worse, **it requires OpenAI + Tavily connectivity** — in the one region where
+   `verticals/solutions.md` says offline capability *"decides whether the engagement is
+   deliverable at all."*
+3. **A peer-reviewed paper is not evidence of a working system.** This KB has been treating the
+   AfricaNLP publication as the strongest African signal it had. The publication is real; the
+   artefact behind it is a prototype with no evaluation. **Read the code before you cite the
+   venue** — the generalisation of `p894`'s grading finding to publications.
+
+### 🟢 `AFRILANGTUTOR` is closed, negatively: it is not on GitHub
+
+`AFRILANGTUTOR in:name,description,readme` → **`total_count: 0`**. The second Africa lead
+`p873` deferred is now answered. **Zero is a result.** Recorded so no future pass spends a leg
+on it; if the code exists it is on a host this session cannot reach.
+
+### 🔴 "Nothing from Africa" was wrong, and the counter-example is this KB's own deleted row
+
+`agents/top.md` states *"Nothing from Africa or the Middle East ... so 'EMEA' coverage here is
+in practice European coverage."* Measured today, the `elimu-ai` organisation is **predominantly MIT and was
+pushed this week**:
+
+| Repo | ★ | Licence (byte-read) | Pushed | Forks |
+|---|---|---|---|---|
+| [`elimu-ai/webapp`](https://github.com/elimu-ai/webapp) | **41** | 🟢 MIT · `main/LICENSE` · 1,065 B | **2026-11-17** | **67** |
+| [`elimu-ai/appstore`](https://github.com/elimu-ai/appstore) | 29 | 🟢 MIT · 1,065 B | 2026-11-15 | 8 |
+| [`elimu-ai/ml-authentication`](https://github.com/elimu-ai/ml-authentication) | 16 | 🟢 MIT · 1,065 B | 2025-02-25 | 16 |
+| [`elimu-ai/wiki`](https://github.com/elimu-ai/wiki) | 13 | 🟢 MIT · 1,065 B | 2026-11-05 | 5 |
+| [`elimu-ai/launcher`](https://github.com/elimu-ai/launcher) | 9 | 🟢 MIT · 1,065 B | 2026-10-08 | 2 |
+| [`elimu-ai/ml-storybook-reading-level`](https://github.com/elimu-ai/ml-storybook-reading-level) | 8 | 🟢 MIT · 1,065 B | **2026-11-17** | 10 |
+| [`elimu-ai/web3-wiki`](https://github.com/elimu-ai/web3-wiki) | 4 | 🔴 **CC0-1.0** · 7,048 B · *"Creative Commons Legal Code"* | **2026-11-18** | 6 |
+| [`elimu-ai/model`](https://github.com/elimu-ai/model) | 4 | 🟢 MIT · 1,065 B | 2026-10-28 | 8 |
+| [`elimu-ai/keyboard`](https://github.com/elimu-ai/keyboard) | 3 | 🟢 MIT · 1,065 B | 2026-10-03 | 1 |
+| [`elimu-ai/ml-storybook-recommender`](https://github.com/elimu-ai/ml-storybook-recommender) | 3 | 🟢 MIT · 1,065 B | **2026-11-18** | 3 |
+| [`elimu-ai/vitabu`](https://github.com/elimu-ai/vitabu) | 2 | 🟢 MIT · 1,065 B | 2026-11-04 | 6 |
+| [`elimu-ai/web3-aragon-connect`](https://github.com/elimu-ai/web3-aragon-connect) | 3 | 🟡 MIT · **1,079 B** (variant text) | 2022-04-26 | 1 |
+
+🟢 **Two corrections fall out of the measurement.**
+
+- **`agents/trending.md:34821` says the org is *"entirely MIT."* It is not.**
+  **Twelve repos byte-read this pass.** `web3-wiki` serves a **7,048 B CC0-1.0** text
+  (*"Creative Commons Legal Code"*) — a public-domain dedication, not a software licence, so no
+  patent grant and no warranty disclaimer. **Ten** of the twelve serve the *identical* 1,065 B
+  MIT text, which is a cross-pass consistency check that holds against `p486`'s reading; the
+  eleventh, `web3-aragon-connect`, is a **1,079 B** MIT variant. So the org is
+  **predominantly** MIT with two exceptions — "entirely" was one repo too strong, and the one
+  that breaks it is the one a content pipeline would reach for. **An org-level licence claim
+  needs an org-level read.**
+- **`agents/trending.md:7722` files `elimu-ai/webapp` as `APAC`. It is `EMEA`.** elimu.ai is a
+  Sub-Saharan deployment (Tanzania/Kenya), which is **EMEA** under this base's closed region
+  vocabulary — and the archived row at
+  `archive/2026-11-04-p650-pre-rewrite/repos/foundations.md:1911` **had it right**. The rewrite
+  that dropped the row also lost its correct region. A mis-regioned row is worse than a missing
+  one: it answers a regional filter with the wrong continent.
+
+### 🔴 The row is on no live shelf — and that is the second consecutive pass to find a deleted row
+
+`grep -c elimu` across the live shelves: **`agents/top.md` 0 · `repos/foundations.md` 0 ·
+`verticals/solutions.md` 0.** Yet `agents/trending.md:7722` names `repos/foundations.md` as its
+shelf, `:19909` counts it as one of four rows placed there, and `:34821` says the org was
+*"carried onto the verticals shelf this pass."* **It was placed, recorded as placed, and then
+deleted in the `2026-11-04` rewrite — exactly what `p894` found for `UniTime/unitime`.**
+
+🔵 **Two in two passes makes it a process defect, not an accident.** The rewrites are losing
+rows that the history says are placed, and the loss is invisible because the deleted row's own
+trending entry still reads as current. **This pass restores `elimu-ai/webapp` to
+`repos/foundations.md` and `verticals/solutions.md` and corrects its region to EMEA** — but the
+durable fix is a gate: *before a rewrite ships, diff the slugs on each shelf against the slugs
+the history claims are on it.* `compose/code/` is where that belongs, and it is the recommended
+first job of the next pass.
+
+### 🟡 The African-curriculum cohort, quantified by exam-name channel — a ~1 ★ ceiling and almost nothing licensed
+
+Four national-exam channels run in one batch. **Everything found is unlicensed except where noted:**
+
+| Channel | Hits | Best relevant result | ★ | Licence |
+|---|---|---|---|---|
+| `WAEC` (Nigeria/West Africa) | 45 | [`Seunope/aloc-endpoints`](https://github.com/Seunope/aloc-endpoints) — past-questions API | **223** | 🔴 **none** (8 × 404) |
+| `KCSE` (Kenya) | 102, mostly false positives | [`mistidevs/KNEC-School-Results-Checker`](https://github.com/mistidevs/KNEC-School-Results-Checker) | 7 | 🔴 **none** |
+| | | [`kisugez/results-finder`](https://github.com/kisugez/results-finder) | 5 | 🟢 MIT · 1,069 B |
+| `BECE` (Ghana) | 60 | nothing above **2 ★**; `bece-prep`, `ghanalearn`, `Adesuah` all unlicensed | ≤2 | 🔴 **none** |
+| `CAPS`/`IEB` (South Africa) | **3 in total** | [`munaops/AI-Teaching-Assistant-for-South-African-Curriculum-CAPS-IEB`](https://github.com/munaops/AI-Teaching-Assistant-for-South-African-Curriculum-CAPS-IEB) | **0** | 🔴 **none** |
+
+🔴 **`JAMB` is an unusable channel and that is a method finding.** 415 hits, headed by
+`awesome-newsletters` (4,511 ★), `JamBrain`, `BIMCraft` — the token collides with ordinary
+English and project names. **An exam-name channel only works when the acronym is rare**
+(`WAEC`, `KCSE`, `BECE` work; `JAMB`, `CAPS` do not — `CAPS`'s three hits are a *scoping*
+artefact, not a census). Pair a colliding acronym with a country or curriculum word, or do not
+run it.
+
+🔵 **The shape of African supply is now measured rather than asserted.** Two populations, and
+they do not overlap: a **published-paper layer** (EduNaija, AFRILANGTUTOR) that is unlicensed,
+uncited-in-code and sometimes absent; and a **deployed-platform layer** (`elimu-ai`, and
+`kolibri`/`oppia` from outside the continent) that is MIT, fork-heavy and pushed this week.
+**The adoptable African asset is a platform, not an agent — so for an African engagement the
+agent tier is studio IP and the platform is adopted.** This is the same build-vs-adopt verdict
+`p894` reached for registrarial work via UniTime, arrived at from the opposite direction.
+New pattern **P14** in `compose/patterns.md`, and `EmmS21/fundAI` (0 ★, **no licence**, pushed
+2026-02-02, offline tutors on preloaded laptops) is recorded as a design reference only.
+
+### Gaps this pass leaves open
+
+- 🔴 **`aclanthology.org` does not resolve in this session**, so every ACL/AfricaNLP claim in
+  this base rests on search snippets plus code reads. **Allow that host** and the paper layer
+  becomes verifiable. Until then, do not upgrade a paper claim past "reported".
+- 🟡 **`elimu-ai`'s substance is still unread.** The EGRA/EGMA literacy path, the on-device
+  face-recognition login (`ml-authentication`) and the Aragon DAO governance remain
+  licence-and-metadata findings only — `Gap 486-J` is **not** discharged. The
+  face-recognition login is a **biometric identification of children**: treat it as a
+  deliberate removal in any client derivative, not a feature, and note it is the one repo in
+  the org idle since 2025-02-25.
+- 🟡 **No Middle East *repo* found this pass.** The dedicated legs in `intel/market.md` cover
+  Gulf **demand** (Saudi's 50 curriculum units, the UAE mandate) and found no corresponding
+  **supply**. Arabic-language channels (the `elimu` Swahili trick applied to `تعليم`) are the
+  obvious next leg and were not run.
+- 🟢 **Star cadence unchanged:** `DeepTutor` 60,274 → **60,286** since the p894 measurement
+  this morning, and **60,289** on a second read minutes later in the same pass. **A metric that
+  moves by 3 between two reads of one pass cannot carry an hourly narrative** — the table's
+  figure is deliberately left at p894's. Still a daily metric; still not worth a leg.
+
 ## `2026-11-18` (p894) — the two cohorts this KB named as gaps both exist, and both were measured today: special education tops out at **1 ★**, automated grading at **0 ★**
 
 **Channel:** batched `repo:` qualifiers against `gh api search/repositories` (stars, SPDX,

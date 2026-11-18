@@ -10,7 +10,12 @@ Concrete recipes. Each names the exact repos, how they wire together, the licenc
 the result, and a realistic build estimate. Every repo referenced is verified in
 `agents/top.md`, `repos/foundations.md` or `verticals/solutions.md`.
 
-**Thirteen patterns. p894 added P12 and P13** — the registrarial tier the KB has named as its
+**Fourteen patterns. p895 added P14** — offline-first literacy delivery on the one Africa-origin
+permissive platform this KB has verified (`elimu-ai`), with the agent tier as studio IP because
+the supply measurement leaves nothing licensed to adopt (see **T16**). **It is also the only
+pattern here whose licence posture is permissive end to end.**
+
+**p894 added P12 and P13** — the registrarial tier the KB has named as its
 top opportunity for four passes, now scoped against the Apache-2.0 platform that turned out to
 exist (`UniTime`), and a persona-stateless tutor design for the three regimes that have made
 affective design a regulated activity for minors (see **T14**).
@@ -18,7 +23,8 @@ affective design a regulated activity for minors (see **T14**).
 **Licence rule that governs all of these.** Open edX (AGPL-3.0), Canvas (AGPL-3.0) and Moodle
 (GPL-3.0) are copyleft. Integrating over **LTI 1.3** or **MCP** keeps your tool a separate
 work; forking the platform does not. Where a client needs a proprietary derivative, start from
-**Artemis (MIT)**, **Kolibri (MIT)**, **Oppia (Apache-2.0)** or **OpenOLAT (Apache-2.0)** instead.
+**Artemis (MIT)**, **Kolibri (MIT)**, **elimu-ai/webapp (MIT)**, **Oppia (Apache-2.0)** or
+**OpenOLAT (Apache-2.0)** instead.
 
 ---
 
@@ -915,3 +921,124 @@ surfaces — mapping, not rebuilding, if rule 5 was honoured.
   specifically. **Confirm scope before signature.**
 - **Not where the client's differentiator *is* the character.** This pattern removes it; say so
   before the engagement starts rather than in week six.
+
+---
+
+## P14 — Offline-first literacy delivery on an Africa-origin platform, with the agent tier as studio IP (added p895)
+
+### Why this pattern exists
+
+**Added p895, from T16 and the first dedicated Africa supply-side leg.** Every prior Africa
+entry in this KB measured demand. The supply measurement changes the shape of the engagement:
+
+- 🟢 **There is exactly one adoptable Africa-origin platform**, and it is permissive:
+  https://github.com/elimu-ai/webapp — **MIT** (byte-read `main/LICENSE`, 1,065 B),
+  **41 ★ / 67 forks**, created 2016, **pushed 2026-11-17**. Early-grade literacy for
+  out-of-school children, Tanzania/Kenya.
+- 🔴 **There is no adoptable agent layer.** The published Africa-origin tutor
+  (ACL AfricaNLP 2026's EduNaija, https://github.com/Eddy-Emmanuel/EduNaija-LLM) has **no
+  licence on any of 8 candidate paths**, 1 ★, idle since 2025-12-22. The national-exam channels
+  return a **~1 ★ ceiling with almost nothing licensed**.
+- **So the division of labour is forced, not chosen: adopt the platform, build the agent tier.**
+  The agent tier is **defensible studio IP** here, which should be reflected in how the
+  engagement is priced.
+
+**The binding constraint is connectivity, and it is the reason the obvious design fails.**
+EduNaija's grounding is a **Tavily web search behind an OpenAI call** — it cannot run where this
+pattern deploys. Retrieval must be local and the model must be local.
+
+### Stack
+
+| Component | Repo | Licence | Role |
+|---|---|---|---|
+| Platform core (Africa-origin) | `elimu-ai/webapp` | **MIT** (1,065 B, byte-read) | Content + Android app hosting for early-grade literacy. Regional provenance that wins a public-sector procurement |
+| App delivery with no network | `elimu-ai/appstore` | **MIT** | **Installs and updates APKs with no app store and no connectivity.** The hardest part of this pattern, already solved |
+| Device-level learning path | `elimu-ai/launcher` | **MIT** | Android launcher enforcing an EGRA/EGMA literacy-and-numeracy path 🟡 *(claim unverified — licence and metadata only)* |
+| Levelling + recommendation | `elimu-ai/ml-storybook-reading-level` · `ml-storybook-recommender` | **MIT** | Reading-level estimation and story selection — the adaptive seam |
+| Alternative / additional core | `learningequality/kolibri` | MIT | Offline-first by design; use where the deployment is not Sub-Saharan or where Kolibri's channel ecosystem is wanted |
+| Pedagogy-bearing content | `oppia/oppia` | Apache-2.0 | Explorations with misconception handling — built for emerging markets |
+| Local inference | `ollama/ollama` | MIT | **Mandatory, not optional.** No cloud model call is reachable at the edge |
+| Local retrieval | `qdrant/qdrant` | Apache-2.0 | Curriculum corpus on-device/on-server — the FAISS-shaped component EduNaija was described as having and does not |
+| Orchestration with policy nodes | `langchain-ai/langgraph` | MIT | Language routing, accommodation floor, escalation as explicit nodes |
+| Eval gate | `acheamponge/wassce-benchmark` | MIT | **The only African-curriculum open evaluation asset this KB has found.** Measure before you claim |
+
+### Wiring
+
+```
+[Android device, intermittent connectivity]
+  elimu-ai/launcher  ──enforces──>  EGRA/EGMA path
+         │
+  elimu-ai/appstore  ──sideloads/updates──>  tutor APK   (no app store, no network)
+         │
+         ├── on-device: reading-level estimate (ml-storybook-reading-level)
+         │              story selection       (ml-storybook-recommender)
+         │
+         └──[sync when a link appears]──> school/district server
+                                            elimu-ai/webapp   (content + roster)
+                                            ollama            (local model)
+                                            qdrant            (curriculum corpus)
+                                            langgraph         (tutor policy graph)
+                                                 │
+                                            wassce-benchmark  (pre-release eval gate)
+```
+
+**Sync is store-and-forward, and that is a design rule, not a limitation.** The tutor must be
+correct with a stale corpus and no server; the server is where the model and retrieval live, the
+device is where the session happens.
+
+### Design rules
+
+1. **Local retrieval over the client's own curriculum. Never general web search.** This is the
+   specific correction the EduNaija reading produced: web grounding is both unreachable at the
+   edge and unaccountable to a syllabus.
+2. **Language routing is a first-class node.** EduNaija's one genuinely transferable idea is
+   detect-then-answer-in-language across five Nigerian languages including **Nigerian Pidgin** —
+   the language learners actually use, and the one a formal corpus omits.
+3. **Keep a verifier node.** The main → verifier → escalate shape is sound; replace its web-search
+   escalation with *retrieve-more-locally, then defer to a teacher*.
+4. **Merge the statutory/programmatic accommodation baseline into agent state** so the model can
+   add but not remove a required accommodation — `P496-1`, unchanged here.
+5. 🔴 **Exclude `elimu-ai/ml-authentication` (MIT, 16 ★).** It is **student login by on-device
+   face recognition — biometric identification of children**, and it is the one repo in the org
+   idle since 2025-02-25. Remove it deliberately, record the removal in the design note, and use
+   roster codes or teacher-mediated login instead.
+6. **Gate the release on `wassce-benchmark`**, and publish the number. In a market with no
+   licensed competition, a measured result is the differentiator.
+
+### Deliverables
+
+An offline-capable tutor over the client's curriculum corpus; a store-and-forward sync tier; the
+language-routing and verifier graph; an accommodation-floor layer; a WASSCE-benchmark eval report
+run before release; and a design note recording the face-recognition exclusion and the
+store-and-forward contract.
+
+### Licence posture
+
+🟢 **Clean and permissive throughout** — MIT and Apache-2.0 only, every licence byte-read. This
+is unusual for this KB: the LMS cores a studio normally inherits (Moodle GPL-3.0, Open edX and
+Canvas AGPL-3.0) are copyleft, so **a closed, branded derivative is genuinely available here.**
+Two cautions: `elimu-ai/web3-wiki` is **CC0-1.0** (public-domain dedication — no patent grant, no
+warranty disclaimer), so do not pull it in as if it were MIT; and **nothing unlicensed from the
+exam-channel census may be vendored**, above all
+https://github.com/Seunope/aloc-endpoints (223 ★, no licence, third-party exam copyright).
+
+### Estimate
+
+**8–10 weeks** for the tutor, local retrieval and sync tier on top of a standing `elimu-ai` or
+`kolibri` deployment. Add **3–4 weeks** per additional language beyond the first two (corpus
+preparation dominates, not code). Add **2 weeks** for the eval gate if the client wants the
+benchmark report as a deliverable.
+
+### Where it does not apply
+
+- **Not for urban, connected deployments** — the offline machinery is real cost. Use **P1** or
+  **P2**.
+- **Not for secondary-exam coaching without a licensed corpus.** The question banks that exist
+  are unlicensed; a client must bring its own content or license it.
+- 🟡 **`elimu-ai`'s source has not been read** (`Gap 486-J`). The licences, stars, forks and push
+  dates are measured; the EGRA/EGMA path, the ML components' quality and the Aragon DAO
+  governance are **descriptions, not findings**. **Read the source during scoping** — this
+  pattern asserts the platform is adoptable on licence and activity evidence, not on a code
+  review.
+- **Not a Middle East pattern.** Despite the shared EMEA bucket, this pass found **no Middle East
+  education repository at all**; Gulf demand is real and the supply leg there is untried.
