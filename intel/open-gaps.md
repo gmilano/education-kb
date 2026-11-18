@@ -4,6 +4,69 @@ region: Global
 updated: 2026-11-18
 ---
 
+## 🆕 `p902` · 2026-11-18 — **Every yield claim in this base was measured against a surface that includes the append-only log, so all of them read 0% by construction. And the growth method `p901` recommended has no existence gate: the first topically-matched index it was pointed at contained three repositories that do not exist.**
+
+🔵 **Summary.** `901-F1` concluded the research channel was saturated and growth had to come from the
+repository channel. The first half was an artifact of the measurement surface (**11 of 19 facts were
+missing from the four reference files**), and the second half was adopted without a verification gate
+(**3 of 19 slugs in the first index audited were fabricated**). Four gaps opened; the two
+methodological ones are the ones that matter.
+
+### 🔴 `902-G1` — every pre-p902 yield claim was scored against the whole tree, including the log
+
+A fact written into `agents/trending.md` once and never promoted counts as "already in base" under
+the whole-tree test, so the test cannot ever report a positive yield. `901-F1`'s saturation verdict is
+the known casualty; earlier passes' null-yield claims have not been re-scored.
+**Acceptance test:** a pass re-scores the last five null-yield claims against
+`intel/market.md` + `intel/trends.md` + `agents/top.md` + `verticals/solutions.md` and reports how
+many were artifacts. **Record to extend:** [`surface-yield.2026-11-18-p902.tsv`](../evidence/surface-yield.2026-11-18-p902.tsv).
+
+### 🔴 `902-G2` — the stranger's-list method has no existence gate, and the measured fabrication rate is 3 in 19
+
+`brandonhimpfen/awesome-ai-in-education` (republished byte-identically as
+`awelist/awesome-ai-in-education`, both `sha256₁₂ 98e1aef693cd`) yields `CTAT/CTAT`,
+`tutoringkit/tutoringkit` and `CAI-BKT/pyBKT` — all `404` on every `raw` path **and** `422` on repo
+search, two of them with no such owner. Its entire *Intelligent Tutoring Systems* section is
+unusable, and `CAI-BKT/pyBKT` is a wrong-owner variant of a repo this base already holds correctly.
+**Acceptance test:** `ingest/` ships a gate that refuses any slug lacking a `raw` `200` on at least
+one path plus a non-`422` owner resolution, with the p902 trio pinned as negative fixtures and
+`CAHLR/pyBKT` as the positive control for the wrong-owner case. **Record:**
+[`curated-index-fabrication.2026-11-18-p902.tsv`](../evidence/curated-index-fabrication.2026-11-18-p902.tsv).
+
+🔵 **Measured worth of the method, so the gate is not read as a rejection of it:** across five
+indexes, **123 slugs absent from this base, 7 real and promotable — 5.7%** — and the real finds came
+from the *generic* lists (`quobit/awesome-python-in-education`, `yrgo/awesome-educational-games`),
+both two years stale, not from the freshly-maintained AI-in-education list. **Topical fit is
+uncorrelated with factual reliability.**
+
+### 🟡 `902-G3` — `agents/top.md`'s metric appendix cannot express "provably real, unmeasurable"
+
+`mwouts/jupytext` is `raw` `200` with an `MIT License` title line and `422` from
+`gh api search/repositories`, this base's only star channel. It is published with stars recorded as
+`unmeasurable` in prose, which the appendix has no column for. **Acceptance test:** the appendix
+carries an explicit `unmeasurable (422)` value and `jupytext` uses it.
+
+### 🟡 `902-G4` — nothing measures log-to-reference-file promotion lag
+
+Eleven facts sat in the append-only log, unpublished, for an unknown number of passes. The discovery
+step is heavily instrumented; the promotion step is not instrumented at all. **Acceptance test:** a
+pass reports, for each fact in the last 20 log sections, whether it reached a reference file and
+after how many passes.
+
+### 🔵 `902-N1` / `902-N2` — two suspicions closed without opening a gap
+
+- **The 80,192★ tie** between `dair-ai/Prompt-Engineering-Guide` and
+  `awesomedata/awesome-public-datasets` is **real**, not a quantised metric: identical on single
+  `repo:` queries, a batched three-repo query, and a `stars:80000..80400` band query that returned
+  both as distinct rows. No gap opened; recorded so no later pass re-chases it.
+- **Grading a licence on the bare substring `MIT` publishes BSD as MIT** (`MIT` is inside `LIMITED`,
+  which appears in every MIT *and* BSD disclaimer). `nbval` was nearly published wrong this way.
+  **This base's shipped tooling is unaffected** — `ingest/address-ledger.py:112` uses `\bMIT\b`,
+  verified not to fire on `LIMITED` on a four-case control, and the byte-read scripts match the
+  phrase `MIT License`. The residual hazard `ingest/doc-channel.py` already documents is the
+  opposite direction (`MIT Media Lab`). No gap opened; the rule is **grade on the title line or on
+  clause structure, never on the token.**
+
 ## 🆕 `p899` · 2026-11-18 — **`898-G1` and `898-G2` both DISCHARGED. `884-G4` RECLASSIFIED as structurally unreachable, on two channels across four hosts. And `898-G1`'s own acceptance test is shown to have named the WEAKER of the two fixes it needed.**
 
 🔵 **Summary.** Two gaps closed with shipped instruments and measured yields; one seven-pass gap

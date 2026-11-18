@@ -1528,3 +1528,101 @@ data). 🟢 **LATAM** — the permissive posture and self-hostability fit the bu
 connectivity is the binding constraint, since **this pattern assumes live video and therefore
 assumes bandwidth.**
 
+
+## P21 — Notebook-native course with deterministic marking and an AI feedback tier, permissive end to end (added p902)
+
+**The gap this closes.** Every assessment pattern in this file routes through a platform — Submitty,
+PrairieLearn, Open edX ORA, Artemis. None of them addresses the case where **the artefact the student
+submits is a notebook**, which is how CS, data science, engineering and quantitative social science
+are actually taught. `p902` verified the whole tier (`repos/trending.md` `902-R1`), and it is the
+**only tier in this KB that is permissive from top to bottom with no copyleft and no enterprise
+carve-out** — compare the LMS tier, where every incumbent is GPL or AGPL.
+
+**Who it is for.** A university faculty, a bootcamp or a corporate upskilling programme teaching
+Python/R at scale, that wants per-student environments with no install day, marking that is
+reproducible enough to survive an appeal, and AI feedback that a lecturer signs off — while keeping
+the result as their own IP.
+
+### The stack, with the grant on every tier
+
+| Tier | Component | Licence | Why this one |
+|---|---|---|---|
+| Student environment | [`jupyterhub/binderhub`](https://github.com/jupyterhub/binderhub) | 🟢 `BSD-3-Clause` (byte-read `1,522 B`, `611f531642d5`) | `2,673★`. A git repo becomes a running environment from a URL. **No lab image, no install day** |
+| Auth + persistence | [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) | 🟢 `BSD-3-Clause` | Use **instead of** BinderHub when students need identity and persistent storage; use **both** when you want ephemeral try-it plus a graded home |
+| Content as text | [`mwouts/jupytext`](https://github.com/mwouts/jupytext) | 🟢 `MIT` (title line byte-read; ★ **unmeasurable**, `902-F3`) | Notebooks as `.py`/`.md`. **This is the tier that makes the curriculum reviewable in a pull request** — without it, course content is a blob and no agent can propose a diff to it |
+| Assignment flow | [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | 🟢 `BSD-3-Clause` | `1,370★`. Release / collect / autograde / feedback. The course standard |
+| Deterministic marking | [`computationalmodelling/nbval`](https://github.com/computationalmodelling/nbval) | 🟡 `BSD-3-Clause` — **SPDX `NOASSERTION`**, resolved from clause structure; Univ. of Southampton | `453★`. Validates a notebook against stored outputs under `pytest`. 🟢 **No model in the loop, so the mark is reproducible and appealable** |
+| Language-agnostic autograding | [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) | 🟢 `BSD-3-Clause` | Add when the course is **R as well as Python**, or when submissions arrive via Canvas/Gradescope |
+| Sandboxing | [`openedx/codejail`](https://github.com/openedx/codejail) | 🟢 `Apache-2.0` | **Before any agent or grader executes student code.** Non-negotiable |
+| Notebook corpus | [`nbgallery/nbgallery`](https://github.com/nbgallery/nbgallery) | 🟢 `MIT` | `150★`. Sharing, search, usage analytics and health checks across the course's notebooks |
+| Mastery model | [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | 🟢 `MIT` | Per-skill mastery from observed responses. UC Berkeley CAHLR |
+| Teacher console | [`appsmithorg/appsmith`](https://github.com/appsmithorg/appsmith) | 🟢 `Apache-2.0` | The approval queue. Nothing generated reaches a student unreviewed |
+| LMS of record | Moodle / Canvas / Open edX | 🔴 `GPL-3.0` / `AGPL-3.0` | **LTI 1.3 / REST only.** Grades out, roster in, no fork |
+| Feedback agent | Studio IP | — | Closed, because every tier above is permissive |
+
+🔴 **Two repos to read and not ship**, both verified this pass: `parmentelat/nbautoeval` is
+**`CC-BY-SA-4.0` on executable code** (no patent grant, ShareAlike reaches derivatives — an exercise
+bank built on it cannot stay closed) and `pyta-uoft/pyta` is **`GPL-3.0`**. PyTA's *idea* — linter
+errors phrased for a beginner — is worth copying into the feedback prompt; its code is not worth
+linking.
+
+### Wiring
+
+1. **Make the course a repository.** Notebooks are committed as text via `jupytext`; the `.ipynb` is
+   a build artefact, never the source of truth. 🟢 This single decision is what makes every later
+   step possible: diffs, review, CI, and an agent that proposes curriculum changes as pull requests.
+2. **`nbgrader` owns the assignment lifecycle.** Author one source notebook per assignment with
+   solution and test cells; release the student version; collect submissions.
+3. **Mark deterministically first, with `nbval` under `pytest` inside `codejail`.** The numeric mark
+   comes from here and **only** from here. 🔴 **Never let the model assign the grade** — this is the
+   `P17` split, and in the US it is also a statutory line (**Oklahoma SB 1734** bars AI used solely
+   for grading).
+4. **Then, and only then, the feedback agent runs** — over the submission, the failing test output
+   and the rubric — and writes *prose*, not a score: what the student got wrong, the beginner-phrased
+   version of the error (the PyTA idea), and the next exercise.
+5. **Every generated comment lands in the Appsmith queue** for the lecturer to accept, edit or
+   discard. Acceptance rate is the metric that tells you whether the tier is working.
+6. **`pyBKT` consumes the deterministic per-test outcomes**, not the model's opinion, so the mastery
+   estimate stays defensible.
+7. **Grades go back over LTI 1.3.** The LMS is never forked, so its copyleft never reaches the studio
+   tier.
+8. **`nbgallery` sits across the corpus** for search, usage analytics and health checks — and its
+   health-check runner is the natural hook for an agent that *repairs* a notebook broken by a library
+   upgrade rather than just flagging it. 🔵 That maintenance job is the recurring-revenue half of this
+   engagement.
+
+### Licence posture of the result
+
+🟢 **Permissive end to end: BSD-3 (BinderHub, JupyterHub, nbgrader, nbval, otter-grader), MIT
+(jupytext, nbgallery, pyBKT), Apache-2.0 (codejail, Appsmith).** Attribution only — no source
+disclosure, no patent surprises, no enterprise carve-out of the kind `p899` found in PrairieLearn's
+`apps/course-agent/`. **The client owns the feedback agent outright.** 🔴 **Two gates before quoting:**
+the LMS stays across a network interface (`G1`), and **`riiid/ednet` must not be used to train
+anything that ships** — it is `CC-BY-NC-4.0`, research only (`T25`, `902-R2`). Validate against
+EdNet in a study; train on the client's own response data.
+
+### Estimate
+
+**6–8 weeks** to a production pilot for one course: 1 week BinderHub/JupyterHub on the client's
+cluster, 1 week converting existing notebooks to `jupytext` and into git (🔵 **this is the step
+clients underestimate** — the existing notebooks are usually undocumented and non-reproducible, and
+fixing that is the real work), 1–2 weeks `nbgrader` + `nbval` test authoring per assignment set,
+1 week `codejail` sandboxing and CI, 1–2 weeks feedback agent and Appsmith queue, 1 week LTI
+write-back. `pyBKT` calibration is a further 2 weeks **and only if the client has historical response
+data** — without it, leave the mastery tier out of scope rather than fitting a model to nothing.
+
+### Where it sells
+
+🟢 **North America, strongest** — the whole tier is built by its universities (Southampton aside:
+Berkeley, Toronto, Michigan, RPI, CMU), the buyer already runs JupyterHub in most CS faculties, and
+the 66%-institution-wide figure says they are past pilots and stuck on rollout. Check **CA AB 1159**
+(student data must not train models) and **NY A 9190** (classroom AI restricted to grade 9+, so K-8
+is out) before scoping. 🟢 **EMEA** — fully self-hostable, which answers the sovereignty question
+(Council of the EU `14902/26`) without a vendor conversation; the UK's January 2026 school safety
+standards are a procurement gate you can sell *against* rather than around. 🟡 **APAC** — strong in
+higher ed, and the one region where the client may already have a frontier general-purpose stack
+(NTU): sell the **deterministic marking and mastery** tiers, which that stack does not provide.
+🟡 **LATAM** — the permissive, self-hostable posture and zero licence cost fit the ~USD 18.2M
+rest-of-region market reality, but **BinderHub assumes bandwidth and a Kubernetes cluster**; where
+neither holds, use `P14`'s offline-first pattern instead and keep only `nbgrader` + `nbval` as a
+local marking tier.

@@ -146,6 +146,30 @@ Where the evidence for "did the AI actually help" has to live.
 | https://github.com/dodona-edu/dolos | MIT | **Added p900 (logged 11×).** **Source-code plagiarism detection**, language-agnostic, from **Ghent University** — 358 ★, pushed 2026-11-16. 🔵 **Academic-integrity work that does not surveil the student**: it compares submissions to each other after the fact, so it carries none of the EU AI Act Annex III exposure that proctoring does (see the `edx-proctoring` row above) |
 | https://github.com/openedx/edx-proctoring | AGPL-3.0 | Proctoring integration. **Regulatory flag:** exam monitoring is an EU AI Act Annex III high-risk use case (obligations from 2 Dec 2027). |
 
+## Notebook-native teaching and assessment — added `p902`
+
+🔵 **Why this section exists.** This file held `nbgrader` and `jupyterhub` and nothing else from the
+Jupyter estate. The five repos below returned **zero hits across every live file** before `p902`. For
+CS, data-science, engineering and quantitative social-science courses — the ones that actually buy
+automated assessment — this is the delivery substrate. **None of them self-describe as education
+software**, which is why `{education}`-qualified discovery legs never surfaced them (same blind spot
+as `jitsi/jitsi-meet` in `verticals/solutions.md`; see `repos/trending.md` `902-R1`).
+
+| Repo | Licence | Role |
+|---|---|---|
+| https://github.com/jupyterhub/binderhub | **BSD-3-Clause** (`LICENSE@main`, 1,522 B, `sha256₁₂ 611f531642d5`; SPDX agrees) | **Added p902.** 2,673 ★, pushed 2026-11-14. Turns a git repo into a running, reproducible notebook environment on demand. **The zero-install route to a student environment** — no lab image, no install day, and the course content stays a repo. Pairs with `jupyterhub` (which this file already holds) for the authenticated, persistent case. |
+| https://github.com/nbgallery/nbgallery | **MIT** (`LICENSE@master`, 1,071 B, `sha256₁₂ 7900749dcb3b`, `MIT License` title line; SPDX agrees) | **Added p902.** 150 ★, pushed 2026-10-22. Notebook sharing, search, usage analytics and automated health checks — **a notebook LMS in all but name**, and permissive, which none of the LMS tier in `verticals/solutions.md` is except Artemis, Kolibri, Mentingo and Pupilfirst. Small star count; read it as a working reference implementation. |
+| https://github.com/computationalmodelling/nbval | 🟡 **BSD-3-Clause — SPDX says `NOASSERTION`.** Byte-read `LICENSE@master` (1,910 B, `sha256₁₂ 1dbc744b78bb`): the file has **no title line at all**, and the grant is resolved from clause structure — redistribution + binary-reproduction + no-endorsement. Copyright **University of Southampton, UK** | **Added p902.** 453 ★, pushed 2025-09-17. A `pytest` plugin that validates a notebook against its stored outputs. 🟢 **This is deterministic marking of a notebook with no model in the loop** — the tier to put *under* an AI grading assist, so the mark is reproducible and the AI only writes feedback (the `P17` split). 🔴 **A bare-substring licence grader calls this MIT** (`MIT` is inside `LIMITED`); see `repos/trending.md` `902-N2`. |
+| https://github.com/parmentelat/nbautoeval | 🔴 **CC-BY-SA-4.0 — a content licence on executable code.** Byte-read `LICENSE@master` (289 B, `sha256₁₂ 1bb69236081f`): *"made available through a Creative Common Licence CC BY-SA 4.0"*. SPDX says `NOASSERTION`. **`(c) 2017 — Inria — Thierry Parmentelat`** | **Added p902 as a flagged row.** 20 ★, pushed 2024-12-11. In-notebook auto-graded exercises. 🔴 **Do not take this as a dependency:** CC-BY-SA-4.0 carries **no patent grant** and its **ShareAlike reaches derivative works**, so an exercise bank built on it cannot stay closed. Use it as a pattern reference. Second instance in this KB of a non-software licence on software, after `withmarbleapp/os-taxonomy` (ODbL) in `agents/top.md`. |
+| https://github.com/mwouts/jupytext | **MIT** (`LICENSE@main`, `MIT License` title line, *"Copyright (c) 2018-2026 Marc Wouts"*) | **Added p902.** 🔴 **Stars: unmeasurable** — `gh api search/repositories` returns `422` for this repo while `raw` returns `200` (the false-absence class, `902-F3`). Recorded as unmeasurable rather than guessed. Notebooks as plain text: **the reason course content can live in git, be diffed, and be reviewed in a pull request** instead of being a blob. The precondition for treating a curriculum as code. |
+| https://github.com/pyta-uoft/pyta | 🔴 **GPL-3.0** (`LICENSE@master`, 35,141 B, `sha256₁₂ 589ed823e9a8`, GNU GPL title line; SPDX agrees) | **Added p902.** 109 ★, pushed 2026-11-17, **University of Toronto**. Static analysis written to *teach*: the same errors a linter reports, phrased for a beginner. 🟡 **Strong copyleft** — invoke it as a separate process over student code, do not link it into a closed product. |
+
+🟢 **The permissive spine of this section is `binderhub` (BSD-3) + `nbgrader` (BSD-3) + `nbval`
+(BSD-3) + `jupytext` (MIT) + `nbgallery` (MIT)** — a complete environment / assignment / marking /
+version-control / sharing stack with no copyleft and no carve-outs. The two flagged rows
+(`nbautoeval`, `pyta`) are the ones to read rather than ship. Wired up end to end in
+`compose/patterns.md` **P21**.
+
 ## Content authoring and pipelines
 
 | Repo | Licence | Role |

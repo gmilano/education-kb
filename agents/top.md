@@ -29,6 +29,27 @@ curriculum graph, correct for the asset and a trap for anyone who reads the repo
 `master/README.rst`.** That is `p900`'s false-absence class landing on the AGPL anchor of the
 whole LMS tier; the two-channel rule caught it. See `agents/trending.md` `901-F3`.
 
+🔴 **`p902` refused three rows that would have landed in this file, and they were fabricated.**
+`p901` recommended growing this base by auditing it against a stranger's curated list. `p902` ran
+that method over five unaudited indexes. The most topically-relevant one —
+`brandonhimpfen/awesome-ai-in-education`, republished byte-for-byte as
+`awelist/awesome-ai-in-education` (both `sha256₁₂ 98e1aef693cd`) — has an **"Intelligent Tutoring
+Systems" section in which all three entries are unusable**: `CTAT/CTAT` and
+`tutoringkit/tutoringkit` **do not exist on any channel** (`404` on every `raw` path, `422` on repo
+search, and for `tutoringkit` no such owner), and `github.com/khan` is an **owner page** described as
+*"reference architectures and pedagogical prompt structures"*. The third fabricated slug,
+**`CAI-BKT/pyBKT`, is a wrong-owner variant of `CAHLR/pyBKT` — which this base already holds, with a
+byte-read MIT grant** — so an importing pass would have published a dead link beside the working row
+for the same software. 🟢 **Nothing from that list entered this file.** The existence gate this
+implies is `902-G2`; the full audit is `agents/trending.md` `902-F2` and
+[the record](../evidence/curated-index-fabrication.2026-11-18-p902.tsv).
+
+🟡 **`p902` also found the first repository this base can prove is real and cannot measure.**
+`mwouts/jupytext` returns `raw` `200` with an `MIT License` title line and `422` from
+`gh api search/repositories`, which is this base's only star channel. It is published in
+`repos/foundations.md` with **stars recorded as `unmeasurable`, not estimated** — see `902-G3` for
+the appendix change that makes that a first-class value.
+
 **Cadence note.** The largest intra-day move across ~30 tracked repos was +21 stars on a
 60,000-star repo. Star counts are a **daily** metric; remeasuring hourly buys nothing and the
 call budget belongs in regional research instead.

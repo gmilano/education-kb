@@ -138,6 +138,26 @@ derivative**; PrairieLearn and Pawtograder are host-only.
 | **Flat** | https://github.com/netless-io/flat | MIT | `6,443★`, pushed `2026-11-10`. Interactive online classroom with whiteboard. **APAC-origin (China), MIT** — the strongest *copyleft-free* option when the client needs MIT specifically. (Through `p900` this row read "strongest permissive option in this category"; **`p901` corrected that** — Jitsi Meet is Apache-2.0 at `30,255★`. Flat remains the pick when MIT is a hard requirement or when the whiteboard is the product.) |
 | **Marsha** | https://github.com/openfun/marsha | MIT | LMS-embedded video management from France Université Numérique. |
 
+## Notebook-native classroom — added `p902`
+
+Deployable systems for the courses where the *artefact the student submits is executable*. This
+category was absent from this file, and it is the one category where the permissive option is the
+incumbent rather than the exception.
+
+| Platform | Repo | Licence | Where it is strong | AI layering seam |
+|---|---|---|---|---|
+| **BinderHub** 🆕 | https://github.com/jupyterhub/binderhub | **BSD-3-Clause** (`main/LICENSE`, `1,522 B`, `sha256₁₂ 611f531642d5`) | `2,673★`, pushed `2026-11-14`. Any course whose content is a git repo: students get a running environment from a URL, with **no install day and no lab image**. The lightest-weight classroom in this file | Kubernetes-native, so the AI tier is a sidecar service the notebook calls; content stays a repo, so a curriculum agent can open a pull request against it |
+| **JupyterHub** | https://github.com/jupyterhub/jupyterhub | BSD-3-Clause | The authenticated, persistent-storage case — institutional deployments with per-student state | Services API and per-user servers; an assistant runs as a Hub service with the student's own scope |
+| **nbgallery** 🆕 | https://github.com/nbgallery/nbgallery | **MIT** (`master/LICENSE`, `1,071 B`, `sha256₁₂ 7900749dcb3b`) | `150★`, pushed `2026-10-22`. Sharing, search, usage analytics and **automated health checks** over a notebook corpus — a notebook LMS in all but name | Permissive and small enough to fork outright. The health-check runner is a natural place to hang an agent that *repairs* a broken notebook rather than just flagging it |
+
+🟢 **This is the one tier in this file with no copyleft problem.** Environment (`binderhub`, BSD-3),
+auth and persistence (`jupyterhub`, BSD-3), sharing (`nbgallery`, MIT), assignment flow (`nbgrader`,
+BSD-3), deterministic marking (`nbval`, BSD-3) and content-as-text (`jupytext`, MIT) are **all
+permissive, with no enterprise carve-outs** — compare the LMS table above, where the incumbents are
+AGPL/GPL. 🔵 **Delivery consequence: a client in a CS or data-science faculty can be given a
+classroom whose derivative they own outright**, which is not true of any Moodle or Open edX
+engagement. The library tier is in `repos/foundations.md`; the wiring is `compose/patterns.md` **P21**.
+
 ## Study tools, practice and assessment delivery
 
 | Platform | Repo | Licence | Notes |

@@ -1,0 +1,27 @@
+# p902 — existence audit of every github.com URL in five curated indexes the base had never audited.
+# channels: raw.githubusercontent.com (README.md + LICENSE + readme.md + index.html at HEAD/main/master),
+#           gh api search/repositories (repo: qualifier), gh api search/users (user: qualifier)
+# verdict: REAL = raw 200; FABRICATED = raw 404 on all paths AND repo-search 422; OWNER_URL = not a repo slug;
+#          SELF = list's own self/sponsor link; FALSE_ABSENCE = raw 200 but repo-search 422
+slug	source_index	raw	repo_search	user_search	verdict	note
+CTAT/CTAT	brandonhimpfen/awesome-ai-in-education	404	422	owner=1	FABRICATED	real CTAT is CMU-hosted, not on GitHub; owner `ctat` exists, repo does not
+tutoringkit/tutoringkit	brandonhimpfen/awesome-ai-in-education	404	422	422	FABRICATED	neither owner nor repo exists
+CAI-BKT/pyBKT	brandonhimpfen/awesome-ai-in-education	404	422	422	FABRICATED	wrong-owner variant of CAHLR/pyBKT, which this base already holds correctly
+khan	brandonhimpfen/awesome-ai-in-education	n/a	n/a	n/a	OWNER_URL	described as "reference architectures"; is an owner page
+assistments	brandonhimpfen/awesome-ai-in-education	n/a	n/a	n/a	OWNER_URL	owner page
+edbench	brandonhimpfen/awesome-ai-in-education	n/a	n/a	n/a	OWNER_URL	owner page
+gradescope	brandonhimpfen/awesome-ai-in-education	n/a	n/a	n/a	OWNER_URL	owner page
+oecd	brandonhimpfen/awesome-ai-in-education	n/a	n/a	n/a	OWNER_URL	owner page
+unesco	brandonhimpfen/awesome-ai-in-education	n/a	n/a	n/a	OWNER_URL	owner page
+riiid/ednet	brandonhimpfen/awesome-ai-in-education	200	200	-	REAL	387 stars; no LICENSE file; README declares CC BY-NC-4.0 research-only
+dair-ai/Prompt-Engineering-Guide	brandonhimpfen/awesome-ai-in-education	200	200	-	REAL	80192 stars, MIT title line
+math-qa/math-qa	brandonhimpfen/awesome-ai-in-education	200	200	-	REAL	0 stars, MIT, last push 2022-12-03; negligible
+brandonhimpfen/awesome-edtech	awelist/awesome-edtech	200	422	-	FALSE_ABSENCE	raw 200, search cannot see it
+brandonhimpfen/awesome-learning-management-systems	awelist/awesome-edtech	200	422	-	FALSE_ABSENCE	raw 200, search cannot see it
+mwouts/jupytext	quobit/awesome-python-in-education	200	422	-	FALSE_ABSENCE	MIT title line, Copyright 2018-2026 Marc Wouts; stars unmeasurable via search
+jupyterhub/binderhub	quobit/awesome-python-in-education	200	200	-	REAL	2673 stars, BSD-3-Clause
+nbgallery/nbgallery	quobit/awesome-python-in-education	200	200	-	REAL	150 stars, MIT title line
+computationalmodelling/nbval	quobit/awesome-python-in-education	200	200	-	REAL	453 stars, SPDX NOASSERTION, bytes = BSD-3-Clause by clause structure
+parmentelat/nbautoeval	quobit/awesome-python-in-education	200	200	-	REAL	20 stars, SPDX NOASSERTION, bytes = CC-BY-SA-4.0 (Inria)
+pyta-uoft/pyta	quobit/awesome-python-in-education	200	200	-	REAL	109 stars, GPL-3.0 full text
+olistic/warriorjs	yrgo/awesome-educational-games	200	200	-	REAL	9539 stars, MIT title line

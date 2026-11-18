@@ -88,6 +88,24 @@ data access* rather than education agents.
 
 ### North America
 
+🟢 **Promoted in `p902` — three facts that had been sitting in the append-only log, unpublished.**
+`p901` scored the mandated research legs as a "null yield" by grepping each fact against the whole
+tree, which includes an 87,000-line log; re-scored against this file, **11 of 19 facts were missing**
+([record](../evidence/surface-yield.2026-11-18-p902.tsv), method in `agents/trending.md` `902-F1`).
+North America's three:
+
+- **Virginia S.B. 394 is enacted**, directing state AI guidance that **includes teacher training**.
+  It joins NC Session Law 2026-41, Oklahoma SB 1734, Ohio's 1 July 2026 framework deadline, Idaho SB
+  1227, New York A 9190 and California AB 1159 in this file's US statute set — and it is the one that
+  names **enablement** rather than restriction, which is the side of the ledger a studio sells into.
+- **Institution-wide implementation has reached 66%** in North America (Technavio), against the 86%
+  *any-use* figure this file already carries. 🔵 **The 20-point gap between "adopted" and
+  "institution-wide" is the addressable market**: the buyers are past pilots and stuck on rollout.
+- 🔴 **Chegg cut 45% of its staff — 388 roles.** The incumbent homework-help business model is being
+  destroyed by general-purpose AI and AI search summaries. **This is the clearest commercial signal
+  in this file that content-as-product is over in consumer edtech**; the money moves to institutional
+  workflow, where the data and the compliance obligations sit.
+
 🟢 **Supply side, placed p899: North America builds the assessment and learner-model layer, and
 this KB had almost none of it.** Three university-built, permissively licensed systems were
 verified and shelved this pass, all from the two institutions that already anchor this category:
@@ -357,6 +375,28 @@ selling it yet.
 
 
 ### EMEA
+
+🟢 **Promoted in `p902` — four facts held only in the log until now** (see `902-F1`; the
+[record](../evidence/surface-yield.2026-11-18-p902.tsv) lists all eleven):
+
+- **The UK introduced generative-AI safety standards for schools in January 2026.** Non-statutory
+  where the EU AI Act is binding, but it is a *procurement* gate: a supplier sells against the
+  standard.
+- 🔴 **The UAE Ministry of Education introduced 25 generative-AI prohibitions in schools in February
+  2026**, covering age suitability, privacy, academic integrity and exam restrictions. This base
+  already carried the UAE as a persona/affect-regulated market (`intel/trends.md` T14, `P13`); the
+  **prohibition count and date are published here for the first time**. A deployment in the Gulf is
+  scoped by an enumerated deny-list, not by a principles document — read the list before designing
+  the feature.
+- **DEC Leadership Summit EMEA 2026 (Paris): 41 senior leaders from 30 institutions across 14
+  countries.** Small, and the useful part is the shape — EMEA buying decisions are made in
+  cross-border consortia, so a reference from one institution travels further here than in NA.
+- **Fosway Group published a 2026 AI Market Assessment for EMEA learning leaders** — the corporate
+  L&D side of the same region, which is where `Mentingo` (MIT) and `Frappe LMS` sell.
+
+🔵 **Placement note.** The UK and UAE facts were returned by the **APAC** search leg. They are filed
+here, under this base's closed five-value region vocabulary. **A leg's name is not a region**
+(`902-F1`).
 
 🟢 **Supply side, placed p899 — and EMEA is where the *institutionally governed* code is.**
 
@@ -878,6 +918,26 @@ search at the confidence a North America one can.
 
 ### APAC
 
+🟢 **Promoted in `p902` — two convening facts, plus the region's one dataset-scale supply row**
+(method: `902-F1`):
+
+- **The World Bank is running its Global EdTech Policy Academy on AI in Seoul, 31 August – 4 September
+  2026.** 🔵 **Korea is being used as the venue where other countries' education AI policy gets
+  written**, which is consistent with the Korean AI Basic Act (in force 22 January 2026) that this
+  file already tracks. A studio with a Korean reference can sell it across the cohort that attends.
+- **Cambridge English convened APAC leaders in Kuala Lumpur, 23–24 April 2026**, on practical
+  implementation across policy, institutions and classrooms — the assessment-and-certification end of
+  the market.
+- 🔴 **`riiid/ednet` is the largest public education dataset in the world and it is licensed
+  `CC-BY-NC-4.0`, research purposes only.** 131,441,538 interactions from 784,309 students of the
+  Korean *Santa* test-prep app; 13,169 problems, 1,021 lectures, 293 skill tags. **There is no licence
+  *file*** — the grant is prose in the README, so SPDX reports `null` and any automated gate reads it
+  as "unlicensed, probably fine" when it is the most restrictive grant in this KB.
+  🟢 **Delivery line: validate a learner model against EdNet in a study; never train the model you
+  ship on it.** With `CAHLR/pyBKT` (MIT) as the estimator that split is clean. Full row in
+  `repos/trending.md` `902-R2`. **This is also APAC's only dataset-scale supply row** — the region
+  builds the tutors *and* owns the benchmark data, and the data is the part Globant cannot resell.
+
 🔵 **Demand side, restored `p901` (`901-G1`).** **Nanyang Technological University, Singapore,
 announced that from August 2026 every undergraduate receives full access to Gemini Enterprise,
 Google AI Studio and Vertex AI.** This datapoint was present in this KB through `p787` and was
@@ -1281,6 +1341,20 @@ client commitment.
 
 ### LATAM
 
+🟢 **Promoted in `p902` — two facts held only in the log** (method: `902-F1`):
+
+- **UNESCO IESALC surveyed 200 institutions across 19 countries (2025).** This file already carried
+  IESALC's 87%-use / 26%-formal-strategy headline; **the sample behind it is published here for the
+  first time**, and it matters when the number is quoted to a client: 200 institutions across 19
+  countries is a regional census, not a convenience sample, which is more than can be said for most
+  figures in this file.
+- 🔴 **The "Rest of Latin America" AI-in-education market is estimated at roughly USD 18.2M (2024).**
+  Set against a global market of ~USD 10.6B, that is **under 0.2%**. 🔵 **This is the honest frame
+  for a LATAM engagement, and it is not a reason to deprioritise the region** — it says the money is
+  not in licence-fee markets outside Brazil and Mexico, so the sellable work is **public-sector
+  delivery, enablement and governance retrofit** (which is exactly what `P5` and `P14` scope) rather
+  than per-seat product. Quote it before a client's board does.
+
 🟢 **Supply side, p899 — and this materially qualifies this KB's standing "LATAM supply is near
 zero" finding.** It is near zero *in education-specific agents*. It is **not** near zero in the
 public-sector substrate education runs on:
@@ -1581,6 +1655,16 @@ Cross-regional plays that do not depend on one jurisdiction.
   conference commentary. **Verify the exact wording before it goes in a client deck.**
 
 ## Declared gaps
+
+- 🔴 **Eleven facts in this file were published in `p902` after sitting unpromoted in
+  `agents/trending.md`.** `p901` scored the mandated research legs as a *null yield* by grepping each
+  fact against the whole tree — which includes an 87,000-line append-only log — and concluded the
+  search channel was saturated. Re-scored against this file and the three other reference files,
+  **11 of 19 facts were missing**
+  ([record](../evidence/surface-yield.2026-11-18-p902.tsv)). The correct claim is narrower: **the
+  legs stopped producing facts this base had never seen; they did not stop producing facts this base
+  had never published.** Nothing yet measures how long a fact waits in the log before it reaches this
+  file — that is `902-G4`.
 
 - **No 2026 market-share data for AI education providers** was found in any region. Market
   *size* estimates exist; vendor *share* does not.

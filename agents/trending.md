@@ -4,6 +4,164 @@ region: Global
 updated: 2026-11-18
 ---
 
+## `2026-11-18` (p902) — **p901's "null yield" was an artifact of the surface it measured against: 11 of 19 facts from the same eight legs are absent from the files an engagement actually reads. And the growth method p901 recommended would have imported three repositories that do not exist.**
+
+**Channel:** the eight mandated WebSearch legs (four global, four regional); `raw.githubusercontent.com`
+licence byte-reads; `gh api search/repositories` and `search/users`. Network posture re-tested at the
+top of the pass and unchanged: `raw` `200`, `gh api` live, **every non-GitHub host refused at the
+egress proxy** (`www.unesco.org` → `connect_rejected`). The regional legs below are therefore search
+snippets, not primary texts — the standing caveat in `intel/market.md` governs them.
+
+### 🔴 `902-F1` The search channel is **not** saturated. The *log* is saturated.
+
+p901 scored the eight legs as a **null yield** — every surfaced fact "already in base" — by grepping
+each one against the live tree. 🔴 **The live tree includes this file (87,848 lines) and ~6 MB of
+`evidence/*.tsv`.** A fact that was written into the hourly log once, four passes ago, and never
+promoted, counts as *present* under that test and is invisible in delivery.
+
+Re-scored against the four files an engagement actually opens — `intel/market.md`, `intel/trends.md`,
+`agents/top.md`, `verticals/solutions.md`
+([record](../evidence/surface-yield.2026-11-18-p902.tsv)):
+
+| Surface measured against | Facts already held | Yield |
+|---|---|---|
+| Whole live tree (p901's test) | 19 / 19 | 🔴 **0%** |
+| The four reference files | 8 / 19 | 🟢 **11 new (58%)** |
+
+**The eleven, all promoted to `intel/market.md` this pass, each under its region:**
+
+| Fact | Region | Was in |
+|---|---|---|
+| Virginia **S.B. 394** enacted — directs state guidance including teacher training | North America | log only |
+| Technavio: **66% institution-wide** implementation, NA | North America | log only |
+| **Chegg cut 45% of staff (388 roles)** — search-traffic collapse | North America | log only |
+| **UK generative-AI safety standards for schools**, Jan 2026 | EMEA | log only |
+| **UAE MoE: 25 generative-AI prohibitions** in schools, Feb 2026 | EMEA | log only |
+| DEC Leadership Summit EMEA 2026, Paris — 41 leaders, 30 institutions, 14 countries | EMEA | log only |
+| Fosway Group 2026 AI Market Assessment for EMEA learning leaders | EMEA | log only |
+| **World Bank Global EdTech Policy Academy on AI**, Seoul, 31 Aug – 4 Sep 2026 | APAC | log only |
+| Cambridge English APAC summit, Kuala Lumpur, 23–24 Apr 2026 | APAC | log only |
+| UNESCO IESALC: **200 institutions across 19 countries** (2025) | LATAM | log only |
+| Rest-of-LATAM AI-in-education market **~USD 18.2M (2024)** | LATAM | log only |
+
+🔵 **Why this matters beyond the eleven rows.** `901-F1` drew a strategic conclusion from the null
+yield — *"the research sweep is now a regression test, not a source of growth; growth has to come from
+the repository channel"* — and a pass that believed it would have stopped promoting regional demand
+facts altogether. **The conclusion was measured against the wrong surface.** The correct statement is
+narrower and more useful: **the legs stopped producing facts this base has never seen, and did not
+stop producing facts this base has never *published*.** Those are different claims with different
+consequences, and only the second one is true.
+
+🟢 **Gate shipped with the finding.** `902-G1` below makes the reference-file surface the default for
+any future yield claim, because the whole-tree test will keep returning 0% forever by construction.
+
+🔵 **One placement correction inside the legs themselves.** The APAC leg returned the **UK** safety
+standards and the **UAE** prohibitions among its results. Both are EMEA under this base's closed
+five-value vocabulary and are filed there, not where the leg found them. A leg's name is not a
+region.
+
+### 🔴 `902-F2` The method `901-F2` recommended, run twice more, returns **fabricated repositories** — and the first list audited would have put three phantom tutors in `agents/top.md`
+
+p901's growth proposal was to audit this base against **someone else's** curated list. This pass ran
+that method over **five indexes the base had never seen**, extracted every `github.com` URL, and
+diffed against the live tree's 7,375 slugs: **135 candidates, 123 absent from the base.**
+
+🔴 **The highest-relevance index in the set is partly invented.** `brandonhimpfen/awesome-ai-in-education`
+— republished byte-for-byte as `awelist/awesome-ai-in-education` (**both `sha256₁₂ 98e1aef693cd`**,
+5,926 B; `awesome-edtech` and `awesome-learning-management-systems` are identical copies too) — carries
+19 GitHub URLs. Audited on three channels ([record](../evidence/curated-index-fabrication.2026-11-18-p902.tsv)):
+
+| Class | Count | Examples |
+|---|---|---|
+| 🔴 **Fabricated** — `404` on every raw path *and* `422` on repo search *and* no such owner | **3** | `CTAT/CTAT`, `tutoringkit/tutoringkit`, `CAI-BKT/pyBKT` |
+| 🟡 Owner URL presented as a project | 6 | `github.com/khan`, `/gradescope`, `/unesco`, `/oecd`, `/assistments`, `/edbench` |
+| 🔵 The list's own self / sponsor links | 7 | `brandonhimpfen/awesome-lists`, `sponsors/brandonhimpfen` |
+| 🟢 Real repositories | **3** | `riiid/ednet`, `dair-ai/Prompt-Engineering-Guide`, `math-qa/math-qa` |
+
+🔴 **Its "Intelligent Tutoring Systems" section is 3 of 3 unusable** — `CTAT/CTAT` (fabricated;
+the real CTAT is CMU-hosted and not on GitHub), `tutoringkit/tutoringkit` (fabricated; owner does not
+exist either), and `github.com/khan` described as *"reference architectures and pedagogical prompt
+structures"*, which is an owner page. **That is precisely the section this KB would have mined for
+`agents/top.md`.**
+
+🔴 **The most instructive row is `CAI-BKT/pyBKT`.** It is a **wrong-owner variant of `CAHLR/pyBKT`,
+which this base already holds, correctly, with a byte-read MIT grant.** An importing pass would have
+published a 404 *alongside* the working row for the same software — and the fabricated slug looks more
+authoritative than the real one, because `CAI-BKT` reads like a lab name.
+
+🟢 **What the method is actually worth, measured.** Across all five indexes, 123 slugs were absent
+from this base and **7 were real, relevant and promotable** — a **5.7% yield**, and the real finds
+came from the *generic* lists (`quobit/awesome-python-in-education`, CC0-1.0, 909★;
+`yrgo/awesome-educational-games`, MIT, 1,209★), not from the AI-in-education list that looked purpose-built
+for this KB. 🔵 **The transferable rule: a curated index's topical fit is uncorrelated with its
+factual reliability, and a 2★ list with a sponsor banner is a prompt output until proven otherwise.**
+The method survives — `901-F2` found Jitsi this way, and this pass found a whole tier the same way —
+**but only behind an existence gate**, which is `902-G2`.
+
+### 🟡 `902-F3` The `422` false-absence class reproduces **three more times**, and once on a repository this base should hold
+
+`900-G2`/`901-F3` established that `gh api search/repositories` returns `422 "resources do not exist"`
+for repositories that demonstrably do. Three new instances, all `raw` `200`:
+
+| Repo | `raw` | repo search | Consequence |
+|---|---|---|---|
+| `mwouts/jupytext` | 🟢 `200`, MIT title line, `Copyright (c) 2018-2026 Marc Wouts` | 🔴 `422` | **Stars unmeasurable on this base's only star channel.** Row published without a star figure rather than with a guessed one. |
+| `brandonhimpfen/awesome-edtech` | 🟢 `200` | 🔴 `422` | — |
+| `brandonhimpfen/awesome-learning-management-systems` | 🟢 `200` | 🔴 `422` | — |
+
+🔵 **The new consequence worth recording:** until now the `422` class was a *verification* nuisance.
+`jupytext` shows it is also a **metric** hole — a repo can be provably real and permanently
+unmeasurable on the one channel this base uses for popularity. `agents/top.md`'s appendix should carry
+`unmeasurable` as a value, not an empty cell.
+
+### 🔵 `902-N1` Checked and dismissed: the 80,192★ "collision" is a real tie, not a metric defect
+
+`dair-ai/Prompt-Engineering-Guide` and `awesomedata/awesome-public-datasets` both report **exactly
+80,192 stars**. That is the kind of coincidence that usually means a quantised or cached metric, and
+this base's entire popularity channel rests on it, so it was tested rather than assumed: identical
+values on **single `repo:` queries, one batched three-repo query, and a `stars:80000..80400` band
+query** that returned both as distinct rows with a third repo at 80,079 and `olistic/warriorjs`
+unaffected at 9,539. **It is a genuine tie.** Recorded so no later pass spends a budget re-chasing it.
+
+### 🔴 `902-N2` Near-miss control: grading a licence on the bare substring `MIT` publishes BSD as MIT
+
+While resolving two `NOASSERTION` repos this pass, an ad-hoc grader scored
+`computationalmodelling/nbval` as **MIT**. It is **BSD-3-Clause**. The substring `MIT` occurs inside
+**`LIMITED`**, which appears in the warranty disclaimer of *every* MIT **and** BSD licence
+(`...INCLUDING, BUT NOT LIMITED TO...`), so a bare-substring grader cannot tell them apart and fails
+**silently and permissively** — the direction that costs a client money, exactly as `p899` found with
+PrairieLearn.
+
+🟢 **This base's shipped tooling is not affected, and that was verified rather than assumed.**
+`ingest/address-ledger.py:112` uses `re.compile(r"\bMIT\b")`, and `\bMIT\b` does not match inside
+`LIMITED` (no word boundary) — confirmed on a four-case control. `ingest/licence-bytes-p640.sh`,
+`p458-verify.sh`, `p610-grant-harness.sh` and `p799-payload-region-probe.sh` all match the phrase
+`MIT License`, not the bare token. 🔵 **The residual hazard `ingest/doc-channel.py` already documents
+is the other direction — `\bMIT\b` fires on `MIT Media Lab` and `MIT CSAIL`** — so the word-boundary
+fix is necessary and not sufficient. **Grade on the title line or on clause structure; never on the
+token.** The grader used for this pass's rows (`scratchpad` `grade.sh`) does both and is reproduced in
+`repos/trending.md` p902.
+
+### Gaps opened this pass
+
+- 🔴 **`902-G1`** — **every yield claim in this base before p902 was measured against the whole tree,
+  which includes the append-only log, so all of them read 0% by construction.** `901-F1`'s
+  "saturation" conclusion is the known casualty; earlier passes' null-yield claims have not been
+  re-scored. **Close when a pass re-scores the last five null-yield claims against the four reference
+  files and reports how many were artifacts.**
+- 🔴 **`902-G2`** — **the stranger's-list method has no existence gate.** p901 promoted from a curated
+  index by reading it; this pass found a 3-in-19 fabrication rate in the first topically-matched index
+  it tried. **Close when `ingest/` ships a gate that refuses any slug lacking a `raw` `200` on at
+  least one path plus a non-`422` owner resolution, with the p902 fabricated trio pinned as negative
+  fixtures.**
+- 🟡 **`902-G3`** — **`agents/top.md`'s metric appendix cannot express "provably real, unmeasurable".**
+  `mwouts/jupytext` is the first row to need it. **Close when the appendix carries an explicit
+  `unmeasurable (422)` value and `jupytext` uses it.**
+- 🟡 **`902-G4`** — **11 facts sat in the log unpromoted for an unknown number of passes.** The
+  promotion step has no instrument: nothing measures log-to-reference-file lag. **Close when a pass
+  reports, for each fact in the last 20 log sections, whether it reached a reference file and after
+  how many passes.**
+
 ## `2026-11-18` (p901) — **the search channel is saturated: eight research legs returned zero facts this base lacks — and an independent curated index confirms the vertical tier is complete, with exactly one real hole**
 
 **Channel:** four global WebSearch legs + four regional legs (North America, EMEA, APAC,

@@ -6,7 +6,8 @@ updated: 2026-11-18
 
 # Current trends — education
 
-**Twenty-four trends** (**T24 added in `p901`** — path-dependent licences, the first trend in this file derived from repositories the SPDX channel refused to resolve at all; **T23 added in `p900`** — the first trend in this file derived from a
+**Twenty-five trends** (**T25 added in `p902`** — the licence trap moving from code to the data
+and content assets, where no index can see it; **T24 added in `p901`** — path-dependent licences, the first trend in this file derived from repositories the SPDX channel refused to resolve at all; **T23 added in `p900`** — the first trend in this file derived from a
 licence census of this base's *own unshelved backlog* rather than from search or from a
 repository probe)
 
@@ -873,3 +874,44 @@ not how prevalent it is inside education specifically. 🔵 **Open as `901-G2`:*
 `NOASSERTION` cohort across this base's full 6,494-slug population and measure the rate, the
 way `p900` measured false absence. Until that runs, T24 is a named hazard, not a quantity.
 
+
+## T25 — The licence trap has moved from the code to the **data and content assets**, where no tool can see it at all
+
+`T19` established that published licence *metadata* is wrong often enough to be a procurement risk.
+`T24` narrowed the next trap to a **readable grant that changes by directory**. `p902` found the one
+after that, and it is worse in a specific way: **education's data and content assets carry
+non-software or non-commercial grants, declared in prose, with no licence file for a tool to read.**
+
+**Three instances, all verified by byte-read, none of them resolvable by SPDX:**
+
+| Asset | What the index says | What the bytes say | Why it bites |
+|---|---|---|---|
+| [`riiid/ednet`](https://github.com/riiid/ednet) | SPDX `null` — **no licence file exists** (`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `NOTICE` all `404`) | 🔴 **`CC-BY-NC-4.0`, "for research purposes"** — prose in `README.md` | The **largest public education dataset on earth** (131,441,538 interactions, 784,309 students) is **commercially unusable**, and an automated gate reads "no licence file" as benign |
+| [`parmentelat/nbautoeval`](https://github.com/parmentelat/nbautoeval) | SPDX `NOASSERTION` | 🔴 **`CC-BY-SA-4.0` on executable code** (289 B, Inria) | **No patent grant, and ShareAlike reaches derivative works** — an exercise bank built on it cannot stay closed |
+| [`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) | `ODbL-1.0` | 🔴 **a *database* licence on a curriculum graph** | Correct for the asset, and a trap for anyone who reads the repo as software |
+
+🔵 **Why this is a trend and not three anecdotes.** The three sit at the three points where education
+differs from other industries Globant serves: **the benchmark data** (knowledge tracing cannot be
+evaluated without it), **the exercise content** (the asset a course actually is), and **the
+curriculum graph** (the structure a syllabus is). In each case the thing being licensed is *not
+software*, so the licensor reaches for a Creative Commons or Open Data grant — and **every tool in
+the open-source supply chain, SPDX included, is built to read software licences.** The code tier of
+this KB is now well characterised; the asset tier is where the unpriced risk has moved.
+
+🔴 **The failure mode is silent and permissive.** All three read as *more* open than they are:
+`NOASSERTION` and `null` look like "unlicensed, probably fine", and `CC-BY-*` reads as "open" to
+anyone who has not checked whether it is `NC` or `SA`. Compare `p899`'s PrairieLearn finding — same
+direction, different layer.
+
+**Implication for delivery.** Put a **three-question gate on every non-code asset** before it enters
+a client deliverable, and run it by reading the README, not by querying an index:
+
+1. Is there a licence **file**? If not, the grant is in prose or absent — read the README.
+2. Is it a **software** licence? A `CC-*` or `ODbL` grant on something you will compile, import or
+   redistribute is a defect, not a formality.
+3. Does it carry **`NC`** or **`SA`**? `NC` ends the conversation for a paid deliverable; `SA`
+   decides whether the client can keep the result closed.
+
+🟢 **And state the split in the proposal.** Research-only data can still earn its place: it validates
+a model in a study and never trains the one that ships. That sentence is the difference between using
+EdNet correctly and not being able to use it at all.

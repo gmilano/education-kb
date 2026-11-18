@@ -1,0 +1,23 @@
+# p902 — the same 8-leg research sweep p901 scored as NULL YIELD, re-scored against the four
+# files an engagement actually reads instead of against the whole tree.
+# present_in_reference_files = intel/market.md + intel/trends.md + agents/top.md + verticals/solutions.md
+fact	leg	region_field	in_reference_files	in_append_only_log
+Virginia S.B. 394 (enacted; directs state guidance incl. teacher training)	North America	North America	NO	yes
+Technavio: 66% institution-wide implementation (NA)	North America	North America	NO	yes
+Chegg cut 45% of staff (388 roles)	North America	North America	NO	yes
+UK generative-AI safety standards for schools, Jan 2026	EMEA	EMEA	NO	yes
+UAE MoE 25 generative-AI prohibitions in schools, Feb 2026	EMEA	EMEA	NO	yes
+DEC Leadership Summit EMEA 2026, Paris: 41 leaders / 30 institutions / 14 countries	EMEA	EMEA	NO	yes
+Fosway Group 2026 AI Market Assessment for EMEA learning leaders	EMEA	EMEA	NO	yes
+World Bank Global EdTech Policy Academy on AI, Seoul, 31 Aug - 4 Sep 2026	APAC	APAC	NO	yes
+Cambridge English APAC summit, Kuala Lumpur, 23-24 Apr 2026	APAC	APAC	NO	yes
+UNESCO IESALC regional survey: 200 institutions across 19 countries (2025)	LATAM	LATAM	NO	yes
+Rest-of-LATAM AI-in-education market ~USD 18.2M (2024)	LATAM	LATAM	NO	yes
+NC Session Law 2026-41	North America	North America	yes	yes
+PIE Network tracker ~100 state bills	North America	North America	yes	yes
+DEC LATAM survey 92% students / 79% faculty (7,319 faculty, 29 institutions)	LATAM	LATAM	yes	yes
+IDB 193 AI initiatives reviewed	LATAM	LATAM	yes	yes
+EdTech Hub + Fundacion Ceibal partnership	LATAM	LATAM	yes	yes
+Only 30% judge institutional response effective	LATAM	LATAM	yes	yes
+OECD 2026 Digital Education Outlook	Global	Global	yes	yes
+Research and Markets Apr 2026: ~USD 10.6B 2026 -> ~USD 42.5B 2030	Global	Global	yes	yes

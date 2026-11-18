@@ -4,6 +4,98 @@ region: Global
 updated: 2026-11-18
 ---
 
+## `2026-11-18` (p902) — **a whole teaching tier was missing: notebooks. Six repos, none of them anywhere in the live tree, and two of them carry licences the index refuses to name. Plus the largest public education dataset on earth, which no client can ship.**
+
+**Channel:** five curated indexes audited offline (see `agents/trending.md` p902 `902-F2` for the
+audit and its 5.7% yield), `gh api search/repositories` for stars/SPDX, **licence byte-reads from
+`raw.githubusercontent.com` graded on title line or clause structure — never on a bare token**
+(`902-N2`).
+
+### 🟢 `902-R1` The notebook-native teaching and assessment tier — **absent from the live tree, six rows**
+
+This base holds `nbgrader` and `jupyterhub` and stops there. `binderhub`, `nbval`, `nbautoeval`,
+`jupytext` and `nbgallery` returned **zero hits across every live file** before this pass. For any
+engagement in CS, data science, engineering or quantitative social science — the courses that
+actually buy automated assessment — that is the delivery substrate, not a side note.
+
+| Repo | Licence (byte-read) | Stars | Pushed | What it does |
+|---|---|---|---|---|
+| [`jupyterhub/binderhub`](https://github.com/jupyterhub/binderhub) | 🟢 **`BSD-3-Clause`** — `main/LICENSE`, `1,522 B`, `sha256₁₂ 611f531642d5`, `BSD` title line; SPDX agrees | **`2,673★`** | `2026-11-14` | Turns a repo into a running, reproducible notebook environment on demand. **The zero-install route to a student environment** |
+| [`nbgallery/nbgallery`](https://github.com/nbgallery/nbgallery) | 🟢 **`MIT`** — `master/LICENSE`, `1,071 B`, `sha256₁₂ 7900749dcb3b`, `MIT License` title line; SPDX agrees | `150★` | `2026-10-22` | Enterprise notebook sharing, search, health checks and usage analytics. A **notebook LMS** in all but name |
+| [`computationalmodelling/nbval`](https://github.com/computationalmodelling/nbval) | 🟡 **`BSD-3-Clause`** — `master/LICENSE`, `1,910 B`, `sha256₁₂ 1dbc744b78bb`. 🔴 **SPDX says `NOASSERTION`**; resolved from clause structure (redistribution + no-endorsement), as the file carries **no title line at all**. Copyright **University of Southampton, UK** | `453★` | `2025-09-17` | `pytest` plugin that validates notebooks against stored outputs. **Deterministic marking of a notebook, with no AI in the loop** |
+| [`parmentelat/nbautoeval`](https://github.com/parmentelat/nbautoeval) | 🔴 **`CC-BY-SA-4.0`** — `master/LICENSE`, `289 B`, `sha256₁₂ 1bb69236081f`, verbatim: *"made available through a Creative Common Licence CC BY-SA 4.0"*. SPDX says `NOASSERTION`. **`(c) 2017 — Inria — Thierry Parmentelat`** | `20★` | `2024-12-11` | In-notebook auto-graded exercises | 
+| [`mwouts/jupytext`](https://github.com/mwouts/jupytext) | 🟢 **`MIT`** — `main/LICENSE`, `MIT License` title line, `Copyright (c) 2018-2026 Marc Wouts` | 🔴 **unmeasurable** — repo search returns `422` (`902-F3`) | — | Notebooks as plain text. **The reason course content can live in git and be reviewed in a PR** |
+| [`pyta-uoft/pyta`](https://github.com/pyta-uoft/pyta) | 🔴 **`GPL-3.0`** — `master/LICENSE`, `35,141 B`, `sha256₁₂ 589ed823e9a8`, GNU GPL title line; SPDX agrees | `109★` | `2026-11-17` | Static analysis written to *teach*: errors phrased for beginners. **University of Toronto**. Copyleft — keep it a separate process |
+
+🔴 **`nbautoeval` is this file's second `CC-BY-SA` on executable code**, after `withmarbleapp/os-taxonomy`'s
+ODbL in `agents/top.md`. A content licence on software is not a software licence: **CC-BY-SA-4.0 has
+no patent grant, and its ShareAlike reaches derivative works**, so an exercise bank built on it does
+not stay closed. Use it as a **pattern reference**, not a dependency — and note it is an **Inria**
+(France) artefact, which is where EMEA's public-research output tends to land this way.
+
+🔵 **Why the whole tier was invisible, which is the half worth keeping.** Every discovery leg this
+base runs is `{education}`-qualified, and **not one of these six repos describes itself as education
+software** — they are Jupyter infrastructure that education deploys. This is the same structural
+blind spot `901-R1` hit with `jitsi/jitsi-meet`, now reproduced in a second category. 🟢 **Two
+instances make it a class: the tiers this base misses are the *general-purpose* tools that education
+uses, and only a third-party list or an explicit non-education query will surface them.**
+
+### 🔴 `902-R2` `riiid/ednet` — the largest public education dataset in the world, and a client cannot ship on it
+
+| Repo | Licence | Stars | Scale |
+|---|---|---|---|
+| [`riiid/ednet`](https://github.com/riiid/ednet) | 🔴 **`CC-BY-NC-4.0`** — **no `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING` or `NOTICE` file exists** (all `404`); the grant is **prose in `README.md`**: *"publicly released under Creative Commons Attribution-NonCommercial 4.0 International license for research purposes"* | `387★` | **131,441,538 interactions from 784,309 students**, 13,169 problems, 1,021 lectures, 293 skill tags |
+
+🔴 **`NonCommercial` is a hard stop for a Globant deliverable**, and it is invisible to every tool:
+SPDX returns `null` because there is no licence *file*, so an automated gate reads this as
+"unlicensed, probably fine" when it is in fact the most restrictive grant in this KB. **The only
+channel that catches it is reading the README prose** — which is exactly the carve-out class `899-G3`
+opened and `p901`'s T24 generalised.
+
+🟢 **It is still worth holding, for two reasons.** It is **Korean** (Riiid, from the *Santa* test-prep
+app) — the only dataset-scale APAC supply row in this base — and it is the **reference benchmark**
+every knowledge-tracing paper cites, so a client's research partner will name it. 🔵 **The delivery
+line: use EdNet to *validate* a learner model in a study, never to *train* the model you ship.** With
+`CAHLR/pyBKT` (MIT) as the estimator, that split is clean and defensible.
+
+### 🟢 `902-R3` Two permissive rows from the generic lists, and the two indexes themselves
+
+| Repo | Licence (byte-read) | Stars | Pushed | Why it is here |
+|---|---|---|---|---|
+| [`olistic/warriorjs`](https://github.com/olistic/warriorjs) | 🟢 **`MIT`** — `master/LICENSE`, `1,090 B`, `sha256₁₂ c6e6fd2e33f0` | **`9,539★`** / 499 forks | `2026-03-27` | Programming-education game: the student writes JavaScript to play. **The largest permissive learn-to-code *game* found so far** — this base's games tier was empty in every reference file |
+| [`dair-ai/Prompt-Engineering-Guide`](https://github.com/dair-ai/Prompt-Engineering-Guide) | 🟢 **`MIT`** — `main/LICENSE.md`, `1,064 B`, `sha256₁₂ 7656d36deffd` | **`80,192★`** / 8,788 forks | `2026-03-11` | AI-literacy *curriculum* under a permissive licence. With AI literacy now a statutory requirement in several jurisdictions this base tracks, **a teacher-enablement engagement can fork this instead of writing one** |
+| [`quobit/awesome-python-in-education`](https://github.com/quobit/awesome-python-in-education) | 🟡 `CC0-1.0` (`main/LICENSE`, `7,048 B`, `sha256₁₂ a2010f343487`) | `909★` | 2024-06-06 | **Audited this pass** — source of the whole `902-R1` tier |
+| [`yrgo/awesome-educational-games`](https://github.com/yrgo/awesome-educational-games) | 🟢 `MIT` (`master/LICENSE`, `1,090 B`, `sha256₁₂ 9333800be3d0`) | `1,209★` | 2024-04-08 | **Audited this pass** — source of `warriorjs` |
+
+🟡 **Both audited indexes are two years stale** (`2024-04` / `2024-06`), and they still out-performed
+the 2026-maintained AI-in-education list that turned out to be partly fabricated. **Staleness
+degrades recall; it does not invent repositories.** Rank a third-party index on verifiability first
+and freshness second.
+
+### The grader used for every row above
+
+```bash
+# Grade on the title line or on clause structure. Never on the bare token:
+# `MIT` occurs inside `LIMITED`, which is in every MIT *and* BSD disclaimer (902-N2).
+grade() {
+  local f="$1" head25; head25=$(head -25 "$f")
+  if   grep -qiE '^[[:space:]]*(The )?MIT License'            <<<"$head25"; then echo MIT
+  elif grep -qiE '^[[:space:]]*Apache License'                <<<"$head25"; then echo Apache-2.0
+  elif grep -qiE '^[[:space:]]*GNU AFFERO GENERAL PUBLIC'     <<<"$head25"; then echo AGPL
+  elif grep -qiE '^[[:space:]]*GNU GENERAL PUBLIC LICENSE'    <<<"$head25"; then echo GPL
+  elif grep -qiE '^[[:space:]]*GNU LESSER'                    <<<"$head25"; then echo LGPL
+  elif grep -qiE '^[[:space:]]*BSD'                           <<<"$head25"; then echo BSD
+  elif grep -qiE 'Creative Common' "$f";                            then echo 'CC-* (read which)'
+  elif grep -qiE 'Redistribution and use in source and binary' "$f"; then
+       grep -qiE 'Neither the name|endorse' "$f" && echo BSD-3-Clause || echo BSD-2-Clause
+  elif grep -qiE 'Permission is hereby granted, free of charge' "$f"; then echo MIT-style
+  else echo UNRESOLVED; fi
+}
+```
+
+**`nbval` is the row that needs the clause-structure branch**: no title line, SPDX `NOASSERTION`, and
+a bare-token grader calls it MIT.
+
 ## `2026-11-18` (p901) — **the live-classroom tier was missing a 30k-star Apache-2.0 platform, and two "NOASSERTION" repos turn out to carry licences that change by directory**
 
 **Channel:** `lib/slug_extract.py` offline over an external curated index, `gh api
