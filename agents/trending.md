@@ -4,6 +4,262 @@ region: Global
 updated: 2026-11-18
 ---
 
+## `2026-11-18` (p900) — **the base's own existence test has a 44% false-absence rate, and `p899`'s headline phantom is a repository rename that resolves today**
+
+**Channel:** `lib/slug_extract.py` offline over this repository's committed text, `gh api
+search/repositories` for stars/SPDX, **licence and existence byte-reads from
+`raw.githubusercontent.com`** — and, new this pass, **those last two run against each other
+as independent channels on the same 50 addresses**, which is what produced the finding.
+
+### 🔴 `899-G1` DISCHARGED — and rebuilding the ledger found **two live defects in the `p887` extractor itself**
+
+`899-G1` asked for the `logged-not-shelved` ledger to be rebuilt with the hardened extractor
+before another pass mined it. Rebuilt
+([instrument](../compose/code/p900-ledger-rebuild/build_ledger.py),
+[ledger](../evidence/logged-not-shelved.2026-11-18-p900.tsv)): **241 shelved slugs, 6,449
+logged, 6,208 logged-and-never-shelved** — against p860's 601 rows, because p860 sampled and
+this walks every live `.md` and `.tsv` in the repository.
+
+🔴 **The first run ranked an API path 5th and a template 2nd.** Both are the `nombre`-row class:
+
+| Rank | Slug | Files logging it | What it actually is |
+|---|---|---|---|
+| **2** | `owner/repo` | **22** | the **placeholder** in this base's own prose describing the shelf's link format |
+| **5** | `repos/moodle` | 14 | `api.github.com/**repos**/moodle/moodle` — an **API path** quoted in method prose |
+| 7 | `repos/hkuds` | 13 | same |
+| 17 | `repos/openedx` | 11 | same |
+| 458 | `repos/nonexistent-org-zzz` | 4 | a **deliberate negative fixture** from another instrument's controls |
+
+🔵 **This is `886-G3` recurring inside the module written to fix `886-G3`.** `886-G3` reserved
+`search` because this base quotes `api.github.com/search/repositories`. It never reserved the
+**other** api.github.com path — `api.github.com/repos/<owner>/<repo>` — which this base quotes
+**380 times**. Eighteen distinct `repos/<x>` slugs and one placeholder were sitting in the
+rebuilt ledger as promotable candidates.
+
+🔴 **And the obvious fix was wrong, which is the part worth carrying forward.** Reserving
+`repos` as an owner rejects `repos/moodle` — and **destroys the real `moodle/moodle` underneath
+it**, because the regex consumes the text and never re-enters at the deeper segment. Measured as
+control `A-1`. **The prefix must be CONSUMED, and `repos` must ALSO stay reserved**, because
+`github.com/repos/moodle` with no third segment backtracks straight into `owner=repos`. Both
+halves are load-bearing; neither alone is correct. Proof it recovers rather than merely
+rejects: **`openedx/edx-platform` rose from 24 files to 27** in the rebuilt ledger — three of
+its mentions were only ever written as API paths.
+
+🟢 `compose/code/lib/test_slug_extract.py`: **64 → 77 controls, all passing**, and
+`test_region.py` (79) and `test_licence_identity.py` (47) still pass against the changed module.
+
+### 🔴 The correction: `p899`'s headline finding is wrong, and it is wrong in the direction this base keeps warning itself about
+
+p899 opened with the ledger's number-one row:
+
+> *"`Li-Evan/Bloom` is recorded as logged 50 times, more than any other address, and
+> `gh api search/repositories` returns **no such repository**. … The top row of this KB's
+> backlog is a **slug-truncation artefact**."*
+
+🔴 **`Li-Evan/Bloom` resolves today.** `raw.githubusercontent.com/Li-Evan/Bloom/HEAD/README.md`
+returns **200**, and the body is **byte-identical to `Li-Evan/BloomTutor`'s**
+(`sha256₁₂ 8a74e9391a2b` for both). It is not a truncation artefact. It is a **repository
+rename**, and GitHub serves the old address as a redirect indefinitely. p899's *conclusion* —
+same repo, already shelved, nothing new — happens to survive. **Its stated mechanism and its
+evidence do not.** The same correction applies to the two addresses p899 listed beside it:
+`juneyaooo/lineage-skill` and `kvnloo/tutor-mcp` were both reported as returning nothing, and
+**both return 200**.
+
+🔴 **And this base already knew the mechanism.** `p896` wrote it down, in
+`agents/top.md`'s own corrections list, four passes earlier:
+
+> *"Both names serve byte-identical files on `raw.githubusercontent.com` … because raw follows
+> GitHub's rename redirects **and the search channel does not**."*
+
+🔵 **p896 applied that to one repository. It never applied it to the method.** `openedx/edx-platform`
+got a correction; the single-channel existence test that produced the error kept running, and
+three passes later it produced `Li-Evan/Bloom`. **The reusable finding was sitting in this base
+as a fact about one row.**
+
+🔵 **Why this matters more than the row.** p899 spent its headline catching a **false
+presence** — PrairieLearn published as MIT when it is AGPL-with-a-proprietary-AI-tier. In the
+same pass, with the same single channel, it published a **false absence**. A base that tests
+existence on one channel gets both failure modes and can only ever see one of them.
+
+### 🟢 `899-G2` attacked — 300 rows measured, 7.5× p899's 40, and the "non-existent" set decomposes three ways
+
+Every one of the rebuilt ledger's top 300 rows measured on `search/repositories`
+([record](../evidence/ledger-measured.2026-11-18-p900.tsv)), then **all 50 of its misses
+re-tested byte-wise on `raw.githubusercontent.com` across nine file keys**:
+
+| Channel verdict | Rows | Share |
+|---|---|---|
+| `search/repositories` returns the repo | **250** | 83.3% |
+| `search/repositories` returns nothing | 50 | 16.7% |
+| …of those 50, **`raw` returns 200 anyway** | 🔴 **22** | 🔴 **44% of the "absent" set** |
+| …of those 50, absent on nine keys | 28 | 56% |
+
+🔴 **The three causes, separated and each demonstrated:**
+
+1. **Rename or transfer — the address resolves, search indexes only the canonical name.**
+   Confirmed on four: `Li-Evan/Bloom` → `Li-Evan/BloomTutor` (317 ★, MIT);
+   `openedx/edx-platform` → `openedx/openedx-platform` (8,242 ★, AGPL-3.0) — **the p896 "rename
+   alias" finding, now shown to be a general mechanism rather than one repo's quirk**;
+   `algorithm0r/canvas-lms-mcp` → `bruchris/canvas-lms-mcp` (10 ★, MIT);
+   `aswanth9495/exam-guard` → `Scaler-Opensource/exam-guard` (3 ★, Apache-2.0).
+2. **Exists, canonical, and simply not in the search index.** `mitodl/open-learning-ai-tutor`,
+   `DaRL-GenAI/instructional_agents`, `longsightgroup/qti3` and `tokenaii/horus-taleeq-0.2b-base`
+   all return 200 on `raw` and **return nothing on `search` even under their canonical names**.
+3. **Genuinely absent — and these are placeholders a denylist could not have anticipated.**
+   `x/y` (7 files), `a/b` (6), `git_user_id/git_repo_id` (6, an OpenAPI-generator template),
+   `v3/search` (5).
+
+🔵 **The method point, and it is the one to keep:** cause 3 was found **by measuring existence**,
+not by curating a denylist. A denylist catches the placeholders you already thought of;
+`900-G2`'s `PLACEHOLDER_SLUGS` caught `owner/repo` because a pass had seen it, and missed `x/y`
+and `a/b` entirely. **Existence measurement is the channel that finds the ones nobody named.**
+
+### 🔴 What the backlog is actually made of — the licence census p899's 40-row sample could not support
+
+The 250 rows that resolve, by SPDX:
+
+| Grant class | Rows | Share |
+|---|---|---|
+| 🟢 **Permissive** (MIT 76, Apache-2.0 43, BSD-3 2, BSD-2 1, ISC 1) | **123** | **49.2%** |
+| 🔴 **No readable grant** (`NOASSERTION` 61, none at all 30) | 🔴 **91** | 🔴 **36.4%** |
+| 🟡 Copyleft (GPL-3.0 12, AGPL-3.0 12, LGPL-3.0 2, GPL-2.0 2, LGPL-2.1 1) | 29 | 11.6% |
+| 🟡 Weak copyleft (MPL-2.0 3, EUPL-1.2 1) | 4 | 1.6% |
+| 🔵 Content licences (CC-BY-SA, CC-BY, ODbL) | 3 | 1.2% |
+
+🔴 **More than a third of this base's backlog cannot be assessed without a licence byte-read**,
+and `p897`/`p899` both found that SPDX is wrong often enough that the byte-read is not optional.
+**That, not discovery, is the real cost of promotion** — and it is why the ledger stayed
+unabsorbed for 40 passes.
+
+### 🟢 Sixteen promotions, all byte-verified today, and one of them answers a gap this base declared on the *demand* side
+
+Every row below was in this base's own ledger, logged 5–14 times, shelved never.
+
+| Address | Grant (byte-read) | ★ | Shelved to |
+|---|---|---|---|
+| `mitodl/open-learning-ai-tutor` | **MIT** (1,068 B) | not indexed | `agents/top.md` |
+| `DaRL-GenAI/instructional_agents` | **MIT** (1,066 B) | not indexed | `agents/top.md` |
+| `anthropics/k12-teacher-skills` | Apache-2.0 | 633 | `agents/top.md` |
+| `ankimcp/anki-mcp-server` | MIT | 567 | `agents/top.md` |
+| `satvik314/educhain` | MIT | 387 | `agents/top.md` |
+| `bruchris/canvas-lms-mcp` | **MIT** (1,069 B) | 10 | `agents/top.md` |
+| `tokenaii/horus-taleeq-0.2b-base` | **MIT** (1,079 B) | not indexed | `agents/top.md` |
+| `ucfopen/canvasapi` | MIT | 682 | `repos/foundations.md` |
+| `pykt-team/pykt-toolkit` | MIT | 462 | `repos/foundations.md` |
+| `jcputney/scorm-again` | MIT | 367 | `repos/foundations.md` |
+| `dodona-edu/dolos` | MIT | 358 | `repos/foundations.md` |
+| `longsightgroup/qti3` | **MIT** (1,071 B) | not indexed | `repos/foundations.md` |
+| `adlnet/xapi-spec` | Apache-2.0 | 954 | `repos/foundations.md` |
+| `digitalcredentials/learner-credential-wallet` | **MIT** (1,091 B) | not indexed | `repos/foundations.md` |
+| `academico-sis/academico` | MIT | 413 | `verticals/solutions.md` |
+| `AnubisLMS/Anubis` | MIT | 383 | `verticals/solutions.md` |
+
+🔴 **One promotion was stopped at the gate, and it is the same mechanism pointing the other
+way.** `halleck45/openpronounce` (MIT, byte-read 1,113 B, logged 5×) was written as a ninth
+agent row and then **withdrawn**: it is a **transfer alias of `OpenPronounce/OpenPronounce`,
+which this file has carried since p893** — byte-identical `README.md`, `sha256₁₂ a005d079f571`.
+🔵 **The rename redirect causes false ABSENCES in the ledger and false DUPLICATES on the shelf,
+and a pass that fixes only the first will publish the second.** The canonical row was updated
+instead (221 → **223 ★**) and carries the alias so the next pass does not re-promote it.
+**Seventeen of the eighteen candidates were checked for this and were clean; one was not.**
+
+🟢 **`tokenaii/horus-taleeq-0.2b-base` is the one worth naming on its own.** An **Arabic-only
+small language model** with its training code and reproducibility record published MIT, by
+**TokenAI, a startup and nonprofit focused on open Arabic AI research**. `p899` declared *"no
+supply-side regional leg for Africa or the Middle East this pass"* as a gap. 🔵 **The gap was
+real on the demand side and already answered on the supply side, inside this base's own
+unshelved ledger** — logged five times, never read. **This is the promotion gap costing
+regional coverage specifically, which is the form of it that reaches a client.**
+
+### 🟡 Demand-side: six regional legs run, and the honest yield is **one new instrument in fifteen**
+
+Legs run this pass: global ×4 (agents / trending / vertical platforms / industry trends) and
+regional ×6 — **North America, EMEA, APAC, LATAM, Africa, Middle East**. Fifteen specific
+facts they returned were checked against this base's live pages:
+
+| Returned by a leg | Already held? |
+|---|---|
+| EU Digital Omnibus, Reg. (EU) `2026/1744`, Annex III education → **2 Dec 2027** | 🟢 held (`T4`, `T11`) |
+| Philippines `AGAP.AI`, Jan 2026; National Education Plan 2026–2035 | 🟢 held |
+| UAE MoE *Safe and Responsible Use of AI in Classrooms*, 25 prohibitions, under-13 ban | 🟢 held |
+| South Africa draft National AI Policy, Gazette Notice `3880` of 2026 | 🟢 held |
+| Masakhane open language models; South Africa STEPS | 🟢 held |
+| `Latam-GPT` / UNESCO–CENIA (Chile) | 🟢 held |
+| Digital Education Council LATAM survey — 92% students, 79% faculty, 7,319 faculty / 29 HEIs | 🟢 held |
+| POPIA and the Kenya/Nigeria data-protection constraint | 🟢 held |
+| EdTech Hub × Fundación Ceibal LAC partnership | 🟢 held |
+| 🟢 **Ethiopia — Medemer Artificial Intelligence University, Council of Ministers approval 2 Mar 2026** | 🔴 **NOT HELD — new this pass** |
+
+🔵 **`T969`'s claim that the search battery is saturated against this base holds at 14/15.** The
+single new instrument came from the **Africa** leg — the one p899 flagged as unrun. **An
+informed gap is worth probing exactly once; it paid, barely, and it will not pay twice.**
+
+🔴 **Africa and the Middle East remain thin on the demand side, and the thinness is in the
+sources, not the search.** Both legs returned preprints, Wikipedia and vendor blogs where the
+NA/EMEA legs return law-firm analyses and primary gazettes. Two facts could not be confirmed and
+are **not** written to the shelves: Saudi Arabia's claimed six-million-student first-year AI
+rollout (single vendor-authored source), and the UAE age cutoff's exact form (under-13 vs below
+Grade 7 — sources disagree).
+
+🔵 **A third apparent conflict was not a conflict, and the resolution was already on the shelf.**
+The Africa leg returned South Africa's draft National AI Policy as *published 10 Apr 2026* and,
+from another source, *abrogated 27 Apr 2026* — read as a contradiction while drafting this
+section. `intel/market.md` already holds **both facts and the reason**: the draft was withdrawn
+after the minister confirmed its reference list contained **fictitious sources**. 🔵 **The base's
+own page was better evidence than the search that appeared to challenge it** — which is the
+saturation result stated as a working rule rather than a score.
+
+### 🟢 Gate verdict — `make hooks` ran this pass, and the comparison is the point
+
+🔵 **`make hooks` ran.** This base's record carries four consecutive passes (`680-F`, `693-I`,
+`694-J`, `695-L`) at which the suite was **denied by the session's auto-mode classifier** and
+counts had to be re-derived locally. It executed here: **52 of 74 gates green, 22 red.**
+
+🔴 **22 gates are red, and every one of them was already red.** The suite was run a second time
+against a **clean tree** (`git stash -u`, run, restore) and the two red sets are **identical,
+member for member**:
+
+| Run | Green | Red | Red set |
+|---|---|---|---|
+| Clean tree (p899 as published) | 52/74 | 22 | `gate-header-signature`, `gate-offline`, `recount`, `gate-derived-counts`, `gate-enumeration`, `gate-absence`, `gate-dates`, `gate-ladder-case`, `gate-shelf-consistency`, `gate-prose-claims`, `gate-register-currency`, `gate-fold-identity`, `gate-alias-canonical`, `gate-census-currency`, `gate-grant-path`, `gate-census-union`, `gate-ledger`, `gate-i2-sweep-crosscheck`, `gate-union-currency`, `gate-action-answered`, `gate-promotion-ledger`, `gate-cell-reproduction` |
+| With p900's changes | 52/74 | 22 | **identical to the row above** |
+
+🟢 **So this pass introduced no regression** — and that is all the comparison establishes. 🔴 **It
+does not clear the 22.** A standing red set of 22 gates is a backlog this base carries without a
+dated owner, and *"it was already red"* is the sentence that lets it keep growing. Several of
+them name exactly what this pass touched — `gate-promotion-ledger`, `gate-ledger`,
+`gate-alias-canonical`, `gate-shelf-consistency` — **so the instruments that should have caught
+the duplicate-alias row automatically are themselves red.** It was caught by hand. Filed as
+`900-G4`.
+
+🟡 **Checks re-derived locally, in the absence of working gates:** table arity on every shelf
+touched (`agents/top.md` **67/67 rows at exactly 7 cells**; `repos/foundations.md` and
+`verticals/solutions.md` **0 ragged**), **all 21 newly written `github.com` URLs resolved on
+`raw.githubusercontent.com` before publication**, a placeholder/header-row scan over all six
+curated pages (clean), and `lib/` controls at **77/77**, `test_region.py` **79/79**,
+`test_licence_identity.py` **47/47**.
+
+
+### 🔵 Declared gaps from this pass
+
+- 🔴 **`900-G1`** — **5,908 of 6,208 rebuilt-ledger rows are unmeasured.** 300 were measured
+  here. The 49.2%-permissive / 36.4%-no-grant split is a property **of the top 300**, which is
+  ranked by how often this base logged an address, and that ranking is not random with respect
+  to licence. **Do not transfer these shares to the tail without measuring it.**
+- 🔴 **`900-G2`** — **every existence claim in this base older than p900 rests on one channel.**
+  p899's is now known wrong. Nothing has re-tested the earlier ones. The two-channel probe
+  built here (`measure_ledger.sh` + the nine-key `raw` fallback) should be run over the
+  `does-not-exist` verdicts in the archive before any of them is cited again.
+- 🟡 **`900-G3`** — the nine-key `raw` fallback is a **floor, not a census**. A repository with
+  no README, LICENSE, `package.json` or `.gitignore` at `HEAD` reads as absent. The 28 remaining
+  misses are *"absent on nine keys"*, which is weaker than *"does not exist"* — and writing it
+  the stronger way is the exact error this pass is correcting.
+- 🟡 **No licence byte-read for the 91 no-grant rows.** They are counted, not resolved.
+- 🔴 **`900-G4`** — **22 gates are red with no dated owner.** Four of them
+  (`gate-promotion-ledger`, `gate-ledger`, `gate-alias-canonical`, `gate-shelf-consistency`)
+  cover precisely the promotion and alias work this pass did by hand. **Close when a pass
+  publishes the red set with a cause per gate** — not when it repeats that the set is unchanged.
+
 ## `2026-11-18` (p899) — the discovery pipeline was never the bottleneck: **36 of the 40 most-logged addresses are still unshelved, and one of them is 38,369 ★ under MIT**
 
 **Channel:** `gh api search/repositories` for stars/SPDX, licence **byte-reads** from

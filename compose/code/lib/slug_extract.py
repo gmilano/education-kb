@@ -48,6 +48,27 @@ RESERVED_OWNERS = frozenset((
     # not in `886-G3`'s list; the same class, and free to add here once
     'about', 'contact', 'enterprise', 'pricing', 'security', 'site', 'readme',
     'login', 'join', 'new', 'explore', 'trending', 'dashboard', 'account',
+    # 🔴 `900-G1`, added p900. `886-G3` reserved `search` because this KB quotes
+    # `api.github.com/search/repositories` in its METHOD PROSE. It never reserved the
+    # OTHER api.github.com path, `api.github.com/repos/<owner>/<repo>`, which this base
+    # quotes **380 times** — and `github.com/repos/<owner>` matches the URL regex, so the
+    # p900 ledger rebuild returned `repos/moodle` (14 files), `repos/hkuds` (13),
+    # `repos/openedx` (11) and 15 more as promotable candidates. Same defect class as
+    # `886-G3`, in the module written to fix `886-G3`.
+    'repos', 'api', 'gists', 'licenses', 'repositories', 'gitignore',
+))
+
+# 🔴 `900-G2`, added p900. A slug that is syntactically valid and semantically a BLANK.
+# `github.com/owner/repo` occurs in **22 files** of this base as the placeholder in prose
+# describing the shelf's link format — and the p900 ledger ranked it **2nd**, above every
+# real repository. This is the `nombre`-row class exactly: not a header read as data, but
+# a TEMPLATE read as data. The trade-off is the one this module already documents — a
+# real repository literally named `owner/repo` would be rejected, and a false ABSENCE is
+# visible to the next pass's presence gate while a false PRESENCE becomes a KB entity
+# nobody questions.
+PLACEHOLDER_SLUGS = frozenset((
+    'owner/repo', 'owner/name', 'owner/repository', 'org/repo', 'user/repo',
+    'username/repo', 'owner/project', 'you/your-repo', 'your-org/your-repo',
 ))
 
 # The sub-resource verbs a prose URL carries.  Reserved in BOTH positions: in the second
@@ -61,8 +82,14 @@ RESERVED_OWNERS = frozenset((
 RESERVED_NAMES = frozenset(('blob', 'tree', 'raw', 'releases', 'issues', 'pull', 'wiki',
                             'commits', 'commit', 'branches', 'tags', 'compare', 'actions'))
 
+# 🔴 `900-G1`, second order. Reserving `repos` is necessary and NOT sufficient: the API
+# path CONTAINS the real address one segment deeper, so a predicate that merely rejects
+# `repos/moodle` consumes the text and the real `moodle/moodle` under it is never emitted.
+# Measured as control `A-1`. The prefix must be CONSUMED, and `repos` must ALSO stay
+# reserved — because `github.com/repos/moodle` with no third segment still backtracks into
+# `owner=repos`. Both halves are load-bearing; neither alone is correct.
 _URL = re.compile(
-    r'(?:https?://)?(?:www\.)?github\.com/'
+    r'(?:https?://)?(?:www\.|api\.)?github\.com/(?:repos/)?'
     r'(?P<owner>[A-Za-z0-9](?:[A-Za-z0-9._-]*[A-Za-z0-9])?)/'
     r'(?P<name>[A-Za-z0-9._-]+)',
     re.IGNORECASE,
@@ -87,6 +114,8 @@ def is_repo_slug(owner, name):
         return False
     # `.` and `..` are path traversal, never names; a bare `.git` is not a name either.
     if name in ('.', '..') or name.lower() == '.git':
+        return False
+    if ('%s/%s' % (owner, name)).lower() in PLACEHOLDER_SLUGS:
         return False
     return True
 
@@ -125,6 +154,8 @@ def extract_slugs(text, keep_rejected=False):
                 reason = 'sub-resource:%s' % name.lower()
             elif owner.lower() in RESERVED_NAMES:
                 reason = 'sub-resource-owner:%s' % owner.lower()
+            elif slug.lower() in PLACEHOLDER_SLUGS:
+                reason = 'placeholder'
             else:
                 reason = 'not-a-name'
             rejected.append((slug, reason))

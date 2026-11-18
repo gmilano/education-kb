@@ -50,11 +50,18 @@ wants a product; use Artemis or OpenOLAT where the client wants an institution.*
 ## Student information systems and school ERP
 
 The weakest category for AI today and therefore the strongest opportunity.
-`verticals` note: **GegoK12 is the only MIT-licensed SIS verified here** — relevant when a
-client wants a closed derivative.
+`verticals` note: 🔴 **Corrected p900 — GegoK12 is no longer the only MIT-licensed SIS here,
+and it is no longer the largest.** This file carried *"GegoK12 is the only MIT-licensed SIS
+verified here"*; **`academico-sis/academico` is MIT, 413 ★ and was pushed 2026-11-18**, against
+GegoK12's 57 ★ and last push 2026-09-23. It was in this base's own `logged-not-shelved` ledger
+for an unknown number of passes. 🔵 **Both remain true answers to "can the client keep the
+derivative closed"** — Academico for an actively maintained core, GegoK12 for a K-12-shaped
+data model — and the honest reading is that the permissive SIS option was understated, not
+absent.
 
 | Platform | Repo | Licence | Notes |
 |---|---|---|---|
+| **Academico** | https://github.com/academico-sis/academico | **MIT** | **Added p900** — 413 ★, pushed 2026-11-18, out of this base's own ledger. School management on **Laravel + Filament**: enrolments, courses, attendance, invoicing. Aimed at **small and medium institutions**, not districts — so it does not displace RosarioSIS on scale, it displaces it on **licence**. 🔵 Filament is an admin-panel framework, which means the CRUD surface an AI tier would otherwise have to build is already generated; the layering seam is a Laravel service plus Filament actions |
 | **GegoK12** | https://github.com/Gego-K12/gegok12 | MIT | K-12 school ERP/SIS, PHP/Laravel. Permissive licence verified in repo, confirming the vendor's claim. |
 | **RosarioSIS** | https://github.com/francoisjacquet/rosariosis | GPL-2.0 | Students, grades, scheduling, attendance, billing, discipline, food service. PHP + PostgreSQL/MySQL. Active. |
 | **Gibbon** | https://github.com/GibbonEdu/core | GPL-3.0 | Full school platform, strong in international schools across APAC. |
@@ -102,6 +109,7 @@ was produced.
 
 | Platform | Repo | Licence | Where it is strong | AI layering seam |
 |---|---|---|---|---|
+| **Anubis** | https://github.com/AnubisLMS/Anubis | **MIT** | **Added p900** — 383 ★, pushed 2026-09-15, from **NYU**. A distributed LMS built for one job: **automating computing-science courses**. Per-student cloud IDEs, autograding and submission pipelines, deployed on Kubernetes | The IDE *is* the seam — an agent that sees the student's live workspace rather than only their final submission. 🔵 **The only platform in this file where formative feedback can be given mid-attempt**, which is what every tutor in `agents/top.md` claims to want and cannot reach through an LMS API |
 | **Submitty** | https://github.com/Submitty/Submitty | **BSD-3-Clause** (`LICENSE.md@main`, 1,542 B, `sha256₁₂ c123708cb4ef`) | University CS and engineering courses; submission + autograding + TA/manual grading + rubrics in one system. 807 ★, pushed 2026-11-18, developed at **RPI / Rensselaer Center for Open Source Software** since 2014 | **The permissive anchor of this category.** No patent clause, no enterprise carve-out, no copyleft — the one grading platform a client can take a closed derivative of. Layer an AI rubric-assist on the manual-grading tier, leaving the deterministic autograder untouched (which is what keeps it defensible — see `agents/top.md`, `EDU AI Agent Suite`) |
 | **PrairieLearn (CE)** | https://github.com/PrairieLearn/PrairieLearn | 🔴 **AGPL-3.0 Community Edition + proprietary Enterprise Edition. NOT MIT — corrected p899** | Randomised, auto-graded STEM problem generation; the strongest assessment *engine* here. 533 ★, pushed 2026-11-18 | 🔴 **Read the licence note in `repos/foundations.md` before planning anything.** `apps/course-agent/` — the AI tier — is **Enterprise Edition and requires a paid subscription for production use**, with a clause assigning your modifications to PrairieLearn, Inc. Build the AI seam **outside** the EE directories, against the AGPL CE, and host rather than redistribute |
 | **Autolab** | https://github.com/autolab/Autolab | Apache-2.0 | CMU's autograding platform with secure job execution | Patent-granting and permissive; pair with `autolab/Tango` (Apache-2.0) when grading must be called from something that is not Autolab |

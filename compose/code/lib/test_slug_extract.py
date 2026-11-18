@@ -89,6 +89,42 @@ check('S-3 de-duplication is case-insensitive on the whole slug',
       extract_slugs('github.com/HKUDS/DeepTutor and github.com/hkuds/deeptutor'),
       ['HKUDS/DeepTutor'])
 
+# ── ARM 7 — `900-G1`: the OTHER api.github.com path. `886-G3` reserved `search` and
+# stopped there; this base quotes `api.github.com/repos/<owner>/<repo>` 380 times, and
+# `github.com/repos/<owner>` matches the URL regex with `repos` as the owner.
+check('A-1 api.github.com/repos/<owner>/<repo> does not yield `repos/<owner>`',
+      extract_slugs('measured via api.github.com/repos/moodle/moodle today'),
+      ['moodle/moodle'])
+check('A-2 the real address under the API path is RECOVERED, not merely rejected — '
+      'this is the half `886-G3`\'s predicate-only approach would have missed',
+      extract_slugs('api.github.com/repos/HKUDS/DeepTutor'), ['HKUDS/DeepTutor'])
+check('A-2b and it is recovered with NO rejection recorded, because nothing was lost',
+      extract_slugs('api.github.com/repos/HKUDS/DeepTutor', keep_rejected=True)[1], [])
+check('A-3 a bare `api.github.com/repos/` fragment yields nothing at all',
+      extract_slugs('see api.github.com/repos/ for the shape'), [])
+check('A-4 the negative fixture that proved the defect is rejected',
+      is_repo_slug('repos', 'nonexistent-org-zzz'), False)
+check('A-5 `api` as a first segment is reserved too',
+      is_repo_slug('api', 'v3'), False)
+check('A-6 a real owner NAMED `repos` is the documented trade-off, and is rejected',
+      is_repo_slug('repos', 'anything'), False)
+
+# ── ARM 8 — `900-G2`: the placeholder. Syntactically a slug, semantically a blank.
+check('P-1 github.com/owner/repo is a TEMPLATE, not a repository',
+      extract_slugs('links look like github.com/owner/repo in this file'), [])
+check('P-2 the placeholder rejection carries its own reason',
+      extract_slugs('github.com/owner/repo', keep_rejected=True)[1],
+      [('owner/repo', 'placeholder')])
+check('P-3 case does not rescue the placeholder',
+      extract_slugs('github.com/OWNER/REPO'), [])
+check('P-4 a real repo whose OWNER is `owner` but name is real is NOT rejected',
+      extract_slugs('github.com/owner/kolibri'), ['owner/kolibri'])
+check('P-5 `user/repo` and `org/repo` are the same class',
+      extract_slugs('github.com/user/repo and github.com/org/repo'), [])
+check('P-6 a placeholder next to a real slug does not suppress the real one',
+      extract_slugs('github.com/owner/repo e.g. github.com/moodle/moodle'),
+      ['moodle/moodle'])
+
 # ── ARM 6 — the RATCHET. `886-G3` closes only when this is a HELPER, not an inline grep.
 check('RATCHET extract_slugs is importable and callable from another instrument',
       callable(extract_slugs), True)

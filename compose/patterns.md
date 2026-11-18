@@ -10,7 +10,9 @@ Concrete recipes. Each names the exact repos, how they wire together, the licenc
 the result, and a realistic build estimate. Every repo referenced is verified in
 `agents/top.md`, `repos/foundations.md` or `verticals/solutions.md`.
 
-**Sixteen patterns, plus the G1 licence gate added in p897** (**P16 added in `p898`**) that runs ahead of all of them.
+**Nineteen patterns, plus the G1 licence gate added in p897** (**P19 added in `p900`** — the
+first end-to-end permissive pattern in this file that is not offline-first, built entirely from
+rows promoted out of this base's own unshelved ledger) (**P16 added in `p898`**) that runs ahead of all of them.
 **p895 added P14** — offline-first literacy delivery on the one Africa-origin
 permissive platform this KB has verified (`elimu-ai`), with the agent tier as studio IP because
 the supply measurement leaves nothing licensed to adopt (see **T16**). **It is also the only
@@ -1379,3 +1381,68 @@ reaches a build**.
 **6–8 weeks** to a pilot with one teacher cohort. 🔴 **Honest limits:** Rumi is **25 ★ and young**
 — this is a reference implementation and a channel argument, **not substrate**. Budget the
 integration as studio IP, pin the version, and expect to maintain the fork.
+
+---
+
+## P19 — Standards-native assessment delivery a client can keep closed: QTI 3 in, xAPI out, no copyleft anywhere (added p900)
+
+**The problem this solves.** A client has existing assessment content and wants an AI tier that
+authors, delivers and scores items — **and wants to own the result**. Every route this file
+previously offered ran through a copyleft platform: Open edX's `edx-ora2` (AGPL-3.0), Moodle
+(GPL-3.0), or `Citolab/qti-components` (GPL-3.0) for the player itself. 🔵 **p900 shelved the
+pieces that make an end-to-end permissive route exist for the first time.**
+
+### The stack — every grant byte-read, every row verified 2026-11-18
+
+| Layer | Repo | Grant | Why this one |
+|---|---|---|---|
+| Item format in | [`longsightgroup/qti3`](https://github.com/longsightgroup/qti3) | **MIT** (1,071 B) | Renders **and scores** QTI 3. TypeScript core with **zero third-party runtime dependencies**, plus converters for the client's older QTI. The permissive alternative to `Citolab/qti-components` (GPL-3.0) |
+| Item authoring | [`satvik314/educhain`](https://github.com/satvik314/educhain) | MIT | Generates MCQs and assessments from source content. 🟡 Idle since 2026-05-29 — vendor it, do not track it |
+| Learner model | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) + [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | MIT + MIT | Neural knowledge tracing **with its classical baseline beside it**. Ship both: pyBKT is what you show when the client asks whether the neural model earns its cost |
+| Integrity | [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | MIT | Post-hoc similarity across submissions. 🔵 **Deliberately not proctoring** — see the regulatory note below |
+| Evidence out | [`adlnet/xapi-spec`](https://github.com/adlnet/xapi-spec) + [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | Apache-2.0 + Apache-2.0 | The normative spec to validate against, and a SQL-backed LRS to write to |
+| Legacy delivery | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | MIT | Ships the result into the client's existing LMS **without re-authoring**, because their content is already SCORM |
+| Platform seam (optional) | [`ucfopen/canvasapi`](https://github.com/ucfopen/canvasapi) | MIT | Talks to AGPL-3.0 Canvas **over its API**, so the platform's licence does not reach your code |
+
+### Wiring
+
+1. **Ingest** the client's QTI 1.2/2.x through `qti3`'s conversion tooling; keep QTI 3 as the
+   single internal item representation. Authoring agents emit QTI 3, never a bespoke JSON.
+2. **Author** with `educhain` behind a review queue. 🔴 Generated items are *drafts*: the
+   human-approval step is the deliverable, not a nicety — several jurisdictions in **T1**
+   regulate automated assessment decisions, not automated assessment *content*.
+3. **Deliver and score** in the browser with the `qti3` Web Component. Deterministic scoring
+   stays in QTI's own response processing; **the AI tier never decides the grade**, which is
+   what keeps this outside the Annex III high-risk box described below.
+4. **Model** the learner with `pykt-toolkit`, fed from the scored responses; hold `pyBKT` as the
+   baseline in the same evaluation harness.
+5. **Emit** every interaction as xAPI statements into `lrsql`, validated against `xapi-spec`.
+   This is the evidence layer that answers *"did it help"*, which **T23** argues clients now ask
+   for before renewal.
+6. **Integrate** by either publishing a SCORM package via `scorm-again` into whatever LMS they
+   run, or talking to Canvas through `canvasapi`. 🔵 **Neither path forks a copyleft platform.**
+
+### Licence posture
+
+🟢 **MIT and Apache-2.0 end to end. There is no GPL, AGPL or LGPL component in this pattern** —
+the second pattern in this file (after **P14**) that is permissive throughout, and the first one
+that is permissive throughout *at enterprise scale* rather than on a single offline platform.
+The studio's agent tier, the item bank and the learner model can all be client-owned IP.
+
+### Regulatory posture — read this before scoping
+
+🔴 **Scoring an exam that affects progression is an EU AI Act Annex III high-risk use.** The
+Digital Omnibus (**Regulation (EU) 2026/1744**) moved those obligations to **2 December 2027**,
+which is scoping time, not an exemption — and **transparency duties under Article 50 already
+apply**. Two design choices follow and both are in the wiring above: **deterministic scoring
+owns the grade**, and **integrity is post-hoc comparison (`dolos`) rather than proctoring**,
+because exam monitoring carries its own Annex III exposure and, where biometric or emotion
+inference is involved, runs into an outright prohibition in EU schools.
+
+### Estimate
+
+**8–12 weeks** to a pilot with one course's item bank converted, authoring behind review, live
+delivery and an LRS receiving statements. The QTI conversion of the client's legacy bank is the
+schedule risk and the part to timebox first — `qti3`'s converter handles the common cases and
+not the exotic ones, and which of those a client has is not knowable from a statement of work.
+

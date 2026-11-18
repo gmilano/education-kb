@@ -844,6 +844,38 @@ A studio that clears only the product bar has cleared half of the UK market's re
 detection*. Ofqual's involvement means the redesign argument now has a **regulatory** counterpart in
 the UK, not only a pedagogical one, which makes `P9` easier to sell there than in most markets.
 
+#### p900 additions — EMEA: one new instrument from the Africa leg, and the first MENA-origin permissive model this base can name
+
+🟢 **Ethiopia — Medemer Artificial Intelligence University.** The Council of Ministers approved
+the draft regulation **formally establishing Medemer AI University as an autonomous public
+university on 2 March 2026**. 🔵 **This is the only instrument returned by six regional legs this
+pass that this base did not already hold** — the other fourteen checked facts were all present.
+It is a different kind of instrument from the rest of this file: not a rule governing AI *use*
+in education, but **a state building an institution whose subject is AI**. For a studio, the
+reachable work is curriculum, assessment infrastructure and faculty tooling for a greenfield
+public institution, which is a procurement shape rather than a compliance shape.
+*(Single source — Wikipedia, citing the Council of Ministers' approval. Confirm against the
+Federal Negarit Gazeta before it goes in a client deck.)*
+
+🟢 **Middle East, supply side — `tokenaii/horus-taleeq-0.2b-base` (MIT).** An **Arabic-only
+small language model** with training code and a reproducibility record published permissively,
+by **TokenAI**, *"a startup and nonprofit organization focused on open Arabic AI research and
+model development"*. 🔴 **It was found in this base's own unshelved ledger, not by search** — it
+had been logged five times while `p899` was declaring *"no supply-side regional leg for Africa
+or the Middle East"*. 🔵 **The regional gap was in promotion, not in research**, and a gap in
+promotion is invisible to any instrument that measures coverage by reading the shelves. It is a
+**base** model: a starting point for continued pretraining, not a deployable Arabic tutor.
+Shelved in `agents/top.md`.
+
+🟡 **What the Africa and Middle East legs could not establish this pass, stated so the silence
+is not read as coverage.** Both legs returned preprints, Wikipedia and vendor blogs where the
+North America and EMEA legs return law-firm analyses and primary gazettes. Two claims were
+rejected rather than written: **Saudi Arabia's reported six-million-student first-year AI
+rollout** (single vendor-authored source) and the **exact form of the UAE age cutoff** (sources
+split between *under 13* and *below Grade 7*). The **source quality gap between regions is
+itself the finding** — it is why a LATAM or MENA engagement cannot be briefed from secondary
+search at the confidence a North America one can.
+
 ### APAC
 
 🟢 **Supply side, placed p899: APAC builds the tutors, and it builds them in the vernacular.**

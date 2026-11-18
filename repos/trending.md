@@ -4,6 +4,76 @@ region: Global
 updated: 2026-11-18
 ---
 
+## `2026-11-18` (p900) — **the backlog held an Arabic-only education SLM, an MIT SIS and a zero-dependency QTI 3 engine; none of the three is reachable through `search/repositories`**
+
+**Channel:** `lib/slug_extract.py` offline over this repository, `gh api search/repositories`
+for stars/SPDX, and **licence + existence byte-reads from `raw.githubusercontent.com`** run as
+an independent second channel. The method finding — a **44% false-absence rate** in the
+single-channel existence test this base has used throughout — is in `agents/trending.md` p900.
+This file carries what the correction *found*.
+
+### 🔴 Three repositories this base has logged for passes, that its own existence test calls non-existent
+
+All three return **200** on `raw` and **nothing** on `search/repositories` **under their
+canonical names** — they are not renames, they are simply not in the search index. Every grant
+below is a byte-read, not a badge:
+
+| Repo | Grant (byte-read) | Logged | What it is |
+|---|---|---|---|
+| https://github.com/tokenaii/horus-taleeq-0.2b-base | **MIT**, `LICENSE@HEAD`, 1,079 B | 5× | **Arabic-only small language model**, training code and reproducibility record, by **TokenAI** — *"a startup and nonprofit organization focused on open Arabic AI research and model development"*. A base-model release, explicitly scoped: no chat adapters, no teacher outputs, no private data |
+| https://github.com/longsightgroup/qti3 | **MIT**, `LICENSE.md@HEAD`, 1,071 B | 10× | **Renders and scores QTI 3 assessment items.** TypeScript core, native Web Component player, React/Preact adapters, migration tooling for older QTI — and **zero third-party runtime dependencies in the core engine and CLI** |
+| https://github.com/mitodl/open-learning-ai-tutor | **MIT**, `LICENSE@HEAD`, 1,068 B | 5× | **MIT Open Learning's tutor backend**, in production at `learn-ai.ol.mit.edu`, with its pedagogical engine published as a paper (`arXiv:2410.03781`) |
+
+🔵 **`horus-taleeq-0.2b-base` is the one that changes a shelf.** This base has carried *"no
+Middle East or North Africa-origin permissive model"* as an open regional gap. It had one,
+logged five times, unread. 🔴 **The gap was in the promotion step, not in the research** — and
+a gap in promotion is invisible to the instrument that declares gaps, because that instrument
+reads the shelves.
+
+### 🟢 Nine more promotions out of the ledger, measured today
+
+| Repo | Licence | ★ | Last push | Why it earns a row |
+|---|---|---|---|---|
+| https://github.com/adlnet/xapi-spec | Apache-2.0 | 954 | 2025-07-03 | The **xAPI specification itself**, from ADL (US DoD). Normative text, not an implementation — the thing an LRS integration is checked against |
+| https://github.com/ucfopen/canvasapi | MIT | 682 | 2026-04-16 | **Python wrapper for the Canvas LMS API**, from UCF. The permissive seam onto an AGPL platform — exactly the posture `P-rule` in `compose/patterns.md` prescribes |
+| https://github.com/pykt-team/pykt-toolkit | MIT | 462 | 2026-10-18 | **Deep-learning knowledge tracing, benchmarked.** The p899 adaptive-learning section opened with `pyBKT` (classical BKT); this is the neural half, with a standard benchmark harness |
+| https://github.com/academico-sis/academico | MIT | 413 | **2026-11-18** | **School management platform** on Laravel + Filament for small and medium institutions. **An MIT SIS** — see below |
+| https://github.com/AnubisLMS/Anubis | MIT | 383 | 2026-09-15 | **Distributed LMS for automating computing-science courses**, from NYU. Per-student cloud IDEs and autograding |
+| https://github.com/jcputney/scorm-again | MIT | 367 | 2026-11-17 | **Modern SCORM JavaScript runtime.** SCORM is the format a client's existing content is already in; this is how an agent-built course ships into a legacy LMS |
+| https://github.com/dodona-edu/dolos | MIT | 358 | 2026-11-16 | **Source-code plagiarism detection**, from **Ghent University (EMEA)**. Language-agnostic similarity on programming submissions |
+| https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard | Apache-2.0 | 47 | 2026-11-18 | **The Ed-Fi data standard** — the K-12 interoperability substrate in US districts. Low stars, high institutional weight |
+| https://github.com/dmitry-viskov/pylti1.3 | MIT | 138 | **2024-08-18** | LTI 1.3 Advantage tool in Python. 🟡 **Idle 27 months** — read it as a reference implementation, not an upstream to track |
+
+### 🟢 `academico-sis/academico` displaces a standing claim in `verticals/solutions.md`
+
+This base's SIS row has been **RosarioSIS, Gibbon, openSIS, i-educar** — and its standing
+summary of that category is that the systems clients actually run are copyleft. **Academico is
+MIT, 413 ★, and was pushed today.** It is smaller than RosarioSIS and aimed at *small and
+medium institutions* rather than districts, so it does not replace them. 🔵 **What it changes is
+the answer to the question clients ask**: when a client needs a student-information core they
+can fork into a proprietary product, this base could previously only say *"not in this
+category."* Now it can name one.
+
+### 🔴 Two licence facts worth recording against rows in the ledger, because both would have been taken on trust
+
+| Repo | SPDX says | Byte-read says |
+|---|---|---|
+| `tl-its-umich-edu/caliper-php-public` | not indexed | 🔴 **GPL** — 7,437 B. A Caliper analytics library under full GPL, where the rest of this base's analytics shelf is Apache/MIT |
+| `vosslab/qti_package_maker` | not indexed | 🔴 **No licence file at all** on six candidate paths. Logged 7×. **Unusable until its author states a grant** |
+
+### 🟡 What was searched for and not found this pass
+
+- **`LearnPress/learnpress`** (275 ★, pushed today) — the WordPress LMS plugin, logged 10× —
+  returns **`NONE`** for SPDX. WordPress plugins are conventionally GPL by the host platform's
+  terms, but **this base does not publish a conventional grant as a verified one**, and the
+  licence was not byte-read this pass. No row.
+- **`dssg/student-early-warning`** (70 ★) — dropout prediction, logged 10×. **Last push
+  2018-08-22** and `NOASSERTION`. 🔴 Eight years idle and no readable grant: named here so the
+  next pass does not spend a measurement on it.
+- **`foradian/fedena`** — surfaced by the vertical-platform leg as an Apache-2.0 school ERP.
+  The address resolves on `raw` (via `README.markdown`) but is **not in the search index**, so
+  stars and SPDX could not be measured, and its licence was not byte-read. **Named, not shelved.**
+
 ## `2026-11-18` (p899) — **the "empty" grading category has 2,400 ★ of permissive software in it, and this KB published the one encumbered member of it as "MIT · Permissive"**
 
 **Channel:** `gh api search/repositories` for stars/SPDX, licence **byte-reads** from

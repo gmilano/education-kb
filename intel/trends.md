@@ -6,6 +6,10 @@ updated: 2026-11-18
 
 # Current trends — education
 
+**Twenty-three trends** (**T23 added in `p900`** — the first trend in this file derived from a
+licence census of this base's *own unshelved backlog* rather than from search or from a
+repository probe)
+
 **Twenty trends** (**T20 added in `p898`**, the first trend in this file sourced from byte-level repository probes rather than search snippets) (the count in this line read *"sixteen"* through the addition of T17 and T18 and is corrected in **p897**), each with the evidence behind it and what it implies for delivery. **T19 added in p897**, from the licence re-read of every unresolved row. **T16 added in p895**, from four cohort measurements that only become one finding when read together. **T14 and T15 added in p894** — the first from the operative content of China's anthropomorphic-AI Measures, which this file had been carrying as a bare date; the second from four repository cohorts measured in a single batch, which is the only way the correlation it names becomes visible. Researched
 2026-11-18; T9 added and T1/T3/T6 extended in **p890**, T10 added in **p891**, and **T11 added in
 p892** from the India and Saudi Arabia legs — all the same day. Legal facts here were
@@ -721,6 +725,42 @@ American higher ed it is the LMS the registrar already runs. 🔴 **An engagemen
 surface last has already constrained its own addressable population**, and the `rumi` case shows
 the ceiling: it is the only agent in this KB that reaches a teacher with **no device
 provisioning whatsoever**, and it has 25 ★ — the market has not yet priced this axis.
+
+## T23 — Education's permissive supply is real but **unaddressable**: a third of it carries no readable grant, and a meaningful share is invisible to the index everyone searches with
+
+**The evidence.** p900 measured 300 addresses this KB had logged from its own research and
+never shelved — the largest licence census this base has run on its backlog
+([record](../evidence/ledger-measured.2026-11-18-p900.tsv)). Two numbers matter and they point
+in opposite directions.
+
+**The good one: 49.2% is permissive** — MIT 76, Apache-2.0 43, BSD 3, ISC 1, out of 250 that
+resolve. Education's open supply skews *permissive*, against this file's own long-standing
+framing that the category is dominated by copyleft. **That framing is true of the deployable
+platforms (Moodle, Open edX, Canvas) and false of the libraries and agents around them**, and
+the distinction decides what a studio can keep.
+
+**The bad one: 36.4% has no readable grant** — 61 `NOASSERTION` plus 30 with no licence at all.
+🔴 **And SPDX is not reliable where it does answer:** `p897` byte-read seven unresolved rows and
+**five were wrong as recorded**; `p899` found `PrairieLearn` published here as MIT when its AI
+tier is proprietary. So the real cost of adopting from this supply is not discovery — it is **a
+licence byte-read per candidate**, and that is why 36 of 40 top backlog rows sat unabsorbed for
+passes.
+
+**The part that is not about licences at all.** 🔴 **Of 50 addresses that `search/repositories`
+reported as non-existent, 22 (44%) resolve on `raw.githubusercontent.com`** — four as
+rename/transfer redirects, the rest simply missing from the search index. Among the unindexed:
+**MIT Open Learning's production tutor backend, a zero-dependency QTI 3 scoring engine, and the
+only permissive Arabic education model this KB has found.** 🔵 **Three of the most
+institutionally credible assets in this file's whole domain are unreachable through the ranked
+search everyone uses to survey a market** — including, until this pass, this KB.
+
+**Implication for delivery.** Two concrete consequences. (1) **Budget a licence read into
+selection, not into legal review** — at 36.4% no-grant and a measured SPDX error rate, a
+shortlist assembled from badges is not a shortlist. (2) **Do not conclude a capability is
+missing from a market because search returns nothing.** p894 recorded automated grading as *"a
+category with nothing in it"*; p899 found 2,400 ★ of permissive grading software. The instrument
+was wrong, not the market. **Where a client asks "is there anything open for X", the defensible
+answer requires a second channel.**
 
 ## Trends we looked for and could not substantiate
 
