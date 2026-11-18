@@ -102,7 +102,7 @@ education RAG projects actually fail.
 |---|---|---|
 | https://github.com/ollama/ollama | MIT | Local model serving. The enabler for data-residency and on-premise school deployments. |
 | https://github.com/vllm-project/vllm | Apache-2.0 | High-throughput serving for campus-scale concurrency. |
-| https://github.com/BerriAI/litellm | MIT | Unified gateway across providers, with per-key budgets. **Per-course and per-student cost caps are a procurement requirement in education, not a nicety.** |
+| https://github.com/BerriAI/litellm | **MIT, except `litellm/enterprise/`** (byte-verified p891: the root `LICENSE` grants MIT to everything *outside* `litellm/enterprise/`, which carries its own separate licence — this is why the API reports `NOASSERTION`). Use the OSS paths and do not vendor the enterprise directory. | Unified gateway across providers, with per-key budgets. **Per-course and per-student cost caps are a procurement requirement in education, not a nicety.** |
 | https://github.com/qdrant/qdrant | Apache-2.0 | Vector database with payload filtering — needed to scope retrieval to one course or cohort. |
 | https://github.com/chroma-core/chroma | Apache-2.0 | Lightweight vector store; fine for per-course corpora. |
 | https://github.com/HKUDS/LightRAG | MIT | Graph-augmented RAG. Fits curricula, where prerequisite structure is a graph. |
@@ -190,7 +190,7 @@ then the one to trust. No repo in this set is archived.
 | `opendatalab/MinerU` | 83,893 | NOASSERTION | Apache-2.0 | 2026-11-16 | 2 |
 | `docling-project/docling` | 70,725 | MIT | MIT | 2026-11-18 | 0 |
 | `mem0ai/mem0` | 69,158 | Apache-2.0 | Apache-2.0 | 2026-11-17 | 1 |
-| `BerriAI/litellm` | 63,462 | NOASSERTION | MIT | 2026-11-18 | 0 |
+| `BerriAI/litellm` | 63,462 | NOASSERTION (API) | **MIT except `litellm/enterprise/` — byte-verified p891** | 2026-11-18 | 0 |
 | `crewAIInc/crewAI` | 61,058 | MIT | MIT | 2026-11-18 | 0 |
 | `HKUDS/DeepTutor` | 60,165 | Apache-2.0 | Apache-2.0 | 2026-11-15 | 3 |
 | `odoo/odoo` | 55,884 | NOASSERTION | LGPL | 2026-11-18 | 0 |
@@ -239,7 +239,7 @@ then the one to trust. No repo in this set is archived.
 | `chamilo/chamilo-lms` | 1,025 | GPL-3.0 | GPL-3.0 | 2026-11-18 | 0 |
 | `kiwix/kiwix-tools` | 1,006 | GPL-3.0 | GPL-3.0 | 2026-11-09 | 9 |
 | `moodlehq/moodleapp` | 1,006 | Apache-2.0 | NO-LICENSE-FILE | 2026-11-17 | 1 |
-| `openeducat/openeducat_erp` | 913 | NOASSERTION | LGPL | 2026-11-16 | 2 |
+| `openeducat/openeducat_erp` | 913 | NOASSERTION (API) | **LGPL-3.0 — byte-verified p891** | 2026-11-16 | 2 |
 | `ls1intum/Artemis` | 832 | MIT | MIT | 2026-11-18 | 0 |
 | `autolab/Autolab` | 808 | Apache-2.0 | Apache-2.0 | 2026-11-17 | 1 |
 | `portabilis/i-educar` | 727 | GPL-2.0 | LGPL | 2026-11-13 | 5 |

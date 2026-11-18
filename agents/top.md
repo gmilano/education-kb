@@ -24,6 +24,13 @@ routes that work. Stars are as at 2026-11-18, **remeasured in pass p890** (DeepT
 60,000-star repo. Star counts are a **daily** metric; remeasuring hourly buys nothing and the
 call budget belongs in regional research instead.
 
+**p891 acted on that note.** This pass ran **no full star sweep** — it spent the budget on four
+gap-directed regional legs instead (Article 4 / Africa / Middle East / Canada), all four of
+which closed a declared gap in `intel/market.md` or `intel/trends.md`. One spot check:
+`HKUDS/DeepTutor` 60,186 → **60,210** (+24 in a day), consistent with the cadence finding.
+**Star figures in this table are therefore as at p890 unless marked otherwise**, and one agent
+(`Claw-ED`) was added with freshly measured figures. Full sweep due next calendar day.
+
 ## Education-specific agents
 
 Built for teaching, tutoring or assessment — not general frameworks pointed at a classroom.
@@ -43,6 +50,7 @@ Sorted by stars.
 | **Open TutorAI (CE)** | https://github.com/Open-TutorAi/open-tutor-ai-CE | BSD-3-Clause | 118 | 2026-06-26 | Community edition of a self-hostable tutor platform. Licence text carries an "All rights reserved" header over a BSD-style grant; SPDX confirms BSD-3-Clause. | EMEA |
 | **TeachMeCoding** | https://github.com/liangxiao777/TeachMeCoding | Apache-2.0 | 73 | 2026-10-30 | Local-first AI coding tutor: personalised roadmaps, lessons, hands-on practice with execution. | APAC |
 | **aula** | https://github.com/luumlabs/aula | AGPL-3.0 | 66 | 2026-11-17 | Turns notes, slides and past exams into lessons. **AGPL — not usable in a closed derivative.** | Global |
+| **Claw-ED** | https://github.com/SirhanMacx/Claw-ED | MIT | 65 | 2026-09-19 | Local-first AI teaching assistant: editable lesson drafts, student materials and slides, generated from the teacher's own curriculum with a model of their choice. Self-described teacher-reviewed beta. **Teacher-facing**, which this table is otherwise thin on, and **local-first + bring-your-own-model**, which is the posture EMEA sovereignty procurement now asks for. **Caveat: trending on stars through Oct 2026 while its last commit is 2026-09-19** — read it as a design reference, not a dependency. Licence byte-read from `LICENSE@main` (`Copyright (c) 2026 EDUagent Contributors`). | Global |
 | **wenflow** | https://github.com/wenflow-org/wenflow | MIT | 72 | 2026-11-12 | Writing-feedback workflow agent. | APAC |
 | **wiki-rag** | https://github.com/moodlehq/wiki-rag | BSD-3-Clause | 54 | 2026-06-15 | **Moodle HQ's own** RAG service over Moodle documentation. Low stars, high significance: the Moodle organisation shipping a first-party retrieval agent. | EMEA — Moodle HQ |
 | **ECNU EduWork** | https://github.com/ECNU/EduWork | MulanPSL-2.0 | 378 | 2026-11-18 | Education workflow agent. **Licence note:** Mulan Permissive Software License v2 is OSI-approved and permissive, but it is not MIT/Apache — check your client's approved-licence list. | APAC — ECNU, China |

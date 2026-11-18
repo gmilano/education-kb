@@ -45,7 +45,7 @@ client wants a closed derivative.
 | **Gibbon** | https://github.com/GibbonEdu/core | GPL-3.0 | Full school platform, strong in international schools across APAC. |
 | **openSIS Classic** | https://github.com/OS4ED/openSIS-Classic | **None declared** — no root licence file and GitHub's SPDX detector reports `NONE`; third parties list GPL-2.0. **Do not ship this to a client without written licence clarification.** | Long-standing web SIS from OS4Ed, 351 ★. |
 | **i-Educar** | https://github.com/portabilis/i-educar | GPL-2.0 | **Brazilian public-education SIS**, built around Brazilian regulatory requirements. The default SIS starting point for a LATAM public-sector engagement. |
-| **OpenEduCat** | https://github.com/openeducat/openeducat_erp | LGPL-3.0 | Education ERP built **on Odoo** — admissions, fees, LMS, library in one. |
+| **OpenEduCat** | https://github.com/openeducat/openeducat_erp | LGPL-3.0 (byte-verified p891 from `LICENSE@master`; the GitHub API reports `NOASSERTION` because the file is a preamble plus the GPL text, not an SPDX-matchable template) | Education ERP built **on Odoo** — admissions, fees, LMS, library in one. |
 | **Odoo** | https://github.com/odoo/odoo | LGPL-3.0 | The general ERP underneath OpenEduCat; the actual "Odoo for education" answer is Odoo plus OpenEduCat. |
 | **Frappe Education** | https://github.com/frappe/education | GPL-3.0 (`license.txt`: "License: GNU GPL V3") | Education module on the ERPNext/Frappe stack. |
 
@@ -118,6 +118,15 @@ not once per engagement.
 **43 platforms and content assets, all URL- and licence-verified.**
 
 ## Honest gaps
+
+- **Unlicensed content corpora are the biggest trap in this category (added p891).** The largest
+  education-tagged repo on GitHub, https://github.com/TapXWorld/ChinaTextbook (**84,728 ★**), has
+  **no `LICENSE` or `COPYING` file on either `main` or `master`** — all four candidate paths
+  return 404, and the GitHub API reports licence `NONE`. No licence means **all rights
+  reserved**, and the contents are third-party-copyright PDF textbooks rather than code. It is
+  larger than every platform in this file and usable in none of them. **Byte-read the licence of
+  any content asset before it reaches a client deck** — curriculum corpora are where star count
+  and usability diverge most sharply.
 
 - **No open-source education CRM.** Searches for one returned SIS and school-management
   products only. Student-recruitment and alumni CRM is proprietary (Salesforce Education

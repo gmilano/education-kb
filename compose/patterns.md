@@ -362,3 +362,90 @@ further education, and it tells you precisely what a tender will ask.
 
 **Estimate:** 5–7 weeks on top of an existing AI tier; ~9 weeks standalone. The exit runbook
 and the per-cost-centre hierarchy are the long poles, not the tracing.
+
+---
+
+## P9 — Integrity by assessment redesign, not detection
+
+**For:** any higher-education or senior-secondary client currently buying, piloting or being
+pressured to buy AI-detection tooling.
+**Region:** Global. Strongest fit **North America (Canada especially)** and **EMEA**; also the
+compliant answer to the **UAE** exam-context prohibition.
+**Added:** p891. Evidence behind it: **T10** in `intel/trends.md`.
+
+### Why this pattern exists
+
+Detection is being removed as a control by institutional counsel, not by faculty. All six
+Canadian universities in a 2026 review declined to enable or endorse AI detection, privacy
+cited at four; Concordia bars staff from using online detectors outright; UBC cites a Privacy
+Impact Assessment. Sending student work to a third-party detector is a disclosure event under
+FOIPPA/FIPPA, GDPR, and the US state student-data statutes — **California AB 1159 bars using
+student data to train AI models at all**. Meanwhile the EU Council's October 2026 conclusions
+ask member states for **academic-integrity policies**, and the UAE's classroom guide bans AI
+**during exams and assessments**. Every regional signal asks for a *process control*. None asks
+for a *classifier*.
+
+**Sell this as the replacement for a detection line item that is about to be cancelled.**
+
+### Stack
+
+```
+Incumbent LMS (Moodle GPL-3.0 / Canvas AGPL-3.0 / Open edX AGPL-3.0)
+  │   integrate over LTI 1.3 — never fork; keeps your work a separate work
+  ├── ls1intum/Artemis (MIT) ................ where a permissive core is available:
+  │     └── ls1intum/edutelligence (MIT) .... already-integrated AI tier
+  │                                           exercise + rubric model to copy
+  ├── Submission-process instrumentation ..... draft history, revision timeline,
+  │     (LMS-native: Moodle assign plugin /    time-on-task — product evidence
+  │      Canvas submission API via            replaced by process evidence
+  │      vishalsachdev/canvas-mcp, MIT)
+  ├── openedx/edx-ora2 (AGPL-3.0) ........... open-response + peer/self/staff grading;
+  │                                           the seam for structured oral defence
+  ├── CAHLR/OATutor (MIT) ................... A/B-testable tutoring instrumentation —
+  │                                           use it to prove the redesign worked
+  ├── langchain-ai/langgraph (MIT) .......... rubric-reasoning agent as explicit,
+  │                                           auditable policy nodes (not a verdict)
+  ├── AI-for-Education/pedagogy-benchmark (MIT)  eval gate before anything touches a cohort
+  └── ollama (MIT) / vllm-project/vllm (Apache-2.0) + BerriAI/litellm (MIT*)
+        *litellm is MIT outside `litellm/enterprise/`; that directory is separately
+         licensed. Use the OSS paths — see repos/foundations.md.
+        └── student work never leaves the institution — this is what makes the PIA pass
+```
+
+### The design rule that makes it defensible
+
+**No component emits a judgement about whether a student used AI.** The agent tier grades
+*reasoning against a rubric* and surfaces *process artefacts* to a human marker. The integrity
+finding is always made by a person, from evidence the student can see and contest. That is what
+survives a privacy review, an appeal, and EU AI Act Article 14 human-oversight design — which
+is deferred to **2 December 2027** but is the standard the architecture should already meet.
+
+### Deliverables
+
+1. **Assessment-redesign programme** — rubrics that grade reasoning, drafts and version history
+   as graded artefacts, supervised in-class components, oral defence for a sampled subset.
+2. **Process-evidence instrumentation** in the incumbent LMS, over LTI 1.3.
+3. **Privacy artefact** — PIA, vendor-assessment template, data-flow diagram showing inference
+   is local. In Canada this is the document that unlocks procurement.
+4. **Appeals runbook** — how a contested finding is reviewed, by whom, on what evidence.
+5. **Efficacy measurement** — attach **P7**; OATutor's instrumentation is the cheapest route to
+   a defensible before/after.
+
+### Licence posture
+
+Clean. Everything load-bearing is MIT/Apache-2.0 and reached over LTI 1.3, so a GPL/AGPL
+incumbent LMS stays a separate work. `edx-ora2` is AGPL — use it **in place** inside an existing
+Open edX deployment, do not vendor it into a proprietary derivative.
+
+### Estimate
+
+**8–11 weeks.** Assessment redesign with faculty is the long pole, not the engineering —
+budget roughly 40% of the effort for workshops and rubric development, and expect the
+privacy artefact to gate go-live in Canada and EMEA. A detection-replacement framing shortens
+the sales cycle considerably, because the budget already exists.
+
+### Where it does not apply
+
+Where a regulator has mandated proctoring or automated assessment outright — **Vietnam**, where
+automated assessment is statutorily high-risk under Decision 33/2026/QD-TTg with an 18-month
+education transition. There the engagement is **P6** plus conformity work, not this pattern.

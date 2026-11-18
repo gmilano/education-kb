@@ -66,9 +66,40 @@ is **not limited to high-risk systems** — a school using an ordinary chatbot i
 reaches staff and contractors operating AI on the organisation's behalf. The Commission's
 position is that supervision and enforcement began **2 August 2026**. No education-specific
 guidance on it has been issued by the Commission or any national authority that this pass could
-find. *Caveat: several secondary sources say the Digital Omnibus rewrote Article 4 into a softer
-duty to "take measures to support the development" of AI literacy, dropping the "sufficient
-level" standard; that could not be checked against the Official Journal here.*
+find.
+
+**p891 resolves p890's open question: the Digital Omnibus did rewrite Article 4, and it
+softened it — but it did not repeal it.** Six independent secondary sources agree on the
+following, and none dissents:
+
+- Article 4 was **replaced, not removed**, by **Regulation (EU) 2026/1744** — the same
+  instrument that moved the Annex III high-risk date. Published in the Official Journal
+  **24 July 2026**, in force **27 July 2026**.
+- The standard dropped. The duty to *ensure a sufficient level* of AI literacy became a duty to
+  **take measures to support** it, and the amended text states expressly that it **does not
+  require providers or deployers to guarantee any specific level of AI literacy of any
+  individual**.
+- The obligation itself has applied since **2 February 2025** and still binds **providers *and*
+  deployers**, high-risk or not.
+- Enforcement sits with **national market surveillance authorities** — not the AI Office — and
+  began **2 August 2026**.
+- A Council document of 13 March 2026 frames the amendment's purpose as reducing burden on
+  deployers, especially smaller ones, while still promoting literacy.
+- The same timeline defers **Article 14 (human oversight)** to **2 December 2027** alongside the
+  rest of Annex III.
+
+*Verification standing: multi-source agreement, not primary-verified. EUR-Lex and
+`data.consilium.europa.eu` are blocked by this session's network policy. Confirm the amended
+Article 4 text against the Official Journal before it goes in a client deck — but the "is it
+still in force" question is now answered, and the answer is yes.*
+
+**What the softening changes commercially — this is the load-bearing part.** The old reading
+supported selling a *measurable competence* programme: assess staff, train to a level, certify.
+That pitch is now weaker, because no specific level is required of any individual. What
+replaces it is **demonstrable, proportionate, documented effort**: a literacy measure
+appropriate to the institution's context and the systems it actually deploys, with evidence
+that it was delivered. Narrower, cheaper, and easier to close — and the buyer is now a market
+surveillance authority's idea of reasonableness, not a certification body's.
 
 **Implication.** Institutions have a known deadline and now have time to comply properly —
 which is exactly when conformity work gets funded. Treat admissions, assessment and proctoring
@@ -183,6 +214,44 @@ thing to a published RFP in this KB.
 Pricing transparency is now a differentiator a studio can actually win on, and it costs
 engineering rather than research to deliver.
 
+## T10 — Detection is being abandoned as an integrity control, and assessment redesign is what replaces it
+
+The clearest evidence this pass is Canadian. A review of **six Canadian universities** found
+that **every one of them declined to enable or endorse AI-detection tooling**, and privacy was
+the stated reason at four. UBC cites a Privacy Impact Assessment; **Concordia bars staff and
+faculty from using online AI detectors at all**, on provincial privacy grounds — sending
+student work to a third-party detector is itself a disclosure. This is not a pedagogy argument
+being lost; it is a **privacy-law argument being won**, which makes it durable.
+
+It converges with three findings from other regions:
+
+- **North America:** the shift in the practitioner literature is explicitly *from policing
+  academic integrity toward reducing cognitive load*.
+- **EMEA:** the Council of the EU's October 2026 conclusions call on member states to set
+  policies on **academic integrity and plagiarism** — note that the instrument asked for is a
+  *policy*, not a detector.
+- **Middle East:** the UAE Ministry of Education's 2026 classroom guide bans AI **during exams
+  and assessments** outright. The control is the assessment design and the invigilation rule,
+  not a probability score on submitted text.
+
+**Why detection loses.** Detectors produce an unfalsifiable probability, carry a known false-
+positive bias against non-native writers, and — the decisive point — require shipping student
+work to a processor, which is a data-protection event under FOIPPA/FIPPA in Canada, GDPR in
+EMEA, and the student-data statutes now passing in US states (California AB 1159 bars using
+student data to train models at all).
+
+**Implication for delivery, and it is a large one.** An engagement pitched as "AI-integrity
+detection" is selling into a control that institutional counsel is actively removing. The
+fundable work is **assessment redesign**: process evidence over product evidence — drafts,
+version history, oral defence, in-class supervised components, and rubrics that grade
+reasoning rather than prose. That is build work (LMS workflow, submission instrumentation,
+rubric services), not a licence resale, and it suits exactly the permissive stack this KB
+tracks. See **P9** in `compose/patterns.md`.
+
+**Caveat on the Canadian evidence:** the six-institution review is a secondary source; the
+named institutional positions (UBC, Concordia) are the strongest part of it. The direction is
+corroborated across four regions, the specific count is not primary-verified.
+
 ## Trends we looked for and could not substantiate
 
 - **Measured learning-outcome gains from AI.** The widely circulated figures ("42% improvement
@@ -207,6 +276,19 @@ engineering rather than research to deliver.
   unenforced-by-guidance; neither the Commission nor a national authority has told schools what
   compliance looks like. Searched directly and found nothing. This is an opportunity, but it
   also means a client's Article 4 package is being designed without a safe harbour — say so.
-- **Whether the Digital Omnibus softened Article 4.** Secondary sources say yes; the Official
-  Journal text could not be opened in this session. **Unresolved and load-bearing** — it changes
-  whether an AI-literacy engagement is compliance work or best practice.
+- ~~**Whether the Digital Omnibus softened Article 4.**~~ **Resolved in p891: yes, and it did
+  not repeal it.** Regulation (EU) 2026/1744, in force 27 July 2026, replaced Article 4 with a
+  duty to *take measures to support* AI literacy and expressly disclaims any required level for
+  any individual; enforcement by national market surveillance authorities began 2 August 2026.
+  Six secondary sources agree, none dissents; the Official Journal text still could not be
+  opened here. See T3 for what the softening does to the commercial pitch.
+- **Whether any member state has issued an Article 4 safe harbour since the amendment.** The
+  rewrite lowered the standard but named no benchmark, so "proportionate and documented" is
+  still undefined by any authority. Searched this pass; nothing found. Unresolved.
+- **Saudi Arabia's position on AI in education.** The Middle East leg returned detailed UAE
+  federal and Dubai material and **nothing at all on KSA** — no ministry guidance, no
+  curriculum mandate, no prohibition list. Given Vision 2030's education spend this is an
+  implausible true absence; read it as a search-reach failure, not a finding, and run it as its
+  own leg next pass.
+- **India.** Not covered by the APAC leg this pass or the last. The world's largest school
+  system and this KB has no position on it. Named here so it stops being invisible.

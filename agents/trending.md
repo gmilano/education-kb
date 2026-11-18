@@ -4,6 +4,74 @@ region: Global
 updated: 2026-11-18
 ---
 
+## `2026-11-18` (p891) — a new MIT teaching agent, and the largest "education" repo on GitHub turns out to be unusable
+
+**Channel:** batched `repo:` qualifiers against `gh api search/repositories` plus
+`raw.githubusercontent.com` licence byte-reads. Eight WebSearch legs (four global, four
+regional) plus four gap-directed legs (Article 4 / Africa / Middle East / Canada).
+**Scope note:** this pass deliberately did **not** re-measure the full tracked set. p890
+established that the largest intra-day move across ~30 repos was +21 stars on a 60,000-star
+repo, so stars are a daily metric; the call budget went to the regional gaps instead. Spot
+checks only, below.
+
+### New entrant — `SirhanMacx/Claw-ED` (MIT, 65 ★)
+
+| Field | Value |
+|---|---|
+| Repo | https://github.com/SirhanMacx/Claw-ED |
+| Licence | **MIT** — byte-read from `LICENSE@main`, header reads `Copyright (c) 2026 EDUagent Contributors` |
+| ★ | 65 |
+| Last push | 2026-09-19 |
+| What | Local-first AI teaching assistant: editable lesson drafts, student materials and slides, from the teacher's own curriculum and chosen model. Self-described "teacher-reviewed beta". |
+
+Two things make it worth recording at 65 stars. First, **local-first plus bring-your-own-model
+is exactly the posture EMEA sovereignty procurement now asks for** (see T6) — and it is MIT, so
+it can go into a closed derivative. Second, it is a *teacher-facing* agent, and this KB's
+agent table is heavily student-facing; the lesson-preparation seam is thinly covered in open
+source.
+
+**But note the discrepancy:** Trendshift tracked Claw-ED as gaining stars through October 2026,
+yet its **last push is 2026-09-19** — two months before this pass. It is trending on attention,
+not on development. Treat it as a design reference to read, not a dependency to pin.
+
+### Licence flag — `TapXWorld/ChinaTextbook` (84,728 ★, **NO LICENCE**)
+
+This pass's search for education repos on GitHub trending surfaced
+https://github.com/TapXWorld/ChinaTextbook — at **84,728 ★ it is larger than DeepTutor**, and
+would be the biggest education repo in this KB if it were usable. It is not:
+
+- `gh api search/repositories` returns licence `NONE`.
+- `LICENSE`, `LICENSE.md`, `LICENSE.txt` and `COPYING` all return **404** on both `main` and
+  `master`.
+
+No licence means **all rights reserved** — not public domain. It is also a corpus of Chinese
+primary, secondary and university PDF textbooks, i.e. third-party copyrighted content, not
+code. **Do not put it in a client deck as an open asset.** It is recorded here precisely so
+that the next pass does not rediscover it and mistake star count for usability.
+
+### Spot re-measure (not a full sweep)
+
+| Repo | ★ at p890 | ★ now | Δ |
+|---|---|---|---|
+| `HKUDS/DeepTutor` | 60,186 | **60,210** | +24 |
+
+Consistent with p890's finding: sub-0.05% daily drift. The daily cadence holds.
+
+### Still flat — the agent-skill tutor cohort
+
+No change to re-report. p890 measured the six-repo skill-cohort and found every one unmoved;
+none has cleared 1,000 ★. The form remains **experimental, not established**. Next pass should
+re-check rather than re-measure more often.
+
+### Low-value entrant, recorded so it is not re-surfaced
+
+`geekjourneyx/interactive-learning` (MIT, 52 ★) appears on third-party trend trackers. Last
+push **2026-04-10** — 222 days idle, and the repo description is the literal string
+`interactive-learning`. Not promoted to `agents/top.md`.
+
+---
+
+
 ## `2026-11-18` (p890) — the skill-cohort prediction resolves "not yet"; two licence-class corrections
 
 **Channel:** batched `repo:` qualifiers against `gh api search/repositories` (stars, SPDX,

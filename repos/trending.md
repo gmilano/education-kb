@@ -4,6 +4,64 @@ region: Global
 updated: 2026-11-18
 ---
 
+## `2026-11-18` (p891) — the trending-list trap: star count is not usability
+
+**Channel:** `gh api search/repositories` batched `repo:` metrics plus
+`raw.githubusercontent.com` licence byte-reads. Non-GitHub hosts remain blocked by this
+session's network policy (`getaddrinfo ENOTFOUND` confirmed again this pass against
+`unesco.org`), so no trend-blog figure is reported as measured.
+
+### The finding of this pass is a negative one
+
+Third-party "GitHub trending — education, 2026" lists are dominated by a repo this KB cannot
+use, and the lists do not say so:
+
+| Repo | ★ | Licence | Last push | Verdict |
+|---|---|---|---|---|
+| `TapXWorld/ChinaTextbook` | **84,728** | **NONE** — no `LICENSE`/`COPYING` on `main` or `master` (all 404) | 2026-10-26 | **Unusable.** All rights reserved. Also a PDF textbook corpus (third-party copyright), not code. |
+| `SirhanMacx/Claw-ED` | 65 | **MIT** (byte-read) | 2026-09-19 | Usable. Local-first teacher assistant. Trending on stars while **not** being developed — see `agents/trending.md`. |
+| `geekjourneyx/interactive-learning` | 52 | MIT (byte-read via API SPDX) | 2026-04-10 | Idle 222 days. Recorded to prevent re-surfacing. |
+
+**The rule this suggests, and that the next pass should apply:** when a repo appears on a
+trending list, byte-read its licence *before* recording the star count. A 84,728-star repo with
+no licence file is worth less to an engagement than a 17-star MIT one, and the trending list
+sorts by exactly the wrong field.
+
+### Licence provenance upgraded (not a new repo)
+
+`openeducat/openeducat_erp` (913 ★, last push 2026-11-16) was carried in
+`repos/foundations.md` as `NOASSERTION` with LGPL *inferred*. Its licence was byte-read this
+pass from `LICENSE@master`: **LGPL-3.0**, verbatim — *"OpenEduCat is published under the GNU
+LESSER GENERAL PUBLIC LICENSE, Version 3 (LGPLv3)"*. The GitHub API still reports
+`NOASSERTION` because the file is a preamble plus the GPL text rather than a verbatim
+SPDX-matchable template. **Inference replaced with evidence; the value did not change, its
+standing did.** LGPL-3.0 matters here: linking is fine, modifying the library itself carries
+disclosure.
+
+**A second, more consequential one: `BerriAI/litellm` is not plainly MIT.** This KB has carried
+it as MIT in `repos/foundations.md` and in four compose patterns. Byte-read this pass, the root
+`LICENSE` opens: *"Portions of this software are licensed as follows… All content that resides
+under the `litellm/enterprise/` directory … is licensed under the license defined in
+`litellm/enterprise/LICENSE`. Content outside of the above mentioned directories … is available
+under the MIT license."* So: **MIT everywhere except `litellm/enterprise/`**, which is
+separately licensed. That is why the API reports `NOASSERTION` — and the KB had been reading
+`NOASSERTION` as a formatting quirk rather than a real carve-out. litellm sits in the data path
+of nearly every pattern in this KB, so the correction matters: **use the OSS paths and do not
+vendor the enterprise directory into a client deliverable.** Both files corrected this pass.
+
+**The method lesson, repeated twice in one pass:** `NOASSERTION` is not noise. It meant
+"preamble, not a template" for OpenEduCat and "genuine carve-out" for litellm, and only a
+byte-read distinguishes them.
+
+### Not re-measured this pass, and why
+
+The full ~30-repo tracked set was last measured at p890 **today**, which found a maximum
+intra-day move of +21 stars. Re-sweeping hourly produces noise, not trend. Spot check:
+`HKUDS/DeepTutor` 60,186 → **60,210** (+24). Full sweep due next calendar day.
+
+---
+
+
 ## `2026-11-18` (p890) — remeasure confirms stability; the observability tier gets a licence flag
 
 **Channel:** batched `repo:` metric harvest via `gh api search/repositories`, plus
