@@ -146,6 +146,47 @@ Where the evidence for "did the AI actually help" has to live.
 | https://github.com/dodona-edu/dolos | MIT | **Added p900 (logged 11×).** **Source-code plagiarism detection**, language-agnostic, from **Ghent University** — 358 ★, pushed 2026-11-16. 🔵 **Academic-integrity work that does not surveil the student**: it compares submissions to each other after the fact, so it carries none of the EU AI Act Annex III exposure that proctoring does (see the `edx-proctoring` row above) |
 | https://github.com/openedx/edx-proctoring | AGPL-3.0 | Proctoring integration. **Regulatory flag:** exam monitoring is an EU AI Act Annex III high-risk use case (obligations from 2 Dec 2027). |
 
+## Mandarin assessment and question-bank engines — added `p906`
+
+🔴 **The section above is one of this file's best-populated, and every row in it is North American
+or European.** The Mandarin query `作业 批改` ("homework grading") returns **347 repositories** and
+`题库 组卷` ("question bank / paper composition") returns **169**; no English-language query reaches
+any of them, because the repositories describe themselves in Chinese. **A section with twelve
+verified rows does not read as a gap**, which is why this tier went unrecorded for 905 passes. All
+five rows below were verified on both channels — batched `repo:` search plus a `LICENSE` byte-read
+on the repository's **real default branch**, which is `master` for two of them. Method and the
+eight-language ceiling table: `repos/trending.md` `906-R1`, `agents/trending.md` `906-F2`.
+
+🔵 **Read this tier as substrate, not as tutors.** The agent-shaped members of the cohort are in
+`agents/top.md`; what is here is the **exam-delivery and item-bank layer** an AI tier sits on top
+of — the part a studio would otherwise build from scratch, and the part that is genuinely boring
+and genuinely reusable.
+
+| Repo | ★ | Licence (byte-read) | Role |
+|---|---|---|---|
+| https://github.com/dongbeixiaohuo/writing-agent | **460** | MIT (`main/LICENSE`, 1,078 B, `sha256₁₂ 185ea2efea06`) | **Largest repository in the cohort.** Multi-agent writing assistant: a *writing-director* agent coordinates a lead author, a reader-reviewer and a **"de-AI-flavour" (去 AI 味) specialist**. 🔵 **That last role is the transferable idea** — a named pass whose sole job is stripping model register out of generated prose, which is the single most common complaint about AI-written courseware and the one no Western row in this file addresses explicitly. Ships as a standalone Windows client needing only a model API key, i.e. no agent harness required. Pushed 2026-11-17. |
+| https://github.com/PGshen/thinking-map | **187** | Apache-2.0 (`main/LICENSE`, 11,356 B, `sha256₁₂ 43070e2d4e53`) — **patent grant included** | Mind-map-structured reasoning-assistance system. Not education-specific, which is exactly why it belongs in this file: it **externalises a reasoning trace as a navigable graph** rather than a transcript. That is the learner-state structure `LearnHarness` (AGPL-3.0) is credited with and the capability most tutors in `agents/top.md` lack — available here under Apache-2.0. Pushed 2026-08-23. |
+| https://github.com/yf-team/yf-exam-lite | **173** | MIT (`main/LICENSE`, 1,074 B, `sha256₁₂ b4cf55353a49`) | 云帆 — question-bank and online-examination engine: bank and item management, bulk import/export, **automatic paper composition**, wrong-answer drilling, enrolment, course management, scoring, points. 🔵 **Deliberately not an AI project, and that is the point: it is the CRUD, item schema and exam-delivery substrate to put an AI layer on top of, under MIT.** The cheapest route to a working assessment product is to take this and add generation, rather than to take a tutor and add exam administration. 🟡 **Caveat: last push 2025-05-07, ~18 months idle** — read it as a schema and a data model, not as a maintained dependency. |
+| https://github.com/zijian-optics/SolaireEPDA | **91** | **AGPL-3.0** (`master/LICENSE`, 34,522 B, `sha256₁₂ 20b067f86de3`) | Solaire EPDA — K-12 **exam-paper design automation**, explicitly modelled on electronic-design-automation tool-chains: a standardised, automated pipeline with staged tools, rather than a chat interface wrapped round a model. 🔵 **The pipeline framing is the transferable part** and it is the right shape for a regulated assessment context, because each stage is separately inspectable and loggable. **AGPL-3.0 — not usable in a closed derivative.** |
+| https://github.com/BBkjdayup/BCTK | **58** | MIT (`main/LICENSE`, 1,065 B, `sha256₁₂ 7208c5cd9088`) | TK 试题题库 — **offline-first Windows desktop** question bank and paper composer for individual teachers and institutions; **data stored on the local machine by default**. Rich text and mathematical-formula editing, Word/Excel bulk import-export, subject/chapter/tag retrieval, duplicate-question detection. 🔵 **The local-first default is the procurement-relevant property**: it is the posture California AB 1159 and EMEA sovereignty procurement ask for, in the one tier where this file previously had no local-first option at all, and it needs no data-processing argument because no student data leaves the machine. Pushed 2026-11-07. |
+
+🔴 **Branch-resolution gate — and this is `884-G2` recurring, not a new finding.** Four of the
+twelve repositories in this cohort default to `master`, not `main` (`SmartKBS`, `SolaireEPDA`,
+`xl-frontend`, `econai-agent-platform`). **A `main`-only licence probe reports them as
+unlicensed.** `884-G2` measured that exact defect at **26.5% of permissive repositories with a
+non-standard default branch** and was discharged in `p885` by resolving the default branch from
+`search/repositories` first. 🔴 **`p906`'s own probe regressed to two hardcoded branch names and
+got away with it**, because `{main, master}` happened to cover all twelve. Resolve the default
+branch before reading bytes — see `906-G3` in `intel/market.md`.
+
+🔴 **Barred from this section — no licence file on any of ten probed branch/path combinations**
+(`{main,master}` × `{LICENSE, LICENSE.md, LICENSE.txt, COPYING, LICENCE}`):
+`JinLingxi/MathCyclus---Lingxi-Question-Bank-Assistant` (**156 ★**, Streamlit + LaTeX maths item
+bank with OCR and live TikZ rendering, pushed 2026-11-12 — it would have ranked **fourth** here and
+is the most technically interesting item found) and `123chenqi98/EduMultimark` (full-modality K-12
+marking on a fine-tuned LLaVA-13B, the only **multimodal** grader found in any language this pass).
+Recorded in `intel/measured-unusable.md`. **No licence is not a permissive licence.**
+
 ## Notebook-native teaching and assessment — added `p902`
 
 🔵 **Why this section exists.** This file held `nbgrader` and `jupyterhub` and nothing else from the

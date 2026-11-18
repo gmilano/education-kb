@@ -4,6 +4,139 @@ region: Global
 updated: 2026-11-18
 ---
 
+## `2026-11-18` (p906) — **the last eight untried language channels are now measured, and seven of them are empty. Mandarin is the only non-English education-supply channel on GitHub with usable scale — and the twelve repositories it holds were all sitting in this log with no row in any delivery file.**
+
+**Channel.** The eight mandated WebSearch legs ran first (four global, four regional) and scored
+**null for the fifth consecutive pass**. The budget then went to the channel this base has named as
+its highest-value remaining one in each of the last three passes' declared gaps: **non-English
+repository search**, which `p903` left as "Urdu and Indonesian untried" and `p904` widened to
+"Hindi, Vietnamese, Thai, Japanese, Korean and Mandarin" as well. **All eight were run in this
+pass.** Network posture unchanged from `p905`: `raw.githubusercontent.com` `200`, `gh api
+search/*` live, `github.com` HTML `403`, non-GitHub hosts refused at the egress proxy. Records:
+[`nonenglish-ceiling.2026-11-18-p906.tsv`](../evidence/nonenglish-ceiling.2026-11-18-p906.tsv),
+[`mandarin-cohort-verify.2026-11-18-p906.tsv`](../evidence/mandarin-cohort-verify.2026-11-18-p906.tsv).
+
+### 🔴 `906-F1` Fifth consecutive null from generic search — and this time the regional legs were null against the delivery surface too
+
+Scored the way `902-G1` requires (against the eight **delivery** files, not the whole tree, so the
+append-only log is out of the denominator): **0 of 30 regional and global facts were absent.** One
+scored as missing on first pass — the EU delay written as `December 2, 2027` — and that is a
+**date-format artefact**: the base holds the same instrument as `2 Dec 2027` and `2027-12-02`,
+including in the `edx-proctoring` row of `repos/foundations.md`. It is counted as held. The
+legs returned the EU AI Act Annex III education delay to 2 Dec 2027 under the Digital Omnibus, the
+134-bills/31-states US count, North Carolina Session Law 2026-41, Idaho SB 1227, New York A 9190,
+California AB 1159, the OpenAI/Common Sense Media "Parents & Kids Safe AI Act" ballot initiative,
+the North Carolina Khanmigo earmark, South Korea's AI Basic Act (in force 22 Jan 2026), Vietnam's
+Decision 33/2026/QD-TTg with education in the high-risk list, the NTU Singapore Gemini Enterprise
+rollout, Dubai KHDA's private-school guidance, the Ipsos Education Monitor 2026 ban-support splits,
+the Digital Education Council LATAM survey (92% students / 79% faculty), UNESCO IESALC (87% / 74% /
+26% formal strategy), the Universidad de los Andes count of 716 regulatory instruments, CENIA's
+13-of-19 finding, Latam-GPT and the UNESCO LAC Observatory partner list. **Every one already held,
+most of them more precisely than the snippet stated.** Four repository candidates surfaced
+(`patchy631/ai-engineering-hub`, `withmarbleapp/os-taxonomy`, `rasbt/LLMs-from-scratch`,
+`microsoft/ai-agents-for-beginners`) and **all four are already in the tree.**
+
+🔵 The conclusion `p903` reached and `p904`/`p905` confirmed holds for a fifth pass: **generic
+English search is a confirmation channel for this base, not a discovery one.** This pass is the
+first to also establish *where the discovery channel ends*.
+
+### 🔴 `906-F2` Seven of the eight language channels are empty, and the emptiness has two distinct shapes
+
+| Language | Best query | Hits | Topical ★ ceiling | Licensed? | Verdict |
+|---|---|---|---|---|---|
+| **Mandarin** | `作业 批改` / `题库 组卷` | 347 / 169 | **193** (AI-native) / 835 (non-AI, idle 2023) | mostly yes | 🟢 **supply present** |
+| Hindi | `शिक्षा` | **113** | **2** | **none of them** | 🔴 volume without supply |
+| Indonesian | `pendidikan AI guru` | 14 | 1 | none | 🔴 near-absent |
+| Thai | `การศึกษา` | 9 | 0 | none | 🔴 absent |
+| Vietnamese | `giáo dục AI gia sư` | 6 | 1 | none | 🔴 near-absent |
+| Korean | `교육 튜터` | 2 | 2 | **none of them** | 🔴 near-absent |
+| Japanese | `教育 AI 日本語 学習` | 1 | 0 | none | 🔴 absent |
+| Urdu | `تعلیم AI اردو` | 1 | 0 (sole hit is a religious/tech chatbot) | n/a | 🔴 absent |
+
+🔵 **The two shapes matter differently for an engagement.** **Thai, Japanese, Urdu and Korean are
+thin: few repositories exist at all.** **Hindi is the opposite and it is the more useful finding —
+113 repositories match `शिक्षा`, so the vernacular supply is not missing, it is the wrong
+kind:** every hit inspected is a school, NGO or foundation *website*, or a non-AI teacher-rating
+project, and **not one of the 113 carries a licence file.** For an India engagement the conclusion
+is not "search harder in Hindi"; it is that **the Hindi-language layer is content and institutional
+web presence, not software, and none of it is legally reusable.** Budget the vernacular tier as
+build, exactly as `p904` concluded for Mexico.
+
+🔴 **A query-shape control was run so the zeros are not an artefact.** Three- and four-term
+conjunctions returned 0 in Hindi (`शिक्षा AI शिक्षक`) and Korean (`교육 AI 학습 튜터`) while the
+single- and two-term probes returned 113 and 2. **In a language with little supply, a multi-term AND
+query returns zero trivially.** Both figures are recorded; the ceiling column uses the probe that
+returned the most, which is the conservative direction for an absence claim.
+
+🟡 **Residual caveat, stated rather than hidden:** `search/repositories` matches name, description
+and README. A repository whose metadata is in English while its content is Hindi or Korean is
+invisible to this instrument — `belajar-ngoding-byGanzu` (MIT, 66 ★) is the proof, since it is a
+shelved Indonesian row that **this pass's Indonesian queries did not find.** The ceilings above are
+therefore ceilings *on vernacular-metadata supply*, which is the thing a regional sourcing claim
+actually rests on, and not a proof that no such software exists.
+
+### 🟢 `906-F3` Twelve verified Mandarin repositories, every one logged-not-shelved — the `p899` pathology recurring at cohort scale
+
+`p899` found `book-to-skill` (38,369 ★) sitting in this base's ledger with 28 recorded mentions and
+no row. **This pass found the same failure across an entire cohort.** All twelve repositories below
+appeared only in `agents/trending.md`, `repos/trending.md` or `intel/open-gaps.md`; **none had a row
+in a delivery file.** All twelve were verified on both channels — batched `repo:` search returned
+`total_count=12` of 12 requested, and each `LICENSE` was byte-read on its real default branch
+(`master` for four of them, which is why a `main`-only probe would have reported them unlicensed —
+**`884-G2` recurring inside this pass's own instrument, which iterated two hardcoded branch names
+rather than resolving the default branch as `p885`'s fix requires; see `906-G3`**).
+
+🔴 **The cohort occupies a tier that `repos/foundations.md` recorded as entirely Western.** The
+`Assessment, grading and academic integrity` section held PrairieLearn, Submitty, otter-grader,
+nbgrader, Autolab, Ares, `edx-ora2` and Dolos — **not one Chinese-origin row**, while the Mandarin
+grading channel alone returns 347 repositories. The gap was in this base, not in the world.
+
+### 🔴 `906-F4` A licence-channel disagreement on the ceiling repository, and it inverts the procurement answer
+
+`yinuoguan/nengdou-ai-review-helper-web` (**193 ★**, the AI-native Mandarin ceiling) is reported by
+**GitHub's SPDX classifier as `MulanPSL-2.0`**. Its `LICENSE` at `main` is **verbatim Apache-2.0** —
+11,356 B, `sha256₁₂ 43070e2d4e53`, opening `Apache License / Version 2.0, January 2004`, and
+**byte-identical to `PGshen/thinking-map`'s**, which SPDX labels `Apache-2.0` correctly.
+
+🔵 **This matters because the two answers point opposite ways in procurement.** Mulan PSL v2 is
+OSI-approved and permissive but absent from many enterprise approved-licence lists, so an
+SPDX-driven scanner routes this repository to legal review; the **actual grant is Apache-2.0, with
+the patent grant, and is on every such list.** A scanner reading the field rejects software the
+byte-read clears. This is the fourth direction in this base's licence-concealment series and the
+first where **the field is wrong in the restrictive direction** — the prior cases (`866`, `899`)
+were all fields silent about a prohibition. Gate: `906-G1`.
+
+🟡 Two AGPL files in the cohort are **34,522 B with different `sha256₁₂`** (`SolaireEPDA`
+`20b067f86de3`, `econai-agent-platform` `4df3c306ddda`): identical length, different bytes, i.e. a
+filled-in copyright line. **Byte length alone does not identify a grant**; the hash is the test.
+
+### 🔴 `906-F5` The row count in `agents/top.md` had drifted ten rows behind the table, and it drifted because every pass incremented a sentence by hand
+
+Counted mechanically in this pass: the table held **71 rows** when `p906` opened it, while the prose
+beneath it read **"61 education-specific agents"**. **The published figure was wrong by ten before
+this pass touched the file.** With `p906`'s six additions the table is **77 rows — 75 agents plus
+two self-described eval gates** (`wassce-benchmark`, `pedagogy-benchmark`).
+
+🔵 **The mechanism is the interesting part, because it is not a research failure.** Each pass added
+rows and then edited the number in the sentence, so the error compounded silently: no single pass
+was wrong by much, nothing cross-checked the sentence against the table, and a hand-maintained
+count is exactly the kind of claim this base otherwise insists on measuring. 🟢 **Fixed by deriving
+the figure from the file and saying so in the file**, with the instruction that a pass which adds
+rows **re-counts rather than increments**. The same drift should be assumed in any other
+hand-carried total in this tree until each is re-derived — the counts in `repos/foundations.md` and
+`verticals/solutions.md` have not been checked and are **not** asserted here.
+
+### Shelved from this pass
+
+To `agents/top.md`: `nengdou-ai-review-helper-web`, `xl-frontend`, `tizhuang-agent-skills`,
+`econai-agent-platform`, `k12-smart-teacher`, `ai-smart-homework-review`.
+To `repos/foundations.md`: `writing-agent`, `thinking-map`, `yf-exam-lite`, `SolaireEPDA`, `BCTK`.
+To `verticals/solutions.md`: `youufis/SmartKBS`.
+To `intel/measured-unusable.md`: `MathCyclus` (156 ★) and `EduMultimark` — **no licence file on any
+of ten probed branch/path combinations**, and `MathCyclus` at 156 ★ would otherwise have ranked
+fourth in the cohort.
+
+
 ## `2026-11-18` (p905) — **`561-H` discharged after nine passes, and its premise is refuted by reading it: of 14 platforms a studio would actually deploy, *zero* disclose the grants of their dependencies. The two files that look like a disclosure are a pointer to version-control history and a copy of the project's own AGPL.**
 
 **Channel:** the eight mandated WebSearch legs (four global, four regional), then — because those legs

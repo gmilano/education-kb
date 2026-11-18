@@ -1,0 +1,20 @@
+# p906 2026-11-18 — non-English repository-search ceiling measurement
+# Channel: gh api search/repositories?q=<utf8 query>&sort=stars&order=desc
+# Closes the untried-language channels declared in intel/market.md "Declared gaps" at p903/p904:
+#   Urdu, Indonesian, Hindi, Vietnamese, Thai, Japanese, Korean, Mandarin.
+# star_ceiling_topical = highest stars among hits that are actually education software
+#   (off-topic hits at higher star counts are named in the notes column).
+language	query	total_count	top_hit	top_stars	top_spdx	star_ceiling_topical	verdict	notes
+Mandarin	作业 批改	347	yinuoguan/nengdou-ai-review-helper-web	193	MulanPSL-2.0	193	SUPPLY PRESENT	Education-native AI grading cohort. SPDX/byte-read disagree on the ceiling repo — see mandarin-cohort-verify tsv.
+Mandarin	题库 组卷	169	mikemelon/java-exam	835	GPL-3.0	835	SUPPLY PRESENT	Ceiling repo is non-AI and idle since 2023-06-14; GPL-3.0. Highest live AI-era hit is youufis/SmartKBS (99, AGPL-3.0, pushed 2026-11-18).
+Mandarin	智能辅导	—	—	—	—	137	SUPPLY PRESENT	Star-ranked leg polluted by non-education political repos; topical ceiling is HowieWang1121/Socratic-Education-System (137, MIT), already shelved.
+Hindi	शिक्षा	113	anjaliofficial/ArthaSiksha-	2	NONE	2	VOLUME WITHOUT SUPPLY	113 repos match, ceiling 2 stars, zero carry a licence. Every hit inspected is a school/NGO/foundation website or a non-AI teacher-rating project. No Hindi-language education-AI software exists on this channel.
+Hindi	शिक्षा AI शिक्षक	0	—	—	—	0	ABSENT	Three-term conjunction returns zero. Single-term re-probe above confirms the zero is a supply fact, not a query artifact.
+Urdu	تعلیم AI اردو	1	zeeshan7009/Zmt-helper-	1	MIT	0	ABSENT	The single hit is an Urdu Islamic/technology Q&A chatbot, not education software. No Urdu education-AI repository found.
+Indonesian	pendidikan AI guru	14	roynurff/capstone-education-sd-indonesia	1	NONE	1	NEAR-ABSENT	14 hits, ceiling 1 star, none licensed. Contrast: the one shelved Indonesian row (itsme-ganzu/belajar-ngoding-byGanzu, MIT, 66) is found only by an English-language coding-course query, not by vernacular education terms.
+Vietnamese	giáo dục AI gia sư	6	anhai2559/viem-am-dao	2	NONE	1	NEAR-ABSENT	Star ceiling (2) is a gynaecology information page, not education. Topical ceiling is PhanVinh2k6/EduMentorAI-Project (1, NONE).
+Japanese	教育 AI 日本語 学習	1	yoshu-solutions/chuugaku-juken-ai	0	NONE	0	ABSENT	One hit, zero stars, no licence. Middle-school entrance-exam prep. No Japanese education-AI supply.
+Korean	교육 튜터	2	eunsu0325/physical-ai-tutor	2	NONE	2	NEAR-ABSENT	Both hits unlicensed. eunsu0325/physical-ai-tutor (2, NONE, pushed 2026-11-01) is a Korean physical-AI tutor skill self-described as grounded in education research — topically the best Korean hit and legally unusable.
+Korean	교육 AI 학습 튜터	0	—	—	—	0	ABSENT	Four-term conjunction returns zero; two-term probe above returns 2.
+Thai	การศึกษา AI	0	—	—	—	0	ABSENT	Zero hits.
+Thai	การศึกษา	9	Sangwein/https-www.doctorandhealthcares-business.com	1	NONE	0	ABSENT	9 hits, none education software, none licensed.

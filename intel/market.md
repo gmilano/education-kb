@@ -390,6 +390,22 @@ Khanmigo** earmark; the NEPC risk-level framework; and the **April 2026 ADA** ac
 whose policy surface stops moving between passes is a region where the *conformity product* can be
 specified once and sold repeatedly (**P3**).
 
+#### p906 — North America: searched, nothing new
+
+🟡 **Declared null, not silence.** The `p906` leg
+(`AI education North America 2026 adoption regulation players`) returned 9 sources and **0 facts
+absent from the delivery files**. Re-checked and already held: the **134 bills across 31 states**
+count; **North Carolina Session Law 2026-41** with its AI-literacy standards and the
+2026-12-31 / 2027-06-30 / 2028-06-30 deadline ladder; **Idaho SB 1227**; **New York A 9190**
+limiting classroom AI to grade 9 and above with diagnostic and special-education exceptions;
+**California AB 1159** barring student data from model training; the US Department of Education's
+April 2026 K-12 guidance and the Office of Educational Technology's March 2026 framework; the
+**K-12 AI Literacy and Readiness Act of 2026** in committee; the OpenAI / Common Sense Media
+**"Parents & Kids Safe AI Act"** California ballot initiative; **Florida's** restriction on AI in
+graded work; and the North Carolina **Khanmigo** earmark. 🔵 No supply-side finding: the Mandarin
+cohort this pass shelved is APAC-origin, and no North-America-origin repository surfaced that the
+tree did not hold.
+
 ### EMEA
 
 🟢 **Promoted in `p902` — four facts held only in the log until now** (see `902-F1`; the
@@ -1005,6 +1021,21 @@ adoption statistic**, the fifth consecutive pass to record that, and `www.unesco
 **reach** failure, not an absence of data in the world. The Africa supply-side measurement at
 `p895` remains this file's only primary-measured African content.
 
+#### p906 — EMEA: searched, nothing new, and `DigComp 3.0` remains unreadable
+
+🟡 **Declared null, not silence.** The `p906` leg
+(`AI education EMEA Europe Middle East Africa 2026 adoption regulation players`) returned 10 sources
+and **0 facts absent from the delivery files**: the EU AI Act's Annex III classification of
+admissions, student evaluation and exam scoring as high-risk, with the **2 December 2027** date for
+stand-alone Annex III systems under the 2026 Digital Omnibus changes (this file already carries that
+instrument with its date conflict intact); the European Parliament's March 2026 briefing and the
+Digital Education Action Plan; and **Dubai KHDA's** guidance to private schools. 🔴 **`DigComp 3.0`
+is a named gap for a third consecutive pass** — `ec.europa.eu` and `digital-skills-jobs.europa.eu`
+are still **refused at the egress proxy**, re-tested at the top of `p906`. Recorded as a gap, not as
+a fact. 🟡 The snippets again carried **no EMEA adoption statistics and no named EMEA edtech
+vendors**, and **Africa coverage was again thin** — consistent with the dedicated Africa and Middle
+East legs in `p891`/`p900`, and still the reason the market-share gap below stays open.
+
 ### APAC
 
 🟢 **Promoted in `p902` — two convening facts, plus the region's one dataset-scale supply row**
@@ -1452,6 +1483,53 @@ every undergraduate access to Google's AI tools from August 2026; and virtual-tu
 **30%** (Times Higher Education). 🔵 The multi-jurisdiction divergence this section has recorded for
 several passes is what **P6** is priced against, and it widened again rather than converging.
 
+#### p906 — APAC: the supply side of this region is now measured by language, and it is one country
+
+🔴 **This is an APAC finding in its entirety, which is the part worth noticing first.** `p906` ran
+the eight language channels this base had declared untried — **Mandarin, Hindi, Urdu, Indonesian,
+Vietnamese, Japanese, Korean and Thai**. All eight are APAC languages. **Seven of the eight return
+no usable supply; the eighth returns a whole tier this KB had never shelved.** Ceilings, queries,
+result counts and query-shape controls:
+[`nonenglish-ceiling.2026-11-18-p906.tsv`](../evidence/nonenglish-ceiling.2026-11-18-p906.tsv).
+
+| Language / market | Repos matching | Topical ★ ceiling | Licensed | Sourcing answer for an engagement |
+|---|---|---|---|---|
+| **Mandarin — China** | **347** (`作业 批改`) + 169 (`题库 组卷`) | **193** | mostly yes | 🟢 **Adopt.** A real automated-grading and item-bank tier; 12 repositories verified, 6 shelved to `agents/top.md`, 5 to `repos/foundations.md`, 1 to `verticals/solutions.md`. |
+| **Hindi — India** | **113** | **2** | **0 of 113** | 🔴 **Build.** Volume without supply — see below. |
+| Indonesian — Indonesia | 14 | 1 | none | 🔴 **Build.** |
+| Thai — Thailand | 9 | 0 | none | 🔴 **Build.** |
+| Vietnamese — Vietnam | 6 | 1 | none | 🔴 **Build.** |
+| Korean — South Korea | 2 | 2 | none | 🔴 **Build.** |
+| Japanese — Japan | 1 | 0 | none | 🔴 **Build.** |
+| Urdu — Pakistan | 1 | 0 (sole hit is not education software) | n/a | 🔴 **Build.** |
+
+🔵 **India is the commercially important line and it is not the obvious one.** The Hindi channel is
+**not empty — it is the second-densest of the eight**, with 113 repositories matching `शिक्षा`
+("education"). But the star ceiling is **2**, and **not one of the 113 carries a licence file.**
+Every hit inspected is a school, NGO or foundation *website*, or a non-AI teacher-rating project.
+🔴 **So for an India engagement the answer is not "search harder in Hindi". It is that the
+Hindi-language layer on GitHub is content and institutional web presence, not software, and none of
+it is legally reusable.** That is the same conclusion `p904` reached for **Mexico** by a different
+route, and it now holds for the two largest emerging education markets in the world. Budget the
+vernacular tier as build in both.
+
+🟡 **This does not say Indian or Korean education software does not exist** — it says it does not
+exist *with vernacular metadata on GitHub*. `search/repositories` matches name, description and
+README, so a project whose metadata is English and whose content is Hindi is invisible to this
+instrument. The shelved Indonesian row `itsme-ganzu/belajar-ngoding-byGanzu` (MIT, 66 ★) proves the
+blind spot exists: **this pass's own Indonesian queries did not find it.** The ceilings are ceilings
+on *vernacular-metadata supply*, which is what a regional sourcing claim actually rests on — and
+they are also the reason the India figure should be re-probed in English-metadata form before any
+engagement prices it.
+
+🟢 **China is now the second-best-covered supply market in this KB, after the anglophone one.** The
+cohort `p906` shelved is **assessment and item-bank infrastructure**, not tutors — the layer
+`repos/foundations.md` held as entirely North American and European across twelve verified rows. The
+commercial reading: for a China or Chinese-curriculum engagement there is a usable grading and
+exam-delivery substrate to adopt, with the standing caveat that **three of the twelve are AGPL-3.0
+and one is Mulan PSL v2**, so the closed-derivative question has to be asked per repository rather
+than per cohort.
+
 ### LATAM
 
 🟢 **Promoted in `p902` — two facts held only in the log** (method: `902-F1`):
@@ -1796,6 +1874,22 @@ effectively is a *different* statistic — do not conflate them, as some coverag
   count is recorded with its source named and **not** as a measured figure, under the `557-D` rule
   that has already refused five US legislative counts.
 
+#### p906 — LATAM: searched, nothing new
+
+🟡 **Declared null, not silence.** The `p906` leg
+(`AI education LATAM Latin America 2026 adoption regulation players`) returned 9 sources and **0
+facts absent from the delivery files**. Re-checked and already held: the **Digital Education
+Council** 2026 regional survey (92% of students, 79% of faculty engaging with AI); **UNESCO
+IESALC** (87% using AI in at least one area, 74% in teaching and learning, **only 26% with a formal
+AI strategy**); **PISA 2025** showing nine in ten 15-year-olds across thirteen LAC countries having
+used AI chatbots for schoolwork; Brazil's 53%-of-administrators / 22%-with-guidelines split; the
+**Universidad de los Andes** count of **716 regulatory instruments across 23 countries**, 80%+ since
+2023; **CENIA's** finding that 13 of 19 countries do not teach early AI; the Brazil-versus-Argentina
+regulatory divergence; **Latam-GPT**; and the **UNESCO LAC Observatory** launched April 2026 at ECLAC
+Santiago with its full partner list. 🔵 **Supply side unchanged from `p904`:** this pass's
+discovery budget went to the eight APAC language channels, so the Spanish/Portuguese ceiling
+`p904` measured still stands, and **Mexico remains the largest supply-side hole in this KB.**
+
 ### Global
 
 Cross-regional plays that do not depend on one jurisdiction.
@@ -1860,6 +1954,50 @@ Cross-regional plays that do not depend on one jurisdiction.
   and `scancode-toolkit` (Apache-2.0) is the instrument. See `repos/foundations.md`.
 
 ## Declared gaps
+
+- 🟢 **`p906` closed the language-channel gap this file has carried since `p903` — all eight
+  declared-untried channels were run, and the answer is a shape, not a list.** `p903` left "Urdu and
+  Indonesian untried"; `p904` widened it to "Hindi, Vietnamese, Thai, Japanese, Korean and Mandarin"
+  and called Mandarin the highest-value remaining channel. **All eight ran in `p906`. Mandarin was
+  the highest-value channel and the other seven are empty** — ceilings of 0–2 ★, and in Hindi,
+  Korean, Japanese, Thai and Vietnamese **not one hit carries a licence file**. Mandarin returned
+  **347 repositories** in grading alone and twelve verified, shelved rows. 🔵 **The discovery channel
+  that paid for four passes is now exhausted at the language level**, and the honest statement of
+  what replaced it is below. Record:
+  [`nonenglish-ceiling.2026-11-18-p906.tsv`](../evidence/nonenglish-ceiling.2026-11-18-p906.tsv).
+- 🔴 **New gap `906-G2` — the English-metadata blind spot, which `p906` created by closing the one
+  above.** `search/repositories` matches name, description and README, so a repository with English
+  metadata and vernacular content is invisible to a vernacular query. **This base can prove the
+  blind spot is real: `itsme-ganzu/belajar-ngoding-byGanzu` (MIT, 66 ★) is a shelved Indonesian row
+  that `p906`'s own Indonesian queries did not return.** Every ceiling in the table above is
+  therefore a ceiling on *vernacular-metadata* supply, not on existence. **Untried and now the
+  highest-value remaining channel: English-metadata queries carrying a country or curriculum term**
+  (`CBSE`, `NCERT`, `KSSM`, `TOPIK`, `JLPT`, `gaokao`, `UTBK`), which reach projects that describe
+  themselves in English for a single national market. This is the instrument that would price the
+  India claim properly.
+- 🔴 **New gate `906-G1` — the SPDX field can be wrong in the *restrictive* direction, and this base
+  had only ever recorded the permissive direction.** `yinuoguan/nengdou-ai-review-helper-web`
+  (193 ★) is labelled `MulanPSL-2.0` by GitHub and its `LICENSE` is **verbatim Apache-2.0**
+  (11,356 B, `sha256₁₂ 43070e2d4e53`, byte-identical to `PGshen/thinking-map`'s, which is labelled
+  correctly). Prior cases in `intel/measured-unusable.md` were all fields *silent about a
+  prohibition*; this is a field **inventing** one. **A scanner reading the field rejects software the
+  byte-read clears.** The gate: for any repository a studio intends to adopt, the SPDX field decides
+  nothing in either direction — only the bytes do.
+- 🔴 **`906-G3` — not a new gap: `884-G2` RECURRED, and it recurred inside `p906`'s own
+  instrument.** `884-G2` ("the grant ladder probes two branch names") was discharged in `p885` with
+  a fix and 13 controls, after measuring that **26.5% of permissive repositories with a
+  non-standard default branch had been published as having no licence**. The fix is to resolve the
+  default branch from `search/repositories` before reading bytes. 🔴 **`p906`'s licence probe did
+  not do that** — it iterated the two hardcoded names `{main, master}`, which is the pre-fix
+  instrument. **Four of the twelve cohort repositories default to `master`, so the regression was
+  invisible: it happened to cover them.** 🟢 **The two barred repositories were re-probed on their
+  real default branches before publication** (`MathCyclus` → `main`, `EduMultimark` → `master`,
+  six paths each including lowercase `license`, all `404`), **so both absence claims hold.** The
+  lesson is that a discharged gate does not stay discharged unless the next pass inherits the
+  instrument: `884-G2`'s fix lived in `p885`'s script, not in a shared one. **Registered: the
+  licence probe needs to be a single checked-in tool, not rewritten per pass.** Still not audited —
+  **how many rows already in this tree were licence-read on two hardcoded branch names**, and
+  whether any were barred on that basis.
 
 - 🟡 **`p904` ran all eight mandated legs. Third consecutive pass in which generic English search
   produced no repository this tree did not already hold** — the three candidates it named

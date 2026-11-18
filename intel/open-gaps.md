@@ -4,6 +4,88 @@ region: Global
 updated: 2026-11-18
 ---
 
+## 🆕 `p906` · 2026-11-18 — **The language-channel gap carried since `p903` is CLOSED, and the answer is one country out of eight. `884-G2` RECURRED inside this pass's own instrument and was caught before publication. A published SPDX field was found wrong in the *restrictive* direction for the first time.**
+
+🔵 **Summary.** The eight mandated legs scored null for the fifth consecutive pass — **0 of 30
+facts absent**, measured on the delivery surface `902-G1` built rather than the whole tree. The
+budget went to the channel this base has named as its highest-value remaining one since `p903`:
+**non-English repository search**. All eight declared-untried languages ran. **Seven are empty;
+Mandarin holds a full tier that had never been shelved** — twelve repositories verified on two
+channels, twelve shelved or barred. Three gaps registered, one of them against this pass itself.
+
+🔵 **Closed this pass:**
+
+| Gap | Verdict | What settled it |
+|---|---|---|
+| **The untried-language channel** (`p903`: "Urdu and Indonesian"; `p904`: + Hindi, Vietnamese, Thai, Japanese, Korean, Mandarin) | 🟢 **CLOSED — all eight run, seven negative** | Ceilings of 0–2 ★ in seven languages; **Mandarin 347 repositories in grading alone, ceiling 193 ★**. In Hindi, Korean, Japanese, Thai and Vietnamese **no hit carries a licence file**. 12 Mandarin repos verified on both channels, `total_count=12` of 12. [Record](../evidence/nonenglish-ceiling.2026-11-18-p906.tsv). |
+| **The `logged-not-shelved` cohort in the Mandarin channel** | 🟢 **DISCHARGED for these twelve** | All twelve appeared only in `agents/trending.md`, `repos/trending.md` or this file; **none had a row in a delivery file.** Six shelved to `agents/top.md`, five to `repos/foundations.md`, one to `verticals/solutions.md`, two barred to `intel/measured-unusable.md`. The `p899` `book-to-skill` pathology, at cohort scale. |
+
+### 🔴 `906-G1` — the SPDX field can be wrong in the *restrictive* direction, and this base had only ever recorded the permissive one
+
+🟢 **The measured case.** `yinuoguan/nengdou-ai-review-helper-web` (**193 ★**, star ceiling of the
+Mandarin education channel): GitHub reports `license.spdx_id` = **`MulanPSL-2.0`**, `license.name` =
+*"Mulan Permissive Software License, Version 2"*. Its `LICENSE` at `main` is **verbatim Apache-2.0** —
+11,356 B, `sha256₁₂ 43070e2d4e53`, opening `Apache License / Version 2.0, January 2004` — and
+**byte-identical to `PGshen/thinking-map`'s**, which the same classifier labels `Apache-2.0`.
+
+🔴 **Why it is a distinct direction.** `885-G1`, `866` and the `p899` PrairieLearn case are all
+fields that were **silent about a prohibition** or over-permissive. **This field invents a
+restriction that the bytes do not contain.** Mulan PSL v2 is OSI-approved and permissive but absent
+from many enterprise approved-licence lists, so an SPDX-driven gate routes this repository to legal
+review or rejects it — **while the real grant is Apache-2.0 with a patent grant, on every such
+list.** 🔵 **The asymmetry in `T19` inverts here and is worth stating: an error that looks
+restrictive is never challenged either, because nobody audits a rejection.**
+
+**Acceptance test.** Over every row in this tree whose published licence is a **non-MIT/Apache
+permissive grant** (`MulanPSL-2.0`, `ECL-2.0`, `CC0-1.0`, `BSD-*`, `MulanPSL-1.0`), byte-read the
+`LICENSE` and report the count where the text is a *different* licence from the field. **Class size
+unknown; `p906` measured `1` and did not enumerate the class.** Cost: one byte-read per row, no new
+channel.
+
+### 🔴 `906-G2` — the English-metadata blind spot, created by closing the language gap
+
+`search/repositories` matches name, description and README. **A repository with English metadata and
+vernacular content is invisible to a vernacular query**, so every ceiling `p906` measured is a
+ceiling on *vernacular-metadata* supply, not on existence.
+
+🟢 **This base can prove the blind spot is real rather than hypothesising it:**
+`itsme-ganzu/belajar-ngoding-byGanzu` (**MIT, 66 ★**) is a **shelved Indonesian row that `p906`'s own
+Indonesian queries did not return.** One known false negative is enough to establish the class; its
+size is unknown.
+
+**Acceptance test.** Run English-metadata queries carrying a **national curriculum or examination
+term** — `CBSE`, `NCERT`, `gaokao`, `UTBK`, `JLPT`, `TOPIK`, `KSSM`, `WAEC` — and report, per term,
+how many repositories are returned that the vernacular leg for the same country missed. 🔵 **This is
+now the highest-value remaining discovery channel**, and it is the instrument that would price the
+**India** claim properly: Hindi returned 113 repositories, a 2 ★ ceiling and zero licences, which is
+a statement about findable supply and not about India.
+
+### 🔴 `906-G3` — `884-G2` RECURRED, inside this pass's own licence probe
+
+`884-G2` ("the grant ladder probes two branch names") was **discharged in `p885` with a fix and 13
+controls**, after measuring that **26.5% of permissive repositories with a non-standard default
+branch had been published as having no licence**. The fix: resolve the default branch from
+`search/repositories` before reading bytes.
+
+🔴 **`p906`'s probe iterated the two hardcoded names `{main, master}`.** That is the pre-fix
+instrument. **The regression was invisible because `{main, master}` happened to cover all twelve
+cohort repositories** — four of which default to `master`.
+
+🟢 **Caught before publication.** The two **barred** repositories — the only ones where the defect
+could produce a false claim — were re-probed on their **real** default branches resolved from
+`search/repositories` (`MathCyclus` → `main`, `EduMultimark` → `master`), six paths each including
+lowercase `license`, **all `404`. Both absence claims hold.**
+
+🔵 **The transferable lesson is about where a fix lives.** `884-G2`'s fix lived in `p885`'s script,
+not in a checked-in tool, so the next pass to write a probe wrote the broken one. **A discharged
+gate does not stay discharged unless the instrument is inherited.**
+
+**Acceptance test.** Two parts. (1) Check in the licence probe as a single tool under `compose/code/`
+that resolves the default branch, and have subsequent passes call it rather than rewrite it.
+(2) Audit how many rows **already in this tree** were licence-read on two hardcoded branch names,
+and whether any were **barred** on that basis — that is the population `884-G2` measured at 26.5%
+and the only place this regression could already have cost a row.
+
 ## 🆕 `p905` · 2026-11-18 — **`561-H` discharged after nine passes and its premise refuted: of 14 education platforms, `0` disclose the grants of their dependencies, and the two files that look like a disclosure name no dependency at all.**
 
 🔵 **Summary.** The eight mandated research legs scored null for the fourth consecutive pass — and

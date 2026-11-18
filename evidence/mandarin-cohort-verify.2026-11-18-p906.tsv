@@ -1,0 +1,31 @@
+# p906 2026-11-18 — two-channel verification of the Mandarin education cohort
+# Channel A: gh api search/repositories (existence, stars, SPDX, pushed_at) — batched repo: query, total_count=12 of 12 requested
+# Channel B: raw.githubusercontent.com byte-read of the LICENSE file on the repo's real default branch
+# All twelve previously appeared ONLY in agents/trending.md / repos/trending.md / intel/open-gaps.md — none had a row in a delivery file.
+repo	stars	spdx_channel_a	licence_channel_b	path	bytes	sha256_12	channels_agree	created	pushed	shelved_to
+dongbeixiaohuo/writing-agent	460	MIT	MIT License	main/LICENSE	1078	185ea2efea06	YES	2025-12-21	2026-11-17	repos/foundations.md
+yinuoguan/nengdou-ai-review-helper-web	193	MulanPSL-2.0	Apache License 2.0 (verbatim)	main/LICENSE	11356	43070e2d4e53	NO	2025-10-06	2026-04-29	agents/top.md
+PGshen/thinking-map	187	Apache-2.0	Apache License 2.0 (verbatim)	main/LICENSE	11356	43070e2d4e53	YES	2025-06-16	2026-08-23	repos/foundations.md
+yf-team/yf-exam-lite	173	MIT	MIT License	main/LICENSE	1074	b4cf55353a49	YES	2023-08-28	2025-05-07	repos/foundations.md
+youufis/SmartKBS	99	AGPL-3.0	GNU Affero GPL v3	master/LICENSE	34833	c017a2e33418	YES	2026-05-26	2026-11-18	verticals/solutions.md
+zijian-optics/SolaireEPDA	91	AGPL-3.0	GNU Affero GPL v3	master/LICENSE	34522	20b067f86de3	YES	2026-04-05	2026-06-27	repos/foundations.md
+BBkjdayup/BCTK	58	MIT	MIT License	main/LICENSE	1065	7208c5cd9088	YES	2026-09-08	2026-11-07	repos/foundations.md
+QwenStorm/xl-frontend	50	MIT	MIT License	master/LICENSE	1060	3b0284114591	YES	2026-04-07	2026-04-07	agents/top.md
+weishao2/tizhuang-agent-skills	42	MIT	MIT License	main/LICENSE	1077	881348270e41	YES	2026-08-11	2026-11-11	agents/top.md
+ai-lingnan/econai-agent-platform	41	AGPL-3.0	GNU Affero GPL v3	master/LICENSE	34522	4df3c306ddda	YES	2026-03-23	2026-07-17	agents/top.md
+shellery1988/k12-smart-teacher	16	MIT	MIT License	main/LICENSE	1073	4c5f6e74a09b	YES	2026-04-12	2026-06-29	agents/top.md
+wenliu3/ai-smart-homework-review	11	MulanPSL-2.0	Mulan PSL v2 (Chinese text, coscl.org.cn)	main/LICENSE	9246	2a7ffa7fcf2e	YES	2026-07-06	2026-09-06	agents/top.md
+# --- barred: no licence file on any probed branch/path (main,master x LICENSE,LICENSE.md,LICENSE.txt,COPYING,LICENCE) ---
+JinLingxi/MathCyclus---Lingxi-Question-Bank-Assistant	156	NONE	NO LICENCE FILE FOUND	—	—	—	YES	—	2026-11-12	intel/measured-unusable.md
+123chenqi98/EduMultimark	5	NONE	NO LICENCE FILE FOUND	—	—	—	YES	—	2026-06-17	intel/measured-unusable.md
+# --- Apache byte-length variants observed in this KB, for the byte-identity scanner note ---
+# 11356 B 43070e2d4e53 = nengdou + thinking-map (byte-identical to each other; appendix boilerplate left unfilled)
+# 11359 B d0622ead9e49 = beltromatti/get-it (already shelved)
+# 11357 B c71d239df917 = webtech-network/autograder (already shelved)
+# 11386 B 7dc0f2a45a9e = towardsai/ai-tutor-app (already shelved)
+# 11287 B c589d95090ce = Orenda-Project/rumi-platform (already shelved)
+# --- 906-G3 re-probe: barred repos re-read on their REAL default branch resolved from search/repositories ---
+# JinLingxi/MathCyclus---Lingxi-Question-Bank-Assistant default_branch=main  -> LICENSE,LICENSE.md,LICENSE.txt,COPYING,LICENCE,license all 404 -> bar HOLDS
+# 123chenqi98/EduMultimark                              default_branch=master -> LICENSE,LICENSE.md,LICENSE.txt,COPYING,LICENCE,license all 404 -> bar HOLDS
+# Note: p906's probe iterated hardcoded {main,master}, the pre-884-G2 instrument. All 12 shelved repos were covered by
+# that set (4 on master), so no shelved row is affected; the two bars were re-probed on resolved branches before publication.

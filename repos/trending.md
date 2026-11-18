@@ -4,6 +4,59 @@ region: Global
 updated: 2026-11-18
 ---
 
+## `2026-11-18` (p906) — **a whole repository tier was missing from `foundations.md`: the Mandarin assessment and question-bank engines. 347 repositories in that channel, and the `Assessment, grading and academic integrity` section held zero Chinese-origin rows.**
+
+**Channel.** Non-English `gh api search/repositories`, the discovery channel this base has named as
+its highest-value remaining one since `p903`. Full method, the eight-language ceiling table and the
+query-shape controls are in [`agents/trending.md`](../agents/trending.md) `906-F2`. Records:
+[`nonenglish-ceiling.2026-11-18-p906.tsv`](../evidence/nonenglish-ceiling.2026-11-18-p906.tsv),
+[`mandarin-cohort-verify.2026-11-18-p906.tsv`](../evidence/mandarin-cohort-verify.2026-11-18-p906.tsv).
+
+### 🔴 `906-R1` The tier that was absent, and why its absence was invisible
+
+`repos/foundations.md` `Assessment, grading and academic integrity` is one of this base's
+best-populated sections — PrairieLearn, Submitty, otter-grader, nbgrader, Autolab, Tango, Ares,
+`edx-ora2`, `codejail`, OMRChecker, Dolos, `edx-proctoring`. **Every row is North American or
+European.** The Mandarin query `作业 批改` ("homework grading") alone returns **347 repositories**,
+with an education-native ceiling at **193 ★**.
+
+🔵 **The absence was invisible because the section looked full.** A section with twelve verified
+rows does not read as a gap, and no English-language query reaches this cohort — the repositories
+describe themselves in Chinese. This is the structural case for the non-English channel, now
+measured rather than asserted: **the discovery failure was in the query language, not in the
+section's coverage.**
+
+### 🟢 `906-R2` Shelved to `repos/foundations.md` — five rows, both channels, byte-read grants
+
+| Repo | ★ | Licence (byte-read) | Why it is a foundation and not an agent |
+|---|---|---|---|
+| `dongbeixiaohuo/writing-agent` | **460** | MIT (`main/LICENSE`, 1,078 B, `sha256₁₂ 185ea2efea06`) | Largest of the cohort. Multi-agent writing assistant with a *writing-director* role coordinating a lead author, a reader-reviewer and a **"de-AI-flavour" (去 AI 味) specialist** — the last is the reusable part: an explicit pass whose only job is removing model register from generated prose. Ships as a standalone Windows client needing only a model API key. Pushed 2026-11-17. |
+| `PGshen/thinking-map` | **187** | Apache-2.0 (`main/LICENSE`, 11,356 B, `sha256₁₂ 43070e2d4e53`) — **patent grant** | Mind-map-structured reasoning substrate, not education-specific, which is exactly why it belongs here: it externalises a reasoning trace as a navigable graph. The structure `LearnHarness` is credited with building privately, available under Apache. Pushed 2026-08-23. |
+| `yf-team/yf-exam-lite` | **173** | MIT (`main/LICENSE`, 1,074 B, `sha256₁₂ b4cf55353a49`) | Question-bank and online-examination engine: bank management, bulk import/export, automatic paper composition, wrong-answer drilling, enrolment, scoring. **Deliberately not an AI project** — it is the CRUD and exam-delivery substrate to put an AI layer *on top of*, under MIT. 🟡 **Caveat: last push 2025-05-07, ~18 months idle.** Read it as a schema and a data model. |
+| `zijian-optics/SolaireEPDA` | **91** | **AGPL-3.0** (`master/LICENSE`, 34,522 B, `sha256₁₂ 20b067f86de3`) | K-12 **exam-paper design automation**, explicitly modelled on electronic-design-automation tool-chains: a standardised pipeline rather than a chat interface. The pipeline framing is the transferable idea. **AGPL — not usable in a closed derivative.** |
+| `BBkjdayup/BCTK` | **58** | MIT (`main/LICENSE`, 1,065 B, `sha256₁₂ 7208c5cd9088`) | **Offline-first Windows desktop** question bank and paper composer for individual teachers and institutions, data stored on the local machine by default; rich text and mathematical formulae, Word/Excel bulk import-export, subject/chapter/tag retrieval, duplicate-question detection. 🔵 **The local-first posture is the procurement-relevant part** — the same posture California AB 1159 and EMEA sovereignty rules ask for, in the one tier where this base had no local-first option. Pushed 2026-11-07. |
+
+🔴 **Four of the twelve cohort repositories have `master`, not `main`, as their default branch**
+(`SmartKBS`, `SolaireEPDA`, `xl-frontend`, `econai-agent-platform`). A `main`-only licence probe
+reports them as unlicensed. This base has made that error before and **fixed it**: `884-G2` measured it at **26.5% of
+permissive repositories with a non-standard default branch** and was discharged in `p885` by
+resolving the default branch from `search/repositories` first. 🔴 **`p906`'s probe regressed to the
+pre-fix form** — two hardcoded names — and was saved only by `{main, master}` covering all twelve.
+**The two barred repositories were re-probed on their real default branches before publication and
+both bars hold.** See `906-G3`.
+
+### 🔴 `906-R3` Barred — no licence file on any of ten probed branch/path combinations
+
+| Repo | ★ | Probed | Verdict |
+|---|---|---|---|
+| `JinLingxi/MathCyclus---Lingxi-Question-Bank-Assistant` | **156** | `{main,master}` × `{LICENSE, LICENSE.md, LICENSE.txt, COPYING, LICENCE}` | 🔴 **No grant.** Automated high-school mathematics question-bank management and intelligent paper composition on Streamlit + LaTeX, with OCR and live TikZ rendering. Pushed 2026-11-12, actively developed. At 156 ★ it would have ranked **fourth in this cohort**, and it is the most technically interesting item in it. **Unusable: no licence is not a permissive licence.** |
+| `123chenqi98/EduMultimark` | 5 | same ten | 🔴 **No grant.** Full-modality K-12 grading on a fine-tuned LLaVA-13B — marks handwritten text, mathematical formulae and hand-drawn figures. The only **multimodal** grader found in any language this pass. Barred. |
+
+🔵 Consistent with the `p899` direction in `intel/measured-unusable.md`: **the most useful-looking
+asset in a newly-opened channel is repeatedly the least usable one.** This is now the fourth
+channel on which that has held.
+
+
 ## `2026-11-18` (p905) — **Open edX pins 311 of 311 dependencies; DeepTutor pins 1 of 74. Measured across 14 platforms and 350 byte-reads, the reproducibility of an education base is uncorrelated with its popularity — and nothing on the shelf discloses what it depends on.**
 
 **Channel:** 350 byte-reads from `raw.githubusercontent.com` — 14 delivery-grade platforms × 25 paths

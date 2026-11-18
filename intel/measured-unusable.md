@@ -3,6 +3,49 @@ industry: education
 region: Global
 updated: 2026-11-18
 ---
+
+## 🔴 `2026-11-18` — `p906`: **a SIXTH direction — across all seven non-Mandarin vernacular channels measured, the normal state is no licence file. Not a concealed grant, not a non-commercial grant: nothing.**
+
+The five directions already recorded in this file all concern **how a grant is hidden** — a
+`NOASSERTION` field over a prohibition, a source-available licence that reads like open source, a
+non-commercial clause on the most useful asset, a hand-edited grant that breaks byte identity, and
+`p899`'s finding that barred repositories skew *larger* than shelved ones. 🔵 **`p906` adds one
+about a whole channel rather than a repository: in Hindi, Korean, Japanese, Thai, Vietnamese and
+Indonesian education repositories, the absence of a licence is not the exception — it is the
+default.** Of the **113 repositories** matching `शिक्षा` (Hindi, "education"), **not one carries a
+licence file.** The same holds for every Korean, Japanese, Thai and Vietnamese hit measured this
+pass. The one exception across all seven non-Mandarin languages is a single Urdu repository under
+MIT, and it is a religious/technology Q&A chatbot rather than education software.
+
+🔴 **The operational consequence for a regional engagement.** The usual question — *"is there local
+open source we can build on?"* — has a different answer in these markets than "no, we did not
+find any". **There is vernacular software, and it is legally unusable by default.** Treat a
+vernacular repository as unlicensed until a byte-read says otherwise, and budget the vernacular
+tier as build. Full ceiling table:
+[`nonenglish-ceiling.2026-11-18-p906.tsv`](../evidence/nonenglish-ceiling.2026-11-18-p906.tsv).
+
+### 🔴 No licence file on any of ten probed branch/path combinations — `2`
+
+Probe: `{main, master}` × `{LICENSE, LICENSE.md, LICENSE.txt, COPYING, LICENCE}`, each read from
+`raw.githubusercontent.com`. Both repositories exist and were confirmed on the search channel; both
+are actively or recently developed. **No licence is not a permissive licence, and a missing file is
+not an invitation to assume one.**
+
+| Address | ★ | Field | Probed | Verdict |
+|---|---|---|---|---|
+| https://github.com/JinLingxi/MathCyclus---Lingxi-Question-Bank-Assistant | **156** | `NONE` | ten combinations, all `404` | 🔴 **No grant.** Automated senior-secondary **mathematics item-bank management and intelligent paper composition** on Streamlit + LaTeX, with OCR ingestion, live TikZ rendering and automatic archiving. Pushed **2026-11-12**. 🔵 **This is the `p899` direction recurring: at 156 ★ it would have ranked fourth in the Mandarin cohort `p906` shelved, and it is the most technically interesting item found in any language this pass** — OCR-to-LaTeX-to-TikZ is precisely the maths-assessment pipeline a studio would otherwise build. **Barred.** The repository also carries a stray GitHub-profile description, so its own metadata is unreliable. |
+| https://github.com/123chenqi98/EduMultimark | 5 | `NONE` | ten combinations, all `404` | 🔴 **No grant.** Full-modality K-12 homework marking on a **fine-tuned LLaVA-13B**, combining computer vision, NLP and an education knowledge graph to mark handwritten text, mathematical formulae and hand-drawn figures. **The only multimodal grader found in any language in this pass**, and the only candidate for the handwritten-work tier that `agents/top.md` fills with OCR pipelines. **Barred.** |
+
+### 🔴 Vernacular-channel ceilings that are unusable for licence reasons, not quality reasons — `3`
+
+These are recorded because a future pass searching the same languages will find them again and
+should not have to re-probe. Each is the **topical ceiling of its language** as measured in `p906`.
+
+| Address | ★ | Language | Verdict |
+|---|---|---|---|
+| https://github.com/eunsu0325/physical-ai-tutor | 2 | Korean | 🔴 **No licence.** A Korean **physical-AI tutor skill self-described as grounded in education research** — topically the best Korean-language hit found, pushed 2026-11-01, and legally unusable. It is the Korean ceiling. |
+| https://github.com/yoshu-solutions/chuugaku-juken-ai | 0 | Japanese | 🔴 **No licence.** Free open-source middle-school-entrance-exam preparation using Python and generative AI, explicitly framed as learning GitHub and AI-driven development. **The only Japanese-language hit at all**, and the Japanese ceiling is therefore zero stars and no grant. |
+| https://github.com/anjaliofficial/ArthaSiksha- | 2 | Hindi | 🔴 **No licence** — and it is the **Hindi ceiling across 113 repositories.** Carried here as the worked example of the channel finding above: the Hindi education layer on GitHub is institutional web presence and content, under no grant, not software a studio can adopt. |
 ## 🔴 `2026-11-18` — `p899`: **a FIFTH direction — the barred repositories in this pass are, on average, LARGER than the ones this KB shelves, and three of the five hide behind `NOASSERTION`**
 
 🔵 **The four concealment directions already recorded here all concern how a grant is hidden.

@@ -2001,3 +2001,79 @@ engagement's base is already pinned and single-ecosystem (`openedx/openedx-platf
 only), the pinning half is already done — scope the scan alone, at roughly half the estimate, and say
 so rather than billing for work upstream has done for you.
 
+## P25 — Chinese-curriculum grading and item-bank tier, assembled from the Mandarin cohort with the AGPL kept out of the deliverable (added `p906`)
+
+### Why this pattern exists
+
+Every pattern above the grading tier assumes the item bank and exam delivery already exist. For a
+China or Chinese-curriculum engagement they do — and until `p906` this KB could not name them,
+because `repos/foundations.md` held the entire `Assessment, grading and academic integrity` tier as
+North American and European across twelve verified rows while the Mandarin channel `作业 批改`
+returns **347 repositories**. **P17** is the equivalent pattern over a BSD autograder for code and
+structured answers. **P25 is for prose, handwriting and mathematics on paper**, which is what the
+Chinese cohort is actually built for and what P17's substrate cannot mark.
+
+🔴 **The pattern's real work is licence routing, not integration.** The cohort is mixed in a way
+that matters: of the twelve repositories verified, **five are MIT, two are Apache-2.0, three are
+AGPL-3.0 and two are Mulan PSL v2** — and the single most useful-looking item in the channel
+(`MathCyclus`, **156 ★**, OCR → LaTeX → TikZ maths item bank) **carries no licence file at all** and
+is barred. A studio that reads this cohort as "Chinese open source, permissive enough" ships AGPL
+into a client's closed product. The routing below is the deliverable.
+
+🔵 **And one row inverts the usual scanner result.** `nengdou-ai-review-helper-web` (**193 ★**) is
+labelled `MulanPSL-2.0` by GitHub and is **verbatim Apache-2.0 on a byte read** (11,356 B,
+`sha256₁₂ 43070e2d4e53`). **An SPDX-driven gate rejects the best repository in the tier for a
+restriction that does not exist.** Run `G1` before this pattern, not after — see gate `906-G1`.
+
+### Stack
+
+| Layer | Component | Licence posture |
+|---|---|---|
+| **Item bank + exam delivery** | https://github.com/yf-team/yf-exam-lite (**MIT**, 173 ★, byte-read `main/LICENSE` 1,074 B `sha256₁₂ b4cf55353a49`) — bank and item management, bulk import/export, automatic paper composition, wrong-answer drilling, enrolment, scoring | ✅ MIT. **Deliberately not an AI project**, which is why it is the spine: take the schema and exam delivery, add generation. 🟡 Idle since 2025-05-07 — **fork and own it**; treat it as a data model, not a live dependency. |
+| **Offline/local item authoring** | https://github.com/BBkjdayup/BCTK (**MIT**, 58 ★, byte-read 1,065 B `sha256₁₂ 7208c5cd9088`) — Windows desktop bank + paper composer, local-by-default storage, maths formulae, Word/Excel import-export, duplicate-question detection | ✅ MIT. The **local-first** tier: no student data leaves the machine, so no data-processing argument is needed. |
+| **Marking engine (prose + handwriting)** | https://github.com/yinuoguan/nengdou-ai-review-helper-web (**Apache-2.0 on byte read**, 193 ★) — multi-subject marking with written feedback; and https://github.com/QwenStorm/xl-frontend (**MIT**, 50 ★) for **essay marking + OCR** of handwritten work | ✅ Apache-2.0 (patent grant) + MIT. 🔴 **Record the byte read in the SBOM**, or the client's own scanner will flag `nengdou` as Mulan. 🟡 `xl-frontend` was created and last pushed the same day — read the pipeline, do not depend on the repo. |
+| **Error → targeted practice loop** | https://github.com/shellery1988/k12-smart-teacher (**MIT**, 16 ★, byte-read 1,073 B `sha256₁₂ 4c5f6e74a09b`) — wrong-answer analysis and generation of fresh analogous items from the specific error made (举一反三) | ✅ MIT. **The pedagogically load-bearing step** and the one every other grading row in this KB stops short of. Small — reimplement the loop, vendor nothing. |
+| **Reliability signal** | The dual-agent parallel-review control read from https://github.com/ai-lingnan/econai-agent-platform (**AGPL-3.0**, 41 ★) | 🔴 **AGPL — read, do not link.** Reimplement: two independent marking passes over one submission, disagreement above threshold routes to a human. **Design, not dependency.** |
+| **Item-bank-as-a-skill (optional)** | https://github.com/weishao2/tizhuang-agent-skills (**MIT**, 42 ★) — question sampling and knowledge-point retrieval exposed as an agent skill | ✅ MIT **on the skill**. 🔴 The bank itself is a **hosted third-party service**: the MIT grant does not cover availability, terms or the claimed 20M items. Contract for it separately or do not depend on it. |
+| **Reasoning trace (optional)** | https://github.com/PGshen/thinking-map (**Apache-2.0**, 187 ★) | ✅ Apache-2.0, patent grant. Externalises the marking rationale as a navigable graph — the appealability surface a parent or regulator asks for. |
+| **Platform reference (do not ship)** | https://github.com/youufis/SmartKBS (**AGPL-3.0**, 99 ★, pushed 2026-11-18) | 🔴 **AGPL.** The most complete single implementation of this whole tier — bank, papers, marking, live classroom, attendance, analytics. **Read it as the reference architecture; deploy-and-extend only.** A closed branded derivative is not available. |
+| **Pre-flight** | `G1` licence gate, with the branch-resolution step | 🔴 **Four of the twelve cohort repos default to `master`.** A `main`-only probe reports them unlicensed — this is `884-G2`, discharged in `p885` and **recurring in `p906`'s own instrument** (`906-G3`). Resolve the default branch from `search/repositories` *before* reading bytes. |
+
+### Wiring
+
+1. **Fork `yf-exam-lite`** and keep only the item schema, bank CRUD and exam-delivery paths. This is
+   the system of record. Nothing AI touches it yet.
+2. **Put the marking tier behind a queue, not inline.** A submission produces a *marking job*;
+   `nengdou`'s pipeline (Apache-2.0) and `xl-frontend`'s OCR path handle prose and handwritten work.
+   Two independent passes per submission, per the `econai` control reimplemented.
+3. **Gate on disagreement, not on confidence.** Where the two passes differ by more than the agreed
+   band, the submission routes to a teacher. This is the only cheap, defensible reliability proxy in
+   the tier, and it is what a human-in-the-loop requirement can actually trigger on.
+4. **Feed every confirmed error into the `k12-smart-teacher` loop** to generate analogous practice
+   from the specific mistake, written back as new items in the forked bank — so the bank grows from
+   real student error rather than from generation alone.
+5. **Expose the marking rationale** through a `thinking-map`-style graph. Appealability is a
+   requirement in every jurisdiction this KB tracks, and a mark without a rationale is not appealable.
+6. **For a local-only client, substitute `BCTK`** for steps 1 and 4 and run the model locally. The
+   result needs no cross-border data-processing argument at all.
+
+### Licence posture of the result
+
+🟢 **Shippable closed.** The deliverable touches MIT and Apache-2.0 only. The two AGPL components
+(`econai-agent-platform`, `SmartKBS`) are **read as designs and reimplemented**, which is the same
+discipline P15 and P14 apply, and the two Mulan PSL v2 repositories are not in the build path.
+🔴 **Two things must be written into the SBOM by hand**: the `nengdou` byte read (or the client's
+scanner will report a Mulan dependency that is not there), and the fact that `MathCyclus` was
+**evaluated and barred for having no grant** — because it is the first thing a competent reviewer
+will find in this channel and the first thing they will ask why you did not use.
+
+### Estimate
+
+**8–12 weeks.** The spine is a fork, not a build, and the marking pipelines are readable. The cost
+sits in three places: **Chinese-language QA** (the cohort's documentation, tests and UI are in
+Chinese — budget a Mandarin-reading engineer, not a translator); **reimplementing the two AGPL
+controls** cleanly enough to survive a provenance question; and **the handwriting OCR accuracy bar**,
+which is the one place this pattern can fail outright and which no repository in the cohort
+publishes a measurement for. 🔴 **Measure OCR accuracy on the client's own scanned work before
+committing to the handwriting scope** — that is this pattern's equivalent of P23's hallucination
+gate, and the cohort gives you no published number to rely on.

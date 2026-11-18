@@ -6,7 +6,7 @@ updated: 2026-11-18
 
 # Current trends — education
 
-**Twenty-six trends** (**T26 added in `p903`** — the unit of publication shifting from the
+**Twenty-nine trends** (**T29 added in `p906`** — vernacular open education supply measured across eight languages and found to be a single-country phenomenon, with *no licence at all* the default state in the other seven; **T26 added in `p903`** — the unit of publication shifting from the
 application to the agent-addressable curriculum corpus, the first trend in this file derived from a
 non-English repository channel; **T25 added in `p902`** — the licence trap moving from code to the data
 and content assets, where no index can see it; **T24 added in `p901`** — path-dependent licences, the first trend in this file derived from repositories the SPDX channel refused to resolve at all; **T23 added in `p900`** — the first trend in this file derived from a
@@ -588,6 +588,21 @@ client can keep what a studio builds. **Seven repositories carried on this KB's 
 unresolved licence were byte-read in p897. Five were wrong as recorded, and the errors did not
 share a direction.**
 
+🔴 **`p906` found the direction this trend had never recorded: a published field that *invents* a
+restriction.** `yinuoguan/nengdou-ai-review-helper-web` (**193 ★**, the star ceiling of the Mandarin
+education channel) is labelled **`MulanPSL-2.0`** by GitHub's classifier. Its `LICENSE` at `main` is
+**verbatim Apache-2.0** — 11,356 B, `sha256₁₂ 43070e2d4e53`, opening `Apache License / Version 2.0,
+January 2004`, and **byte-identical to `PGshen/thinking-map`'s**, which the same classifier labels
+`Apache-2.0` correctly. 🔵 **Every prior case in this trend, including the expensive PrairieLearn
+one, was a field that was silent or over-permissive. This is a field that is over-*restrictive*, and
+it fails in the one way nobody checks for.** Mulan PSL v2 is OSI-approved and permissive but absent
+from many enterprise approved-licence lists, so an SPDX-driven scanner routes this repository to
+legal review or rejects it outright — **while the actual grant is Apache-2.0, patent grant included,
+and is on every such list.** The asymmetry noted above inverts here: *an error that looks
+restrictive is never challenged either, because nobody audits a rejection.* Gate `906-G1`: for
+anything a studio intends to adopt, the field decides nothing in either direction — only the bytes
+do.
+
 🔴 **p899 escalated this trend from "third parties get licences wrong" to "this KB got one
 wrong, in the expensive direction".** Every prior case above was an error that cost a *missed
 opportunity* — a permissive repo recorded as unclear, a copyleft one the SPDX matcher could not
@@ -1100,3 +1115,60 @@ is the same university-versus-startup axis as **T2**, measured on a different qu
 the same failure one layer down, at the **dependency** level, and it is the layer where no field
 exists to be wrong in the first place: there is nothing to misread because nothing is written.
 
+
+
+## T29 — Vernacular open education supply is a **single-country** phenomenon, and in the other seven languages measured the default state is *no licence at all*
+
+**Added `p906`**, from an eight-language census of `search/repositories` rather than from search
+snippets or a sampled probe. Record:
+[`nonenglish-ceiling.2026-11-18-p906.tsv`](../evidence/nonenglish-ceiling.2026-11-18-p906.tsv).
+
+🔵 **This trend qualifies T20 rather than extending it.** T20 established — correctly, from byte
+reads — that vernacular education agents exist and that the native language sits inside the data
+contract rather than in a translation layer. **It did not establish how many languages that is true
+of.** `p906` measured all eight channels this base had declared untried, and the answer is **one**.
+
+| Language | Repos matching | Topical ★ ceiling | Carry a licence |
+|---|---|---|---|
+| **Mandarin** | **347** (`作业 批改`) | **193** | mostly yes |
+| Hindi | **113** | 2 | **0 of 113** |
+| Indonesian | 14 | 1 | none |
+| Thai | 9 | 0 | none |
+| Vietnamese | 6 | 1 | none |
+| Korean | 2 | 2 | none |
+| Japanese | 1 | 0 | none |
+| Urdu | 1 | 0 | n/a (sole hit not education software) |
+
+🔴 **The two kinds of emptiness are not interchangeable, and the distinction is the commercially
+useful part.** Thai, Japanese, Urdu and Korean are **thin** — few repositories exist at all. **Hindi
+is the opposite, and it is the finding that matters**: at 113 repositories it is the second-densest
+channel of the eight, so the vernacular layer is not missing — **it is the wrong kind.** Every hit
+inspected is a school, NGO or foundation *website*, or a non-AI teacher-rating project, and **not
+one of the 113 carries a licence file.** For the world's largest school system the answer to *"is
+there local open source to build on?"* is therefore neither yes nor "we found nothing": it is
+**there is a great deal of it, and none of it is software a studio can adopt.**
+
+🔴 **This is also the sixth concealment direction in `intel/measured-unusable.md`, and the first
+that is a property of a channel rather than of a repository.** The five prior directions all
+describe *how a grant is hidden* — a silent SPDX field, a source-available licence that reads like
+open source, a non-commercial clause on the most useful asset, a hand-edited grant, barred repos
+skewing large. **Here nothing is hidden: there is simply no grant, and that is the norm, not the
+exception.** T23 measured a third of education's permissive supply as carrying no readable grant;
+in six of these seven languages the figure is effectively all of it.
+
+🟢 **Mandarin is the counter-case and it is a full tier, not a handful of repositories.** The
+grading channel alone returns 347 results; twelve were verified on two channels and shelved, into a
+tier (`Assessment, grading and academic integrity`) that this KB had held as **entirely North
+American and European** across twelve rows. 🔵 **The structural point for a studio: the discovery
+failure was in the query language, not in the coverage.** A section that looks full does not read as
+a gap, which is how an entire national supply tier stayed unrecorded here for 905 passes.
+
+🟡 **The honest limit on this trend, which also makes it falsifiable.** `search/repositories` matches
+name, description and README, so a project with English metadata and vernacular content is invisible
+to a vernacular query. **This base can prove that blind spot is real: `belajar-ngoding-byGanzu`
+(MIT, 66 ★) is a shelved Indonesian row that `p906`'s own Indonesian queries did not return.** Every
+ceiling above is a ceiling on *vernacular-metadata* supply — which is what a regional sourcing claim
+actually rests on, and not a proof of non-existence. The instrument that would test it is named as
+gap `906-G2`: English-metadata queries carrying a national curriculum term (`CBSE`, `NCERT`,
+`gaokao`, `UTBK`, `JLPT`, `TOPIK`). **Until that runs, read this trend as a statement about what is
+findable, and price the India vernacular tier as build either way.**
