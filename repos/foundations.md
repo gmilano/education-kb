@@ -238,8 +238,9 @@ identified.
 | https://github.com/mitodl/ol-infrastructure | BSD-3-Clause | **Restored p896.** MIT Open Learning's **production infrastructure-as-code** — 59 ★, pushed 2026-11-18. The only open artefact this KB has found that shows how a large university actually *runs* Open edX in production rather than how to install it. |
 | https://github.com/apereo/java-cas-client | Apache-2.0 (`master/LICENSE`, byte-read 2,321 B) | **Restored p896.** CAS client for JVM applications — 949 ★. 🟡 GitHub reports `NOASSERTION`; the text is Apache. Institutional SSO is the first integration question in every higher-ed engagement. |
 | https://github.com/apereo/phpCAS | Apache-2.0 | **Restored p896.** CAS client for PHP — 802 ★. The one that matters for **Moodle**, which is PHP. **Pushed 2026-06-30**, so pin it. |
+| https://github.com/jitsi/jitsi-meet | Apache-2.0 (`master/LICENSE`, byte-read 12,596 B, `sha256₁₂ eae52e200cd8`) | **Added `p901`.** Self-hostable live-classroom and conferencing platform — **30,255 ★ / 8,134 forks**, pushed 2026-11-18. **The largest permissive synchronous-delivery platform in open source**, and the only row in this file that was found by auditing against a *third-party* curated index rather than by search — it never self-describes as education, so every `{education}`-qualified leg missed it. Pairs with the LMS rows for the synchronous half of a blended deployment. See `repos/trending.md` `901-R1`. |
 
-**109 foundational repos, all verified**, counted programmatically across the fourteen sections
+**110 foundational repos, all verified** (**109 through `p900`; `jitsi/jitsi-meet` added in `p901`**), counted programmatically across the fourteen sections
 of this file rather than asserted — the previous standing figure of "47" was stale and nobody
 had recounted it. **34 of the 109 were restored in `p896`** from
 `archive/2026-11-18-pre-cleanup/repos-foundations.md`, after a shelf-vs-history diff showed they

@@ -4,6 +4,85 @@ region: Global
 updated: 2026-11-18
 ---
 
+## `2026-11-18` (p901) — **the live-classroom tier was missing a 30k-star Apache-2.0 platform, and two "NOASSERTION" repos turn out to carry licences that change by directory**
+
+**Channel:** `lib/slug_extract.py` offline over an external curated index, `gh api
+search/repositories` for stars/SPDX, **licence byte-reads from `raw.githubusercontent.com`**.
+The audit that produced these rows, and the saturation finding behind it, are in
+`agents/trending.md` p901 (`901-F1`/`901-F2`). This file carries what the audit *found*.
+
+### 🔴 `901-R1` `jitsi/jitsi-meet` — the one real miss in the vertical audit, and it outweighs the row this base currently recommends
+
+| Repo | Licence (byte-read) | Stars / forks | Pushed |
+|---|---|---|---|
+| [`jitsi/jitsi-meet`](https://github.com/jitsi/jitsi-meet) | 🟢 **`Apache-2.0`** — `master/LICENSE`, `12,596 B`, `sha256₁₂ eae52e200cd8`, title line `Apache License`; SPDX agrees | **`30,255★`** / `8,134` | `2026-11-18` |
+
+🔴 **Absent from all 6,494 slugs in the live tree.** It sits in the *live-classroom, video
+and lecture capture* tier that `verticals/solutions.md` enumerates by name — and against the
+rows already there it is not a marginal addition:
+
+| Platform | Licence | Stars | Posture |
+|---|---|---|---|
+| **`jitsi/jitsi-meet`** 🆕 | 🟢 `Apache-2.0` | **`30,255`** | Permissive, self-hostable, mature |
+| `bigbluebutton/bigbluebutton` | 🔴 `LGPL-3.0` | `9,284` | The education incumbent; copyleft |
+| `netless-io/flat` | 🟢 `MIT` | `6,443` | APAC-origin, whiteboard-first |
+| `opencast/opencast` | 🟡 `ECL-2.0` | `513` | Lecture capture, not live teaching |
+| `OpenVidu/openvidu` | 🟢 `Apache-2.0` | `2,146` | **What this base currently recommends as the permissive WebRTC option** |
+| `openfun/marsha` | 🟢 `MIT` | `152` | LMS-embedded video, France |
+
+🔴 **`verticals/solutions.md` has been pointing engagements at OpenVidu as *the* permissive
+build-your-own-classroom option — and Jitsi Meet is the same licence with 14× the stars and
+4× the forks.** That is not a reason to drop OpenVidu (it is a lower-level WebRTC toolkit;
+Jitsi Meet is a finished conferencing application, so they answer different questions), but a
+studio that was never shown the Apache-2.0 incumbent was being under-served. 🟢 **Row added
+to `verticals/solutions.md` this pass**, with the distinction stated rather than implied.
+
+🔵 **Why it was missed, which is the more useful half.** Jitsi is not an *education* project
+— it is general conferencing that education deploys. Every search leg this base has ever run
+was `{education}`-qualified, so a platform that never self-describes as education-first is
+structurally invisible to them. **This is the first row in this KB found by auditing against
+a stranger's list instead of by searching**, and it is exactly the class of row that method
+is good for.
+
+### 🟡 `901-R2` Two `NOASSERTION` repos resolved by byte-read — both are **path-dependent** grants, which the SPDX field cannot express
+
+`gh api` returns `NOASSERTION` when GitHub's licence detector cannot resolve a single SPDX
+identifier. This base's standing rule is that `NOASSERTION` is not an answer, so both were
+read as bytes:
+
+| Repo | SPDX says | The grant actually says |
+|---|---|---|
+| [`RocketChat/Rocket.Chat`](https://github.com/RocketChat/Rocket.Chat) `46,488★` | 🔴 `NOASSERTION` | 🟡 **MIT (Expat) for everything *outside* `ee/` and `apps/meteor/ee/`**; those directories carry a separate enterprise licence. `master/LICENSE`, `1,654 B`, `sha256₁₂ ba8df3ebff76` |
+| [`mattermost/mattermost`](https://github.com/mattermost/mattermost) `39,646★` | 🔴 `NOASSERTION` | 🟡 **Three grants by path**: `AGPL-3.0` for self-built source, `MIT` for Mattermost-compiled binaries, **`Apache-2.0` for `server/templates/`, `server/i18n/`, `server/public/`, `webapp/`**. `master/LICENSE.txt`, `47,763 B`, `sha256₁₂ 0a3d65b9301f` |
+
+🟢 **Both are usable by a studio; neither is usable the way a one-line licence column
+implies.** Rocket.Chat is MIT if you do not ship `ee/`. Mattermost gives an explicit written
+promise not to enforce AGPL copyleft against integrations that use only the Admin Tools and
+Configuration Files without creating a modified version — which is a *narrower* permission
+than "it's Apache-2.0" and a *broader* one than "it's AGPL".
+
+🔴 **This is a licence class this KB has not previously named.** `T23` covers grants that are
+*unreadable*; these are grants that are perfectly readable and **vary by directory**. The
+hazard is different: a tool that reads one `LICENSE` file per repo — including this base's
+own instruments — gets a defensible-looking answer that is wrong for part of the tree.
+**Recorded as `T24` in `intel/trends.md`.**
+
+🔵 **Neither belongs in the education tier** and neither was added to it. They are carried
+here because the measurement is reusable: both are common in education stacks as the
+messaging layer, and the next pass that meets a multi-grant repo now has two worked examples.
+
+### 🔵 `901-R3` The rest of the audit's absences, recorded so the next pass does not re-mine them
+
+`apache/superset` `75,559★` `Apache-2.0` (byte-read `11,585 B`, `ff254eb676d6`),
+`grafana/grafana` `77,999★` 🔴 `AGPL-3.0`, `duckdb/duckdb` `43,162★` `MIT` (byte-read
+`1,072 B`, `075c33400ffc`, holder `Stichting DuckDB Foundation`), `nextcloud/server`
+`37,555★` 🔴 `AGPL-3.0` (byte-read `COPYING`, `34,520 B`, `57c8ff33c9c0`). 🟢 **All four are
+correctly absent from an education KB** — they are general infrastructure, and the external
+index names them as adjacent tooling, not as school systems. Logged here only so that
+`901-F2`'s "9 absent, 7 correctly" is auditable rather than asserted.
+
+---
+
 ## `2026-11-18` (p900) — **the backlog held an Arabic-only education SLM, an MIT SIS and a zero-dependency QTI 3 engine; none of the three is reachable through `search/repositories`**
 
 **Channel:** `lib/slug_extract.py` offline over this repository, `gh api search/repositories`

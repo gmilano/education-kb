@@ -131,10 +131,11 @@ derivative**; PrairieLearn and Pawtograder are host-only.
 
 | Platform | Repo | Licence | Notes |
 |---|---|---|---|
+| **Jitsi Meet** 🆕 | https://github.com/jitsi/jitsi-meet | **Apache-2.0** | `30,255★` / `8,134` forks, pushed `2026-11-18`. Licence byte-read (`master/LICENSE`, `12,596 B`, `sha256₁₂ eae52e200cd8`). **The largest permissive live-classroom platform in open source**, and a finished conferencing *application* — self-hostable, mature, with its own mobile SDKs. Added `p901` after an audit against an external curated index found it absent from all 6,494 slugs in this base. Prefer it over OpenVidu when the client wants a working classroom; prefer OpenVidu when they want to *build* one from WebRTC primitives. Not an education project — it is general conferencing that education deploys, which is why every `{education}`-qualified search leg missed it. |
 | **BigBlueButton** | https://github.com/bigbluebutton/bigbluebutton | LGPL | Purpose-built virtual classroom with Moodle/Canvas integrations. The incumbent. |
 | **Opencast** | https://github.com/opencast/opencast | ECL-2.0 | Lecture capture and video management at university scale. Pipe output into `faster-whisper`. |
 | **OpenVidu** | https://github.com/OpenVidu/openvidu | Apache-2.0 | WebRTC platform; permissive, build-your-own-classroom. |
-| **Flat** | https://github.com/netless-io/flat | MIT | Interactive online classroom with whiteboard. **APAC-origin (China), MIT** — strongest permissive option in this category. |
+| **Flat** | https://github.com/netless-io/flat | MIT | `6,443★`, pushed `2026-11-10`. Interactive online classroom with whiteboard. **APAC-origin (China), MIT** — the strongest *copyleft-free* option when the client needs MIT specifically. (Through `p900` this row read "strongest permissive option in this category"; **`p901` corrected that** — Jitsi Meet is Apache-2.0 at `30,255★`. Flat remains the pick when MIT is a hard requirement or when the whiteboard is the product.) |
 | **Marsha** | https://github.com/openfun/marsha | MIT | LMS-embedded video management from France Université Numérique. |
 
 ## Study tools, practice and assessment delivery

@@ -878,6 +878,37 @@ search at the confidence a North America one can.
 
 ### APAC
 
+🔵 **Demand side, restored `p901` (`901-G1`).** **Nanyang Technological University, Singapore,
+announced that from August 2026 every undergraduate receives full access to Gemini Enterprise,
+Google AI Studio and Vertex AI.** This datapoint was present in this KB through `p787` and was
+**lost in a rewrite** — `p901` found it only under `archive/2026-11-12-p787-pre-rewrite/` and
+`archive/2026-11-18-pre-cleanup/`, not in the live tree. It is restored here because it is the
+clearest single instance of the APAC pattern this section describes: **higher education in the
+region is moving faster than schools, and it is moving by institution-wide licensing rather
+than by procurement of education-specific tools.**
+
+🔴 **Why it matters commercially, and why it cuts against this KB's own default.** A campus
+where every undergraduate already has a frontier general-purpose stack is **not** a market for
+another general-purpose assistant. It is a market for the things that stack does not do:
+curriculum alignment, mastery modelling, assessment integrity, and integration with the
+institution's LMS and SIS of record. 🟢 That is precisely the tier this KB is strongest in
+(`Submitty`, `pyBKT`, `OATutor`, the LMS-MCP rows) — **the NTU-shaped client is a composition
+engagement, not a model engagement.**
+
+🟡 **Source and confidence.** Search-snippet evidence, single source, reported via an industry
+summary. The standing verification note at the top of this file governs it: every non-GitHub
+host returns `403` in this session, so the NTU announcement could not be opened and read.
+**Confirm against NTU's own announcement before it goes in a client deck.** 🔵 The *loss* of
+the datapoint, by contrast, is byte-verified — it is in `archive/` and not in the live tree.
+
+🔵 **Process finding this produced.** The mandated regional research legs **cannot detect a
+dropped fact**, because a leg that re-finds a fact and a leg that finds it for the first time
+look identical. `p901`'s regional legs returned this fact and would have written it as new;
+only the mandatory grep-before-write caught that it had once been held and lost. **The grep
+rule is now doing regression detection, not just duplicate prevention.** See `agents/trending.md`
+`901-F1`.
+
+
 🟢 **Supply side, placed p899: APAC builds the tutors, and it builds them in the vernacular.**
 Five of this pass's eighteen new agents placed APAC on dispersed, exclusive-marker evidence
 (spread ≥ 0.96 — not on repository names, and not on language switchers):

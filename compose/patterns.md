@@ -10,7 +10,7 @@ Concrete recipes. Each names the exact repos, how they wire together, the licenc
 the result, and a realistic build estimate. Every repo referenced is verified in
 `agents/top.md`, `repos/foundations.md` or `verticals/solutions.md`.
 
-**Nineteen patterns, plus the G1 licence gate added in p897** (**P19 added in `p900`** — the
+**Twenty patterns, plus the G1 licence gate added in p897** (**P20 added in `p901`** — the first end-to-end permissive *synchronous* pattern in this file, unlocked by `p901`'s verification of `jitsi/jitsi-meet` at Apache-2.0) (**P19 added in `p900`** — the
 first end-to-end permissive pattern in this file that is not offline-first, built entirely from
 rows promoted out of this base's own unshelved ledger) (**P16 added in `p898`**) that runs ahead of all of them.
 **p895 added P14** — offline-first literacy delivery on the one Africa-origin
@@ -1445,4 +1445,86 @@ inference is involved, runs into an outright prohibition in EU schools.
 delivery and an LRS receiving statements. The QTI conversion of the client's legacy bank is the
 schedule risk and the part to timebox first — `qti3`'s converter handles the common cases and
 not the exotic ones, and which of those a client has is not knowable from a statement of work.
+
+
+## P20 — Permissive synchronous classroom with an AI teaching assistant the client can keep closed (added p901)
+
+**The gap this closes.** Every synchronous-delivery pattern in this file so far routes through
+BigBlueButton (`LGPL-3.0`) or assumes the client already runs Zoom/Teams. `p901` verified
+`jitsi/jitsi-meet` at **Apache-2.0, 30,255★, 8,134 forks, pushed 2026-11-18** — which makes an
+**end-to-end permissive live classroom** buildable for the first time in this KB. This is the
+second pattern here (after **P14**) whose licence posture is permissive from top to bottom, and
+the first that is not offline-first.
+
+**Who it is for.** A client who teaches live — a university running tutorials, a training
+provider, a ministry running teacher CPD — who wants session transcripts, attendance and
+comprehension signals turned into teaching feedback, and who intends to keep the resulting
+product closed or resell it. The copyleft route makes that last part expensive; this one does not.
+
+### The stack, with the grant on every tier
+
+| Tier | Component | Licence | Why this one |
+|---|---|---|---|
+| Live classroom | [`jitsi/jitsi-meet`](https://github.com/jitsi/jitsi-meet) | 🟢 `Apache-2.0` (byte-read `12,596 B`, `eae52e200cd8`) | Finished, self-hostable conferencing app with its own mobile SDKs. `30,255★`. **Not** BigBlueButton: BBB is `LGPL-3.0` and purpose-built for classrooms, which is the better fit *unless* the client needs to ship a closed derivative |
+| Recording / capture | [`opencast/opencast`](https://github.com/opencast/opencast) | 🟡 `ECL-2.0` | `513★`, pushed `2026-11-18`. Apache-derived with a patent clause; fine alongside, keep it a separate service |
+| Transcription | `faster-whisper` | 🟢 `MIT` | Already the transcription tier elsewhere in this file; feed it Opencast output or Jitsi's recording hook |
+| Mastery model | [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | 🟢 `MIT` | UC Berkeley CAHLR Bayesian Knowledge Tracing. **Do not invent a comprehension score** — this is the evidence-backed one, and it is the tier a general-purpose campus LLM stack does not provide |
+| Spaced review | [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) | 🟢 `MIT` | Turns the mastery estimate into a review schedule instead of a dashboard nobody reads |
+| Teacher console | [`appsmithorg/appsmith`](https://github.com/appsmithorg/appsmith) | 🟢 `Apache-2.0` | Human-in-the-loop queue. The teacher approves or discards every generated signal |
+| LMS of record | Moodle / Open edX / Canvas | 🔴 `GPL-3.0` / `AGPL-3.0` | **Integrate over LTI 1.3 or REST. Do not fork.** This is the `G1` gate below |
+| Agent tier | Studio IP | — | Closed, because every tier above it is permissive |
+
+### Wiring
+
+1. **Jitsi emits, it does not host your logic.** Self-host Jitsi Meet; use its recording and
+   webhook hooks to drop session artefacts into object storage. Keep your services *outside*
+   the Jitsi tree — the Apache-2.0 grant is clean, and forking is what loses you that.
+2. **Opencast or Jitsi recording → `faster-whisper` → a per-session transcript** with speaker
+   turns. Timestamps are what later make a comprehension signal attributable to a moment.
+3. **Transcript + in-session quiz responses → `pyBKT`.** Mastery is estimated per skill from
+   observed responses. 🔴 **The transcript alone is not evidence of mastery** — if the client
+   has no in-session questioning, add it before promising a mastery number.
+4. **`pyBKT` → `fsrs4anki`** for each learner's review schedule.
+5. **Everything a teacher sees lands in Appsmith first.** Generated summaries, flagged
+   learners and suggested re-teach points are proposals until a human accepts them.
+6. **Write back to the LMS over LTI 1.3 / REST only.** Grades and completion go back through
+   the documented interface. The LMS stays unmodified and its copyleft never reaches you.
+
+### Licence posture of the result
+
+🟢 **The client can keep the agent tier and the console closed.** Jitsi (Apache-2.0),
+`faster-whisper`, `pyBKT`, `fsrs4anki` (MIT) and Appsmith (Apache-2.0) impose attribution, not
+source disclosure. 🔴 **The one gate: the LMS.** Moodle is GPL-3.0 and Open edX/Canvas are
+AGPL-3.0 — integrate across a network interface and you are fine; fork or link and the
+derivative-work question is live. **Run `G1` before quoting.**
+
+🔴 **Add a CI check, not a memo** — see **T24**. If the build ever vendors a repository whose
+grant is path-dependent, assert in the pipeline that the restricted paths are absent from the
+artifact. For this stack that check is currently trivial (no multi-grant component), which is
+exactly when it is cheap to put in place.
+
+### Estimate
+
+**8–10 weeks** to a production pilot for one faculty or one training programme: 2 weeks Jitsi
+self-hosting and recording pipeline, 2 weeks transcription and session modelling, 2–3 weeks
+`pyBKT` calibration against the client's actual assessment data (**this is the step that slips**
+— it needs historical response data, and if the client has none, the model has nothing to fit),
+1–2 weeks Appsmith console, 1 week LTI write-back. 🔵 Jitsi self-hosting at class scale is the
+underestimated line: budget real infrastructure time for TURN/JVB capacity.
+
+### Where it sells
+
+🟢 **APAC, strongly** — see `intel/market.md`: an NTU-shaped client whose undergraduates already
+have a frontier general-purpose stack does not need another assistant; it needs the mastery and
+assessment tier that stack does not provide, which is precisely tiers 4–6 here. 🟢 **EMEA** —
+the whole stack is self-hostable, which answers the data-residency and sovereignty question
+(Council of the EU `14902/26`) directly, and Jitsi self-hosted keeps session content in the
+client's own infrastructure. 🟡 **North America** — viable, but `pyBKT` and `Submitty` land
+better where the client already runs their own LMS; check state AI-in-education rules first
+(**NC Session Law 2026-41**, **NY A 9190** restricting classroom AI to grade 9+, **CA AB 1159**
+on student data and model training — AB 1159 matters here because transcripts are student
+data). 🟢 **LATAM** — the permissive posture and self-hostability fit the budget and the
+26%-have-a-formal-AI-strategy governance gap; pair with the P14 offline-first pattern where
+connectivity is the binding constraint, since **this pattern assumes live video and therefore
+assumes bandwidth.**
 

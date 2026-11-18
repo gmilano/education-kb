@@ -6,7 +6,7 @@ updated: 2026-11-18
 
 # Current trends — education
 
-**Twenty-three trends** (**T23 added in `p900`** — the first trend in this file derived from a
+**Twenty-four trends** (**T24 added in `p901`** — path-dependent licences, the first trend in this file derived from repositories the SPDX channel refused to resolve at all; **T23 added in `p900`** — the first trend in this file derived from a
 licence census of this base's *own unshelved backlog* rather than from search or from a
 repository probe)
 
@@ -820,3 +820,56 @@ answer requires a second channel.**
   `intel/market.md`. **Still open within India:** whether Classes 9–10 become compulsory in
   2027–28 — sources conflict — and whether the July 2026 signal toward dedicated AI legislation
   produces a bill.
+
+## T24 — The next licence trap is not an *unreadable* grant, it is a **readable grant that changes by directory** — and every one-licence-per-repo tool reports it wrong
+
+**Added `p901`**, from byte-reads of the two repositories in this pass's vertical audit that
+`gh api` could not resolve to an SPDX identifier.
+
+**T23** named education's *unreadable* supply: repos with no licence file, or a grant no
+detector can parse. **T24 is the opposite failure and a worse one**, because it produces a
+confident wrong answer instead of a blank.
+
+**The evidence.** Two repositories, both returning `NOASSERTION` from
+`gh api search/repositories`, both with a perfectly legible `LICENSE` file:
+
+- [`RocketChat/Rocket.Chat`](https://github.com/RocketChat/Rocket.Chat) `46,488★` —
+  `master/LICENSE`, `1,654 B`, `sha256₁₂ ba8df3ebff76`. The text grants **MIT (Expat) for all
+  content *outside* `ee/` and `apps/meteor/ee/`**; those directories are governed by a
+  separate enterprise licence file. One repository, two grants, split by path.
+- [`mattermost/mattermost`](https://github.com/mattermost/mattermost) `39,646★` —
+  `master/LICENSE.txt`, `47,763 B`, `sha256₁₂ 0a3d65b9301f`. **Three** grants by path:
+  `AGPL-3.0` for source you build yourself, `MIT` for binaries Mattermost compiled, and
+  **`Apache-2.0` for `server/templates/`, `server/i18n/`, `server/public/` and `webapp/`** —
+  plus a written covenant not to enforce AGPL copyleft against integrations that use only the
+  Admin Tools and Configuration Files without creating a modified work.
+
+**Why this is a trend and not two anecdotes.** Both are commercial open-core products that
+grew a paid tier without relicensing the whole tree, which is now the standard way that
+transition is made. Education stacks meet them constantly as the messaging layer. And the
+same shape already appears inside this KB's own tier: `withmarbleapp/os-taxonomy` carries
+**`ODbL-1.0`** — a *database* licence on a curriculum graph, correct for the asset and
+invisible to anyone who assumes a software licence because the repo contains code.
+
+**What it means for delivery.** Three things, and the first is the one that bites.
+
+1. 🔴 **`NOASSERTION` is not "unlicensed" and it is not "risky".** It means the detector
+   declined. Both repos above are usable; one is MIT for the part you want. A studio that
+   treats `NOASSERTION` as a red flag discards usable permissive supply, and a studio that
+   treats it as green ships an AGPL build.
+2. 🔴 **A licence column is the wrong data shape for these repos.** This KB's own files —
+   and the compiler that reads them — assume one licence per repo. For a path-dependent
+   grant the honest entry names the *paths*, as the rows in `repos/trending.md` `901-R2` now
+   do. Anything shorter is a guess with a citation attached.
+3. 🟢 **The seam is usually clean enough to engineer around.** "Do not ship `ee/`" and "use
+   only the Admin Tools and Configuration Files" are both testable in CI — a build-time check
+   that the enterprise paths are absent from the artifact is a few lines, and it converts a
+   legal question into a pipeline assertion. **That check belongs in the delivery template,
+   not in a lawyer's memo.**
+
+**Limit of this finding.** Two repositories is a small base. What is measured is that the
+class exists, is common in adjacent infrastructure, and defeats the single-SPDX channel —
+not how prevalent it is inside education specifically. 🔵 **Open as `901-G2`:** run the
+`NOASSERTION` cohort across this base's full 6,494-slug population and measure the rate, the
+way `p900` measured false absence. Until that runs, T24 is a named hazard, not a quantity.
+

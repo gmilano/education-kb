@@ -20,6 +20,15 @@ routes that work. Stars are as at 2026-11-18, **remeasured in pass p890** (DeepT
 60,165 → 60,186; OpenMAIC 43,856 → 43,859; BloomTutor 313 → 315; whiteboard-ai-tutor
 222 → 223; every other row unchanged).
 
+**Latest sweep — `p901`.** `HKUDS/DeepTutor` **60,405** `Apache-2.0`, `THU-MAIC/OpenMAIC`
+**43,894** `MIT`, `patchy631/ai-engineering-hub` **41,998** `MIT` (pushed `2026-11-01`),
+`withmarbleapp/os-taxonomy` **7,725** 🔴 **`ODbL-1.0`** — a *database* licence on a
+curriculum graph, correct for the asset and a trap for anyone who reads the repo as software.
+🔴 **`openedx/edx-platform` returned `422` — "resources do not exist" — from
+`search/repositories` in this sweep, while `raw.githubusercontent.com` returned `200` on
+`master/README.rst`.** That is `p900`'s false-absence class landing on the AGPL anchor of the
+whole LMS tier; the two-channel rule caught it. See `agents/trending.md` `901-F3`.
+
 **Cadence note.** The largest intra-day move across ~30 tracked repos was +21 stars on a
 60,000-star repo. Star counts are a **daily** metric; remeasuring hourly buys nothing and the
 call budget belongs in regional research instead.

@@ -4,6 +4,112 @@ region: Global
 updated: 2026-11-18
 ---
 
+## `2026-11-18` (p901) — **the search channel is saturated: eight research legs returned zero facts this base lacks — and an independent curated index confirms the vertical tier is complete, with exactly one real hole**
+
+**Channel:** four global WebSearch legs + four regional legs (North America, EMEA, APAC,
+LATAM) per the standing brief; `lib/slug_extract.py` offline over an **external** curated
+index; `gh api search/repositories` for stars/SPDX; **licence byte-reads from
+`raw.githubusercontent.com`**. Network posture is unchanged and was re-tested at the top of
+the pass: `raw` `200`, `gh api` live, `github.com` HTML `403`, **every non-GitHub host `403`**
+(`unesco.org` re-probed). So the regional legs below are search snippets, not primary texts —
+the standing caveat in `intel/market.md` still governs them.
+
+### 🔴 `901-F1` The eight research legs produced **nothing this base did not already hold**
+
+This is the first pass where the mandated research sweep returned a **null yield**, and that
+is a finding about the channel rather than about education. Every fact the eight legs
+surfaced was grepped against the live tree before being written down. The result:
+
+| Fact surfaced by the legs | Already in base? |
+|---|---|
+| NC Session Law 2026-41 (model policy `2026-12-31`, local `2027-06-30`, training `2028-06-30`) | 🟢 6 files |
+| Idaho SB 1227 (framework approved Aug 2026) | 🟢 4 files |
+| New York A 9190 (classroom AI restricted to grade 9+) | 🟢 5 files |
+| California AB 1159 (student data not for model training) | 🟢 7 files |
+| OpenAI + Common Sense Media "Parents & Kids Safe AI Act" CA ballot initiative | 🟢 2 files |
+| EU Digital Omnibus — Reg. (EU) 2026/1744, high-risk education duties → `2027-12-02` | 🟢 9 files |
+| Council of the EU `14902/26` (29 Oct 2026), digital sovereignty in education | 🟢 5 files |
+| Vietnam Decision 33/2026/QD-TTg — education named high-risk, 18-month transition | 🟢 8 files |
+| Vietnam MOET Decision 2422 — 12 AI periods/class/year, grades 1–12 | 🟢 3 files |
+| Ipsos Education Monitor 2026 (JP 21→29%, AU 47→52%, KR 27→31%, ID 30→23%) | 🟢 5 files |
+| UNESCO Observatory on AI in Education for LAC, launched `2026-04-14` | 🟢 4 files |
+| UNESCO IESALC 87% use / 26% formal strategy; DEC LATAM 92% students / 79% faculty | 🟢 7, 6 files |
+| Universidad de los Andes — 716 regulatory instruments across 23 countries | 🟢 5 files |
+| PISA 2025 — 9 in 10 15-year-olds, 13 LAC countries | 🟢 4 files |
+| OECD 2026 Digital Education Outlook — purpose-built over general-purpose | 🟢 4 files |
+
+🔵 **One exception, and it is a live gap, not a new fact.** NTU Singapore granting every
+undergraduate full access to Gemini Enterprise / AI Studio / Vertex AI from **August 2026**
+appears in this repository **only under `archive/`** (`2026-11-12-p787-pre-rewrite`,
+`2026-11-18-pre-cleanup`). The live tree's `NTU` hits are a *different* NTU — the Taiwan and
+Singapore LMS-MCP rows (`che-ntucool-mcp`, `ntulearn-mcp`). 🔴 **A rewrite dropped a
+regional datapoint and the regional leg could not tell, because the leg only re-finds it.**
+Logged as `901-G1`: restore the NTU/Gemini-Enterprise datapoint to the live APAC section, or
+record explicitly that it was dropped on purpose. **Restored in `intel/market.md` this pass.**
+
+🟢 **What `901-F1` means for the brief.** The research sweep is now a *regression test* on
+this base, not a source of growth. Future passes should keep running it — a null yield is
+how you learn the base is current — but should not expect rows from it. **Growth now has to
+come from the repository channel**, which is where the rest of this pass went.
+
+### 🟢 `901-F2` An independent curated index says the vertical tier is **complete** — 13 of 13 real entries already held
+
+Rather than search again, this pass audited the base against **someone else's** list:
+[`ishandutta2007/Awesome-School-Management`](https://github.com/ishandutta2007/Awesome-School-Management)
+— 🟢 `MIT` (byte-read `main/LICENSE`, `1,068 B`, `sha256₁₂ 68c2844b7dc2`), `2★`, pushed
+`2026-09-09`. Small and barely starred, but it is a **third-party enumeration of exactly the
+category this base claims to cover**, which makes it a usable control.
+
+`lib/slug_extract.py` (p887's hardened extractor — not a fresh inline grep, per `P263`) over
+its README: **22 slugs**. Diffed against **6,494 distinct slugs** across **3,454 live files**
+(`archive/` and `scratchpad/` excluded — they are not the published base):
+
+🟢 **13 covered, and they are every genuine school-management entry on the list:**
+`moodle/moodle`, `openedx/edx-platform`, `instructure/canvas-lms`, `chamilo/chamilo-lms`,
+`frappe/education`, `frappe/erpnext`, `openeducat/openeducat_erp`, `GibbonEdu/core`,
+`francoisjacquet/rosariosis`, `projectfedena/fedena`, `Koha-Community/Koha`,
+`bigbluebutton/bigbluebutton`, `metabase/metabase`.
+
+🔵 **9 absent — and 7 of them are correctly absent.** `apache/superset`, `duckdb/duckdb`,
+`grafana/grafana`, `nextcloud/server`, `RocketChat/Rocket.Chat`, `mattermost/mattermost` are
+generic infrastructure the list names as adjacent tooling, not education systems;
+`ishandutta2007/Awesome-Awesome-Awesome` is a meta-list. 🔴 **The ninth is a real hole and
+it is carried in `repos/trending.md` this pass** — `jitsi/jitsi-meet`, Apache-2.0, `30,255★`,
+in a tier `verticals/solutions.md` explicitly enumerates.
+
+🟢 **This is the strongest coverage evidence this base has.** A null diff against your own
+searches proves little; a near-null diff against a stranger's index of the same category is
+a measurement. **1 real miss in 22** on the vertical tier.
+
+### 🔴 `901-F3` `p900`'s false-absence finding reproduces — on the single most important platform in this KB
+
+`p900` measured a **44% false-absence rate** in `search/repositories` as an existence test.
+`p901` hit it cold, without looking for it, while re-measuring headline rows:
+
+| Slug | `search/repositories` | `raw.githubusercontent.com` | Verdict |
+|---|---|---|---|
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 **`422` — "resources do not exist"** | 🟢 **`200`** (`master/README.rst`) | 🔴 **FALSE ABSENCE** |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 `513★` `ECL-2.0` pushed `2026-11-18` | — | 🟢 present |
+| `apereo/opencast` | 🔴 `422` | 🔴 `404` | 🟢 **true absence** — wrong owner; canonical is `opencast/opencast`, which is what `verticals/solutions.md` already carries |
+
+🔴 **Open edX is the AGPL anchor of the entire LMS tier**, and the channel this base uses to
+test existence says it does not exist. 🟢 The two-channel rule caught it, exactly as
+designed. 🔵 The `apereo/opencast` row is the control that keeps `422` meaningful: when both
+channels say absent, the slug really is wrong — and the base already had the right one.
+
+### 🔵 Star drift, re-measured this pass
+
+`DeepTutor` 60,186 → **60,405** `Apache-2.0`; `OpenMAIC` 43,859 → **43,894** `MIT`;
+`ai-engineering-hub` → **41,998** `MIT` (pushed `2026-11-01`); `os-taxonomy` → **7,725**
+🔴 **`ODbL-1.0`** — a database licence, not a software one, which is the correct grant for a
+curriculum graph and a trap for anyone who assumes MIT; `netless-io/flat` → **6,443** `MIT`;
+`moodle/moodle` → **7,621** `GPL-3.0` (the mirror, not the canonical tracker);
+`bigbluebutton` → **9,284** `LGPL-3.0`; `opencast/opencast` → **513** `ECL-2.0`;
+`OpenVidu/openvidu` → **2,146** `Apache-2.0`; `learningequality/kolibri` → **1,179** `MIT`;
+`openfun/marsha` → **152** `MIT`.
+
+---
+
 ## `2026-11-18` (p900) — **the base's own existence test has a 44% false-absence rate, and `p899`'s headline phantom is a repository rename that resolves today**
 
 **Channel:** `lib/slug_extract.py` offline over this repository's committed text, `gh api
