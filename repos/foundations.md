@@ -6,7 +6,41 @@ updated: 2026-11-18
 
 # Foundational repos — education
 
-**Pass `p886`, 2026-11-18** (third pass of the day). **`p886` ran `885-G1`'s two-channel test over all
+**Pass `p887`, 2026-11-18** (fourth pass of the day). **`p887` discharged `886-G1` over the 15 rows
+`p886` left open — `64,641` paths tree-enumerated, `0` failures — and this file took TWO corrections
+from it: one its OWN instruments had been carrying since `p314`, and one that had been hiding one
+file over from a row this file already had right.**
+
+- 🔴 **`apereo/phpCAS` (`:465`) was published single-family `Apache-2.0` and is CONJUNCTIVE.**
+  Apache-2.0 at `master/LICENSE` (**11,357 B**, `sha256₁₂ c71d239df917`) **and** a complete **New
+  BSD** body at `master/NOTICE` (**3,914 B**, `sha256₁₂ 2df146a253fa`), headed *"Requirements for
+  sources originally licensed under the New BSD License"*, © 2003-2007 **The ESUP-Portail
+  consortium**, no-endorsement clause naming JA-SIG, Inc. 🔵 **This file's own note at `:748` says a
+  single-family label on its sibling `java-cas-client` "would be wrong" — and the single-family label
+  sat 277 lines above it.** The two repositories differ only in which FILE holds the BSD half.
+- 🟢 **`jupyterhub/jupyterhub` (`:533`) corrected from bare `BSD` to `BSD-3-Clause`, and this base's
+  own instrument is what caught it.** `compose/code/p314-untitled-payload-arm/README.md:12` has
+  recorded `BSD-3-Clause` for this row since `p314`; the metadata channel returned `BSD-3-Clause`
+  independently this pass. 🔵 **`p314` also explains the under-specification rather than just fixing
+  it:** that payload is a complete, valid grant with **no title line and zero `BSD` tokens anywhere
+  in the file**, so any title-matching classifier can only reach the family by inference. This is
+  `886-G5`'s **one** finding out of `206` instrument claims.
+- 🔴 **`ox-it/wl-roster2` (`:116`) is DORMANT, measured rather than inferred.** `884-G3`'s channel
+  came back this pass (`search/commits`, `200` after two passes at `422`) and this row has **`0`
+  commits in 12 months** against `pushed_at 2016-06-03`. The shelf said *"zero stars and a
+  Sakai-10-era branch"*; it can now say zero commits.
+- 🟢 **`yetanalytics/lrsql` (`:295`) CONFIRMED by an independent channel.** This file published
+  *"67 commits in the last 12 months"*; `search/commits` returned **`67`**. 🔵 **Recorded because
+  this base gets this outcome least often and should say so when it does.** 🔴 **Its `NOTICE` is
+  19,985 B and names `21` distinct copyright holders** — the licence cell is `Apache-2.0` and
+  correct; the **notice obligation is of 21**.
+- 🟢 **Every other licence cell this file publishes for the 15 swept rows survived tree enumeration
+  intact**, including the two `LICENSE.TXT` rows (`openedx/XBlock` `:408`, `openedx/codejail`) that
+  `p885`'s root-only ladder reported as `NO-GRANT-FILE`. 🔵 **`arity_own = 1` on 14 of 15**; the one
+  exception is `deepseek-ai/deepseek-harness` (MIT root, BSD-3-Clause `native/system/`, Apache-2.0
+  `packages/experimental/subagent-oar/` — a genuine per-directory grant across 22,127 paths).
+
+**Previous pass (`p886`), retained:** **Pass `p886`, 2026-11-18** (third pass of the day). **`p886` ran `885-G1`'s two-channel test over all
 163 shelf rows. This file's cells survived it intact — and the two rows the gate called
 `NO-GRANT-FILE` are two rows this file already had right, which is the pass's real finding about the
 instrument rather than about the shelf.**
@@ -113,7 +147,7 @@ SRI-Lab-copyright-first MIT ×1.
 
 | Repo | ★ | Licence (byte-read) | Default branch | Role |
 |---|---:|---|---|---|
-| https://github.com/ox-it/wl-roster2 | 0 | **`ECL-2.0`** — `sakai-10.x/LICENSE`, **11,110 B**, `sha256₁₂ 6001bb8caa76` | **`sakai-10.x`** | **Oxford's Sakai rostering component.** `ECL-2.0` is the Apache-2.0-derived licence written *for* education consortia and is build-safe. 🔴 **Zero stars and a Sakai-10-era branch: this is a reference implementation of institutional rostering, not a dependency to pin.** Its value is that it shows how a real university wired roster sync — see `compose/patterns.md` **P26**. |
+| https://github.com/ox-it/wl-roster2 | 0 | **`ECL-2.0`** — `sakai-10.x/LICENSE`, **11,110 B**, `sha256₁₂ 6001bb8caa76` | **`sakai-10.x`** | **Oxford's Sakai rostering component.** `ECL-2.0` is the Apache-2.0-derived licence written *for* education consortia and is build-safe. 🔴 **Zero stars, a Sakai-10-era branch, and — measured first-hand at `p887`, the first pass in three with a working `search/commits` — `0` commits in the last 12 months against a `pushed_at` of **2016-06-03**. DORMANT, not merely quiet.** This is a reference implementation of institutional rostering, not a dependency to pin. Its value is that it shows how a real university wired roster sync — see `compose/patterns.md` **P26**. |
 
 🔴 **`885-G1`, found while discharging `884-G2`.** The thirteenth case,
 [`ox-it/OxfordIDN_Case-Studies`](https://github.com/ox-it/OxfordIDN_Case-Studies), is **not** a
@@ -462,7 +496,7 @@ repository's own licence file** over `raw.githubusercontent.com`
 |---|---|---:|---|---|---|
 | 🟢 https://github.com/deepseek-ai/deepseek-harness | 🟢 **MIT** — byte-read **`master/LICENSE`** (⚠️ `main/LICENSE` is `404`), 1,065 B, `sha256₁₂ ebb4f09972ae` | **282,965** | 2026-11-17 | 2026-08-13 | **DeepSeek Harness — "Everything is a Plugin."** An MIT agent runtime with a plugin and skill system, 35,072 forks, three months old. 🟢 **NEW in `p883`, and the highest-star row on this shelf.** It is here because **`ECNU/EduWork` proves the education path**: a university took DSH and shipped a teaching distribution on it under a permissive grant. **For a Globant engagement this is the substrate you can keep** — MIT runtime, your plugins, no copyleft reach, and an existing institutional reference implementation to point a buyer at. |
 | https://github.com/apereo/cas | **Apache-2.0** (`LICENSE`) | **11,402** | 2026-11-17 | 2011-09-09 | **Central Authentication Service — the SSO layer under a large share of the world's universities.** 3,954 forks. Protocol support for CAS, SAML2, OAuth2, OIDC, WS-Fed; MFA; delegated auth. 🔵 **The highest-star permissive education-infrastructure repository in this KB, and it was never carried.** |
-| https://github.com/apereo/phpCAS | **Apache-2.0** (`LICENSE`) | 802 | 2026-06-30 | — | The PHP client — i.e. how Moodle and other PHP estates attach to CAS. 🔴 Five months since last push. |
+| https://github.com/apereo/phpCAS | 🔵 **CONJUNCTIVE — Apache-2.0 *and* BSD-3-Clause** — **CORRECTED by `p887`.** Apache-2.0 at `master/LICENSE` **11,357 B** `sha256₁₂ c71d239df917` (the full stock text) **and** a complete **New BSD** body in `master/NOTICE` **3,914 B** `sha256₁₂ 2df146a253fa`, headed *"Requirements for sources originally licensed under the New BSD License"*, © 2003-2007 **The ESUP-Portail consortium**, with a no-endorsement clause naming JA-SIG, Inc. | 802 | 2026-06-30 | — | The PHP client — i.e. how Moodle and other PHP estates attach to CAS. 🔴 **Five months since last push, and `8` commits in the last 12 months** (measured `p887`, `search/commits`). 🔴 **Was published here as single-family `Apache-2.0` (`LICENSE`) — see the note below `:748`, which said a single-family label on its sibling "would be wrong" while this row carried one.** |
 | https://github.com/openedx/codejail | **Apache-2.0** (`LICENSE.txt`) | 477 | 2026-11-16 | 2013-04-26 | **Secure sandboxed execution of untrusted code.** The substrate any auto-grader or code-running tutor needs, usable with no Open edX dependency. |
 | https://github.com/openedx/XBlock | **Apache-2.0** (`LICENSE.TXT`) | 471 | 2026-11-16 | 2013-03-11 | **The learning-component framework.** Write a component once; it runs inside any Open edX install — **without your component inheriting AGPL**. |
 | https://github.com/openedx/xblock-sdk | **Apache-2.0** (`LICENSE.TXT`) | 69 | 2026-11-16 | — | Workbench and worked examples — develop and run an XBlock with no LMS present. |
@@ -530,7 +564,7 @@ This is the layer that gets a Globant build past institutional procurement.
 | https://github.com/LearningLocker/learninglocker | GPL-3.0 | `master` | **xAPI Learning Record Store.** 🔴 **SUPERSEDED by `p876` — do not start here.** 587 stars. `pushed_at` reports `2024-05-30`, but the **default branch's last commit is `2021-11-16` — 1,827 days**, and there are **0 commits in the last 12 months**. Copyleft *and* five years cold. Retained in this file only so that a later pass does not re-import it from a listicle. **Use `yetanalytics/lrsql` or `openfun/ralph` below.** |
 | https://github.com/openedx/openedx-aspects | Apache-2.0 | `main` | Open edX's learning-analytics stack (Aspects). Apache-2.0 and reusable even outside an Open edX deployment. |
 | https://github.com/jupyter/nbgrader | BSD | `main` | Assignment release, collection and autograding for Jupyter notebooks. The standard autograder in university CS and data-science courses. |
-| https://github.com/jupyterhub/jupyterhub | BSD | `main` | Multi-user notebook hosting — the substrate for every hands-on technical course delivered in a browser. |
+| https://github.com/jupyterhub/jupyterhub | **BSD-3-Clause** — 🟢 **CORRECTED by `p887`, and this base's own instrument is what caught it.** Was published as bare `BSD`; `compose/code/p314-untitled-payload-arm/README.md:12` has recorded `BSD-3-Clause` for this row since `p314`, and the metadata channel returned `BSD-3-Clause` independently this pass. 🔵 The under-specification has a cause worth keeping: p314 measured that this payload is a **complete, valid grant with no title line and zero `BSD` tokens anywhere in the file**, so a title-matching classifier can only ever reach the family by inference. | `main` | Multi-user notebook hosting — the substrate for every hands-on technical course delivered in a browser. **8,368 ★, pushed 2026-11-05**; measured `p887`. |
 | https://github.com/open-spaced-repetition/fsrs4anki | MIT | `main` | **FSRS** — the modern free-spaced-repetition scheduler. MIT-licensed, empirically validated memory model. If your product claims retention, this is the algorithm to use instead of inventing a review schedule. |
 
 ## Learning analytics & telemetry (xAPI) — new in `p876`
@@ -754,6 +788,26 @@ and a long tail is not that the base has been looking in the wrong place.
 > pass at this file classified it `BSD-family` on a first-match grep and would have published a
 > single wrong family;** the instrument now detects families cumulatively. A hash and a byte count
 > do not save you from a one-family assumption.
+>
+> 🔴 **`p887` ran a NEW instrument over this row and got it WRONG in exactly the way this note
+> already describes.** `compose/code/p887-grant-arity-map/` reused `p228-shelf-gate`'s
+> `classify()` — an earliest-title-wins classifier — and returned **`arity_own=1 BSD-3-Clause`**
+> for `java-cas-client`, because the Apache-2.0 half of this payload is a grant *by reference*
+> (a URL, no body) while the BSD half is a full text. 🟢 **The shelf was right and the new
+> instrument was wrong, on a row whose correct answer is written two lines above this one.**
+> 🔵 And a third channel agrees with neither: **GitHub's own licence detector returns
+> `NOASSERTION`** on this repository (metadata channel, `p887`) — which is the cheapest known
+> DETECTOR for this class, and the one reusable rule this pass buys:
+>
+> > 🟢 **A row whose metadata channel says `NOASSERTION` while its bytes channel returns a
+> > family is a CONJUNCTIVE-GRANT CANDIDATE.** `java-cas-client` is the only `NOASSERTION` row
+> > among the 15 swept at `p887`, and it is the only single-payload conjunctive grant among
+> > them. One API field, no clone.
+>
+> 🔴 **Its sibling `apereo/phpCAS` (`:465`) carried a single-family `Apache-2.0` label until
+> `p887` byte-read its `NOTICE`.** Same consortium, same no-endorsement clause, same two
+> families — the only difference is which FILE the BSD half sits in, and that difference was
+> enough to hide it for the entire life of this shelf.
 
 ## Document & media ingestion — the real bottleneck in education AI
 

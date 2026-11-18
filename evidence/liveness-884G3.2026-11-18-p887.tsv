@@ -1,0 +1,16 @@
+slug	spdx	stars	pushed_at	commits_12mo	search_commits_http	verdict
+HKUDS/DeepTutor	Apache-2.0	60106	2026-11-15	4115	200	LIVE
+Li-Evan/BloomTutor	MIT	313	2026-11-17	84	200	LIVE
+openedx/XBlock	Apache-2.0	471	2026-11-16	114	200	LIVE
+openedx/codejail	Apache-2.0	477	2026-11-16	57	200	LIVE
+oppia/oppia	Apache-2.0	6998	2026-11-18	690	200	LIVE
+oppia/oppia-android	Apache-2.0	422	2026-11-17	191	200	LIVE
+apereo/cas	Apache-2.0	11402	2026-11-17	5530	200	LIVE
+apereo/phpCAS	Apache-2.0	802	2026-06-30	8	200	NEAR-DORMANT
+apereo/java-cas-client	NOASSERTION	949	2026-11-16	170	200	LIVE
+DSpace/DSpace	BSD-3-Clause	1114	2026-11-13	2897	200	LIVE
+HumanSignal/label-studio	Apache-2.0	28724	2026-11-18	1752	200	LIVE
+OpenVidu/openvidu	Apache-2.0	2146	2026-11-17	694	200	LIVE
+yetanalytics/lrsql	Apache-2.0	144	2026-11-14	67	200	LIVE
+ox-it/wl-roster2	ECL-2.0	0	2016-06-03	0	200	DORMANT
+deepseek-ai/deepseek-harness	MIT	283069	2026-11-17	28026	200	LIVE

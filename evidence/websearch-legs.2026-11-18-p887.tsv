@@ -1,0 +1,9 @@
+leg	region	query	relevant	new_repos	note
+1	Global	top open source AI agents education 2026 github MIT	yes	0	All named agents already indexed; leg surfaced only general-purpose agents (OpenHands, SWE-agent, MetaGPT, CrewAI, hermes-agent) plus rasbt/LLMs-from-scratch
+2	Global	github trending education AI 2026	yes	0	HKUDS/DeepTutor, THU-MAIC/OpenMAIC, patchy631/ai-engineering-hub, withmarbleapp/os-taxonomy — all already indexed
+3	Global	open source platform education ERP CRM MIT Apache	yes	0	Apache OFBiz, Corteza, Krayin, iDURAR already indexed; no NEW permissive education vertical
+4	Global	AI education industry trends 2026	yes	0	Policy/adoption material only, no repositories
+5	North America	AI education North America 2026 adoption regulation players	yes	0	134 bills/31 states; NC SL 2026-41; NY A 9190; CA AB 1159; US DoE framework Mar 2026
+6	EMEA	AI education EMEA 2026 adoption regulation players	yes	0	AI Act Annex III high-risk; Digital Omnibus delay to 2027-12-02; UK DfE Jan 2026 standards
+7	APAC	AI education APAC 2026 adoption regulation players	yes	0	Korea AI Basic Act in force 2026-01-22; Vietnam AI law 2026-03-01 names education high-risk; TEQSA plans
+8	LATAM	AI education LATAM 2026 adoption regulation players	yes	0	UNESCO IESALC: 87% of 200 HEIs, 26% with a framework, 55% no AI budget

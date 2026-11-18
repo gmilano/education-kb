@@ -4,6 +4,97 @@ region: Global
 updated: 2026-11-18
 ---
 
+## 🟢 `2026-11-18` (`p887`) — **`886-G1` discharged over the 15 remaining rows: `64,641` paths tree-enumerated, `0` clone failures, `22` policy documents pinned. `886-G5`'s class measured at `1` of `206` instrument claims. `884-G3` unblocked after two passes and converged. And `886-G2` recurred against this pass's own new instrument.**
+
+🔵 **`886-G2(a)` COMPLIANCE RECORD, filed first because the gap requires it.** `make ladder-audit`
+was run **before a line of `p887`'s instruments was written**: **`919` ladders across `510`
+instruments**, of which **`37` are `TREE-ENUMERATED`**, `201` `SINGLE-SPELLING`, `167`
+`CASE-UNVARIED` ([`record`](../evidence/ladder-audit-886G2.2026-11-18-p887.tsv)).
+
+| | What `p887` did |
+|---|---|
+| **Reused, unmodified** | `p370-git-tree-payload/probe_tree.sh` — the TRANSPORT (blobless partial clone, depth 1, no checkout). `p370`'s own header already records why: *"raw cannot list a directory: every raw licence probe is a GUESS AT A FILENAME"*. |
+| **Reused, unmodified** | `p427-conjunctive-grant/conjunctive_grant.py::classify` for the AND/OR call (`886-G1` part b, 24 passing controls) and `p228-shelf-gate/classify_grant.py::classify` for family. |
+| **NOT reused, with the reason** | `p370`'s enumeration is `git ls-tree --name-only HEAD` — **root only**. `886-G1`'s test needs a path-keyed map, which a root listing cannot express: `sudosylabs/proctor`'s Apache-2.0 grant is at `packages/{cache,mail,vfs}/LICENSE`. `p887` added `-r` and changed nothing else. |
+| **No new ladder** | Selection is a **regex filter over names git reported**, never a list of names to probe. *A ladder can only refute the paths it tried; an enumeration has no paths to miss.* |
+
+🔴 **And it still reproduced a known defect.** The reused `p228` classifier is earliest-title-wins,
+and `repos/foundations.md`'s own note records that **`p880`'s first pass at `apereo/java-cas-client`
+classified it `BSD-family` on a first-match grep**. `p887` got `BSD-3-Clause`. **The correct answer
+was two lines below the row, in prose, in this repository.** 🔵 `886-G2(a)` asks which *instrument*
+could be reused. It does not ask **which shelf note already grades that instrument on that row** —
+and that is the gap `887-G1` reopens it as.
+
+### 🟢 The 15 rows, enumerated
+
+| Repo | paths | `arity_own` | Own families | `arity_all` | Policy docs | Commits 12mo |
+|---|---:|---:|---|---:|---:|---:|
+| `deepseek-ai/deepseek-harness` | **22,127** | 🔴 **3** | MIT `/` · BSD-3-Clause `native/system/` · Apache-2.0 `packages/experimental/subagent-oar/` | 3 | 3 | **28,026** |
+| `apereo/cas` | 13,200 | 1 | Apache-2.0 | 1 | 1 | 5,530 |
+| `oppia/oppia` | 7,401 | 1 | Apache-2.0 | 1 | 1 | 690 |
+| `HumanSignal/label-studio` | 5,986 | 1 | Apache-2.0 | 1 | 1 | 1,752 |
+| `DSpace/DSpace` | 4,839 | 1 | BSD-3-Clause | 1 | 1 | 2,897 |
+| `HKUDS/DeepTutor` | 4,672 | 1 | Apache-2.0 | **2** | 1 | 4,115 |
+| `oppia/oppia-android` | 3,208 | 1 | Apache-2.0 | 1 | 1 | 191 |
+| `OpenVidu/openvidu` | 1,244 | 1 | Apache-2.0 | **2** | 1 | 694 |
+| `Li-Evan/BloomTutor` | 578 | 1 | MIT | 1 | 1 | 84 |
+| `apereo/phpCAS` | 536 | 1 | Apache-2.0 | 1 | 1 | **8** |
+| `yetanalytics/lrsql` | 345 | 1 | Apache-2.0 | 1 | 1 | 67 |
+| `openedx/XBlock` | 193 | 1 | Apache-2.0 | 1 | 1 | 114 |
+| `apereo/java-cas-client` | 173 | 1 | 🔴 see note | 1 | **6** | 170 |
+| `ox-it/wl-roster2` | 76 | 1 | ECL-2.0 | 1 | 1 | 🔴 **0** |
+| `openedx/codejail` | 43 | 1 | Apache-2.0 | 1 | 1 | 57 |
+
+🟢 **`arity_own` vs `arity_all` is the distinction that makes this table safe to publish, and
+`p887`'s first run did not have it.** That run reported `6 / 15` rows at `arity > 1` and the number
+was meaningless: it counted a **vendored dependency's** grant as the repository's own.
+`HKUDS/DeepTutor` carries `web/vendor/thinking-orbs/LICENSE` (MIT, 1,070 B) and **is Apache-2.0**;
+`deepseek-ai/deepseek-harness` carries **fourteen** vendored MIT copies and **is MIT** at root;
+`OpenVidu/openvidu`'s second family is a bundled **font** licence under
+`openvidu-testapp/src/fonts/`. 🔴 **Publishing any of those as a two-family grant would be a wrong
+cell on a client-facing shelf.** `arity_own` is what a licence cell may be derived from; `arity_all`
+is the **notice-obligation surface**.
+
+🔴 **`yetanalytics/lrsql` is the clearest case for keeping both numbers.** `arity_own = 1`
+(Apache-2.0, correct on the shelf) — but its `NOTICE` is **19,985 B and names `21` distinct
+copyright holders**. The licence cell is right and the attribution obligation is **of 21**. `p427`'s
+`notice_obligation()` was built for exactly this and no shelf row had ever called it.
+
+### 🔴 The second defect `p887` found in its own instrument, before any cell was written
+
+`NOTICE` was in the grant filter and `is_payload` was tested **before** the policy check, so every
+`NOTICE` was handed to the family classifier. Measured:
+
+| Repo | `LICENSE` | `NOTICE` | First run said | Truth |
+|---|---|---|---|---|
+| `apereo/phpCAS` | Apache-2.0, 11,357 B | 3,914 B | `arity=2 Apache-2.0+BSD-3-Clause` | Apache-2.0 at root — **but see below, the NOTICE really does carry a second grant** |
+| `yetanalytics/lrsql` | Apache-2.0, 11,357 B | 19,985 B | `arity=2 Apache-2.0+BSD-3-Clause` | 🟢 **Apache-2.0. The NOTICE is third-party attribution for 21 holders.** |
+
+🔵 **An Apache-2.0 `NOTICE` exists to discharge §4(d) attribution for bundled code, so it is the one
+file in a tree GUARANTEED to quote licences the project does not grant under.** `886-G1` had already
+said so — a `NOTICE` is part (b) of its test, the policy document, never part (a). The ordering bug
+made it both. 🔴 **And then `phpCAS` turned out to be the exception that proves the rule matters:**
+its `NOTICE` is headed *"Requirements for sources originally licensed under the New BSD License"* and
+carries a full BSD-3-Clause body © 2003-2007 The ESUP-Portail consortium — **a real second grant, in
+the file a blanket exclusion would have skipped.** Read, not assumed.
+
+### 🟢 `884-G3` — the channel is back, and the bound converged
+
+`api.github.com/search/commits` answered **`200` on 15/15** after two consecutive passes at `422`
+([`record`](../evidence/channel-state.2026-11-18-p887.tsv)). Liveness on these rows is now a
+**measured 12-month commit count**, not `HEAD ≥ date`
+([`record`](../evidence/liveness-884G3.2026-11-18-p887.tsv)).
+
+- 🔴 **`ox-it/wl-roster2`: `0` commits in 12 months, `pushed_at 2016-06-03`.** DORMANT. `p885`
+  recovered this row as an `ECL-2.0` grant its ladder had missed, and the recovery was correct — but
+  the shelf said *"zero stars and a Sakai-10-era branch"* where it can now say **zero commits**.
+- 🔴 **`apereo/phpCAS`: `8`.** The shelf's *"five months since last push"* understates it.
+- 🟢 **`yetanalytics/lrsql`: `67` — exactly the figure `repos/foundations.md:295` already
+  published.** An independent channel confirming a shelf figure, which is the outcome this base
+  gets least often and should record when it does.
+
+---
+
 ## 🟢 `2026-11-18` (`p886`) — **`885-G1` run to completion over 163 rows: `144` AGREE. The gate and the shelves disagreed 8 times, the gate lost 7 — and the shelf's single loss was a GPL-2.0 grant published as "no licence file" that this repository's own `p275` module had already refuted**
 
 🔵 **`885-G1`'s acceptance test, met as written.** `p885` opened it RED, checked the five

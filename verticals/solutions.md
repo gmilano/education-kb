@@ -6,7 +6,32 @@ updated: 2026-11-18
 
 # Vertical platforms — education
 
-**Pass `p886`, 2026-11-18** (third pass of the day). **`p886` ran `885-G1`'s two-channel test over this
+**Pass `p887`, 2026-11-18** (fourth pass of the day). **This shelf took no licence correction this
+pass, and that is a measurement rather than an absence: all of its rows that carry a policy document
+were inside `886-G1`'s 19 and have now been tree-enumerated.**
+
+- 🟢 **`DSpace/DSpace` re-verified first-hand: `BSD-3-Clause`, `arity_own = 1`, `4,839` paths
+  enumerated, `2,897` commits in the last 12 months.** The `BSD` cell on this shelf is the specific
+  id, not the bare family — 🔵 which is the distinction `jupyterhub` got wrong on
+  `repos/foundations.md` and this row got right.
+- 🟢 **`OS4ED/openSIS-Classic` stays as `p886` corrected it** — **GPL-2.0, 17,286 B,
+  `sha256₁₂ 224ac3d403e3`, at `master/docs/License.txt`**. 🔵 `p887` built `886-G5`'s ledger to find
+  out how many MORE of these were hiding in this repository's 510 instruments. **The answer is
+  one, and it is not on this shelf** ([`record`](../evidence/instrument-ledger-886G5.2026-11-18-p887.tsv)).
+  🔴 **That is the first time this base has been able to put a CEILING on the propagation class `T13`
+  names, rather than a worked example of it.**
+- 🟡 **`OpenVidu/openvidu` (`:390`) keeps its `Apache-2.0` cell, and `p887` adds the reason a raw
+  tree sweep would have changed it and should not have.** The repository carries a second family —
+  **MIT, 4,394 B, under `openvidu-testapp/src/fonts/`** — which is a bundled **font** licence, not a
+  grant the project makes. `arity_own = 1`, `arity_all = 2`. 🔵 **A licence cell is derived from
+  `arity_own`; `arity_all` is the notice-obligation surface.**
+- 🔴 **The "no permissive proctoring supply" verdict does not move.** `sudosylabs/proctor` remains
+  the only candidate and remains AGPL-3.0 at root with Apache-2.0 only on `packages/{cache,mail,vfs}`
+  — i.e. the permissive part is still deliberately the part with no domain value, as `p886`
+  established. 🟢 `886-G4`'s adjudication of its `LICENSING.md` stands: the no-AGPL-in-`packages`
+  claim **HELD** (`0 / 65`), the SPDX-header claim **REFUTED** (`0 / 65`).
+
+**Previous pass (`p886`), retained:** **Pass `p886`, 2026-11-18** (third pass of the day). **`p886` ran `885-G1`'s two-channel test over this
 shelf and found that one of its rows is not the licence this file says it is — and then found that
 the permissive part of that row is deliberately the part with no domain value. The "no supply"
 verdict on proctoring does not weaken. It gets a mechanism.**

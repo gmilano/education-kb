@@ -1,10 +1,112 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-17
+updated: 2026-11-18
 ---
 
 # Globant AI Studios — Education KB
+
+## 🆕 `p887` · 2026-11-18
+
+🟢 **Four gaps discharged — `886-G1`, `886-G3`, `886-G5` and `884-G3`. And the pass's best finding is
+against its own new instrument.**
+
+🔴 **`886-G2` recurred, under literal compliance with its own acceptance test, on the file it was
+written about.** `p887` did everything `886-G2(a)` asks: ran `make ladder-audit` before writing a
+line (**919 ladders, 510 instruments, 37 `TREE-ENUMERATED`**), recorded its reuse, defined **no new
+path ladder**, and shipped a named known-good fixture set. It then reused `p228`'s
+earliest-title-wins classifier and returned **`BSD-3-Clause`** for `apereo/java-cas-client` — whose
+2,321-byte `LICENSE` grants under **Apache-2.0 AND BSD-3-Clause**, and whose correct answer sits in
+`repos/foundations.md` two lines below the row, together with a note that **`p880` made this exact
+error on this exact file**.
+
+> 🔵 **`886-G2` is not about ladders. A shelf note is an instrument's test oracle, and no acceptance
+> test anywhere in this base says to read it.** Registered as `887-G1`.
+
+🟢 **The rule that buys, and it costs one API field with no clone:**
+
+> **A row whose metadata channel returns `NOASSERTION` while its bytes channel returns a family is a
+> CONJUNCTIVE-GRANT CANDIDATE.** `java-cas-client` is the only `NOASSERTION` row of the 15 swept and
+> the only single-payload conjunctive grant among them.
+
+### What moved
+
+| | |
+|---|---|
+| **`886-G1`** 🟢 discharged | All 15 remaining rows tree-enumerated — **`64,641` paths, `0` clone failures, `22` policy documents** pinned by bytes + `sha256₁₂`. `arity_own > 1` on **`1/15`**. |
+| **`886-G5`** 🟢 discharged, **class = `1`** | `p886` recorded this class size as UNKNOWN. **`206` instrument claims → `24` AGREE, `1` DISAGREE, `181` slugs no shelf carries.** |
+| **`886-G3`** 🟢 discharged | The inline slug grep is now `compose/code/lib/slug_extract.py`, **64 controls**. |
+| **`884-G3`** 🟢 discharged | `search/commits` back to **`200` on 15/15** after two passes at `422`. Liveness is a measured 12-month commit count, not `HEAD ≥ date`. |
+| **`886-G2`** 🔴 recurred | → `887-G1`. |
+| 5 gaps 🟡 carried untouched | `885-G2`, `885-G3`, `884-G4` (sixth pass), `884-G5`, `884-G6`. |
+
+### Three shelf corrections, all byte-proven
+
+- 🔴 **`apereo/phpCAS` is CONJUNCTIVE** — Apache-2.0 (`LICENSE`, **11,357 B**, `c71d239df917`) **and**
+  a full **New BSD** body in `NOTICE` (**3,914 B**, `2df146a253fa`, © 2003-2007 The ESUP-Portail
+  consortium). It was published single-family `Apache-2.0` **277 lines above this base's own note
+  saying such a label on its sibling "would be wrong"**. The two repositories differ only in which
+  FILE holds the BSD half.
+- 🟢 **`jupyterhub/jupyterhub`: bare `BSD` → `BSD-3-Clause`** — `886-G5`'s one real finding. This
+  base's own `p314` instrument had the right answer since `p314`; the metadata channel confirmed it
+  independently.
+- 🔴 **`ox-it/wl-roster2` is DORMANT** — `0` commits in 12 months, `pushed_at 2016-06-03`. First
+  measurable now that `884-G3`'s channel is back.
+
+🟢 **And one confirmation, recorded because this base gets it least often:** `yetanalytics/lrsql`'s
+**`67` commits in 12 months** is exactly the figure `repos/foundations.md:295` already published.
+
+### `886-G5`'s ledger reported `70` findings first. `69` were false.
+
+🔴 **`886-G5`'s acceptance test says *"names an `owner/repo` AND a grant verdict"* and does not say
+what BINDS the two.** The binding is the whole instrument. Four defect classes, each now a control:
+
+1. **A markdown table row is a self-contained record** — a ±3-line window over `p441`'s four-row
+   table gave `openedx/XBlock` five families; its own row says `Apache-2.0` and is correct.
+2. **A shelf SNAPSHOT is not instrument knowledge** — `p119-carried-column-audit/current/`.
+3. **A family ENUMERATION is not a verdict** — a classifier's family table names eight in six lines.
+4. 🔵 **A CORRECTION TABLE publishes the refuted family beside the true one.** `openedx/edx-ora2`,
+   `openfun/ralph` and `portabilis/i-educar` were all this shape, and **the shelf was right on all
+   three.** An instrument that *records* a past error is indistinguishable, to a token scan, from one
+   that *asserts* it — and this base is full of the former by design.
+
+### Controls
+
+🟢 **`131` / `131` PASS, offline** — `45` (`p887-grant-arity-map`) + `22` (`p887-instrument-ledger`) +
+`64` (`lib/slug_extract`). 🔴 **Two failed first and caught real defects in `p887`'s own instruments
+before either touched a shelf**: a filter that accepted `src/license_checker.go` as a licence grant,
+and a loop that read every `NOTICE` as a grant payload (`phpCAS` and `lrsql` both came back
+`arity=2`; both are Apache-2.0 at root). 🔵 **Both are recorded in the instruments' own headers
+rather than quietly fixed.**
+
+🟢 **`gate-tables` (`p277`) 15/15 + census clean across 10 shelves; `gate-region-headings` (`p383`)
+11/11 + `0` findings on `intel/market.md`.** 🔴 `make hooks` could not be invoked in this session, so
+this is **not** a two-tree delta and does not discharge `865-G2` — the `19` red gates `p886` recorded
+were red before this pass and nothing here measured them.
+
+### The legs
+
+🔴 **`0` new repositories for the NINTH consecutive pass.** 🟢 **All four regional legs returned
+relevant material; no region nilled** — US state legislation (`134` bills / `31` states), the EU
+Digital Omnibus moving Annex III obligations to **2027-12-02**, Korea's AI Basic Act in force
+**2026-01-22** and Vietnam's naming education high-risk from **2026-03-01**, and UNESCO IESALC's
+`87%` adoption against `26%` governance across 19 LATAM countries. **Every fact already held.**
+
+🔵 **`887-G4` draws the conclusion: the legs have become a POLICY instrument, not a discovery one,
+and should be re-scoped rather than re-run.** Discovery needs a channel this base already holds and
+has not worked — the `181` instrument-known slugs, or `885-G3`'s `615`-row TIER-B bucket.
+
+### New this pass
+
+- `compose/code/p887-grant-arity-map/` — `886-G1`'s tree-enumerated grant map, `arity_own` vs
+  `arity_all`, 45 controls
+- `compose/code/p887-instrument-ledger/` — `886-G5`'s instrument-vs-shelf diff, 22 controls
+- `compose/code/lib/slug_extract.py` — `886-G3`'s tested helper, 64 controls
+- `compose/patterns.md` **P28** — the Apereo identity estate with the notice set it actually owes
+  (`2` families + `21` third-party holders)
+- `intel/trends.md` **`T26`** (a conjunctive grant in one file; `NOASSERTION` as its detector),
+  **`T27`** (a `NOTICE` is never a grant by default and must still be read), **`T28`** (the discovery
+  channel is saturated, the regional one is not)
 
 ## 🆕 `p880` · 2026-11-17
 

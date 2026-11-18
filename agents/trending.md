@@ -4,6 +4,113 @@ region: Global
 updated: 2026-11-18
 ---
 
+## 🔴 `2026-11-18` (`p887`) — **the eight prescribed legs nilled for a NINTH pass. So the pass went after the open gaps and found the finding against ITSELF: a new instrument, built in literal compliance with `886-G2`, reproduced on `apereo/java-cas-client` the exact error this base's own shelf note records `p880` making on that same row**
+
+🔵 **The eight legs, run global-then-regional as prescribed, with the held/new split measured against
+this KB's index rather than asserted.** **`0` new repositories**
+([`record`](../evidence/websearch-legs.2026-11-18-p887.tsv)).
+
+| Leg | Region | New repos | What it returned |
+|---|---|---:|---|
+| 1 | Global | **0** | `top open source AI agents education 2026 github MIT` — returned general-purpose agents only (`OpenHands`, `SWE-agent`, `MetaGPT`, `CrewAI`, `NousResearch/hermes-agent`) plus `rasbt/LLMs-from-scratch`. 🔵 **The leg's own sources say the education angle is thin**; that matches this KB's nine-pass finding rather than contradicting it. |
+| 2 | Global | **0** | `github trending education AI 2026` — `HKUDS/DeepTutor`, `THU-MAIC/OpenMAIC`, `patchy631/ai-engineering-hub`, `withmarbleapp/os-taxonomy`. All four already indexed. 🔴 Star figures from auto-generated trend blogs disagreed with each other by **>4,000** on DeepTutor; this KB's own `60,106` is first-hand. |
+| 3 | Global | **0** | `open source platform education ERP CRM MIT Apache` — Apache OFBiz, Corteza, Krayin, iDURAR. All indexed. **No NEW permissive education vertical surfaced.** |
+| 4 | Global | **0** | `AI education industry trends 2026` — policy and adoption material, no repositories. Fed `intel/trends.md`. |
+| 5 | **North America** | **0** | 🟢 **Relevant.** `134` AI-in-education bills across `31` states; NC Session Law 2026-41 (model policy by 2026-12-31, local policies 2027-06-30, teacher training 2028-06-30); NY A 9190 (grade 9+); CA AB 1159 (bars student data for model training); US DoE responsible-use framework Mar 2026 + K-12 guidance Apr 2026. |
+| 6 | **EMEA** | **0** | 🟢 **Relevant.** AI Act Annex III names admissions, grading, learning-path steering and exam-cheating detection as high-risk. 🔴 **Sources CONFLICT on the date and the newer ones win**: a 2026 Digital Omnibus moved stand-alone Annex III obligations from **2026-08-02 to 2027-12-02**. Article 4 AI-literacy duties in force since Feb 2025. UK DfE generative-AI product safety standards, Jan 2026. |
+| 7 | **APAC** | **0** | 🟢 **Relevant.** Korea AI Basic Act **in force 2026-01-22** (enforcement decrees still being finalised, guidance-first grace period through 2026). Vietnam AI law **in force 2026-03-01**, names education high-risk and requires pre-deployment registration in the National AI Database. Japan voluntary (AI Guidelines for Business v1.2, Mar 2026). Singapore Model AI Governance Framework for Agentic AI, Jan 2026. Australia: no AI statute, but **TEQSA requires every higher-education provider to file an institutional action plan on generative-AI risk**. |
+| 8 | **LATAM** | **0** | 🟢 **Relevant, and the strongest demand-side evidence of the four.** UNESCO IESALC over **200 institutions in 19 countries**: **87%** use AI in at least one area, **26%** have any formal framework, **55%** have no AI budget line. Digital Education Council LATAM 2026: **92%** of students, **79%** of faculty. Ceibal: **75%** of Uruguayan public-school teachers. Cetic.br: **65%** of Brazilian 9–17s; **53%** of school administrators use AI but only **22%** have school guidelines. Universidad de los Andes: **716** AI regulatory instruments across 23 countries, **>80%** since 2023. |
+
+🔴 **Nine passes, zero new repositories. The legs are not finding education agents because the
+public search surface for them is saturated** — and this pass can say what it IS good for: all four
+regional legs returned usable regulatory and adoption material, and none returned a repository. The
+legs have become a **policy** instrument, not a discovery one. `887-G4` registers that.
+
+### 🔴 The finding this pass actually bought, and it is against its own instrument
+
+🟢 **`886-G1` discharged as specified.** 15 remaining rows, `git clone --depth 1 --filter=blob:none
+--no-checkout` + `git ls-tree -r`, **`64,641` paths, `0` failures, `22` policy documents** pinned by
+byte count and `sha256₁₂` ([`record`](../evidence/arity-map-886G1.2026-11-18-p887.tsv)).
+
+🔴 **And the test, as `886-G1` wrote it, cannot express its own hardest case.** It asks for a map
+from **path prefix** to family. `apereo/java-cas-client` holds **two families in one 2,321-byte
+file**: an Apache-2.0 grant by reference (*"Apereo licenses this file to you under the Apache
+License, Version 2.0"* — a URL, no body) and, below a `====` rule, a complete **BSD-3-Clause** text
+headed *"License for Use"*, © 2007 JA-SIG, Inc. **One path, two grants.** The key must be
+`(path, byte span)`.
+
+🔴 **Three channels, three different wrong answers, on one file:**
+
+| Channel | Answer | Why it is wrong |
+|---|---|---|
+| A — metadata (`search/repositories`) | **`NOASSERTION`** | GitHub's own detector abstains rather than guess |
+| B — bytes, earliest-title-wins (`p228`) | `BSD-3-Clause` | the Apache half has no title line, only a URL |
+| `p427-conjunctive-grant` | `SINGLE`, **zero families** | `title_hits` found NO title at all in 2,321 B — the BSD body is **untitled** |
+
+🟢 **The shelf was right.** `repos/foundations.md` has published this row as **CONJUNCTIVE —
+Apache-2.0 *and* BSD-3-Clause** with the same byte count and the same `sha256₁₂` since `p880`, and
+its note says *"a single-family label on it would be wrong"* and *"`p880`'s own first pass at this
+file classified it `BSD-family` on a first-match grep"*. 🔴 **`p887` reused `p228`'s first-match
+classifier and reproduced that grep's answer exactly** — having run `make ladder-audit` first and
+recorded its reuse, which is all `886-G2(a)` asks for.
+
+🟢 **The detector this buys, stated so no later pass re-derives it.** **Metadata `NOASSERTION` +
+bytes returning a family = conjunctive-grant candidate.** One API field, no clone.
+`java-cas-client` is the only `NOASSERTION` row of the 15 and the only single-payload conjunctive
+grant among them.
+
+🔴 **Its sibling was carrying the wrong label.** `apereo/phpCAS` — same consortium, same
+no-endorsement clause, same two families — was published single-family `Apache-2.0` because its BSD
+half sits in **`NOTICE`** (3,914 B, `2df146a253fa`, © 2003-2007 The ESUP-Portail consortium, headed
+*"Requirements for sources originally licensed under the New BSD License"*) instead of in `LICENSE`.
+**Corrected this pass.** One file over, and it hid for the whole life of the shelf.
+
+### 🟢 `886-G5`'s class size: `1`, not unknown
+
+`compose/code/p887-instrument-ledger/` reads every `.py`/`.sh`/`.md` under `compose/code/`, extracts
+each `(slug, family)` an instrument asserts, and diffs it against the live shelf cell
+([`record`](../evidence/instrument-ledger-886G5.2026-11-18-p887.tsv)):
+
+```
+raw (slug, family) mentions   699
+  CLAIM        266      <- assertions about the world
+  CORRECTION    72      <- records of a PAST error: refuted value beside the true one
+  ENUMERATION  109      <- a candidate-family list, not a verdict
+  FIXTURE      208      <- an instrument's own test data
+  SNAPSHOT      44      <- a COPY of a shelf, kept for diffing
+distinct instrument CLAIMS    206
+AGREE                          24
+DISAGREE                        1   <- the whole class
+SLUG-NOT-ON-ANY-SHELF         181
+```
+
+🔴 **The first run reported `70` DISAGREE and `69` were false.** `886-G5`'s acceptance test says
+*"names an `owner/repo` AND a grant verdict"* and does not say **what binds the two**. The binding
+is the whole instrument. Four defects, each now a control:
+
+1. **A markdown table row is a self-contained record.** A ±3-line window over
+   `p441-tree-licence-enumeration/README.md`'s four-row table gave `openedx/XBlock` five families;
+   its own row says `Apache-2.0` and agrees with the shelf.
+2. **A shelf SNAPSHOT is not instrument knowledge.** `p119-carried-column-audit/current/*.current.md`
+   are copies of shelves, kept so that audit can diff them.
+3. **A family ENUMERATION is not a verdict.** A classifier's family table names eight in six lines.
+4. 🔵 **A CORRECTION TABLE publishes the refuted family beside the true one.** `openedx/edx-ora2`
+   (*"published 🟢 Apache-2.0 | 🔴 actually AGPL-3.0"*), `openfun/ralph` (*"was published
+   `Apache-2.0` … while its blob is `MIT`"*), `portabilis/i-educar` (*"🔴 `LGPL-3.0` · 18 092 B |
+   **GPL-2.0**"*). **All three: shelf right, ledger reading the refuted cell.** These scopes are
+   excluded rather than resolved by guessing which cell is the truth — `886-G4`'s rule.
+
+🟢 **The one survivor is real.** `jupyterhub/jupyterhub`: `p314-untitled-payload-arm/README.md:12`
+has recorded `BSD-3-Clause` since `p314`; `repos/foundations.md:533` published bare `BSD`; the
+metadata channel returned `BSD-3-Clause` independently this pass. **Corrected.** 🔵 And `p314`
+explains the under-specification: that payload is a complete, valid grant with **no title line and
+zero `BSD` tokens anywhere in the file**, so a title-matching classifier can only ever infer it.
+
+🔵 **`181` slugs an instrument knows that no shelf carries** is the number worth a later pass:
+it is the promotion backlog seen from the instrument side rather than the harvest side.
+
+---
+
 ## 🔴 `2026-11-18` (`p886`) — **the eight prescribed legs nilled for an EIGHTH pass, so the pass audited itself instead: the gate and the shelves disagreed 8 times, the gate lost 7, and the shelf's single loss was a GPL-2.0 grant published as absent that this repository had already refuted ~611 passes ago**
 
 🔵 **The eight legs, run global-then-regional as prescribed, with the held/new split measured against

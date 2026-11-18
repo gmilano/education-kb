@@ -1,0 +1,18 @@
+# `886-G1` scope note: `p886` completed 4 of 19 (EduWork, EduWork-ECNU, proctor, iiab).
+# These are the FIFTEEN that remained, taken verbatim from
+# evidence/licence-policy-docs.2026-11-18-p886.tsv.
+DSpace/DSpace
+HKUDS/DeepTutor
+HumanSignal/label-studio
+Li-Evan/BloomTutor
+OpenVidu/openvidu
+apereo/cas
+apereo/java-cas-client
+apereo/phpCAS
+deepseek-ai/deepseek-harness
+openedx/XBlock
+openedx/codejail
+oppia/oppia
+oppia/oppia-android
+ox-it/wl-roster2
+yetanalytics/lrsql

@@ -1,0 +1,6 @@
+channel	endpoint	http	state	note
+A-metadata	api.github.com/search/repositories	200	UP	15/15 rows resolved, licence+stars+pushed_at
+B-bytes	git clone --filter=blob:none + ls-tree -r	200	UP	15/15 cloned, 0 failures, 64,641 paths enumerated in total
+C-commits	api.github.com/search/commits	200	UP	884-G3 UNBLOCKED after two passes at 422; 15/15 returned a real 12-month count
+D-raw	raw.githubusercontent.com	200	UP	spot-checked; not relied on (cannot list a directory, per p370)
+E-nongithub	7 non-GitHub primary legal hosts	-	UNREACHABLE	884-G4 carried a sixth pass; T4 unresolved

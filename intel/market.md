@@ -6,7 +6,46 @@ updated: 2026-11-18
 
 # Market intelligence — education
 
-**Pass `p886`, 2026-11-18** (third pass of the day). **All four regional legs ran. `63` facts checked
+**Pass `p887`, 2026-11-18** (fourth pass of the day). **All four regional legs ran and all four
+returned relevant material. `0` new facts, `0` new repositories — for the NINTH consecutive pass. And
+`p887` draws the conclusion nine passes of this now support: the prescribed legs have stopped being a
+DISCOVERY instrument and have become a POLICY one.**
+
+🔵 **The leg-by-leg split, measured against this file rather than asserted**
+([`record`](../evidence/websearch-legs.2026-11-18-p887.tsv)):
+
+| Leg | Region | Relevant | New facts | New repos | Checked against this file |
+|---|---|---|---:|---:|---|
+| 5 | **North America** | 🟢 yes | **0** | **0** | `134` bills / `31` states; NC Session Law **2026-41**; NY **A 9190**; CA **AB 1159**; US DoE framework Mar 2026 — all four already held at `:446` |
+| 6 | **EMEA** | 🟢 yes | **0** | **0** | Annex III high-risk scope; **Digital Omnibus** moving stand-alone obligations to **2027-12-02**; Art. 4 literacy duties since Feb 2025; UK DfE Jan 2026 standards — all held at `:846` |
+| 7 | **APAC** | 🟢 yes | **0** | **0** | Korea **AI Basic Act** in force **2026-01-22**; **Vietnam** AI law in force **2026-03-01** naming education high-risk; Japan voluntary; Singapore agentic framework; **TEQSA** action plans — all held at `:635` |
+| 8 | **LATAM** | 🟢 yes | **0** | **0** | UNESCO **IESALC** `87%` / `26%` / `55%`; DEC LATAM `92%` / `79%`; Ceibal `75%`; Cetic.br `65%` and `53%` / `22%`; Universidad de los Andes **716** instruments — all held at `:520` |
+
+🟢 **So the regional spine of this file is CURRENT and is not drifting.** Four independent searches,
+run global-then-regional as prescribed, found nothing it does not already carry.
+
+🔴 **The conclusion worth acting on, and it is about method rather than market.** Nine consecutive
+passes of `0` new repositories, against four consecutive passes where every regional leg returned
+usable **regulatory and adoption** material, is not noise — it is a stable signal about what these
+eight queries can and cannot reach. **They cannot reach education-specific agent repositories,
+because the public search surface for those is saturated by aggregator blogs that re-rank the same
+general-purpose agents.** Leg 1 this pass is the clean demonstration: asked for *education* agents
+under MIT, it returned `OpenHands`, `SWE-agent`, `MetaGPT`, `CrewAI` and `hermes-agent`, and its own
+sources volunteered that the education angle was thin.
+
+🔵 **What they CAN reach is exactly what legs 5–8 returned.** `887-G4` registers the consequence:
+the discovery half needs a different channel (the `181` instrument-known slugs `886-G5`'s ledger
+surfaced are one, and the `615`-row TIER-B bucket `885-G3` still holds is another), while the
+regional legs should be kept and read as the policy instrument they have become.
+
+🔴 **Source quality, restated because this pass leaned on these legs for dates.** Two of the four
+regional legs returned **internally contradictory timelines** for the EU AI Act — one set of pages
+giving August 2026 for Annex III obligations, a later set giving 2 December 2027 after the Digital
+Omnibus. This file carries the later date, and the reason is recorded at `:846` rather than left to
+the reader. **A regulatory date taken from a vendor blog without a second source is the single
+highest-risk cell type on this shelf.**
+
+**Previous pass (`p886`), retained:** **Pass `p886`, 2026-11-18** (third pass of the day). **All four regional legs ran. `63` facts checked
 against this file, `63` already held, `0` new, `0` new repositories. This KB stays ahead of its
 secondary sources for the third consecutive pass — and `p886` states precisely what that does and
 does not license us to conclude.**

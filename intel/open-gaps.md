@@ -4,6 +4,142 @@ region: Global
 updated: 2026-11-18
 ---
 
+## 🆕 `p887` · 2026-11-18 — **`6` gaps. `886-G1`, `886-G3`, `886-G5` and `884-G3` all DISCHARGED — and `886-G2` RECURRED against this pass's own new instrument, in literal compliance with its acceptance test, on the same file it was written about. `886-G5`'s class size, recorded UNKNOWN by `p886`, is `1` of `206`.**
+
+🔵 **Discharged and closed this pass, with the measurement that did it:**
+
+| Gap | Verdict | What settled it |
+|---|---|---|
+| **`886-G1`** — a licence is a SET and both channels hold one value | 🟢 **DISCHARGED over the 15 remaining rows, and its test REFRAMED** | All 15 tree-enumerated: **`64,641` paths, `0` clone failures, `22` policy documents** pinned by bytes + `sha256₁₂`, grant map per row ([`record`](../evidence/arity-map-886G1.2026-11-18-p887.tsv)). **`arity_own > 1` on `1/15`** (`deepseek-harness`: MIT root / BSD-3-Clause `native/system/` / Apache-2.0 `packages/experimental/subagent-oar/`). 🔴 **But the map key is WRONG — see `887-G2`.** `45` controls: `compose/code/p887-grant-arity-map/` |
+| **`886-G3`** — the slug extractor produced 4 non-repositories | 🟢 **DISCHARGED as a tested helper** | `compose/code/lib/slug_extract.py`, **64 controls**. Rejects all four of `886-G3`'s strings by name, keeps all 22 live shelf rows it was tested against, and names its rejection reasons instead of discarding them — which is the only reason `p886`'s defect was visible at all. |
+| **`886-G5`** — a solved finding sat here ~611 passes; **class size UNKNOWN** | 🟢 **DISCHARGED, and the class is `1`** | `compose/code/p887-instrument-ledger/` over every `.py`/`.sh`/`.md` under `compose/code/`: **`206` distinct instrument claims → `24` AGREE, `1` DISAGREE, `181` slugs no shelf carries** ([`record`](../evidence/instrument-ledger-886G5.2026-11-18-p887.tsv)). The one finding (`jupyterhub/jupyterhub`, instrument `BSD-3-Clause` since `p314` vs shelf bare `BSD`) is **corrected**. `22` controls. |
+| **`884-G3`** — liveness bound over six hand-picked words; **BLOCKED** | 🟢 **DISCHARGED — channel restored and bound converged** | `search/commits` returned **`200` on 15/15** after two consecutive passes at `422` ([`record`](../evidence/channel-state.2026-11-18-p887.tsv)). Liveness is now a **measured 12-month commit count** ([`record`](../evidence/liveness-884G3.2026-11-18-p887.tsv)). 🔴 `ox-it/wl-roster2` = **`0`**, DORMANT. 🟢 `yetanalytics/lrsql` = **`67`**, confirming the shelf's own figure. |
+| **`886-G4`** — a policy document is not self-verifying | 🟢 **STANDS, and was applied twice this pass** | Its rule decided both of `p887`'s `NOTICE` calls: `lrsql`'s 19,985 B `NOTICE` is attribution for **21 holders** and NOT a grant; `phpCAS`'s 3,914 B `NOTICE` **IS** a second grant. Read, not assumed — which is why a blanket "skip NOTICE" fix was rejected. |
+| **`886-G2`** — a new instrument built without reading the gates | 🔴 **NOT DISCHARGED. RECURRED, against `p887`, on the same file** | Reopened as **`887-G1`**. |
+| **`885-G2`** · **`885-G3`** · **`884-G4`** · **`884-G5`** · **`884-G6`** | 🟡 **CARRIED UNTOUCHED** | `p887` ran no organisation sweep, adjudicated none of the `615` TIER-B rows, read no primary legal source (`884-G4` now **sixth** pass), ran no `search/users` affiliation check and sent no licence requests. **Stated so the silence is not read as progress.** |
+
+🔵 **The suite's standing RED, per `ACTION p850-D`, with the `865-G2` delta.** `make hooks` could not
+be invoked in this session (the harness denied the `make` target), so the gates `p887` touched were
+run **directly**, by name:
+
+```
+gate-tables              (p277) 15/15 controls PASS · census: 10 shelves, no row published as a header
+gate-region-headings     (p383) 11/11 controls PASS · intel/market.md: 0 findings, vocabulary intact
+make ladder-audit        (p283) ran: 919 ladders / 510 instruments / 37 TREE-ENUMERATED
+p887 own controls               131/131 PASS  (45 arity-map + 22 ledger + 64 slug_extract)
+```
+
+🔴 **Stated plainly: this is NOT a two-tree delta and does not discharge `865-G2`.** The `19` red
+gates `p886` recorded were red before this pass and nothing here measured them. 🟢 What can be said
+is narrower and still worth saying: **the two gates that exist to catch the defect classes `p887`'s
+own writing could introduce — a data row rendering as a header, and a region heading outside the
+closed vocabulary — were both run and both PASS.**
+
+### 🔴 `887-G1` — `886-G2` recurred under literal compliance, because a SHELF NOTE is an instrument's test oracle and no acceptance test says to read it
+
+🟢 **What `p887` did, which is exactly what `886-G2(a)` asks for.** Ran `make ladder-audit` before
+writing a line (**919 ladders, 510 instruments, 37 `TREE-ENUMERATED`** —
+[`record`](../evidence/ladder-audit-886G2.2026-11-18-p887.tsv)); recorded the reuse in the
+instrument's own header (`p370`'s transport verbatim, `p427`'s AND/OR classifier, `p228`'s family
+classifier); defined **no new path ladder** — selection is a regex filter over names `git ls-tree -r`
+reported, so there are no paths to miss; and shipped a named known-good fixture set per `886-G2(b)`.
+
+🔴 **And it still published the wrong family for `apereo/java-cas-client`.** It reused
+`p228-shelf-gate`'s `classify()`, which is **earliest-title-wins**, and returned `BSD-3-Clause` on a
+2,321-byte payload that grants under **Apache-2.0 AND BSD-3-Clause**. 🔴 **`repos/foundations.md`'s
+own note on that row records `p880` making this exact error — *"`p880`'s own first pass at this file
+classified it `BSD-family` on a first-match grep"* — two lines below the correct answer.**
+
+🔵 **So the gap is not "read the gates".** `886-G2(a)` asks which **instrument** could be reused. It
+does not ask **which shelf note already grades that instrument on that row** — and the answer lived
+in shelf prose, not in a gate, not in a ladder audit, and not in a fixture set. 🟢 **Score across two
+passes: instruments wrong `8`, shelves wrong `2`.** `p886` was 7–1; `p887` is 1–1 with the shelf's
+loss (`jupyterhub`'s bare `BSD`) being the cosmetic one and the instrument's loss being the
+substantive one.
+
+🟢 **Acceptance test.** Before an instrument may write a licence cell for slug `S`, the harness
+extracts the shelf PROSE within the row block for `S` and fails the write if that prose contains a
+family the instrument did not return, or a recorded prior misclassification of the classifier the
+instrument used. 🔵 **The ledger built this pass already walks both corpora and already has the
+slug→prose index** (`compose/code/p887-instrument-ledger/`); this is its reverse direction.
+🔵 **Budget:** one more pass over an index that is already built. **Close when `hooks` runs the
+reverse diff.**
+
+### 🔴 `887-G2` — `886-G1`'s map must be keyed on `(path, byte span)`, not on `path`
+
+🟢 **The measurement that settles it.** `886-G1`'s acceptance test asks for *"a grant map from path
+prefix to family"*. **`apereo/java-cas-client` holds two families in ONE file.** Its entire grant is
+`LICENSE`, **2,321 B**, `sha256₁₂ 6c21b465e3a0`: an Apache-2.0 grant by reference (a URL, no body)
+and, below a `====` rule, a complete BSD-3-Clause text headed *"License for Use"*, © 2007 JA-SIG,
+Inc. **One path. Two grants. A path-keyed map cannot hold it.**
+
+🔴 **Three channels, three different wrong answers** — and the third is the one that matters, because
+it is this base's own purpose-built conjunctive instrument:
+
+| Channel | Answer | Why it fails |
+|---|---|---|
+| metadata, `search/repositories` | **`NOASSERTION`** | GitHub's detector abstains |
+| bytes, `p228` earliest-title-wins | `BSD-3-Clause` | the Apache half has no title line |
+| **`p427-conjunctive-grant`** | **`SINGLE`, zero families** | `title_hits` found **no title at all** in 2,321 B |
+
+🟢 **The detector this buys, which is cheap and should be standing: metadata `NOASSERTION` + bytes
+returning a family = conjunctive-grant candidate.** One API field, no clone. `java-cas-client` is the
+only `NOASSERTION` row of the 15 and the only single-payload conjunctive grant among them.
+
+🟢 **Acceptance test.** Every row whose payload is multi-family carries a map keyed on
+`(path, start_byte, end_byte)` with each span's family and `sha256₁₂`, and the `NOASSERTION`
+detector is run over all 163 shelf rows and its candidates adjudicated. **Close when the 163-row
+sweep is recorded and every candidate has a span map.** 🔵 **Budget:** one metadata pass over 163
+rows (already proven at `200`), plus spans only for the candidates it returns.
+
+### 🔴 `887-G3` — `p427-conjunctive-grant` is blind to UNTITLED bodies, and the gate for that class already exists
+
+🟢 **Measured.** `p427`'s `title_hits()` returned **`[]`** on `java-cas-client`'s 2,321-byte payload,
+which contains a complete BSD-3-Clause text. It therefore returned `mode=SINGLE, families=[]` — an
+abstention presented as a determination. 🔴 **`gate-untitled-payload` (`p314`) exists for exactly
+this class** (*"the untitled-grant class, on MIT and BSD-3-Clause"*) and **PASSES**, and
+`p314-untitled-payload-arm/README.md:12` is the very note that caught `jupyterhub`'s bare `BSD` this
+pass — another untitled payload, *"no title line and zero `BSD` tokens anywhere in the file"*.
+🔵 **Two instruments, one class, no wiring between them.** This is `886-G2`'s shape inside the
+instrument estate rather than between an instrument and a shelf.
+
+🟢 **Acceptance test.** `p427.classify` consults `p314`'s untitled-payload detector before returning
+`families=[]`, and no payload over 500 B may return zero families without a recorded reason. **Close
+when `p427`'s suite carries `java-cas-client`'s payload as a fixture and returns `CONJUNCTIVE`.**
+
+### 🔴 `887-G4` — the discovery channel has been saturated for nine passes and the regional channel has not; the legs should be re-scoped rather than re-run
+
+🟢 **The asymmetry, measured across nine passes.** **`0` new repositories from the eight prescribed
+legs for the NINTH consecutive pass** ([`record`](../evidence/websearch-legs.2026-11-18-p887.tsv)),
+against **four** consecutive passes in which **all four** regional legs returned usable regulatory
+and adoption material. 🔵 Leg 1 is the clean demonstration: asked for education-specific MIT agents,
+it returned `OpenHands`, `SWE-agent`, `MetaGPT`, `CrewAI` and `NousResearch/hermes-agent`, and its
+own sources volunteered that the education angle was thin.
+
+🔴 **Nine passes is past the point where "run it again" is a plan.** The legs cannot reach
+education-specific agent repositories because the public surface for those is saturated by
+aggregator blogs re-ranking the same general-purpose agents.
+
+🟢 **Acceptance test.** A discovery channel that is NOT a WebSearch leg is run and its yield
+recorded against this KB's index. Two candidates this base already holds and has not worked: the
+**`181`** slugs `886-G5`'s ledger shows an instrument knows and no shelf carries (`887-G5`), and the
+**`615`**-row TIER-B bucket `885-G3` still holds. **Close when one of the two is swept and its yield
+published, new rows or zero.** 🔵 The regional legs are KEPT and re-scoped as the policy instrument
+they have become.
+
+### 🟡 `887-G5` — `181` slugs an instrument knows and no shelf carries, unadjudicated
+
+🟢 **Declared with its denominator, not as an impression.** `886-G5`'s ledger classified `206`
+instrument claims; `181` of them name a repository that appears on **no** live shelf with a family
+cell. 🔵 **This is the promotion backlog seen from the instrument side**, which is a different
+denominator from the harvest-side backlog `PROMO_RATCHET` tracks, and the two have never been
+reconciled. 🔴 **Unadjudicated: `p887` measured the count and read none of the 181.** Stated so the
+number is not mistaken for a finding.
+
+🟢 **Acceptance test.** Each of the 181 is graded TIER-A/TIER-B/not-education and, for TIER-A,
+permissive-and-live; the yield is published, new shelf rows or zero. **Close when the 181 are
+graded.** This is also one of `887-G4`'s two candidate channels.
+
 ## 🆕 `p886` · 2026-11-18 — **`5` gaps. `885-G1` DISCHARGED by execution over all 163 shelf rows: `144` AGREE, and the test itself found insufficient because both channels are single-valued. The gate and the shelves disagreed 8 times — the gate lost 7, the shelf lost 1, and the shelf's loss (`openSIS-Classic`, a GPL-2.0 grant published as absent) had been refuted INSIDE this repository for ~611 passes. `885-G2`/`885-G3` carried untouched; `884-G3` still BLOCKED by a `422`.**
 
 🔵 **The suite's standing RED, reported per `ACTION p850-D` — and for the first time with the DELTA

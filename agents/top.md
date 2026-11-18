@@ -6,7 +6,103 @@ updated: 2026-11-18
 
 # Top AI agents — education
 
-**Pass `p886`, 2026-11-18** (third pass of the day). **`p886` executed `885-G1`'s acceptance test over
+**Pass `p887`, 2026-11-18** (fourth pass of the day). **`p887` discharged the 15 rows `886-G1` left
+open, measured `886-G5`'s class size at `1`, and got one row WRONG that the shelf had right — on the
+very file this base's own note warned about.**
+
+- 🟢 **`886-G1` DISCHARGED over all 15 remaining rows.** Every row tree-enumerated with
+  `git clone --depth 1 --filter=blob:none --no-checkout` + `git ls-tree -r` — **`64,641` paths across
+  15 repositories, `0` clone failures**, a grant **map** from path to family with byte count and
+  `sha256₁₂` for each, and **`22` policy documents** read and pinned
+  ([`record`](../evidence/arity-map-886G1.2026-11-18-p887.tsv)). **`arity_own > 1` on `1 / 15`**:
+  `deepseek-ai/deepseek-harness` grants `MIT` at root, `BSD-3-Clause` under `native/system/`, and
+  `Apache-2.0` under `packages/experimental/subagent-oar/` — a real per-directory grant across
+  `22,127` paths.
+- 🔴 **`886-G1`'s own acceptance test is insufficient, and the proof is a row this shelf already had
+  right.** The test asks for *"a grant map from path prefix to family"*. **`apereo/java-cas-client`
+  carries two families in ONE 2,321-byte file** — Apache-2.0 by reference (a URL, no body) and a full
+  BSD-3-Clause text under the heading *"License for Use"*. A map keyed on PATH cannot express it,
+  because there is only one path. 🔵 **The key must be `(path, byte span)`, not `path`.**
+- 🔴 **`886-G2` happened again, to THIS pass, on THAT file — and literal compliance did not stop
+  it.** `p887` did what `886-G2(a)` asks: ran `make ladder-audit` first (**919 ladders, 510
+  instruments, 37 `TREE-ENUMERATED`**), recorded its reuse, and built no new path ladder. It then
+  reused `p228-shelf-gate`'s earliest-title-wins `classify()` and returned **`BSD-3-Clause`** for
+  `java-cas-client` — the exact error `repos/foundations.md` records `p880` making on the exact same
+  row, in prose, two lines below the correct answer. 🟢 **Shelf 15/15, new instrument 14/15.**
+  🔵 **So `886-G2` is not about ladders. It is that a shelf note is an instrument's test oracle and
+  no pass reads it before extending.** `886-G2(a)` asks which *instrument* could be reused; it does
+  not ask which *shelf note already grades that instrument on that row*. See `887-G1`.
+- 🟢 **The one reusable rule this buys, and it costs one API field.** **A row whose metadata channel
+  returns `NOASSERTION` while its bytes channel returns a family is a conjunctive-grant candidate.**
+  `java-cas-client` is the only `NOASSERTION` row among the 15 and the only single-payload
+  conjunctive grant among them. No clone required.
+- 🔴 **One NEW shelf correction, byte-proven, and it is the sibling of the row above.**
+  **`apereo/phpCAS` is CONJUNCTIVE too** — Apache-2.0 (`master/LICENSE`, **11,357 B**,
+  `sha256₁₂ c71d239df917`) **and** a complete **New BSD** body in `master/NOTICE` (**3,914 B**,
+  `sha256₁₂ 2df146a253fa`), © 2003-2007 **The ESUP-Portail consortium**, no-endorsement clause naming
+  JA-SIG. 🔴 **It was published at `repos/foundations.md:465` as single-family `Apache-2.0`, 277 lines
+  above this base's own note saying a single-family label on its sibling "would be wrong."** The only
+  difference between the two repositories is which FILE holds the BSD half.
+- 🟢 **`886-G5` MEASURED — the class is `1`, where `p886` recorded it as UNKNOWN.**
+  `compose/code/p887-instrument-ledger/` extracted **`206` distinct instrument claims** from every
+  `.py`/`.sh`/`.md` under `compose/code/` and diffed them against the live shelves: **`24` AGREE,
+  `1` DISAGREE, `181` slugs an instrument knows that no shelf carries**
+  ([`record`](../evidence/instrument-ledger-886G5.2026-11-18-p887.tsv)). The one disagreement is real:
+  **`jupyterhub/jupyterhub` — `p314-untitled-payload-arm/README.md:12` has said `BSD-3-Clause` since
+  `p314`, `repos/foundations.md:533` published bare `BSD`**, and the metadata channel returned
+  `BSD-3-Clause` independently this pass. Corrected.
+- 🔴 **That ledger's FIRST run reported `70` disagreements and `69` were false.** Four named defect
+  classes, each fixed with a control: a **markdown table row bleeding families into its neighbours**
+  (±3-line window over `p441`'s four-row table attributed five families to `openedx/XBlock`); a
+  **shelf SNAPSHOT** read as instrument knowledge (`p119-carried-column-audit/current/`); a
+  **family ENUMERATION** read as a verdict; and — the one worth keeping — a **CORRECTION TABLE**,
+  which publishes the refuted family beside the true one in adjacent cells of one row. `edx-ora2`,
+  `openfun/ralph` and `portabilis/i-educar` were all that shape, and the shelf was right on all
+  three. 🔵 **An instrument that RECORDS a past error is indistinguishable, to a token scan, from one
+  that ASSERTS it — and this base is full of the former by design.**
+- 🟢 **`884-G3` DISCHARGED — the blocked channel is back.** `api.github.com/search/commits` returned
+  **`200` on 15/15** after two consecutive passes at `422`
+  ([`record`](../evidence/channel-state.2026-11-18-p887.tsv)), so liveness on these rows is a
+  **measured 12-month commit count** rather than `HEAD ≥ date`
+  ([`record`](../evidence/liveness-884G3.2026-11-18-p887.tsv)). 🔴 **`ox-it/wl-roster2`: `0` commits
+  in 12 months against `pushed_at 2016-06-03` — DORMANT, not quiet**, corrected on
+  `repos/foundations.md`. 🟢 **`yetanalytics/lrsql`: `67` — the figure `repos/foundations.md:295`
+  already published, confirmed independently.** `apereo/phpCAS`: `8`.
+- 🟢 **`886-G3` DISCHARGED.** The inline slug grep is now `compose/code/lib/slug_extract.py`, a tested
+  helper with **64 controls**, rejecting `886-G3`'s four non-repositories by name and keeping all 22
+  live shelf rows it was tested against.
+- 🔴 **`0` new repositories from the eight prescribed WebSearch legs, for the NINTH consecutive
+  pass** ([`record`](../evidence/websearch-legs.2026-11-18-p887.tsv)). Every repository the legs
+  named — `OpenHands`, `SWE-agent`, `MetaGPT`, `CrewAI`, `hermes-agent`, `HKUDS/DeepTutor`,
+  `THU-MAIC/OpenMAIC`, `patchy631/ai-engineering-hub`, `withmarbleapp/os-taxonomy`, Apache OFBiz,
+  Corteza, Krayin, iDURAR — is already in this KB's index, measured against it rather than asserted.
+  🟢 **All four regional legs returned relevant material; no region nilled.**
+- 🟢 **`131` controls, all green, offline:** `45` (`p887-grant-arity-map`) + `22`
+  (`p887-instrument-ledger`) + `64` (`lib/slug_extract`). 🔴 **Two of them failed first and found real
+  defects in `p887`'s own instruments before either touched a shelf** — a filter that accepted
+  `src/license_checker.go` as a licence grant, and a loop that read every `NOTICE` as a grant
+  payload (`phpCAS` 3,914 B and `lrsql` 19,985 B both came back `arity=2`; both are Apache-2.0 at
+  root). 🔵 **Both are recorded in the instruments' own headers rather than quietly fixed.**
+
+🟢 **Re-measured first-hand this pass** (channel A `search/repositories`, channel B tree enumeration,
+channel C `search/commits` — all three UP):
+
+| Repo | ★ `p887` | Metadata (SPDX) | Bytes (tree-enumerated) | Commits 12mo | Verdict |
+|---|---:|---|---|---:|---|
+| **HKUDS/DeepTutor** | **60,106** | Apache-2.0 | Apache-2.0 `/` 11,408 B `cd2f54e1e506`; MIT `web/vendor/thinking-orbs/` 1,070 B | **4,115** | 🟢 AGREE. `arity_own=1` — the MIT copy is VENDORED. |
+| **apereo/java-cas-client** | **949** | 🔴 **`NOASSERTION`** | 🔴 **Apache-2.0 *and* BSD-3-Clause in ONE file** (`LICENSE`, 2,321 B, `6c21b465e3a0`) | 170 | 🔴 **`p887`'s instrument said `BSD-3-Clause`; the shelf said CONJUNCTIVE and was right.** |
+| **apereo/phpCAS** | **802** | Apache-2.0 | 🔴 Apache-2.0 `LICENSE` 11,357 B `c71d239df917` **+ BSD-3-Clause `NOTICE`** 3,914 B `2df146a253fa` | **8** | 🔴 **CORRECTED this pass. Was single-family `Apache-2.0`.** |
+| **deepseek-ai/deepseek-harness** | **283,069** | MIT | MIT `/` + BSD-3-Clause `native/system/` + Apache-2.0 `packages/experimental/subagent-oar/` | **28,026** | 🔴 **`arity_own=3`** — the only genuine per-directory grant of the 15. |
+| **jupyterhub/jupyterhub** | **8,368** | **BSD-3-Clause** | untitled body, zero `BSD` tokens (per `p314`) | — | 🔴 **Shelf said bare `BSD`. Corrected — `886-G5`'s one real finding.** |
+| **ox-it/wl-roster2** | **0** | ECL-2.0 | ECL-2.0, 11,110 B, `6001bb8caa76` @ `sakai-10.x` | 🔴 **0** | 🔴 **DORMANT** — `pushed_at 2016-06-03`, first measured this pass. |
+| **yetanalytics/lrsql** | **144** | Apache-2.0 | Apache-2.0 `/` 11,357 B; `NOTICE` 19,985 B lists **21 copyright holders** | **67** | 🟢 AGREE, and the shelf's own `67` confirmed. Notice obligation is of 21. |
+
+Method, the full 15-row map, the 131 controls and the leg-by-leg split:
+`compose/code/p887-grant-arity-map/`, `compose/code/p887-instrument-ledger/`,
+`compose/code/lib/slug_extract.py`, `agents/trending.md`, `repos/trending.md` and
+`intel/open-gaps.md`, this pass.
+
+**Previous pass (`p886`), retained:** **Pass `p886`, 2026-11-18** (third pass of the day). **`p886` executed `885-G1`'s acceptance test over
 all 163 shelf rows. The gate disagreed with the shelf 7 times and the shelf was right 7 times out of
 7 — and then three rows that the gate scored `AGREE` turned out to have grants it cannot express.**
 

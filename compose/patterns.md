@@ -6,7 +6,77 @@ updated: 2026-11-18
 
 # Compose patterns — education
 
-**Pass `p886`, 2026-11-18** (third pass of the day). **Twenty-seven recipes** — 🔵 derived recipes:
+**Pass `p887`, 2026-11-18** (fourth pass of the day). **Twenty-eight recipes** — 🔵 derived
+recipes: **28**. `p887` adds **P28**, which is `P27`'s recipe applied to the one real estate this
+pass measured end to end: **the Apereo identity stack a university inherits the moment it adopts CAS
+for single sign-on** — three repositories, two of them conjunctive grants, one of them dormant, and
+a notice set of two families plus 21 third-party holders.
+
+---
+
+## 🟢 **P28** — Apereo identity + rostering + LRS for an institutional estate, with the notice set it actually owes
+
+**When.** A university engagement that needs SSO across an existing estate (Moodle, a Sakai
+remnant, a JVM portal) plus learning-record capture for AI tutoring analytics. 🔵 **This is the
+single most common substrate ask in a higher-education engagement and it is the one whose licence
+surface this base has now measured first-hand, every repository, every byte.**
+
+**The components, all byte-read at `p887` with `arity_own` resolved by tree enumeration:**
+
+| Component | Repo | Grant, byte-read | ★ | Commits 12mo | Role in the recipe |
+|---|---|---|---:|---:|---|
+| SSO server | https://github.com/apereo/cas | **Apache-2.0** (`LICENSE`, 11,358 B, `cfc7749b96f6`) | **11,402** | **5,530** | The CAS/SAML/OIDC server. `arity_own = 1`. Very live. |
+| PHP client | https://github.com/apereo/phpCAS | 🔴 **Apache-2.0 *and* BSD-3-Clause** — `LICENSE` 11,357 B `c71d239df917` **+** `NOTICE` 3,914 B `2df146a253fa` © 2003-2007 ESUP-Portail | 802 | 🔴 **8** | How Moodle and PHP estates attach. 🔴 **Near-dormant — pin a commit, do not track `master`.** |
+| JVM client | https://github.com/apereo/java-cas-client | 🔴 **Apache-2.0 *and* BSD-3-Clause in ONE 2,321 B file** (`6c21b465e3a0`) | 949 | 170 | How a JVM portal attaches. 🔴 Metadata channel says **`NOASSERTION`**. |
+| Rostering reference | https://github.com/ox-it/wl-roster2 | **ECL-2.0** (`sakai-10.x/LICENSE`, 11,110 B, `6001bb8caa76`) | 0 | 🔴 **0** | 🔴 **DORMANT since 2016.** **Read it, do not depend on it** — it is Oxford's worked example of roster sync, and its value is the design, not the code. |
+| Learning records | https://github.com/yetanalytics/lrsql | **Apache-2.0** (`LICENSE`, 11,357 B) | 144 | 67 | xAPI/SQL learning-record store — where tutoring interactions land. 🔴 `NOTICE` 19,985 B, **21 holders**. |
+
+**Wiring.**
+
+1. **`apereo/cas` as the only identity authority.** Deploy it as the CAS/OIDC server; every
+   downstream service authenticates against it and none holds credentials. Apache-2.0, `arity_own = 1`
+   — no licence work needed beyond the standard `NOTICE`.
+2. **Attach the estate with the matching client, pinned.** PHP services (Moodle) via `phpCAS`; JVM
+   services via `java-cas-client`. 🔴 **Pin both to a commit SHA.** `phpCAS` has `8` commits in 12
+   months, so tracking `master` buys nothing and risks a silent change on a near-abandoned
+   dependency.
+3. **Take `wl-roster2` as a design document, not a dependency.** It shows how a real university
+   wired roster sync into a Sakai-era estate. `0` commits in 12 months and `pushed_at 2016-06-03`:
+   lift the approach, write the code against the current rostering API.
+4. **Land learning records in `lrsql`.** Point the tutoring layer's xAPI statements at it; it is the
+   join key between "what the AI did" and "what the student did", which is what every institutional
+   evaluation of an AI tutor eventually asks for.
+5. 🔴 **Produce the notice set BEFORE shipping, with `P27`'s procedure.** Run
+   `compose/code/p887-grant-arity-map/arity_map.py` over the five slugs, then
+   `p427-conjunctive-grant`'s `notice_obligation()` over each payload it returns.
+
+**The notice set this estate owes, resolved rather than assumed:**
+
+- **Apache-2.0** notice and `LICENSE` copy — for `cas`, `phpCAS`, `java-cas-client`, `lrsql`.
+- **BSD-3-Clause** notice with its **no-endorsement clause naming JA-SIG, Inc.** — for *both* CAS
+  clients. 🔴 **This is the obligation a single-family `Apache-2.0` label silently drops**, and this
+  base carried exactly that label on `phpCAS` until `p887` byte-read its `NOTICE`.
+- **ESUP-Portail consortium** copyright (© 2003-2007) — `phpCAS`.
+- **JA-SIG, Inc.** copyright (© 2007) — `java-cas-client`.
+- **ECL-2.0** notice — only if `wl-roster2` code is actually lifted rather than read.
+- 🔴 **`lrsql`'s 21 third-party holders**, from its 19,985 B `NOTICE`. The licence is one family; the
+  attribution is of 21.
+
+**Cost.** 🟢 Everything here is permissive and build-safe — there is no copyleft in this path, which
+is the point of choosing it over an AGPL-3.0 identity or LRS option. 🔵 **Budget the licence work as
+real work anyway**: two of the five repositories are conjunctive, one has a dormant upstream, and the
+notice set has **21 + 2** entries. That is a half-day of legal-adjacent effort that is invisible
+until someone asks for an attribution file.
+
+**Pitfall this recipe exists to prevent.** 🔴 **Reading the SPDX field.** It returns `Apache-2.0` for
+`phpCAS` (true but incomplete) and **`NOASSERTION`** for `java-cas-client` (an abstention that is
+easy to read as "unlicensed" and treat as all-rights-reserved). 🔵 **Both repositories are
+permissive. The field cannot say so.** `T26` has the detector; `886-G5` has the cautionary case of
+what happens when a base publishes an abstention as an absence.
+
+---
+
+**Previous pass (`p886`), retained:** **Pass `p886`, 2026-11-18** (third pass of the day). **Twenty-seven recipes** — 🔵 derived recipes:
 **27**. `p886` adds **P27**, and it is the step `P23` cannot perform and `P24` silently assumed:
 **resolving the ARITY of a grant, and producing the notice set a redistribution actually owes.**
 `p886` also amends **`P24`**, whose base repository turns out to carry two grants rather than one.

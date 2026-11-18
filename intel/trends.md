@@ -6,7 +6,67 @@ updated: 2026-11-18
 
 # Current trends — education AI
 
-**Pass `p886`, 2026-11-18** (third pass of the day). **The trend this pass establishes is about the
+**Pass `p887`, 2026-11-18** (fourth pass of the day). **`p886` established that a licence is a SET.
+`p887` ran that over 15 repositories and found the harder half: the SET can live inside a SINGLE
+FILE, where no path-keyed map and no metadata field can reach it — and the one channel that signals
+it is an ABSTENTION.**
+
+### 🔴 `T26` — a conjunctive grant can occupy ONE file, and `NOASSERTION` is its cheapest detector
+
+🟢 **Measured, not reasoned.** `apereo/java-cas-client`'s entire grant is one **2,321-byte**
+`LICENSE` (`sha256₁₂ 6c21b465e3a0`) holding **two** families: an Apache-2.0 grant **by reference**
+(*"Apereo licenses this file to you under the Apache License, Version 2.0"* — a URL, no body) and,
+below a `====` rule, a complete **BSD-3-Clause** text headed *"License for Use"*, © 2007 JA-SIG, Inc.
+
+🔴 **Three channels, three different wrong answers:**
+
+| Channel | Answer | Why |
+|---|---|---|
+| metadata — `search/repositories` | **`NOASSERTION`** | GitHub's detector abstains rather than guess |
+| bytes — `p228`, earliest title wins | `BSD-3-Clause` | the Apache half has no title line to match |
+| `p427-conjunctive-grant` | `SINGLE`, **zero families** | `title_hits` found NO title in 2,321 B — the BSD body is **untitled** |
+
+🟢 **The rule, and it costs one API field with no clone: a row whose metadata channel returns
+`NOASSERTION` while its bytes channel returns a family is a CONJUNCTIVE-GRANT CANDIDATE.**
+`java-cas-client` is the only `NOASSERTION` row among the 15 swept and the only single-payload
+conjunctive grant among them. 🔵 **`T25` said the arity of a grant may exceed one. `T26` says the
+arity may exceed one WITHOUT the tree knowing**, so `886-G1`'s map must be keyed on
+`(path, byte span)` and not on `path`.
+
+🔴 **The consequence for a client engagement, stated plainly.** A university that adopts Apereo CAS
+for SSO inherits `cas` (Apache-2.0), `java-cas-client` (**Apache-2.0 AND BSD-3-Clause**) and
+`phpCAS` (**Apache-2.0 AND BSD-3-Clause**). All permissive, all build-safe — **and the notice
+obligation is of two families with a no-endorsement clause naming JA-SIG, Inc. specifically.** A
+single-family label on any of the three understates what a redistribution owes. See
+`compose/patterns.md` **P28**.
+
+### 🟡 `T27` — a `NOTICE` is the one file in a tree guaranteed to quote licences the project does not grant under, and `p887` found the exception
+
+🟢 **The rule holds and is worth writing down.** An Apache-2.0 `NOTICE` exists to discharge §4(d)
+attribution for bundled code. `yetanalytics/lrsql`'s is **19,985 B and names `21` distinct copyright
+holders** while the repository is cleanly `Apache-2.0`: **licence cell right, notice obligation of
+21.** Reading that file as a grant — which `p887`'s own instrument did on its first run — produced
+`arity=2 Apache-2.0+BSD-3-Clause` on an Apache-2.0 project.
+
+🔴 **And the exception is why "just skip NOTICE" is the wrong fix.** `apereo/phpCAS`'s `NOTICE`
+(**3,914 B**, `sha256₁₂ 2df146a253fa`) is headed *"Requirements for sources originally licensed under
+the New BSD License"* and carries a full BSD-3-Clause body © 2003-2007 **The ESUP-Portail
+consortium**. 🟢 **That is a real second grant, in the file a blanket exclusion would have skipped.**
+🔵 **So the rule is: a `NOTICE` is never a grant BY DEFAULT and must still be READ** — which is
+`886-G4`'s rule (*a policy document must be read and must not be believed*) applied one level down.
+
+### 🔴 `T28` — the discovery channel is saturated and the regional channel is not; nine passes now say so
+
+🟢 **`0` new repositories from the eight prescribed legs for the NINTH consecutive pass**, against
+**four** consecutive passes in which all four regional legs returned usable regulatory and adoption
+material. 🔵 **That asymmetry is stable enough to act on: the legs have become a POLICY instrument,
+not a discovery one.** Leg 1 is the demonstration — asked for education-specific MIT agents, it
+returned `OpenHands`, `SWE-agent`, `MetaGPT`, `CrewAI`, `hermes-agent`, and its own sources
+volunteered that the education angle was thin. 🔴 **Discovery needs a different channel**, and this
+base already holds two candidates it has not worked: the **`181`** slugs `886-G5`'s ledger shows an
+instrument knows and no shelf carries, and the **`615`**-row TIER-B bucket `885-G3` still holds.
+
+**Previous pass (`p886`), retained:** **Pass `p886`, 2026-11-18** (third pass of the day). **The trend this pass establishes is about the
 shape of open-source grants in education, and it is the first one this KB has found by auditing
 itself rather than by searching: a licence is not a value, it is a SET, and every instrument here —
 and GitHub's own metadata field — is built to hold exactly one.**
