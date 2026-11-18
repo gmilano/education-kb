@@ -4,6 +4,103 @@ region: Global
 updated: 2026-11-18
 ---
 
+## `2026-11-18` (p904) — **Brazil's national curriculum ships as verified open data with a DOI, npm/PyPI packages, an MCP server and a hallucination benchmark — four repos, up to 26 ★, logged 100+ times in this file and never shelved.**
+
+**Channel:** Spanish- and Portuguese-language `gh api search/repositories` (26 queries over two
+sweeps), with LATAM national-examination names (`ENEM`, `vestibular`, `simulado ENEM`,
+`Saber 11 ICFES`, `PAES`, `EXANI`) and the Brazilian national curriculum acronym (`BNCC`) used as
+the probe — the `p903` exam-name method applied to a channel no pass had run. All licences
+**byte-read** from `raw.githubusercontent.com`. Network posture unchanged from `p903`: `raw` `200`,
+`gh api search/*` live, every non-GitHub host refused at the egress proxy. The agent-side findings,
+the licence-gate change and the search-leg null yield are in `agents/trending.md` `p904`.
+
+### 🟢 The `bncc-dev` cluster — foundational, permissive, and newly promoted to `repos/foundations.md`
+
+| Repo | ★ | Forks | SPDX field | Licence, byte-read | Pushed | Size |
+|---|---|---|---|---|---|---|
+| https://github.com/bncc-dev/bncc-dados | **26** | 6 | `MIT` | 🔴 **MIT root (1,092 B) + CC BY 4.0 at `dados/LICENSE.md` (1,583 B)** | 2026-10-15 | 14,532 KB |
+| https://github.com/eumakerdev/bncc_api | **17** | 2 | `MIT` | **MIT** (1,081 B) | 2026-11-16 | 4,217 KB |
+| https://github.com/dfdb76/bncc-mcp | **14** | 3 | 🔴 `NOASSERTION` | 🟢 **MIT** (1,218 B) | 2026-07-24 | 356 KB |
+| https://github.com/bncc-dev/bncc-benchmark | **12** | 1 | 🔴 `NOASSERTION` | 🟢 **MIT code + CC BY 4.0 data** | 2026-09-19 | 47,671 KB |
+| https://github.com/bncc-dev/bncc-pacotes | **10** | 2 | 🔴 `NOASSERTION` | 🟢 **MIT code + CC BY 4.0 data + mark reserved** | 2026-10-15 | 9,263 KB |
+
+`org:bncc-dev` resolves to **4 repositories** (the three above plus a `.github` profile repo at
+3 ★). The org was created **2026-07-09** and every repository in it has been pushed within the last
+five weeks.
+
+**What makes `bncc-dados` foundational rather than merely useful:** 1,721 learning objectives
+(1,580 basic-education + 141 from the Computing supplement, Parecer CNE/CEB 2/2022) in JSON with
+SQLite/SQL/CSV derivatives; **per-record provenance** (`fonte` plus `localizador_pdf`, the page of
+the official document where the text was checked); **character-by-character verification** against
+the homologated MEC PDF, claimed at 1,580/1,580 and 141/141, with a reproducible `pipeline/` and CI
+that fails any change that breaks it; JSON Schema (draft 2020-12); documented interpretation
+decisions in `DECISOES.md`; an archived release with **DOI `10.5281/zenodo.21625233`**; and an
+**`llms.txt`** agent data contract instructing consumers to use official codes as keys and never to
+invent codes or skill texts. 🔵 **A studio can hand this to a client's procurement team as-is**;
+that is a different class of artefact from the content corpora this file usually records.
+
+**Consumption paths, all three verified to exist:** the npm/PyPI packages (`bncc-pacotes`, data
+embedded, works offline), a hosted MCP endpoint at `mcp.bncc.dev` on Cloudflare, and the same MCP
+server runnable locally via `npx -y @bncc/mcp`. `dfdb76/bncc-mcp` is an **independent** second MCP
+server over the same curriculum, maintained separately and **MIT on a byte-read** despite its
+`NOASSERTION` SPDX field — the same two-maintainer, read-path-split shape this KB recorded for
+Moodle's community MCP servers in `intel/trends.md` **T13**, arriving now on a *curriculum* instead
+of an LMS.
+
+### 🔴 The licence gate this cluster broke, and the fix
+
+`bncc-dados` reports SPDX `MIT` and byte-reads `MIT` at its root — **and the dataset in `dados/` is
+CC BY 4.0**, with an attribution requirement, licensed in a file this base's 12-path root probe
+never looks at. The three `NOASSERTION` rows are the same failure from the other side: their root
+`LICENSE` is a **Portuguese-language index to two other licence files**, which GitHub's detector
+cannot classify. New gate **`904-G1`** — *when the payload is data or content, probe the payload
+directory (`dados/`, `data/`, `itens/`, `resultados/`, `content/`) and the split-licence index names
+(`LICENSE-DADOS.md`, `LICENSE-CODIGO.md`) before recording any SPDX value* — is written up in
+`agents/trending.md` `904-F4` and added to the `compose/patterns.md` `G1` pre-flight gate.
+
+`bncc-pacotes` adds a **third axis**: *"Nome e identidade visual — não licenciados."* Code MIT, data
+CC BY 4.0, **name and visual identity withheld**, with the npm tarball and PyPI wheel each carrying
+MIT code and CC BY data in the same artefact. New trend **T27**.
+
+### 🟢 Other LATAM-origin repositories promoted or recorded this pass
+
+| Repo | ★ | Licence (byte-read) | Pushed | What it is | Where it went |
+|---|---|---|---|---|---|
+| https://github.com/migueldsants/OpENEM | 9 | **AGPL-3.0** (34,523 B) | 2026-11-13 | Open ENEM prep platform: question bank, mock exams, study tools (Brazil) | `verticals/solutions.md` |
+| https://github.com/matheussilvano/mooose | 5 | **Apache-2.0** (11,358 B) | 2026-11-17 | ENEM essay grader, bring-your-own-model, LangGraph; 18 open issues (Brazil) | `agents/top.md` |
+| https://github.com/CREARED-EDU-CO/GenPrompt-Pre-ICFES-11 | 4 | **AGPL-3.0** (34,523 B) | 2026-09-19 | Saber 11 / ICFES prompt generator (Colombia) | `agents/top.md` |
+| https://github.com/UnitedOpen-Source/microHelium | 4 | **AGPL-3.0** (`master`, 34,523 B) | 2026-11-13 | Laravel+Vue online judge and ICPC-style contest system, practice mode, teaching languages; created 2017, 24 open issues | `verticals/solutions.md` |
+| https://github.com/migueldsants/AI-Skill-Corretor-Redacao-ENEM | 3 | **MIT** (1,082 B) | 2026-09-07 | Essay grading published as an agent **skill** (Brazil) | `agents/top.md` |
+| https://github.com/suellenferraz/Projeto-GabirIA | 3 | **MIT** (`LICENSE.md`, 1,085 B) | 2025-05-24 | ENEM study assistant; 🟡 README `404` on three paths (Brazil) | `agents/top.md` |
+| https://github.com/HuemulSolutions/Enola-AI | 1 | **BSD-3-Clause** (1,503 B) | 2024-12-31 | Spanish-language GenAI validation and monitoring platform (Chile) 🟡 **dormant ~2 years** | `repos/foundations.md` |
+| https://github.com/jmatias2411/Taller-AgenteIA | 8 | **MIT** (1,077 B) | 2025-07-05 | Spanish-language workshop teaching local agent construction — 11 KB, a *teaching artefact* | recorded only |
+
+### 🔴 Recorded and **not** promoted — six LATAM repositories with no licence on any of 12 paths
+
+`namerico/antigravity-education-kit` (**6 ★**, a modular Portuguese-language education agent
+framework — tutors, content creators, assessors — and the most interesting unlicensed find of the
+pass), `jmgrd98/simulei-enem` (6 ★), `xoubinha/tutor.ia` (6 ★, Spain → EMEA),
+`Raullize/AprovaAI` (3 ★), `Luan-zanardo/StudyMind` (3 ★, README also `404`),
+`LuisangelSS/MentorIA-` (3 ★), `ViniciusOliver13/Gerenciamento-Transporte-Escolar` (3 ★, municipal
+school transport for Brazilian *secretarias de educação*).
+
+🔵 **The ratio is the finding.** In the Portuguese-language channel, the *licensed* repositories are
+the ones built by organisations (Profy, CREARED-EDU-CO, UnitedOpen-Source) or by maintainers who
+ship releases; the unlicensed ones are individual builds. That is the same split `intel/trends.md`
+**T23** records globally — a third of education's permissive supply carries no readable grant —
+holding at country level in a channel measured for the first time.
+
+### What `p904` did not find on the repository side
+
+- **No Mexico-origin education repository in any of 26 queries**; `EXANI examen` returned a **0 ★
+  ceiling**. Largest remaining supply hole in this file.
+- **No `bncc-dev` analogue for any other national curriculum**: `currículo nacional dados abertos`
+  returned nothing at or above 3 ★ in either language.
+- **No Argentine, Peruvian or Central American origin repository.**
+- **No new foundational repository from the four generic English legs** — third consecutive pass;
+  all three candidates they produced (`SirhanMacx/Claw-ED`, `geekjourneyx/interactive-learning`,
+  `TapXWorld/ChinaTextbook`) were already in the live tree.
+
 ## `2026-11-18` (p903) — **The non-English tier: four permissive, maintained education corpora with up to 2,432 ★, none of them anywhere in the live tree — and the national-curriculum corpus that is 28 MB of content with no grant at all.**
 
 **Channel:** Arabic, Persian, Hebrew and Turkish `gh api search/repositories` — the leg

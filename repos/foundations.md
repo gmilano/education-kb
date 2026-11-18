@@ -293,13 +293,56 @@ national curriculum, 28 MB) has none either. A foundation is something a client 
 neither can be vendored or shipped. Both are published as findings in `repos/trending.md`
 `903-R1`/`903-R2`, which is where unusable-but-real belongs.
 
-**113 foundational repos, all verified** (**109 through `p900`; `jitsi/jitsi-meet` added in `p901`; three in-language corpora added in `p903`**), counted programmatically across the fifteen sections
+**118 foundational repos, all verified** (**109 through `p900`; `jitsi/jitsi-meet` added in `p901`; three in-language corpora added in `p903`; five added in `p904`** — the four-repository Brazilian national-curriculum cluster plus `Enola-AI`, every one of which had been logged in this KB's trending history between 12 and 40 times without ever being shelved), counted programmatically across the fifteen sections
 of this file rather than asserted — the previous standing figure of "47" was stale and nobody
 had recounted it. **34 of the 109 were restored in `p896`** from
 `archive/2026-11-18-pre-cleanup/repos-foundations.md`, after a shelf-vs-history diff showed they
 had been carried on this shelf, deleted by the 2026-11-18 cleanup rewrite, and left unrecorded in
 that pass's own list of removals. Every restored row was re-measured today on both channels;
 **none of them 404s.** Raw diff: `evidence/shelf-vs-history-diff.2026-11-18-p896.tsv`.
+
+## National-curriculum data as an agent substrate — added `p904`
+
+The substrate a curriculum-aligned product stands on, and the first cluster in this file that a
+studio can hand to a client's procurement team unchanged. All five rows came from the Spanish- and
+Portuguese-language `gh api` leg that no pass had run before `p904`; **all five had been logged in
+`agents/trending.md` and `repos/trending.md` between 12 and 40 times and none had ever been given a
+row on any shelf.** Licences byte-read, including **inside the data directories**, which is where
+the grant for the actual asset turned out to live.
+
+| Repo | ★ | Licence (byte-read) | Role |
+|---|---|---|---|
+| https://github.com/bncc-dev/bncc-dados | **26** | 🔴 **MIT** (`main/LICENSE`, 1,092 B) for `pipeline/` **and CC BY 4.0** (`main/dados/LICENSE.md`, 1,583 B) for the data | **The anchor.** Brazil's Base Nacional Comum Curricular as verified structured data: **1,721 learning objectives** — 1,580 across the three stages of basic education plus **141 from the Computing supplement** (Parecer CNE/CEB 2/2022) — in JSON, with SQLite, SQL-dump and CSV derivatives. **Per-record provenance** (`fonte` and `localizador_pdf`, the page of the official document where each text was checked), **character-by-character verification** against the homologated MEC PDF (claimed 1,580/1,580 and 141/141), a completeness proof by code sweep, a reproducible `pipeline/` with CI that fails any change breaking it, JSON Schema draft 2020-12, interpretation decisions documented in `DECISOES.md`, and an archived release carrying **DOI `10.5281/zenodo.21625233`**. Ships **`llms.txt`** with an explicit agent data contract: use official codes as keys, **never invent codes or skill texts**, cite the source on each record. 🔵 Rights held by **Profy Tecnologias Educacionais Ltda** (Brasília); the CC BY grant covers the compilation and curation, because the BNCC's normative texts are official state acts and **not copyrightable** under art. 8º, IV of Lei 9.610/1998 — a licence analysis a studio can reuse verbatim for another country. |
+| https://github.com/bncc-dev/bncc-pacotes | **10** | 🔴 **MIT** code + **CC BY 4.0** embedded data + **name and visual identity not licensed** (`main/LICENSE`, 1,299 B) | The dataset consumable in one line: **npm and PyPI packages with the data embedded (works offline)**, plus an MCP worker. The hosted endpoint is `mcp.bncc.dev` on Cloudflare and the same server runs locally via `npx -y @bncc/mcp`, so **no dependency on the maintainer's infrastructure is required**. Data is synced from a pinned `bncc-dados` commit with `data-version`, source commit and SHA-256 checksums recorded per package. 🔴 **Three licence axes in one repository, and the npm tarball and PyPI wheel each carry MIT code and CC BY data in the same artefact** — `intel/trends.md` **T27**. |
+| https://github.com/eumakerdev/bncc_api | **17** | **MIT** (`main/LICENSE`, 1,081 B) | An **independent** REST API over the same curriculum — 1,700+ objectives, semantic search that returns official codes as citations. Separate maintainer (Fábio Santana / EuMaker), pushed **2026-11-16**. 🔵 Two independent consumption tiers over one national curriculum is what makes this a substrate rather than a project: if either maintainer stops, the other path still works. |
+| https://github.com/bncc-dev/bncc-benchmark | **12** | 🔴 **MIT** (`harness/`, `test/`) + **CC BY 4.0** (items, results, methodology) | **The acceptance test.** An open LLM-hallucination benchmark over the national curriculum: round `oficial-seca-2026-09`, release `v0.3.0`, **19 models × 900 responses with all 17,100 raw responses published**. Faithful reproduction of official objective text runs **88% → 3%** across models; acceptance of codes verified not to exist runs **0% → 42%**. 🔵 **The harness is MIT and designed to be re-run** — which is what makes it usable as a client-facing gate rather than a citation (`compose/patterns.md` **P23**). 🟡 **Vendor benchmark**: published by the same organisation that maintains the dataset and the hosted MCP endpoint whose grounding it reports as fixing the problem. Raw data and methodology are published, so re-run it rather than cite it. 🟡 Its repository *description* still says "15.300 respostas de 17 modelos"; the README and release say 19 and 17,100. |
+| https://github.com/HuemulSolutions/Enola-AI | 1 | **BSD-3-Clause** (`main/LICENSE`, 1,503 B) | Spanish-language GenAI validation and monitoring platform (Huemul Solutions, Chile) — tracks robustness and behaviour of deployed GenAI. Listed because it is **the only licensed Chile-origin entry this KB has found** and because governance tooling in Spanish has no other candidate. 🔴 **Dormant: not pushed since 2024-12-31, 1 ★, 0 forks.** Read it as evidence that the niche is unoccupied, not as a dependency; for production metering and observability use the rows under *Usage metering* and *Evaluation* above. |
+
+🔵 **Why this sits in its own section, and what it generalises to.** `p903` found Egypt's entire
+approved national curriculum published as an agent skill tree with **no licence on any of 12 paths**
+(`revolover00/Bakloriya-AI-SKILLS`). `p904` found Brazil's published with **a dual grant, per-record
+provenance, a reproducible pipeline, a DOI and a machine-readable agent contract**. Same structural
+move — `intel/trends.md` **T26**, the unit of publication shifting from the application to the
+agent-addressable curriculum corpus — and opposite rigour. **The shift is not inherently a licence
+trap; it is a licence trap when nobody does the work.** For an engagement in any country with a
+published national curriculum, `bncc-dados` is the reference specification for what "done
+properly" looks like, and `compose/patterns.md` **P22** is how to produce it so the client owns the
+grant.
+
+🔴 **The gate this cluster broke.** `bncc-dados` reports SPDX `MIT` and byte-reads MIT **at its
+root** — and the dataset a studio actually consumes is **CC BY 4.0**, with an attribution
+obligation, licensed in `dados/LICENSE.md`, a path this file's 12-path root probe never looks at.
+The three `NOASSERTION` rows above are the same failure from the other side: their root `LICENSE` is
+a **Portuguese-language index to two further licence files**, which GitHub's detector cannot
+classify. New gate **`904-G1`** — *when the payload is data or content, probe the payload directory
+and the split-licence index names before recording any SPDX value* — is in
+`compose/patterns.md` `G1` and `agents/trending.md` `904-F4`.
+
+🔴 **Not rows here, deliberately.** https://github.com/namerico/antigravity-education-kit (**6 ★**, a
+modular Portuguese-language agent framework for education — tutors, content creators, assessors) has
+**no licence on any of 12 byte-read paths**, and neither do `jmgrd98/simulei-enem` (6 ★),
+`Raullize/AprovaAI` (3 ★) or `Luan-zanardo/StudyMind` (3 ★). A foundation is something a client build
+rests on. They are published as findings in `repos/trending.md` `p904`.
 
 ## The TU Munich Artemis estate — permissive teaching infrastructure, restored in `p896`
 

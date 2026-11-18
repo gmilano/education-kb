@@ -91,6 +91,10 @@ the three that did not are named in `agents/top.md`. Every table row has a real 
 licence and a real description. Where a licence cannot be confirmed, the row says so instead of
 guessing.
 
+**A third probe axis was added in `p904`:** when a repository's payload is data, the licence of the
+asset can live inside the payload directory (`dados/LICENSE.md`), which a root-only probe reports
+wrongly rather than not at all. See gate `904-G1` in `compose/patterns.md`.
+
 **Star counts and `last push` are both recorded, because stars alone mislead:**
 `stanford-oval/storm` has 31,906 ★ and has not been pushed in 414 days.
 
@@ -105,11 +109,21 @@ byte-verified. The affected hosts are listed under *Declared gaps* in `intel/mar
 
 ## What this KB does not cover
 
-- **No education agent originates from LATAM, India, Africa or the Middle East** (sharpened
-  p892). Only `warleysr/ankipa` (10 ★, Brazil) in LATAM, and four dedicated regional legs across
-  p891–p892 produced rich national-programme evidence and **zero repositories**. Open education
-  agents come from East-Asian and European universities; every other region localises them.
-  That is the shape of the localisation market, not a hole in the research.
+- 🔴 **The "no education agent originates from LATAM" bullet that stood here was wrong, and `p904`
+  retracted it — it was an artefact of searching only in English.** No pass before `p904` had run a
+  Spanish- or Portuguese-language repository search. 26 such queries, including LATAM national
+  examination names, produced **six LATAM-origin agents in `agents/top.md`** (up from one), a
+  **five-repository Brazilian national-curriculum cluster** in `repos/foundations.md` and two AGPL
+  platforms in `verticals/solutions.md`, every licence byte-read. 🟢 **The corrected claim is more
+  useful: LATAM open source builds against the two artefacts every school in a country shares — the
+  national examination and the national curriculum** (ENEM essay grading and mock exams, Saber 11
+  prompt generation, and the BNCC published as verified open data with a Zenodo DOI). What LATAM does
+  *not* produce is the general-purpose tutor, which tops out at **6 ★ and unlicensed**. So the
+  localisation advice inverts: **bring the tutor, adopt the curriculum spine** (`compose/patterns.md`
+  **P23**). 🟡 The gap moved rather than closed — **Spanish-speaking LATAM outside Colombia** is still
+  nearly empty, and **Mexico returned a 0 ★ ceiling and no repository in any of the 26 queries.**
+  India, Africa and the Middle East remain as `p892`–`p903` recorded them, with MENA producing
+  individuals rather than institutions.
 - **Africa and the Middle East are covered thinly, not absently** (updated p892). Dedicated
   legs ran in p891 (Africa, UAE/Dubai) and p892 (**Saudi Arabia**). Both regions file under
   **EMEA** because the region vocabulary is closed to five values; the country is in the prose.
@@ -142,7 +156,57 @@ append-only and retain their full history below the newest dated section.
 One substantive error was reported corrected — and `p896` found the correction itself was the
 error. See *Pass p896* below.
 
-### Pass p896 (2026-11-18, latest)
+### Pass p904 (2026-11-18, latest)
+
+**One job: run the discovery channel no pass had ever run.** `p903` established that generic English
+search is now a confirmation channel and that what still yields is byte-reading and **non-English
+repository search**, and it named Urdu and Indonesian as the untried channels. `p904` ran
+**Spanish and Portuguese** instead — because the oldest unfalsified claim in this tree was that LATAM
+produces almost no open education software — with the `p903` exam-name trick applied to LATAM
+national examinations. **The claim did not survive.**
+
+- 🔴 **The LATAM supply finding this KB had carried since its first pass was an artefact of language,
+  not a measurement.** 26 queries returned six LATAM-origin agents (now shelved, up from one,
+  including the **first Colombia-origin row**), a five-repository Brazilian curriculum cluster and
+  two AGPL platforms. The corrected claim is sharper and sells better: **LATAM builds against the
+  national examination and the national curriculum**, and does not build general-purpose tutors.
+- 🟢 **The find of the pass: `bncc-dev`.** Brazil's Base Nacional Comum Curricular as **1,721 verified
+  records** with per-record provenance, character-by-character verification against the official MEC
+  PDF, a reproducible pipeline in CI, a **Zenodo DOI**, an `llms.txt` agent data contract, npm/PyPI
+  packages, **two independently maintained MCP servers**, and an **open LLM-hallucination benchmark**
+  publishing 17,100 raw responses across 19 models. `p903` found Egypt's curriculum published the same
+  way with **no licence at all**; Brazil's has a dual grant. **Same structural shift (`T26`), opposite
+  rigour** — so the form is not inherently a licence trap, it is one when nobody does the work.
+- 🔴 **And it had been logged in this KB between 12 and 40 times without ever being shelved.** Four
+  repositories, up to 26 ★, MIT and CC BY, appearing in `agents/trending.md` and `repos/trending.md`
+  for passes, with **one** mention anywhere in the six files an engagement opens. `p899`'s finding
+  recurring: **discovery was never the bottleneck, promotion was.**
+- 🔴 **A gate failure in this KB's own instrument, found and fixed.** `bncc-dados` reports SPDX `MIT`
+  and byte-reads MIT **at its root** — and the dataset a studio actually consumes is **CC BY 4.0**,
+  licensed at `dados/LICENSE.md`, a path the 12-path root probe never looks at. New gate **`904-G1`**:
+  when the payload is data or content, probe the payload directory and the split-licence index names
+  before recording any SPDX value. Three `NOASSERTION` rows in the same cluster are the same failure
+  from the other side — their root `LICENSE` is a **Portuguese-language index to two other licence
+  files**.
+- 🟢 **A third licence axis, new to this KB: the mark.** `bncc-pacotes` grants MIT code and CC BY data
+  and **withholds the project name and visual identity** — *"the code is free; the mark is not"*. No
+  SPDX field, scanner or SBOM can express it, and it surfaces at launch rather than at architecture
+  review. Written up as **T27**.
+- 🟢 **New pattern `P23`** — curriculum-grounded tutor with a **two-metric hallucination gate** as the
+  acceptance test, built on the cluster above, 7–11 weeks, and cheaper than `P22` by design because
+  the corpus already exists. The benchmark it uses is a **vendor benchmark**, so the pattern says to
+  **re-run it, not cite it**.
+- 🟡 **Method: a fourth way an existence check can lie.** `SirhanMacx/LearnHarness` is dead on **both**
+  channels; the project was **transferred** to `amosblomqvist/learnharness` (10,194 ★). A transfer
+  leaves nothing at the old address, so `p896`'s rename-alias signature (raw `200` + `repo:` 0 hits)
+  cannot detect it. No row in this KB was broken — the canonical address was already carried.
+- **Honest nulls, recorded:** third consecutive null yield from the four generic legs (all three
+  candidates already in-tree); **no Mexico-origin education repository in any of 26 queries**
+  (`EXANI examen` ceiling **0 ★**); nothing from Argentina, Peru or Central America; no `bncc-dev`
+  equivalent for any other national curriculum; `DigComp 3.0` still unreadable behind the egress
+  proxy for a second pass.
+
+### Pass p896 (2026-11-18)
 
 **One job: the shelf-vs-history slug diff that `p895` recommended.** `p894` and `p895` had each
 found a single row deleted by a rewrite. The diff finds **93**, and **all 93 are live

@@ -10,7 +10,7 @@ Concrete recipes. Each names the exact repos, how they wire together, the licenc
 the result, and a realistic build estimate. Every repo referenced is verified in
 `agents/top.md`, `repos/foundations.md` or `verticals/solutions.md`.
 
-**Twenty-two patterns, plus the G1 licence gate added in p897** (**P22 added in `p903`** — the
+**Twenty-three patterns, plus the G1 licence gate added in p897 and extended with gate `904-G1` in p904** (**P22 added in `p903`** — the
 national-curriculum corpus pattern, built from the Arabic-language channel's finding that the
 curriculum exists at national scale and carries no grant; see `intel/trends.md` **T26**) (**P20 added in `p901`** — the first end-to-end permissive *synchronous* pattern in this file, unlocked by `p901`'s verification of `jitsi/jitsi-meet` at Apache-2.0) (**P19 added in `p900`** — the
 first end-to-end permissive pattern in this file that is not offline-first, built entirely from
@@ -78,6 +78,36 @@ GitHub's SPDX detector, and this KB's own probe until now, **classify the reposi
 SPDX field.** Record the path, byte count and `sha256₁₂` of the grant next to the dependency. If
 the grid returns nothing, the repo is all-rights-reserved regardless of how open it looks.
 Budget: **minutes for a whole stack.**
+
+### The payload axis, added as gate `904-G1` in p904
+
+The directory axis above asks *where in the tree the licence file hides*. `904-G1` asks a different
+question: **which licence governs the thing you are actually taking.** When a repository's payload
+is data or content, the root `LICENSE` covers the code that produced it and **not** the asset.
+
+| Repo | SPDX field says | Root byte-read says | The payload's actual grant |
+|---|---|---|---|
+| `bncc-dev/bncc-dados` | `MIT` | **MIT** (1,092 B) | 🔴 **CC BY 4.0** at `main/dados/LICENSE.md` (1,583 B) — **attribution required** |
+| `bncc-dev/bncc-benchmark` | `NOASSERTION` | a Portuguese **index** to two files | **MIT** for `harness/`, **CC BY 4.0** for items, results and methodology |
+| `bncc-dev/bncc-pacotes` | `NOASSERTION` | a Portuguese **index** to two files | **MIT** code + **CC BY 4.0** data + 🔴 **name and visual identity reserved** |
+
+**Gate rule, additive to the one above.** Before recording a single SPDX value for a data or content
+repository:
+
+1. **Probe the payload directory for its own grant** — `dados/`, `data/`, `datasets/`, `content/`,
+   `itens/`, `resultados/`, `corpus/`, `assets/`.
+2. **Probe the split-licence index names** — `LICENSE-DADOS.md`, `LICENSE-CODIGO.md`,
+   `LICENSE-DATA.md`, `LICENSE-CODE.md`, `LICENSE-CONTENT.md`. A root `LICENSE` that is *prose
+   pointing elsewhere* is why GitHub returns `NOASSERTION`, and `p896`'s rule applies with a new
+   mechanism behind it: **a `NOASSERTION` on a non-English repository is a prompt to read the file.**
+3. **Ask the two questions no probe answers**: does the data licence impose **attribution** (if so it
+   is a UI requirement, specified in the sprint that renders curriculum references — not a legal
+   appendix), and **is the project's name or visual identity reserved** (see **T27**). A clean
+   licence report is not evidence that the brand question was asked.
+
+🔵 **Cost of skipping it, measured:** this KB's own 12-path probe would have published a 1,721-record
+national-curriculum dataset as plain MIT, and a studio would have shipped a client product with an
+unmet attribution obligation on its only substantive data dependency.
 
 ## P1 — Licence-clean AI tutor on a permissive LMS
 
@@ -1724,9 +1754,130 @@ obligations are in scope, obtain the document before quoting.
 🟡 **APAC.** The same stack, with the compliance tier promoted to the front: Vietnam's
 **Decision 33/2026/QD-TTg** names education uses as high-risk with a **72-hour incident clock** and
 pre-deployment registration, which makes the audit trail a phase-1 deliverable rather than phase 4.
-🟡 **LATAM.** The corpus form fits the region's Spanish/Portuguese localisation need, and
-`intel/market.md`'s LATAM supply finding is unchanged — Brazil-only, two small repos. Use the
-offline delivery row, and pair with Latam-GPT where sovereign inference is the ask.
+🟢 **LATAM — rewritten `p904`, and it is now the *reference* region for this pattern rather than a
+localisation afterthought.** The note here read *"LATAM supply is unchanged — Brazil-only, two small
+repos"*; the Spanish/Portuguese channel falsified that. **Brazil has already executed this pattern
+properly**: `bncc-dev/bncc-dados` publishes the national curriculum as 1,721 verified records with
+per-record provenance, a reproducible pipeline, a Zenodo DOI and an `llms.txt` agent contract, under
+**MIT code + CC BY 4.0 data**. 🔵 **So in LATAM, do not re-author — adopt the spine and build the
+agent tier**, which is the inverse of the MENA instruction above and the reason **P23** exists as a
+separate pattern. Elsewhere in the region, `bncc-dados` is the specification to quote when telling a
+ministry what "curriculum as data, done properly" means. Pair with Latam-GPT where sovereign
+inference is the ask, and keep the offline delivery row for low-connectivity deployments.
 🔵 **North America.** The driver is not curriculum supply but **statute**: AI-literacy standards and
 model-policy deadlines (NC Session Law 2026-41, Idaho SB 1227) create demand for exactly the audit
 and evaluation tiers above. The corpus is usually the district's existing scope-and-sequence.
+
+
+## P23 — Curriculum-grounded tutor with a **hallucination gate** as the acceptance test (added p904)
+
+### Why this pattern exists
+
+Every curriculum-aligned product makes one claim that a ministry or district will test directly:
+*when this system cites a curriculum objective, the objective is real and the text is right.*
+**P22** is for the case where the curriculum corpus does not exist and must be re-authored. **P23 is
+for the case where it does** — and `p904` measured both the substrate and the failure mode it
+prevents.
+
+The failure mode, measured rather than asserted (`bncc-dev/bncc-benchmark`, round
+`oficial-seca-2026-09`, 19 models × 900 responses, **all 17,100 raw responses published**): asked for
+the exact text of a national-curriculum objective **without access to the source**, models
+reproduce it faithfully between **88% and 3%** of the time, and accept codes **verified not to
+exist** between **0% and 42%** of the time. 🔴 **Reproducing the right text and refusing an invented
+code are distinct abilities** — the models scatter rather than falling on a diagonal, and one model
+reproduces text at 76% while accepting 42% of fake codes. **An accuracy number alone will not
+detect this, which is why the gate is two-metric.**
+
+🔵 **The strategic point for a studio:** this converts the most common objection in a public-sector
+education sale — *"your AI makes things up about our curriculum"* — from a reassurance into a
+number, measured on the client's own curriculum, with a published harness the client can re-run
+after handover.
+
+### Stack
+
+| Layer | Component | Licence posture |
+|---|---|---|
+| **Curriculum spine** | https://github.com/bncc-dev/bncc-dados — 1,721 objectives, per-record `fonte` + `localizador_pdf`, SQLite/CSV derivatives, DOI `10.5281/zenodo.21625233` | 🔴 **MIT code + CC BY 4.0 data** — **attribution is a UI requirement** |
+| **Agent tool surface** | https://github.com/dfdb76/bncc-mcp (**MIT**, independent) and/or the MCP worker in https://github.com/bncc-dev/bncc-pacotes; `npx -y @bncc/mcp` runs locally | MIT; 🔴 **`bncc-pacotes` reserves the project name and visual identity** |
+| **Query tier** | https://github.com/eumakerdev/bncc_api (**MIT**) — REST + semantic search returning official codes as citations | MIT |
+| **Acceptance gate** | https://github.com/bncc-dev/bncc-benchmark `harness/` (**MIT**) — re-run against the client's model and curriculum | MIT harness, CC BY items/results |
+| **Tutor tier** | `HKUDS/DeepTutor` (Apache-2.0) or `THU-MAIC/OpenMAIC` (MIT) for the teaching loop; `matheussilvano/mooose` (Apache-2.0) as the reference for rubric-bound grading | permissive throughout |
+| **Retrieval + memory** | `qdrant` (Apache-2.0) with payload filters on curriculum code; `mem0` (Apache-2.0) for learner state | permissive |
+| **Serving** | `vllm` or `ollama` where sovereign/local inference is required (`intel/trends.md` **T6**) | permissive |
+| **LMS seam** | `ltijs` (Apache-2.0) over LTI 1.3, or the Moodle community MCP servers (`compose/patterns.md` **P11**) | permissive tool, platform untouched |
+| **Review console** | `appsmith` (Apache-2.0) for human review of flagged citations | Apache-2.0 |
+
+### How it wires together
+
+1. **The spine is the only source of curriculum truth.** The agent never emits a curriculum code or
+   objective text from model memory. Codes are keys (`EF67LP08`, `EM13LGG103`, `EI02TS01`) resolved
+   through MCP or the API, and every response carries the per-record source the dataset ships.
+   `bncc-dados`'s own `llms.txt` states this contract — **use official codes as keys, never invent
+   codes or skill texts, cite the source attached to each record** — so the contract is adopted, not
+   invented.
+2. **Two MCP paths, deliberately.** `dfdb76/bncc-mcp` and the `bncc-pacotes` worker are
+   independently maintained over the same data; the packages embed the data and **work offline**.
+   Pin a commit and vendor the JSONs — availability of the hosted endpoint is never on the critical
+   path.
+3. **The gate runs in CI, not at the end.** Fork `bncc-benchmark`'s MIT `harness/`, point it at the
+   client's curriculum records and the model the engagement actually ships, and run it per release.
+   Two thresholds, agreed with the client in writing: **minimum faithful-text rate** and
+   **maximum fake-code acceptance**, the second strict (the published range reaches 0%, so 0% is a
+   defensible target for a *grounded* system — the benchmark measures ungrounded recall, and
+   grounding is precisely what this pattern adds).
+4. **Flagged citations go to a human**, through the Appsmith console, with the record and source page
+   attached. That queue is also the audit artefact a regulator asks for.
+5. **Attribution ships in the product.** CC BY 4.0 on the data means the UI component that renders
+   curriculum references carries the credit. Put it in the sprint that builds that component.
+
+### The design rules that make it defensible
+
+- 🔴 **Never let the model be the source of a curriculum code.** Retrieval-grounded or refused —
+  there is no third behaviour, and the 42% figure is why.
+- 🔵 **Measure two things, not one.** Faithfulness and refusal are separate metrics with separate
+  thresholds. A single "accuracy" score hides the dangerous failure.
+- 🔵 **Re-run the vendor's benchmark rather than citing it.** `bncc-benchmark` is published by the
+  same organisation that maintains the dataset and the hosted endpoint whose grounding it reports as
+  fixing the problem. The raw responses and methodology are public and the harness is MIT, so the
+  honest use is **replication**, and saying so to the client is a credibility gain, not a loss.
+- 🟡 **This pattern proves grounding, not pedagogy.** It says the system cites the curriculum
+  correctly. It says nothing about whether anyone learned more — that is **P7**, and this KB's
+  standing finding that there is no credible primary evidence of learning-outcome gains at scale is
+  untouched by anything in this pattern.
+
+### Deliverables
+
+- A grounded curriculum tool surface (MCP + API) over the client's curriculum, offline-capable.
+- A two-metric hallucination gate wired into CI, with thresholds agreed in writing.
+- A human-review queue for flagged citations, doubling as the audit trail.
+- A licence register recording the **CC BY attribution obligation** and any **reserved mark**
+  (gate `904-G1`, trend **T27**).
+- Replication report of the benchmark on the client's own curriculum and model.
+
+### Estimate
+
+| Phase | Work | Duration |
+|---|---|---|
+| 0 | `G1` + `904-G1` licence pre-flight on the curriculum dataset **and its payload directory** | 2–4 days |
+| 1 | Spine adoption: vendor the records, pin the commit, stand up MCP locally | 1–2 weeks |
+| 2 | Grounded retrieval + citation rendering with attribution | 2–3 weeks |
+| 3 | Hallucination gate: fork the harness, set thresholds, wire to CI | 1–2 weeks |
+| 4 | Tutor tier over the spine (DeepTutor or OpenMAIC), review console | 3–4 weeks |
+| | **Total to first measured pilot** | **7–11 weeks** |
+
+🔵 **Cheaper than P22 by design**, because the expensive part of P22 — authoring the corpus — is
+already done and licensed. **Where the curriculum is not published as data, run P22 first and P23
+after**; the two compose, and `bncc-dados` is the specification P22's phase 5 should aim at.
+
+### Where it does not apply
+
+- 🔴 **Where no published, verifiable curriculum exists.** If the "curriculum" is a PDF with no
+  stable identifiers, there is nothing to key on — that is P22.
+- 🔴 **Where the curriculum's own texts are under restrictive copyright.** Brazil's case works
+  because BNCC normative texts are **official state acts and not copyrightable** (art. 8º, IV, Lei
+  9.610/1998) and the CC BY grant covers only the compilation. **That analysis is jurisdictional and
+  must be redone per country** — in several it will come out the other way, and then the corpus is a
+  licensing negotiation before it is an engineering task.
+- 🟡 **Outside Brazil there is currently no equivalent dataset to adopt.** `p904` searched:
+  `currículo nacional dados abertos` returns nothing at or above 3 ★ in Spanish or Portuguese. Treat
+  `bncc-dev` as a **template**, not as a dependency with regional equivalents waiting.

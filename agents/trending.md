@@ -4,6 +4,313 @@ region: Global
 updated: 2026-11-18
 ---
 
+## `2026-11-18` (p904) — **The Spanish/Portuguese channel had never been run in 903 passes. It is populated, it is licensed, and the "no LATAM-origin education agent" claim this KB has carried since its first pass is wrong.**
+
+**Channel:** the eight mandated WebSearch legs (four global, four regional), then the discovery leg
+this file's own `p903` note implies and no pass has run — **Spanish- and Portuguese-language
+`gh api search/repositories`, with the `p903` exam-name trick applied to LATAM national
+examinations** (`ENEM`, `vestibular`, `simulado ENEM`, `Saber 11 ICFES`, `PAES`, `EXANI`) and to the
+Brazilian national curriculum (`BNCC`). 26 queries over two sweeps. Licences **byte-read from
+`raw.githubusercontent.com`**, 12 candidate paths per repo (`main`+`master` × `LICENSE`,
+`LICENSE.md`, `LICENSE.txt`, `COPYING`, `LICENCE`, `LICENSE-MIT`), plus README reachability on three
+paths. Network posture re-tested at the top of the pass and **unchanged from p903**: `raw` `200`,
+`gh api search/*` live, **every non-GitHub host refused at the egress proxy** (`www.unesco.org` →
+`connect_rejected`, `digital-skills-jobs.europa.eu` → `connect_rejected`). Regional legs are
+therefore search snippets, not primary texts.
+
+### 🔴 `904-F1` Third consecutive null yield from generic search — and this time the three candidates it produced were *named* and still already held
+
+`p901` scored the generic legs null; `p902` showed that score was measured against the wrong
+surface; `p903` scored them null again. This pass the four global legs surfaced exactly three
+repository candidates not obviously in the base — **`SirhanMacx/Claw-ED`**,
+**`geekjourneyx/interactive-learning`** and **`TapXWorld/ChinaTextbook`** — and all three are
+already in the live tree, two of them with rows in delivery files.
+
+🔵 **The standing reading holds and is now three passes deep: generic English search is a
+confirmation channel for this base, not a discovery channel.** It is still worth running, because
+confirmation is what keeps a stale row from being carried, but the pass budget belongs in the
+byte-reading channels. The honest regional statement remains **"searched, nothing new"**, written
+into `intel/market.md` as such.
+
+**Where the generic legs did pay, it was prose, not repositories.** Re-scored against the six
+delivery files per `902-F1`'s method, **6 of 21 facts** from the regional legs are absent from
+everything an engagement opens, and are promoted to `intel/market.md` this pass: the **30,000+
+responses from 29 institutions** behind the DEC LATAM survey this base already cites by headline
+only; the **IADB's review of 193 AI-in-education solutions** across Latin America and the
+Caribbean; **OpenAI's "Education for Countries"** programme, reported at eight adopting countries;
+**ISO/IEC 42001** as the management-system standard EMEA academic work benchmarks education AI
+against; **APAC virtual-tutor adoption at 30%** (Times Higher Education); and the **Acer Edu Summit**
+as an APAC device-and-infrastructure channel. The other 15 were already held, four of them more
+precisely than the snippet stated.
+
+### 🟢 `904-F2` The Spanish/Portuguese channel: sixteen queries, measured ceilings, and a shape that is not the English one
+
+Per-query star ceiling, `sort=stars`, top 12 per query:
+
+| Query | Ceiling | At the top |
+|---|---|---|
+| `BNCC` | **26 ★** | `bncc-dev/bncc-dados` — 🟡 channel poisoned, see below |
+| `ENEM IA` | 13 ★ | 🔴 `Torzuul/BlooketPanel` — a Blooket **cheat script**, not education |
+| `docentes inteligencia artificial` | 10 ★ | `jsilvestreUPV/PRG-GIA-EPSA` — university course material (Spain) |
+| `simulado ENEM` | 9 ★ | `migueldsants/OpENEM` |
+| `educativo agente IA` | 8 ★ | `jmatias2411/Taller-AgenteIA` — MIT, a *teaching* repo about agents |
+| `tutor inteligencia artificial` | 6 ★ | `xoubinha/tutor.ia` — unlicensed |
+| `redação corretor IA` | 5 ★ | `matheussilvano/mooose` |
+| `Saber 11 ICFES` | 4 ★ | `CREARED-EDU-CO/GenPrompt-Pre-ICFES-11` (Colombia) |
+| `educação inteligência artificial` | 4 ★ | `Natalia-Timote/ia-educacao` — a bootcamp page |
+| `professor inteligência artificial` | 4 ★ | `samilagarrido/DataChess` — not education tooling |
+| `aprendizaje adaptativo IA` | 3 ★ | `LuisangelSS/MentorIA-` — unlicensed |
+| `aprendizagem adaptativa IA` | 2 ★ | — |
+| `plan de estudios IA` | 2 ★ | — |
+| `educación inteligencia artificial` | **1 ★** | course-assignment repos, 11 of 12 at 0–1 ★ |
+| `vestibular IA` | 1 ★ | — |
+| `PAES educación` | 1 ★ | `bastianolea/puntajes_prueba_paes` — score data, not an agent |
+| `EXANI examen` | **0 ★** | 🔴 **channel empty** |
+
+A second sweep of ten queries (`currículo nacional dados abertos`, `habilidades BNCC MCP`,
+`plano de aula IA`, `educación MCP servidor`, `tutoría inteligente estudiantes`,
+`escuela gestión IA`, `secretaria educação sistema`, `boletim escolar sistema`,
+`professor agente IA aula`, `redação corretor IA`) returned **one** repository at or above 3 ★ that
+the first sweep had not: `ViniciusOliver13/Gerenciamento-Transporte-Escolar` (3 ★, unlicensed, a
+municipal school-transport system for Brazilian *secretarias de educação*).
+
+🔵 **Read the shape.** The Spanish-language channel is **flat** — its ceiling is 1 ★ on the
+head query and its contents are coursework. The Portuguese-language channel is **not flat**, and
+everything in it clusters on two things: **the national examination** (ENEM essay grading and mock
+exams) and **the national curriculum** (BNCC as data). There is no Spanish- or Portuguese-language
+general-purpose tutor of any consequence. That is a market statement, not a gap: **LATAM open
+source builds against the national assessment and the national curriculum, because those are the
+artefacts every school in the country shares.**
+
+🟡 **Two poisoned keywords, recorded so no later pass re-derives them.** `BNCC` also expands to
+**Bina Nusantara Computer Club** (Indonesia), which supplies `codingki/TikTeng` (16 ★),
+`Alerica/JavaProgrammingBNCC` and `Marvelius-Putra/FinalBackendBNCC---TopUpGames` — 4 of the top 12
+hits are an Indonesian student club, not Brazilian curriculum. And `ENEM IA`'s ceiling is a Blooket
+cheat script. This is the fourth instance of this base's `724-S` class (the highest-starred hit for
+an education query is not education) and the second where the poison is a **collision between a
+national acronym and a student organisation**.
+
+### 🟢 `904-F3` `bncc-dev` — Brazil's national curriculum as verified open data, npm/PyPI packages, an MCP server and an open LLM-hallucination benchmark. **Logged up to 40 times in this KB's own history; absent from every delivery file.**
+
+This is the find of the pass, and it is `p899`'s promotion-bottleneck class recurring on a cluster
+rather than on scattered rows. Measured today on both channels:
+
+| Repo | ★ | Forks | SPDX field | Licence, byte-read | Pushed | Created | Size |
+|---|---|---|---|---|---|---|---|
+| https://github.com/bncc-dev/bncc-dados | **26** | 6 | `MIT` | 🔴 **MIT at root (1,092 B) *and* CC BY 4.0 at `dados/LICENSE.md` (1,583 B)** | 2026-10-15 | 2026-07-09 | 14,532 KB |
+| https://github.com/eumakerdev/bncc_api | **17** | 2 | `MIT` | **MIT** (1,081 B) | 2026-11-16 | 2025-07-16 | 4,217 KB |
+| https://github.com/dfdb76/bncc-mcp | **14** | 3 | 🔴 `NOASSERTION` | 🟢 **MIT** (1,218 B) | 2026-07-24 | 2026-05-30 | 356 KB |
+| https://github.com/bncc-dev/bncc-benchmark | **12** | 1 | 🔴 `NOASSERTION` | 🟢 **dual: MIT (`harness/`, `test/`) + CC BY 4.0 (items, results, methodology)** | 2026-09-19 | 2026-07-12 | 47,671 KB |
+| https://github.com/bncc-dev/bncc-pacotes | **10** | 2 | 🔴 `NOASSERTION` | 🟢 **triple: MIT code + CC BY 4.0 embedded data + name and visual identity *not licensed*** | 2026-10-15 | 2026-07-09 | 9,263 KB |
+
+**How often this base had already seen it:** `bncc-dados` appears **40 times** across
+`agents/trending.md` (16) and `repos/trending.md` (24); `bncc-benchmark` 26 times; `bncc-pacotes`
+30 times; `bncc-mcp` 12 times. **Appearances in the six files an engagement actually opens: one** —
+a single mention of `bncc-pacotes` in `compose/patterns.md`. 🔴 **Four repositories, up to 26 ★,
+MIT and CC BY, measured and logged for passes, and not one row on any shelf.** Discovery was never
+the bottleneck here either.
+
+**What `bncc-dados` actually is**, read from its README rather than inferred: **1,721 learning
+objectives** — the 1,580 of the three stages of basic education plus the **141 of the Computing
+supplement** (Parecer CNE/CEB 2/2022) — as JSON, with SQLite, SQL-dump and CSV derivatives. Each
+record carries the official source (`fonte`) and the page of the official document where the text
+was checked (`localizador_pdf`). The project claims, and ships the pipeline to reproduce:
+**character-by-character verification** of all 1,580 BNCC-2018 texts against the homologated PDF and
+141 of 141 for the Computing annex; a **completeness proof** by code sweep of both documents;
+JSON Schemas (draft 2020-12); CI that fails any change breaking reproducibility; interpretation
+decisions on source inconsistencies documented in `DECISOES.md`; and an archived release with
+**DOI `10.5281/zenodo.21625233`**. It publishes **`llms.txt`** at the root carrying an explicit
+agent data contract: *consume the JSONs, use the official codes as keys, **never invent codes or
+skill texts**, cite the source attached to each record.*
+
+🔵 **This is the first repository in this KB to ship a citable DOI, a reproducible extraction
+pipeline and a machine-readable agent contract on the same asset.** `p903` found Egypt's national
+curriculum published as an agent skill tree with **no licence on any of 12 paths**. Brazil's is the
+same structural move — `intel/trends.md` **T26**, the unit of publication shifting from application
+to agent-addressable corpus — executed with **full licence discipline, per-record provenance and an
+archival identifier**. Same shift, opposite rigour, and the contrast is the most useful thing in
+this pass: it shows the shift is not inherently a licence trap, it is a licence trap *when nobody
+does the work*.
+
+### 🔴 `904-F4` The licence lives in the data directory, and this KB's own 12-path probe cannot see it. New gate `904-G1`.
+
+`bncc-dados`'s root `LICENSE` is **MIT**, and `search/repositories` reports its SPDX field as
+**`MIT`**. Both are correct and both are **the wrong answer to the question a studio is asking**,
+because the asset a studio consumes from that repository is not the `pipeline/` code — it is the
+1,721-record curriculum dataset in `dados/`, and that directory carries its **own** licence file:
+
+```
+dados/LICENSE.md   HTTP 200   1,583 bytes   "Licença dos dados · CC BY 4.0"
+```
+
+Byte-read: the data is **CC BY 4.0**, with required attribution *"bncc.dev (mantido pela Profy)"*
+and a link to the repository. **An attribution obligation that the MIT notice does not impose, on
+the only part of the repository anyone wants.** This base's 12-path probe — extended from 8 paths
+in `p896`, and the instrument every licence claim in this tree rests on — probes **root paths
+only**, so it would have published this dataset as plain MIT.
+
+🔵 **Gate `904-G1`, additive to `G1` in `compose/patterns.md`: when a repository's payload is
+data or content, the root `LICENSE` is not the asset's licence.** Probe the payload directory for
+its own grant — `dados/`, `data/`, `datasets/`, `content/`, `itens/`, `resultados/` — and probe for
+split-licence index files (`LICENSE-DADOS.md`, `LICENSE-CODIGO.md`, `LICENSE-DATA.md`,
+`LICENSE-CODE.md`) before recording a single SPDX value. The three `NOASSERTION` rows in `904-F3`
+are the same failure seen from the other side: GitHub's own detector returns `NOASSERTION`
+precisely because the root file is a **Portuguese-language index to two other licence files** and
+not a licence, which is `p896`'s rule — *a `NOASSERTION` on a non-English repository is a prompt to
+read the file* — now recurring with a new mechanism behind it.
+
+### 🟢 `904-F5` A third licence axis, and no SPDX field can express it: **the mark is withheld while the code is given**
+
+`bncc-pacotes`'s `LICENSE` splits three ways, and the third one is new to this KB:
+
+> **Nome e identidade visual — não licenciados.** *"bncc.dev", "BNCC.dev" and the project's visual
+> identity (logo, wordmark, colours, typography) are **not** covered by the licences above. The code
+> is free; the mark is not. Derivatives must not present themselves as being bncc.dev nor use the
+> mark without authorisation.*
+
+Code **MIT**, embedded data **CC BY 4.0**, **name and visual identity reserved** — in one
+repository, with the npm tarball and the PyPI wheel each carrying MIT code and CC BY data *in the
+same artefact*. `intel/trends.md` **T24** says the next licence trap is a readable grant that
+changes by directory; **T25** says the trap has moved to data and content assets. Both are
+confirmed here in the wild. 🔵 **The axis they do not cover is the trademark**, and it is the one
+that bites a studio hardest at the end of a build, because it does not constrain *use* at all — it
+constrains **how the delivered product may be named and branded**, which is a decision usually made
+after the licence review is closed and signed off. Written up as new trend **T27**.
+
+### 🟢 `904-F6` An open hallucination benchmark against a national curriculum — 19 models, 17,100 published raw responses, and a faithful-text rate that runs from 88% to 3%
+
+`bncc-dev/bncc-benchmark`, read from its README (round `oficial-seca-2026-09`, release `v0.3.0`):
+**19 models × 900 responses each**, with all **17,100 raw responses published in the repository,
+one by one**. The task: ask for the exact text of a BNCC learning objective **without access to the
+source**.
+
+| # | Model | Score | Faithful text | Accepted a fake code |
+|---|---|---|---|---|
+| 1 | GPT-6 Astra · OpenAI | 94.7 | **88%** | 3% |
+| 2 | Claude Fable 5.1 · Anthropic | 81.8 | 80% | **0%** |
+| 3 | Muse Spark 1.3 · Meta | 79.4 | 73% | 10% |
+| 4 | Gemini 3.1 Pro · Google | 78.0 | 67% | 3% |
+| 5 | Claude Opus 5 · Anthropic | 76.8 | 71% | 4% |
+
+Faithful-text across all 19 runs **88% → 3%**; fake-code acceptance **0% → 42%**. The repository's
+own reading, which is the part worth carrying: **reproducing the official text and refusing an
+invented code are distinct abilities** — the models scatter instead of falling on a diagonal, and
+one model reproduces text well (76%) while accepting **42%** of codes verified not to exist.
+
+🔵 **Why this matters to an engagement.** Curriculum-code fabrication is the specific failure that
+makes a curriculum-aligned product unshippable in a ministry procurement, and this is the first
+**primary, reproducible, raw-data-published** measurement of it in this KB, in any language. It is
+evidence about **grounding**, not about learning outcomes — the `README.md` gap on outcome evidence
+stands untouched — and it belongs in `compose/patterns.md` as an **acceptance test**, which is what
+new pattern **P23** makes of it.
+
+🟡 **Two caveats, stated rather than buried.** (1) **The benchmark is published by the same
+organisation that sells the fix**: Profy maintains `bncc-dados` and the hosted MCP endpoint whose
+grounding the benchmark reports as removing the problem. The raw responses and methodology are
+published, so the claim is auditable — but it is a vendor benchmark, and a studio citing it to a
+client should say so and re-run the harness, which is MIT and designed to be re-run. (2) **The
+repository description is stale against its own README**: the description says *"15.300 respostas de
+17 modelos"*, the README and release say **19 models and 17,100 responses**. The README figure is
+recorded here as current; `904-F3`'s table records the description verbatim so the drift is visible.
+
+### 🟢 `904-F7` The LATAM supply claim this KB has carried from its first pass is wrong, and the correct version is sharper
+
+`README.md` and `agents/top.md` carry: *"No education agent originates from LATAM, India, Africa or
+the Middle East... Only `warleysr/ankipa` (10 ★, Brazil) in LATAM."* `ankipa` re-measured today:
+**10 ★, MIT, pushed 2026-11-07** — correct, and no longer alone. Measured this pass, LATAM-origin,
+**licence byte-read**:
+
+| Repo | ★ | Licence (byte-read) | Pushed | What it is | Country |
+|---|---|---|---|---|---|
+| https://github.com/bncc-dev/bncc-dados | 26 | **MIT** + **CC BY 4.0** (`dados/`) | 2026-10-15 | National curriculum as verified open data, 1,721 records, DOI | Brazil |
+| https://github.com/eumakerdev/bncc_api | 17 | **MIT** | 2026-11-16 | REST API over the BNCC, semantic search that cites official codes | Brazil |
+| https://github.com/dfdb76/bncc-mcp | 14 | **MIT** | 2026-07-24 | **MCP server** exposing BNCC objectives as agent tools | Brazil |
+| https://github.com/bncc-dev/bncc-benchmark | 12 | **MIT** + **CC BY 4.0** | 2026-09-19 | Open LLM-hallucination benchmark on the national curriculum | Brazil |
+| https://github.com/bncc-dev/bncc-pacotes | 10 | **MIT** + **CC BY 4.0** + mark reserved | 2026-10-15 | npm/PyPI packages and MCP worker over the dataset | Brazil |
+| https://github.com/migueldsants/OpENEM | 9 | **AGPL-3.0** | 2026-11-13 | Open ENEM preparation platform: question bank, mock exams | Brazil |
+| https://github.com/matheussilvano/mooose | 5 | **Apache-2.0** | 2026-11-17 | ENEM essay grader, **bring-your-own-model** (OpenRouter/Gemini/Groq/Ollama/OpenAI/Claude), LangGraph | Brazil |
+| https://github.com/CREARED-EDU-CO/GenPrompt-Pre-ICFES-11 | 4 | **AGPL-3.0** | 2026-09-19 | Prompt generator for Saber 11 / ICFES exam preparation | Colombia |
+| https://github.com/UnitedOpen-Source/microHelium | 4 | **AGPL-3.0** | 2026-11-13 | Online judge and ICPC-style contest system with a practice mode | Brazil |
+| https://github.com/migueldsants/AI-Skill-Corretor-Redacao-ENEM | 3 | **MIT** | 2026-09-07 | Essay grading published as an **agent skill** | Brazil |
+| https://github.com/suellenferraz/Projeto-GabirIA | 3 | **MIT** (`LICENSE.md`) | 2025-05-24 | ENEM study assistant 🟡 README `404` on three paths | Brazil |
+| https://github.com/HuemulSolutions/Enola-AI | 1 | **BSD-3-Clause** | 2024-12-31 | GenAI validation and monitoring platform, Spanish-language | Chile |
+| https://github.com/warleysr/ankipa | 10 | **MIT** | 2026-11-07 | Anki pronunciation assessment (previously the only LATAM row) | Brazil |
+
+🔵 **The corrected claim, which is more useful than the one it replaces:** LATAM's open education
+supply is real, permissively licensed in the majority, and **concentrated on the two artefacts a
+national system shares — the examination and the curriculum.** What LATAM does *not* produce is the
+general-purpose tutor: the Spanish-language tutor channel tops out at **6 ★ and unlicensed**, and
+the Portuguese one at 3 ★. 🟡 **It also remains true that these are small projects** — the largest
+is 26 ★ and the median is 9 ★ — and that four of the five `bncc-dev` repositories are **corporate**
+(Profy Tecnologias Educacionais Ltda, CNPJ in Brasília), which is the one thing that distinguishes
+this cluster from the single-author student projects `p896` correctly declined to shelve.
+
+**Unlicensed and therefore not promoted to `agents/top.md`**, per the `p893` rule: `namerico/antigravity-education-kit`
+(**6 ★**, a modular Portuguese-language agent framework for education — tutors, content creators,
+assessors — and the single most interesting unlicensed find of the pass), `jmgrd98/simulei-enem`
+(6 ★), `xoubinha/tutor.ia` (6 ★, Spain, so EMEA), `Raullize/AprovaAI` (3 ★),
+`Luan-zanardo/StudyMind` (3 ★), `LuisangelSS/MentorIA-` (3 ★). **Six repositories, zero licences.**
+
+### 🟡 `904-F8` A fourth way an existence check can lie: a **transferred** repository leaves nothing behind, so the rename-alias gate cannot see it
+
+While re-verifying this base's largest rows: **`SirhanMacx/LearnHarness` is dead on both
+channels** — `404` on all 12 licence paths and all three README paths, `422` from
+`search/repositories`. `agents/top.md` already carries the canonical address, so **no row in this
+KB is broken** and this is a method finding, not a correction. Measured: the project now lives at
+**`amosblomqvist/learnharness`**, **10,194 ★**, **AGPL-3.0**, created **2026-10-16** — which matches
+this base's own recorded creation date for LearnHarness exactly — pushed 2026-11-12.
+
+🔵 **Why the gate missed it.** `p896`'s alias gate detects a **rename** by its signature: `raw`
+returns `200` (raw follows the redirect) while `repo:` returns 0 hits (search does not). A
+**transfer out of an owner's namespace** has no such signature — **both** channels return nothing,
+which is indistinguishable from a repository that never existed. And owner-level existence proves
+nothing either way: `user:SirhanMacx` still resolves with **15 repositories**, including the live
+**`SirhanMacx/Claw-ED`** (65 ★, MIT, pushed 2026-09-19, `200` on all four raw paths tried) that this
+base carries a row for. 🔵 **So the four classes are now: unindexed-but-readable (`p900`, 44% of 50
+addresses), indexed-but-unreadable (`903-F6`), renamed (`p896`, raw-only), and transferred (this
+pass, neither channel) — and only the first three are detectable by signature.** A transfer is
+found only by searching the repository *name* and recognising the project, which is what happened
+here.
+
+### `904-F9` Star spot check — the daily cadence holds for a seventh consecutive pass, with one exception worth noting
+
+| Repo | Previously recorded | Today | Δ |
+|---|---|---|---|
+| `HKUDS/DeepTutor` | 60,405 (`p901`) | **60,444** | +39 |
+| `THU-MAIC/OpenMAIC` | 43,894 (`p901`) | **43,898** | +4 |
+| `withmarbleapp/os-taxonomy` | 7,725 (`p901`) | **7,726** | +1 |
+| `amosblomqvist/learnharness` | 10,110 (`agents/top.md`) | **10,194** | **+84** |
+| `SalehGNUTUX/GT-MISHKATKIDS` | 3 (`p903`) | **3** | 0 |
+| `revolover00/Bakloriya-AI-SKILLS` | 6 (`p903`) | **6** | 0 |
+
+🟡 **The +84 on LearnHarness is the largest move this base has recorded on a sub-20,000-star repo**,
+and it spans more than one day, so it does not refute the intra-day cadence note — but it does mean
+the cadence note's "+21 maximum" was measured on **mature** repositories and should not be applied
+to one 33 days old. Its plugin ecosystem (`intel/trends.md` **T12**) is still live:
+`kerr-mwv/learning-path-plugin` **12 ★ AGPL-3.0 pushed today**,
+`tn-lorenz/awesome-learnharness` 7 ★ (no licence).
+
+### What `p904` did **not** find
+
+- **No Spanish-language education agent above 8 ★ with a licence.** The head query
+  `educación inteligencia artificial` has a ceiling of **1 ★**; 11 of its top 12 sit at 0–1 ★ and
+  are course assignments. The Spanish channel is genuinely flat — searched, measured, empty.
+- **Nothing at all in the Mexican exam channel.** `EXANI examen` returned a **0 ★ ceiling**, and no
+  Mexico-origin education repository surfaced in any of the 26 queries. Mexico is the second-largest
+  education system in LATAM and the largest single gap left in this file's supply picture.
+- **No Argentine, Peruvian or Central American origin repository** in any query.
+- **No `PAES`-channel agent in Chile**: the one hit is score data (`bastianolea/puntajes_prueba_paes`,
+  1 ★), not a tool. Chile's only licensed entry is `Enola-AI` (BSD-3-Clause, 1 ★, **not pushed since
+  2024-12-31**) and it is governance tooling, not education.
+- **No `bncc-dev` equivalent for any other national curriculum.** `currículo nacional dados abertos`
+  returned nothing at or above 3 ★. The Brazilian cluster is, so far as this channel reaches, unique
+  — which is precisely why `compose/patterns.md` **P22** and **P23** should treat it as a template
+  rather than a dependency.
+- **`DigComp 3.0` remains a named gap for the second pass.** `ec.europa.eu` and
+  `digital-skills-jobs.europa.eu` are both refused at the egress proxy, so it still cannot be read.
+- **Star re-measurement was again a spot check, not a sweep.** The full sweep remains due
+  **2026-11-19**; the budget went to the untried language channel, per the cadence note.
+
 ## `2026-11-18` (p903) — **The Arabic channel this file has called "untried" for three passes was run. It is not empty — it is populated, unlicensed, and it contains the largest national-curriculum agent-skill corpus this KB has measured in any language.**
 
 **Channel:** the eight mandated WebSearch legs (four global, four regional), then the one leg

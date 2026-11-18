@@ -961,6 +961,15 @@ across this entire `intel/` tree.** It is recorded here as a **gap, not as a fac
 search snippet. **If AI-literacy obligations are in scope for an EU engagement, this is the first
 document to obtain**, and obtaining it needs a session with open HTTP.
 
+- **ISO/IEC 42001 is the management-system standard EMEA academic work benchmarks education AI
+  against** (promoted from the research log, `p904`). 🔵 **Why it belongs in this file:** the EU AI
+  Act's high-risk education obligations are deferred to **2 December 2027**, which leaves a buyer
+  with nothing to point at in the meantime — and a certifiable management system is what
+  procurement reaches for in that vacuum. For a studio it converts "AI governance" from a
+  deliverable the client has to take on trust into an auditable artefact, and it is the cheapest
+  credible answer to "how will you show us this is governed" before the Act's own conformity
+  machinery exists. Pair it with `compose/patterns.md` **P4**.
+
 ### APAC
 
 🟢 **Promoted in `p902` — two convening facts, plus the region's one dataset-scale supply row**
@@ -1384,6 +1393,15 @@ framework whose scope includes operations. **The registrarial agent tier (`P12`)
 tutoring. 🔴 **Unverified against primary text** — confirm MO 21's actual obligations before any
 client commitment.
 
+- **Promoted from the research log in `p904`** (captured in earlier passes, never published here):
+  **virtual-tutor adoption across the surveyed APAC cohort sits at 30%** (Times Higher Education),
+  against a regional picture that the same reporting calls patchy, with connectivity a limiting
+  factor — 🔵 **the number to quote when a client assumes APAC tutor adoption is uniformly ahead of
+  the West; it is not.** And the **Acer Edu Summit (Asia Pacific)** is worth tracking as a channel
+  rather than a vendor event: device makers bundling infrastructure, hardware and partnerships is
+  how AI reaches APAC classrooms that have no cloud budget, which is the same economics that makes
+  `Kolibri` and `GT-MISHKATKIDS` deployable in `verticals/solutions.md`.
+
 ### LATAM
 
 🟢 **Promoted in `p902` — two facts held only in the log** (method: `902-F1`):
@@ -1658,6 +1676,56 @@ effectively is a *different* statistic — do not conflate them, as some coverag
   with 126 recorded instruments and none of them sectoral.
 
 
+
+#### Supply side — rewritten `p904` after the first Spanish/Portuguese repository search
+
+- 🔴 **This file's standing "LATAM produces almost no open education software" finding was an
+  artefact of searching in English.** No pass before `p904` had run a Spanish- or
+  Portuguese-language repository search. 26 such queries, including the national-examination names
+  (`ENEM`, `vestibular`, `simulado ENEM`, `Saber 11 ICFES`, `PAES`, `EXANI`), returned **six
+  LATAM-origin agents now shelved in `agents/top.md`** (up from one), a **five-repository Brazilian
+  national-curriculum cluster** in `repos/foundations.md`, and **two AGPL platforms** in
+  `verticals/solutions.md`. Every licence byte-read.
+- 🟢 **What LATAM builds, stated as a market fact a studio can sell against: the national
+  examination and the national curriculum.** ENEM essay grading
+  (`matheussilvano/mooose`, Apache-2.0), ENEM mock exams (`migueldsants/OpENEM`, AGPL-3.0),
+  Saber 11 prompt generation (`CREARED-EDU-CO/GenPrompt-Pre-ICFES-11`, Colombia, AGPL-3.0), and
+  **Brazil's Base Nacional Comum Curricular published as verified open data with a Zenodo DOI,
+  per-record provenance, npm/PyPI packages, two independent MCP servers and an open
+  LLM-hallucination benchmark** (`bncc-dev`, MIT + CC BY 4.0, maintained by **Profy Tecnologias
+  Educacionais Ltda**, Brasília). 🔵 **These are the artefacts every school in a country shares,
+  which is why open source forms around them and why they are the right entry point for a
+  public-sector engagement.**
+- 🔴 **What LATAM does not build is the general-purpose tutor.** The Spanish-language tutor channel
+  tops out at **6 ★ and unlicensed**; the Portuguese at 3 ★. **So the localisation offer inverts
+  the one this file used to give**: bring the tutor, adopt the curriculum spine.
+  `compose/patterns.md` **P23** is written for that shape.
+- 🔴 **The gap moved rather than closed, and it is now actionable: Spanish-speaking LATAM outside
+  Colombia.** Mexico — the region's second-largest education system — returned a **0 ★ ceiling** on
+  `EXANI examen` and **no repository in any of the 26 queries**. Argentina, Peru and Central
+  America returned nothing. Chile's only licensed entry
+  (`HuemulSolutions/Enola-AI`, BSD-3-Clause) is **1 ★ and dormant since 2024-12-31**.
+- **Adoption evidence promoted from the research log this pass** (it had been captured and never
+  published here): the Digital Education Council's LATAM survey — run with **Tecnológico de
+  Monterrey** and its Institute for the Future of Education, already cited in this file by its
+  92%/79% headline — rests on **over 30,000 responses from 29 institutions**, which is what makes
+  it citable in a procurement conversation rather than a statistic. **88% of faculty report
+  "minimal" to "moderate" engagement**, and only **~30% believe their institution has responded
+  effectively** to AI: the governance-after-adoption gap this file documents, measured on the
+  faculty side.
+- **The IADB has published a review of 193 AI-in-education solutions** across Latin America and
+  the Caribbean (promoted from the log, `p904`). 🔵 **Read it as the region's de facto solution
+  landscape** — the nearest thing to a market map a studio can cite to a ministry — and as
+  corroboration that the region's activity is in *deployment*, while the open-source supply
+  measured above is in *curriculum and assessment infrastructure*.
+- **`OpenAI "Education for Countries"` is reported at eight adopting countries** (promoted from
+  the log, `p904`; industry reporting, not an OpenAI primary source — the egress proxy blocks
+  every non-GitHub host, so it is recorded as a named, unverified claim). 🔵 **If accurate it is
+  the competitive frame for every national-scale LATAM education engagement**: the studio is not
+  selling against another integrator, it is selling governance, localisation and curriculum
+  grounding on top of a free national offer.
+
+
 ### Global
 
 Cross-regional plays that do not depend on one jurisdiction.
@@ -1700,6 +1768,30 @@ Cross-regional plays that do not depend on one jurisdiction.
   conference commentary. **Verify the exact wording before it goes in a client deck.**
 
 ## Declared gaps
+
+- 🟡 **`p904` ran all eight mandated legs. Third consecutive pass in which generic English search
+  produced no repository this tree did not already hold** — the three candidates it named
+  (`SirhanMacx/Claw-ED`, `geekjourneyx/interactive-learning`, `TapXWorld/ChinaTextbook`) are all in
+  the live tree, two with rows in delivery files. 🔵 **The null is now a property of the base, not
+  of the queries, and it is recorded rather than left silent.** Where the legs *did* pay was prose:
+  **6 of 21 regional facts** were absent from every delivery file and are promoted in this pass
+  (DEC LATAM survey base, IADB 193 solutions, OpenAI Education for Countries, ISO/IEC 42001, APAC
+  virtual-tutor 30%, Acer Edu Summit APAC). `p903` named **Urdu and Indonesian** as the untried
+  language channels; `p904` ran **Spanish and Portuguese** instead, because the LATAM supply claim
+  was the oldest unfalsified one in the tree — and it did not survive. **Urdu and Indonesian remain
+  untried**, and so now do **Hindi, Vietnamese, Thai, Japanese, Korean and Mandarin**, the last of
+  which is the highest-value remaining channel given that two of this KB's three largest agents are
+  Chinese-university projects.
+- 🔴 **`DigComp 3.0` is still a named gap, second consecutive pass.** The EU's AI-literacy
+  framework for primary and secondary education, cited in Council conclusions **ST-14902-2026**
+  which this file already cites for a different point. `ec.europa.eu` and
+  `digital-skills-jobs.europa.eu` are both **refused at the egress proxy** (`connect_rejected`,
+  re-tested at the top of `p904`), so it cannot be read. **Recorded as a gap, not as a fact.**
+- 🟡 **Mexico is the largest supply-side hole in this KB and `p904` measured it as such rather than
+  inferring it.** `EXANI examen` returned a **0 ★ ceiling** and no Mexico-origin education
+  repository appeared in any of 26 Spanish/Portuguese queries. For a Mexican engagement, assume
+  nothing local to adopt and budget the curriculum spine as build, using `bncc-dev` as the
+  reference specification.
 
 - 🟡 **`p903` ran all eight mandated legs and they produced *nothing this file did not already
   hold* — recorded here because an unrecorded null result is indistinguishable from not having

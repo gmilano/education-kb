@@ -309,7 +309,13 @@ need, and every open tutor in `agents/top.md` is English- or Chinese-first anywa
 ## T12 — An open education agent has acquired a third-party plugin ecosystem, which has not happened before
 
 **The observation.** `amosblomqvist/learnharness` (AGPL-3.0) went from creation on **2026-10-16**
-to **10,002 ★ on 2026-11-18** — 27 days. That alone is only a popularity fact. The structural
+to **10,002 ★ on 2026-11-18** — 27 days. 🟢 **Re-measured in `p904`: 10,194 ★**, and the ecosystem is
+still live — `kerr-mwv/learning-path-plugin` was **pushed 2026-11-18** and `tn-lorenz/awesome-learnharness`
+now stands at 7 ★. 🔴 **`p904` also found the project's *old* address, `SirhanMacx/LearnHarness`, dead
+on both verification channels** (`404` on 15 raw paths, `422` from `search/repositories`): the project
+was **transferred**, not renamed, and a transfer leaves nothing behind for the rename-alias gate to
+detect. No row in this KB is broken — `agents/top.md` already carries the canonical address — but the
+method consequence is recorded in `agents/trending.md` `904-F8`. That alone is only a popularity fact. The structural
 fact is what grew around it in the same window, all independently owned:
 
 | Repo | Licence | ★ | What it is |
@@ -973,3 +979,75 @@ workflow prompts for a licence.
   Vietnam's Decision 33/2026/QD-TTg, "the model reads our Markdown and tutors the student" is not a
   compliance story. The corpus can be the content tier of a compliant system; it cannot be the
   system.
+
+
+
+**🟢 The counter-example, added `p904`, and it changes the trend's conclusion.** Brazil executed the
+same shift with full discipline. https://github.com/bncc-dev/bncc-dados publishes the **Base Nacional
+Comum Curricular as 1,721 verified records** — 1,580 basic-education objectives plus 141 from the
+Computing supplement — with **per-record provenance** (`fonte` plus the page of the official document
+where each text was checked), **character-by-character verification** against the homologated MEC
+PDF, a completeness proof, a reproducible extraction pipeline guarded by CI, JSON Schema, documented
+interpretation decisions, an archived release under **DOI `10.5281/zenodo.21625233`**, and an
+**`llms.txt`** agent data contract. Licensed **MIT for the pipeline and CC BY 4.0 for the data**, by a
+company (**Profy Tecnologias Educacionais Ltda**), with two independent MCP servers, npm/PyPI
+packages and an **open hallucination benchmark** built on top.
+
+🔵 **So the licence discipline has not "failed to follow" the shift — it is bimodal, and the
+difference is who publishes.** Egypt's corpus is a teacher-maintainer publishing content: 28 MB, no
+grant, 6 ★. Brazil's is an organisation publishing a dataset: dual grant, DOI, provenance, 26 ★ and a
+consumption ecosystem. **The form is not inherently a licence trap; it is a licence trap when nobody
+does the work.** For delivery this means the first question about a curriculum corpus is not *"is it
+licensed"* but **"was it published by someone whose workflow includes licensing"** — and where the
+answer is no, `compose/patterns.md` **P22** re-authors it, while where the answer is yes, **P23**
+adopts it and spends the budget on the agent tier instead.
+
+## T27 — The licence split has a third axis — **the mark** — and no SPDX field, scanner or SBOM can express it
+
+**Evidence (`p904`, byte-read).** `intel/trends.md` **T24** records the licence trap moving from the
+repository to the **directory**; **T25** records it moving into **data and content assets**. Brazil's
+`bncc-dev` cluster confirms both in the wild and adds a third axis in the same file.
+https://github.com/bncc-dev/bncc-pacotes carries, in one `LICENSE` of 1,299 bytes:
+
+| Axis | Grant | What it governs |
+|---|---|---|
+| **Code** | **MIT** | `packages/*/src/`, `python/bncc/*.py`, `mcp-worker/src/`, `scripts/`, tests, config |
+| **Data** | **CC BY 4.0** | the curriculum JSONs in `packages/bncc/dados/` and `python/bncc/dados/` — attribution required |
+| **Name and visual identity** | 🔴 **not licensed at all** | `"bncc.dev"`, `"BNCC.dev"`, the logo, wordmark, colours and typography |
+
+Verbatim: *"O código é livre; a marca não"* — the code is free, the mark is not — with the explicit
+condition that derivatives **must not present themselves as being bncc.dev** nor use the mark
+without authorisation. And the artefacts ship mixed: **the npm tarball and the PyPI wheel each carry
+MIT code and CC BY data in the same package.** `bncc-dev/bncc-benchmark` uses the same two-file
+split (`LICENSE-CODIGO.md`, `LICENSE-DADOS.md`); `bncc-dev/bncc-dados` puts the data grant at
+`dados/LICENSE.md`, below the root.
+
+**Why it is a trend and not a quirk.** The two axes T24 and T25 describe both constrain **use** —
+what you may run, modify and redistribute — and both are, in principle, discoverable by a scanner
+that walks the tree. The trademark axis constrains **naming and presentation of the delivered
+product**, which is:
+
+- 🔴 **invisible to every tool in the licence-compliance stack.** SPDX has one field per package;
+  GitHub's detector returned `NOASSERTION` on all three of these repositories; an SBOM records
+  `MIT` and is not wrong, merely silent on the two obligations that actually bind. **A clean
+  licence report is not evidence that the brand question was asked.**
+- 🔴 **raised at the worst possible moment in a delivery.** Licence review happens at architecture
+  time; naming, logo and launch collateral happen at the end. A reserved mark discovered during
+  launch prep is a rebrand, not a review comment.
+- 🟢 **and it is a *reasonable* thing for a maintainer to do**, which is why it will spread. A
+  public-good dataset maintainer wants maximum reuse of the data and zero confusion about who
+  certifies it. Expect the pattern wherever a named project publishes authoritative public-sector
+  data — exactly the asset class T26 says is becoming the unit of publication.
+
+**What it implies for delivery.**
+- 🔵 **Add two questions to licence triage, and ask them per artefact rather than per repository:**
+  *where does the payload's own licence file live* (the root `LICENSE` is not it when the payload is
+  data), and *is the project's name or identity reserved*. Gate **`904-G1`** in
+  `compose/patterns.md` `G1` encodes the first; the second is a prose question no probe will answer.
+- 🔵 **Attribution is a build requirement, not a legal footnote.** CC BY on a curriculum dataset
+  means the product's UI must carry the credit — so it belongs in the component that renders
+  curriculum references, specified in the sprint that builds it, not in a licence appendix nobody
+  implements.
+- 🟢 **A withheld mark is usually a *neutral* fact for a studio engagement**, because the client
+  wants its own brand on the product anyway. It becomes a problem in exactly one case: when the
+  open project's name was going to be the credibility story ("built on X"). Decide that explicitly.
