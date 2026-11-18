@@ -283,6 +283,32 @@ are all doing it badly and separately. To **states and vendors**: readiness for 
 assurance-lab-style evaluation. The second is the higher-margin one and almost nobody is
 selling it yet.
 
+
+**`p896` additions — search-snippet evidence, source named.**
+
+- 🟢 **Ohio's deadline has a second half.** Districts must adopt an AI framework by **1 July
+  2026** (already recorded above), and the state undertook to publish a **model policy by the end
+  of 2026**. 🔵 A published state model policy is a template an engagement can be quoted against,
+  the same role the **Jisc** specification plays in EMEA (**T9**) — watch for it rather than
+  drafting from scratch.
+- 🟡 **Bill counts still disagree by tracker, and the disagreement is stable**: ~100 state bills
+  affecting student AI use (PIE Network) against **134 bills** (MultiState, April 2026). Use the
+  range, not a figure.
+- 🟢 **Two primary-ish instruments now exist to quote**: the **Education Commission of the
+  States' April 2026 state AI guidelines** survey, and the **CRPE *States and AI* 2026 report**,
+  built from documentary evidence across **20 states** plus state-agency interviews. ECS's
+  recommendations include **AI procurement policy** explicitly — the procurement thread **T9**
+  tracks in EMEA is appearing in North America through state guidance rather than buyer consortia.
+- 🔴 **The higher-education governance gap is the sales motion**: secondary reporting puts
+  student AI use near-universal while **around 70% of universities still lack a clearly defined
+  AI policy**, alongside the "campus AI deal" pattern of institution-wide contracts with model
+  vendors. 🟡 Secondary-blog figure — corroborated in direction by the K-12 numbers above
+  (45% of districts have any AI policy; 35% provide student AI training), not in magnitude.
+- 🔵 **Adoption datapoint for the teacher-facing offer**: **85% of K-12 teachers used AI for
+  lesson planning in the 2024-25 school year.** Teacher-facing tooling is the segment with
+  demonstrated pull and the thinnest row count in `agents/top.md`.
+
+
 ### EMEA
 
 **Regulatory posture: one regime, and a deadline that moved.** The EU AI Act became generally
@@ -692,6 +718,37 @@ recognise, and it addresses the 70%+ of EU teachers who have had no training. It
 every member state at once because the framework is supranational — which is rare in EMEA
 education and is the reason to lead with it.
 
+
+**`p896` additions — search-snippet evidence, source named, not byte-read primary text.**
+
+- 🟡 **The Omnibus has a political-agreement date: 7 May 2026.** Secondary coverage of the AI
+  Act simplification package dates the Council/Parliament provisional deal to **7 May 2026**,
+  which is the instrument behind the postponement recorded above. The conflict in sources over
+  the education high-risk date persists and is now **three-way**: 2 December 2027 (school-facing
+  guides, citing Regulation (EU) 2026/1744), 2 August 2027 (university-facing coverage), and
+  pre-Omnibus pages still saying August 2026. 🔴 **Do not quote a date to a client without the
+  regulation text.** `intel/market.md` carries 2 December 2027 as the working figure.
+- 🟢 **Article 4 was recalibrated, not removed.** Coverage of the Omnibus reports that since
+  **July 2026** the AI-literacy duty no longer requires an organisation to *guarantee* any
+  specific level of competence — the obligation to take measures remains. **This makes the duty
+  easier to satisfy and no less mandatory**, which is the opposite of how it is usually relayed.
+- 🟢 **There is now a framework to satisfy it against: the EU–OECD AI Literacy Framework,
+  released 18 June 2026** — **four domains, 19 competences**. A named external framework is what
+  turns "AI literacy" from a procurement adjective into a deliverable with a scope.
+  `compose/patterns.md` **P10** should be quoted against it.
+- 🔵 **Teachers are now a Council-level file.** The Council of education ministers approved
+  **conclusions on teachers in the era of AI on 11 May 2026**, and the Commission's ethical
+  guidelines update runs through the European Digital Education Hub. Teacher capacity is where
+  EMEA money will move, matching the **T11** finding for India and Saudi Arabia.
+- 🔵 **Demand-side figure (UK, HEPI):** **92% of students report using AI tools in their
+  learning, up from 66% a year earlier.** Attributed here to EMEA because HEPI is a UK body;
+  do not read it as a global number.
+- 🟡 **Universities carry double duties.** Where an institution both builds its own tools and
+  deploys third-party ones it is **provider and deployer at once**. That is a services
+  opportunity (one conformity programme covering both roles) and the reason a university
+  engagement cannot inherit a vendor's compliance posture wholesale.
+
+
 ### APAC
 
 **Regulatory posture: four incompatible regimes, no regional harmonisation.**
@@ -960,6 +1017,31 @@ ASEAN Foundation's bloc-level convening role means a reference built in one memb
 visible in the other nine — the regional leverage that EMEA's AILit framework provides in
 Europe.
 
+
+**`p896` additions — search-snippet evidence, source named.**
+
+- 🟢 **China is exporting the platform, not just the policy.** At the **World Digital Education
+  Conference in Hangzhou, May 2026**, China launched a **global AI education service platform**,
+  extending *Smart Education of China* to roughly **220 countries and regions**. 🔵 For a studio
+  this is competitive intelligence with a delivery edge: a state-backed free platform reaching
+  emerging markets changes what a paid LATAM or African offer has to beat, and it is the clearest
+  instance yet of **T6** (localisation, not origination, is where the non-APAC work is).
+- 🔴 **Public support for *banning* AI in education is rising across APAC, not falling** (Ipsos,
+  nine APAC markets): **Japan 21% → 29%**, **Australia 47% → 52%**, **South Korea 27% → 31%**;
+  India sits lower at **26%**. Australia's majority is the number to carry into a TEQSA-era
+  conversation. **Adoption momentum and public consent are moving in opposite directions**, which
+  is an argument for the auditable-oversight posture this KB already recommends, delivered as a
+  public-trust artefact rather than a compliance one.
+- 🔵 **Market shape (secondary, Markets&Markets):** APAC AI-in-education **$591.6M (2024) →
+  $1,848.1M (2029), 20.9% CAGR**, with **China ($417.5M)** and **Japan ($318.7M)** the largest
+  national pools. 🟡 That CAGR is roughly **half** the global 41.5% figure carried at the top of
+  this file — one of the two is wrong, or they measure different baskets. Recorded as a
+  discrepancy rather than resolved.
+- 🟢 **Japan's precondition is already met:** 1:1 device provision at compulsory-education level
+  is **complete**, and official digital textbooks are next. Japan is the APAC market where a
+  software-only offer needs no hardware story.
+
+
 ### LATAM
 
 **Adoption is genuinely ahead of the OECD — governance is not.** This is the region's defining
@@ -1156,6 +1238,31 @@ which is usually what it lacks.
 is national and institutional. The ~30% policy figure is reported second-hand from survey
 coverage, and a separate finding that ~30% of students believe their institution responded
 effectively is a *different* statistic — do not conflate them, as some coverage does.
+
+
+**`p896` additions — search-snippet evidence, source named.**
+
+- 🟢 **UNESCO has launched an AI-in-Education Observatory for Latin America and the Caribbean**,
+  presented at the **2026 LAC Forum on Sustainable Development in Santiago**. 🔵 This is the
+  region's first standing instrument for comparable AI-in-education data, and it is the natural
+  venue to publish the outcome measurement **P7** exists to produce. An engagement that
+  instruments its results against the Observatory's framing gets regional visibility that a
+  vendor case study does not buy.
+- 🟡 **The regulatory volume is large and none of it is education-specific.** A regional AI
+  regulation database (v3.1) records **716 instruments**, concentrated in **Brazil (212)**,
+  **Mexico (126)** and Colombia — while **fewer than a quarter of Ibero-American countries have
+  specific AI regulation at all** (Forbes Chile, Feb 2026), and analyses of higher education find
+  **no unified regulatory framework for AI in education anywhere in the region**. 🔵 **This
+  sharpens the standing LATAM finding rather than contradicting it**: the gap is not an absence of
+  rulemaking, it is an absence of *sectoral* rulemaking. The binding constraints on a LATAM
+  education build are **data protection and consumer law**, not an education AI statute.
+- 🟡 **Chile's bill is still a bill.** Boletín **N° 16.821-19** remained in Senate passage through
+  March–April 2026. Chile leads the region on national AI policy (since 2021) and still has no
+  statute in force.
+- 🔵 **Mexico has neither a national AI law nor binding university guidelines**, while university
+  AI use grows — the governance-after-adoption shape this file documents for Brazil, in a market
+  with 126 recorded instruments and none of them sectoral.
+
 
 ### Global
 

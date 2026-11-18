@@ -3,6 +3,73 @@ industry: education
 region: Global
 updated: 2026-11-18
 ---
+## `2026-11-18` (p896) — three agents come back, and the one that comes back moves a finding this KB had published twice
+
+**Channel:** shelf-vs-history slug diff (live `agents/top.md` vs
+`archive/2026-11-18-pre-cleanup/agents-top.md`), then both standing verification channels on
+every slug in the difference. Method, full table and the non-agent findings are in
+[`repos/trending.md`](../repos/trending.md) under the same pass. No discovery search was run this
+pass — the budget went to the diff `p895` asked for.
+
+### 🔴 `flysheep-ai/education-skills` (MIT, 125 ★) — the cohort ceiling was measured against a roster this KB had edited
+
+`agents/top.md` has carried, since `p890`, the "**tutor as an agent *skill***" cohort and a
+stated ceiling: **118 ★**, with a 1,000 ★ watch condition for calling the form established.
+`p892` already revised the method once, after finding `tutor-mcp` (104 ★) had never been in the
+measured set, and published the lesson: *"re-measuring a set you did not re-enumerate produces
+'nothing changed' by construction."*
+
+**It happened again, and worse.** `flysheep-ai/education-skills` is a collection of education
+agent skills — a cohort member by definition — at **125 ★**, above the published ceiling. It was
+not missed by discovery. **It was on this shelf, and the 2026-11-18 cleanup deleted it**, so
+every measurement after that enumerated a roster this KB had itself shortened.
+
+🔵 **The sharper rule:** re-enumerating from the live shelf is not enough **when the shelf is
+what changed**. Enumerate from the shelf *and* its most recent archive snapshot. New ceiling
+**125 ★** — the direction of the finding is unchanged (the form still has no star traction, and
+125 is an order of magnitude short of the watch condition), but it was wrong on the number
+twice, for the same structural reason.
+
+### 🟢 Restored to the table — three rows, all re-verified today
+
+| Agent | Licence | ★ | Last push | Why it earns the row back |
+|---|---|---|---|---|
+| [`HowieWang1121/Socratic-Education-System`](https://github.com/HowieWang1121/Socratic-Education-System) | MIT | **137** | 2026-05-03 | Eighth-largest education-native agent in this table. Socratic-method tutoring aimed explicitly at students without access to paid tutoring. Idle six months — a design reference. |
+| [`flysheep-ai/education-skills`](https://github.com/flysheep-ai/education-skills) | MIT | **125** | 2026-01-30 | The cohort finding above. |
+| [`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai) | MIT | 41 | 2026-11-08 | **Local-first** adaptive tutoring with a **native iOS** target — two properties almost absent from this table, and the pair that answers California AB 1159 and EMEA sovereignty procurement without a data-processing argument. |
+
+🔵 All three are **APAC — China** origin, which does not move the standing regional finding: open
+education agents still originate overwhelmingly from East-Asian and European universities.
+
+### 🟢 Two star counts recovered without measuring anything new
+
+`OpenHands` and `LibreChat` have been carried here with `*(unavailable — see note)*` in the star
+column, and with an explicit note that `OpenHands/OpenHands` is *"**not** the repo."* Both notes
+were wrong in the same way: the KB was querying **rename aliases**, which `raw.githubusercontent.com`
+serves and the search API cannot see.
+
+| Carried as | Canonical | Measured today |
+|---|---|---|
+| `All-Hands-AI/OpenHands` | **`OpenHands/OpenHands`** | **93,731 ★**, MIT, pushed 2026-11-18 |
+| `danny-avila/LibreChat` | **`LibreChat-AI/LibreChat`** | **47,317 ★**, MIT, pushed 2026-11-18 |
+
+Both rows are corrected in `agents/top.md`. At 93,731 ★ OpenHands is the largest repo this KB
+composes into education work, and it had no star count for several passes.
+
+### 🟡 Measured and deliberately not restored
+
+Thirteen education-native agents in the diff sit at **0–2 ★** with a single author
+(`bishoynabilanis/jessica`, `mayuribagga/ai-worksheet-maker`, `Abdulrahman-hayatu/lessonplan-ng`,
+`sabrinasiilva/pista-enem`, `Sulthan-eng/Koreksi-in`, `ali-kin4/skillgraph-tutor` and others).
+The cleanup removed them on the stated ground that a studio cannot build on them; **that ground
+holds and they stay out.** Four more are **unlicensed** — `YoussefMohAttia/MultiAgent-AI-Teaching-Assistant`
+(6 ★), `giovanayngrid-gk/multiagent-ai-tutor`, `nifalconi/educational-agents`,
+`muskvdc/EduTwin-Africa` — all confirmed 404 on eight candidate licence paths today, so they are
+all-rights-reserved and unusable regardless of size.
+`forgemorrow/Chinese-Teaching-AI-Agent` (MIT, 8 ★, pushed 2026-11-14) is live and permissive but
+too thin for the table; recorded here so a later pass does not re-chase it.
+
+
 
 ## `2026-11-18` (p895) — the Africa-origin agent this KB hunted for two passes exists, and reading it cost it most of its value
 

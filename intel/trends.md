@@ -508,6 +508,66 @@ datasets, evaluation suites and **open-source models** publicly — if that comm
 an actual OSI licence, it would be the first mechanism to merge these two populations. Tracked
 in `intel/market.md`.
 
+## T17 — The copyleft platforms publish their extension points, design systems and mobile clients under *permissive* licences, and that is a third integration route
+
+**New in `p896`, and it emerged from a licence sort rather than a search.** This KB's first
+structural fact is that the platforms clients run are copyleft (Moodle GPL-3.0, Open edX
+AGPL-3.0, Canvas AGPL-3.0) while the tooling around them is permissive, and the standing advice
+is to integrate over **LTI 1.3** or **MCP** so your work stays a separate work. Restoring 34
+rows to `repos/foundations.md` and sorting them by licence shows a route the advice misses: the
+platform vendors themselves ship the parts you extend under **Apache-2.0 or MIT**.
+
+| Platform (server) | First-party permissive satellites |
+|---|---|
+| Moodle — **GPL-3.0** | `moodlehq/moodleapp` **Apache-2.0**, 1,007 ★ |
+| Open edX — **AGPL-3.0** | `XBlock` **Apache-2.0** (471 ★), `xblock-sdk`, `paragon` **Apache-2.0** (141 ★), `openedx-app-android` / `-ios` **Apache-2.0**, `openedx-aspects` **Apache-2.0** |
+| Canvas — **AGPL-3.0** | `instructure/instructure-ui` **MIT** (487 ★), `common-cartridge-viewer` **MIT** (95 ★) |
+| H5P host library — **GPL-3.0** | every content type **MIT**: `h5p-interactive-video` (267 ★), `h5p-cli` (79 ★), `h5p-course-presentation`, `h5p-audio-recorder`, `h5p-speak-the-words` |
+
+🔵 **Why it matters commercially.** The licence conversation in an education engagement usually
+ends at "the client runs an AGPL platform, so our work must stay at arm's length." That is true
+of the *server*. It is not true of the **component, the design system, the mobile client or the
+analytics tier**, each of which the platform's own maintainers publish permissively. A branded,
+closed mobile experience over a client's existing Moodle is a **supported architecture**, not a
+workaround — and `openedx/XBlock` being Apache-2.0 means a studio can ship a proprietary
+learning component into an AGPL LMS without a derivative-work argument.
+
+🟡 **Two cautions.** First, the asymmetry is per-artefact, so it has to be verified per repo, not
+assumed per vendor. Second, it runs the other way for *content*: curriculum data arrives under
+ODbL and content applications under GPL (see `verticals/solutions.md`). Permissive client,
+copyleft server, copyleft content — three licence classes in one engagement.
+
+**Watch condition:** if a platform relicenses a satellite toward its server's licence, this route
+closes for that platform. Re-run the licence sort on the satellites each quarter.
+
+## T18 — A free, state-backed AI education platform is being exported into the emerging markets a studio sells into, while public support for banning AI in schools *rises*
+
+**New in `p896`.** Two movements that look unrelated and are not.
+
+🟢 **Supply.** At the **World Digital Education Conference (Hangzhou, May 2026)** China launched a
+**global AI education service platform**, extending *Smart Education of China* to roughly **220
+countries and regions**. This KB already records (**T6**) that open education agents originate
+from East-Asian and European universities and that every other region localises them. A free,
+state-funded platform aimed at the same markets changes the **baseline a paid offer has to
+beat** in exactly the regions — LATAM, Africa, South and Southeast Asia — where this KB's
+regional work found the most demand and the least domestic supply.
+
+🔴 **Consent.** In the same window, Ipsos finds support for **banning** AI in education *rising*
+across APAC: **Japan 21% → 29%**, **Australia 47% → 52%** (a majority), **South Korea 27% →
+31%**. Canada's higher-education sector has broadly refused AI-detection tooling on privacy
+grounds (`intel/market.md`), and the EU's emotion-recognition prohibition has been in force since
+February 2025.
+
+🔵 **The read.** Adoption momentum and public consent are moving in **opposite** directions, and a
+free platform does not fix consent — it raises the volume of deployed AI that consent has to
+cover. The defensible studio position is therefore **not** cheaper delivery, which loses to free,
+but **the auditable, consent-bearing layer on top**: provenance, oversight records, opt-out
+handling and published outcome evidence (**P7**, **P9**). That is also the one thing an exported
+national platform structurally cannot supply to a foreign ministry.
+
+**Watch condition:** a LATAM or African ministry announcing adoption of the exported platform.
+That converts this from a pricing pressure into a named integration opportunity.
+
 ## Trends we looked for and could not substantiate
 
 - **Measured learning-outcome gains from AI.** The widely circulated figures ("42% improvement

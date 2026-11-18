@@ -1042,3 +1042,80 @@ benchmark report as a deliverable.
   review.
 - **Not a Middle East pattern.** Despite the shared EMEA bucket, this pass found **no Middle East
   education repository at all**; Gulf demand is real and the supply leg there is untried.
+
+---
+
+## P15 — Branded, closed mobile client and components over the client's existing copyleft LMS (added p896)
+
+### Why this pattern exists
+
+**Added p896, from T17.** The commonest licence impasse in an education engagement: the client
+runs **Moodle (GPL-3.0)**, **Open edX (AGPL-3.0)** or **Canvas (AGPL-3.0)**, wants a branded
+product with proprietary differentiators, and legal stops the conversation at the server's
+licence. The standing answers are LTI 1.3 (**P2**) and MCP (**P11**), and both are good — but
+they both put your work *beside* the platform and leave the learner's actual interface untouched.
+
+🟢 **The platform vendors publish the interface layer permissively.** Restoring 34 rows to
+`repos/foundations.md` and sorting them by licence made this visible: the mobile clients, the
+component frameworks, the design systems and the analytics stacks of these copyleft platforms
+are **Apache-2.0 or MIT**, maintained first-party. **A closed, branded client over a copyleft
+server is a supported architecture.**
+
+### What you build on
+
+| Layer | Repo | Licence | Role |
+|---|---|---|---|
+| Mobile client (Moodle) | https://github.com/moodlehq/moodleapp | **Apache-2.0** | Fork and brand; 1,007 ★, Moodle HQ-maintained. Licence at `main/COPYING.txt`. |
+| Mobile client (Open edX) | https://github.com/openedx/openedx-app-android · https://github.com/openedx/openedx-app-ios | **Apache-2.0** | Same move on the other platform. |
+| In-platform component | https://github.com/openedx/XBlock | **Apache-2.0** | Ship a proprietary learning component **inside** an AGPL LMS. Develop against https://github.com/openedx/xblock-sdk. |
+| Design system | https://github.com/openedx/paragon · https://github.com/instructure/instructure-ui | **Apache-2.0** · **MIT** | Native-looking UI without touching platform code. |
+| Interactive content | https://github.com/h5p/h5p-interactive-video · https://github.com/h5p/h5p-course-presentation · https://github.com/h5p/h5p-audio-recorder · https://github.com/h5p/h5p-speak-the-words | **MIT** (content types) | Compose the **MIT** content types; do **not** embed the **GPL-3.0** `h5p-php-library` in the closed part. |
+| Content pipeline | https://github.com/h5p/h5p-cli | **MIT** | Makes generation scriptable — the step from demo to pipeline. |
+| Agent tier | `ai-shifu` (Apache-2.0) or `Pyris` (MIT) behind https://github.com/Cvmcosta/ltijs | Apache-2.0 / MIT | Authored teaching flow, model layer kept swappable. |
+| Analytics | https://github.com/davidpesce/moodle-logstore_xapi (**GPL-3.0**, in-platform plugin) → https://github.com/yetanalytics/lrsql (**Apache-2.0**) · https://github.com/openedx/openedx-aspects (**Apache-2.0**) | mixed | The plugin lives inside the copyleft platform where copyleft is expected; the LRS and your analysis stay permissive. |
+| SSO | https://github.com/apereo/phpCAS (Moodle/PHP) · https://github.com/apereo/java-cas-client | Apache-2.0 | Join the institution's identity estate rather than minting accounts. |
+
+### How to wire it
+
+1. **Draw the licence boundary first, in writing.** Three zones: *copyleft server* (untouched,
+   client-operated), *in-platform plugins* (`logstore_xapi`, any Moodle plugin — these are GPL
+   and are published as such), and *your product* (forked Apache mobile client, Apache XBlocks,
+   MIT components, the agent tier). Nothing crosses from zone 3 into zone 1 by linking.
+2. **Fork the mobile client, do not rewrite it.** Rebrand, strip what the client does not need,
+   add the agent surface. Keep the upstream remote: these apps track platform API changes, and
+   that maintenance is the reason to start from them.
+3. **Put the differentiator in an XBlock (Open edX) or a plugin-plus-LTI split (Moodle).** On
+   Open edX the component runs in-platform under Apache. On Moodle, anything in-platform is GPL,
+   so the proprietary part sits behind `ltijs` and only a thin GPL shim lives inside.
+4. **Generate content through `h5p-cli`**, not by hand, and keep the generator in zone 3.
+5. **Emit xAPI from day one** (`logstore_xapi` → `lrsql`) so **P7**'s outcome evidence exists
+   without a later retrofit. On Open edX use `openedx-aspects` instead.
+6. **Authenticate through the institution's CAS** before the first pilot cohort, not after.
+
+### What makes it defensible
+
+- 🟢 **Licence-clean by construction**, and provable: every zone-3 row above is Apache-2.0 or MIT,
+  byte-read where the SPDX field was unreliable.
+- 🟢 **The client keeps its system of record** — gradebook, enrolment, accreditation — so the
+  engagement does not become a migration.
+- 🟢 **First-party maintenance upstream.** You are forking repos maintained by Moodle HQ, the
+  Open edX foundation and Instructure, not abandoned middleware.
+
+### Estimate
+
+**6–8 weeks** to a branded, agent-enabled mobile pilot over an existing LMS (fork, brand, agent
+surface, SSO, xAPI). Add **3–4 weeks** for a first proprietary XBlock or LTI component. Add
+**2 weeks** for the analytics tier if the client has no LRS.
+
+### Where it does not apply
+
+- 🔴 **Not where the client wants the *server* closed.** This pattern leaves the copyleft core in
+  place. If a proprietary platform is the requirement, start from **Artemis**, **Kolibri**,
+  **OpenOLAT** or **Mentingo** (**P1**).
+- 🔴 **Not an EU proctoring or affect story.** Emotion inference in education is **prohibited in
+  the EU since 2 February 2025**, and assessment/exam-access use is Annex III high-risk from
+  2 December 2027 — see `verticals/solutions.md` and **P4**/**P9**.
+- 🟡 **Verify the satellite licence per repo, per release.** The asymmetry is per-artefact and a
+  relicence upstream closes this route for that platform (**T17** watch condition).
+- 🟡 **`h5p-interactive-video` carries this KB's weakest licence evidence** — MIT on the search
+  channel only, no licence file at twelve candidate paths. Confirm before it enters zone 3.

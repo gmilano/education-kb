@@ -4,6 +4,153 @@ region: Global
 updated: 2026-11-18
 ---
 
+## `2026-11-18` (p896) — the shelf-vs-history diff the last pass asked for: 93 deleted rows, every one of them a live repo
+
+**Channel:** the whole pass is one instrument, run twice. (1) Extract every table-row repo slug
+from `archive/2026-11-18-pre-cleanup/{agents-top,repos-foundations,verticals-solutions}.md` and
+from the live shelves, and diff. (2) Re-measure every slug in the difference on both standing
+channels — batched `repo:` qualifiers against `gh api search/repositories`, and licence
+byte-reads from `raw.githubusercontent.com`. Raw diff:
+[`evidence/shelf-vs-history-diff.2026-11-18-p896.tsv`](../evidence/shelf-vs-history-diff.2026-11-18-p896.tsv).
+
+`p895` ended by recommending a shelf-vs-history slug diff as the next pass's first job, after it
+and `p894` had each found exactly one row deleted by a rewrite (`UniTime/unitime`,
+`elimu-ai/webapp`). **The diff finds 93, and all 93 resolve as live repositories today — zero
+404s.** Two one-off restorations were the visible part of a systematic deletion.
+
+### 🔴 What the cleanup's own rationale covers, and what it does not
+
+The 2026-11-18 cleanup documented one class of removal in `agents/top.md`: *"Single-author
+student projects removed from this table… a studio cannot build on them."* **That rationale is
+sound and it is kept here.** It accounts for the bottom of the distribution. It does not account
+for the top:
+
+| Star band | Rows deleted | Covered by the stated rationale? |
+|---|---|---|
+| ≥ 100 ★ | **18** | 🔴 No |
+| 10–99 ★ | **20** | 🔴 No |
+| 3–9 ★ | 8 | Partly |
+| 0–2 ★ | 47 | 🟢 Yes — single-author projects, as stated |
+
+**38 rows at ≥ 10 ★ were removed with no stated reason and no record that they had ever been
+there.** They are not student projects. They are the periphery that institutions maintain:
+`cmu-db/bustub` (5,171 ★), `moodlehq/moodleapp` (1,007 ★, Moodle HQ), `apereo/java-cas-client`
+(949 ★), `apereo/phpCAS` (802 ★), `RWTH-OS/eduOS-rs` (493 ★), `instructure/instructure-ui`
+(487 ★, Instructure), `openedx/XBlock` (471 ★), `oppia/oppia-android` (422 ★),
+`h5p/h5p-interactive-video` (267 ★), `openedx/paragon` (141 ★), `portabilis/i-diario` (117 ★),
+`ls1intum/Apollon` (106 ★), the Helsinki SIS tooling, the UCT Sakai estate and the TUM Artemis
+clients.
+
+🔵 **The deletion was not random — it was biased by *form*.** What survived is what looks like a
+product: a platform with a name, a star count and a one-line pitch. What was removed is what
+looks like plumbing: component libraries, mobile clients, CLI tools, deployment automation,
+sync engines, SSO clients. **Plumbing is most of what an education engagement actually touches**,
+and it is where the permissive licences live — see the next section.
+
+### 🟢 The restoration surfaces a licence asymmetry worth more than the rows
+
+Sorting the restored set by licence makes a pattern visible that no single row showed:
+**the copyleft platforms are surrounded by permissive first-party components.**
+
+| Platform (server licence) | Permissive first-party satellites restored |
+|---|---|
+| Moodle (**GPL-3.0**) | `moodleapp` **Apache-2.0** (1,007 ★) |
+| Open edX (**AGPL-3.0**) | `XBlock` **Apache-2.0** (471 ★), `xblock-sdk` **Apache-2.0**, `paragon` **Apache-2.0** (141 ★), `openedx-app-android` / `openedx-app-ios` **Apache-2.0**, `openedx-aspects` **Apache-2.0** |
+| Canvas (**AGPL-3.0**) | `instructure-ui` **MIT** (487 ★), `common-cartridge-viewer` **MIT** (95 ★) |
+| H5P host library (**GPL-3.0**) | every content type is **MIT** — `h5p-interactive-video` (267 ★), `h5p-cli` (79 ★), `h5p-course-presentation`, `h5p-audio-recorder`, `h5p-speak-the-words` |
+
+🔵 **This is a commercial finding, not a tidiness one.** This KB's headline fact is "the platforms
+are copyleft; the tooling is permissive," and the usual advice is to integrate over LTI or MCP.
+The restored rows show a **third route**: the platform vendors publish the extension points,
+design systems and mobile clients under Apache or MIT, so a branded closed client or component
+over a copyleft server is a supported architecture, not a workaround. `compose/patterns.md`
+**P15** builds it.
+
+### 🔴 `openedx/openedx-platform` exists. The `p895` correction of it was the error
+
+`p895` recorded as a substantive correction that `openedx/openedx-platform` *does not exist*
+(404 on every branch) and that the real slug is `openedx/edx-platform`, and propagated that
+through four files. **It is backwards.** Measured today
+([`evidence/openedx-slug-probe.2026-11-18-p896.tsv`](../evidence/openedx-slug-probe.2026-11-18-p896.tsv)):
+
+| Probe | `openedx/openedx-platform` | `openedx/edx-platform` |
+|---|---|---|
+| `repo:` qualifier, search API | **1 hit — 8,242 ★, AGPL-3.0, pushed 2026-11-17** | **0 hits** |
+| `LICENSE@master` (raw) | 200, **35,136 B** | 200, **35,136 B** |
+| `README.rst@master` (raw) | 200, **12,381 B** | 200, **12,381 B** |
+| `LICENSE@main` (raw) | **404** | **404** |
+
+The 404 that produced the p895 claim is reproducible only against **`main`** — and this repo's
+default branch is **`master`**, so `main` 404s under *both* names. A branch-name artefact was
+read as a repository's non-existence.
+
+### 🟢 The general rule, and it caught two more rows in `agents/top.md`
+
+> **`raw.githubusercontent.com` follows GitHub's rename redirects. The search API's `repo:`
+> qualifier does not.** So a slug that serves `200` on raw but returns **0 hits** from
+> `repo:` is a **rename alias**, not a dead repo — and the canonical name is the one search
+> can see. Two slugs returning **byte-identical** sizes on the same path are the same repo.
+
+Running that gate over **all 172 live slugs** in this KB returns exactly **three** failures
+([`evidence/rename-alias-gate.2026-11-18-p896.tsv`](../evidence/rename-alias-gate.2026-11-18-p896.tsv)),
+and all three are renames this KB had recorded in the wrong direction:
+
+| Alias carried in the KB | Canonical name | Measured |
+|---|---|---|
+| `openedx/edx-platform` | **`openedx/openedx-platform`** | 8,242 ★, AGPL-3.0 |
+| `All-Hands-AI/OpenHands` | **`OpenHands/OpenHands`** | **93,731 ★**, MIT |
+| `danny-avila/LibreChat` | **`LibreChat-AI/LibreChat`** | **47,317 ★**, MIT |
+
+🔵 **Two star counts came back for free.** `agents/top.md` carried OpenHands and LibreChat with
+`*(unavailable — see note)*` in the star column for several passes. They were never unavailable;
+the alias was being queried. 169 of 172 live slugs resolve cleanly, so the KB's address hygiene
+is otherwise sound.
+
+### 🔴 Two licence byte-reads that the SPDX field gets wrong in the dangerous direction
+
+| Repo | GitHub SPDX | Byte-read verdict |
+|---|---|---|
+| `portabilis/i-diario` (117 ★, Brazil) | `NOASSERTION` | **AGPL-3.0** — the file is the Affero GPL **in Portuguese translation** (*"LICENÇA PÚBLICA GERAL AFFERO GNU"*, 35,326 B) |
+| `8infinitelabs/eucompliance` | `NOASSERTION` | **EUPL-1.2** — the European Union Public Licence |
+
+🔵 **Both run from "unknown" toward *stronger* copyleft, which is the expensive direction.**
+SPDX matching is template matching against English texts: translate the GPL into Portuguese, or
+use the EU's own licence, and detection fails. For a practice with LATAM and EMEA engagements
+this is a standing hazard — **a `NOASSERTION` on a non-English repo is a prompt to read the
+file, never a sign that the project is unlicensed.** `apereo/java-cas-client` (Apache) and
+`instructure/instructure-ui` (MIT) are the benign version of the same failure.
+
+### 🟡 And a method fix: this KB's 8-path licence probe misses files it should find
+
+`moodlehq/moodleapp` and `openedx/XBlock` both return 404 on all eight of the standard candidate
+paths, yet both carry licence files — at **`main/COPYING.txt`** and **`master/LICENSE.TXT`**
+respectively. The probe set has been extended to twelve (`LICENSE.TXT`, `license.txt`,
+`COPYING.txt`, `LICENSE.rst` × `main`/`master`). `h5p/h5p-interactive-video` fails all twelve and
+is carried on the search channel's SPDX alone — flagged in `repos/foundations.md` as this file's
+weakest licence evidence.
+
+### What this pass did not do
+
+- **No new discovery leg.** The whole budget went to the recommended diff and its verification.
+  No search for new repos was run, so this section records no new-entrant trend.
+- **`deepseek-ai/deepseek-harness` (283,421 ★, MIT) was not restored.** It appeared in the diff
+  because the pre-cleanup `verticals/solutions.md` had it filed under **Learning management
+  systems**, which it is not — it is a general agent harness ("Everything is a Plugin"). The
+  cleanup was right to drop it; recorded here so a future diff does not read its absence as
+  another loss.
+- **The 47 rows at 0–2 ★ stay deleted**, as the cleanup intended. They remain in
+  `archive/2026-11-18-pre-cleanup/`.
+
+### Next pass
+
+Run the gate, not the anecdote. Three things are now cheap and were not before: **(a)** the
+rename-alias gate over all live slugs (three findings, one command); **(b)** the shelf-vs-history
+diff against the *most recent* archive snapshot after any rewrite — not against all 27, which
+returns thousands of census rows and buries the signal; **(c)** a licence re-read of every
+non-English repo currently carried as `NOASSERTION`. Only (c) is still open.
+
+
+
 ## `2026-11-18` (p895) — an MIT, fork-heavy, Africa-deployed platform is missing from every live shelf, and the history says it was placed there
 
 **Channel:** `gh api search/repositories` (`org:` and exam-name qualifiers) plus

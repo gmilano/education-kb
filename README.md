@@ -118,9 +118,14 @@ byte-verified. The affected hosts are listed under *Declared gaps* in `intel/mar
 - **Canada has its own subsection as of p891**, and it is the clearest evidence for T10: no
   national rule, formal educator guidance in four provinces only, and a higher-education sector
   that has broadly refused AI-detection tooling on privacy grounds.
-- **No open agent for student information systems, admissions, financial aid or proctoring.**
+- **No open *agent* for student information systems, admissions, financial aid or proctoring.**
   The largest build-vs-adopt gap in the industry — and the most defensible studio IP, with the
-  caveat that several of these are EU Annex III high-risk categories.
+  caveat that several of these are EU Annex III high-risk categories. **Two qualifications
+  added p896.** (1) The *integration* layer is not missing: `UniversityOfHelsinkiCS` publishes
+  SIS import, credit-registration and namespace tooling under MIT/Apache, restored to
+  `repos/foundations.md`. (2) Proctoring is not an empty category but an **unadoptable** one —
+  six open tools, the largest at 16 ★ and dormant since 2025, against an EU prohibition on
+  emotion inference that has been in force since 2 February 2025. See `verticals/solutions.md`.
 - **No credible primary evidence of learning-outcome gains from AI at scale.** The widely
   quoted figures trace to blogs with no primary study. `compose/patterns.md` P7 exists to
   measure it rather than claim it.
@@ -134,8 +139,56 @@ the industry. Those versions are preserved verbatim in
 as a reference a studio team can use. `agents/trending.md` and `repos/trending.md` are
 append-only and retain their full history below the newest dated section.
 
-One substantive error was corrected: **`openedx/openedx-platform` does not exist** (404 on every
-branch) and had propagated through four files. The real slug is `openedx/edx-platform`.
+One substantive error was reported corrected — and `p896` found the correction itself was the
+error. See *Pass p896* below.
+
+### Pass p896 (2026-11-18, latest)
+
+**One job: the shelf-vs-history slug diff that `p895` recommended.** `p894` and `p895` had each
+found a single row deleted by a rewrite. The diff finds **93**, and **all 93 are live
+repositories** — zero 404s.
+
+- 🟢 **38 of the 93 sit at ≥ 10 ★ and are not covered by the cleanup's stated rationale.** That
+  rationale — removing single-author student projects — is sound and accounts for the 47 rows at
+  0–2 ★, which stay out. The rest is institution-maintained plumbing: `cmu-db/bustub` (5,171 ★),
+  `moodlehq/moodleapp` (1,007 ★), `apereo/java-cas-client` (949 ★), `instructure/instructure-ui`
+  (487 ★), `openedx/XBlock` (471 ★), `oppia/oppia-android` (422 ★), the TUM Artemis clients, the
+  Helsinki SIS tooling, the UCT Sakai estate. **The deletion was biased by form**: what looks
+  like a product survived, what looks like plumbing did not — and plumbing is most of what an
+  education engagement touches. **52 rows restored** across the three shelves.
+- 🟢 **The restoration produced a new structural finding (`T17`), not just rows.** Sorting the
+  restored set by licence shows the copyleft platforms publish their **extension points, design
+  systems, mobile clients and analytics tiers under Apache-2.0 or MIT**. A branded closed client
+  over a client's AGPL LMS is a supported architecture, not a workaround. `compose/patterns.md`
+  **P15** builds it.
+- 🔴 **`openedx/openedx-platform` exists and is the canonical slug; the p895 correction ran
+  backwards.** Measured: `repo:openedx/openedx-platform` → **8,242 ★, AGPL-3.0, pushed
+  2026-11-17**; `repo:openedx/edx-platform` → **nothing**. Both serve byte-identical files on
+  raw. The "404 on every branch" is reproducible only against **`main`**, and this repo's default
+  branch is **`master`**.
+- 🟢 **A reusable gate came out of it.** `raw.githubusercontent.com` follows rename redirects;
+  the search API's `repo:` qualifier does not — so a slug that 200s on raw and returns 0 hits
+  from `repo:` is a **rename alias**. Run over all 172 live slugs it returns exactly three, all
+  recorded backwards in this KB: `openedx/edx-platform`, `All-Hands-AI/OpenHands`
+  (canonical **`OpenHands/OpenHands`**, **93,731 ★**) and `danny-avila/LibreChat` (canonical
+  **`LibreChat-AI/LibreChat`**, **47,317 ★**). Two star counts carried as *unavailable* for
+  several passes were recovered this way.
+- 🔴 **Two licence byte-reads correct the SPDX field toward *stronger* copyleft.**
+  `portabilis/i-diario` (117 ★, Brazil) reports `NOASSERTION` and is **AGPL-3.0** — its licence
+  file is the Affero GPL **in Portuguese translation**, which SPDX template-matching cannot
+  recognise. `8infinitelabs/eucompliance` is **EUPL-1.2**, same failure. **A `NOASSERTION` on a
+  non-English repo is a prompt to read the file, not evidence that it is unlicensed.**
+- 🟢 **Regional research ran on all four regions** and added `T18`: China launched a **global AI
+  education service platform** (Hangzhou, May 2026) reaching ~220 countries, while Ipsos finds
+  support for *banning* AI in education **rising** across APAC (Australia now a majority at 52%).
+  Also new: the **EU–OECD AI Literacy Framework** (18 June 2026, four domains, 19 competences),
+  Ohio's promised **state model policy by end-2026**, and **UNESCO's AI-in-Education Observatory
+  for Latin America and the Caribbean**.
+- 🟡 **Method fix:** this KB's 8-path licence probe misses `main/COPYING.txt` and
+  `master/LICENSE.TXT`; extended to twelve paths.
+
+Append-only discipline preserved: `agents/trending.md` 87,095 → 87,162 lines,
+`repos/trending.md` 68,371 → 68,518; history untouched below.
 
 ### Pass p892 (same day, latest)
 

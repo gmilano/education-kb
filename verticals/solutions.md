@@ -20,7 +20,7 @@ engagement usually touches at least two.
 | Platform | Repo | Licence | Where it is strong | AI layering seam |
 |---|---|---|---|---|
 | **Moodle** | https://github.com/moodle/moodle | GPL-3.0 (`COPYING.txt`) | Everywhere; the default in EMEA and LATAM public education | Plugin API + LTI 1.3 tool. Moodle HQ's own https://github.com/moodlehq/wiki-rag (BSD-3-Clause) shows the first-party RAG pattern |
-| **Open edX** | https://github.com/openedx/edx-platform | AGPL-3.0 | Large-scale MOOCs, corporate academies | XBlocks and `edx-ora2` open-response grading |
+| **Open edX** | https://github.com/openedx/openedx-platform | AGPL-3.0 | Large-scale MOOCs, corporate academies | XBlocks (https://github.com/openedx/XBlock, **Apache-2.0**) and `edx-ora2` open-response grading. **Slug corrected p896** — `openedx/edx-platform` is a rename alias, not the canonical repo. |
 | **Canvas LMS** | https://github.com/instructure/canvas-lms | AGPL-3.0 | North American higher ed | Rich REST API; https://github.com/vishalsachdev/canvas-mcp (MIT) exposes it to agents directly |
 | **Artemis** | https://github.com/ls1intum/Artemis | MIT | CS/engineering programmes with automated code assessment | First-party AI tier already exists (`edutelligence`, `Pyris`) — **the lowest-friction permissive starting point** |
 | **Kolibri** | https://github.com/learningequality/kolibri | MIT | Offline/low-bandwidth deployments | Offline-capable; pair with `ollama` for a fully disconnected tutor |
@@ -64,6 +64,8 @@ client wants a closed derivative.
 | **Frappe Education** | https://github.com/frappe/education | GPL-3.0 (`license.txt`: "License: GNU GPL V3") | Education module on the ERPNext/Frappe stack. |
 | **UniTime** | https://github.com/UniTime/unitime | **Apache-2.0** (`LICENSE@master`) | **Restored p894.** Apereo university **course and exam timetabling plus student scheduling**, 360 ★, **pushed 2026-11-17**. Runs standalone or interfaces with an existing SIS. **The one permissive, actively maintained system in this category** — and the answer to the registrarial gap at the platform layer. Its solver https://github.com/UniTime/cpsolver is **LGPL-3.0** (84 ★): keep it behind a service boundary in a closed derivative. |
 | **Timetablely** | https://github.com/GEOSOFT-GLOBAL/timetablely | MIT | **Restored p894.** Automated timetable generator, 27 ★ — the small-scale permissive alternative to UniTime. **Pushed 2026-08-17, three months idle;** a starting point, not a dependency. |
+| **i-Diário** | https://github.com/portabilis/i-diario | **AGPL-3.0** — 🔴 **byte-read correction, p896** | **Restored p896.** The teacher-facing *diário de classe* (class register: attendance, marks, lesson records) companion to **i-Educar** above, from the same Brazilian publisher — 117 ★, pushed 2026-10-14. 🔴 **GitHub reports `NOASSERTION` and the licence is AGPL-3.0**: the `LICENSE` file is the **Affero GPL in Portuguese translation** (*"LICENÇA PÚBLICA GERAL AFFERO GNU"*, 35,326 B), which GitHub's SPDX matcher cannot recognise. An engagement that read the API field alone would treat the strongest copyleft in this file as "licence unknown". **Together with i-Educar this is the most complete open Brazilian public-school stack.** |
+| **Gestão Escolar** | https://github.com/Antonio-Neves/Gestao-Escolar | MIT | **Restored p896.** Python/Django school-management system, 50 ★, pushed 2026-10-12, Portuguese-language. Self-described as in development. **The only MIT-licensed LATAM-origin school system this KB has verified** — thin, but it is the permissive option in a category where the mature Brazilian systems are GPL and AGPL. |
 
 **Rejected this pass, recorded so it is not re-proposed (p892).** A fresh search for
 open-source school ERP returned **Fedena** in a licence comparison table under **Apache-2.0**,
@@ -137,9 +139,55 @@ deliverable at all.
 | Platform | Repo | Licence | Notes |
 |---|---|---|---|
 | **Apereo CAS** | https://github.com/apereo/cas | Apache-2.0 | SSO incumbent in higher ed. Where you enforce per-role access to an AI tier. |
+| **phpCAS** | https://github.com/apereo/phpCAS | Apache-2.0 | **Restored p896.** The **PHP** CAS client, 802 ★ — the one that matters for Moodle. The row above is the server; this is how your tool actually joins the institution's existing SSO. **Pushed 2026-06-30; pin it.** |
+| **java-cas-client** | https://github.com/apereo/java-cas-client | Apache-2.0 (byte-read; API says `NOASSERTION`) | **Restored p896.** JVM CAS client, 949 ★, pushed 2026-11-16. |
+| **Aspects** | https://github.com/openedx/openedx-aspects | Apache-2.0 | **Restored p896.** First-party Open edX analytics — permissive, unlike the platform. |
 | **Richie** | https://github.com/openfun/richie | MIT | Course catalogue/marketing CMS for Open edX. |
 | **JupyterHub** | https://github.com/jupyterhub/jupyterhub | BSD-3-Clause | Multi-user computational classrooms. |
 | **Appsmith** | https://github.com/appsmithorg/appsmith | Apache-2.0 | Builds the teacher review queue that makes human-in-the-loop real rather than aspirational. |
+
+## Mobile clients — permissive, and separable from their copyleft servers (restored in `p896`)
+
+The most commercially useful licence asymmetry in this file. **Moodle, Open edX and Oppia are
+GPL or AGPL on the server and permissive on the phone.** A studio can therefore ship a branded,
+closed mobile experience over a copyleft platform the client already runs — which is exactly the
+engagement shape that otherwise dies on the licence review. These rows were carried here and
+deleted by the 2026-11-18 cleanup.
+
+| Client | Repo | Licence | Server licence | Note |
+|---|---|---|---|---|
+| **Moodle App** | https://github.com/moodlehq/moodleapp | **Apache-2.0** | Moodle is GPL-3.0 | 1,007 ★, pushed 2026-11-17, **maintained by Moodle HQ itself**. The largest permissive first-party artefact in the Moodle ecosystem. Licence byte-read at `main/COPYING.txt`. |
+| **Open edX Android** | https://github.com/openedx/openedx-app-android | **Apache-2.0** | Open edX is AGPL-3.0 | 38 ★, pushed 2026-11-09. |
+| **Open edX iOS** | https://github.com/openedx/openedx-app-ios | **Apache-2.0** | Open edX is AGPL-3.0 | 31 ★, pushed 2026-10-30. |
+| **Oppia Android** | https://github.com/oppia/oppia-android | Apache-2.0 | Oppia is Apache-2.0 | 422 ★, pushed 2026-11-18. Offline-capable by design — the mobile half of the low-connectivity brief. |
+
+## Proctoring and exam integrity — restored in `p896`, and read the prohibition first
+
+🔴 **Regulatory position before the rows, because it decides whether any of them can ship.**
+Under the EU AI Act, *inferring emotions* in an education institution is not a high-risk
+practice to be managed in 2027 — it is a **prohibited practice, in force since 2 February
+2025**, outside narrow medical and safety grounds. Exam-access and assessment proctoring is
+*separately* Annex III high-risk (obligations from 2 December 2027). So an EMEA proctoring build
+has a hard floor: **no affect, stress or "suspicion" inference at all**, today. The open repos
+below are near-uniformly built on webcam behaviour analysis, which is the capability the
+prohibition targets.
+
+| Tool | Repo | Licence | Stars / last push | Note |
+|---|---|---|---|---|
+| **OpenProctor** | https://github.com/kamlendras/OpenProctor | **AGPL-3.0** | 16 ★ · 2025-05-28 | The largest of them, and **idle for 18 months**. AGPL on top of the regulatory problem. |
+| **pariksha** | https://github.com/SriSatyaLokesh/pariksha | **AGPL-3.0** | 0 ★ · 2026-11-07 | Active but single-author. |
+| **sudosylabs/proctor** | https://github.com/sudosylabs/proctor | **AGPL-3.0** | 0 ★ · 2026-11-16 | Active but single-author. |
+| **Proctora** | https://github.com/amaanwarsi/Proctora | MIT | 3 ★ · 2026-04-07 | The only permissive one. |
+| **Online-Proctoring-system** | https://github.com/code-by-abrar/Online-Proctoring-system | MIT | 0 ★ · 2026-09-19 | Student project. |
+| **ganesh-786/Proctor** | https://github.com/ganesh-786/Proctor | MIT | 0 ★ · 2025-06-09 | Idle. |
+
+🔵 **The honest read: there is no adoptable open proctoring platform, and that is the finding.**
+The category tops out at 16 ★ with the largest entry dormant, while `openedx/edx-proctoring`
+(AGPL-3.0, in `repos/foundations.md`) remains the only institution-maintained option. For an EU
+engagement the defensible product is **integrity by assessment design** — randomised item
+generation (`PrairieLearn`), authenticated submission over CAS, and auditable human review
+(`Appsmith`) — not behavioural surveillance. That is a studio position worth stating to a client
+before they ask for a proctoring pilot.
 
 ## Curriculum data and learning-content assets
 
@@ -157,8 +205,12 @@ copyleft licences while the *tooling* stays permissive — the inverse of the pl
 split in this KB's headline fact. Licence triage therefore has to be run per artefact class,
 not once per engagement.
 
-**45 platforms and content assets, all URL- and licence-verified** (43 at p893; `UniTime` and
-`Timetablely` restored in p894, both re-measured today).
+**63 platforms and content assets, all URL- and licence-verified**, counted programmatically
+across this file's tables (`UniTime` and `Timetablely` were restored in p894). **15 were restored
+in `p896`** — four mobile clients, six proctoring tools, two Brazilian school systems, two CAS
+clients and the Open edX analytics stack — after the shelf-vs-history diff showed they had been
+deleted from this file by the 2026-11-18 cleanup rewrite without being listed as removals. All
+re-measured today on both channels.
 
 ## Honest gaps
 

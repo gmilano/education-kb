@@ -28,7 +28,7 @@ engagement.
 
 | Repo | Licence | Role |
 |---|---|---|
-| https://github.com/openedx/edx-platform | AGPL-3.0 | Open edX. The reference large-scale MOOC/LMS core. **Note the slug** — `openedx/openedx-platform` is a 404 that circulated in earlier passes of this KB. |
+| https://github.com/openedx/openedx-platform | AGPL-3.0 | Open edX LMS & Studio. The reference large-scale MOOC/LMS core — **8,242 ★, pushed 2026-11-17**. 🔴 **Slug corrected in p896**: this is the canonical name and `openedx/edx-platform` is a rename alias. The earlier note in this row said the opposite; it was produced by probing the `main` branch of a repo whose default branch is `master`. Both names serve byte-identical files on `raw.githubusercontent.com`, so raw cannot tell them apart — only the search channel can. |
 | https://github.com/moodle/moodle | GPL-3.0 (no root `LICENSE`; verified in `COPYING.txt`) | The world's most-deployed LMS. Huge plugin surface, which is where AI work actually lands. |
 | https://github.com/instructure/canvas-lms | AGPL-3.0 | Canvas. Dominant in North American higher ed; strong LTI and REST API. |
 | https://github.com/ls1intum/Artemis | MIT | TU Munich's interactive learning platform with automated programming assessment. **The best permissive LMS core in education** — pair with `edutelligence`/`Pyris`. |
@@ -56,6 +56,9 @@ same agent ships into Canvas, Moodle and Open edX.
 | https://github.com/Faixiang/Moodle-MCP | MIT | **Added p893.** Zero-dependency MCP server over the Moodle Web Service API — **read-only**. The MCP counterpart to LTI: where `ltijs` ships your tool *into* the LMS, this exposes the LMS *to* an agent. |
 | https://github.com/G36maid/moodle-mcp | MIT | **Added p893.** Read-**write** Moodle MCP — courses, assignments, forums, grades, files-as-markdown. The graduation step from the read-only server above. |
 | https://github.com/blend-ed/openedx-mcp | AGPL-3.0 | **Added p893.** Open edX staff/superuser admin as an MCP facade (Ulmo), native platform APIs only. Vendor-maintained, not a foundation project — see `agents/top.md`. |
+| https://github.com/openedx/XBlock | Apache-2.0 | **Restored p896.** The Open edX component framework — 471 ★, pushed 2026-11-16. **This is the permissively licensed extension point of an AGPL platform**, and therefore the seam where a studio ships a learning component into Open edX without inheriting AGPL on its own code. Licence byte-read from `master/LICENSE.TXT` (uppercase `.TXT`, which this KB's 8-path probe missed). |
+| https://github.com/openedx/xblock-sdk | Apache-2.0 | **Restored p896.** Workbench and worked example XBlocks — 69 ★, pushed 2026-11-16. The development harness for the row above: build and test a component without standing up a full Open edX. |
+| https://github.com/instructure/common-cartridge-viewer | MIT | **Restored p896.** Instructure's own browser viewer for **IMS Common Cartridge** packages — 95 ★, pushed 2026-11-04. Content migration between LMSs runs through Common Cartridge; this is first-party, permissive and the fastest way to inspect what a client's export actually contains. |
 
 ## Registrarial and scheduling
 
@@ -79,6 +82,8 @@ Where the evidence for "did the AI actually help" has to live.
 | Repo | Licence | Role |
 |---|---|---|
 | https://github.com/yetanalytics/lrsql | Apache-2.0 | SQL-backed Learning Record Store, 144 ★, pushed 2026-11-14. Permissive, actively maintained — **the default LRS pick**, and the only one of the four here that is both. |
+| https://github.com/davidpesce/moodle-logstore_xapi | **GPL-3.0** | **Restored p896.** The Moodle plugin that emits **xAPI statements from Moodle's own logstore** into an LRS — 83 ★, pushed 2026-10-29. This is the missing first leg of every Moodle analytics build: without it the LRS above has nothing to ingest. GPL-3.0, like Moodle itself — it is a plugin *inside* the platform, so the copyleft is expected and contained. |
+| https://github.com/openedx/openedx-aspects | Apache-2.0 | **Restored p896.** **Aspects** — the first-party analytics stack for Open edX (10 ★, pushed 2026-11-16). Permissive, unlike the AGPL platform it reports on. |
 | https://github.com/openfun/ralph | MIT | xAPI/LRS toolbox from France Université Numérique. |
 | https://github.com/adlnet/ADL_LRS | Apache-2.0 | Reference LRS from ADL, who authored xAPI, 335 ★. **Last push 2025-11-14 (369 days idle)** — useful as a spec reference, not as a production dependency. |
 | https://github.com/LearningLocker/learninglocker | GPL-3.0 | Widely deployed LRS, 587 ★. **Do not start new work here: last push 2024-05-30, 902 days idle.** Copyleft as well. Use `lrsql` instead. |
@@ -91,6 +96,8 @@ Where the evidence for "did the AI actually help" has to live.
 | https://github.com/PrairieLearn/PrairieLearn | MIT | Randomised, auto-graded problem generation. Permissive and genuinely strong; the best open assessment engine for STEM. |
 | https://github.com/jupyter/nbgrader | BSD-3-Clause (1,370 ★) | Assignment release/collect/autograde for notebooks. The data-science course standard. |
 | https://github.com/autolab/Autolab | Apache-2.0 | CMU's autograding platform with secure job execution. |
+| https://github.com/autolab/Tango | Apache-2.0 | **Restored p896.** Autolab's **standalone RESTful autograding service** — 49 ★, pushed 2026-10-21. The row above is the platform; this is the execution tier on its own, which is the piece you actually want when grading has to be called from something that is not Autolab (an LTI tool, an agent, a CI job). |
+| https://github.com/PrairieLearn/grader-python-v2 | MIT | **Restored p896.** First-party Python grader image for PrairieLearn, pushed 2026-11-18. **1 ★ — carried for provenance, not popularity**: it is maintained by the same organisation as the engine above, which is the distinction this file draws between a small first-party repo and a small personal one. |
 | https://github.com/ls1intum/Ares | MIT | Automated programming-exercise assessment library behind Artemis. |
 | https://github.com/openedx/edx-ora2 | AGPL-3.0 | Open-response assessment: peer, self and staff grading workflows. The natural seam for an AI grading assist. |
 | https://github.com/openedx/codejail | Apache-2.0 | Sandboxed untrusted-code execution. **Use this (or Ares) before you let an agent run student code.** |
@@ -108,6 +115,11 @@ Where the evidence for "did the AI actually help" has to live.
 | https://github.com/learningequality/le-utils | MIT | Shared constants and format definitions for the Kolibri ecosystem. |
 | https://github.com/openfun/richie | MIT | Course-catalogue/marketing CMS for Open edX. |
 | https://github.com/openfun/marsha | MIT | Video management for LMS-embedded teaching. |
+| https://github.com/h5p/h5p-interactive-video | MIT | **Restored p896.** H5P's interactive-video content type — 267 ★, pushed 2026-11-17. 🟢 **The licence inversion worth knowing**: `h5p-php-library` above is **GPL-3.0**, but the individual H5P *content types* are **MIT**. A studio that needs a permissive interactive-content pipeline can compose the MIT component repos instead of embedding the GPL host library. (No licence file at any of 12 candidate paths; SPDX from the search channel only — treat this row's licence as the weakest-evidence one in this file.) |
+| https://github.com/h5p/h5p-course-presentation | MIT | **Restored p896.** Slide-based presentation content type, 57 ★, pushed 2026-11-11. |
+| https://github.com/h5p/h5p-audio-recorder | MIT | **Restored p896.** Learner audio capture, 36 ★, pushed 2026-11-17 — the input half of any pronunciation or oral-assessment build (pair with `OpenPronounce` in `agents/top.md`). |
+| https://github.com/h5p/h5p-speak-the-words | MIT | **Restored p896.** Speech-answered questions, 12 ★, pushed 2026-11-17. |
+| https://github.com/h5p/h5p-cli | MIT | **Restored p896.** H5P command-line tooling — 79 ★, pushed 2026-10-31. The piece that makes content generation **scriptable**, which is what turns an authoring agent into a pipeline rather than a demo. |
 
 ## Document and media ingestion
 
@@ -178,8 +190,65 @@ identified.
 | https://github.com/open-spaced-repetition/fsrs4anki | MIT | FSRS spaced-repetition scheduler. A real, evidence-backed learning algorithm to pair with an agent instead of inventing a review schedule. |
 | https://github.com/appsmithorg/appsmith | Apache-2.0 | Low-code internal tooling — teacher review queues and human-in-the-loop consoles without a bespoke front end. |
 | https://github.com/Crosstalk-Solutions/project-nomad | Apache-2.0 | Offline-first knowledge/education server. Relevant to the same low-connectivity brief as Kolibri. |
+| https://github.com/learningequality/morango | MIT | **Restored p896.** The **peer-to-peer database replication engine** under Kolibri (Django, SQLite + PostgreSQL) — 15 ★, pushed 2026-11-17. Low stars, high leverage: it is how learner records sync between devices and a server **without continuous connectivity**, which is the actual hard part of a rural deployment. Reusable on its own. |
+| https://github.com/instructure/instructure-ui | MIT (`master/LICENSE.md`, byte-read 1,175 B) | **Restored p896.** Instructure's own accessible component library — 487 ★, pushed 2026-11-18. 🟡 **GitHub reports `NOASSERTION`; the licence text is MIT.** Build Canvas-adjacent interfaces that look native without touching the AGPL platform. |
+| https://github.com/openedx/paragon | Apache-2.0 | **Restored p896.** The Open edX design system — 141 ★, pushed 2026-11-17. Same role as the row above, on the other platform, and also permissive while its platform is not. |
+| https://github.com/mitodl/ol-infrastructure | BSD-3-Clause | **Restored p896.** MIT Open Learning's **production infrastructure-as-code** — 59 ★, pushed 2026-11-18. The only open artefact this KB has found that shows how a large university actually *runs* Open edX in production rather than how to install it. |
+| https://github.com/apereo/java-cas-client | Apache-2.0 (`master/LICENSE`, byte-read 2,321 B) | **Restored p896.** CAS client for JVM applications — 949 ★. 🟡 GitHub reports `NOASSERTION`; the text is Apache. Institutional SSO is the first integration question in every higher-ed engagement. |
+| https://github.com/apereo/phpCAS | Apache-2.0 | **Restored p896.** CAS client for PHP — 802 ★. The one that matters for **Moodle**, which is PHP. **Pushed 2026-06-30**, so pin it. |
 
-**47 foundational repos, all verified** — comfortably past the 5-repo floor.
+**109 foundational repos, all verified**, counted programmatically across the fourteen sections
+of this file rather than asserted — the previous standing figure of "47" was stale and nobody
+had recounted it. **34 of the 109 were restored in `p896`** from
+`archive/2026-11-18-pre-cleanup/repos-foundations.md`, after a shelf-vs-history diff showed they
+had been carried on this shelf, deleted by the 2026-11-18 cleanup rewrite, and left unrecorded in
+that pass's own list of removals. Every restored row was re-measured today on both channels;
+**none of them 404s.** Raw diff: `evidence/shelf-vs-history-diff.2026-11-18-p896.tsv`.
+
+## The TU Munich Artemis estate — permissive teaching infrastructure, restored in `p896`
+
+`agents/top.md` carries `edutelligence` and `Pyris`, and this file carries `Artemis` and `Ares`,
+because TU Munich is the one university shipping a **permissively licensed, production** teaching
+stack. The rest of that estate was on this shelf and was dropped by the 2026-11-18 cleanup. It is
+the only worked example in open source of an LMS, its AI services, its native clients and its
+deployment automation all under MIT.
+
+| Repo | Licence | Role |
+|---|---|---|
+| https://github.com/ls1intum/Apollon | MIT (`main/LICENSE`, byte-read 1,091 B) | **UML modelling editor** — 106 ★, pushed 2026-11-18. The largest of the restored TUM rows. Embeddable diagram editing with a model you can grade programmatically, which is what makes **diagram assessment** tractable at all. |
+| https://github.com/ls1intum/artemis-android | MIT | Native Android client for Artemis, 13 ★, pushed 2026-11-18. |
+| https://github.com/ls1intum/artemis-ios | MIT | Native iOS client for Artemis, 13 ★, pushed 2026-11-16. |
+| https://github.com/ls1intum/artemis-ansible-collection | MIT | Ansible collection that deploys Artemis, 8 ★, pushed 2026-11-18. **Read this before quoting a self-hosting estimate.** |
+| https://github.com/ls1intum/standardized-competency-catalog | MIT | Standardised competency catalogue, 1 ★, pushed 2026-03-01. Small, but it is the vocabulary a competency-aware tutor needs and most projects invent badly. |
+
+## Integration code written by the institutions that run the platforms — restored in `p896`
+
+A distinct and under-used class: not products, but the glue universities wrote for their own
+estates and published. It is the closest thing to seeing a client's problem already solved, and
+every row is permissive or ECL.
+
+| Repo | Licence | Role |
+|---|---|---|
+| https://github.com/UniversityOfHelsinkiCS/sis-importer | MIT (byte-read 1,111 B) | **Student-information-system importer** — the SIS seam this KB repeatedly calls its largest gap, written by a university that had to solve it. 1 ★, pushed 2026-11-16. |
+| https://github.com/UniversityOfHelsinkiCS/suoritustarkistin | MIT | Completion/credit-registration service against the SIS, pushed 2026-11-17. |
+| https://github.com/UniversityOfHelsinkiCS/sis-ns-manager | Apache-2.0 | SIS namespace management, pushed 2026-11-10. |
+| https://github.com/KTH/canvas-api | MIT | KTH's Node.js client for the **Canvas** API, 10 ★, pushed 2026-11-16. Maintained against a live production estate. |
+| https://github.com/AaltoGIS/classroom-grader | BSD-3-Clause | Aalto's grading automation, pushed 2026-11-09. |
+| https://github.com/kyoto-u/comfortable-sakai | Apache-2.0 | Kyoto University's browser extension improving **Sakai** usability, 25 ★. 🔴 **Last push 2023-03-15** — carried as evidence of the pattern, not as a dependency. |
+| https://github.com/cilt-uct/sakai-skin-vula | ECL-2.0 (byte-read 11,120 B) | University of Cape Town's Sakai theme (*Vula*), pushed 2026-06-03. **The one African university estate this KB has found publishing its LMS integration code**, and it is properly licensed. |
+| https://github.com/cilt-uct/tsugi-migrate-to-brightspace | Apache-2.0 | UCT's LTI-based migration tooling toward Brightspace, pushed 2026-10-22. Migration is the commonest real engagement; this is someone's actual migration. |
+| https://github.com/cilt-uct/tsugi-request-gradebook-upload | Apache-2.0 | UCT LTI tool for gradebook upload requests, pushed 2026-10-06. |
+
+## Teaching-grade reference implementations — restored in `p896`
+
+Not education *platforms*: systems built to be **read** by students. They matter to a studio for
+one reason — when an engagement includes curriculum, these are the permissively licensed
+artefacts a course can be built around, and they are maintained by the departments that teach it.
+
+| Repo | Licence | Role |
+|---|---|---|
+| https://github.com/cmu-db/bustub | MIT (byte-read 1,075 B) | Carnegie Mellon's educational RDBMS — **5,171 ★**, pushed 2026-11-13. The largest restored row in this file by an order of magnitude, and the reference artefact for database teaching worldwide. |
+| https://github.com/RWTH-OS/eduOS-rs | Apache-2.0 | RWTH Aachen's teaching operating system in Rust — 493 ★, pushed 2026-10-04. |
 
 ## Gaps and caveats
 
@@ -200,10 +269,14 @@ identified.
 - **No open-source student information system qualifies as a *foundation*.** The SIS options
   (RosarioSIS, openSIS, Gibbon, i-educar, GegoK12) are in `verticals/solutions.md` — they are
   deployable products, not libraries to build on. There is no Ed-Fi-grade open SIS core.
-- **Star counts and last-push dates are now measured** via batched `repo:` qualifiers
-  against `gh api search/repositories`; see `agents/top.md` for method. Three repos
-  (`openedx/edx-platform`, `All-Hands-AI/OpenHands`, `danny-avila/LibreChat`) are absent from
-  search results in this session, so their star figures are recorded as unavailable.
+- **Star counts and last-push dates are measured** via batched `repo:` qualifiers against
+  `gh api search/repositories`; see `agents/top.md` for method. 🟢 **The three repos previously
+  recorded here as unretrievable were rename aliases, resolved in `p896`** —
+  `openedx/openedx-platform` (8,242 ★), `OpenHands/OpenHands` (93,731 ★) and
+  `LibreChat-AI/LibreChat` (47,317 ★). A slug that serves `200` on `raw.githubusercontent.com`
+  but returns 0 hits from a `repo:` qualifier has been renamed, because raw follows GitHub's
+  rename redirects and search does not. **169 of 172 live slugs in this KB resolve on both
+  channels; those three were the only failures and all three are now resolved.**
 
 ## Appendix — verified metrics table (2026-11-18)
 

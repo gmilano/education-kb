@@ -1,0 +1,12 @@
+slug	path	http	bytes	github_spdx	byte_read_verdict
+portabilis/i-diario	main/LICENSE	200	35326	NOASSERTION	AGPL-3.0 (Portuguese translation: "LICENCA PUBLICA GERAL AFFERO GNU")
+8infinitelabs/eucompliance	main/LICENSE	200	781	NOASSERTION	EUPL-1.2 (European Union Public Licence v1.2)
+apereo/java-cas-client	master/LICENSE	200	2321	NOASSERTION	Apache License
+instructure/instructure-ui	master/LICENSE.md	200	1175	NOASSERTION	MIT
+moodlehq/moodleapp	main/COPYING.txt	200	-	Apache-2.0	found only outside the 8-path probe set
+openedx/XBlock	master/LICENSE.TXT	200	-	Apache-2.0	found only outside the 8-path probe set (uppercase .TXT)
+h5p/h5p-interactive-video	-	404 on 12 paths	-	MIT	no licence file found; SPDX from search channel only
+YoussefMohAttia/MultiAgent-AI-Teaching-Assistant	-	404 on 8 paths	-	NONE	unlicensed
+giovanayngrid-gk/multiagent-ai-tutor	-	404 on 8 paths	-	NONE	unlicensed
+nifalconi/educational-agents	-	404 on 8 paths	-	NONE	unlicensed
+muskvdc/EduTwin-Africa	-	404 on 8 paths	-	NONE	unlicensed

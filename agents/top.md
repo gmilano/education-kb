@@ -115,8 +115,13 @@ Sorted by stars.
 | **ankipa** | https://github.com/warleysr/ankipa | MIT | 10 | 2026-11-07 | Pronunciation assessment as an Anki add-on; the "agent inside an existing study tool" pattern. **The only LATAM-origin education agent verified in this pass.** | LATAM — Brazil |
 | **EDU AI Agent Suite** | https://github.com/virtualryder/edu-ai-agents | MIT (SPDX: NOASSERTION; licence text reads MIT) | 4 | 2026-10-10 | Eight reference agent workflows with deny-by-default authorisation, student-PII masking, human-in-the-loop enforcement and tamper-evident audit, aligned to FERPA, COPPA, IDEA/504 and ADA Title II. **Grading uses a deterministic rubric service, not an LLM** — which is what makes it legally usable in several US states. Targets Amazon Bedrock. Tiny and new; valuable as an architecture, not as a dependency. | North America |
 | **ai-tutor-agent** | https://github.com/vulinh1704/ai-tutor-agent | MIT | 0 | 2026-11-16 | FastAPI + LangGraph tutoring starter: Socratic hints, rubric grading, session memory, offline demo mode; checks every draft for answer leaks. Zero stars — a skeleton to read, not a dependency. | APAC — Vietnam |
+| **Socratic-Education-System** | https://github.com/HowieWang1121/Socratic-Education-System | MIT | 137 | 2026-05-03 | Socratic-method tutoring system whose README argues education is a right to be guaranteed rather than an obligation, and targets students without access to paid tutoring. **Restored p896** — it was carried on this shelf and deleted by the 2026-11-18 cleanup without appearing in that pass's own list of removals. At 137 ★ it is the eighth-largest education-native agent here. **Caveat: last push 2026-05-03**, so read it as a design reference. | APAC — China |
+| **education-skills** | https://github.com/flysheep-ai/education-skills | MIT | 125 | 2026-01-30 | Collection of education-specific **agent skills** (teaching, tutoring and study-support tools packaged for a coding agent). **Restored p896, and it moves a standing finding**: this is the largest member of the "tutor as an agent *skill*" cohort below, which two passes recorded as topping out at 118 ★. Idle since 2026-01-30. | APAC — China |
+| **civil-ai** | https://github.com/zhangl1001/civil-ai | MIT | 41 | 2026-11-08 | **Local-first** adaptive tutoring agent reference implementation for **iOS and Web**, applied to civil-service exam preparation. **Restored p896.** Two things make it worth a row despite 41 ★: it is one of very few open tutors with a **native mobile** target, and local-first inference is the posture that satisfies California AB 1159 and EMEA sovereignty procurement without a data-processing argument. | APAC — China |
 
-**34 education-specific agents, every URL and licence verified.** (p894 added no rows: its four
+**37 education-specific agents, every URL and licence verified.** (p896 restored three —
+`Socratic-Education-System`, `education-skills` and `civil-ai` — all of which this shelf had
+carried before the 2026-11-18 cleanup; all three re-verified on both channels today.) (p894 added no rows: its four
 legs produced 14 verified repositories, every one at 0–2 ★, and the p893 rule that this table
 carries only what a studio can actually build on was applied rather than relaxed. They are
 measured and reasoned about in `agents/trending.md`.) (22 at p891; `tutor-mcp` and
@@ -154,8 +159,8 @@ Not education products, but what an engagement will actually reach for.
 | **AI Engineering Hub** | https://github.com/patchy631/ai-engineering-hub | MIT | 41,974 | Not an agent: a large collection of worked agent projects. Useful as staff-upskilling material. |
 | **STORM** | https://github.com/stanford-oval/storm | MIT | 31,906 | Generates cited, structured long-form articles. Repurposes well for courseware drafting. **Last push 2025-09-30 — effectively dormant;** pin a version. |
 | **GPT Researcher** | https://github.com/assafelovic/gpt-researcher | Apache-2.0 | 30,768 | Autonomous research agent with citation discipline — literature-review scaffolds in higher ed. |
-| **OpenHands** | https://github.com/All-Hands-AI/OpenHands | MIT | *(unavailable — see note)* | Coding agent; the practical choice for automating LMS plugin and migration work. Canonical slug is `All-Hands-AI/OpenHands`; `OpenHands/OpenHands` is **not** the repo. Org also ships https://github.com/OpenHands/software-agent-sdk (MIT, 1,406 ★). |
-| **LibreChat** | https://github.com/danny-avila/LibreChat | MIT | *(unavailable — see note)* | Multi-model chat front end with auth and per-user quotas; fastest route to a governed institutional chat tier. Canonical slug is `danny-avila/LibreChat`. |
+| **OpenHands** | https://github.com/OpenHands/OpenHands | MIT | 93,731 | Coding agent; the practical choice for automating LMS plugin and migration work. 🔴 **Slug corrected in p896, and in the opposite direction to the earlier note.** `OpenHands/OpenHands` is the canonical repo (93,731 ★, pushed 2026-11-18); `All-Hands-AI/OpenHands` is a **rename alias** that `raw.githubusercontent.com` still serves, which is why earlier passes read it as canonical. The star count was recorded here as *unavailable* only because the alias was being queried. Org also ships https://github.com/OpenHands/software-agent-sdk (MIT). |
+| **LibreChat** | https://github.com/LibreChat-AI/LibreChat | MIT | 47,317 | Multi-model chat front end with auth and per-user quotas; fastest route to a governed institutional chat tier. 🔴 **Slug corrected in p896**: `LibreChat-AI/LibreChat` is canonical (47,317 ★, pushed 2026-11-18); `danny-avila/LibreChat` is a rename alias. Same failure mode as the OpenHands row above — see `agents/trending.md` p896 for the gate that catches it. |
 
 **Teaching assets, measured for the first time in p890.** Not agents and not education
 products, but the two largest permissively licensed *curricula* relevant to this KB, and both
@@ -164,11 +169,27 @@ https://github.com/microsoft/ai-agents-for-beginners (MIT, **80,197 ★**, pushe
 larger than any education agent that exists) and https://github.com/huggingface/agents-course
 (Apache-2.0, **35,115 ★**, pushed 2026-11-17).
 
-**Note on three unavailable star counts.** `All-Hands-AI/OpenHands`, `danny-avila/LibreChat`
-and `openedx/edx-platform` are consistently absent from `search/repositories` results in this
-session across repeated query shapes, while their `LICENSE` files return `200` on
-`raw.githubusercontent.com`. Existence and licence are confirmed; the star figure is simply
-not retrievable here. Recorded as unavailable rather than filled from a blog.
+**🟢 Resolved in `p896`: the three "unavailable" star counts were never unavailable.** This note
+used to record that `All-Hands-AI/OpenHands`, `danny-avila/LibreChat` and
+`openedx/edx-platform` were *consistently absent from `search/repositories` across repeated
+query shapes* while their `LICENSE` files returned `200` on `raw.githubusercontent.com` — and
+left it as an unexplained limitation of the channel. **The anomaly was correctly measured and
+wrongly diagnosed.** All three are **rename aliases**:
+
+> `raw.githubusercontent.com` follows GitHub's rename redirects; the search API's `repo:`
+> qualifier does not. A slug that serves `200` on raw but returns **0 hits** from `repo:` has
+> been **renamed** — the canonical name is the one search can see.
+
+| Alias | Canonical | Measured 2026-11-18 |
+|---|---|---|
+| `All-Hands-AI/OpenHands` | **`OpenHands/OpenHands`** | **93,731 ★**, MIT |
+| `danny-avila/LibreChat` | **`LibreChat-AI/LibreChat`** | **47,317 ★**, MIT |
+| `openedx/edx-platform` | **`openedx/openedx-platform`** | **8,242 ★**, AGPL-3.0 |
+
+Run over all **172** live slugs in this KB, the gate returns exactly these three
+(`evidence/rename-alias-gate.2026-11-18-p896.tsv`). **The symptom is diagnostic, not a dead end:
+three identical anomalies had one cause, and it was recoverable with the channels already in
+use.**
 
 ## Emerging pattern worth naming: the tutor as an agent *skill*
 
@@ -180,11 +201,22 @@ a **skill or MCP server inside an existing coding agent** — `ArnaudGuiovanna/t
 shortens time-to-pilot dramatically: no front end to build, and the learner already has the
 client installed.
 
+🔴 **p896 raises the cohort ceiling to 125 ★, and the member that raises it was deleted from
+this shelf by this KB.** `flysheep-ai/education-skills` (MIT, **125 ★**) is a collection of
+education agent skills — a cohort member by definition. It was carried in `agents/top.md`,
+removed by the 2026-11-18 cleanup, and therefore absent from the set every subsequent
+measurement enumerated. This is the **second** time this cohort has been declared flat against
+an incomplete roster, and it is the worse of the two: in p892 the missing member had never been
+found, whereas here it had been found, placed, and then dropped. **Re-enumerating from the live
+shelf is not enough when the shelf is what changed** — enumerate from the shelf *and* its
+history (`evidence/shelf-vs-history-diff.2026-11-18-p896.tsv`). The 1,000 ★ watch condition is
+untouched: 125 is still an order of magnitude short.
+
 **p892 revised this cohort's reading, and the revision is about method.** p890 and p891 both
 measured the cohort, found every member unmoved, and concluded the form had no traction.
 **`tutor-mcp` (104 ★) was not in the set either pass measured** — it was found this pass by a
 fresh discovery search rather than by re-measuring known rows. Including it, the cohort maximum
-is unchanged at 118 ★, but the cohort is **not** static: `tutor-mcp` was pushed 2026-11-17 while
+was recorded as 118 ★ (now 125, above), but the cohort is **not** static: `tutor-mcp` was pushed 2026-11-17 while
 `boyuchengz/canvas-mcp` has been idle since 2026-10-27. **Star traction is still absent;
 development activity is not.** The lesson is that re-measuring a set you did not re-enumerate
 produces "nothing changed" by construction. Watch condition unchanged — 1,000 ★ marks the form
@@ -310,9 +342,15 @@ Recording gaps because an unrecorded gap looks exactly like coverage.
 
 ## Corrections made this pass
 
-- **`openedx/openedx-platform` does not exist** — 404 on every branch. It had propagated through
-  `agents/top.md`, `repos/foundations.md`, `verticals/solutions.md` and `compose/patterns.md`
-  in earlier passes. The real slug is **`openedx/edx-platform`**.
+- 🔴 **Retracted in p896: `openedx/openedx-platform` *does* exist, and it is the canonical slug.**
+  The p895 correction above was itself wrong, and it ran the wrong way. Measured 2026-11-18:
+  `repo:openedx/openedx-platform` returns **8,242 ★, AGPL-3.0, pushed 2026-11-17**, while
+  `repo:openedx/edx-platform` returns **nothing**. Both names serve byte-identical files on
+  `raw.githubusercontent.com` (`LICENSE@master` = 35,136 B, `README.rst@master` = 12,381 B for
+  both), because raw follows GitHub's rename redirects and the search channel does not.
+  The "404 on every branch" that produced the p895 claim is reproducible only against
+  **`main`** — this repo's default branch is **`master`**. Probe matrix:
+  `evidence/openedx-slug-probe.2026-11-18-p896.tsv`.
 - **Single-author student projects removed from this table.** Earlier passes listed dozens
   alongside institution-backed platforms, which made the table useless for picking a starting
   point. They were real — `Abdulrahman-hayatu/lessonplan-ng` (Apache-2.0, 0 ★),

@@ -1,0 +1,8 @@
+slug	search_repo_qualifier	raw_LICENSE_master	bytes	canonical_name	verdict
+openedx/edx-platform	0 hits	200	35136	openedx/openedx-platform	RENAMED-ALIAS
+openedx/openedx-platform	1 hit (8242 stars)	200	35136	openedx/openedx-platform	CANONICAL
+All-Hands-AI/OpenHands	0 hits	200	1096	OpenHands/OpenHands	RENAMED-ALIAS
+OpenHands/OpenHands	1 hit (93731 stars)	200	1096	OpenHands/OpenHands	CANONICAL
+danny-avila/LibreChat	0 hits	200	1066	LibreChat-AI/LibreChat	RENAMED-ALIAS
+LibreChat-AI/LibreChat	1 hit (47317 stars)	200	1066	LibreChat-AI/LibreChat	CANONICAL
+# 169 of 172 live KB slugs resolved on the search channel; the 3 above are the only failures, and all 3 are renames.
