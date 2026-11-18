@@ -1,0 +1,7 @@
+channel	probe	code	verdict
+api.github.com/search/repositories	q=repo:odoo/odoo	200	OPEN -- channel A of 885-G1's test; X-RateLimit-Limit 30 (search resource)
+api.github.com/search/commits	q=repo:odoo/odoo	422	DOWN -- second consecutive pass. 884-G3 (liveness bound) stays BLOCKED; every liveness figure remains HEAD >= date
+raw.githubusercontent.com	odoo/odoo/master/LICENSE	200	OPEN -- channel B of 885-G1's test
+api.github.com/repos/{owner}/{repo}	odoo/odoo	403	BLOCKED -- no tree listing via REST; p886 used a blobless clone instead
+git ls-remote --symref	odoo/odoo HEAD	ok	OPEN -- resolves default branch; agreed with channel A on 163/163 rows
+git clone --depth 1 --filter=blob:none --no-checkout	sudosylabs/proctor	ok	OPEN and NEW to this KB -- enumerates licence topology EXACTLY (3,288 tracked paths), replacing path guessing

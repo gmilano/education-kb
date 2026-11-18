@@ -6,7 +6,66 @@ updated: 2026-11-18
 
 # Foundational repos — education
 
-**Pass `p885`, 2026-11-18** (second pass of the day). **`p885` finished the sweep `p884` started and
+**Pass `p886`, 2026-11-18** (third pass of the day). **`p886` ran `885-G1`'s two-channel test over all
+163 shelf rows. This file's cells survived it intact — and the two rows the gate called
+`NO-GRANT-FILE` are two rows this file already had right, which is the pass's real finding about the
+instrument rather than about the shelf.**
+
+- 🟢 **`885-G1` EXECUTED over 163 rows: `144` AGREE (88.3%), `13` BYTES-ONLY, `4` BOTH-ABSENT, `1`
+  DISAGREE, `1` unrecognised; `0` in `885-G1`'s own `FIELD-ASSERTS-PAYLOAD-DENIES` class**
+  ([`record`](../evidence/dual-channel-885G1.2026-11-18-p886.tsv)). 🟢 **`0 / 163` default-branch
+  disagreements** between `search/repositories` and `git ls-remote --symref` — the symref fix `p885`
+  shipped for `884-G2` is confirmed sound on 30× the population it was built on.
+- 🟢 **The permissive share of this estate, measured on BYTES rather than on metadata: `128 / 163` =
+  78.5%.** Compare the metadata channel's own view of the same 163 rows: it reports `NOASSERTION` or
+  `null` on **18** of them, and the bytes carry a real grant in **13** of those, so **a
+  metadata-only census would have undercounted the known-grant estate by 13 rows** it cannot see a
+  grant for. 🔵 **`T14` is not a curiosity; it is a systematic
+  undercount, and this is the first pass to put a number on its size.**
+- 🔴 **`LICENSE.TXT` is missing from `p885`'s shipped ladder, and it manufactured an absence on this
+  file's own rows.** `repos/foundations.md:408-409` records
+  [`openedx/XBlock`](https://github.com/openedx/XBlock) and
+  [`openedx/xblock-sdk`](https://github.com/openedx/xblock-sdk) as **Apache-2.0 (`LICENSE.TXT`)**, and
+  `:758` already names the uppercase-extension trap. `p885`'s
+  `compose/code/p885-symref-grant-ladder/fetch_grants.sh:40` probes eight paths and **`LICENSE.TXT`
+  is not one of them**, so it returns `404 / no-grant` on both. Re-read this pass:
+  **Apache-2.0, 11,358 B, `sha256₁₂ cfc7749b96f6`, `master/LICENSE.TXT`, byte-identical across both
+  repositories.** 🔵 **The shelf was right and the verifier could not reproduce it** — repaired with
+  12 controls in `compose/code/p886-dual-channel-grant/licence_paths.sh`.
+- 🔴 **A false ABSENCE on this estate, carried for ~611 passes while this KB's own module held the
+  refutation.** `OS4ED/openSIS-Classic` is published on three live shelves as having *"no licence
+  file at all"* / *"GPL per README; no licence file"*. **Its grant is GPL-2.0, 17,286 B,
+  `sha256₁₂ 224ac3d403e3`, at `master/docs/License.txt`** — re-read first-hand this pass and
+  confirmed by tree enumeration. 🔴 **`compose/code/pass275-grant-enumeration/`'s README names this
+  exact repository and this exact path as the case it was built on.** The gate was right, the shelves
+  were wrong, and nothing carried the finding across. 🔵 **`T13` (propagation, not discovery, is the
+  binding constraint) demonstrated on a live cell.**
+- 🟡 **Tree enumeration is the structural answer to path guessing, and it is ALREADY here** — **91**
+  instruments use `--filter=blob:none`, **104** use `ls-tree`, `compose/code/p215-lstree-grant-recovery/`
+  exists, `make enumerate` ships since `p275`, and `make ladder-audit` grades **919** ladders with
+  **57** already `TREE-ENUMERATED`. 🔴 **`p885` shipped a new 8-path ladder regardless, and it
+  regressed against `gate-ladder-case` (`p283`) and `gate-enumeration` (`p275`), both passing.**
+- 🔴 **`886-G1`: four rows carry a grant whose arity is greater than one, and three of them scored
+  `AGREE`.** `RWTH-OS/eduOS-rs` (`:666`, already correct here) is the only one the test could see,
+  because disjunction across two files happens to produce a disagreement. Conjunction and
+  per-directory grants do not. Full treatment: `agents/top.md` → **`## Licence arity`**.
+- 🟡 **`iiab/iiab` (2,052 ★) is per-FILE, and this file's cell says `GPL-2.0`.** Its `LICENSING.md`
+  (914 B, `sha256₁₂ b7ac7e43372f`) states that files **without** an explicit notice are GPL-2.0
+  (© 2015-2026 Unleash Kids), while contributors are **encouraged to license their work under the
+  GNU Library GPL v2 or later**. 🔵 **The cell is right about the default and silent about the
+  rest**; for the offline-first patterns (`P5`, `P20`) the GPL/LGPL distinction is the whole
+  linking question, so this row needs a per-file read before it is built against, not a re-read of
+  its root `LICENSE`.
+- 🔴 **`0` new repositories from the eight prescribed legs for the EIGHTH consecutive pass** — `63`
+  facts, `63` held, `0` new ([`record`](../evidence/websearch-legs.2026-11-18-p886.tsv)). The
+  platform leg (`open source platform education ERP CRM MIT Apache`) returned Apache OFBiz, Corteza,
+  Krayin, iDURAR, iDempiere and Dolibarr and **the source itself states it found no MIT/Apache
+  education-specific platform** — independent corroboration of this KB's standing nil, from a leg
+  that was trying to refute it.
+- 🔴 **`search/commits` `422` for the second consecutive pass → `884-G3` stays BLOCKED**; liveness on
+  every row here remains **`HEAD ≥ date`** ([`record`](../evidence/channel-state.2026-11-18-p886.tsv)).
+
+**Previous pass (`p885`), retained:** **Pass `p885`, 2026-11-18** (second pass of the day). **`p885` finished the sweep `p884` started and
 the institutional category does NOT grow. It also found that this KB's grant probe was blind to one
 repository in nineteen, and fixed it.**
 

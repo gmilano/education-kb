@@ -6,7 +6,42 @@ updated: 2026-11-18
 
 # Market intelligence — education
 
-**Pass `p885`, 2026-11-18** (second pass of the day). **All four regional legs ran. `29` facts
+**Pass `p886`, 2026-11-18** (third pass of the day). **All four regional legs ran. `63` facts checked
+against this file, `63` already held, `0` new, `0` new repositories. This KB stays ahead of its
+secondary sources for the third consecutive pass — and `p886` states precisely what that does and
+does not license us to conclude.**
+
+### 🟢 The held/new split, per leg — `p886`
+
+| Leg | Facts | Held | New | New repos | What it returned, and what it adds |
+|---|---:|---:|---:|---:|---|
+| `top open source AI agents education 2026 github MIT` | 4 | **4** | 0 | **0** | 🔴 **The search engine itself reported that it "didn't turn up a ranking of open-source AI agents specifically for education."** Named `OpenHands`, `SWE-agent`, `MetaGPT`, `CrewAI`, `NousResearch/hermes-agent` — all horizontal, all indexed. |
+| `github trending education AI 2026` | 5 | **5** | 0 | **0** | `HKUDS/DeepTutor`, `OpenMAIC` (~42K ★ claimed), `ai-engineering-hub` (~40.5K), `Claw-ED`, `withmarbleapp/os-taxonomy`. All five indexed. 🔴 Star counts disagree **between reports in the same week** (DeepTutor 48,268 on 2026-10-29 vs 52,783 on 2026-11-01 vs this KB's first-hand **60,195** on 2026-11-18). |
+| `open source platform education ERP CRM MIT Apache` | 4 | **4** | 0 | **0** | Apache OFBiz, Corteza (Apache-2.0), Krayin (MIT), iDURAR (MIT), iDempiere, Dolibarr. 🟢 **The source states outright it "found no MIT- or Apache-licensed platform that is specifically built for education"** — this KB's standing nil, corroborated by a leg trying to refute it. |
+| `AI education industry trends 2026` | 4 | **4** | 0 | **0** | AI-in-education market **$11.4B at 25.9% CAGR** (Eklavvya) vs **$12.3B** (second source); OECD *2026 Digital Education Outlook* recommends purpose-built over general-purpose; HolonIQ: AI/data = **12% of higher-ed partnerships in 2026, up from 2.1% in 2021**; Florida requires its **28** public colleges to bar AI on graded work absent instructor permission. All within carried ranges. |
+| **North America** | 13 | **13** | 0 | **0** | **134 bills across 31 states**; ID `SB 1227`; NC `Session Law 2026-41` (model policy **2026-12-31**, local **2027-06-30**, training **2028-06-30**); NC `SB 1006` **$10M Khanmigo** earmark; NY `A 9190` (grade 9+); NJ `A 4352`/`S 2862`; CA `AB 1159` (bars student data for model training); MD/ID/OK/VA as the four 2026 both-guidance-and-mandate states; USDoE OET framework **2026-03**; **K-12 AI Literacy and Readiness Act of 2026** advanced in committee; Berkeley Law exam ban from summer 2026; **Parents & Kids Safe AI Act** (OpenAI + Common Sense Media ballot initiative). |
+| **EMEA** | 10 | **10** | 0 | **0** | 🟢 **The Digital Omnibus chain is now fully corroborated here**: published in the OJ **2026-07-24** as **Regulation (EU) 2026/1744**, applicable **2026-07-27**; high-risk standalone Annex III **2027-12-02**, embedded-in-product **2028-08-02**; AI-literacy duty binding since **2025-02**. UK DfE GenAI product safety standards **2026-01**; Ofqual coursework-integrity resources **2026-03**; Dubai **KHDA** private-school guidance; OpenAI system partnerships in **Estonia, Slovakia, Greece, Italy**. |
+| **APAC** | 7 | **7** | 0 | **0** | Korea **AI Basic Act in force 2026-01-22**, enforcement decrees still being finalised with a **guidance-first grace period through 2026**; Vietnam's law **effective 2026-03-01** treating **education as high-risk** — National AI Database pre-registration, conformity assessment, mandatory human oversight, **72-hour incident reporting**; Australia has **no AI-specific law** but TEQSA requires institutional GenAI action plans; China registration + content labelling; Japan AI Promotion Act; Singapore AI Verify. |
+| **LATAM** | 16 | **16** | 0 | **0** | DEC LATAM **92% students / 79% faculty**; UNESCO IESALC **87%** of HEIs using AI in ≥1 area, **74%** in teaching and learning; **PISA 2025: nine in ten 15-year-olds across 13 regional countries** have used AI chatbots for schoolwork; only **26%** have a formal AI strategy; Cetic.br 2026 **Brazil 53% of school administrators use AI, 22% report school guidelines**; CENIA **13 of 19** countries do not teach early AI in schools; U. de los Andes **716 regulatory instruments across 23 countries, >80% initiated since 2023**; UNESCO **Observatory on AI in Education for LAC launched 2026-04-14** (UNESCO + CAF + CENIA, with ECLAC, Fundación Ceibal, Fundación Santillana, Tec de Monterrey, ProFuturo); Latam-GPT; Brazil's EU-style draft framework vs Argentina's deregulatory bill. |
+| **TOTAL** | **63** | **63** | **0** | **0** | **Eighth consecutive pass with zero new repositories; third with zero new facts.** |
+
+🔵 **What the saturation means, stated carefully because it is easy to overstate.** It means **this
+file is ahead of the eight prescribed queries** — every fact they return is already here, and in
+several cases carried here more precisely (Brazil's instrument, the Omnibus dates, DeepTutor's star
+count). 🔴 **It does not mean the market is known.** The legs are eight fixed English-language
+web-search strings; `p883` proved that a channel change (owner-by-name instead of keyword) found
+supply 82 keyword legs had missed, and `p886` proved that a *depth* change (enumerate the tree
+instead of guessing filenames) found grants every path-ladder pass had missed. 🔵 **Saturation is a
+property of the instrument, not of the territory** — and the standing conclusion is that these eight
+legs should be retired as a *discovery* instrument and kept only as a *regression* check, which is
+`ACTION p849-E`, still open.
+
+🟢 **No region nilled this pass.** All four regional legs returned relevant, placeable material.
+🔴 **Every fact above is secondary-source**; all seven non-GitHub hosts this KB cites remain
+unreachable from this environment, so **`884-G4` stands for a fifth pass** and no primary legal text
+was read ([`record`](../evidence/channel-state.2026-11-18-p886.tsv)).
+
+**Previous pass (`p885`), retained:** **Pass `p885`, 2026-11-18** (second pass of the day). **All four regional legs ran. `29` facts
 checked against this file, `27` already held, `2` new, `0` new repositories. This KB stays ahead of
 its secondary sources for the second consecutive pass — and `p885` states what that does NOT mean.**
 

@@ -4,6 +4,191 @@ region: Global
 updated: 2026-11-18
 ---
 
+## 🆕 `p886` · 2026-11-18 — **`5` gaps. `885-G1` DISCHARGED by execution over all 163 shelf rows: `144` AGREE, and the test itself found insufficient because both channels are single-valued. The gate and the shelves disagreed 8 times — the gate lost 7, the shelf lost 1, and the shelf's loss (`openSIS-Classic`, a GPL-2.0 grant published as absent) had been refuted INSIDE this repository for ~611 passes. `885-G2`/`885-G3` carried untouched; `884-G3` still BLOCKED by a `422`.**
+
+🔵 **The suite's standing RED, reported per `ACTION p850-D` — and for the first time with the DELTA
+that `865-G2` asks for instead of a bare count.** `make hooks` was run in **two trees**: this working
+copy, and a `git worktree` detached at `HEAD` (`23c2ca1`, `p885`).
+
+```
+                      baseline (HEAD, p885)      working tree (p886)      delta
+gates green           55 / 74                    55 / 74                   0
+gates red             19                         19                        0
+red set               <19 names>                 identical, same order     0
+```
+
+🟢 **So `p886` introduced `0` regressions and closed `0` gates**
+([`record`](../evidence/hooks-delta.2026-11-18-p886.tsv)). 🔵 **`865-G2` said a standing RED with no
+delta camouflages the findings inside it; a two-tree run costs one `git worktree add` and makes the
+delta a measurement rather than a hope.** 🔴 **Stated plainly: this does NOT mean the pass is clean —
+it means the pass did not move the suite**, and the 19 red gates (including `gate-enumeration`, whose
+own case `886-G5` is about) were red before it and are red after it.
+
+🟢 **`p886`'s own controls: `30/30`** — 18 classifier controls and 12 path-ladder controls, offline:
+`python3 test_grant_titles_x.py && ./test_licence_paths.sh`. 🟢 **`gate-tables` (`ACTION p277`: no
+published data row may render as a table header) is GREEN in both trees**, so none of the tables this
+pass wrote carries a header row as data. 🟢 **`gate-subtree-grant` (`p382`) and
+`gate-conjunctive-grant` (`p427`) both PASS in both trees** — which is how `886-G1` established that
+licence arity is an unmeasured exposure rather than an unknown concept.
+
+🔵 **Discharged and closed this pass, with the measurement that did it:**
+
+| Gap | Verdict | What settled it |
+|---|---|---|
+| **`885-G1`** — shelf rows rest on a single licence channel | 🟢 **DISCHARGED by execution, and its test REFRAMED** | Both channels run on **all 163** rows: `144` AGREE (88.3%), `13` BYTES-ONLY, `4` BOTH-ABSENT, `1` DISAGREE, `1` unrecognised, **`0`** in the gap's own `FIELD-ASSERTS-PAYLOAD-DENIES` class, **`0/163`** default-branch disagreements ([`record`](../evidence/dual-channel-885G1.2026-11-18-p886.tsv)). 🔴 **8 disagreements: `7` INSTRUMENT defects and `1` SHELF defect (`openSIS-Classic`, `886-G5`), and 3 rows with multi-valued grants scored `AGREE`.** Repairs + **30 controls**: `compose/code/p886-dual-channel-grant/` |
+| **`885-G2`** — the re-sweep covered 33 of 270 organisations | 🟡 **CARRIED UNTOUCHED** | `p886` ran no organisation sweep. Stated so the silence is not read as progress. |
+| **`885-G3`** — `classify_edu.py` unmodified; TIER-B bucket at `615` | 🟡 **CARRIED UNTOUCHED** | `p886` adjudicated none of the 615. Unchanged, and still correctly 🟡 given TIER-A's `0` yield. |
+| **`884-G3`** — liveness bound over six hand-picked words | 🔴 **CARRIED, BLOCKED for a second consecutive pass** | `api.github.com/search/commits` returned **`422`** again ([`record`](../evidence/channel-state.2026-11-18-p886.tsv)). Every liveness figure on these shelves remains **`HEAD ≥ date`** |
+| **`884-G4`** — no primary legal source read | 🔴 **CARRIED, fifth pass** | All seven non-GitHub hosts unreachable. `T4` unresolved. |
+| **`884-G5`** · **`884-G6`** | 🟡 **CARRIED untouched** | No `search/users` affiliation checks, no licence requests sent. |
+
+### 🔴 `886-G1` — a licence is a SET, and both of `885-G1`'s channels hold exactly one value
+
+🟡 **Positioned against what this KB already had, because the CONCEPT is not new.**
+`gate-subtree-grant` (`p382`, 19 controls, **PASS**) already encodes *"a grant has SUBTREES and a
+root-only read is wrong about the repository"*; `gate-conjunctive-grant` (`p427`, 24 controls,
+**PASS**) already encodes *"one payload, two LIVE families, and a notice obligation of two"*.
+🔴 **What no pass had done is MEASURE the exposure on the live shelves** — and `885-G1`'s acceptance
+test, as written, cannot, because both of its channels are single-valued.
+
+🟢 **The measured cases.** `885-G1`'s test scored `144/163` rows as `AGREE`. **Four of those rows
+carry a grant whose arity is greater than one, and three of the four are inside the `AGREE` set:**
+
+| Row | Both channels | Byte-verified reality | Shape | Scored |
+|---|---|---|---|---|
+| `ECNU/EduWork`, `ECNU/EduWork-ECNU` | `MulanPSL-2.0` | **`MulanPSL-2.0 AND MIT`** (`LICENSE` 9,233 B `eb7a1d713eb9` + `LICENSE-MIT` 1,085 B `dc719b536b8f`) | conjunctive | 🔴 `AGREE` |
+| `sudosylabs/proctor` | `AGPL-3.0` | AGPL-3.0 root/`server/`; **Apache-2.0** `packages/{cache,mail,vfs}`; BSD-3-Clause `server/internal/autocert` | per-directory | 🔴 `AGREE` |
+| `iiab/iiab` (2,052 ★) | `GPL-2.0` | GPL-2.0 default; **LGPL-2+ encouraged** per file | per-file | 🔴 `AGREE` |
+| `RWTH-OS/eduOS-rs` | `Apache-2.0` / `MIT` | **`Apache-2.0 OR MIT`** | disjunctive | 🟡 `DISAGREE` |
+
+🔴 **Only the disjunctive case was detectable, and only incidentally** — two licence files happen to
+produce a disagreement, whereas conjunction and per-directory grants produce agreement on one member
+of the set. **A clean `AGREE` is therefore not evidence that a grant is known.**
+
+🟢 **Exposure, measured:** `19 / 163` rows (**11.7%**) carry a licence-policy document neither
+channel reads — `10` × `NOTICE`, `4` × `THIRD_PARTY_NOTICES.md`, `4` × `LICENSING.md`,
+`2` × `NOTICE.txt` ([`record`](../evidence/licence-policy-docs.2026-11-18-p886.tsv)). A dedicated
+sweep of all 163 for the two-file convention found `eduOS-rs` is the only `LICENSE-MIT` +
+`LICENSE-APACHE` pair ([`record`](../evidence/split-file-grant-sweep.2026-11-18-p886.tsv)).
+
+🟢 **Acceptance test.** Every shelf row carries (a) a grant **map** from path prefix to family rather
+than a scalar, derived by enumerating the tree with
+`git clone --depth 1 --filter=blob:none --no-checkout` + `git ls-tree -r`, and (b) where a
+`LICENSING.md`/`NOTICE`/`THIRD_PARTY_NOTICES.md` exists, an `AND`/`OR` determination read from it and
+recorded with its byte count and `sha256₁₂`. **Close when all 19 policy-document rows carry both.**
+🔵 **Budget:** 19 blobless clones; `proctor`'s was seconds and enumerated 3,288 paths.
+🔴 **Scope note:** `p886` completed this for `4` of the `19` (`EduWork`, `EduWork-ECNU`, `proctor`,
+`iiab`). **Fifteen remain.**
+
+### 🔴 `886-G2` — a new instrument was built without reading the gates that already cover it, and it regressed against two of them
+
+🟢 **Written with the measurement that produced it, per `ACTION p850-B`.** `make ladder-audit` grades
+**919 ladders across 510 instruments**, of which **57** are already `TREE-ENUMERATED`; **91**
+committed instruments use `git clone --filter=blob:none` and **104** use `git ls-tree`;
+`compose/code/p215-lstree-grant-recovery/` exists and `make enumerate` has shipped since `p275`.
+🔴 **`p885` shipped a new 8-path, root-only ladder regardless**, and it failed in exactly the two ways
+the two relevant gates exist to catch — `gate-ladder-case` (`p283`: *"which path ladders can find an
+uppercase extension?"*) and `gate-enumeration` (`p275`: *"a ladder can only ever refute the paths it
+tried"*), **both passing**. `p886` then reused that ladder and inherited both failures.
+
+🔵 **So the gap is NOT "instruments are worse than shelves".** It is that the instrument estate has
+grown past the point where any pass reads it before extending it. Seven of the gate's disagreements,
+and the shelf cell each one contradicted:
+
+| Row(s) | Gate said | Shelf says, correctly | Defect |
+|---|---|---|---|
+| `openedx/XBlock`, `openedx/xblock-sdk` | `NO-GRANT-FILE` | **Apache-2.0 (`LICENSE.TXT`)**, `foundations.md:408-409`; `:758` already names the trap | `LICENSE.TXT` absent from `p885`'s 8-path ladder |
+| `portabilis/i-diario` | `UNRECOGNISED` | **AGPL-3.0**, byte-read in **Portuguese**, `:582` | English-only GNU titles |
+| `withmarbleapp/os-taxonomy` | `UNRECOGNISED` | **ODbL-1.0**, `agents/top.md:790` | ODbL unknown to the classifier |
+| `frappe/education` | `UNRECOGNISED` | GPL-3.0 | 19-byte `license.txt` = a declaration, not a body |
+| `opendatalab/MinerU` | `UNRECOGNISED` | **Apache-2.0 + additional terms**, `:782` | bespoke title incorporating Apache by reference |
+| `RWTH-OS/eduOS-rs` | `DISAGREE` | **`Apache-2.0 OR MIT`** split-file, `:666` | first-hit ladder reports one half |
+
+🔴 **Reproduced on `p885`'s shipped script, unmodified:**
+`sh compose/code/p885-symref-grant-ladder/fetch_grants.sh` on `openedx/XBlock` returns
+`master  -  404  no-grant` — on a repository whose Apache-2.0 grant `foundations.md:408` records *by
+the exact filename that ladder does not probe*.
+
+🟢 **Acceptance test, two parts.** (a) No pass may add a path ladder or grant probe without first
+running `make ladder-audit` and recording which existing instrument it could have reused, or why it
+could not. (b) No instrument may overwrite a shelf cell until it has been run against a **named
+known-good fixture set** drawn from cells the shelf already established, with pass/fail recorded;
+`p886` ships one (`compose/code/p886-dual-channel-grant/fixtures/`, 10 payloads with asserted byte
+counts). **Close when `hooks` enforces (a).**
+
+### 🔴 `886-G5` — a solved finding sat inside this repository for ~611 passes while three live shelves published its refutation
+
+🟢 **The case, with the bytes that settled it.** `verticals/solutions.md` published
+`OS4ED/openSIS-Classic` as *"GPL per README; **no licence file**"*, *"no detectable licence at all,
+treat as all rights reserved"* and *"openSIS-Classic with no licence file at all"*. **Byte-read this
+pass: GPL-2.0, 17,286 B, `sha256₁₂ 224ac3d403e3`, at `master/docs/License.txt`**, confirmed
+independently by tree enumeration.
+
+🔴 **The refutation was already committed here.**
+`compose/code/pass275-grant-enumeration/enumeration_gate.py`'s own docstring reads:
+
+> *"`os4ed/openSIS-Classic` was carried licence-UNVERIFIED for multiple passes. Its grant is at
+> `docs/License.txt` (GPL-2.0, 17 286 B). The 19-path ladder never tried that spelling, so every one
+> of its 76 probes was guaranteed to miss."*
+
+🔵 **So `gate-enumeration` was built ON this exact row, it PASSES, and the shelves it exists to
+protect still carried the false absence.** `gate-absence` ("no pass may publish an absence the index
+already refutes") also passes. **Both gates read the shelves; neither reads the instrument
+docstrings, which is where the answer lived.**
+
+🔴 **Why this is the pass's most expensive finding.** An instrument error surfaces as a
+*disagreement* the next pass can triage. A shelf error surfaces as *advice* — this one told a reader
+to treat an ordinary GPL-2.0 project as all-rights-reserved and to go ask the vendor for
+clarification. 🟢 **`T13` named propagation as this KB's binding constraint; this is the first dated,
+specific instance caught with both halves in the same commit.**
+
+🟢 **Acceptance test.** Every `compose/code/*/README.md` and module docstring that names an
+`owner/repo` **and** a grant verdict is extracted into a ledger, and that ledger is diffed against
+the live shelf cell for the same slug. Disagreements are findings. 🔵 **Budget:** one grep over
+`compose/code/` plus the existing shelf index. **Close when `hooks` runs the diff.**
+🔴 **Scope note, stated because it bounds the whole gap:** `p886` corrected the one row it found by
+accident. **The ledger was NOT built, so the size of this class is UNKNOWN** — and 510 instruments is
+a large place for answers to hide.
+
+### 🟡 `886-G3` — this pass's slug extractor produced 4 non-repositories
+
+🟢 **Declared with the defect.** Shelf slugs were extracted with
+`grep -oE 'github\.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+'`, which matches any two path segments. It
+produced `search/repositories`, `search/code`, `search/commits` (API endpoint paths quoted in method
+prose) and `advisories/GHSA-7pp5-29mw-9jq3` (a security-advisory URL). **The population is 163, not
+167.**
+
+🟢 **An independent channel caught it, which is the only reason this is 🟡.** Those four are exactly
+the slugs on which `search/repositories` returned **`422`** while the other 163 returned `200`
+([`record`](../evidence/chanA-metadata.2026-11-18-p886.tsv)). 🔴 **But the extractor is still wrong,
+and a pass that trusted a single channel would have published four KB entities named after API
+endpoints** — the `nombre`-row class in a new shape.
+
+🟢 **Acceptance test.** The extractor rejects a first segment in
+`{search, advisories, topics, orgs, users, apps, sponsors, collections, features, settings,
+notifications, codespaces, marketplace}` and any second segment matching `^GHSA-`. Close when it is
+a tested helper in `compose/code/lib/` rather than an inline `grep` re-written each pass.
+
+### 🔴 `886-G4` — a licence-policy document is not self-verifying, so the fix for `886-G1` cannot be "read the prose"
+
+🟢 **Measured on the very document that produced this pass's best finding.** `sudosylabs/proctor`'s
+`LICENSING.md` (**3,627 B**, `sha256₁₂ 34b724fe4bd1`) makes two checkable claims:
+
+| Claim | Verdict | Measurement |
+|---|---|---|
+| *"Apache-licensed reusable packages must not contain implementation copied from AGPL … code"* | 🟢 **HELD** | `0` of 65 files under `packages/` reference AGPL |
+| *"Every comment-capable code … file carries a human-readable copyright and license notice together with an SPDX license identifier"* | 🔴 **REFUTED** | **`0` of 65** files under `packages/` carry an SPDX identifier; `6` carry a `Copyright` line, `5` a `Licensed under` line |
+
+🔵 **The consequence for `886-G1`.** The policy document is the **only** source for `AND` vs `OR` —
+`eduOS-rs` is `OR`, `EduWork` is `AND`, and the two are indistinguishable to any prober. So it must
+be read. 🔴 **But it must not be believed**: `EduWork`'s `MulanPSL-2.0 AND MIT` is safe to publish
+because the policy was read **and** both payloads were byte-read; the SPDX-header claim above is what
+happens when only the prose is taken.
+
+🟢 **Acceptance test.** Every claim quoted from a licence-policy document onto a shelf carries
+`HELD` or `REFUTED` plus the command that decided it. Close when no shelf row cites a policy document
+without an adjudication column.
+
 ## 🆕 `p885` · 2026-11-18 — **`5` gaps. `884-G1` DISCHARGED and its hypothesis REFUTED — the 3,186 hidden repositories hold zero shelvable rows. `884-G2` DISCHARGED with a fix and 13 controls, and the defect was real: 26.5% of permissive repos with a non-standard default branch were published as having no licence. One NEW defect, found in the opposite direction. `884-G3` and `884-G4` carried. `884-G5`/`884-G6` carried untouched.**
 
 🔵 **Discharged and closed this pass, with the measurement that did it:**

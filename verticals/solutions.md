@@ -6,7 +6,70 @@ updated: 2026-11-18
 
 # Vertical platforms — education
 
-**Pass `p885`, 2026-11-18** (second pass of the day). **`p885` re-measured the two platform rows this
+**Pass `p886`, 2026-11-18** (third pass of the day). **`p886` ran `885-G1`'s two-channel test over this
+shelf and found that one of its rows is not the licence this file says it is — and then found that
+the permissive part of that row is deliberately the part with no domain value. The "no supply"
+verdict on proctoring does not weaken. It gets a mechanism.**
+
+- 🟢 **`885-G1` EXECUTED over all 163 shelf rows** (this file, `agents/top.md`,
+  `repos/foundations.md`): **`144` AGREE (88.3%)**, `13` BYTES-ONLY, `4` BOTH-ABSENT, `1` DISAGREE,
+  `1` unrecognised, **`0`** in the gap's own `FIELD-ASSERTS-PAYLOAD-DENIES` class
+  ([`record`](../evidence/dual-channel-885G1.2026-11-18-p886.tsv)).
+- 🔴 **`sudosylabs/proctor` is NOT `AGPL-3.0`. It is a per-DIRECTORY grant, and both channels of the
+  test agreed on the wrong single answer.** Byte-verified by enumerating the tree with a blobless
+  clone (3,288 tracked paths) rather than guessing filenames:
+
+| Path | Licence, byte-read | Bytes | `sha256₁₂` |
+|---|---|---:|---|
+| `LICENSE` (root) | **AGPL-3.0** | 32,386 | `fb9ce8b6dfc4` |
+| `server/LICENSE` | **AGPL-3.0** | 32,386 | `fb9ce8b6dfc4` |
+| `packages/cache/LICENSE` | 🟢 **Apache-2.0** | 11,341 | `bb16543a004e` |
+| `packages/mail/LICENSE` | 🟢 **Apache-2.0** | 11,341 | `bb16543a004e` |
+| `packages/vfs/LICENSE` | 🟢 **Apache-2.0** | 11,357 | `c71d239df917` |
+| `server/internal/autocert/LICENSE` | 🟢 **BSD-3-Clause** | 1,453 | `911f8f578293` |
+
+- 🔴 **And here is the finding that matters more than the licence table: the Apache-2.0 modules are
+  not proctoring.** `packages/cache` is a Redis-backed cache abstraction, `packages/mail` is a
+  mailer, `packages/vfs` is a virtual-filesystem interface with a conformance suite — three generic
+  Go libraries, each its own module (`github.com/sudosylabs/proctor/packages/...`), each with its own
+  `LICENSE` and `NOTICE`. **The proctoring domain logic is on the AGPL-3.0 side**: `server/` holds
+  **2,505 tracked files** including `server/app/exam/attempt/` and
+  `server/app/access/session_assurance.go`, and `webapp/` a further 222.
+- 🔵 **So this shelf's standing verdict is UNCHANGED and now better supported.** `p875` said
+  open-source proctoring is *"real demand, and effectively NO supply"*; `p886` adds the mechanism —
+  **when a proctoring project does publish permissively, it publishes the plumbing and keeps the
+  assessment-integrity logic under AGPL-3.0.** The permissive bytes in this category are real,
+  separable and genuinely reusable, and **none of them is the thing a client is asking for.** 🔴
+  **The row still has `0` stars, so the adoption finding is untouched; do not read a licence
+  correction as a supply correction.** Advice to a client is unchanged: a commercial vendor over
+  LTI, or an assessment redesign.
+- 🟢 **What the Apache-2.0 modules ARE worth.** `packages/vfs` (a storage-backend interface with a
+  conformance test suite) and `packages/cache` are drop-in, dependency-light Go components for any
+  pattern in this KB that needs pluggable storage or caching behind an agent — `P14`'s measurement
+  spine and `P20`'s offline content chain both currently name no such component. 🔵 **Lift the
+  module, not the product**, and the AGPL-3.0 boundary is never crossed because the modules are
+  separate Go modules with their own grants.
+- 🔴 **The policy document over-claims, and that bounds how far any of this can be trusted.**
+  `proctor`'s `LICENSING.md` (3,627 B, `sha256₁₂ 34b724fe4bd1`) states that *"every comment-capable
+  code … file carries a human-readable copyright and license notice together with an SPDX license
+  identifier"* and forbids AGPL-derived implementation inside the Apache packages. 🟢 The second
+  claim holds — **`0` of 65 files under `packages/` reference AGPL**. 🔴 The first does not —
+  **`0` of 65 carry an SPDX identifier**; 6 carry a `Copyright` line and 5 a `Licensed under` line.
+  🔵 **A licence-policy document is a third channel, not an oracle.**
+- 🟡 **`iiab/iiab` (2,052 ★, this shelf's offline-delivery row) is per-FILE.** Its `LICENSING.md`
+  (914 B, `sha256₁₂ b7ac7e43372f`) makes GPL-2.0 the default for unmarked files and **encourages
+  contributors to use the GNU Library GPL v2 or later**. Both channels said `GPL-2.0` and agreed.
+  For `P5`/`P20` the GPL-vs-LGPL distinction is the entire linking question.
+- 🟢 **`odoo/odoo` re-measured, and it is still this shelf's cleanest proof that the SPDX field
+  cannot be trusted on a platform**: metadata `NOASSERTION`, bytes **LGPL-3.0**, 43,529 B,
+  `sha256₁₂ abc09dad5f84`, default branch `20.0`, 55,877 ★. Unchanged from `p885`, re-read rather
+  than carried.
+- 🔴 **`0` new platforms from the eight prescribed legs, EIGHTH consecutive pass** — and the platform
+  leg's own source states it **found no MIT- or Apache-licensed education-specific platform**, which
+  is this shelf's standing nil corroborated by a leg attempting to refute it
+  ([`record`](../evidence/websearch-legs.2026-11-18-p886.tsv)).
+
+**Previous pass (`p885`), retained:** **Pass `p885`, 2026-11-18** (second pass of the day). **`p885` re-measured the two platform rows this
 file rests on and both came back exactly as carried — but `odoo/odoo` turns out to be the cleanest
 proof this KB has that the SPDX field cannot be trusted on a platform.**
 
@@ -166,7 +229,7 @@ problem**, and the copyleft thesis below is now **quantified**.
 > **T14** warns against: the token is identical, the grants are opposite.
 > 🔵 **OpenOlat is nonetheless T14's fourth confirmed case** — and the most commercially important,
 > since it carries this file's "only permissive full LMS" claim;
-> `OS4ED/openSIS-Classic` returns `NONE` — **no detectable licence at all**, treat as all rights
+> 🔴 **`p886` REFUTED this line.** `OS4ED/openSIS-Classic` returns `NONE` **only to a root-level probe**; its grant is **GPL-2.0 at `master/docs/License.txt`** (17,286 B, `sha256₁₂ 224ac3d403e3`). Retained as written because it is a dated pass record, and struck here: ~~no detectable licence at all, treat as all rights
 > reserved until proven otherwise.
 
 **Previous pass note (`p874`):** rewrote the proctoring section against seven byte-read licences
@@ -311,7 +374,7 @@ section above.
 |---|---|---|---|---|
 | **Gibbon** | https://github.com/GibbonEdu/core | GPL-3.0 | `v31.0.00` | School management / SIS for K-12. Note: default branch is a version tag, not `main`. |
 | **GegoK12** 🟢 **new `p877`** | https://github.com/Gego-K12/gegok12 | 🟢 **MIT** — byte-read, 1,150 B, `sha256₁₂ b8694396d7dc` | `main` | 🟢 **The first and only permissive SIS in this KB — closes a gap open since `p872`.** Full-featured school management system in **Laravel/PHP**, **API-first** (`api.md` in-tree), `Dockerfile` + `docker-compose.yml`, `lang/` localisation, plus separate Android **parent** and **teacher** apps. 113 commits in 12 months. 🟡 **57★ and HEAD `2026-06-25`** — propose it as a base you will own and extend, not a community you are joining. 🔴 **GitHub reports `NOASSERTION`** because line 3 of its `LICENSE` is `<!-- SPDX-License-Identifier: MIT -->`; the bytes are stock MIT. Do not let a licence-API readout disqualify it. |
-| **openSIS Classic** | https://github.com/OS4ED/openSIS-Classic | **GPL per README; no licence file** | `master` | Student information system. **Licence flag:** there is no `LICENSE`, `COPYING` or `license.txt` on the default branch — the GPL claim exists only in prose in the README. Treat the grant as unconfirmed until clarified with OS4ED. |
+| **openSIS Classic** | https://github.com/OS4ED/openSIS-Classic | 🔴 **GPL-2.0** — byte-read `master/docs/License.txt`, **17,286 B**, `sha256₁₂ 224ac3d403e3`. **CORRECTED by `p886`.** | `master` | Student information system. 🔴 **This cell said *"no licence file"* for many passes and that was WRONG.** The grant is not absent — it is at `docs/License.txt`, a path no root-level ladder probed. 🔴 **This KB's own `compose/code/pass275-grant-enumeration/` README names this repository and this path as the case it was built on**, so the refutation existed here and never reached this shelf (`T13`: propagation, not discovery). 🔵 **Copyleft, so it remains an integration target rather than a base** — but *"ask OS4ED to clarify"* is no longer the advice, and treating it as all-rights-reserved was over-cautious by one whole grant. |
 | **RosarioSIS** | https://github.com/francoisjacquet/rosariosis | **GPL-2.0** | **`mobile`** | **New in `p873`.** Mature PHP/PostgreSQL student information system, used in production by schools, academies and colleges; latest tags `v9.3`, `v9.3.1`, `v9.3.2`. **The default branch is `mobile`** — a feature name, not `main` or `master`. Nothing about the address hints at it and no heuristic would guess it: a `raw.githubusercontent.com` path built on an assumed `main` 404s, which would have been published as "no licence file" and then as "no grant". Resolve with `git ls-remote --symref` first, always. The **third** verified open-source SIS, and the **third** that is copyleft. |
 | **Koha** | https://github.com/Koha-Community/Koha | GPL-3.0 | `main` | The mature open-source integrated library system; very large installed base in school and university libraries worldwide. |
 | **DSpace** | https://github.com/DSpace/DSpace | **BSD** | `main` | Institutional repository for theses, datasets and scholarly output. **Permissive** — a strong base for AI-assisted discovery and metadata enrichment over a university's own corpus. |
@@ -531,7 +594,7 @@ explicitly**. See `compose/patterns.md` **P14**.
 > | `amaanwarsi/Proctora` | **3** | MIT | 2026-04-07 |
 > | `ganesh-786/Proctor` | **0** | MIT | 2025-06-09 🔴 |
 > | `code-by-abrar/Online-Proctoring-system` | **0** | MIT | 2026-09-19 |
-> | `sudosylabs/proctor` | **0** | AGPL-3.0 | 2026-11-16 |
+> | `sudosylabs/proctor` | **0** | 🔴 **per-DIRECTORY, corrected by `p886`:** AGPL-3.0 root + `server/` + `webapp/`; **Apache-2.0** `packages/{cache,mail,vfs}`; BSD-3-Clause `server/internal/autocert` | 2026-11-16 |
 > | `SriSatyaLokesh/pariksha` | **0** | AGPL-3.0 ✅ (`p874`'s correction, SPDX-confirmed) | 2026-11-07 |
 >
 > **The framing of the last three passes was wrong in a way that mattered.** `p871` said no
@@ -640,7 +703,7 @@ content generator in the build inherits that obligation for everything it emits.
   [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) is **MIT** at the bytes (1,150 B,
   `sha256₁₂ b8694396d7dc`): Laravel, API-first, Dockerised, with Android parent and teacher apps
   and 113 commits in 12 months. The three copyleft options stand as recorded — RosarioSIS GPL-2.0,
-  Gibbon GPL-3.0, openSIS-Classic with no licence file at all.
+  Gibbon GPL-3.0, openSIS-Classic 🔴 **GPL-2.0 at `docs/License.txt` — `p886` corrected the "no licence file" reading recorded here**.
   🔵 **Why it took five passes to find a repository that was always there:** the GitHub licence API
   reports `NOASSERTION` for it, because line 3 of its `LICENSE` is an SPDX comment. **The gap was
   never in the ecosystem; it was in trusting a licence-detector readout as a licence.** See

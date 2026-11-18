@@ -6,7 +6,100 @@ updated: 2026-11-18
 
 # Compose patterns — education
 
-**Pass `p885`, 2026-11-18** (second pass of the day). **Twenty-six recipes** — 🔵 derived recipes:
+**Pass `p886`, 2026-11-18** (third pass of the day). **Twenty-seven recipes** — 🔵 derived recipes:
+**27**. `p886` adds **P27**, and it is the step `P23` cannot perform and `P24` silently assumed:
+**resolving the ARITY of a grant, and producing the notice set a redistribution actually owes.**
+`p886` also amends **`P24`**, whose base repository turns out to carry two grants rather than one.
+
+## P27 — Resolve licence arity and produce the redistribution notice set — new in `p886`
+
+🔵 **The problem, measured rather than asserted.** `p886` ran `885-G1`'s two-channel licence test over
+all 163 shelf rows in this KB. `144` agreed (88.3%) — and **four rows carry a grant that neither
+channel can express, three of which scored `AGREE`**
+([`record`](../evidence/dual-channel-885G1.2026-11-18-p886.tsv)). `19 / 163` rows (**11.7%**) carry a
+licence-policy document that no single-file probe reads. 🔴 **A client shipping a product built on
+any of those rows is shipping an incomplete notice set, and neither GitHub's licence field nor a root
+`LICENSE` read will tell them.**
+
+🔴 **Why `P23` does not cover this.** `P23` cross-checks **three independent channels** to decide
+whether *one* grant claim is true. P27 answers a different question — **how many grants are there,
+and over which paths** — and it needs a channel `P23` does not use: the repository tree itself.
+
+### Stack — every component permissive, every licence byte-read in `p886`
+
+| Role | Component | Licence | Why this one |
+|---|---|---|---|
+| Tree enumeration | `git` ≥ 2.19 (`--filter=blob:none`) + [`compose/code/p215-lstree-grant-recovery`](code/p215-lstree-grant-recovery/) / `make enumerate` | GPL-2.0 (tool, not linked); modules this KB's own | The **only** complete channel: `/repos/{owner}/{repo}` is `403` from a sandboxed runner, and every path-guessing ladder finds only filenames somebody thought of. 🟡 **Reuse these, do not rebuild**: `make ladder-audit` grades 919 ladders across 510 instruments, **57** already `TREE-ENUMERATED`, and `p885` regressed by writing a new one (`886-G2`) |
+| Grant classification | [`compose/code/p886-dual-channel-grant`](code/p886-dual-channel-grant/) + [`p228-shelf-gate`](code/p228-shelf-gate/) | this KB's own | Earliest-title rule; **30 controls**, incl. Iberian GNU titles, ODbL, bare-token grants and `p872`'s false-positive regression set |
+| SPDX expression validation | [`spdx/tools-python`](https://github.com/spdx/tools-python) | **Apache-2.0** | Parses and validates `A AND B` / `A OR B`; the reference implementation of the expression grammar |
+| SBOM assembly | [`anchore/syft`](https://github.com/anchore/syft) | **Apache-2.0** | Emits SPDX/CycloneDX per module; picks up the **per-directory** `go.mod` boundaries that make `packages/*` separable |
+| Dependency-licence closure | [`compose/code/dependency-licence-closure`](code/dependency-licence-closure/) | this KB's own | Carried from earlier passes; P27 feeds it a **set** of roots instead of one |
+| Orchestration | [`temporalio/temporal`](https://github.com/temporalio/temporal) | **MIT** | Re-run per release tag; a grant is a property of a **tag**, not of a repository |
+
+### How to wire it — six steps, and step 4 is the one nobody does
+
+1. **Enumerate, do not guess.** Per candidate repository:
+   ```sh
+   git clone --depth 1 --filter=blob:none --no-checkout "https://github.com/$SLUG" "$D"
+   git -C "$D" ls-tree -r --name-only HEAD \
+     | grep -iE '(^|/)(LICEN[CS]E|NOTICE|COPYING|COPYRIGHT)' > "$D/.licence-paths"
+   ```
+   On `sudosylabs/proctor` this returns **6** payloads out of **3,288** paths; a 37-entry path ladder
+   returned **1**.
+2. **Byte-read every payload** with `git cat-file -p HEAD:<path>` — no checkout, no working tree —
+   and classify each with `classify2.py`. Record `path`, `bytes`, `sha256₁₂`, `family`.
+3. **Derive the arity.** One distinct family over the whole tree → arity 1, done. More than one →
+   map **family to path prefix**, which is the deliverable: *"AGPL-3.0 over `server/` and `webapp/`;
+   Apache-2.0 over `packages/cache`, `packages/mail`, `packages/vfs`; BSD-3-Clause over
+   `server/internal/autocert`."*
+4. 🔴 **Read the policy document, and then verify it instead of believing it.** Fetch
+   `LICENSING.md`, `NOTICE`, `THIRD_PARTY_NOTICES.md`. It is the only source for **`AND` vs `OR`** —
+   `eduOS-rs` is `OR` (elect one), `EduWork` is `AND` (satisfy both), and **the two files look
+   identical to a prober**. 🔴 Then check its claims: `proctor`'s asserts an SPDX header on every
+   comment-capable file and **`0` of 65 files under `packages/` have one**. Record each claim as
+   `HELD` or `REFUTED` with the command that decided it.
+5. **Emit the notice set** — for `AND` and per-directory grants, *every* licence text plus *every*
+   `NOTICE`, with the path scope each governs. This is the artefact that makes the engagement
+   defensible, and `syft` will not produce it from metadata alone.
+6. **Pin and re-run per tag.** `EduWork`'s own `LICENSING.md` states that previously distributed
+   versions and npm archives **keep their existing licences**, and that the switch applies from a
+   named commit (`a43a4d42`). 🔵 **"Project X is licence Y" is not a statement that survives contact
+   with a specific tag** — so the Temporal workflow keys on the tag.
+
+### What the client gets, and what to charge for
+
+🟢 **Deliverable:** a per-path grant map, a validated SPDX expression per module, a complete notice
+set, and a `HELD/REFUTED` table for every claim the project's own policy document makes — each row
+carrying the byte count and `sha256₁₂` that produced it.
+
+🔵 **Scope:** 2–3 weeks for a shortlist of 10–15 repositories. 🔵 **Sell it as the gate before a
+build decision**, not as an audit after one: the finding that `packages/*` is Apache-2.0 while the
+domain logic is AGPL-3.0 changes *what you build*, and it is worth nothing discovered at integration
+time. 🔴 **State the limit honestly:** this produces a defensible engineering record, not a legal
+opinion, and a conjunctive grant across jurisdictions (`MulanPSL-2.0 AND MIT`) is exactly the case
+where counsel should see the notice set before shipping.
+
+### 🔴 Amendment to `P24`, required by this pass
+
+`P24` ships a branded institutional distribution on `ECNU/EduWork`. **`EduWork` is
+`MulanPSL-2.0 AND MIT`, not `MulanPSL-2.0`**
+(`LICENSE` 9,233 B `eb7a1d713eb9` **and** `LICENSE-MIT` 1,085 B `dc719b536b8f`;
+`LICENSING.md` 3,048 B `e85e94f2cc4a`). Three line items change:
+
+- 🔴 **The redistribution must carry BOTH licence texts and both notice sets.** The policy is
+  explicit: *"Distributions combining new Mulan-licensed contributions and historical MIT code must
+  retain both licenses and their notices."* Add it to the build's artefact checklist.
+- 🔴 **Do not offer the client an "elect MIT" route.** The same document states the expression is
+  *"not a choice of license for all code"*. A procurement team that will not clear MulanPSL-2.0 must
+  still clear it; saying otherwise is the error `P27` exists to prevent.
+- 🔴 **Narrow the patent claim.** `agents/top.md` credited the row with **9 patent references**; the
+  policy states the relicence *"does not make historical MIT contributors grant additional patent
+  rights under Mulan"*, so that peace **does not extend to the pre-`a43a4d42` baseline**.
+- 🟢 **One thing gets better.** `packages/dsh-literature` **retains MIT in its entirety** — a
+  wholly-permissive, separable component inside the distribution, and the cleanest unit to lift if a
+  client wants the literature capability without the platform.
+
+**Previous pass (`p885`), retained:** **Pass `p885`, 2026-11-18** (second pass of the day). **Twenty-six recipes** — 🔵 derived recipes:
 **26**. `p885` adds **P26**, and it is the recipe this KB's own instruments have been accumulating
 without anyone writing it down: **when the client IS the university, its own GitHub organisation is a
 supply source — and `p885` measured both what that yields and what it costs to make it safe.**

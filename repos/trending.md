@@ -4,6 +4,120 @@ region: Global
 updated: 2026-11-18
 ---
 
+## 🟢 `2026-11-18` (`p886`) — **`885-G1` run to completion over 163 rows: `144` AGREE. The gate and the shelves disagreed 8 times, the gate lost 7 — and the shelf's single loss was a GPL-2.0 grant published as "no licence file" that this repository's own `p275` module had already refuted**
+
+🔵 **`885-G1`'s acceptance test, met as written.** `p885` opened it RED, checked the five
+highest-traffic rows and declared the rest unverified. `p886` ran both channels — the
+`search/repositories` metadata grant and the licence **bytes** on the `--symref`-resolved default
+branch — over **all 163 rows** of `agents/top.md`, `repos/foundations.md` and
+`verticals/solutions.md` ([`record`](../evidence/dual-channel-885G1.2026-11-18-p886.tsv)).
+
+```
+population                   163 rows        (167 slugs extracted - 4 non-repositories, declared below)
+AGREE                        144   88.3%
+BYTES-ONLY (T14)              13    8.0%
+BOTH-ABSENT                    4    2.5%
+DISAGREE                       1    0.6%
+BYTES-UNRECOGNISED             1    0.6%
+
+FIELD-ASSERTS-PAYLOAD-DENIES   0            the gap's OWN class does not recur on any live shelf row
+default-branch disagreement    0 / 163      the p885 symref fix confirmed on 30x its original population
+permissive share (BYTES)     128 / 163 = 78.5%
+```
+
+🟢 **The `T14` undercount now has a size.** On these same 163 rows the metadata channel reports
+`NOASSERTION` or `null` **18** times, and the bytes carry a real grant in **13** of those cases —
+`odoo/odoo` (LGPL-3.0, 43,529 B), `openeducat/openeducat_erp` (LGPL-3.0), `ankitects/anki`
+(AGPL-3.0), `portabilis/i-diario` (AGPL-3.0, Portuguese), `OpenOLAT/OpenOLAT` (Apache-2.0),
+`apereo/java-cas-client` (BSD-3-Clause), `BerriAI/litellm` (MIT), `instructure/instructure-ui` (MIT),
+`Gego-K12/gegok12` (MIT), `virtualryder/edu-ai-agents` (MIT), `wwrwbs/AI_AWE` (Apache-2.0),
+`frappe/education` (GPL-3.0, declared in 19 bytes) and **`OS4ED/openSIS-Classic` (GPL-2.0, 17,286 B
+at `docs/License.txt` — see below)**. 🔵 **A metadata-only census of this estate would undercount the
+known-grant population by 13 rows it cannot see at all.**
+
+### 🔴 The shelf error: a GPL-2.0 grant published as absent, refuted inside this repository ~611 passes ago
+
+🟢 **`OS4ED/openSIS-Classic`** is carried on three live shelves as *"GPL per README; no licence
+file"*, *"no detectable licence at all, treat as all rights reserved"*. **Byte-read this pass:
+GPL-2.0, 17,286 B, `sha256₁₂ 224ac3d403e3`, at `master/docs/License.txt`**, confirmed independently
+by tree enumeration. 🔴 **`compose/code/pass275-grant-enumeration/enumeration_gate.py`'s docstring
+names this repository and this path as the case the `p275` gate was built on** — *"the 19-path ladder
+never tried that spelling, so every one of its 76 probes was guaranteed to miss."* The gate passes.
+The shelves carried the absence anyway. 🔵 **`886-G5`.**
+
+### 🟡 The channel that fixes this was already here, which is the real instrument finding
+
+🔴 **Every grant probe this KB has built guesses paths** — `p213` tried 2, `p885` tried 8, `p886`'s
+own widened ladder tried 37 — and each pass discovers one more spelling. This pass it was
+`LICENSE.TXT`, which **manufactured an absence on two of this KB's own Apache-2.0 rows**.
+
+🟡 **But tree enumeration is NOT new here, and `p886`'s first draft wrongly said it was.** **91**
+committed instruments already use `git clone --filter=blob:none`; **104** use `git ls-tree`;
+`compose/code/p215-lstree-grant-recovery/` exists; `make enumerate` ships since `p275`; and
+`make ladder-audit` grades **919 ladders across 510 instruments**, **57** of them already
+`TREE-ENUMERATED`. 🔴 **`p885` shipped a new 8-path root-only ladder regardless, regressing against
+`gate-ladder-case` (`p283`) and `gate-enumeration` (`p275`) — both passing** — and `p886` reused it
+and inherited both failures (`886-G2`).
+
+🟢 **The channel itself, for the record** (`/repos/{owner}/{repo}` is `403` here, so REST tree
+listing is unavailable):
+
+```sh
+git clone --depth 1 --filter=blob:none --no-checkout "https://github.com/$SLUG" d
+git -C d ls-tree -r --name-only HEAD | grep -iE '(^|/)(LICEN[CS]E|NOTICE|COPYING|COPYRIGHT)'
+git -C d cat-file -p HEAD:packages/vfs/LICENSE          # bytes, no checkout
+```
+
+On `sudosylabs/proctor`: **3,288 tracked paths enumerated, 6 licence payloads found**, three of them
+under `packages/` where no path list would have looked. 🔵 **This changes the question from "did I
+guess the filename?" to "what is in the tree?", and it is the only channel here that answers the
+second one.**
+
+### 🔴 What the tree channel found: four rows whose grant has arity greater than one
+
+| Row | Both channels said | Byte-verified reality | Shape |
+|---|---|---|---|
+| `ECNU/EduWork`, `ECNU/EduWork-ECNU` | `MulanPSL-2.0` ✅ AGREE | **`MulanPSL-2.0 AND MIT`** — `LICENSE` 9,233 B `eb7a1d713eb9` + `LICENSE-MIT` 1,085 B `dc719b536b8f` | conjunctive |
+| `sudosylabs/proctor` | `AGPL-3.0` ✅ AGREE | AGPL-3.0 root + `server/` (32,386 B `fb9ce8b6dfc4`); **Apache-2.0** `packages/cache` + `packages/mail` (11,341 B `bb16543a004e`) and `packages/vfs` (11,357 B `c71d239df917`); BSD-3-Clause `server/internal/autocert` (1,453 B `911f8f578293`) | per-directory |
+| `iiab/iiab` (2,052 ★) | `GPL-2.0` ✅ AGREE | GPL-2.0 default for unmarked files; **LGPL-2+ encouraged** per file (`LICENSING.md` 914 B `b7ac7e43372f`) | per-file |
+| `RWTH-OS/eduOS-rs` | `Apache-2.0` vs `MIT` ❌ | **`Apache-2.0 OR MIT`** (`Cargo.toml`: `license = "MIT/Apache-2.0"`) | disjunctive |
+
+🔴 **Three of the four scored `AGREE`.** A two-channel gate made of two single-valued channels cannot
+see arity. 🟢 **Exposure measured: `19 / 163` rows (11.7%) carry a `LICENSING.md`, `NOTICE`,
+`NOTICE.txt` or `THIRD_PARTY_NOTICES.md`** that neither channel reads — 10 × `NOTICE`,
+4 × `THIRD_PARTY_NOTICES.md`, 4 × `LICENSING.md`, 2 × `NOTICE.txt`
+([`record`](../evidence/licence-policy-docs.2026-11-18-p886.tsv)). A dedicated sweep for the
+two-file Rust convention across all 163 rows found `eduOS-rs` is the **only** `LICENSE-MIT` +
+`LICENSE-APACHE` pair ([`record`](../evidence/split-file-grant-sweep.2026-11-18-p886.tsv)).
+
+### 🔴 The permissive half of a split-licence repo is the half without the domain value
+
+🟢 `proctor`'s Apache-2.0 modules are `packages/cache` (Redis cache abstraction), `packages/mail`
+(mailer) and `packages/vfs` (virtual filesystem + conformance suite) — three standalone Go modules.
+**The assessment-integrity logic is AGPL-3.0**: `server/` is **2,505 tracked files** including
+`server/app/exam/attempt/` and `server/app/access/session_assurance.go`, plus 222 in `webapp/`.
+🔵 **This strengthens `p875`'s "real demand, effectively no supply" verdict on proctoring by giving
+it a mechanism**, and the row still has `0` stars, so nothing about adoption changed.
+
+### 🔴 The policy document is a channel, not an oracle
+
+`proctor`'s `LICENSING.md` (3,627 B `34b724fe4bd1`) makes two checkable claims. 🟢 **Held:** no
+AGPL-derived implementation in the Apache packages — `0` of 65 files reference AGPL. 🔴 **Refuted:**
+it asserts an SPDX identifier on every comment-capable file, and **`0` of 65 files under `packages/`
+carry one** (6 have a `Copyright` line, 5 a `Licensed under` line).
+
+### 🟡 This pass's own instrument defect, declared rather than dropped
+
+The slug extractor matched `github.com/<a>/<b>` and produced 4 non-repositories —
+`search/repositories`, `search/code`, `search/commits`, `advisories/GHSA-7pp5-29mw-9jq3`. Population
+is **163, not 167**. 🟢 Corroborated independently: those are exactly the 4 slugs on which
+`search/repositories` returned `422` while the other 163 returned `200`.
+
+🔴 **`0` new repositories from the eight prescribed legs, EIGHTH consecutive pass** — `63` facts,
+`63` held ([`record`](../evidence/websearch-legs.2026-11-18-p886.tsv)). 🔴 **`search/commits` `422`,
+second consecutive pass → `884-G3` BLOCKED**
+([`record`](../evidence/channel-state.2026-11-18-p886.tsv)).
+
 ## 🟢 `2026-11-18` (`p885`) — **the truncated sweep is finished: 6,486 repositories, 3,186 of them never seen before, and the default-branch census inside it exposed a grant probe that was blind to one permissive repository in four**
 
 🔵 **`884-G1`'s acceptance test, met exactly as written.** `p884` swept 270 organisations but

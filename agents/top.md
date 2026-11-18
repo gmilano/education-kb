@@ -6,7 +6,84 @@ updated: 2026-11-18
 
 # Top AI agents — education
 
-**Pass `p885`, 2026-11-18** (second pass of the day). **`p885` ran the one action `p884` left open and
+**Pass `p886`, 2026-11-18** (third pass of the day). **`p886` executed `885-G1`'s acceptance test over
+all 163 shelf rows. The gate disagreed with the shelf 7 times and the shelf was right 7 times out of
+7 — and then three rows that the gate scored `AGREE` turned out to have grants it cannot express.**
+
+- 🟢 **`885-G1` EXECUTED in full, and the headline number is good.** Both channels were run on every
+  row of this file, `repos/foundations.md` and `verticals/solutions.md`
+  ([`record`](../evidence/dual-channel-885G1.2026-11-18-p886.tsv)): **`144 / 163` AGREE (88.3%)**,
+  `13` **BYTES-ONLY** (metadata abstains, bytes carry a real grant — `T14`), `4` **BOTH-ABSENT**,
+  `1` DISAGREE, `1` bytes-unrecognised. 🟢 **`0` rows in `885-G1`'s own
+  `FIELD-ASSERTS-PAYLOAD-DENIES` class**, and **`0 / 163` default-branch disagreements** between the
+  metadata channel and `git ls-remote --symref`. **Permissive share, measured on bytes: `128 / 163`
+  = 78.5%.**
+- 🔴 **The gate was wrong 7 times and the shelf was wrong once — 7–1, and the one shelf error is the
+  more serious of the two.** Seven disagreements were **instrument** defects (below). The eighth was
+  a **false ABSENCE this file's neighbours publish**: `OS4ED/openSIS-Classic` is asserted on three
+  live shelves as having *"no licence file at all"*, and its grant is **GPL-2.0, 17,286 B,
+  `sha256₁₂ 224ac3d403e3`, at `master/docs/License.txt`** — which this KB's own
+  `compose/code/pass275-grant-enumeration/` README **recorded ~611 passes ago** and which never
+  propagated to a shelf. 🔵 **`T13`'s propagation constraint, caught in the act.** Corrected this
+  pass on `verticals/solutions.md`. `openedx/XBlock` and `openedx/xblock-sdk` came back
+  `NO-GRANT-FILE` because `p885`'s shipped ladder has no `LICENSE.TXT` in its path list — they are
+  **Apache-2.0, 11,358 B, `sha256₁₂ cfc7749b96f6`**, which `repos/foundations.md:408` already records
+  *by that exact filename*. `portabilis/i-diario` (AGPL-3.0 in **Portuguese**),
+  `withmarbleapp/os-taxonomy` (**ODbL-1.0**), `frappe/education` (a **19-byte** `license.txt` reading
+  `License: GNU GPL V3`) and `opendatalab/MinerU` (bespoke title + commercial rider) were classifier
+  abstentions on cells this KB already had right. 🔵 **Stated plainly: had this test been run as
+  specified and its output trusted, it would have published `885-G1`'s own error class against six
+  correct, byte-sourced cells.** Repairs and 30 controls: `compose/code/p886-dual-channel-grant/`.
+- 🔴 **`886-G1` — a clean `AGREE` does not mean the grant is known, and this file carries the worst
+  case of it.** Both of `885-G1`'s channels are **single-valued** — one SPDX id, one root licence
+  file — so a grant whose **arity is greater than one** makes both channels agree *and* both
+  incomplete. 🔴 **`ECNU/EduWork` and `ECNU/EduWork-ECNU` are `MulanPSL-2.0 AND MIT`, not
+  `MulanPSL-2.0`**, and both scored `AGREE`. See the corrected rows below and
+  `intel/trends.md` → `T25`.
+- 🟡 **The fix was already in this repository, and that is the finding — not the fix.** Tree
+  enumeration (`git clone --filter=blob:none` + `git ls-tree -r`) resolves every defect above, and it
+  is **not new here**: **91** committed instruments already use `--filter=blob:none`, **104** use
+  `ls-tree`, `compose/code/p215-lstree-grant-recovery/` exists, `make enumerate` has shipped since
+  `p275`, and `make ladder-audit` grades **919 ladders** across 510 instruments with **57** already
+  `TREE-ENUMERATED`. 🔴 **`p885` built a NEW 8-path ladder anyway, and it regressed against gates this
+  KB already had passing** — `gate-ladder-case` (`p283`, which exists precisely to ask *"which path
+  ladders can find an uppercase extension?"*) and `gate-enumeration` (`p275`, whose README states the
+  rule in one line: **"a ladder can only ever refute the paths it tried"**). 🔵 **The defect is not
+  missing knowledge. It is a new instrument built without reading the gates.** See `886-G2`.
+- 🔴 **`0` new repositories from the eight prescribed WebSearch legs, for the EIGHTH consecutive
+  pass** — **`63` facts checked, `63` already held, `0` new, `0` new repositories**
+  ([`record`](../evidence/websearch-legs.2026-11-18-p886.tsv)). All **15** repositories the legs
+  named (`OpenHands`, `SWE-agent`, `MetaGPT`, `CrewAI`, `NousResearch/hermes-agent`,
+  `microsoft/ai-agents-for-beginners`, `HKUDS/DeepTutor`, `OpenMAIC`, `ai-engineering-hub`,
+  `Claw-ED`, `withmarbleapp/os-taxonomy`, Apache OFBiz, Corteza, Krayin, iDURAR) are already in this
+  KB's index, measured against it rather than asserted. 🔵 **All four regional legs returned relevant
+  material this pass — no region nilled.**
+- 🟡 **One defect in `p886`'s own instrument, declared rather than quietly dropped.** The slug
+  extractor matched `github.com/<a>/<b>` and so produced **4 non-repositories** —
+  `search/repositories`, `search/code`, `search/commits` and `advisories/GHSA-7pp5-29mw-9jq3`, which
+  are API endpoint paths and a security-advisory URL quoted in prose. The population is **163, not
+  167**. 🟢 **An independent channel caught it**: those are exactly the 4 slugs on which
+  `search/repositories` returned `422` while the other 163 returned `200`.
+- 🔴 **`search/commits` is `422` for the second consecutive pass**, so **`884-G3` stays BLOCKED** and
+  every liveness figure on these shelves remains **`HEAD ≥ date`**
+  ([`record`](../evidence/channel-state.2026-11-18-p886.tsv)).
+
+🟢 **Re-measured first-hand this pass** (channel A, `search/repositories`):
+
+| Repo | ★ `p886` | was | Metadata (SPDX) | Bytes (byte-read) | Verdict |
+|---|---:|---:|---|---|---|
+| **HKUDS/DeepTutor** | **60,195** | 60,066 (`p885`) | Apache-2.0 | Apache-2.0, 11,408 B, `cd2f54e1e506` | 🟢 AGREE. +129 since `p885`. |
+| **ECNU/EduWork** | **380** | 376 (`p884`) | `MulanPSL-2.0` | 🔴 **`MulanPSL-2.0` AND `MIT`** — `LICENSE` 9,233 B `eb7a1d713eb9` **and** `LICENSE-MIT` 1,085 B `dc719b536b8f` | 🔴 **Scored AGREE and is INCOMPLETE.** See `886-G1`. |
+| **ECNU/EduWork-ECNU** | **29** | 29 (`p883`) | `MulanPSL-2.0` | 🔴 Same two payloads, byte-identical | 🔴 Same. |
+| **openedx/XBlock** | **471** | 471 | Apache-2.0 | Apache-2.0, 11,358 B, `cfc7749b96f6` @ `master/LICENSE.TXT` | 🟢 AGREE **once the ladder could see the file**. |
+| **RWTH-OS/eduOS-rs** | **493** | 493 | Apache-2.0 | **MIT** (`LICENSE-MIT` 1,023 B) — and `LICENSE-APACHE` 9,722 B also present | 🔴 **DISAGREE, and neither channel is wrong**: `Cargo.toml` declares `license = "MIT/Apache-2.0"`. Already correct at `repos/foundations.md:666`. |
+| **opendatalab/MinerU** | — | — | Apache-2.0 | **bespoke title + RIDER**, 3,301 B, `2d9aeb5d1515` | 🟡 Honest abstention; matches `:782` exactly. |
+
+Method, the full 163-row table, the 30 controls and the leg-by-leg split:
+`compose/code/p886-dual-channel-grant/README.md`, `agents/trending.md`, `repos/trending.md` and
+`intel/open-gaps.md`, this pass.
+
+**Previous pass (`p885`), retained:** **Pass `p885`, 2026-11-18** (second pass of the day). **`p885` ran the one action `p884` left open and
 the answer is NO. The 3,186 repositories `p884`'s sort order threw away contain `0` agents, `0`
 platforms and `0` shelvable rows — the hidden tail is student homework.**
 
@@ -524,8 +601,8 @@ Read this before the tables below. Measured `2026-11-17` via `api.github.com/sea
 | **ls1intum/Pyris** | 12 | **MIT** | `pushed_at` 2026-06-03 · 🔴 **default-branch `HEAD ≥ 2025-01-29` (~22 months)** | 🔴 **`p883` liveness correction.** Standalone LLM microservice behind Iris. **The stalest row on this shelf.** Treat as reference architecture, not as a dependency. |
 | **virtualryder/edu-ai-agents** | **4** | **MIT** — byte-read | 2026-10-10 | 🔴 New in `p878`. FERPA/COPPA/IDEA-504/ADA-aligned governed-agent reference. **Four stars — reference reading, not a dependency.** |
 | 🟢 `openedx/openedx-platform` | **8,240** | AGPL-3.0 — SPDX + byte-read | 2026-11-17 | 🟢 **Measured by `p879`.** `p878` listed this row as *unmeasurable* under the stale slug `openedx/edx-platform`; the `422` was a rename, not a channel hole. Created 2013-05-30, 4,382 forks. **AGPL-3.0 — the core is off-limits to a client who cannot take copyleft; its Apache-2.0 component layer is not (see `compose/patterns.md` P19).** |
-| 🟢 **`ECNU/EduWork`** | **376** (44 forks) | 🟢 **`MulanPSL-2.0`** — byte-read `main/LICENSE`, **9,233 B**, `sha256₁₂ eb7a1d713eb9`, 9 patent references | `pushed_at` 2026-11-17 · default-branch `HEAD ≥ 2026-11-17` | 🟢 **NEW in `p883`, and the find of the pass.** East China Normal University's **education distribution of DeepSeek Harness** (`deepseek-ai/deepseek-harness`, MIT, 282,965 ★ — shelved on `repos/foundations.md`, `p883`; DSH `0.2.1-rc.3`): desktop agent runtime plus a maintained education plugin set — institutional OIDC login and model access (LiteLLM OAuth), knowledge studio over local materials. Windows x64 / macOS arm64+x64. **376 ★ in nine weeks** (created 2026-09-14). Found via the owner channel; **empty GitHub description**, so invisible to all 82 prior keyword legs. |
-| 🟢 **`ECNU/EduWork-ECNU`** | **29** (6 forks) | **`MulanPSL-2.0`** | `pushed_at` 2026-11-17 | 🟢 **NEW in `p883`.** The university's own branded deployment of its own distribution — a worked example of the configure-and-brand step, not a second product. **This is the artefact to show a ministry or a university buyer.** |
+| 🟢 **`ECNU/EduWork`** | **380** (44 forks) | 🔴 **`MulanPSL-2.0 AND MIT`** — **CORRECTED by `p886`.** Byte-read `main/LICENSE` **9,233 B** `sha256₁₂ eb7a1d713eb9` (MulanPSL-2.0, 9 patent references) **and** `main/LICENSE-MIT` **1,085 B** `sha256₁₂ dc719b536b8f` (canonical, unmodified MIT, *"Copyright (c) 2026 East China Normal University"*). 🔴 **`AND`, not `OR`** — the repository's own `LICENSING.md` (**3,048 B**, `sha256₁₂ e85e94f2cc4a`) states the expression *"describes these separately licensed portions, **not a choice of license for all code**"*. **Read `## Licence arity` below before proposing this row to a client.** | `pushed_at` 2026-11-17 · default-branch `HEAD ≥ 2026-11-17` | 🟢 **NEW in `p883`, and the find of the pass.** East China Normal University's **education distribution of DeepSeek Harness** (`deepseek-ai/deepseek-harness`, MIT, 282,965 ★ — shelved on `repos/foundations.md`, `p883`; DSH `0.2.1-rc.3`): desktop agent runtime plus a maintained education plugin set — institutional OIDC login and model access (LiteLLM OAuth), knowledge studio over local materials. Windows x64 / macOS arm64+x64. **376 ★ in nine weeks** (created 2026-09-14). Found via the owner channel; **empty GitHub description**, so invisible to all 82 prior keyword legs. |
+| 🟢 **`ECNU/EduWork-ECNU`** | **29** (6 forks) | 🔴 **`MulanPSL-2.0 AND MIT`** — **CORRECTED by `p886`.** The same two payloads, byte-identical to `EduWork`'s (`eb7a1d713eb9` / `dc719b536b8f`); its own `LICENSING.md` is **3,022 B**, `sha256₁₂ 18d102bb2923`. | `pushed_at` 2026-11-17 | 🟢 **NEW in `p883`.** The university's own branded deployment of its own distribution — a worked example of the configure-and-brand step, not a second product. **This is the artefact to show a ministry or a university buyer.** |
 
 🟡 **How to use this column.** It separates *support burden* from *engineering quality*. A 0-star
 repo may be excellent code; it will still have no external contributors, no issue history and
@@ -773,6 +850,54 @@ from the API. With both ends now measured first-hand over nine hours, the true r
 60,000-star repository is **single digits per hour**. 🔴 **A future pass that reports a four-figure
 jump should check its own channel before it writes a trend.**
 
+
+## Licence arity — the property neither GitHub nor a root `LICENSE` can express — new in `p886`
+
+🔵 **Why this section exists.** Every licence cell on every shelf in this KB has until now been a
+**single value**. `p886` ran `885-G1`'s two-channel test over 163 rows and found that for some rows
+there is no single value to carry: the grant is a **set**, and a cell holding one member of that set
+is wrong in a way that both of `885-G1`'s channels certify as correct.
+
+| Arity | What it means | Row measured in `p886` | How both channels failed |
+|---|---|---|---|
+| **1** | one grant, whole repository | 159 of 163 rows | — (the normal case; the test works) |
+| **`A AND B`** (conjunctive) | different parts carry different grants; **you must satisfy both** | 🔴 **`ECNU/EduWork`**, **`ECNU/EduWork-ECNU`** | Both reported `MulanPSL-2.0` and **AGREED**. The MIT half is a second root file. |
+| **`A OR B`** (disjunctive) | you may **choose** either | `RWTH-OS/eduOS-rs` | Metadata picked `Apache-2.0`; a first-hit ladder picked `MIT`. Scored `DISAGREE` — the only row where the arity was visible at all. |
+| **per-directory** | the grant changes by subtree | `sudosylabs/proctor` (`verticals/solutions.md`) | Both reported `AGPL-3.0` and **AGREED**. `packages/*` is **Apache-2.0**. |
+| **per-file** | the grant changes by file, with a default for unmarked files | `iiab/iiab` (2,052 ★) | Both reported `GPL-2.0` and **AGREED**. |
+
+### 🔴 `ECNU/EduWork` — what the correction actually changes for a Globant engagement
+
+This is this KB's **flagship APAC-origin education agent platform** (`p883`'s find of the pass) and
+the base of **`compose/patterns.md` → `P24`**, so the correction is commercial, not cosmetic. Read
+byte-for-byte from `main/LICENSING.md` (**3,048 B**, `sha256₁₂ e85e94f2cc4a`), which is bilingual
+Chinese/English and which **no previous pass had read**:
+
+| What the policy says | Why it matters to a studio |
+|---|---|
+| MulanPSL-2.0 is the primary licence **for original contributions after the commit introducing the notice** — a **relicence boundary**, at `a43a4d424c9d25668589dfe94a3871318ce299ff` | The project changed licence mid-life. What you get depends on **which commit** you take. |
+| The pre-transition baseline **retains its original MIT grants and rightsholders** | There is real MIT-licensed code in the tree, owned by people other than ECNU. |
+| 🔴 *"Distributions combining new Mulan-licensed contributions and historical MIT code **must retain both licenses and their notices**"* | 🔴 **A branded redistribution — exactly what `P24` sells — must ship BOTH licence texts and both notice sets.** This is a deliverable checklist item, not a footnote. |
+| 🔴 *"`MulanPSL-2.0 AND MIT` … **not a choice of license for all code**"* | 🔴 You **cannot** elect MIT to avoid a MulanPSL-2.0 review. Procurement teams that will not clear MulanPSL-2.0 still have to clear it. |
+| 🔴 *"does not make historical MIT contributors grant additional patent rights under Mulan"* | 🔴 **The 9 patent references this shelf credited to the row do NOT cover the historical MIT portion.** The patent peace is narrower than the row implied. |
+| 🟢 *"The entire literature plugin (`packages/dsh-literature`) retains MIT"* | 🟢 **A wholly-MIT, separable component inside a MulanPSL-2.0 project** — the cleanest liftable unit in the row, and newly identified. |
+| Previously distributed versions and npm archives keep their existing licences; artwork, vendored code, DSH and test fixtures retain their own terms; no trademark permission is inferred | Pin a version and record it. "EduWork is MulanPSL-2.0" is not a statement that survives contact with a specific tag. |
+
+🔵 **The row is still recommended, and `P24` still stands.** MulanPSL-2.0 and MIT are both OSI-approved
+and both permissive; nothing here is copyleft and nothing blocks a build. What changed is that the
+obligation is **two notice sets instead of one**, the patent grant is **narrower than stated**, and
+there is a **named MIT sub-component** worth lifting on its own.
+
+### 🟢 The rule this earns, so no later pass re-derives it
+
+🔴 **Do not record a licence cell for a repository that carries more than one licence payload, or a
+`LICENSING.md` / `NOTICE` / `THIRD_PARTY_NOTICES.md`, until that document has been read.**
+`19 / 163` shelf rows (**11.7%**) carry one
+([`record`](../evidence/licence-policy-docs.2026-11-18-p886.tsv)). Enumerate with a blobless clone —
+`git clone --depth 1 --filter=blob:none --no-checkout` then `git ls-tree -r --name-only HEAD` — not
+with a path list, because a path list only finds filenames somebody thought of. 🔴 **And do not treat
+the policy document as self-verifying either**: `proctor`'s asserts an SPDX header on every
+comment-capable file, and `0 of 65` files under `packages/` have one.
 
 ## Licence flags — read before proposing any of these to a client
 

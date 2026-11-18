@@ -1,0 +1,10 @@
+measurement	baseline_HEAD_p885	working_tree_p886	delta
+gates green	55 / 74	55 / 74	0
+gates red	19	19	0
+red set identical	-	YES	-
+method	git worktree add /tmp/kb-base HEAD --detach; make hooks in both trees	-	-
+red gates	gate-header-signature gate-offline recount gate-derived-counts gate-enumeration gate-dates gate-shelf-consistency gate-register-currency gate-fold-identity gate-alias-canonical gate-census-currency gate-grant-path gate-census-union gate-ledger gate-i2-sweep-crosscheck gate-union-currency gate-action-answered gate-promotion-ledger gate-cell-reproduction	same 19, same order	0
+gate-tables (ACTION p277: no data row renders as a table header)	GREEN	GREEN	0
+gate-subtree-grant (p382, 19 controls)	PASS	PASS	0
+gate-conjunctive-grant (p427, 24 controls)	PASS	PASS	0
+p886 own controls	-	18/18 classifier + 12/12 path ladder = 30/30	-

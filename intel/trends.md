@@ -6,7 +6,137 @@ updated: 2026-11-18
 
 # Current trends — education AI
 
-**Pass `p885`, 2026-11-18** (second pass of the day). **The trend this pass establishes is not about
+**Pass `p886`, 2026-11-18** (third pass of the day). **The trend this pass establishes is about the
+shape of open-source grants in education, and it is the first one this KB has found by auditing
+itself rather than by searching: a licence is not a value, it is a SET, and every instrument here —
+and GitHub's own metadata field — is built to hold exactly one.**
+
+### 🔴 T-`p886`-1 — Licence ARITY, measured on this KB's own shelves for the first time (the CONCEPT is older: `gate-subtree-grant` `p382`, `gate-conjunctive-grant` `p427`)
+
+🟢 **Measured, not argued.** `885-G1`'s two-channel test over all 163 shelf rows produced `144`
+agreements (88.3%) — and **four of those rows carry a grant that neither channel can express**
+([`record`](../evidence/dual-channel-885G1.2026-11-18-p886.tsv)). Three of the four scored **`AGREE`**:
+
+| Row | Both channels | Reality | Shape |
+|---|---|---|---|
+| `ECNU/EduWork` + `EduWork-ECNU` | `MulanPSL-2.0` | **`MulanPSL-2.0 AND MIT`** | conjunctive, by provenance (a relicence boundary) |
+| `sudosylabs/proctor` | `AGPL-3.0` | AGPL-3.0 core, **Apache-2.0 `packages/*`**, BSD-3-Clause one vendored dir | per-directory |
+| `iiab/iiab` (2,052 ★) | `GPL-2.0` | GPL-2.0 default, **LGPL-2+ encouraged** per file | per-file |
+| `RWTH-OS/eduOS-rs` | `Apache-2.0` vs `MIT` | **`Apache-2.0 OR MIT`** | disjunctive, across two files |
+
+🔴 **Only the disjunctive case was visible to the test**, and only by accident: two licence files
+produce a disagreement, whereas conjunction and per-directory grants produce agreement on one
+member of the set. **A two-channel gate made of two single-valued channels cannot detect arity, and a
+clean `AGREE` is therefore not evidence that a grant is known.**
+
+🟢 **Exposure: `19 / 163` rows (11.7%)** carry a `LICENSING.md`, `NOTICE`, `NOTICE.txt` or
+`THIRD_PARTY_NOTICES.md` that neither channel reads
+([`record`](../evidence/licence-policy-docs.2026-11-18-p886.tsv)).
+
+🟡 **Stated against what this KB already had.** Arity is **not** a new concept here:
+`gate-subtree-grant` (`p382`, 19 controls) encodes *"a grant has SUBTREES and a root-only read is
+wrong about the repository"*, and `gate-conjunctive-grant` (`p427`, 24 controls) encodes *"one
+payload, two LIVE families, and a notice obligation of two"*. **Both pass.** 🔴 **What was missing was
+the measurement**: no pass had asked *how many live shelf rows are affected*, and the answer —
+**4 rows with multi-valued grants, 3 of them inside the `AGREE` set, and 19 rows (11.7%) carrying an
+unread policy document** — is what makes this a shelf problem rather than a classifier feature.
+
+🔵 **Why arity is rising rather than incidental.** Each of the four cases comes from a *healthy*
+project doing a normal thing: relicensing as it institutionalises (`EduWork`), separating reusable
+libraries from a copyleft product (`proctor`), accumulating per-file history (`iiab`), or following
+an ecosystem's dual-licence convention (`eduOS-rs`, Rust). **The more mature and the more
+institutional a project becomes, the more likely its grant has arity greater than one** — which is
+exactly the supply `T15` says this vertical is made of.
+
+### 🔴 T-`p886`-2 — When a project splits its licence, the permissive half is the half without the domain value
+
+🟢 **The measured case, and it is clean.** `sudosylabs/proctor` publishes **Apache-2.0**
+`packages/cache` (Redis cache abstraction), `packages/mail` (mailer) and `packages/vfs` (virtual
+filesystem + conformance suite) — three standalone Go modules with their own `LICENSE` and `NOTICE`.
+The **assessment-integrity logic is AGPL-3.0**: `server/` holds **2,505 tracked files** including
+`server/app/exam/attempt/` and `server/app/access/session_assurance.go`, plus 222 in `webapp/`.
+
+🔴 **So "this repo has Apache-2.0 code in it" and "this repo offers permissive supply for the thing
+you need" are different claims, and the gap between them is where a studio loses a quarter.** The
+permissive bytes are real, separable and genuinely reusable — and none of them is proctoring.
+
+🔵 **This STRENGTHENS `p875`'s standing verdict** that open-source proctoring is *"real demand and
+effectively no supply"*, by supplying its mechanism: the category's newest entrant **did** open
+source permissively, and chose the plumbing. 🟢 **The operational rule: when a split-licence repo
+appears, ask which side the domain logic is on before counting it as supply.** It is usually not the
+permissive side, because the permissive side is what the vendor wanted reused.
+
+### 🔴 T-`p886`-3 — The gate and the shelf disagreed 8 times: the gate lost 7 and the shelf lost 1, and the shelf's single loss is the expensive one
+
+🟢 **Seven times the shelf was right.** `LICENSE.TXT` missing from `p885`'s ladder
+(`openedx/XBlock`, `xblock-sdk` — Apache-2.0, 11,358 B, `cfc7749b96f6`, correct at
+`repos/foundations.md:408`), Portuguese AGPL (`portabilis/i-diario`, `:582`), ODbL
+(`withmarbleapp/os-taxonomy`, `agents/top.md:790`), a 19-byte declaration (`frappe/education`), a
+bespoke title (`opendatalab/MinerU`, `:782`) and a split-file dual (`eduOS-rs`, `:666`). **A human
+reading a licence file reads what is there; a ladder reads what it was told to look for.**
+
+🔴 **Once the shelf was wrong, and it had been wrong for ~611 passes.**
+`OS4ED/openSIS-Classic` was published on three live shelves as *"no detectable licence at all, treat
+as all rights reserved"* and *"GPL per README; no licence file"*. **Its grant is GPL-2.0, 17,286 B,
+`sha256₁₂ 224ac3d403e3`, at `master/docs/License.txt`.** 🔴 **And this KB already knew**:
+`compose/code/pass275-grant-enumeration/`'s README names this repository and this path as the case
+the `p275` enumeration gate was built on, and states the rule in one sentence — *"a ladder can only
+ever refute the paths it tried."*
+
+🔵 **The asymmetry is the trend.** An instrument error produces a *visible* disagreement that the
+next pass can triage. A shelf error produces a *confident false absence* that reads exactly like a
+finding and propagates into advice — here, "treat as all rights reserved" and "clarify with OS4ED"
+on a repository carrying a perfectly ordinary GPL-2.0 grant. 🟢 **`T13` said this KB's binding
+constraint moved from discovery to propagation; `p886` is the first pass to catch a specific,
+dated, already-solved finding failing to propagate**, with both the module that solved it and the
+shelves that contradict it in the same commit.
+
+### 🔴 T-`p886`-4 — The instruments to prevent all of this were already in the repository, and a new pass built a worse one anyway
+
+🔴 **This is the correction `p886` owes its own first draft.** The obvious reading of the defects
+above is *"this KB needs tree enumeration instead of path ladders."* **That reading is wrong, because
+this KB has had tree enumeration for hundreds of passes:**
+
+```
+91   committed instruments use  git clone --filter=blob:none
+104  committed instruments use  git ls-tree
+57   of 919 graded ladders are  TREE-ENUMERATED        (make ladder-audit: 919 ladders, 510 instruments)
+     compose/code/p215-lstree-grant-recovery/          exists
+     make enumerate                                    ships since p275
+     gate-enumeration  (p275)  PASS                    "a ladder can only ever refute the paths it tried"
+     gate-ladder-case  (p283)  PASS                    "which path ladders can find an uppercase extension?"
+     gate-subtree-grant (p382) PASS   19 controls       a grant has SUBTREES; a root-only read is wrong
+     gate-conjunctive-grant (p427) PASS 24 controls     one payload, two live families, notice obligation of two
+```
+
+🔴 **`p885` nonetheless shipped a new 8-path, root-only ladder, and it failed in exactly the two ways
+the two relevant gates exist to catch.** `p886` then reused that ladder and inherited both failures.
+🔵 **So the trend is not about licence topology at all — it is about an accumulating instrument
+estate that no pass reads before adding to it.** 919 ladders across 510 instruments is not a toolkit,
+it is a sediment; the marginal pass finds it cheaper to write ladder 920 than to find out that 57 of
+the existing ones already solved the problem.
+
+🟢 **The operational rule, and it costs one command.** Before building a probe, run
+`make ladder-audit` and `grep -rl` for the channel in `compose/code/`. `p886` did this **after**
+writing its instrument rather than before, which is how it caught its own false novelty claim — and
+why `886-G2`'s acceptance test is about *reading the gates*, not about adding another one.
+
+### 🔴 T-`p886`-5 — A licence-policy document is a third channel, not an oracle
+
+🟢 **Measured on the document that produced this pass's best finding.** `proctor`'s `LICENSING.md`
+(3,627 B, `sha256₁₂ 34b724fe4bd1`) makes two checkable claims. **One holds**: no AGPL-derived
+implementation inside the Apache packages — `0` of 65 files under `packages/` reference AGPL. **One
+does not**: it asserts that *"every comment-capable code … file carries a human-readable copyright
+and license notice together with an SPDX license identifier"*, and **`0` of 65 files under
+`packages/` carry an SPDX identifier** (6 carry a `Copyright` line, 5 a `Licensed under` line).
+
+🔵 **So the repair for `T-p886`-1 cannot be "read the policy doc and believe it."** Prose inherits
+prose's failure mode. The policy document tells you **where to look** — per-directory, per-file, a
+relicence boundary — and the bytes in the tree tell you **what is true**. `EduWork`'s
+`MulanPSL-2.0 AND MIT` was established by reading the policy **and** byte-reading both payloads; the
+SPDX-header claim above is why only the second half is load-bearing.
+
+**Previous pass (`p885`), retained:** **Pass `p885`, 2026-11-18** (second pass of the day). **The trend this pass establishes is not about
 AI in education — it is about where education supply actually lives, and `p885` closed that question
 with a measurement instead of a hypothesis.**
 

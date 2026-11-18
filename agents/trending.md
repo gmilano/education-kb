@@ -4,6 +4,91 @@ region: Global
 updated: 2026-11-18
 ---
 
+## 🔴 `2026-11-18` (`p886`) — **the eight prescribed legs nilled for an EIGHTH pass, so the pass audited itself instead: the gate and the shelves disagreed 8 times, the gate lost 7, and the shelf's single loss was a GPL-2.0 grant published as absent that this repository had already refuted ~611 passes ago**
+
+🔵 **The eight legs, run global-then-regional as prescribed, with the held/new split measured against
+this KB's index rather than asserted.** `63` facts checked · **`63` held** · `0` new · **`0` new
+repositories** ([`record`](../evidence/websearch-legs.2026-11-18-p886.tsv)).
+
+| Leg | Facts | Held | New | New repos | What it returned |
+|---|---:|---:|---:|---:|---|
+| `top open source AI agents education 2026 github MIT` | 4 | 4 | 0 | **0** | 🔴 **The engine stated it "didn't turn up a ranking of open-source AI agents specifically for education."** `OpenHands`, `SWE-agent`, `MetaGPT` (69.9k ★ claimed), `CrewAI`, `NousResearch/hermes-agent` — all horizontal, all indexed. |
+| `github trending education AI 2026` | 5 | 5 | 0 | **0** | `HKUDS/DeepTutor`, `OpenMAIC` (~42K), `ai-engineering-hub` (~40.5K), `Claw-ED`, `withmarbleapp/os-taxonomy`. All indexed. 🔴 Three reports in one week gave DeepTutor 48,268 / 52,783 / ~60,000 — **first-hand this pass: 60,195**. |
+| `open source platform education ERP CRM MIT Apache` | 4 | 4 | 0 | **0** | 🟢 **The source itself says it "found no MIT- or Apache-licensed platform that is specifically built for education."** Standing nil corroborated by a leg trying to refute it. |
+| `AI education industry trends 2026` | 4 | 4 | 0 | **0** | $11.4B @ 25.9% CAGR vs $12.3B; OECD 2026 Outlook; HolonIQ AI/data **12%** of higher-ed partnerships (2.1% in 2021); Florida's 28 colleges. |
+| **North America** | 13 | 13 | 0 | **0** | 134 bills / 31 states; ID `SB 1227`; NC `Session Law 2026-41`; NC `SB 1006` $10M Khanmigo; NY `A 9190`; NJ `A 4352`/`S 2862`; CA `AB 1159`; MD/ID/OK/VA; USDoE OET framework 2026-03; K-12 AI Literacy Act 2026; Berkeley Law; Parents & Kids Safe AI Act. |
+| **EMEA** | 10 | 10 | 0 | **0** | Omnibus = **Reg. (EU) 2026/1744**, OJ 2026-07-24, applies 2026-07-27; high-risk **2027-12-02** / **2028-08-02**; UK DfE 2026-01; Ofqual 2026-03; Dubai KHDA; OpenAI in EE/SK/GR/IT. |
+| **APAC** | 7 | 7 | 0 | **0** | Korea AI Basic Act in force 2026-01-22 (decrees pending, grace through 2026); **Vietnam 2026-03-01, education HIGH-RISK**, 72h incident reporting; Australia TEQSA plans, no law; China labelling; Japan; Singapore AI Verify. |
+| **LATAM** | 16 | 16 | 0 | **0** | DEC 92%/79%; UNESCO IESALC 87%/74%; **PISA 2025 nine-in-ten across 13 countries**; 26% formal strategy; Cetic.br 53%/22%; CENIA 13-of-19; U. de los Andes **716 instruments / 23 countries**; UNESCO LAC Observatory launched 2026-04-14; Latam-GPT. |
+
+🔵 **Every repository the legs named was checked against this KB's index — all 15 were already in
+it.** `OpenHands`, `SWE-agent`, `MetaGPT`, `CrewAI`, `hermes-agent`,
+`microsoft/ai-agents-for-beginners`, `HKUDS/DeepTutor`, `OpenMAIC`, `ai-engineering-hub`, `Claw-ED`,
+`withmarbleapp/os-taxonomy`, Apache OFBiz, Corteza, Krayin, iDURAR. 🟢 **No region nilled.**
+
+### 🔴 The pass's actual yield: `885-G1` executed, and the instrument lost to the shelf 7–0
+
+🟢 **Both channels on all 163 shelf rows** ([`record`](../evidence/dual-channel-885G1.2026-11-18-p886.tsv)):
+
+```
+AGREE                        144   88.3%
+BYTES-ONLY (T14)              13    8.0%    metadata abstains; bytes carry a real grant
+BOTH-ABSENT                    4    2.5%
+DISAGREE                       1    0.6%    RWTH-OS/eduOS-rs
+BYTES-UNRECOGNISED             1    0.6%    opendatalab/MinerU
+
+FIELD-ASSERTS-PAYLOAD-DENIES   0            885-G1's OWN class does not recur on any live shelf row
+default-branch disagreement    0 / 163      search/repositories vs git ls-remote --symref
+permissive share (BYTES)     128 / 163 = 78.5%
+```
+
+🟢 **Seven of the eight disagreements were instrument defects, and the shelf was right in all seven**
+— `LICENSE.TXT` missing from `p885`'s ladder (`openedx/XBlock`, `xblock-sdk`: Apache-2.0, 11,358 B,
+`cfc7749b96f6`, already at `repos/foundations.md:408`), Portuguese AGPL (`portabilis/i-diario`),
+ODbL (`withmarbleapp/os-taxonomy`), a 19-byte declaration (`frappe/education`), a bespoke title
+(`opendatalab/MinerU`) and a split-file dual (`eduOS-rs`). 🔵 **Had the test's output been trusted it
+would have published `885-G1`'s own error class against six correct, byte-sourced cells.** Repairs:
+`compose/code/p886-dual-channel-grant/`, **30 controls**.
+
+🔴 **The eighth went the other way, and it is the expensive one.** `OS4ED/openSIS-Classic` is
+published on three live shelves as *"no detectable licence at all, treat as all rights reserved"*.
+**Its grant is GPL-2.0, 17,286 B, `sha256₁₂ 224ac3d403e3`, at `master/docs/License.txt`** — and
+`compose/code/pass275-grant-enumeration/`'s own docstring **names this repository and this path as
+the case that gate was built on**, ~611 passes ago. The gate passes; the shelves carried the false
+absence anyway. 🔵 **`T13`'s propagation constraint, caught in the act, with both halves in one
+commit.** Corrected this pass.
+
+🟡 **And the correction `p886` owes its own draft: tree enumeration is NOT a new channel here.**
+**91** committed instruments already use `git clone --filter=blob:none`, **104** use `git ls-tree`,
+`make enumerate` ships since `p275`, and `make ladder-audit` grades **919 ladders across 510
+instruments** with **57** already `TREE-ENUMERATED`. `p885` built a new 8-path root-only ladder
+anyway, regressing against `gate-ladder-case` (`p283`) and `gate-enumeration` (`p275`) — **both
+passing**. The defect is not missing knowledge; it is a new instrument built without reading the
+gates (`886-G2`).
+
+### 🔴 And the finding the test could not have produced: `ECNU/EduWork` is `MulanPSL-2.0 AND MIT`
+
+🟢 **This KB's flagship APAC-origin education agent platform carries TWO root licence payloads**, and
+both channels reported one of them and **agreed**: `main/LICENSE` **9,233 B** `eb7a1d713eb9`
+(MulanPSL-2.0) **and** `main/LICENSE-MIT` **1,085 B** `dc719b536b8f` — canonical, unmodified MIT,
+*"Copyright (c) 2026 East China Normal University"*. The repository's own `LICENSING.md` (**3,048 B**,
+`e85e94f2cc4a`, bilingual) states the expression is `MulanPSL-2.0 AND MIT` and *"**not a choice of
+license for all code**"*; that distributions combining both **must retain both licences and notices**;
+that historical MIT contributors grant **no** Mulan patent rights; and that
+**`packages/dsh-literature` retains MIT entirely**. 🔴 **`MulanPSL-2.0 AND MIT` appeared in `0` files
+of this KB before this pass.** Both agent rows corrected; `P24` amended; `P27` added.
+
+### 🟡 One defect in this pass's own instrument, declared
+
+The slug extractor matched `github.com/<a>/<b>` and produced **4 non-repositories** —
+`search/repositories`, `search/code`, `search/commits`, `advisories/GHSA-7pp5-29mw-9jq3` (API paths
+and an advisory URL quoted in prose). Population is **163, not 167**. 🟢 **An independent channel
+caught it:** those are exactly the 4 slugs where `search/repositories` returned `422` while the other
+163 returned `200`.
+
+🔴 **`search/commits` is `422` for a second consecutive pass → `884-G3` stays BLOCKED**; liveness
+everywhere remains `HEAD ≥ date` ([`record`](../evidence/channel-state.2026-11-18-p886.tsv)).
+
 ## 🔴 `2026-11-18` (`p885`) — **the eight prescribed legs nilled for a SEVENTH pass, and the one open action that promised new supply came back empty on measurement: the 3,186 repositories `p884`'s sort order discarded hold zero agents. The pass's real yield came from a BRANCH NAME, not a keyword**
 
 🔵 **The eight legs, run global-then-regional as prescribed, with the held/new split measured against
