@@ -10,7 +10,8 @@ Concrete recipes. Each names the exact repos, how they wire together, the licenc
 the result, and a realistic build estimate. Every repo referenced is verified in
 `agents/top.md`, `repos/foundations.md` or `verticals/solutions.md`.
 
-**Fourteen patterns. p895 added P14** — offline-first literacy delivery on the one Africa-origin
+**Fourteen patterns, plus the G1 licence gate added in p897** that runs ahead of all of them.
+**p895 added P14** — offline-first literacy delivery on the one Africa-origin
 permissive platform this KB has verified (`elimu-ai`), with the agent tier as studio IP because
 the supply measurement leaves nothing licensed to adopt (see **T16**). **It is also the only
 pattern here whose licence posture is permissive end to end.**
@@ -27,6 +28,52 @@ work; forking the platform does not. Where a client needs a proprietary derivati
 **OpenOLAT (Apache-2.0)** instead.
 
 ---
+
+## G1 — Licence pre-flight gate (run before *any* pattern below) — added p897
+
+Every pattern here opens with a licence posture, and that posture is only as good as the licence
+reading under it. **p897 byte-read the seven shelf rows whose licence was unresolved and five were
+wrong as recorded** (see **T19**). This gate is the cheapest step in this file and it runs first.
+
+### The script
+
+[`compose/code/licence-grant-gate-p897/probe-grant.sh`](code/licence-grant-gate-p897/probe-grant.sh) —
+no dependencies beyond `curl` and `sha256sum`.
+
+```bash
+./compose/code/licence-grant-gate-p897/probe-grant.sh frappe/lms OS4ED/openSIS-Classic
+```
+
+It probes **3 branches × 6 directories × 14 filenames** against `raw.githubusercontent.com` and
+prints, for each hit, the **byte count and `sha256₁₂`** of the grant plus its first line. A repo
+with no hit across the whole grid is reported as **unlicensed — do not ship**.
+
+### Why the directory axis is the part people miss
+
+GitHub's SPDX detector, and this KB's own probe until now, **classify the repository root only**.
+
+| Repo | Root probe says | The gate finds |
+|---|---|---|
+| `OS4ED/openSIS-Classic` | `NONE` → reads as unlicensed | **GPL-2.0** at `master/docs/License.txt`, 17,286 B `224ac3d403e3` |
+| `moodlehq/moodleapp` | `NO-LICENSE-FILE` | **Apache-2.0** at `main/COPYING.txt`, 11,358 B `cfc7749b96f6` |
+| `frappe/education` | `NOASSERTION` | **GPL-3.0**, a **19-byte** `license.txt` naming the licence without reproducing it |
+
+### The two failure modes it is built to stop
+
+1. 🔴 **Shipping copyleft as permissive.** Several 2026 *"best open-source LMS"* comparisons list
+   **Frappe LMS as MIT**. The gate reads **33,893 B of verbatim AGPL-3.0**. AGPL is
+   **network-triggered** — hosting it for a client's students is a distribution event. The MIT
+   belongs to `frappe/frappe`, the framework, not the LMS.
+2. 🟡 **Discarding permissive options out of pessimism.** `Open-TutorAi/open-tutor-ai-CE` was
+   carried as `OTHER` and therefore unusable; the gate reads **verbatim BSD-3-Clause**. In
+   education, permissive is the scarce category — a false negative costs a real option.
+
+### Gate rule
+
+**No repo enters a client deliverable on the strength of a badge, a comparison article, or an
+SPDX field.** Record the path, byte count and `sha256₁₂` of the grant next to the dependency. If
+the grid returns nothing, the repo is all-rights-reserved regardless of how open it looks.
+Budget: **minutes for a whole stack.**
 
 ## P1 — Licence-clean AI tutor on a permissive LMS
 

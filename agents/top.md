@@ -38,6 +38,18 @@ gap entries below are rewritten with today's measurements, and the detail is in
 the daily cadence. **Full sweep still due 2026-11-19.**
 
 
+**p897 (this pass) changed no row in the table below, and that is the finding.** It ran the job
+`p896` left open — a licence re-read of every unresolved row — and **five of seven were wrong as
+recorded**, but all five live in `repos/`, not here. It also ran the first **discovery leg** since
+`p893` (`p896` ran none): three new MIT entrants, all byte-read, **none promoted** — `lynote-ai/ai-tutor`
+(82 ★, two days old), `armanakh/atlas-of-intelligence` (38 ★) and `altuzar/OpenFounderSchool` (27 ★)
+are all sub-100 ★ and under three weeks old, and this KB's own cohort evidence is that such repos
+churn. They are in `agents/trending.md` with a watch condition. The same leg **replicated finding
+`724-S`**: the highest-starred result for an education-agent query was a **stock-valuation tool**,
+and 6 of 11 hits above 10 ★ were not education at all. Spot check only — `DeepTutor` 60,274 →
+**60,323**, `OpenMAIC` 43,878 → **43,887**, `LearnHarness` 10,020 → **10,086** — a **sixth**
+consecutive confirmation of the daily cadence. **Full sweep still due 2026-11-19.**
+
 **p895 (this pass) ran the first dedicated *supply-side* leg on Africa and the Middle East — the
 oldest standing gap in this file — and it moved three ways.** The Africa-origin agent two passes
 had failed to locate **exists** (`Eddy-Emmanuel/EduNaija-LLM`) and is **unlicensed, 1 ★ and

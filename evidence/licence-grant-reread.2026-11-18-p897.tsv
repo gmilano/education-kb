@@ -1,0 +1,15 @@
+# p897 job (c): licence re-read of every shelf row carried as NOASSERTION / OTHER / NO-LICENSE-FILE
+# channel: raw.githubusercontent.com byte-read, 3 branches x 14 filenames (+ docs/ prefix leg)
+# measured 2026-11-18
+repo	carried_as	grant_path	bytes	sha256_12	resolved_licence	verdict
+OS4ED/openSIS-Classic	NONE / NO-LICENSE-FILE	master/docs/License.txt	17286	224ac3d403e3	GPL-2.0	CORRECTED - not unlicensed, grant is one directory down
+frappe/education	NOASSERTION / OTHER	develop/license.txt	19	1fcecf395312	GPL-3.0	CORRECTED - 19-byte declaration, no licence text
+moodlehq/moodleapp	Apache-2.0 / NO-LICENSE-FILE	main/COPYING.txt	11358	cfc7749b96f6	Apache-2.0	CONFIRMED - evidence upgraded from detector to bytes
+jupyter/nbgrader	BSD-3-Clause / OTHER	main/LICENSE	1512	3a83d5b8e22c	BSD-3-Clause	CONFIRMED
+Open-TutorAi/open-tutor-ai-CE	BSD-3-Clause / OTHER	main/LICENSE	1531	57c341d09920	BSD-3-Clause	CORRECTED - verbatim BSD-3; SPDX was right, our text column wrong
+ECNU/EduWork	MulanPSL-2.0 / OTHER	main/LICENSE	9233	eb7a1d713eb9	MulanPSL-2.0 AND MIT	CONFIRMED - re-confirms p886
+ECNU/EduWork	MulanPSL-2.0 / OTHER	main/LICENSE-MIT	1085	dc719b536b8f	MulanPSL-2.0 AND MIT	CONFIRMED - second grant file
+IIC2233/Syllabus	NONE / NO-LICENSE-FILE	-	-	-	NONE	CONFIRMED UNLICENSED - 42 root probes + docs/ leg all 404
+# licence-family check prompted by the above
+frappe/frappe	-	-	-	-	MIT	framework - the MIT that comparison sites misattribute to frappe/lms
+frappe/lms	-	main/license.txt	33893	-	AGPL-3.0	refutes widely-published "Frappe LMS is MIT" claim

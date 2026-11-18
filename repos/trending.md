@@ -4,6 +4,104 @@ region: Global
 updated: 2026-11-18
 ---
 
+## `2026-11-18` (p897) — the last open job closes, and "no licence file" turns out to have meant "not at the root"
+
+**Channel:** `gh api search/repositories` (batched `repo:` qualifiers) for stars/SPDX, and
+licence **byte-reads** from `raw.githubusercontent.com` — this pass over an extended grid of
+**3 branches × 14 filenames = 42 probes per repo**, plus a `docs/` prefix leg that turned out to
+be the whole finding.
+
+`p896` closed its section with three cheap jobs and marked two done, leaving **(c) a licence
+re-read of every repo carried as `NOASSERTION`/unresolved, non-English first**. That is this
+pass. Seven repos, **seven resolved, five corrections, and one of them changes a standing
+warning this KB has published for several passes.**
+
+### 🔴 `OS4ED/openSIS-Classic` is GPL-2.0 — it was never licence-unclear
+
+| Field | Value (measured 2026-11-18) |
+|---|---|
+| Repo | [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) — 351 ★, pushed 2026-10-26 |
+| Carried as | **`NONE` / `NO-LICENSE-FILE`**, with *"third parties list GPL-2.0 but nothing in the repo says so"* and *"do not ship without written licence clarification"* |
+| Measured | 🔴 **GPL-2.0**, byte-read **`master/docs/License.txt`**, **17,286 B**, `sha256₁₂ 224ac3d403e3` |
+| First bytes | BOM + `GNU GENERAL PUBLIC LICENSE` / `Version 2, June 1991` |
+| Corroboration | `README.md` §License links that exact path |
+
+**Something in the repo does say so, and it has all along.** The 42 root probes return 404 because
+**every path this KB tries is at the repository root** — openSIS keeps its grant one directory
+down. The warning was not wrong about the risk profile (GPL-2.0 is strong copyleft, so a
+proprietary derivative is still off the table) but it was wrong about the *reason*: nothing needs
+clarifying.
+
+**Method fix, and it is a different axis from p896's.** p896 grew the probe from 8 filenames to 12
+after `moodlehq/moodleapp` (`COPYING.txt`) and `openedx/XBlock` (`LICENSE.TXT`) both missed — that
+was a **filename** fix. openSIS shows the remaining axis is **directory**. Recommended probe:
+`{main,master,develop} × {LICENSE,LICENSE.md,LICENSE.txt,COPYING,…} × {"", docs/, doc/, legal/, LICENSES/}`.
+Until that runs, **`NO-LICENSE-FILE` in the appendix means "not at the root", not "unlicensed"** —
+and this KB has twice converted the first into the second.
+
+### The full job-(c) result
+
+| Repo | Carried as | Byte-read p897 | Verdict |
+|---|---|---|---|
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | `NONE` / `NO-LICENSE-FILE` | **GPL-2.0**, `master/docs/License.txt`, 17,286 B | 🔴 **corrected** |
+| [`frappe/education`](https://github.com/frappe/education) | `NOASSERTION` / `OTHER` | **GPL-3.0**, `develop/license.txt`, **19 B** | 🔴 **corrected** |
+| [`moodlehq/moodleapp`](https://github.com/moodlehq/moodleapp) | Apache-2.0 / `NO-LICENSE-FILE` | **Apache-2.0**, `main/COPYING.txt`, 11,358 B `cfc7749b96f6` | 🟢 confirmed, evidence upgraded |
+| [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | BSD-3-Clause / `OTHER` | **BSD-3-Clause**, `main/LICENSE`, 1,512 B `3a83d5b8e22c` | 🟢 confirmed |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | BSD-3-Clause / `OTHER` | **BSD-3-Clause verbatim**, 1,531 B `57c341d09920` | 🟢 **SPDX was right, this column was wrong** |
+| [`ECNU/EduWork`](https://github.com/ECNU/EduWork) | MulanPSL-2.0 / `OTHER` | **MulanPSL-2.0 AND MIT** (9,233 B `eb7a1d713eb9` + 1,085 B `dc719b536b8f`) | 🟢 re-confirms p886 |
+| [`IIC2233/Syllabus`](https://github.com/IIC2233/Syllabus) | `NONE` / `NO-LICENSE-FILE` | **nothing**, 42 root probes + `docs/` leg | ⛔ **confirmed unlicensed** |
+
+Two of these deserve a note beyond the table. **`frappe/education`'s entire licence file is 19
+bytes** — the string `License: GNU GPL V3` and nothing else. It names a licence without
+reproducing its text, which is why every SPDX detector returns `NOASSERTION`; treat the
+*declaration* as binding but expect a lawyer to ask. And **`Open-TutorAi` is the direction this
+KB has not corrected before**: a row where the permissive SPDX was accurate and our own "text
+read" column had demoted it to `OTHER`. Unresolved cells have been assumed pessimistic here; one
+of seven was pessimistic in the wrong direction, against a permissive row.
+
+### 🔴 And a licence-family error that the popular 2026 comparisons are propagating
+
+Byte-read this pass, because job (c) kept landing on Frappe repos:
+
+| Repo | What it is | Licence (byte-read) |
+|---|---|---|
+| [`frappe/frappe`](https://github.com/frappe/frappe) | the low-code **framework**, 11,120 ★ | 🟢 **MIT** |
+| [`frappe/lms`](https://github.com/frappe/lms) | **Frappe LMS**, 3,429 ★ | 🔴 **AGPL-3.0** — 33,893 B of verbatim AGPL text |
+| [`frappe/education`](https://github.com/frappe/education) | education module, 714 ★ | 🔴 **GPL-3.0** |
+
+Several 2026 *"best open-source LMS"* round-ups list **Frappe LMS as MIT**. That is the
+**framework's** licence attached to the wrong repository. For a client who needs the deliverable
+closed this is the whole decision, and **AGPL-3.0 is network-triggered**: hosting it for users is
+a distribution trigger. `verticals/solutions.md` already had both rows right; the appendix in
+`repos/foundations.md` did not, and has been reconciled.
+
+### 🟡 An independent re-run of p896's diff — same answer, and the general form of the job is not tractable
+
+Before reading p896, this pass re-derived the shelf-vs-history diff from scratch and reached
+**the same conclusion**, which is worth recording as a replication rather than as news:
+**38 slugs** sat on a shelf in `archive/2026-11-18-pre-cleanup/` and on none of the live shelves,
+and re-measuring all 38 found **37 at ≤ 8 ★**, most at 0 ★. The cleanup was right. The
+`deepseek-ai/deepseek-harness` entry (283,454 ★) is explained exactly as p896 explains it — it was
+filed under *Learning management systems*, which it is not.
+
+The more useful result is a **negative** one, about p895's original instruction. Run as written —
+diff the live shelves against *the history* — the job returns **5,864 slugs**, because the
+pre-consolidation archives contain thousands of **census/sweep rows that were never placements**.
+A blanket slug diff **cannot distinguish a deleted verified row from a deliberately rejected
+candidate**, so it must be run against the **immediately preceding curation point** and nothing
+earlier. p896 reached this independently and wrote it as job (b); this pass confirms it from the
+other direction, with the number attached. **Treat "restore everything the history mentions" as
+permanently closed.**
+
+### Next pass
+
+- **Run the `docs/`-prefix probe over every row currently carrying `NO-LICENSE-FILE` or `NONE`.**
+  openSIS was found by hand; the other candidates (`IIC2233/Syllabus` is already cleared) have not
+  been swept on the directory axis. This is one script and it has already produced one correction.
+- **A full star sweep is due `2026-11-19`** — five consecutive passes have now spot-checked only.
+- The **`NOASSERTION` census is clean**: no unresolved cell remains in the appendix.
+
+
 ## `2026-11-18` (p896) — the shelf-vs-history diff the last pass asked for: 93 deleted rows, every one of them a live repo
 
 **Channel:** the whole pass is one instrument, run twice. (1) Extract every table-row repo slug

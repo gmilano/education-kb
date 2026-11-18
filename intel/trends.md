@@ -6,7 +6,7 @@ updated: 2026-11-18
 
 # Current trends — education
 
-Sixteen trends, each with the evidence behind it and what it implies for delivery. **T16 added in p895**, from four cohort measurements that only become one finding when read together. **T14 and T15 added in p894** — the first from the operative content of China's anthropomorphic-AI Measures, which this file had been carrying as a bare date; the second from four repository cohorts measured in a single batch, which is the only way the correlation it names becomes visible. Researched
+**Nineteen trends** (the count in this line read *"sixteen"* through the addition of T17 and T18 and is corrected in **p897**), each with the evidence behind it and what it implies for delivery. **T19 added in p897**, from the licence re-read of every unresolved row. **T16 added in p895**, from four cohort measurements that only become one finding when read together. **T14 and T15 added in p894** — the first from the operative content of China's anthropomorphic-AI Measures, which this file had been carrying as a bare date; the second from four repository cohorts measured in a single batch, which is the only way the correlation it names becomes visible. Researched
 2026-11-18; T9 added and T1/T3/T6 extended in **p890**, T10 added in **p891**, and **T11 added in
 p892** from the India and Saudi Arabia legs — all the same day. Legal facts here were
 sourced through search snippets with the source named — every non-GitHub host is blocked by this
@@ -567,6 +567,46 @@ national platform structurally cannot supply to a foreign ministry.
 
 **Watch condition:** a LATAM or African ministry announcing adoption of the exported platform.
 That converts this from a pricing pressure into a named integration opportunity.
+
+## T19 — Published licence metadata is wrong often enough to be a procurement risk, and the errors run *both* ways
+
+This is the trend with the shortest path to money, because it is the one that decides whether a
+client can keep what a studio builds. **Seven repositories carried on this KB's shelves with an
+unresolved licence were byte-read in p897. Five were wrong as recorded, and the errors did not
+share a direction.**
+
+| Source of the error | Case | Recorded | Actual |
+|---|---|---|---|
+| **Popular comparison sites** | **Frappe LMS** — several 2026 *"best open-source LMS"* round-ups list it **MIT** | MIT (third-party) | 🔴 **AGPL-3.0**, 33,893 B of verbatim text. The MIT belongs to `frappe/frappe`, the **framework** |
+| **Detector blind spot (directory)** | **openSIS Classic**, 351 ★ | "none declared", *"get written clarification"* | 🔴 **GPL-2.0** at `docs/License.txt`; the README links it |
+| **Detector blind spot (filename)** | **Moodle App**, 1,006 ★ | `NO-LICENSE-FILE` | 🟢 **Apache-2.0** at `COPYING.txt` — and *not* Moodle core's GPL-3.0 |
+| **Over-cautious internal reading** | **Open-TutorAi CE**, 118 ★ | `OTHER` | 🟢 **BSD-3-Clause, verbatim** — the permissive SPDX was right all along |
+| **Declaration without text** | **Frappe Education**, 714 ★ | `NOASSERTION` | 🔴 **GPL-3.0**, declared in a **19-byte** file reading only `License: GNU GPL V3` |
+
+**Why both directions matter.** The familiar failure is a copyleft project being sold as
+permissive — Frappe LMS is exactly that, and AGPL-3.0 is **network-triggered**, so merely hosting
+it for a client's students is a distribution event. But the opposite error has a real cost too:
+**Open-TutorAi** sat unusable on a shelf for passes because a permissive, verbatim BSD-3-Clause
+grant had been demoted to `OTHER`, and **openSIS** carried a *"do not ship without written
+clarification"* warning for a licence that was in the repository the whole time. Pessimism is not
+free: it discards usable permissive options, which in education is the scarce category.
+
+**Three structural causes, all of which produce silent errors:**
+
+1. **SPDX detectors classify the root only.** openSIS keeps its grant one directory down and is
+   therefore reported `NONE` — indistinguishable, in any table, from genuinely unlicensed code.
+2. **A licence can be *named* without being *reproduced*.** A 19-byte `license.txt` defeats every
+   template matcher, so a clearly-intended GPL-3.0 reads as "unknown".
+3. **Comparison content inherits the org's most famous licence.** Frappe is "the MIT low-code
+   framework", so its LMS gets written up as MIT. The same mechanism will mislabel any
+   permissively-licensed vendor's copyleft products.
+
+**What to do with it.** Treat a licence as unknown until its bytes are read, probe the **`docs/`,
+`legal/` and `LICENSES/` directories** as well as the root, and never let a secondary comparison
+page be the evidence for a licence claim in a client deliverable. On this KB's own numbers the
+base rate of error in unresolved rows was **5 of 7** — high enough that byte-reading is cheaper
+than the first conversation with a client's counsel. See `repos/trending.md` (p897) for the full
+measurements and `repos/foundations.md` for the corrected rows.
 
 ## Trends we looked for and could not substantiate
 

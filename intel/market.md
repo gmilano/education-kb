@@ -758,6 +758,30 @@ education and is the reason to lead with it.
   **Refinement this pass:** enforcement decrees are still being finalised and **2026 is a grace
   period oriented to guidance rather than penalties**. So Korea is a compliance-led market with
   a soft landing *this year* — the window to get architecture right before penalties bite.
+  🟢 **p897 adds the operative provision, which this KB had been carrying as a bare characterisation.**
+  **Article 31(1) — prior notice.** An operator providing a **generative AI** service must notify
+  users **in advance** that the product or service runs on generative AI. **An AI tutor is squarely
+  within this**, so the duty is not theoretical for an education engagement. **Article 43 sets a fine
+  of up to KRW 30 million** for failing to give that notice — the one duty in the Act with a direct
+  monetary penalty attached, where labelling and high-impact duties are enforced through
+  investigation and corrective orders instead. **MSIT's transparency guidelines** accept either
+  advance notice **or an on-screen indicator** for chatbots, and say the disclosure belongs in the
+  terms, contract or interface — so for a tutoring UI this is an interface requirement, costed in
+  days, not a programme. **Exemptions:** notice and labelling fall away, wholly or partly, where the
+  AI use is **obvious** or the system is used **only for the operator's internal purposes** —
+  relevant to teacher-facing lesson-prep tooling, which may escape the duty that the student-facing
+  tutor cannot. **Article 35** additionally asks high-impact operators to make **best efforts** to
+  assess fundamental-rights impact in advance — best-efforts, explicitly not a hard mandate, which
+  is the sharpest contrast with the EU's Article 27 FRIA.
+  🔴 **One claim could not be corroborated and is recorded as open, not as fact.** A secondary
+  source states that the Act names **education among six sectors** carrying specific obligations for
+  **automated assessment**. A dedicated search returned **nothing** on an education-specific or
+  automated-assessment duty under the Act — the targeted result set addressed Article 31 fully and
+  the education question not at all. It may sit in the Enforcement Decree or separate MSIT guidance,
+  neither of which is reachable: `law.go.kr` and `msit.go.kr` are outside this session's allowed
+  domains. **Do not plan a Korean engagement on the assumption that automated assessment is
+  separately regulated there** until it is read in the primary text; the Article 31(1) duty above is
+  the one that is corroborated and the one that binds.
 - **China** — regulates by service type rather than one statute: recommendation algorithms,
   deep synthesis, generative AI services, and **labelling of AI-generated content**. The
   amended **Cybersecurity Law (in force 1 January 2026)** carries China's first AI clause.

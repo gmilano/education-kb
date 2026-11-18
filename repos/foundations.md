@@ -256,12 +256,28 @@ artefacts a course can be built around, and they are maintained by the departmen
   `openedx/XBlock/master/README.rst` returns `200`, so the repos are real, but no licence
   file could be fetched by any name tried, so we will not assert a licence. Treat the XBlock
   SDK as available and confirm its licence directly before use.
-- **Two repos ship no root licence file, and the SPDX check split them.**
-  `moodlehq/moodleapp` has no root licence file but GitHub's detector reports **Apache-2.0**
-  (1,006 ★) — note that this differs from Moodle core's GPL-3.0, so do not assume the app
-  inherits the platform's licence. `OS4ED/openSIS-Classic` has no licence file **and** SPDX
-  reports `NONE` (351 ★); third parties list GPL-2.0 but nothing in the repo says so. Treat
-  openSIS as licence-unclear and get written clarification before shipping it to a client.
+- 🟢 **Both "no root licence file" repos are now resolved, and neither was unlicensed (p897).**
+  `moodlehq/moodleapp` grants **Apache-2.0** at **`main/COPYING.txt`** (11,358 B, byte-read) —
+  genuinely different from Moodle core's GPL-3.0, so still do not assume the app inherits the
+  platform's licence, but the grant is explicit rather than detector-inferred.
+  🔴 **`OS4ED/openSIS-Classic` is GPL-2.0, not licence-unclear.** Its `README.md` links the full
+  text and it is really there, at **`master/docs/License.txt`** (17,286 B, `sha256₁₂ 224ac3d403e3`).
+  The earlier "nothing in the repo says so" was this KB's probe set failing, not the repo:
+  **every path we try is at the repository root**, and openSIS keeps its grant one directory down.
+  GPL-2.0 is still strong copyleft — the deployment advice in `verticals/solutions.md` is
+  unchanged — but *"get written clarification"* is no longer the reason; the licence is known.
+- 🟡 **Method fix (p897): extend the licence probe with a `docs/` prefix.** The probe set grew from
+  8 to 12 filenames in p896 after `COPYING.txt`/`LICENSE.TXT` misses; openSIS shows the remaining
+  axis is **directory, not filename**. Trying `docs/License.txt`, `doc/`, `legal/` and `LICENSES/`
+  against each branch would have found it on the first pass. Until that runs, a `NO-LICENSE-FILE`
+  in the appendix means *"not at the root"*, and must not be read as *"unlicensed"*.
+- 🔴 **The Frappe family carries three different licences, and the popular write-ups get it wrong.**
+  Byte-read p897: **`frappe/frappe` is MIT** (the low-code *framework*, 11,120 ★),
+  **`frappe/lms` is AGPL-3.0** (33,893 B of verbatim AGPL text, 3,429 ★), and
+  **`frappe/education` is GPL-3.0** (a 19-byte `license.txt` reading only *"License: GNU GPL V3"*).
+  Several 2026 "best open-source LMS" comparisons list **Frappe LMS as MIT**; that is the
+  framework's licence attached to the wrong repo. For a client who needs to keep a derivative
+  closed, the distinction is the whole decision — **AGPL-3.0 is network-triggered copyleft.**
 - **`projectfedena/fedena` is not a candidate, despite third-party tables listing it as
   Apache-2.0 (p892).** SPDX `NONE`, no licence file under any of four names on either branch,
   last push 2020-05-18. All rights reserved and abandoned. Recorded here and in
@@ -334,7 +350,7 @@ then the one to trust. No repo in this set is archived.
 | `jupyterhub/zero-to-jupyterhub-k8s` | 1,727 | NOASSERTION | Apache-2.0 | 2026-11-15 | 3 |
 | `Khan/perseus` | 1,600 | MIT | MIT | 2026-11-18 | 0 |
 | `OpenHands/software-agent-sdk` | 1,406 | MIT | MIT | 2026-11-18 | 0 |
-| `jupyter/nbgrader` | 1,370 | BSD-3-Clause | OTHER | 2026-11-03 | 15 |
+| `jupyter/nbgrader` | 1,370 | BSD-3-Clause | **BSD-3-Clause — byte-read p897** (`main/LICENSE`, 1,512 B, `sha256₁₂ 3a83d5b8e22c`, *"Copyright (c) 2014 Project Jupyter Contributors"*) | 2026-11-03 | 15 |
 | `sakaiproject/sakai` | 1,240 | ECL-2.0 | ECL-2.0 | 2026-11-17 | 1 |
 | `Udayraj123/OMRChecker` | 1,196 | MIT | MIT | 2026-09-04 | 75 |
 | `learningequality/kolibri` | 1,179 | MIT | MIT | 2026-11-18 | 0 |
@@ -343,12 +359,12 @@ then the one to trust. No repo in this set is archived.
 | `pkp/ojs` | 1,058 | GPL-3.0 | GPL-3.0 | 2026-11-17 | 1 |
 | `chamilo/chamilo-lms` | 1,025 | GPL-3.0 | GPL-3.0 | 2026-11-18 | 0 |
 | `kiwix/kiwix-tools` | 1,006 | GPL-3.0 | GPL-3.0 | 2026-11-09 | 9 |
-| `moodlehq/moodleapp` | 1,006 | Apache-2.0 | NO-LICENSE-FILE | 2026-11-17 | 1 |
+| `moodlehq/moodleapp` | 1,006 | Apache-2.0 | **Apache-2.0 — byte-read p897** (`main/COPYING.txt`, 11,358 B, `sha256₁₂ cfc7749b96f6`). The `NO-LICENSE-FILE` here was the root-only probe, not the repo. | 2026-11-17 | 1 |
 | `openeducat/openeducat_erp` | 913 | NOASSERTION (API) | **LGPL-3.0 — byte-verified p891** | 2026-11-16 | 2 |
 | `ls1intum/Artemis` | 832 | MIT | MIT | 2026-11-18 | 0 |
 | `autolab/Autolab` | 808 | Apache-2.0 | Apache-2.0 | 2026-11-17 | 1 |
 | `portabilis/i-educar` | 727 | GPL-2.0 | LGPL | 2026-11-13 | 5 |
-| `frappe/education` | 712 | NOASSERTION | OTHER | 2026-10-30 | 19 |
+| `frappe/education` | 712 | NOASSERTION | 🔴 **GPL-3.0 — byte-read p897** (`develop/license.txt`, **19 B**: the whole file is the string *"License: GNU GPL V3"*). A declaration, not a grant text — see the Frappe note above the table. | 2026-10-30 | 19 |
 | `francoisjacquet/rosariosis` | 654 | GPL-2.0 | GPL-2.0 | 2026-11-16 | 2 |
 | `GibbonEdu/core` | 641 | GPL-3.0 | GPL-3.0 | 2026-11-18 | 0 |
 | `open-scratch/teaching-open` | 637 | Apache-2.0 | Apache-2.0 | 2026-07-06 | 135 |
@@ -360,10 +376,10 @@ then the one to trust. No repo in this set is archived.
 | `instructure/instructure-ui` | 487 | NOASSERTION | MIT | 2026-11-18 | 0 |
 | `openedx/codejail` | 477 | Apache-2.0 | Apache-2.0 | 2026-11-16 | 2 |
 | `OpenOLAT/OpenOLAT` | 452 | NOASSERTION | Apache-2.0 | 2026-11-17 | 1 |
-| `ECNU/EduWork` | 378 | MulanPSL-2.0 | OTHER | 2026-11-18 | 0 |
+| `ECNU/EduWork` | 378 | MulanPSL-2.0 | **MulanPSL-2.0 AND MIT** — p886 byte-read **re-confirmed p897**: `main/LICENSE` 9,233 B `sha256₁₂ eb7a1d713eb9` (木兰宽松许可证, 第2版) **and** `main/LICENSE-MIT` 1,085 B `sha256₁₂ dc719b536b8f`. | 2026-11-18 | 0 |
 | `tsugiproject/tsugi` | 377 | Apache-2.0 | Apache-2.0 | 2026-11-17 | 1 |
 | `Cvmcosta/ltijs` | 373 | Apache-2.0 | Apache-2.0 | 2026-11-11 | 7 |
-| `OS4ED/openSIS-Classic` | 351 | NONE | NO-LICENSE-FILE | 2026-10-26 | 23 |
+| `OS4ED/openSIS-Classic` | 351 | NONE | 🔴 **GPL-2.0 — byte-read p897** at **`master/docs/License.txt`** (17,286 B, `sha256₁₂ 224ac3d403e3`, BOM + *"GNU GENERAL PUBLIC LICENSE Version 2, June 1991"*). **Not unlicensed** — the grant is one directory down. | 2026-10-26 | 23 |
 | `adlnet/ADL_LRS` | 335 | Apache-2.0 | Apache-2.0 | 2025-11-14 ⚠️ | 369 |
 | `vishalsachdev/canvas-mcp` | 334 | MIT | MIT | 2026-11-18 | 0 |
 | `openfun/richie` | 318 | MIT | MIT | 2026-11-18 | 0 |
@@ -377,9 +393,9 @@ then the one to trust. No repo in this set is archived.
 | `openfun/marsha` | 152 | MIT | MIT | 2026-11-17 | 1 |
 | `yetanalytics/lrsql` | 144 | Apache-2.0 | Apache-2.0 | 2026-11-14 | 4 |
 | `openedx/paragon` | 141 | Apache-2.0 | Apache-2.0 | 2026-11-17 | 1 |
-| `IIC2233/Syllabus` | 129 | NONE | NO-LICENSE-FILE | 2026-11-17 | 1 |
+| `IIC2233/Syllabus` | 129 | NONE | **Confirmed unlicensed p897** — 42 root probes (3 branches × 14 filenames) plus the `docs/` prefix, all 404. ⛔ No grant: course material from PUC Chile, not reusable code. | 2026-11-17 | 1 |
 | `flysheep-ai/education-skills` | 125 | MIT | MIT | 2026-01-30 ⚠️ | 292 |
-| `Open-TutorAi/open-tutor-ai-CE` | 118 | BSD-3-Clause | OTHER | 2026-06-26 | 145 |
+| `Open-TutorAi/open-tutor-ai-CE` | 118 | BSD-3-Clause | 🟢 **BSD-3-Clause, verbatim — byte-read p897** (`main/LICENSE`, 1,531 B, `sha256₁₂ 57c341d09920`). Three numbered clauses + the standard disclaimer, unmodified; only the copyright line is custom (*"Mohamed El hajji On behalf of all R2D-dev"*). **The SPDX channel was right and this column was wrong.** | 2026-06-26 | 145 |
 | `ls1intum/Apollon` | 106 | MIT | MIT | 2026-11-17 | 1 |
 | `instructure/common-cartridge-viewer` | 95 | MIT | MIT | 2026-11-04 | 14 |
 | `wenflow-org/wenflow` | 72 | MIT | MIT | 2026-11-12 | 6 |

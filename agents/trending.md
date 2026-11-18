@@ -3,6 +3,68 @@ industry: education
 region: Global
 updated: 2026-11-18
 ---
+
+## `2026-11-18` (p897) — the first discovery leg in two passes: three new MIT entrants, and the `tutor` keyword is still poisoned exactly as `724-S` described
+
+**Channel:** `gh api search/repositories` over `tutor OR classroom OR curriculum in:name,description`
+with `created:>2026-10-15 stars:>=10`, then licence **byte-reads** from `raw.githubusercontent.com`
+on every candidate kept. `p896` ran **no** discovery search (its budget went to the diff `p895`
+asked for), so this is the first new-entrant sweep since `p893`.
+
+### 🟢 Three new entrants, all MIT, all byte-read
+
+| Repo | Licence (byte-read) | ★ | Created | What it is | Region |
+|---|---|---|---|---|---|
+| [`lynote-ai/ai-tutor`](https://github.com/lynote-ai/ai-tutor) | 🟢 **MIT** (`main/LICENSE`, 1,063 B) | **82** | **2026-11-16** | Self-hosted AI tutor and learning assistant for self-study, e-learning and exam prep. **Two days old at measurement** and already past the 118 ★ cohort ceiling's lower neighbours. | Global |
+| [`armanakh/atlas-of-intelligence`](https://github.com/armanakh/atlas-of-intelligence) | 🟢 **MIT** (`main/LICENSE`, 1,065 B) | **38** | 2026-11-02 | **Local-first** curriculum exploration and learning-progress application. The local-first framing matters for the low-connectivity deployments `learningequality/kolibri` serves. | Global |
+| [`altuzar/OpenFounderSchool`](https://github.com/altuzar/OpenFounderSchool) | 🟢 **MIT** (`main/LICENSE`, 1,087 B) | **27** | 2026-10-29 | Free after-school **entrepreneurship curriculum** with a portable "AI coach kit" — curriculum content plus an agent, rather than an agent alone. | Global |
+
+**None is promoted to `agents/top.md` this pass.** All three are under 90 ★ and under three weeks
+old, and this KB's own cohort evidence (`p890`–`p893`) is that sub-100 ★ education agents churn.
+They are recorded here so the next sweep measures a roster it did not edit — which is the lesson
+`p892` and `p896` both had to learn the hard way. **Watch condition: `lynote-ai/ai-tutor` at
+250 ★ or a second contributor.**
+
+### 🔴 `724-S` replicated: the `tutor` keyword returns more noise than signal
+
+Of the **11** repos the query returned above 10 ★, **6 were not education at all**:
+
+| Repo | ★ | Why it matched | Actually |
+|---|---|---|---|
+| [`Buptropz/equity-research-tutor`](https://github.com/Buptropz/equity-research-tutor) | 102 | `tutor` | 🔴 **Equity research / DCF valuation** — finance |
+| [`pruettlazaro143-a11y/smc-ai-tutor`](https://github.com/pruettlazaro143-a11y/smc-ai-tutor) | 52 | `tutor` | 🔴 **Smart-money-concept trading coach** — finance |
+| [`iremcnar/eyeTutorial`](https://github.com/iremcnar/eyeTutorial) | 54 | **`tutorial` stemming** | 🔴 no description, not education |
+| [`Kaneka4850/Tutorial-Bioinformatica`](https://github.com/Kaneka4850/Tutorial-Bioinformatica) | 12 | **`tutorial` stemming** | 🔴 bioinformatics tutorial |
+| [`wirely-app/wirely-app.github.io`](https://github.com/wirely-app/wirely-app.github.io) | 48 | `curriculum`-adjacent | 🟡 circuit-design sim — **educational, not an agent**, GPL-3.0 |
+| [`immrx113/classroom-agent`](https://github.com/immrx113/classroom-agent) | 14 | `classroom` | 🟡 **no licence, no description** — unusable |
+
+The highest-starred result for a query about education agents was a **stock-valuation tool**.
+`agents/trending.md:13027` recorded this as `724-S` — *"the `tutor` keyword leg is poisoned by
+`tutorial` stemming"* — and the finding **replicates exactly**, which means it is structural and
+not a one-off. **Any future `tutor` leg must filter on description, not rely on the ranking.**
+The two finance hits are the more interesting half: `tutor` is being adopted as a *marketing*
+word by trading-education projects, so the noise floor is rising, not stable.
+
+### Headline cohort — spot check only, sixth consecutive confirmation of the daily cadence
+
+| Repo | p896 | **p897** | Δ | Licence |
+|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 60,274 | **60,323** | +49 | Apache-2.0 |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 43,878 | **43,887** | +9 | MIT |
+| [`amosblomqvist/LearnHarness`](https://github.com/amosblomqvist/learnharness) | 10,020 | **10,086** | +66 | **AGPL-3.0** |
+| [`Li-Evan/BloomTutor`](https://github.com/Li-Evan/BloomTutor) | 315 | **316** | +1 | MIT |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 282 | **282** | 0 | MIT |
+
+Largest intra-day move remains tiny against the base. **Stars are a daily metric** — the standing
+note holds, and the **full sweep is due `2026-11-19`**.
+
+### What this pass did not do
+
+- **No regional supply-side leg.** `p895` ran Africa/Middle East; this pass ran the global
+  discovery query only, so the three entrants above are unplaced by origin beyond `Global`.
+- **No promotion to `agents/top.md`.** The table is unchanged this pass; the licence corrections
+  all landed in `repos/`.
+
 ## `2026-11-18` (p896) — three agents come back, and the one that comes back moves a finding this KB had published twice
 
 **Channel:** shelf-vs-history slug diff (live `agents/top.md` vs

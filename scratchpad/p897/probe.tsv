@@ -1,0 +1,38 @@
+AbdelStark/eu-ai-act-toolkit	8	2	MIT	2026-03-31T15:35:37Z	Open-source compliance toolkit for the EU AI Act. Risk classification, conformity checklists, documentation templates.
+AI-Engineering-at/legal-scraper	3	1	MIT	2026-03-21T23:10:46Z	EU AI Act Legal Scraper — Automated EU/AT/DE/CH legal aggregation with full-text search and change detection
+ad1-kamath/coursecraft	2	0	Apache-2.0	2026-11-17T15:35:36Z	Open-source, clean-room eLearning authoring tool in Rust. Publish to SCORM, cmi5, xAPI and LTI.
+8infinitelabs/eucompliance	2	0	NOASSERTION	2026-04-08T09:58:07Z	Open source toolkit bridging EU AI Act and European Accessibility Act compliance. Operationalizes Article 16(l) for the first time.
+AdamFiser/oa-autograding	0	0	MIT	2026-11-16T04:13:35Z	Kontroly cvičení pro classroom50 s českou zpětnou vazbou pro žáky
+ali-kin4/skillgraph-tutor	0	0	Apache-2.0	2026-10-08T20:19:15Z	Offline-first tutoring engine and learning-analytics dashboard: concept graphs, mastery tracking, spaced repetition and explainable cohort insights.
+Abdulrahman-hayatu/lessonplan-ng	0	0	Apache-2.0	2026-10-28T13:11:05Z	An open source lesson-plan generator for the Nigerian curriculum, with an LLM-judge evaluation harness and a small-model fine-tune vs API cost comparison.
+bishoynabilanis/jessica	0	0	MIT	2026-11-18T07:39:32Z	Free offline-first AI study app for Egyptian students (Primary 1 to Prep 3): official Ministry books, an AI tutor, exams, flashcards and a daily plan. PWA, BYOK, no accounts.
+deepseek-ai/deepseek-harness	283454	35154	MIT	2026-11-18T12:48:10Z	DeepSeek Harness: Everything is a Plugin.
+forgemorrow/Chinese-Teaching-AI-Agent	8	0	MIT	2026-11-14T04:36:49Z	AI lesson-prep assistant for K-12 Chinese teachers built with Streamlit and MiMo/Anthropic SDK.
+KananatSSN/openthaiknowledge	2	3	Apache-2.0	2026-11-15T16:14:48Z	Open Thai curriculum knowledge: seeded problem-set generators, knowledge units, and sheet-digestion tooling
+eddiethedean/lessonkit	2	1	Apache-2.0	2026-09-11T00:46:33Z	React-first framework for accessible learning experiences with xAPI, SCORM, cmi5, and LMS packaging.
+ICICLE-ai/curriculum-generator	0	0	BSD-3-Clause	2026-11-18T01:33:38Z	
+cilt-uct/qna	0	1	ECL-2.0	2024-08-24T15:45:50Z	QNA (Questions and Answers) is a new tool being developed by UNISA and UCT. QNA enables students to ask questions anonymously, which can be answered by other students or lecturers or tutors (instructors/TAs). Questions are ranked by their popularity and can also be organized into categories. QNA builds on experiences from two existing tools: UNISA's FAQ tool and UCT's DFAQ tool
+jasonswrench-beep/openstage-package-doctor	0	0	Apache-2.0	2026-11-18T04:09:44Z	Opens any SCORM, xAPI or cmi5 package without the source file. It checks whether the package will run, plays it with a tracking log, and can compress media, run an accessibility check and handle translation.
+CSOAI-ORG/eu-cra-mcp	0	0	MIT	2026-10-08T02:46:50Z	🔌 Exposes EU Cyber Resilience Act (CRA, Reg 2024/2847) compliance over MCP — 5 tools, 13 tests. Annex I cybersecurity, Art 10 vuln handling, Art 13 conformity assessment, SBOM. NIS2 crosswalk. By MEOK AI Labs.
+lien0219/coder_edu_backend	4	1	MIT	2026-10-20T09:00:49Z	Go-based programming education backend with AI tutoring (RAG + SSE streaming), online code execution, real-time WebSocket collaboration, and gamified learning system.
+leonkoellerwirth-arch/agentic-ai-governance-toolkit	1	0	MIT	2026-09-02T22:31:09Z	Practical governance artifacts for AI agents in regulated organizations — lifecycle models, risk scoring, EU AI Act & DORA checklists, and a working evaluator.
+KTH/lms-nightly-sync	0	0	MIT	2021-01-12T10:31:55Z	An application that synchronizes periodically databases from KTH with Canvas LMS (https://canvas.kth.se)
+Mahmoud-s-Khedr/qbank	0	0	MIT	2026-11-14T20:46:33Z	AI-powered question bank & exam generator: turns scanned (Arabic-first) workbooks into a reviewed, searchable question bank and print-ready PDF/DOCX exams.
+LabSirius/TutorIA	0	0	MIT	2026-10-27T14:49:51Z	Agente tutor virtual autónomo basado en IA para educación superior rural en Risaralda — Universidad Tecnológica de Pereira
+mayuribagga/ai-worksheet-maker	0	0	MIT	2026-10-26T00:52:39Z	AI-powered worksheet generator aligned to the Ontario curriculum.
+littlecookie0722/AI-Teaching-Agent	0	0	MIT	2026-08-23T14:24:32Z	An open-source AI teaching agent for generating labs, exams, grading workflows, and presentations, with structured DSLs, human review, sandboxed evaluation, CLI/MCP tools, and a local-first web interface.
+moocupv/lti-ai-grader	0	0	Apache-2.0	2026-11-17T12:39:09Z	Flexible LTI 1.0 AI grader with configurable prompt and LLM. Tested with Open edx and Moodle
+plusultra-tools/ai-act-conformity-pack	2	2	MIT	2026-05-19T12:21:37Z	Emit EU AI Act Annex IV technical-documentation + FRIA evidence-pack scaffolds with verbatim-cited regulatory text and a hash-chained manifest. OSS Python CLI + GitHub Action.
+pJijesh/ai-governance-toolkit	1	0	MIT	2026-11-15T20:07:30Z	Control matrix mapping ISO/IEC 42001, the EU AI Act and NIST AI RMF, with templates, worked examples and a validator.
+PritK99/WriteRight	1	0	MIT	2024-11-19T17:21:51Z	Automated Essay Scoring System
+rendicahya/moodler	0	0	MIT	2026-11-18T13:13:49Z	Browser-based editor for Moodle quiz questions: create, import, edit, reorder and export Moodle XML, GIFT and Aiken, with a live preview.
+ox-it/wl-roster2	0	0	ECL-2.0	2016-06-03T10:27:32Z	
+parler-haut-interagir-librement/lti-bundle	0	0	MIT	2026-11-18T01:36:26Z	phil/lti in Symfony: an LTI 1.3 tool, platform or both from one configuration, with launch routes, verified sign-in, LTI Advantage services and rotating keys.
+parler-haut-interagir-librement/lti	0	0	MIT	2026-11-18T01:36:25Z	LTI 1.3 for PHP, on both sides: a tool that learning platforms launch, and a platform that launches tools, with Deep Linking and the LTI Advantage services.
+portable-genai/ai-act-conformity-pack	0	0	Apache-2.0	2026-11-14T00:22:36Z	Maps each deployed AI/agent system in the Hrz3 registry to obligations under the EU AI Act, MAS FEAT/Veritas, HKMA, APRA CPS 234/230 AI guidance, JFSA and Australia's AI framework; classifies risk tier, drafts conformity/technical documentation, fundamental-rights/impact assessments and the registration pack. Consumes Hrz3/Hrz4 evidence.
+wwrwbs/AI_AWE	2	1	NOASSERTION	2026-07-29T05:54:05Z	AI Scoring Platform: automated essay scoring with Qwen classifier, LightGBM scorer, and feedback generator.
+yohperez/Yara	1	0	MIT	2026-11-12T14:28:55Z	Plataforma educativa inclusiva impulsada por inteligencia artificial para el aprendizaje personalizado.
+sabrinasiilva/pista-enem	0	0	MIT	2026-11-18T04:45:03Z	Tutor socrático com IA para o ENEM: dá pistas, não respostas, usando questões oficiais do Inep.
+RichardMcQuiston01/reactive-lms	0	0	MIT	2026-11-17T22:04:09Z	Fully fledged TypeScript LMS package that can be run standalone or easily integrated into another TypeScript project via shared library or via API requests
+Vernum-Projecten/eduLIMS	0	0	Apache-2.0	2026-11-16T21:20:43Z	Open-source laboratory information management system (LIMS) for practical laboratory education. Samples, analyser results via openEHR and HL7 v2, rubric grading and KPI dashboards. TypeScript, TanStack Start, PostgreSQL.
+Sulthan-eng/Koreksi-in	0	0	MIT	2026-11-16T11:58:47Z	Web app autograding jawaban esai/jawaban singkat berbasis semantic similarity (OCR + LLM-judge AI), dengan sistem langganan berbayar.
