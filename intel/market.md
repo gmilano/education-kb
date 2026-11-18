@@ -749,6 +749,26 @@ education and is the reason to lead with it.
   engagement cannot inherit a vendor's compliance posture wholesale.
 
 
+
+#### p898 additions — EMEA
+
+**UK: the assessment-integrity regulator has published, and it is a separate obligation from the
+DfE's product standards.** **Ofqual** has issued resources on **AI and coursework integrity**,
+alongside the **DfE's generative-AI product safety standards for education dated January 2026**.
+*(Search-snippet evidence, two independent sources; `ofqual.gov.uk` and `gov.uk` are unreachable from
+this session.)*
+
+🔵 **The distinction a UK engagement has to get right.** These are **two different compliance
+surfaces with two different owners**. The DfE standards bind the **product** — what a tool may do,
+how it handles pupil data, what safety properties it must demonstrate. Ofqual's material governs the
+**assessment**, meaning whether work produced with AI can count toward a qualification at all. 🔴 **A
+tool can be fully DfE-conformant and still produce output that is inadmissible as coursework.**
+A studio that clears only the product bar has cleared half of the UK market's requirement.
+
+🔵 This is the UK instance of the pattern `P9` is built on — *integrity by assessment redesign, not
+detection*. Ofqual's involvement means the redesign argument now has a **regulatory** counterpart in
+the UK, not only a pedagogical one, which makes `P9` easier to sell there than in most markets.
+
 ### APAC
 
 **Regulatory posture: four incompatible regimes, no regional harmonisation.**
@@ -1065,6 +1085,28 @@ Europe.
   is **complete**, and official digital textbooks are next. Japan is the APAC market where a
   software-only offer needs no hardware story.
 
+
+
+#### p898 additions — APAC
+
+**The Philippines has a national higher-education AI framework, and this KB had it in a trending
+note instead of the market map.** The **Commission on Higher Education (CHED)** issued
+**Memorandum Order 21**, a national framework covering AI in **teaching, research and operations** —
+all three, not classroom use alone. *(Search-snippet evidence; `ched.gov.ph` is unreachable from this
+session — see the verification note at the top of this file. The order number and its three-way
+scope are corroborated across two independent regional summaries; the clause detail is not.)*
+
+🔵 **Why it changes the APAC priority order rather than just extending it.** The standing APAC
+finding ranks **Vietnam first** because its statute names education as high-risk with a concrete
+compliance object. The Philippines is a *different* opportunity shape: the framework covers
+**operations**, which is the registrarial and administrative tier — the tier `P12` is built for and
+the one this KB has named as its top under-served opportunity for several passes. A framework that
+explicitly covers operations is a procurement hook for that tier, not for the tutor tier.
+
+**Opportunity — Philippines.** English-medium instruction, a large public HE system, and a national
+framework whose scope includes operations. **The registrarial agent tier (`P12`) is the fit**, not
+tutoring. 🔴 **Unverified against primary text** — confirm MO 21's actual obligations before any
+client commitment.
 
 ### LATAM
 
@@ -1479,3 +1521,32 @@ Cross-regional plays that do not depend on one jurisdiction.
   **The cost of not doing it is the one failure mode this KB cannot absorb** — it published a
   false negative about a market opportunity, in the file a studio opens first. Unresolved beyond
   the four rows restored here; the full diff has not been run.
+
+#### p898 additions — Global
+
+**Employers, not ministries, are now a top-tier funder of AI skilling — roughly $3.6 BN in named
+corporate commitments.** **Microsoft $2.5 BN**, **AWS $1 BN** and **Caterpillar $100 M** are the
+three largest named programmes. *(Search-snippet evidence; the three figures are reported together by
+a single EdTech-sector source, so treat the $3.6 BN total as indicative and the individual figures as
+requiring confirmation before they go in a client deck.)*
+
+🔵 **Why this belongs in a market map and not a trends note.** Every regional section in this file
+reads the demand side as **institutional** — ministries, regulators, universities, school systems —
+with procurement cycles measured in years and budgets set by public finance. A $3.6 BN **corporate**
+skilling pool is a parallel buyer with a different cycle, a different procurement path and, crucially
+for a studio, **no public-tender requirement**. Caterpillar's $100 M is the instructive one: an
+industrial manufacturer, not a technology vendor, funding AI skilling directly.
+
+🔵 **What it implies for Globant specifically.** The corporate-skilling buyer wants **workforce
+curriculum plus delivery**, which is the one tier where this KB's permissive supply is strongest —
+`simranjeet97/AI_Engineer_Roadmap_2027` (Apache-2.0, added `p898`), the `P10` teacher-enablement
+pattern retargeted at employees, and the Apache-2.0/MIT content repos generally. 🔵 **It is also the
+tier least constrained by the education regulation that dominates this file**: corporate L&D is not
+schooling, so the Annex III high-risk classification, the US state classroom statutes and the
+age-banding rules largely do not reach it. **The compliance barrier that gates the institutional
+market does not gate this one.**
+
+🔴 **Informed gap.** No regional split is available for these commitments — the source gives global
+totals only. Whether the $3.6 BN lands in North America, EMEA, APAC or LATAM is **unmeasured**, and
+that is a live question for a studio deciding where to staff against it.
+

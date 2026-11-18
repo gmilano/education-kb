@@ -4,6 +4,138 @@ region: Global
 updated: 2026-11-18
 ---
 
+## `2026-11-18` (p898) — the origin leg p897 deferred, and the strip step that stopped this KB publishing a LATAM entrant it does not have
+
+**Channel:** `gh api search/repositories` for discovery and stars, licence **byte-reads** from
+`raw.githubusercontent.com`, and — new this pass — a **README natural-language probe** as the origin
+proxy, because the two metadata channels that would carry origin directly do not.
+
+`p897` closed by naming its own omission: *"**No regional supply-side leg.** … the three entrants
+above are unplaced by origin beyond `Global`."* That is this pass. Ten repositories probed, **three
+placed, seven honestly unplaceable, and one false placement caught before it was written.**
+
+### 🔴 `884-G5` is not "untried" — `search/users` is reachable and *structurally cannot* answer it
+
+`intel/open-gaps.md` has carried `884-G5` across five passes as the affiliation check that was never
+run. Both candidate channels were measured this pass:
+
+| Channel | Result | What it means for origin |
+|---|---|---|
+| `gh api users/{login}` | 🔴 **403** — `"sessions are bound to their configured repositories"` | Unavailable. Not a rate limit, not transient. |
+| `gh api search/users` | 🟢 **200** — returns the user | **Reachable, and still useless here.** |
+
+🔵 **The measurement that settles it.** `search/users` returns an item of **20 fields**
+(`avatar_url,events_url,followers_url,following_url,gists_url,gravatar_id,html_url,id,login,node_id,organizations_url,received_events_url,repos_url,score,site_admin,starred_url,subscriptions_url,type,url,user_view_type`).
+**`location` is not among them, and neither is `company` or `name`.** The search API serves a
+reference, not a profile. So `884-G5` cannot be discharged by trying harder on that endpoint — the
+field is not served. It needs a different channel or it needs closing as unreachable. **Stated here
+so the next pass does not spend its budget re-running a query that returns `200` and no answer.**
+
+### 🔴 The strip step is the finding: unstripped text placed a repo in LATAM that is not there
+
+The origin proxy is README script/lexical detection. The first run scored raw README bytes and
+produced this:
+
+| Repo | Raw score | After stripping code fences, inline code and URLs |
+|---|---|---|
+| [`luumlabs/aula`](https://github.com/luumlabs/aula) | **ES=64, PT=83** — reads as Iberian/LATAM | 🔴 **PT\*=0, ES\*=1** — the README is **English** |
+
+🔵 **Where the 147 romance-language hits came from:** `.com` inside URLs matching `com`, and
+`para`/`de`/`la` inside fenced code blocks. The repo is *named* `aula` — Spanish and Portuguese for
+*classroom* — which is what made the false score plausible rather than obviously wrong.
+
+🔴 **Why this mattered more than an ordinary false positive.** This KB's standing regional finding is
+that **LATAM-origin open education supply is near zero**. A first LATAM-origin entrant would have
+been a headline reversal, and it would have been wrong. **A repository named with a Spanish or
+Portuguese word is not an origin signal.** The second run uses diacritic- and
+token-**exclusive** markers (`ã õ ç ção você não` for PT; `ñ ¿ ¡ ción qué más` for ES) over
+**stripped** text, and is the method of record.
+
+### 🟢 Placements — 3 of 10, and the seven that stay `Global` stay `Global` on purpose
+
+| Repo | ★ | Licence (byte-read) | README evidence | Placement |
+|---|---|---|---|---|
+| [`brian901106/japanese-tutor-mugi`](https://github.com/brian901106/japanese-tutor-mugi) | **105** | 🟢 **MIT** (`main/LICENSE`, 1,068 B, `sha256₁₂ b349f14f3e8e`) | **han=2,639, kana=18** — a CJK-dominant README | 🟢 **APAC** |
+| [`itsme-ganzu/belajar-ngoding-byGanzu`](https://github.com/itsme-ganzu/belajar-ngoding-byGanzu) | **66** | 🟢 **MIT** (`main/LICENSE`, 1,062 B, `sha256₁₂ 410186335243`) | **30 Bahasa Indonesia markers** (`belajar, yang, untuk, dari, tanpa, dengan`) | 🟢 **APAC** |
+| [`fahsq72lan/dsh-guide-tutor`](https://github.com/fahsq72lan/dsh-guide-tutor) | **239** | 🔴 **NONE** — see `repos/trending.md`, 36 probes | **han=613** — Chinese README | 🟢 **APAC** (and unusable) |
+| `lynote-ai/ai-tutor` · `armanakh/atlas-of-intelligence` · `altuzar/OpenFounderSchool` · `molly554/whiteboard-ai-tutor` · `bayshores/godspeed` · `luumlabs/aula` · `simranjeet97/AI_Engineer_Roadmap_2027` | 83–231 | mixed | **English README, zero non-Latin script, zero exclusive romance markers** | 🟡 **Unplaceable — carried as `Global`** |
+
+🔵 **`brian901106/japanese-tutor-mugi` is the more interesting of the two placements**, and not
+because of its star count. It is a **Chinese-language interface teaching Japanese conversation** —
+the tutor and the learner's own language are different, and neither is English. Its stated design is
+structured LLM output under a **JSON Schema**, with the target-language line and the native-language
+hint as **separate fields**, streamed by partial-JSON parsing. That is a reusable contract for any
+second-language tutor, and it is the only repo in this KB that implements it.
+
+🔴 **Explicit, informed gaps from this leg — written down so silence is not read as coverage:**
+
+- 🔴 **LATAM: zero *in this cohort*.** Ten repos probed, **no Spanish- or Portuguese-language
+  README**, and the one candidate whose *name* suggested LATAM scored English on stripped text. This
+  is a measurement, not an absence of looking. 🔵 **Scope it honestly:** the shelf already carries
+  one genuine LATAM row — [`CaioCastro1/usp-mcp`](https://github.com/CaioCastro1/usp-mcp) (MIT, 28 ★,
+  Portuguese-language MCP over Universidade de São Paulo's student systems) — so the finding is *"no
+  new LATAM supply in this window"*, **not** *"no LATAM supply"*. `usp-mcp` is also the proof the
+  proxy works in the direction that matters: a genuinely Portuguese README is detectable.
+- 🔴 **EMEA: zero** by this channel — no non-English European-language README in the cohort. Note the
+  proxy's known blind spot: **EMEA projects publish in English**, so this channel
+  under-detects EMEA specifically, and a `Global` row here is weaker evidence of "not EMEA" than it
+  is of "not APAC". Stated as a limit of the instrument.
+- 🔴 **Africa and Middle East: zero.** No Arabic, Swahili or other African-language README. `p895`
+  ran a dedicated Africa/Middle East leg; this one did not re-run it.
+
+### 🔴 The `grading` keyword leg is poisoned worse than `tutor` was — compound adjectives, not stemming
+
+`724-S` recorded that the `tutor` leg is poisoned by `tutorial` stemming, and `p897` replicated it.
+This pass ran `classroom OR grading OR lesson-plan`, and **the entire top-12 by stars is
+non-education**:
+
+| Repo | ★ | Why it matched | Actually |
+|---|---|---|---|
+| [`alchaincyf/huashu-motion`](https://github.com/alchaincyf/huashu-motion) | **2,870** | `grading` | 🔴 Product-launch **film generation** — "commercial-**grade**" |
+| [`zhuyansen/awesome-claude-video-skills`](https://github.com/zhuyansen/awesome-claude-video-skills) | 2,318 | `grading` | 🔴 Video toolkits for coding agents |
+| [`andyhuo520/digital-human-koubo`](https://github.com/andyhuo520/digital-human-koubo) | 2,029 | `grading` | 🔴 Talking-head video from one photo |
+| [`jwuthri-cloud/Tracely-ai`](https://github.com/jwuthri-cloud/Tracely-ai) | 948 | `grading` | 🔴 **"grade production traces"** — CI/CD for agents |
+| [`azuremaple1997/coreldraw-desktop`](https://github.com/azuremaple1997/coreldraw-desktop) | 413 | `grading` | 🔴 Desktop app with **colour grading** |
+
+🔵 **The sharper rule.** `tutor` fails on *stemming* (`tutor` → `tutorial`). `grading` fails on
+**compound adjectives** — `commercial-grade`, `launch-grade`, `studio-grade`, `native-grade` — which
+is a larger and faster-growing class, because "X-grade" is current marketing idiom in exactly the
+agent-tooling repos that dominate star counts. **`grading` is a worse keyword than `tutor`, and
+neither can be ranked on. Education legs must filter on description, not on ranking.** Nine of ten
+prescribed-leg passes have now returned no education-specific repositories, which is `887-G4`'s
+asymmetry replicating for the tenth time.
+
+### 🟢 Cohort sweep — all ten measured, and the ceiling moves again
+
+| Repo | p897 | **p898** | Δ | Licence |
+|---|---|---|---|---|
+| [`OpenHands/OpenHands`](https://github.com/OpenHands/OpenHands) | 93,731 | **93,740** | +9 | MIT |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 60,323 | **60,351** | +28 | Apache-2.0 |
+| [`LibreChat-AI/LibreChat`](https://github.com/LibreChat-AI/LibreChat) | 47,317 | **47,317** | 0 | MIT |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 43,887 | **43,889** | +2 | MIT |
+| [`amosblomqvist/learnharness`](https://github.com/amosblomqvist/learnharness) | 10,086 | **10,110** | +24 | **AGPL-3.0** |
+| [`Li-Evan/BloomTutor`](https://github.com/Li-Evan/BloomTutor) | 316 | **316** | 0 | MIT |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 282 | **282** | 0 | MIT |
+| [`molly554/whiteboard-ai-tutor`](https://github.com/molly554/whiteboard-ai-tutor) | 231 | **232** | +1 | MIT |
+| [`flysheep-ai/education-skills`](https://github.com/flysheep-ai/education-skills) | 125 | **126** | +1 | MIT |
+| [`lynote-ai/ai-tutor`](https://github.com/lynote-ai/ai-tutor) | 82 | **83** | +1 | MIT |
+
+🔵 **The agent-*skill* cohort ceiling is now `126 ★`** (`education-skills`, +1). The finding it
+serves is unchanged and has survived three corrections: **the "tutor as an agent skill" form still
+has no star traction**, and 126 is still roughly an order of magnitude short of the 1,000 ★ watch
+condition. 🔴 `education-skills` has not been pushed since **2026-01-30** — the +1 is drift on a
+dormant repo, which strengthens rather than weakens the finding.
+
+### What this pass did not do
+
+- 🔴 **No promotion of the seven unplaceable rows.** They are carried `Global` because the instrument
+  could not place them, not because they were checked and found global.
+- 🔴 **No re-run of the Africa/Middle East leg** (`p895` owns the last one).
+- 🔴 **No primary legal source read.** `884-G4` is now in its **seventh** pass — every non-GitHub host
+  is still `403` on CONNECT through this session's proxy, verified again this pass against
+  `unesco.org`.
+
+
 ## `2026-11-18` (p897) — the first discovery leg in two passes: three new MIT entrants, and the `tutor` keyword is still poisoned exactly as `724-S` described
 
 **Channel:** `gh api search/repositories` over `tutor OR classroom OR curriculum in:name,description`

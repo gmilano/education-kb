@@ -6,7 +6,7 @@ updated: 2026-11-18
 
 # Current trends — education
 
-**Nineteen trends** (the count in this line read *"sixteen"* through the addition of T17 and T18 and is corrected in **p897**), each with the evidence behind it and what it implies for delivery. **T19 added in p897**, from the licence re-read of every unresolved row. **T16 added in p895**, from four cohort measurements that only become one finding when read together. **T14 and T15 added in p894** — the first from the operative content of China's anthropomorphic-AI Measures, which this file had been carrying as a bare date; the second from four repository cohorts measured in a single batch, which is the only way the correlation it names becomes visible. Researched
+**Twenty trends** (**T20 added in `p898`**, the first trend in this file sourced from byte-level repository probes rather than search snippets) (the count in this line read *"sixteen"* through the addition of T17 and T18 and is corrected in **p897**), each with the evidence behind it and what it implies for delivery. **T19 added in p897**, from the licence re-read of every unresolved row. **T16 added in p895**, from four cohort measurements that only become one finding when read together. **T14 and T15 added in p894** — the first from the operative content of China's anthropomorphic-AI Measures, which this file had been carrying as a bare date; the second from four repository cohorts measured in a single batch, which is the only way the correlation it names becomes visible. Researched
 2026-11-18; T9 added and T1/T3/T6 extended in **p890**, T10 added in **p891**, and **T11 added in
 p892** from the India and Saudi Arabia legs — all the same day. Legal facts here were
 sourced through search snippets with the source named — every non-GitHub host is blocked by this
@@ -607,6 +607,59 @@ page be the evidence for a licence claim in a client deliverable. On this KB's o
 base rate of error in unresolved rows was **5 of 7** — high enough that byte-reading is cheaper
 than the first conversation with a client's counsel. See `repos/trending.md` (p897) for the full
 measurements and `repos/foundations.md` for the corrected rows.
+
+## T20 — Vernacular education agents are appearing, and they are *not* translations of English ones — the native language is in the data contract
+
+**Added `p898`**, from byte-level README probes rather than search snippets.
+
+**The measurement.** A ten-repository origin probe (method and full table in
+[`agents/trending.md`](../agents/trending.md), `p898`) placed **three repositories by README script
+and lexicon**: two MIT entrants in APAC and one unlicensed Chinese-language repo. The seven others
+have English READMEs and are carried `Global` because the instrument could not place them.
+
+🔵 **The finding is not "some repos are in other languages". It is *where* the language sits.**
+
+- [`brian901106/japanese-tutor-mugi`](https://github.com/brian901106/japanese-tutor-mugi) (MIT, 105 ★)
+  is a **Chinese-language interface teaching Japanese conversation**. The tutor's UI language, the
+  target language and English are three different things. Its LLM contract returns **JSON Schema**
+  output in which the **Japanese line and the Chinese hint are separate fields**, streamed by
+  partial-JSON parsing.
+- [`itsme-ganzu/belajar-ngoding-byGanzu`](https://github.com/itsme-ganzu/belajar-ngoding-byGanzu)
+  (MIT, 66 ★) teaches Python **in Bahasa Indonesia**, with the tutor drilling reasoning rather than
+  supplying answers.
+
+🔴 **Why "it's just localisation" is the wrong read, and the expensive one.** A localised product
+puts language in the **presentation layer** — strings come out of a resource bundle and the model
+reasons in English underneath. `japanese-tutor-mugi` puts it in the **schema**: target-language
+content and native-language scaffolding are distinct typed fields that the model must fill
+separately, so the pedagogical relationship between the two languages is enforced by the data
+contract rather than by the prompt. **You cannot retrofit that by translating an English tutor.**
+Any second-language or vernacular-medium tutor built on a single free-text response field has
+already lost the distinction, and recovering it is a schema change, not a translation pass.
+
+🔵 **Why it shows up in APAC first, and what that predicts.** The regions where instruction is
+routinely delivered in a language that is neither English nor the language being taught are
+precisely where this contract is forced. Indonesia alone is the **fourth-largest school system in the
+world**. The same structure is latent in LATAM (Portuguese- and Spanish-medium instruction) and
+across Africa — and this KB has verified **one** LATAM row of this kind
+([`CaioCastro1/usp-mcp`](https://github.com/CaioCastro1/usp-mcp), MIT, Portuguese) and **no** new
+LATAM-origin supply in this window.
+
+**What it implies for delivery.**
+
+1. 🟢 **Treat the separate-fields contract as a reusable design, not a repo to adopt.** Both repos
+   are small and young; neither is substrate. The schema is the transferable asset, and it is MIT in
+   both cases, so it can be read and reimplemented freely.
+2. 🔴 **Scope vernacular work as a data-contract decision at design time.** If a client's engagement
+   is vernacular-medium, the schema question has to be settled before a tutor tier is built, because
+   it is not a late-stage localisation task.
+3. 🟡 **Expect the supply to stay small.** These are individual-scale projects, not institutional
+   releases — consistent with **T16**'s split between *published* and *deployable* open education AI.
+   They are evidence of where demand is surfacing, not of a market you can buy into.
+
+🔴 **Limit of the instrument, stated.** README language is a **proxy** for origin, and it
+under-detects **EMEA specifically**, because European projects publish in English. A `Global` row in
+this leg is decent evidence of "not APAC" and weak evidence of "not EMEA".
 
 ## Trends we looked for and could not substantiate
 

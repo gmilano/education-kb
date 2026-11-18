@@ -10,7 +10,7 @@ Concrete recipes. Each names the exact repos, how they wire together, the licenc
 the result, and a realistic build estimate. Every repo referenced is verified in
 `agents/top.md`, `repos/foundations.md` or `verticals/solutions.md`.
 
-**Fourteen patterns, plus the G1 licence gate added in p897** that runs ahead of all of them.
+**Sixteen patterns, plus the G1 licence gate added in p897** (**P16 added in `p898`**) that runs ahead of all of them.
 **p895 added P14** — offline-first literacy delivery on the one Africa-origin
 permissive platform this KB has verified (`elimu-ai`), with the agent tier as studio IP because
 the supply measurement leaves nothing licensed to adopt (see **T16**). **It is also the only
@@ -1166,3 +1166,63 @@ surface, SSO, xAPI). Add **3–4 weeks** for a first proprietary XBlock or LTI c
   relicence upstream closes this route for that platform (**T17** watch condition).
 - 🟡 **`h5p-interactive-video` carries this KB's weakest licence evidence** — MIT on the search
   channel only, no licence file at twelve candidate paths. Confirm before it enters zone 3.
+
+## P16 — Vernacular-medium second-language tutor, with the language relationship in the schema (added p898)
+
+**The problem.** A client delivers instruction in a language that is neither English nor the language
+being taught — a Bahasa-medium school teaching English, a Spanish-medium university teaching
+Mandarin, a Portuguese-medium system teaching French. The default build (one LLM, one free-text
+response field, a translated UI) collapses three distinct languages into one channel, and the
+pedagogical scaffolding — *what the learner sees in their own language versus what they must produce
+in the target language* — becomes a prompt convention that the model silently violates under load.
+
+**Why this pattern exists separately from `P13`.** `P13` is persona-stateless tutoring for
+age-banded, affect-regulated markets; its constraint is regulatory. This one's constraint is
+**linguistic and structural**, and the fix is in the data contract. See **T20**.
+
+### The recipe
+
+| Tier | What to use | Licence | Why this one |
+|---|---|---|---|
+| **Schema contract** | [`brian901106/japanese-tutor-mugi`](https://github.com/brian901106/japanese-tutor-mugi) — **read it, reimplement it** | MIT (byte-read, 1,068 B) | The only verified implementation of target-language and native-language scaffolding as **separate typed fields**, streamed by partial-JSON parsing. Small and young — take the contract, not the codebase. |
+| **Pedagogical frame** | [`Li-Evan/BloomTutor`](https://github.com/Li-Evan/BloomTutor) | MIT | Structures interaction by Bloom level, which gives the schema a second axis (cognitive level) alongside the language axis. |
+| **Vernacular curriculum reference** | [`itsme-ganzu/belajar-ngoding-byGanzu`](https://github.com/itsme-ganzu/belajar-ngoding-byGanzu) | MIT | Worked example of reasoning-first drilling written natively in Bahasa Indonesia rather than translated into it. |
+| **Pronunciation / production** | [`OpenPronounce/OpenPronounce`](https://github.com/OpenPronounce/OpenPronounce) | MIT | Open pronunciation assessment — the production half of a second-language loop, and the one tier where a generic LLM is weakest. |
+| **Serving** | `ollama` or `vllm` + `litellm` | MIT / Apache-2.0 | Self-hosted inference. Required outright for EMEA sovereignty work and for any client that cannot export learner utterances. |
+| **Learner state** | `qdrant` + a persistent store | Apache-2.0 | Carry per-learner error patterns across sessions. **`LearnHarness` is the reference design for learner-state modelling and is AGPL-3.0 — read it, do not link it.** |
+| **Host platform** | Moodle (GPL) via `Faixiang/Moodle-MCP` (MIT) or `G36maid/moodle-mcp` (MIT) | MIT connectors over a GPL platform | The connector tier is permissive even where the platform is copyleft — **T17**'s third integration route. |
+
+### The contract to implement
+
+Every tutor turn returns **typed fields, not prose**:
+
+- `target_text` — the utterance in the language being taught
+- `native_hint` — scaffolding in the learner's own language
+- `bloom_level` — the cognitive level this turn is pitched at
+- `error_tags[]` — what the learner's previous production got wrong, for the state tier
+
+🔵 **The whole point: `target_text` and `native_hint` are never the same field and never
+concatenated.** That single constraint is what a translated English tutor cannot express, and it is
+what makes the output renderable as two visually distinct channels, gradeable separately, and
+analysable for whether the learner is actually producing target-language content or leaning on the
+scaffold.
+
+### Licence posture
+
+🟢 **Permissive end to end** — MIT, Apache-2.0 and MIT-connectors-over-GPL. A closed, client-branded
+derivative is clean, provided `LearnHarness` is read rather than linked and the Moodle tier stays on
+the connector side of the boundary. This is the **second** pattern in this file (after `P14`) that is
+permissive all the way down.
+
+### Estimate and honest limits
+
+**8–10 weeks** to a pilot on one language pair with one institution.
+
+🔴 **What you are not getting.** Neither vernacular repo is substrate — they are a few dozen to a few
+hundred stars and individually maintained. **The schema is the deliverable you are reusing; the
+implementation is studio IP.** Budget accordingly, and do not price this as integration work.
+
+🔴 **Unproven.** No learning-outcome study exists for the separate-fields contract. It is a
+well-formed design argument supported by one working implementation, **not** an evidenced
+intervention. Say so to the client rather than implying efficacy data that does not exist.
+

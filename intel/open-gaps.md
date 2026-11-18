@@ -4,6 +4,71 @@ region: Global
 updated: 2026-11-18
 ---
 
+## 🆕 `p898` · 2026-11-18 — **`884-G5` is RECLASSIFIED, not discharged: the channel it names returns `200` and does not serve the field. `887-G4`'s asymmetry replicates for the tenth pass. One false regional placement was caught pre-publication.**
+
+🔵 **`884-G5` — affiliation check — RECLASSIFIED from `UNRUN` to `UNREACHABLE BY THIS CHANNEL`.**
+
+| Channel | Status | Measurement |
+|---|---|---|
+| `gh api users/{login}` | 🔴 **403** | `"sessions are bound to their configured repositories"` — structural, not transient |
+| `gh api search/users` | 🟢 **200**, returns the user | 🔴 **20 fields, and `location`, `company` and `name` are not among them** |
+
+🔴 **This matters because the gap was being carried as laziness when it is a capability limit.**
+Five passes recorded `884-G5` as *"ran no `search/users` affiliation check"*, which reads as a job
+nobody got to. It was run this pass: the endpoint answers, and **the field does not exist in its
+response**. Re-running it will never discharge the gap.
+
+🟢 **Revised acceptance test.** Origin is established either (a) from a channel that actually serves
+location — none is currently reachable from this session — or (b) from **content evidence**, which
+is what `p898` used: README script and lexicon over **stripped** text. Close `884-G5` as
+**unreachable** and track origin quality under the content-evidence instrument instead.
+
+### 🔴 `898-G1` — an origin instrument scored on unstripped text produces false regional placements, and the failure mode favours *false positives in under-represented regions*
+
+🟢 **Measured.** [`luumlabs/aula`](https://github.com/luumlabs/aula) scored **ES=64, PT=83** on raw
+README bytes and **PT\*=0, ES\*=1** after stripping fenced code, inline code and URLs. The 147 raw
+hits were `.com` inside URLs and romance-looking tokens inside code blocks. The repo's README is
+English; its *name* is a Spanish and Portuguese word.
+
+🔴 **The asymmetry is the dangerous part.** This KB's standing finding is that **LATAM-origin supply
+is near zero**. A false positive therefore lands precisely where the KB has the least evidence and
+the most to revise — a single bad row would have been published as a headline reversal. **False
+placements are most likely exactly where they would do the most damage**, because scarce-region
+claims are the ones a reader will not already have a counterexample for.
+
+🟢 **Acceptance test.** No origin placement may be written from a score computed over unstripped
+text, and no placement may rest on a repository *name*. The instrument strips fenced code, inline
+code and URLs, then scores **exclusive** markers only (`ã õ ç ção você não` / `ñ ¿ ¡ ción qué más`;
+script ranges for CJK, Kana, Hangul, Devanagari). **Close when the stripper and its exclusive-marker
+lists ship as a tested instrument under `compose/code/` with the `aula` README as a named
+known-good negative fixture.** 🔵 **Budget:** small — the detector is ~20 lines and the fixture is
+already identified.
+
+### 🔴 `898-G2` — the prescribed WebSearch legs have returned no education-specific repository for TEN consecutive passes, and `887-G4`'s recommendation is still unimplemented
+
+🟢 **Measured again this pass.** The discovery legs returned **11 candidates, of which 9 were already
+shelved** and the 2 new ones were found through `gh api search/repositories`, not through the
+prescribed natural-language legs. The keyword poisoning is now characterised in two distinct forms:
+
+| Keyword | Failure mode | Example |
+|---|---|---|
+| `tutor` | **stemming** → `tutorial` | `Kaneka4850/Tutorial-Bioinformatica` |
+| `grading` | 🔴 **compound adjectives** → `commercial-grade`, `launch-grade`, `studio-grade`, `native-grade` | `alchaincyf/huashu-motion` (2,870 ★, product-launch films) |
+
+🔴 **`grading` is the worse of the two and is getting worse**, because `X-grade` is current marketing
+idiom in the agent-tooling repos that dominate star rankings. The **entire top-12 by stars** for
+`classroom OR grading OR lesson-plan` was non-education.
+
+🟢 **Acceptance test.** The discovery leg filters on **description content**, not on keyword ranking,
+and `887-G4`'s re-scoping is actually applied rather than re-recorded. **Close when a pass runs a
+description-filtered leg and reports its yield against the ranked leg's yield on the same window.**
+
+🔵 **Carried untouched this pass, stated so silence is not read as progress:** `887-G1` (shelf-prose
+oracle), `887-G2` (`NOASSERTION` 163-row sweep), `887-G3` (`p427` untitled-body blindness),
+`885-G2`, `885-G3`, `884-G6`. 🔴 **`884-G4` — no primary legal source read — is now in its SEVENTH
+pass**; every non-GitHub host was re-verified `403` on CONNECT this pass against `unesco.org`.
+
+
 ## 🆕 `p887` · 2026-11-18 — **`6` gaps. `886-G1`, `886-G3`, `886-G5` and `884-G3` all DISCHARGED — and `886-G2` RECURRED against this pass's own new instrument, in literal compliance with its acceptance test, on the same file it was written about. `886-G5`'s class size, recorded UNKNOWN by `p886`, is `1` of `206`.**
 
 🔵 **Discharged and closed this pass, with the measurement that did it:**

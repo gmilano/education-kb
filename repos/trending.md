@@ -4,6 +4,61 @@ region: Global
 updated: 2026-11-18
 ---
 
+## `2026-11-18` (p898) — the highest-starred `tutor` repo in the window is unlicensed, confirmed over 36 probes, and p897's own lesson is what made the check worth running
+
+**Channel:** `gh api search/repositories` for stars/SPDX, licence **byte-reads** from
+`raw.githubusercontent.com` over the extended grid `p897` established — **3 branches × 12 filenames
+= 36 probes**, including the `docs/` prefix leg that was `p897`'s whole finding.
+
+### 🔴 `fahsq72lan/dsh-guide-tutor` (239 ★) is genuinely unlicensed — 36 probes, 2 hits, both `README.md`
+
+`p897` corrected a standing warning by discovering that *"no licence file"* had meant *"not at the
+root"* for several repos. That correction is exactly why this row could not simply be written off on
+a single root `404`. It was run over the full grid instead:
+
+| Probe set | Result |
+|---|---|
+| `main` × `{LICENSE, LICENSE.md, LICENSE.txt, LICENCE, COPYING, COPYING.txt, NOTICE, LICENSE-MIT, LICENSE-APACHE, docs/LICENSE, docs/LICENSE.md}` | 🔴 **all 404** |
+| `master` × same 11 | 🔴 **all 404** |
+| `dev` × same 11 | 🔴 **all 404** |
+| `README.md` (control, proves the paths resolve) | 🟢 **200 on `main` AND `master`** |
+
+🔵 **The control is what makes the negative trustworthy.** `README.md` returning `200` on two
+branches proves the probe is reaching real refs — so the 36 `404`s are an absent licence, not a bad
+path or a dead branch. 🔴 **Verdict: no grant. All rights reserved by default. Unusable in client
+work**, at any licence posture, including internal evaluation.
+
+🔴 **And it is the highest-starred result the `tutor` keyword returned in this window — 239 ★,
+above every MIT entrant.** The leg's best-ranked hit is legally unusable, which is the
+*second* independent reason (after the compound-adjective poisoning recorded in
+[`agents/trending.md`](../agents/trending.md) this pass) that **star ranking is not a selection
+method for this industry.**
+
+### 🟢 One new Apache-2.0 entrant — a curriculum, not an agent, and filed accordingly
+
+| Repo | Licence (byte-read) | ★ | Created | What it is |
+|---|---|---|---|---|
+| [`simranjeet97/AI_Engineer_Roadmap_2027`](https://github.com/simranjeet97/AI_Engineer_Roadmap_2027) | 🟢 **Apache-2.0** (`main/LICENSE`, **11,357 B**, `sha256₁₂ c71d239df917`) | **40** | 2026-11-07 | A 10-week, staff-level **curriculum** and engineering roadmap for LLM inference systems and serving. |
+
+🔵 **Filed here and deliberately *not* in `agents/top.md`.** It ships no agent — it is course content
+under a permissive licence. That distinction is the one `T16` is built on (*published* open education
+AI versus *deployable* open education AI), and this row is a clean instance of the first:
+**permissively licensed, genuinely useful, and nothing to deploy.** Its value to a studio is as
+**enablement material** — the teacher/practitioner-training tier in `P10` — where Apache-2.0 means
+the content can be adapted into client-branded curriculum without a copyleft argument.
+
+🔴 **Unplaceable by origin.** 78 KB README, English throughout, zero Devanagari — so despite the
+owner-name signal it is carried as `Global`, per the placement rule adopted this pass. **Name-based
+origin inference is exactly what the `luumlabs/aula` false positive disqualified.**
+
+### What this pass did not do
+
+- 🔴 **No `NOASSERTION` sweep.** `887-G2`'s 163-row metadata sweep is still unrun; this pass read
+  licences for 4 repos, not 163.
+- 🔴 **No new foundations.** `repos/foundations.md` is unchanged — nothing discovered this pass is
+  substrate, and padding that shelf would weaken it.
+
+
 ## `2026-11-18` (p897) — the last open job closes, and "no licence file" turns out to have meant "not at the root"
 
 **Channel:** `gh api search/repositories` (batched `repo:` qualifiers) for stars/SPDX, and
