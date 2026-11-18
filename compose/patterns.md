@@ -10,6 +10,11 @@ Concrete recipes. Each names the exact repos, how they wire together, the licenc
 the result, and a realistic build estimate. Every repo referenced is verified in
 `agents/top.md`, `repos/foundations.md` or `verticals/solutions.md`.
 
+**Thirteen patterns. p894 added P12 and P13** — the registrarial tier the KB has named as its
+top opportunity for four passes, now scoped against the Apache-2.0 platform that turned out to
+exist (`UniTime`), and a persona-stateless tutor design for the three regimes that have made
+affective design a regulated activity for minors (see **T14**).
+
 **Licence rule that governs all of these.** Open edX (AGPL-3.0), Canvas (AGPL-3.0) and Moodle
 (GPL-3.0) are copyleft. Integrating over **LTI 1.3** or **MCP** keeps your tool a separate
 work; forking the platform does not. Where a client needs a proprietary derivative, start from
@@ -707,3 +712,206 @@ Add **3–4 weeks** for the graduation to write scope, most of it approval rathe
   MCP alone will cost more than it saves.
 - **Not where Moodle HQ support is a procurement requirement.** Moodle HQ has published no MCP
   server; every option here is community-maintained, and that must be said before signature.
+
+## P12 — Registrarial agent tier over UniTime (the KB's named gap, scoped to what is actually missing)
+
+### Why this pattern exists
+
+Every pass of this KB has named the registrarial layer — enrolment, timetabling, transcripts,
+financial aid — as the industry's clearest build-vs-adopt gap and the most defensible studio IP.
+**p894 found that the gap was half misread**, and the half that was wrong changes the estimate by
+months. The *agent* tier genuinely does not exist: a dedicated leg found only course capstones
+(`aabbiisshhaa/student-support-agent`, 2 ★, no licence, Makerere University;
+`vaibhav9895-lang/student-support-agent-assignment`, 0 ★, no licence;
+`leechenwei/Ai-Agent-Timetable`, 0 ★, no licence, idle since 2025-02-24). But the **platform
+underneath it exists, is permissive and was pushed yesterday** — `UniTime/unitime`, Apache-2.0,
+360 ★, 2026-11-17 — and it had fallen out of `verticals/solutions.md` in the 2026-11-18 rewrite.
+
+So this is not "write a registrarial platform". It is **"put an agent and a decisioning tier over
+a maintained Apache-2.0 scheduler, and build only the parts that have nothing"** — which is a
+10-week engagement rather than a multi-year product.
+
+Use this where a university client has a timetabling or exam-scheduling pain, a registrar who
+spends their week on conflict resolution and exception requests, and an SIS of record that is
+not going to be replaced.
+
+### Stack
+
+Every repo named is API-measured and licence byte-read in this KB as at 2026-11-18.
+
+**1. The registrarial core — adopt, do not build**
+
+| Component | Repo | Licence | ★ | Note |
+|---|---|---|---|---|
+| Course and exam timetabling, student scheduling | `UniTime/unitime` | **Apache-2.0** | 360 | Pushed 2026-11-17. Runs standalone or interfaces to an existing SIS |
+| The constraint solver underneath it | `UniTime/cpsolver` | **LGPL-3.0** | 84 | **Licence boundary — see below.** Do not static-link into a closed component |
+| Small-scale permissive alternative | `GEOSOFT-GLOBAL/timetablely` | MIT | 27 | Idle since 2026-08-17; a starting point, not a dependency |
+| SIS of record (LATAM public sector) | `portabilis/i-educar` | GPL-2.0 | — | Built around Brazilian regulatory requirements |
+| K-12 SIS where a closed derivative is required | `Gego-K12/gegok12` | MIT | — | The only MIT-licensed SIS this KB has verified |
+
+**2. The agent tier — this is the part you build**
+
+| Component | Repo | Licence | Role |
+|---|---|---|---|
+| Orchestration with auditable policy nodes | `langchain-ai/langgraph` | MIT | Every eligibility and exception check is an explicit node, not a prompt instruction |
+| Role split: registrar / scheduler / adviser / reviewer | `crewAIInc/crewAI` | MIT | Optional; use where the workflow genuinely has four hand-offs |
+| K-12 data standard (North America) | `Ed-Fi-Alliance-OSS/Ed-Fi-ODS` | Apache-2.0 | Non-negotiable for a US K-12 engagement |
+| SSO and per-role access to the agent tier | `apereo/cas` | Apache-2.0 | Same foundation as UniTime; already in most higher-ed estates |
+| Human review queue | `appsmithorg/appsmith` | Apache-2.0 | What makes human-in-the-loop real instead of aspirational |
+| Evidence that it helped | `yetanalytics/lrsql` + `agentscope-ai/OpenJudge` | Apache-2.0 both | Decision-quality and turnaround-time measurement; see **P7** |
+
+### How it wires together
+
+1. **UniTime stays the system of record for schedules.** The agent never writes a timetable
+   directly; it proposes, and UniTime's solver validates. This is the single most important
+   decision in the pattern — it keeps feasibility guarantees in the component that has them.
+2. **Exception intake is the agent's first job, not scheduling.** Room-change requests, clash
+   appeals, accommodation-driven constraints and late enrolment arrive as free text; the agent
+   normalises them into UniTime constraints and explains what it changed.
+3. **Eligibility and decisioning are policy nodes, deterministic, with the LLM confined to
+   evidence extraction.** This is the one design rule the 0 ★ grading cohort got right
+   (`Atmankhyar`, `timothyheeeee`, `virtualryder/edu-ai-agents`): the model reads documents and
+   cites them, a rule engine decides.
+4. **Every decision carries criterion-level evidence and a regrade path** — taken from
+   `asu2304/auto-assessment-agent`. An appeal procedure is not a feature here; it is what makes
+   the tier lawful in the EU.
+5. **Accommodation constraints merge, never override.** From `SudhanvaJ-bit/project-samarth` via
+   `P496-1`: the statutory accommodation baseline enters agent state such that the model **can
+   add but cannot remove** a required accommodation. A scheduler that can drop an accessibility
+   constraint is a Section 504 / ADA Title II incident, not a bug.
+6. **Audit and metering per institution** as in **P8**, because this tier touches the registrar's
+   authority and someone will ask who changed what.
+
+### The design rules that make it defensible
+
+- **Never let the agent make an admissions or financial-aid decision.** Those are **EU Annex III
+  high-risk** and restricted under several US state laws. Scope the agent to *scheduling,
+  exceptions and explanation*, and keep decisioning as an assisted human workflow with
+  deterministic rules. This is the boundary that keeps a 10-week engagement out of a conformity
+  assessment.
+- **Honour the LGPL boundary on `cpsolver`.** UniTime is Apache-2.0 and its solver is LGPL-3.0.
+  Keep the solver behind a process or service boundary; do not static-link it into a closed
+  component. State this in the licence annex before signature.
+- **Do not promise registrar-grade decisioning on day one.** Read-only proposal mode first, as
+  in **P11** — the pattern that got the staged-access posture right.
+
+### Deliverables
+
+- UniTime deployed or integrated against the client's SIS of record, with the LGPL boundary
+  documented.
+- An exception-intake agent in proposal-only mode, with policy nodes, criterion-level evidence
+  and an appeal path.
+- Accommodation-merge enforcement (`P496-1`) with a test suite that proves a required
+  accommodation cannot be dropped.
+- A registrar review queue, an audit trail, and turnaround-time baselines before and after.
+- A licence annex covering Apache-2.0 / LGPL-3.0 / the SIS licence, written for procurement.
+
+### Licence posture
+
+**Clean, with one named boundary.** UniTime, Ed-Fi, CAS, Appsmith, `lrsql` and OpenJudge are
+Apache-2.0; LangGraph and CrewAI are MIT; nothing forks the SIS. **`cpsolver` is LGPL-3.0** and is
+the only copyleft component — keep it at arm's length. Where the client's SIS is `i-educar`
+(GPL-2.0) the SIS stays on its own side of the integration boundary; where a closed SIS
+derivative is the requirement, `gegok12` (MIT) is the only verified permissive base.
+
+### Estimate
+
+**8–10 weeks** to a proposal-only exception agent over a UniTime instance with policy nodes,
+accommodation-merge enforcement, audit and a registrar queue. Add **4–6 weeks** to extend to
+write-through scheduling, most of it approval and regression testing rather than code. **Do not
+quote decisioning** — that is a separate engagement with a conformity assessment in it.
+
+### Where it does not apply
+
+- **Not for admissions or financial-aid decisioning.** Annex III high-risk; different pattern,
+  different estimate, legal review first.
+- **Not where the client has no timetabling pain.** UniTime earns its keep on conflict-heavy
+  estates (large programme catalogues, shared rooms, exam weeks). A small college does not need
+  it and `timetablely` will not sustain an engagement.
+- **Not in LATAM public K-12 without checking the SIS first.** `i-educar` is the substrate there
+  and it is GPL-2.0; the integration boundary has to be designed before anything is promised.
+- **Not as a replacement for the SIS of record.** Every registrar in this market has one, it is
+  usually proprietary, and proposing to replace it will end the conversation.
+
+## P13 — Persona-stateless tutor for age-banded, affect-regulated markets (China, UAE, US state statutes)
+
+### Why this pattern exists
+
+**Added p894, from T14.** Consumer tutoring products retain learners with affective design: a
+persistent named character, rapport, streaks, companion framing. **Three separate regimes now
+make that design a regulated activity when it is aimed at children**, and they converge on the
+same architecture:
+
+- **China** — the **Interim Measures for the Administration of Anthropomorphic AI Interaction
+  Services** (reported as CAC Order No. 21, issued 10 April 2026, **in force 15 July 2026**)
+  cover services providing *sustained emotional interaction through a simulated human
+  personality*. **Education is listed outside scope, but conditionally** — one analysis frames
+  the carve-out as covering education services *that lack continuous emotional interaction*, and
+  the Measures define neither "continuity" nor "emotional interaction". Inside scope:
+  **virtual-partner/virtual-relative services may not be offered to minors at all**, guardian
+  consent under 14, a minor mode with time limits, a prohibition on inducing emotional
+  dependence, machine disclosure, self-harm intervention, and algorithm filing.
+- **UAE** — a 25-prohibition classroom guide including an **under-13 prohibition**.
+- **United States** — New York's **A 9190** (classroom AI limited to grade 9 and above, with
+  diagnostic and special-education exceptions), California's **AB 1159** (no training on student
+  data), and Oklahoma's and Maryland's human-oversight rules.
+
+**The architecture that keeps a product out of China's scope is the same architecture the other
+two regimes require.** That makes this one build rather than three, which is the entire point of
+the pattern.
+
+### Stack
+
+| Component | Repo | Licence | Role |
+|---|---|---|---|
+| Age-banded RAG tutor over curriculum, not student data | `Zenglian990/AI_Tutor_Release` | MIT | The reference: **age-banded by design** (K-9), retrieval-over-curriculum rather than training-on-learners |
+| Learner-state modelling without a character | `amosblomqvist/learnharness` | **AGPL-3.0** | **Read it, do not ship it.** The persistent knowledge graph is the capability that replaces persona continuity. AGPL — reference design only |
+| Authored teaching flow that constrains the model | `ai-shifu/ai-shifu` | Apache-2.0 | A script the author controls is the control structure "no AI-only instruction" rules actually require |
+| Orchestration with policy nodes | `langchain-ai/langgraph` | MIT | Age band, disclosure and session-limit checks as explicit nodes |
+| Local or sovereign inference | `ollama/ollama` · `vllm-project/vllm` | MIT · Apache-2.0 | Keeps learner text in-jurisdiction; see **T6** |
+| Content provenance / labelling | see **P6** | — | China content labelling and India's IT-Rules duties |
+
+### The design rules that make it defensible
+
+1. **Persona-stateless.** No named character, no continuity of personality across sessions, no
+   simulated affect. **Pedagogical persistence lives in the learner model** — mastery, gaps,
+   next item — which is strictly more useful and carries none of the regulatory surface.
+2. **Disclose the machine on every surface**, not once at onboarding.
+3. **Age band by construction, not by setting.** The band gates features at the orchestration
+   layer; a configuration flag is not a compliance control.
+4. **No dependency loops.** No streaks, no "I missed you", no engagement mechanics tuned on
+   session frequency. Tune on mastery per unit of time instead — which is also what **P7**
+   measures.
+5. **Guardian surfaces where the regime requires them** — consent under 14, time limits, risk
+   alerts — built once and switched on per jurisdiction.
+6. **Self-harm routing to a human**, unconditionally, in every market.
+
+### Deliverables
+
+A persona-stateless tutor over the client's curriculum corpus; an age-band gate with tests; a
+disclosure and guardian-surface layer switchable per jurisdiction; a jurisdiction matrix mapping
+each control to the instrument that requires it; and a design note recording what was
+deliberately **not** built and why — the document that answers the client's growth team when
+they ask for streaks.
+
+### Licence posture
+
+Clean if `learnharness` stays a reading. `AI_Tutor_Release`, LangGraph and Ollama are MIT;
+`ai-shifu` and vLLM are Apache-2.0. **`learnharness` is AGPL-3.0: reference design only, never
+vendored.**
+
+### Estimate
+
+**6–8 weeks** for the tutor plus the age-band and disclosure layer on an existing curriculum
+corpus. Add **2–3 weeks** per additional jurisdiction for the control mapping and guardian
+surfaces — mapping, not rebuilding, if rule 5 was honoured.
+
+### Where it does not apply
+
+- **Not for adult corporate L&D**, where none of these regimes applies and affective design is
+  simply a product choice. Use Mentingo (MIT) and **P1**.
+- **Not as a substitute for counsel on a China launch.** Every source behind T14 is secondary;
+  the CAC text was not reachable from this session, and no source addressed a tutoring product
+  specifically. **Confirm scope before signature.**
+- **Not where the client's differentiator *is* the character.** This pattern removes it; say so
+  before the engagement starts rather than in week six.

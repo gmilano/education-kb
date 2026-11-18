@@ -6,7 +6,7 @@ updated: 2026-11-18
 
 # Current trends — education
 
-Eleven trends, each with the evidence behind it and what it implies for delivery. Researched
+Fifteen trends, each with the evidence behind it and what it implies for delivery. **T14 and T15 added in p894** — the first from the operative content of China's anthropomorphic-AI Measures, which this file had been carrying as a bare date; the second from four repository cohorts measured in a single batch, which is the only way the correlation it names becomes visible. Researched
 2026-11-18; T9 added and T1/T3/T6 extended in **p890**, T10 added in **p891**, and **T11 added in
 p892** from the India and Saudi Arabia legs — all the same day. Legal facts here were
 sourced through search snippets with the source named — every non-GitHub host is blocked by this
@@ -383,6 +383,86 @@ inherits every permission the human has**. Scope the token, do not scope the pro
 community, where three of the seven servers have no licence at all. **For a client standardising
 on Moodle this is a real risk and a real opening** — first-party-grade MCP for Moodle, built to
 the organisation's conventions, is unclaimed work.
+
+## T14 — Affective design is now a regulated feature in China, and the carve-out for education is conditional on *not* doing the thing that drives retention
+
+**Added p894.** China's **Interim Measures for the Administration of Anthropomorphic AI
+Interaction Services** (reported as **CAC Order No. 21**, issued **10 April 2026** by five
+agencies, **in force 15 July 2026**) regulate services that provide *sustained emotional
+interaction through a simulated human personality*. This KB has carried the effective date since
+p890 and none of the content; the content is what matters.
+
+**Where the Measures apply, the obligations are product-defining**, and several bite hardest on
+education's user base: **virtual-partner and virtual-relative services may not be offered to
+minors at all**; **guardian consent under 14**; a **minor mode** with time limits, real-world
+reminders and guardian risk alerts; **age verification with an appeal channel**; a prohibition on
+**inducing emotional dependence or addiction that damages real-world relationships**;
+machine-disclosure reminders; mandatory intervention on a self-harm signal; and **algorithm
+filing plus security assessment** before launch.
+
+**Education is listed outside scope — and the listing is not a sector exemption.** Law-firm
+analysis puts education alongside intelligent customer service, knowledge Q&A, work assistants
+and scientific research as excluded (Bird & Bird); a second analysis frames the exclusion as
+covering education and learning services **that lack continuous emotional interaction**
+(Geopolitechs); a third notes the Measures **define neither "continuity" nor "emotional
+interaction"** (Lexology). The test is behavioural, so the sector label settles nothing.
+
+**Why this is a trend and not a compliance footnote.** The whole industry is moving toward
+affective engagement — persistent named tutors, rapport, streaks, companion framing — because it
+is what retains learners, and **China is the single largest producer of open education agents in
+the world** (`DeepTutor`, 60,274 ★; `OpenMAIC`, 43,878 ★; `EduAgent`; `ECNU EduWork`;
+`TeachMeCoding`). The jurisdiction supplying the category's best open source is the jurisdiction
+that has made its most effective retention mechanic a regulated activity when aimed at children.
+
+**What to do about it.** For a China-market education product, design **persona-stateless**:
+hold pedagogical persistence in the learner model, not in a character; disclose the machine on
+every surface; omit affect simulation and dependency loops; and band by age by construction, as
+`Zenglian990/AI_Tutor_Release` already does. **The architecture that keeps you out of scope is
+also the architecture the UAE's under-13 prohibition and several US state statutes require**, so
+it is a single build, not a China tax. **Watch condition:** any CAC guidance, enforcement action
+or published definition of "continuity" that places a tutoring product inside scope — that would
+move this from a design constraint to a market-entry gate.
+
+**Channel caveat.** All sources are secondary (law-firm guides and policy analysis); the CAC text
+is blocked by this session's network policy, and **no source addressed a tutoring product
+specifically.** Confirm scope with counsel before a China engagement.
+
+## T15 — Open source has built least where regulation has decided most, and the correlation is now measured rather than asserted
+
+**Added p894**, from four cohorts measured in one batch on one day — which is the only way this
+trend is visible, because each cohort on its own reads as a small sad category.
+
+| Use case | Regulatory status | Open-source supply (measured 2026-11-18) |
+|---|---|---|
+| Tutoring / content generation | **largely unregulated** as to the system itself | **60,274 ★** ceiling (`DeepTutor`); 34 agents on this KB's shelf |
+| LMS-to-agent integration | unregulated | **208 ★** ceiling across seven MCP servers; permissive |
+| **Automated grading** | **EU Annex III high-risk**; Vietnam high-risk list; Oklahoma and Maryland human-oversight rules | **0 ★ ceiling across seven repos; three carry no licence** |
+| **Special education / accommodation** | **IDEA / Section 504 / ADA Title II**, statutory in the US; India's RPwD Act 2016 | **1 ★ ceiling across four repos; half unlicensed or AGPL** |
+| **Admissions and financial-aid decisioning** | **EU Annex III high-risk**; restricted under several US state laws | **nothing — no repository found in any pass** |
+| Registrarial scheduling | unregulated | **360 ★**, Apache-2.0, actively maintained (`UniTime`) |
+
+**The pattern is monotonic across six rows: the more a use case is regulated, the less open
+source exists for it.** The causal story is not mysterious — liability, procurement review,
+domain expertise and the need for an auditable appeal path are exactly what volunteers and
+weekend projects cannot supply, and they are what a regulator requires. **But the commercial
+reading is the useful one, and it is the inverse of how an open-source-first studio usually
+reasons.** The crowded categories are crowded *because* they are cheap to enter and nobody has
+to defend them; the empty categories are empty *because* entry requires the thing a consultancy
+sells.
+
+**Consequences for how an engagement is scoped.** Where regulation is heavy, **there is nothing
+to adopt and the regulation is the specification** — grading, accommodation and financial-aid
+decisioning are builds, and the conformity work *is* the product rather than a tax on it. Where
+regulation is light, **do not build**: compose, integrate and spend the budget on the governance
+tier instead (`compose/patterns.md` **P2**, **P11**). The two design ideas worth carrying out of
+the empty categories both came from 0 ★ repositories and both already sit in this KB's patterns:
+**confine the LLM to evidence extraction and keep scoring deterministic**, and **anchor evidence
+per criterion with a separate regrade path** — the second is what makes an appeal procedure
+possible, which is precisely what Annex III demands.
+
+**Watch condition:** any repository in the grading or accommodation rows crossing **100 ★** with
+a permissive licence. That would mean the correlation is breaking, and the build-vs-adopt advice
+for the most valuable categories in this industry would have to be rewritten.
 
 ## Trends we looked for and could not substantiate
 

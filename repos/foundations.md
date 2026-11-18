@@ -17,6 +17,13 @@ derivative work. The permissive anchors — Artemis (MIT), Kolibri (MIT), Oppia
 keep the result closed. This distinction is the single most consequential fact in this
 file.
 
+**p894 restored four rows the 2026-11-18 rewrite had dropped** — `UniTime/unitime`,
+`UniTime/cpsolver`, `GEOSOFT-GLOBAL/timetablely` and `agentscope-ai/OpenJudge` — each verified
+in an earlier pass, re-measured today, and absent from this file until now. The method point is
+in `repos/trending.md`: **diff a canonical table against the append-only history before
+rewriting it**, because a verified finding that does not reach this file is not available to an
+engagement.
+
 ## LMS and platform cores
 
 | Repo | Licence | Role |
@@ -49,6 +56,21 @@ same agent ships into Canvas, Moodle and Open edX.
 | https://github.com/G36maid/moodle-mcp | MIT | **Added p893.** Read-**write** Moodle MCP — courses, assignments, forums, grades, files-as-markdown. The graduation step from the read-only server above. |
 | https://github.com/blend-ed/openedx-mcp | AGPL-3.0 | **Added p893.** Open edX staff/superuser admin as an MCP facade (Ulmo), native platform APIs only. Vendor-maintained, not a foundation project — see `agents/top.md`. |
 
+## Registrarial and scheduling
+
+**Added p894, and it corrects an absence rather than adding a nicety.** `agents/top.md` has
+named the registrarial layer — enrolment, timetabling, transcripts, financial aid — as this
+KB's clearest build-vs-adopt gap for four passes. The *agent* tier is genuinely missing. The
+*platform* is not, and it is permissive: it was verified and licence-hash-checked by an earlier
+pass, then lost from the canonical files in the 2026-11-18 rewrite. Re-measured and restored
+here.
+
+| Repo | Licence | Role |
+|---|---|---|
+| https://github.com/UniTime/unitime | Apache-2.0 (`LICENSE@master`, payload `11,357 B`) | **Apereo UniTime** — university course and exam timetabling plus student scheduling, 360 ★, pushed 2026-11-17. Runs standalone or interfaces with an existing SIS. **The most permissively licensed, actively maintained registrarial system this KB has found**, and the substrate `compose/patterns.md` **P12** builds an agent tier over. |
+| https://github.com/UniTime/cpsolver | **LGPL-3.0** | The constraint solver underneath UniTime, 84 ★, pushed 2026-10-14. **Licence trap:** the platform is Apache-2.0 and the component is LGPL-3.0, so a static link pulls the weaker grant into scope. Keep it behind a process or service boundary in a closed derivative. |
+| https://github.com/GEOSOFT-GLOBAL/timetablely | MIT | Small-scale permissive timetable generator, 27 ★. **Pushed 2026-08-17 — three months idle.** The MIT option when UniTime is too heavy; read it as a starting point, not a dependency. |
+
 ## Learning analytics (xAPI / LRS)
 
 Where the evidence for "did the AI actually help" has to live.
@@ -59,6 +81,7 @@ Where the evidence for "did the AI actually help" has to live.
 | https://github.com/openfun/ralph | MIT | xAPI/LRS toolbox from France Université Numérique. |
 | https://github.com/adlnet/ADL_LRS | Apache-2.0 | Reference LRS from ADL, who authored xAPI, 335 ★. **Last push 2025-11-14 (369 days idle)** — useful as a spec reference, not as a production dependency. |
 | https://github.com/LearningLocker/learninglocker | GPL-3.0 | Widely deployed LRS, 587 ★. **Do not start new work here: last push 2024-05-30, 902 days idle.** Copyleft as well. Use `lrsql` instead. |
+| https://github.com/agentscope-ai/OpenJudge | Apache-2.0 | **Added p894.** Unified LLM/agent evaluation and quality-reward framework, **1,113 ★, pushed 2026-11-18** — permissive and the most actively maintained evaluation substrate in this file. It **judges agents, not learners**, which is exactly why it belongs here and not in `agents/top.md`: it is the harness under `compose/patterns.md` **P7**'s efficacy tier, and https://github.com/AI-for-Education/pedagogy-benchmark (MIT, 13 ★) is the education-specific rubric you run *on* it. Generates rubrics from data or zero-shot. |
 
 ## Assessment, grading and academic integrity
 

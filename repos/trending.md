@@ -4,6 +4,66 @@ region: Global
 updated: 2026-11-18
 ---
 
+## `2026-11-18` (p894) — a 360 ★ Apache-2.0 registrarial system was verified by an earlier pass and is missing from the shelf a studio opens
+
+**Channel:** batched `repo:` qualifiers against `gh api search/repositories` plus
+`raw.githubusercontent.com` licence byte-reads on `main` and `master`. Non-GitHub hosts remain
+blocked by this session's network policy.
+
+### The defect: this file knows things `verticals/solutions.md` and `repos/foundations.md` do not
+
+This pass set out to attack the KB's oldest named gap — **no open registrarial / SIS layer** —
+and found the answer already inside the KB, recorded here and absent from both client-facing
+files.
+
+| Repo | ★ (p894) | Licence | Last push | Filed here by | In `verticals/solutions.md`? |
+|---|---|---|---|---|---|
+| https://github.com/UniTime/unitime | **360** | **Apache-2.0**, payload `11,357 B` `sha256₁₂ 58d1e17ffe51` | **2026-11-17** | an earlier pass, with the licence payload hash-verified | **no** |
+| https://github.com/UniTime/cpsolver | 84 | **LGPL-3.0** | 2026-10-14 | same | no |
+| https://github.com/GEOSOFT-GLOBAL/timetablely | 27 | MIT | 2026-08-17 | same | no |
+| https://github.com/agentscope-ai/OpenJudge | **1,113** | Apache-2.0 | **2026-11-18** | same, at 208 ★ and later 1,092 ★ | n/a — evaluation, not a platform |
+
+**The canonical files were rewritten on 2026-11-18** (`archive/2026-11-18-pre-cleanup/`) and the
+rewrite dropped verified platform rows that this append-only history still carries. That is the
+cost of a rewrite over a reconciliation, and it is worth stating as a method finding because the
+rewrite was otherwise an improvement: it is what removed the unusable single-author rows from
+`agents/top.md`.
+
+**Rule this pass adopts: before a canonical table is rewritten, diff it against this file.** An
+append-only history whose findings do not reach the canonical shelf is a research log, not a
+knowledge base. Restored in this pass:
+
+- **`UniTime/unitime` → `verticals/solutions.md`** (SIS and school ERP) **and
+  `repos/foundations.md`** (new *Registrarial and scheduling* section). Apache-2.0, re-measured
+  today, pushed yesterday.
+- **`UniTime/cpsolver` and `GEOSOFT-GLOBAL/timetablely` → `verticals/solutions.md`**, with the
+  LGPL-3.0 on the solver flagged: the platform is permissive, the component underneath it is
+  not, and a static link pulls the weaker grant into scope.
+- **`agentscope-ai/OpenJudge` → `repos/foundations.md`** (learning analytics and evaluation).
+  **1,113 ★, Apache-2.0, pushed today.** The earlier reading — *"judges agents, not learners"* —
+  is right and is why it belongs in foundations rather than `agents/top.md`: it is the
+  permissive LLM-judge substrate under `compose/patterns.md` **P7**'s efficacy tier, and
+  `pedagogy-benchmark` (13 ★) is the education-specific rubric you run *on* it.
+
+### One claim retired
+
+`verticals/solutions.md` carries: *"the category is small, static, and copyleft or
+licence-unclear end to end"*, offered as the reason the registrarial opportunity is strong. **A
+360 ★ Apache-2.0 system pushed 2026-11-17 falsifies all three clauses.** The opportunity itself
+survives and is now better specified — what is missing is an **agent tier over UniTime**, not a
+platform to write from scratch. See `compose/patterns.md` **P12**.
+
+### Two rows re-measured and left off the shelf, with the reason
+
+| Repo | ★ | Licence | Last push | Why it stays off |
+|---|---|---|---|---|
+| https://github.com/pupilfirst/pupilfirst | 982 | **`NOASSERTION`** (split grant: MIT code / CC BY-SA `docs/`) | **2025-12-09** | ~11 months idle, and a split grant needs counsel before it reaches a client. Filed by an earlier pass; not restored |
+| https://github.com/nishit546/OpenPrep-AI | 20 | MIT (byte-read) | 2026-10-31 | Real and permissive, but exam-prep at 20 ★ is not a platform. Recorded, not shelved |
+
+**Leaving a row off is a decision and it is recorded as one.** The p893 cleanup's mistake was not
+that it removed rows — it is that the removals and the restorations were not written down where
+the next pass would read them.
+
 ## `2026-11-18` (p893) — an MIT-licensed AI-native LMS exists, and a 4,258 ★ learning repo has no licence at all
 
 **Channel:** `gh api search/repositories` batched `repo:` metrics plus `raw.githubusercontent.com`

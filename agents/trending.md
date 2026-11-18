@@ -4,6 +4,128 @@ region: Global
 updated: 2026-11-18
 ---
 
+## `2026-11-18` (p894) — the two cohorts this KB named as gaps both exist, and both were measured today: special education tops out at **1 ★**, automated grading at **0 ★**
+
+**Channel:** batched `repo:` qualifiers against `gh api search/repositories` (stars, SPDX,
+`pushed_at`, `created_at`) plus `raw.githubusercontent.com` licence byte-reads on `main` and
+`master`. Non-GitHub hosts remain blocked by this session's network policy. This pass ran
+**four discovery legs chosen to attack `agents/top.md`'s own declared gaps** rather than to
+re-measure known cohorts — the p893 method lesson applied deliberately.
+
+### Leg 1 — special education / IEP: the gap statement was wrong in the same direction as the India/Africa one
+
+`agents/top.md` has carried **"no dominant open agent for special education or accessibility
+accommodation"** for four passes. A dedicated leg across IEP, 504, accommodation and
+accessibility terms found that the category is **populated, licence-mixed and has no traction
+whatsoever.**
+
+| Repo | ★ | Licence (byte-read) | Last push | What |
+|---|---|---|---|---|
+| https://github.com/robotros/California-IEP-AI-project-kit | **1** | MIT (`LICENSE@main`, `Copyright (c) 2026 robotros`) | 2026-10-27 | Markdown toolkit drafting measurable IEP goals against California/SELPA policy. Its own README disclaims being a system of record, legal advice or a compliance certification |
+| https://github.com/SudhanvaJ-bit/project-samarth | **1** | **none** (404 at every candidate path; SPDX `NONE`) | 2026-11-15 | LangGraph multi-agent pipeline drafting a 14-section IEP from an assessment report, baselined on India's **RPwD Act 2016** |
+| https://github.com/dougdevitre/access-to-education | **0** | MIT (`Copyright (c) 2026 Doug Devitre`) | 2026-10-24 | IEP navigation, family–school communication and advocacy content, built to run inside a coding agent |
+| https://github.com/AaronGrace978/EduHelp | **0** | **AGPL-3.0** | 2026-10-14 | Family-facing eligibility review for IEP/504 under Colorado and California rules; bring-your-own-key |
+
+**The accurate finding: the ceiling is 1 ★, and half the cohort is unlicensed or AGPL.** That is
+the *third* time this KB has turned a flat "there is nothing" into "there are builders, no
+traction and no licence hygiene" — after India/Africa/Middle East (p893) and LATAM (p893). The
+pattern is now predictable enough to state as a rule: **in this industry a category that looks
+empty is usually a category of zero-star repositories.** Re-derive before writing an absence.
+
+**What does not change:** none of these belongs in `agents/top.md` as a row. The p893 cleanup
+removed single-author student projects from that table precisely so it stays usable for picking
+a starting point, and a 1 ★ repo is not a starting point. They are recorded here as a measured
+cohort, which is what they are worth.
+
+**What does change, and it is the useful part.** `project-samarth`'s design — merge the statutory
+accommodation baseline into agent state so the model **can add but cannot remove** a required
+accommodation — was already generalised by an earlier pass into `compose/patterns.md`
+`P496-1`. That generalisation is correct and it is the only durable asset in the cohort. The
+build-vs-adopt answer for special education is therefore **build**, from that one design rule,
+and `agents/top.md`'s gap text is updated to say so.
+
+### Leg 2 — automated grading: the highest-demand, highest-regulatory-risk use case has **zero** open-source traction
+
+Grading is what clients ask for, and it is Annex III high-risk in the EU, listed by Vietnam, and
+named in Oklahoma's and Maryland's human-oversight rules. Seven repos measured today:
+
+| Repo | ★ | Licence (byte-read) | Last push |
+|---|---|---|---|
+| https://github.com/asu2304/auto-assessment-agent | 0 | MIT | 2026-10-08 |
+| https://github.com/macsnoeren/genai-open-assessment | 0 | **GPL-3.0** | 2026-10-27 |
+| https://github.com/biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent | 0 | MIT | 2026-10-26 |
+| https://github.com/littlecookie0722/AI-Teaching-Agent | 0 | MIT | 2026-08-23 |
+| https://github.com/Atmankhyar/AI-agent-for-automatic-exam-grading | 0 | **none** (SPDX `NONE`) | 2026-10-21 |
+| https://github.com/omerbbbb/ai-graded-assessment-platform | 0 | **none** (SPDX `NONE`) | 2026-09-29 |
+| https://github.com/timothyheeeee/Autonomous-Grading-Engine | 0 | **none** (SPDX `NONE`) | 2026-11-07 |
+
+**Every one is at zero stars and three of seven carry no licence at all.** Four of these were
+already carried in this file by earlier passes; the contribution here is the *cohort* number,
+measured in one batch on one day: **ceiling 0 ★, licence-missing rate 3/7.**
+
+**Read that against the regulatory map and it is a commercial finding, not a curiosity.** The one
+education use case that every jurisdiction has decided to regulate is the one use case with no
+open-source option a studio could adopt. There is nothing to fork, nothing to harden, and
+nothing to point a client at. **Grading is a build, and the regulation is the specification.**
+
+**Two design ideas in the cohort are worth more than the code**, and both already appear in this
+KB's patterns: deterministic scoring with the LLM confined to evidence extraction
+(`Atmankhyar`, `timothyheeeee`, and `virtualryder/edu-ai-agents`'s rubric service), and
+criterion-level evidence anchoring with a separate regrade path (`asu2304`). The second is the
+one that makes an appeal procedure possible, which is what Annex III actually requires.
+
+### Leg 3 — registrarial / SIS: the substrate exists, it is permissive, it was pushed yesterday, and it had fallen off the client-facing shelf
+
+`agents/top.md` names this the KB's **clearest build-vs-adopt gap and most defensible studio
+IP**: "enrolment, timetabling, transcripts and financial aid have none." The agent half of that
+is still true — this leg found only course-capstone prototypes
+(https://github.com/aabbiisshhaa/student-support-agent, **2 ★**, **no licence**, Makerere
+University, Uganda; https://github.com/vaibhav9895-lang/student-support-agent-assignment, 0 ★,
+no licence; https://github.com/leechenwei/Ai-Agent-Timetable, 0 ★, no licence, idle since
+2025-02-24). The *platform* half is not.
+
+| Repo | ★ | Licence (byte-read) | Last push | What |
+|---|---|---|---|---|
+| https://github.com/UniTime/unitime | **360** | **Apache-2.0** (`LICENSE@master`) | **2026-11-17** | Apereo university **course and exam timetabling plus student scheduling**; interfaces to an existing SIS or runs standalone |
+| https://github.com/UniTime/cpsolver | 84 | **LGPL-3.0** | 2026-10-14 | The constraint solver underneath it — note the weaker licence on the component |
+| https://github.com/GEOSOFT-GLOBAL/timetablely | 27 | MIT | 2026-08-17 | Small-scale permissive timetable generator; idle three months |
+
+**UniTime is the most permissively licensed, actively maintained registrarial system this KB has
+identified, and `verticals/solutions.md` does not contain it.** It was verified and filed by an
+earlier pass — the licence payload was hash-checked at `11,357 B`
+(`sha256₁₂ 58d1e17ffe51`, a blank line added at byte 0 and the trailing newline dropped against
+the canonical Apache text) — and it is absent from the current file. Re-measured today at
+**360 ★, Apache-2.0, pushed 2026-11-17** and **restored to `verticals/solutions.md` and
+`repos/foundations.md` in this pass.**
+
+That also **retires one claim outright.** `verticals/solutions.md` states the SIS category is
+"small, static, and copyleft or licence-unclear end to end". A 360 ★ Apache-2.0 system pushed
+yesterday is none of those three things. The opportunity is unchanged and better specified:
+**the gap is an agent tier over UniTime, not a platform.** Written up as `compose/patterns.md`
+**P12**.
+
+### Leg 4 — spot check on the two giants, and the cadence finding holds for a fifth pass
+
+| Repo | p893 | **p894** | Δ |
+|---|---|---|---|
+| https://github.com/HKUDS/DeepTutor | 60,258 | **60,274** | +16 |
+| https://github.com/THU-MAIC/OpenMAIC | 43,874 | **43,878** | +4 |
+| https://github.com/amosblomqvist/learnharness | 10,002 | **10,020** | +18 |
+| https://github.com/Selleo/mentingo | 109 | **109** | 0 |
+| https://github.com/ls1intum/Artemis | — | **833** | first measured here |
+
+**Fifth consecutive confirmation that star movement in this industry is a daily metric.** Full
+sweep still due **2026-11-19**; LearnHarness's +18 on a 27-day-old repo is the only row where
+the rate is interesting, and it is decelerating (it averaged ~370/day over its first month).
+
+### Correction this pass makes to itself
+
+`https://github.com/JeabtiE/jump-hackathon-demo` surfaced in the special-education leg and
+**does not resolve** through `search/repositories` in this session. Existence unconfirmed, so it
+is not tabled above. Recorded so a later pass does not re-chase it, and distinguished from the
+three repos in `agents/top.md` whose *stars* are unavailable but whose existence is proven by a
+`200` on their licence file — this one has neither.
+
 ## `2026-11-18` (p893) — three passes said no education agent launched this month; one had, and it is now the third-largest in the world
 
 **Channel:** batched `repo:` qualifiers against `gh api search/repositories` (stars, SPDX,

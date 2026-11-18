@@ -497,6 +497,27 @@ education press); low on timing — **no dataset name, licence or release date h
 published**, and an open-release *intent* is not an open release. Do not promise a client an
 asset that does not yet exist. Re-check next pass.*
 
+#### Africa — p894 re-check of the Gemma commitment: the commitment is now dated and named, the artefacts are still unshipped
+
+**The gap narrows for the first time in three passes, and the verdict does not change.** Google's
+own Africa blog post of **4 November 2026** states the programme in its own words rather than
+through trade press: with **Fab AI, Google.org and the Gates Foundation**, bringing open
+**Gemma**-powered tools and training to educators in **Kenya, Ghana and South Africa** for
+foundational learning; **Fab AI leads a cohort of local innovators** across the three countries;
+**Google DeepMind supplies compute credits and technical expertise**; and — the operative
+sentence — *"we will share resulting datasets, evaluation suites, and open-source models
+publicly so the wider education ecosystem can adapt and scale them."* A separate strand, the
+**AI Educator Series**, is expanding across Sub-Saharan Africa starting with **South Africa**,
+with **Nigeria, Kenya and Ghana planned for 2027**.
+
+**What is still missing is the only thing that matters to a delivery estimate: a timeline and an
+artefact.** No dataset name, no evaluation-suite name, no licence, no date. **The standing
+instruction holds — do not promise a client this asset** — but the gap statement changes from
+*"a commitment with nothing published"* to *"a dated, first-party commitment with a named lead
+partner and an explicit public-release promise, no timeline and no artefact."* The difference is
+worth recording because it is the difference between a rumour and a roadmap item: it is now
+reasonable to position for integration work, and still unreasonable to scope against the data.
+
 #### Africa — p893 re-check of the Gemma commitment: still unshipped, but the surrounding shelf is real
 
 p891 instructed a re-check before any client-facing claim. Done, and the answer splits in two.
@@ -608,6 +629,35 @@ education and is the reason to lead with it.
 - **China** — regulates by service type rather than one statute: recommendation algorithms,
   deep synthesis, generative AI services, and **labelling of AI-generated content**. The
   amended **Cybersecurity Law (in force 1 January 2026)** carries China's first AI clause.
+  **p894 adds the operative content of the instrument this KB had been carrying as a bare date,
+  and it is the most directly product-shaping rule in the region.** The **Interim Measures for
+  the Administration of Anthropomorphic AI Interaction Services** (reported as **CAC Order
+  No. 21**, issued **10 April 2026** by five agencies, **in force 15 July 2026**) govern
+  services providing *sustained emotional interaction through a simulated human personality*.
+  Where they apply, the obligations are severe and several are education-specific in effect:
+  **virtual-partner and virtual-relative services may not be offered to minors at all**;
+  **guardian consent is required under 14**; a **minor mode** with time limits and real-world
+  reminders plus guardian risk alerts; **age verification with an appeal channel**; a
+  prohibition on **inducing emotional dependence or addiction that damages real-world
+  relationships**; machine-disclosure reminders; mandatory intervention when a user signals
+  self-harm; and **algorithm filing plus security assessment** before launch.
+
+  **The education carve-out is real but conditional, and that distinction is the whole
+  engagement risk.** Law-firm analysis lists *education* alongside intelligent customer service,
+  knowledge Q&A, work assistants and scientific research as outside the Measures (Bird & Bird),
+  and a second analysis frames the carve-out as covering education and learning services **that
+  lack continuous emotional interaction** (Geopolitechs). Scope therefore turns on a test, not a
+  sector label — and a third source notes the Measures **define neither "continuity" nor
+  "emotional interaction"** (Lexology). **Consequence for delivery:** the retention features a
+  consumer tutor instinctively ships — a persistent named persona, affective rapport, streaks,
+  a "study buddy" character, companion framing — are exactly what argues a product *into* scope,
+  and the category that produces `DeepTutor` and `OpenMAIC` is the category most likely to ship
+  them. **For a China-market education product the safe design is persona-stateless, disclosed,
+  and free of affect simulation**, with the pedagogical persistence held in the learner model
+  rather than in a character. That inverts a product instinct, which is why it belongs in a
+  market file and not only in a compliance annex. **Channel caveat:** every source here is
+  secondary (law-firm guides and policy analysis); the CAC text itself is blocked by this
+  session's network policy, and **no source addressed a tutoring product specifically**.
 - **Vietnam** — **new in this pass, and the most consequential APAC finding of the pass.**
   Vietnam has a dedicated **Law on Artificial Intelligence (No. 134/2025/QH15)**, in force from
   **1 March 2026**, with **Decree 142** and **Prime Minister Decision 33/2026/QD-TTg** (signed
@@ -1045,11 +1095,33 @@ Cross-regional plays that do not depend on one jurisdiction.
 - **Evidence of efficacy.** Every regulator and procurement office is converging on
   "show me it helped". An LRS (`lrsql`, Apache-2.0) plus `pedagogy-benchmark` (MIT) plus
   `promptfoo` (MIT) regression gates is the measurement tier almost no vendor ships.
-- **The unserved category: SIS and registrarial agents.** Tutoring, grading and content
-  generation are crowded. Enrolment, timetabling, transcripts and financial aid have **no
-  credible open agent anywhere**. Highest defensible-IP opportunity in the industry — with
-  the caveat that admissions and financial-aid decisioning are EU Annex III high-risk and
-  restricted under several US state laws, so build it oversight-first.
+- **The unserved category: SIS and registrarial *agents* — and p894 sharpens where the gap
+  actually is.** Tutoring, grading and content generation are crowded. The *agent* tier for
+  enrolment, transcripts and financial aid has **no credible open option anywhere** — but the
+  *platform* tier for timetabling and student scheduling does: **`UniTime/unitime`, Apache-2.0,
+  360 ★, pushed 2026-11-17** (Apereo). So the opportunity is not "write a registrarial
+  platform", it is **"build the agent tier over UniTime and the decisioning tier where nothing
+  exists"** — a much smaller and much more defensible scope. Still the highest defensible-IP
+  opportunity in the industry, with the caveat that admissions and financial-aid decisioning are
+  EU Annex III high-risk and restricted under several US state laws, so build it oversight-first.
+  See `compose/patterns.md` **P12**.
+- **The efficacy argument now has a primary-source anchor, and it is stronger than this KB has
+  been stating (p894).** The **OECD *Digital Education Outlook 2026*** (subtitle: *How can AI
+  help human beings learn and grow?*, DOI `10.59350/1bqm0-1d126`) reports that **without
+  pedagogical guidance, outsourcing tasks to generative AI improves measured performance with no
+  real learning gain** — the sharpest available formulation of the "performance is not learning"
+  problem, and a better sales argument than any market forecast. It also finds **purpose-built
+  educational tools outperform general chatbots, more consistently**; frames GenAI's contribution
+  to tutoring as turning rigidly scripted tutors into **digital pedagogical agents** that
+  question, nudge and change strategy; concludes that educational GenAI can augment teaching
+  **while preserving teacher agency**; and reports **37% of lower-secondary teachers used AI for
+  their job in 2024** (consistent with the OECD TALIS 36% figure this file already carries).
+  **Why this matters commercially:** the OECD's own position is that the product differentiator
+  is pedagogical control, not model quality — which is the thesis `compose/patterns.md` **P7**
+  and **P9** already sell, now attributable to the sector's most-cited policy publisher.
+  **Channel caveat:** the report page and DOI resolve, the full text is blocked by this session's
+  network policy, and the quoted findings are from the publisher's own summary pages and
+  conference commentary. **Verify the exact wording before it goes in a client deck.**
 
 ## Declared gaps
 
@@ -1171,3 +1243,33 @@ Cross-regional plays that do not depend on one jurisdiction.
   being tested before being taught. This is the industry's evidence problem reproduced at speed
   in open source, and it is worth watching as a test case: if a 10k-star project cannot produce
   outcome data, the "measure it" argument gets harder to sell, not easier.
+- **The ESSA "~45%" figure failed verification a second time (p894).** A dedicated leg paired
+  the OECD *Digital Education Outlook 2026* with ESSA evidence-tier terms. **The OECD half
+  resolved and is now written up in the Global subsection above with its DOI; the ESSA half
+  returned nothing** — no source on ESSA Tier 1–4 coverage of widely used education tools, and
+  no route to the original review's methodology. **Two independent failures is enough to stop
+  treating this as a research gap and start treating it as an unusable number: do not cite the
+  ~45% figure.** The OECD finding carries the same argument and is attributable.
+- **LATAM produced no new fact this pass, and that is stated rather than left as silence
+  (p894).** The regional leg re-surfaced only figures this file already carries — IDB's review of
+  **193** AI initiatives (**59%** generative AI), UNESCO IESALC's **87% / 26% / 9%**,
+  Cetic.br's Brazilian **53% use vs 22% with guidelines**, TALIS teacher use, HolonIQ's 2026
+  LATAM EdTech 100 with Brazil at nearly half the cohort, the Raspberry Pi Foundation's
+  **$4.6M** Google.org-funded *Experience AI* programme (**24,000** educators and **1.25M**
+  students targeted by 2028, with Sincroniza Educação in Brazil and Educación para Compartir in
+  Mexico), and the UNESCO Santiago observatory. **An informed nil.** The one thing the leg
+  confirmed as still missing is **regulation**: no source tied Brazilian or Mexican AI law to
+  schools beyond **PL 2338/2023**, which this file already carries as a draft. LATAM remains a
+  governance-gap market, not a conformity market.
+- **This KB's canonical files and its append-only history have diverged, and that is now the
+  highest-value gap in the file (new, p894).** `UniTime/unitime` (Apache-2.0, 360 ★, pushed
+  2026-11-17) was verified and licence-hash-checked by an earlier pass, recorded in
+  `repos/trending.md`, and **absent from `verticals/solutions.md` and `repos/foundations.md`**
+  until this pass restored it. `agentscope-ai/OpenJudge` (Apache-2.0, 1,113 ★) was in the same
+  state. Worse, p892 then **re-derived an absence** — "the SIS category is small, static, and
+  copyleft or licence-unclear end to end" — from a table that had already lost its
+  counter-example, and p894 had to retire that claim. **The remedy is cheap and it is a process,
+  not a search: diff each canonical table against the trending history before rewriting it.**
+  **The cost of not doing it is the one failure mode this KB cannot absorb** — it published a
+  false negative about a market opportunity, in the file a studio opens first. Unresolved beyond
+  the four rows restored here; the full diff has not been run.

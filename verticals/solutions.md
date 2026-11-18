@@ -62,6 +62,8 @@ client wants a closed derivative.
 | **OpenEduCat** | https://github.com/openeducat/openeducat_erp | LGPL-3.0 (byte-verified p891 from `LICENSE@master`; the GitHub API reports `NOASSERTION` because the file is a preamble plus the GPL text, not an SPDX-matchable template) | Education ERP built **on Odoo** — admissions, fees, LMS, library in one. |
 | **Odoo** | https://github.com/odoo/odoo | LGPL-3.0 | The general ERP underneath OpenEduCat; the actual "Odoo for education" answer is Odoo plus OpenEduCat. |
 | **Frappe Education** | https://github.com/frappe/education | GPL-3.0 (`license.txt`: "License: GNU GPL V3") | Education module on the ERPNext/Frappe stack. |
+| **UniTime** | https://github.com/UniTime/unitime | **Apache-2.0** (`LICENSE@master`) | **Restored p894.** Apereo university **course and exam timetabling plus student scheduling**, 360 ★, **pushed 2026-11-17**. Runs standalone or interfaces with an existing SIS. **The one permissive, actively maintained system in this category** — and the answer to the registrarial gap at the platform layer. Its solver https://github.com/UniTime/cpsolver is **LGPL-3.0** (84 ★): keep it behind a service boundary in a closed derivative. |
+| **Timetablely** | https://github.com/GEOSOFT-GLOBAL/timetablely | MIT | **Restored p894.** Automated timetable generator, 27 ★ — the small-scale permissive alternative to UniTime. **Pushed 2026-08-17, three months idle;** a starting point, not a dependency. |
 
 **Rejected this pass, recorded so it is not re-proposed (p892).** A fresh search for
 open-source school ERP returned **Fedena** in a licence comparison table under **Apache-2.0**,
@@ -72,11 +74,21 @@ push of **2020-05-18** — roughly 2,375 days idle. No licence file means **all 
 The comparison table's Apache-2.0 claim has no basis in the repository. See `repos/trending.md`
 for the method note: this is the second aggregator-sourced licence error caught in two passes.
 
-**Negative result worth recording (p892).** An independent search leg for open-source SIS and
-campus ERP surfaced **no platform this KB was missing**, and every row above re-verified
-unchanged. The category is small, static, and copyleft or licence-unclear end to end. That
-*strengthens* the opportunity note at the top of this section rather than weakening it: the
-platform layer beneath the missing registrarial AI agent is not moving either.
+**That p892 negative result is retired (p894), and it was wrong in all three of its clauses.**
+It read: *"The category is small, static, and copyleft or licence-unclear end to end... the
+platform layer beneath the missing registrarial AI agent is not moving either."* **UniTime is
+360 ★, Apache-2.0, and was pushed 2026-11-17.** The error was not a bad measurement — an
+earlier pass had verified UniTime and hash-checked its Apache payload — it was that the finding
+never reached this file, and the 2026-11-18 rewrite dropped it. The p892 leg then re-derived an
+absence from a table that had already lost the counter-example. **Method consequence, recorded
+in `repos/trending.md`: diff a canonical table against the append-only history before rewriting
+it, and before concluding a category is empty.**
+
+**What survives, better specified.** The opportunity note at the top of this section stands and
+sharpens: **the registrarial gap is an agent tier, not a platform.** Timetabling, exam
+scheduling and student scheduling have a permissive, maintained substrate; enrolment decisioning,
+transcripts and financial aid still have nothing, and financial-aid decisioning is EU Annex III
+high-risk. See `compose/patterns.md` **P12**.
 
 ## Repositories, libraries and scholarly publishing
 
@@ -144,7 +156,8 @@ copyleft licences while the *tooling* stays permissive — the inverse of the pl
 split in this KB's headline fact. Licence triage therefore has to be run per artefact class,
 not once per engagement.
 
-**43 platforms and content assets, all URL- and licence-verified.**
+**45 platforms and content assets, all URL- and licence-verified** (43 at p893; `UniTime` and
+`Timetablely` restored in p894, both re-measured today).
 
 ## Honest gaps
 

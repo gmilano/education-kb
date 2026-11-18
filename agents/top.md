@@ -24,7 +24,20 @@ routes that work. Stars are as at 2026-11-18, **remeasured in pass p890** (DeepT
 60,000-star repo. Star counts are a **daily** metric; remeasuring hourly buys nothing and the
 call budget belongs in regional research instead.
 
-**p893 (this pass) ran a full discovery leg and it changed the table's shape.** Ten agents were
+**p894 (this pass) attacked this file's own declared gaps instead of re-measuring known
+cohorts, and two of them were wrong in the same direction.** Special education and automated
+grading were both recorded here as categories with *nothing in them*; both are populated, and
+both were measured in one batch today — **special education tops out at 1 ★, automated grading
+at 0 ★, with three of seven grading repos carrying no licence at all.** The registrarial gap
+turned out to be half wrong in a more useful way: the agent layer really is missing, but the
+**permissive platform underneath it exists** (`UniTime/unitime`, Apache-2.0, 360 ★, pushed
+2026-11-17) and had fallen out of `verticals/solutions.md` in the 2026-11-18 rewrite. All three
+gap entries below are rewritten with today's measurements, and the detail is in
+`agents/trending.md`. Spot check only on the giants (`DeepTutor` 60,258 → **60,274**, `OpenMAIC`
+43,874 → **43,878**, `LearnHarness` 10,002 → **10,020**) — a fifth consecutive confirmation of
+the daily cadence. **Full sweep still due 2026-11-19.**
+
+**p893 ran a full discovery leg and it changed the table's shape.** Ten agents were
 added — the largest single-pass addition this KB has made — including **LearnHarness
 (AGPL-3.0, 10,002 ★)**, which did not exist on 16 October 2026 and is now the third-largest open
 education agent in the world. p893 also closed the table's most embarrassing hole: **there was
@@ -53,9 +66,9 @@ Sorted by stars.
 
 | Agent | Repo | Licence | ★ | Last push | What it does | Origin |
 |---|---|---|---|---|---|---|
-| **DeepTutor** | https://github.com/HKUDS/DeepTutor | Apache-2.0 | 60,258 | 2026-11-18 | Agentic personalised tutoring grounded in the student's own material, with persistent learning history. Hit #1 on GitHub trending 28 Oct 2026; first released Dec 2025. Paper: arXiv 2604.26962. **The single largest open education agent in existence.** | APAC — HKU Data Intelligence Lab |
-| **OpenMAIC** | https://github.com/THU-MAIC/OpenMAIC | MIT | 43,874 | 2026-11-18 | Multi-agent AI classroom: agents generate slides, quizzes and project-based activities and grade quiz answers. `v1.4.2` (2026-11-09) added course-level undo for manual edits and agent runs. Relicensed to MIT at `v0.3.0`, Jun 2026. | APAC — Tsinghua University |
-| **LearnHarness** | https://github.com/amosblomqvist/learnharness | **AGPL-3.0** | 10,002 | 2026-11-12 | Desktop agent harness that *measures* what the learner understands before it teaches: probe → dependency-map the route to the goal → teach one reasoning step at a time → separate retrieval-practice sessions, all carried across sessions by a persistent knowledge graph. **Added p893. Created 2026-10-16 — 0 → 10,002 ★ in 27 days, the fastest growth this KB has recorded for any education repo**, and now the third-largest open education agent in existence. **AGPL-3.0, byte-read from `LICENSE@main`. Not usable in a closed derivative** — read it as the reference design for learner-state modelling, the capability every other tutor in this table lacks. No published learning-outcome study; users report being tested before being taught. | Global |
+| **DeepTutor** | https://github.com/HKUDS/DeepTutor | Apache-2.0 | 60,274 | 2026-11-18 | Agentic personalised tutoring grounded in the student's own material, with persistent learning history. Hit #1 on GitHub trending 28 Oct 2026; first released Dec 2025. Paper: arXiv 2604.26962. **The single largest open education agent in existence.** | APAC — HKU Data Intelligence Lab |
+| **OpenMAIC** | https://github.com/THU-MAIC/OpenMAIC | MIT | 43,878 | 2026-11-18 | Multi-agent AI classroom: agents generate slides, quizzes and project-based activities and grade quiz answers. `v1.4.2` (2026-11-09) added course-level undo for manual edits and agent runs. Relicensed to MIT at `v0.3.0`, Jun 2026. | APAC — Tsinghua University |
+| **LearnHarness** | https://github.com/amosblomqvist/learnharness | **AGPL-3.0** | 10,020 | 2026-11-12 | Desktop agent harness that *measures* what the learner understands before it teaches: probe → dependency-map the route to the goal → teach one reasoning step at a time → separate retrieval-practice sessions, all carried across sessions by a persistent knowledge graph. **Added p893. Created 2026-10-16 — 0 → 10,002 ★ in 27 days, the fastest growth this KB has recorded for any education repo**, and now the third-largest open education agent in existence. **AGPL-3.0, byte-read from `LICENSE@main`. Not usable in a closed derivative** — read it as the reference design for learner-state modelling, the capability every other tutor in this table lacks. No published learning-outcome study; users report being tested before being taught. | Global |
 | **frametell** | https://github.com/sitor-ai/frametell | **AGPL-3.0** | 513 | 2026-11-12 | Turns source material into explainer videos via an "AI director" agent. Local-first and model-agnostic. **Added p893.** The only open *content-production* agent in this table — courseware generation rather than tutoring. AGPL. | Global |
 | **ai-shifu** | https://github.com/ai-shifu/ai-shifu | Apache-2.0 | 332 | 2026-11-18 | Author a course by typing it: the AI delivers the teaching and answers questions inside the flow the author scripted. **Added p893.** Permissive, pushed today, and the clearest open example of *authored* AI teaching — the script constrains the model, which is the control structure Oklahoma-style "no AI-only" rules actually require. | APAC |
 | **Moodle-MCP** (Faixiang) | https://github.com/Faixiang/Moodle-MCP | MIT | 208 | 2026-11-01 | Zero-dependency MCP server over the Moodle Web Service API: courses, assignments, quizzes, deadlines, files. **Read-only by design.** **Added p893 — the first Moodle MCP server this table has ever carried**, which was a hole given Moodle is the most-installed LMS on earth. Ships a companion agent skill, https://github.com/Faixiang/Moodle-Course-Watch (MIT, 0 ★), that diffs new coursework and lists what is still unsubmitted. README localised into 10 languages. | APAC |
@@ -89,7 +102,10 @@ Sorted by stars.
 | **EDU AI Agent Suite** | https://github.com/virtualryder/edu-ai-agents | MIT (SPDX: NOASSERTION; licence text reads MIT) | 4 | 2026-10-10 | Eight reference agent workflows with deny-by-default authorisation, student-PII masking, human-in-the-loop enforcement and tamper-evident audit, aligned to FERPA, COPPA, IDEA/504 and ADA Title II. **Grading uses a deterministic rubric service, not an LLM** — which is what makes it legally usable in several US states. Targets Amazon Bedrock. Tiny and new; valuable as an architecture, not as a dependency. | North America |
 | **ai-tutor-agent** | https://github.com/vulinh1704/ai-tutor-agent | MIT | 0 | 2026-11-16 | FastAPI + LangGraph tutoring starter: Socratic hints, rubric grading, session memory, offline demo mode; checks every draft for answer leaks. Zero stars — a skeleton to read, not a dependency. | APAC — Vietnam |
 
-**34 education-specific agents, every URL and licence verified.** (22 at p891; `tutor-mcp` and
+**34 education-specific agents, every URL and licence verified.** (p894 added no rows: its four
+legs produced 14 verified repositories, every one at 0–2 ★, and the p893 rule that this table
+carries only what a studio can actually build on was applied rather than relaxed. They are
+measured and reasoned about in `agents/trending.md`.) (22 at p891; `tutor-mcp` and
 `EduAgent` added in p892; **ten added in p893** — `LearnHarness`, `frametell`, `ai-shifu`,
 `Moodle-MCP`, `edumcp`, `gen-mentor`, `Mentingo`, `moodle-mcp`, `usp-mcp` and
 `wassce-benchmark` — every one of them star-measured via batched `repo:` qualifiers and
@@ -164,11 +180,55 @@ established — but re-enumerate before re-measuring. Tracked in `agents/trendin
 
 Recording gaps because an unrecorded gap looks exactly like coverage.
 
-- **No open-source agent for student information systems or registrarial workflow.** Tutoring,
-  grading and content generation are crowded; enrolment, timetabling, transcripts and financial
-  aid have none. The clearest build-vs-adopt gap in the industry and the most defensible studio IP.
-- **No dominant open agent for special education or accessibility accommodation**, despite
-  `virtualryder/edu-ai-agents` naming IDEA/504 and ADA Title II as design goals.
+- **No open-source *agent* for student information systems or registrarial workflow — but the
+  permissive *platform* exists, and this file was wrong to imply otherwise (rewritten p894).**
+  The agent half holds: a dedicated leg found only course-capstone prototypes
+  (https://github.com/aabbiisshhaa/student-support-agent, **2 ★**, **no licence**, Makerere
+  University, Uganda; https://github.com/vaibhav9895-lang/student-support-agent-assignment,
+  0 ★, no licence; https://github.com/leechenwei/Ai-Agent-Timetable, 0 ★, no licence, idle
+  since 2025-02-24). The platform half does not: **https://github.com/UniTime/unitime is
+  Apache-2.0, 360 ★ and was pushed 2026-11-17** — Apereo's university course and exam
+  timetabling and student scheduling system, designed to interface with an existing SIS or run
+  standalone. It was verified and licence-hash-checked by an earlier pass, then dropped from
+  `verticals/solutions.md` in the 2026-11-18 rewrite; it is restored there and in
+  `repos/foundations.md` in this pass. **Caveat on the component licence:** its solver,
+  https://github.com/UniTime/cpsolver, is **LGPL-3.0**, so a static link pulls the weaker grant
+  into scope. This remains the clearest build-vs-adopt gap in the industry and the most
+  defensible studio IP — **what you build is an agent tier over UniTime, not a platform.** See
+  `compose/patterns.md` **P12**.
+- **Special education and accessibility accommodation: a populated category with a 1 ★ ceiling
+  (rewritten p894 — the previous "no dominant open agent" phrasing understated what is there and
+  overstated what it is worth).** Measured today:
+  https://github.com/robotros/California-IEP-AI-project-kit (MIT, **1 ★**, 2026-10-27),
+  https://github.com/SudhanvaJ-bit/project-samarth (**no licence** at any candidate path, 1 ★,
+  2026-11-15, 14-section IEP drafting baselined on India's RPwD Act 2016),
+  https://github.com/dougdevitre/access-to-education (MIT, 0 ★, 2026-10-24) and
+  https://github.com/AaronGrace978/EduHelp (**AGPL-3.0**, 0 ★, 2026-10-14). **Ceiling 1 ★; half
+  the cohort unlicensed or AGPL.** None is a dependency and none earns a row above. The durable
+  asset is one design rule, taken from `project-samarth` and already generalised into
+  `compose/patterns.md` `P496-1`: **merge the statutory accommodation baseline into agent state
+  so the model can add but cannot remove a required accommodation.** The build-vs-adopt answer
+  here is *build*, from that rule. `virtualryder/edu-ai-agents` remains the only entry in the
+  table above that names IDEA/504 and ADA Title II as design goals, and its deterministic WCAG
+  pre-flight is the accessibility counterpart to the same idea.
+
+- **Automated grading has zero open-source traction, and it is the one use case every
+  jurisdiction regulates (new p894).** Seven repos measured in one batch:
+  https://github.com/asu2304/auto-assessment-agent (MIT),
+  https://github.com/macsnoeren/genai-open-assessment (**GPL-3.0**),
+  https://github.com/biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent (MIT),
+  https://github.com/littlecookie0722/AI-Teaching-Agent (MIT),
+  https://github.com/Atmankhyar/AI-agent-for-automatic-exam-grading (**no licence**),
+  https://github.com/omerbbbb/ai-graded-assessment-platform (**no licence**),
+  https://github.com/timothyheeeee/Autonomous-Grading-Engine (**no licence**). **Every one is at
+  0 ★ and three of seven have no licence.** Set that against the regulatory map — EU Annex III
+  high-risk, Vietnam's high-risk list, Oklahoma's and Maryland's human-oversight rules — and the
+  conclusion is commercial, not academic: **the most regulated education use case has nothing to
+  adopt, so grading is a build and the regulation is its specification.** Two ideas in the cohort
+  are worth more than its code, and both are already in this KB's patterns: confine the LLM to
+  evidence extraction and keep scoring deterministic, and anchor evidence per criterion with a
+  separate regrade path — the second is what makes an appeal procedure possible, which is what
+  Annex III actually requires.
 - **Almost nothing from LATAM.** `warleysr/ankipa` (10 ★, Brazil) is the only LATAM-origin
   education agent verified. LATAM edtech searches returned companies (Teachy, Vetto, Ginia),
   not repos. For a LATAM engagement, expect to localise an APAC- or EMEA-origin agent.
