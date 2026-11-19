@@ -342,6 +342,32 @@ licence *field*; `19` were byte-read; `10` are agents worth a row here and `9` w
 `repos/foundations.md` and `verticals/solutions.md`. 🔵 **Fewer real rows beat padding** — and the
 funnel from `637,622` nominal hits to `10` published agent rows is the honest cost of this channel.
 
+## Ethiopia's national-examination tier — added `p912`, discharging `911-G4`
+
+`911-G4` registered Ethiopia as a market that **surfaced by accident and was never queried**: two
+Ethiopian artefacts arrived on `p911`'s South-African `matric` legs, which is a homonym, not a
+channel. It is queried now — five terms, bare and co-termed, `43` distinct repositories — and the
+result is the **most ungranted and lowest-ceiling market this KB has measured** (`912-F3`).
+
+🟢 **Every grant below was byte-read on the resolved default branch with
+`ingest/p912-grant-family.sh`**, this pass's corrected authority instrument — not with
+`p880-licence-byteread.sh`, which `912-F2` measures getting two of this cohort's five granted
+repositories wrong. Per-row evidence: `evidence/p912-grant-family.2026-11-19-p912.tsv`.
+
+| Agent | Repo | Licence | ★ | Last push | What it does | Origin |
+|---|---|---|---|---|---|---|
+| **Ethio-Adaptive-Learning** | https://github.com/DeepBlue-dot/Ethio-Adaptive-Learning | Apache-2.0 (11,357 B · `c71d239df917`) | 7 | 2026-05-31 | AI-driven adaptive learning for Ethiopia's Grade 12 national examination, in TypeScript. 🟢 **The ceiling of the entire Ethiopian cohort at `7 ★`** and the only row in it above `3`. 🔵 Standard unmodified Apache-2.0 payload — byte-identical to `Jambora` and `KCSE-predictor` above, which is what a stock `LICENSE` from GitHub's picker looks like. 🟡 **A diverged copy exists**: `abm74/Ethio-Adaptive-Learning` carries the byte-identical licence file but a **different HEAD** (`336bf17` vs `3ad39ba`, `git ls-remote --symref`, `2026-11-19`), so it is a fork with its own commits, **not** a fold-duplicate — do not collapse the two. | EMEA — Ethiopia |
+| **ethioexam** | https://github.com/ElnatanAnbelu/ethioexam | MIT (1,072 B · `fba331165d0b`) | 0 | 2026-09-20 | **Offline** practice application for the Grade 9–12 Natural Science national examination (names both ESSLCE and EUEE). 🟢 **The offline property is why it earns a row at `0 ★`**: it is the only artefact in this cohort built for the constraint that actually governs Ethiopian deployment, and it belongs to the same class as `kolibri` and `iiab` in `verticals/solutions.md` — low-connectivity delivery — rather than to the tutor class. | EMEA — Ethiopia |
+| **eaes-bot** | https://github.com/robelasefa/eaes-bot | MIT (1,067 B · `cb1a9de3b176`) | 1 | 2026-09-16 | Telegram bot that tracks EAES examination results and notifies students when they publish. 🔵 **The delivery surface is the finding, not the code** (`T22`): where a board publishes results as a web drop and candidates have no institutional account, the **messaging channel is the product**, and this is the cheapest worked example of it this KB holds. | EMEA — Ethiopia |
+
+🔴 **Three rows out of 43 repositories, and the posture behind them is the commercial answer.**
+`81.4%` of the cohort carries **no licence file at all**, `70%` sit at **zero stars**, **none**
+clears `100 ★`, and the ceiling is `7`. 🟡 **It is not abandonment**: `40%` were pushed on or after
+`2026-09-01` and three within the seven days to `2026-11-19`. 🔵 **So Ethiopia is a build, and the
+build has a named substrate** — EUEE/ESSLCE past papers and the adaptive shape `Ethio-Adaptive-Learning`
+already demonstrates — but **nothing here is a dependency**. Measured in
+`evidence/p912-ethiopia-rows.2026-11-19-p912.tsv`; legs in `evidence/p912-ethiopia-legs.2026-11-19-p912.tsv`.
+
 ## The per-institution LMS bridge (class `T30`) — restored and extended in `p908`
 
 🔴 **Read this heading as a repair notice.** `p908` audited every line in this KB's two trending
@@ -526,6 +552,22 @@ untouched — the cohort remains an order of magnitude short.
 ## What we searched for and did not find
 
 Recording gaps because an unrecorded gap looks exactly like coverage.
+
+- 🔴 **The five national examination boards `911-G1` named have all registered their GitHub
+  namespace and published nothing into it (new `p912`).** `911-G1` prescribed the org channel as
+  the cheap next probe — *"enumerate `WAEC`, `JAMB`, `KNEC`, `DEMRE` and `CENEVAL` as GitHub orgs
+  before searching by acronym again"*. Run, on two channels, with a negative control:
+  **`WAEC`, `KNEC`, `CENEVAL` and `NABTEB` all exist on GitHub and all four hold `0` public
+  repositories**; `JAMB` is in the search index and also empty. 🔴 **`DEMRE`, `NECO` and `UNEB`
+  resolve to accounts that are not the boards** — `demre` is a personal account holding a Next.js
+  template and a movie app, `neco` is a Ruby PBX and ticketing shop whose every repository dates
+  from 2009–2010, `UNEB` is a single `0 ★` hackathon repository idle since 2014. 🔵 **"Present and
+  silent" is a better fact than "not found"**, and it is the one to take into a board conversation:
+  the institution has already claimed its name on the platform, so the ask is publication, not
+  onboarding. 🟡 **And the probe cannot be run on the channel this KB uses** — see `912-F1`:
+  `search/repositories -f q='user:WAEC'` returns the **same `422` as a nonexistent owner**, so the
+  prescribed enumeration needs the profile-page channel to mean anything. Evidence:
+  `evidence/p912-board-owner-channel.2026-11-19-p912.tsv`.
 
 - **No open-source *agent* for student information systems or registrarial workflow — but the
   permissive *platform* exists, and this file was wrong to imply otherwise (rewritten p894).**

@@ -441,6 +441,33 @@ Abitur. The four rows above are **candidate simulators and an assessment platfor
 national-delivery tier is a **build**, and that is the finding rather than a gap in the search
 (`911-G1`).
 
+## The examination boards themselves — measured `p912`, and they are registered and empty
+
+`p911` added the national-examination **delivery** tier above and registered `911-G1`: no
+board-grade examination delivery or marking platform exists under any licence. `p912` probed the
+boards directly, because a board that publishes its own platform would be the thing to adopt.
+
+| Board | Market | GitHub namespace | Public repositories | What a studio should read into it |
+|---|---|---|---|---|
+| **WAEC** — West African Examinations Council | Nigeria, Ghana, Sierra Leone, Gambia, Liberia | 🟢 exists | 🔴 **0** | The board running the WASSCE's move to full CBT with essay components in 2026 (`intel/market.md` EMEA) publishes **nothing**. The CBT tier serving it is entirely third-party and permissive — four independent Nigerian implementations in `p911` — so **integration is with a board that has no public interface**. |
+| **NECO** — National Examinations Council | Nigeria | 🔴 taken by an unrelated account | 🔴 n/a | `github.com/neco` is a Ruby PBX and ticketing shop last touched in 2010. A probe that trusted the search index would have reported **5 repositories** for Nigeria's examinations council. |
+| **NABTEB** — National Business and Technical Examinations Board | Nigeria | 🟢 exists (as `NabTeb`) | 🔴 **0** | The technical-and-vocational board, named here for the first time in this KB: same posture. |
+| **JAMB** — Joint Admissions and Matriculation Board | Nigeria | 🟢 exists, indexed | 🔴 **0** | `edunelsonit/Jambora` (Apache-2.0) in `agents/top.md` is a **third party** building for JAMB, not JAMB building. |
+| **KNEC** — Kenya National Examinations Council | Kenya | 🟢 exists | 🔴 **0** | Kenya's `KNEC` examination-management system in `p911` was a **live and ungranted third-party Django build**, and the board itself publishes nothing — so the licence-request candidate `p911` named has no upstream to defer to. |
+| **CENEVAL** — Centro Nacional de Evaluación para la Educación Superior | Mexico | 🟢 exists | 🔴 **0** | Reinforces `p911`'s Mexico finding from the other side: Mexico's examination supply is one student repository **and** its evaluation centre publishes nothing. |
+| **DEMRE** | Chile | 🔴 taken by an unrelated personal account | 🔴 n/a | `github.com/demre` holds a Next.js site template, a movie app and a profile config. Chile's PAES supply is `matmiidu/paes-ensayos` (MIT) and nothing from the body that sets the examination. |
+| **UNEB** — Uganda National Examinations Board | Uganda | 🟡 ambiguous | 🔴 1, idle since 2014 | A single `0 ★` `unhackthon` repository. Treat as unclaimed. |
+
+🟢 **The commercial reading is the opposite of discouraging.** Every board in the table has either
+claimed its namespace or had it claimed by someone else, and **not one has published a platform,
+an API client, a question schema or a results format**. There is no incumbent open artefact to
+displace and no board-published interface to conform to, which means the integration surface is
+defined by whoever builds it first — and `compose/patterns.md` **`P30`** scopes that build.
+🔴 **The risk is the mirror image**: with no published schema, every CBT implementation in `p911`'s
+Nigerian cluster is integrating against an **undocumented** target, so portability between boards
+cannot be assumed and should be priced. Evidence:
+`evidence/p912-board-owner-channel.2026-11-19-p912.tsv`.
+
 ## Honest gaps
 
 - **Unlicensed content corpora are the biggest trap in this category (added p891).** The largest

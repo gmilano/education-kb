@@ -77,7 +77,7 @@ same agent ships into Canvas, Moodle and Open edX.
 | https://github.com/openedx/XBlock | Apache-2.0 | **Restored p896.** The Open edX component framework — 471 ★, pushed 2026-11-16. **This is the permissively licensed extension point of an AGPL platform**, and therefore the seam where a studio ships a learning component into Open edX without inheriting AGPL on its own code. Licence byte-read from `master/LICENSE.TXT` (uppercase `.TXT`, which this KB's 8-path probe missed). |
 | https://github.com/openedx/xblock-sdk | Apache-2.0 | **Restored p896.** Workbench and worked example XBlocks — 69 ★, pushed 2026-11-16. The development harness for the row above: build and test a component without standing up a full Open edX. |
 | https://github.com/instructure/common-cartridge-viewer | MIT | **Restored p896.** Instructure's own browser viewer for **IMS Common Cartridge** packages — 95 ★, pushed 2026-11-04. Content migration between LMSs runs through Common Cartridge; this is first-party, permissive and the fastest way to inspect what a client's export actually contains. |
-| https://github.com/longsightgroup/qti3 | **MIT** — byte-read p900 (`LICENSE.md@HEAD`, 1,071 B) | **Added p900, out of this base's own ledger (logged 10×).** Renders **and scores** QTI 3 assessment items: TypeScript core, native Web Component player, React/Preact adapters, plus conversion tooling for older QTI. **Zero third-party runtime dependencies** in the core engine and CLI. 🔵 The permissive counterpart to `Citolab/qti-components` (GPL-3.0) one row above — **if a client needs a proprietary assessment player, this is the row.** 🔴 Not in the search index, so stars are unmeasurable (`900-G2`) |
+| https://github.com/QFlowLearn/qti3 🔴 **(renamed — was `longsightgroup/qti3`, corrected `p912`)** | **MIT** — re-byte-read `p912` (`LICENSE@main`, 1,072 B · `00ed05b90bf8`); `p900` read `LICENSE.md@HEAD`, 1,071 B | **Added p900, out of this base's own ledger (logged 10×).** Renders **and scores** QTI 3 assessment items: TypeScript core, native Web Component player, React/Preact adapters, plus conversion tooling for older QTI. **Zero third-party runtime dependencies** in the core engine and CLI. 🔵 The permissive counterpart to `Citolab/qti-components` (GPL-3.0) one row above — **if a client needs a proprietary assessment player, this is the row.** 🔴 Not in the search index, so stars are unmeasurable (`900-G2`) |
 | https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard | Apache-2.0 | **Added p900 (logged 12×).** The **data standard** itself — 47 ★, pushed 2026-11-18 — where the row above is its operational data store. Low stars, high institutional weight: this is the interoperability substrate US K-12 districts contract against |
 | https://github.com/dmitry-viskov/pylti1.3 | MIT | **Added p900 (logged 12×).** LTI 1.3 Advantage tool in **Python** — the gap between `ltijs` (Node) and `tsugi` (PHP). 🟡 **138 ★ and last pushed 2024-08-18, 27 months idle.** Read it as a reference implementation to vendor, not an upstream to track |
 | https://github.com/jcputney/scorm-again | MIT | **Added p900 (logged 5×).** Modern **SCORM** JavaScript runtime — 367 ★, pushed 2026-11-17. 🔵 SCORM is the format a client's *existing* content is already in; this is how agent-generated courseware ships into a legacy LMS without re-authoring it |
@@ -619,6 +619,20 @@ is the route.
 supply and zero *adoptable* education supply** (4 repositories, all ungranted, the most complete
 being a full Tawjihi question-bank platform). **India, Nigeria, Kenya, South Africa, Chile and
 Germany have not been run on this instrument**, and neither has any LATAM or North America term.
+
+## Ethiopian national-examination assets — added `p912`
+
+The two artefacts in `p912`'s Ethiopian cohort that are **assets rather than agents**, and both are
+here because of what their licence turned out to be rather than what their README claims.
+
+| Repo | Licence (byte-read) | ★ | Last push | What it is | Why it is filed here |
+|---|---|---|---|---|---|
+| https://github.com/hasensaramii977-cpu/Grade-12-National-Exam-Training-Model | **CC0-1.0** (7,048 B · `a2010f343487`) | 1 | 2026-05-07 | A structured Grade 12 national-examination preparation programme — curriculum and item structure, not software | 🟢 **`CC0-1.0` is the most permissive grant in this KB's Ethiopian supply and it is on *content***, which is exactly the shape `T25` and `T26` describe. 🔴 **`p880-licence-byteread.sh` reported this as `UNKNOWN-TEMPLATE`** because it carries no Creative Commons detector at all (`912-F2`); the grant was readable the whole time. |
+| https://github.com/Nugestudent2026/EdTech | **BSL-1.0** — Boost Software License 1.0 (1,338 B · `c9bff7573892`) | 0 | 2026-09-03 | Browser-delivered EUEE Grade 12 entrance-exam material, plain HTML/CSS/JS | 🔴 **This is `912-F2`'s false-positive control.** `p880` classified it **MIT**, because Boost's text contains MIT's exact trigger phrase. Boost is permissive and usable, but its **notice obligation differs from MIT's** — Boost 1.0 does not require reproducing the licence for binary-only distribution — so a studio reproducing MIT notices here is complying with the wrong grant. |
+
+🔵 **Neither is a dependency and neither is large.** They are filed because a permissive *content*
+grant on national-examination material is rarer in this KB than a permissive code grant, and
+because these two rows are the controls that retire this base's licence instrument (`912-F2`).
 
 ## Gaps and caveats
 

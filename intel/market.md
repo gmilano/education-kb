@@ -1354,6 +1354,33 @@ framework being wired into it is the procurement shape this file should be track
   `digital-skills-jobs.europa.eu` and `eur-lex.europa.eu` all returned connection failure from the
   egress proxy at `2026-11-19`. Recorded as a gap (`Gap 56`, `Gap 241`), not a fact.
 
+🟢 **Ethiopia — queried for the first time in `p912`, discharging `911-G4`.** Ethiopia entered this
+KB by accident: two Ethiopian artefacts arrived on `p911`'s South-African `matric` legs, which is a
+homonym rather than a channel. Queried directly on five terms, the market reads as follows.
+
+- **Supply exists and is the weakest this KB has measured.** `43` distinct repositories across
+  `EUEE`, `NEAEA`, `Ethiopia matric`, `Ethiopian national exam` and `ethiopia grade 12`:
+  🔴 **`81.4%` carry no licence file at all** (against `p911`'s `73.7%` and the curated shelf's
+  `5.3%`), `70%` sit at zero stars, **none clears `100 ★`** and the ceiling is **`7 ★`**.
+  🟡 **It is live, not abandoned** — `40%` pushed on or after `2026-09-01`, three within the seven
+  days to `2026-11-19`.
+- **The examination names are not stable in the supply itself.** The same instrument is written
+  `EUEE`, `ESSLCE`, `EHSLCE` and `EAES` across repositories, and the university **exit** examination
+  is a separate instrument that the acronym `EUEE` is also used for. 🔵 **Normalise the examination
+  vocabulary before any item-bank or blueprint work** — this is a data-contract problem on arrival,
+  not a later refinement.
+- **Three promotable rows, in `agents/top.md`**: an Apache-2.0 adaptive learning platform for the
+  Grade 12 examination (`7 ★`, the cohort ceiling), an MIT **offline** Grade 9–12 practice app, and
+  an MIT **Telegram** results bot. 🔵 **Offline and messaging are the two delivery surfaces the
+  market itself chose**, which is `T22` showing up in the poorest market measured.
+- 🔴 **No ministry or agency publication.** `moe-ethiopia` resolves on the search index with `0`
+  repositories; `NEAEA` does not resolve as an owner at all. **Ethiopia is a build, with no board
+  interface to integrate against** — the same posture `p912` measures for every examination board
+  in the table in `verticals/solutions.md`.
+- 🔴 **Declared gap:** this leg measured **supply only**. No Ethiopian policy, procurement,
+  connectivity or budget instrument was retrieved this pass, so the demand side of this market is
+  **unmeasured** rather than absent. Carried as `912-G3`.
+
 ### APAC
 
 🟢 **Promoted in `p902` — two convening facts, plus the region's one dataset-scale supply row**
@@ -2005,6 +2032,75 @@ name, and **only** India. **China, Japan, Korea and Australia were not queried f
 pass** — the generic APAC English leg returned, as `p910` predicted it would, nothing this tree did
 not already hold. 🔵 `Gap 254`'s remedy named Japanese, Korean and Simplified-Chinese ministry legs;
 India consumed the budget and **those three remain unrun**. Carried forward as `911-G3`.
+
+🟢 **`911-G3` DISCHARGED — the Japanese, Korean and Simplified-Chinese ministry legs, run `p912`.**
+`Gap 254`'s remedy predicted these would return **procurement rather than news**, and all three did.
+Evidence: `evidence/p912-ministry-legs.2026-11-19-p912.tsv`.
+
+**China — the plan is interministerial, and examination assessment is inside its 2026 scope.**
+
+- 🟢 **《"人工智能+教育"行动计划》 — the "AI+Education" Action Plan, `教科信〔2026〕1号`, issued
+  April 2026 by *five* bodies jointly**: the Ministry of Education with the **NDRC**, **MIIT**, the
+  **Ministry of Science and Technology** and the **National Data Administration**. 🔵 **Five
+  signatures is the fact to carry into a China conversation**: this is industrial policy with an
+  education delivery arm, not a curriculum circular, and the data regulator is a signatory.
+- 🟢 **The February 2026 national basic-education deployment meeting (Langfang) set the 2026 target
+  as AI into `课程标准` (curriculum standards), `日常教学` (daily teaching) and `考试评价`
+  (examination and assessment).** 🔴 **`考试评价` is the item to price**: assessment is the most
+  regulated education use case in every jurisdiction this KB tracks, and China pairs it with
+  **mandatory content labelling** (`T7`) and the affective-design restrictions of `T14`.
+- 🟢 **Standing instruments it builds on**: 《中小学人工智能通识教育指南（2025年版）》 (K-12 AI
+  general-education guide), 《中小学生成式人工智能使用指南（2025年版）》 (K-12 generative-AI use
+  guide), and revised `信息科技` curriculum standards for compulsory and senior-secondary education.
+  The plan also directs support for **rural and remote schools through the national platform** and
+  strengthening of K-12 AI education bases. **Horizon: deep integration by 2030.**
+- 🟡 **One widely repeated claim is media-only and is not carried as fact here**: that AI literacy
+  will enter students' `综合素质评价` (comprehensive quality evaluation). It was not located in the
+  plan's own text. Flagged, not used.
+
+**Japan — a guideline revision is open *now*, and it names agentic AI.**
+
+- 🟢 **The operative text is MEXT's 「初等中等教育段階における生成AIの利活用に関するガイドライン
+  Ver.2.0」** (December 2024), addressed to teachers and boards of education. 🔵 **It neither bans
+  nor mandates classroom generative AI**, and its organising principle is that **the final judgment
+  and responsibility remain human** — which is the same human-oversight predicate `P7` and `P9` are
+  built around, arriving as guidance rather than statute.
+- 🟢 **A revision to `Ver.2.1` was opened on `2026-06-30`** at the Central Council for Education's
+  Special Committee on Digital Learning Infrastructure, **deliberately ahead of the next
+  `学習指導要領`**, in order to reflect **`エージェントAI` — agentic AI — explicitly**, alongside
+  international debate and the academic risk literature. Planned within FY2026; **as of September
+  2026 it had not been published**. Committee papers of `2026-04-30` and `2026-06-30` are primary
+  PDFs on `mext.go.jp`.
+- 🟢 **`2026-07-03`: MEXT revised its generative-AI *and security* guidance together**, in the
+  frame of `次世代校務DX` — next-generation school-administration digital transformation.
+  🔵 **Administration, not instruction, is where Japan is spending**, and that is an unusual
+  entry point for this industry: the buyer is the board of education's back office.
+- 🟢 **Why this is a window rather than a fact.** A national guideline whose revision is *in
+  progress* and whose stated subject is agentic AI is the single most favourable timing signal in
+  this file: the specification is being written, and `T1`'s rule — that regulation governs **use**,
+  not existence — means a studio can build to the Ver.2.0 predicate and be ready for Ver.2.1.
+
+**Korea — the clearest procurement inversion in APAC: a national mandate became a school choice.**
+
+- 🔴 **The AI Digital Textbook (`AI 디지털교과서`, AIDT) was reclassified by the National Assembly
+  from `교과서` (textbook) to `교육자료` (educational material).** It is **not abolished** — but a
+  textbook is procured centrally and an educational material is **selected by the school**, subject
+  to review by the `학교운영위원회` (school operating committee).
+- 🟢 **The Ministry of Education's 2026 work plan drops "AI 디지털교과서" in favour of
+  "`AI 교육자료`"**, and its named tasks are: **guidance on autonomous selection criteria**,
+  development of **`K-교육 AI`** for both instruction and administration, and expansion of
+  AI-focus schools. Reported rollout to elementary grades 5–6 and middle/high year 2 from
+  **March 2026**. The 2026 ministry budget is **₩106.3607 trillion**, with AI money distributed
+  across talent, infrastructure and capability rather than one AIDT line.
+- 🟡 **Conflicting school counts, carried as a conflict**: one account gives **1,000 AI-focus
+  schools** (`AI 중점학교`), another **1,900 AI-leading schools** (`AI 선도학교`) from 2026. Do not
+  quote either as settled.
+- 🔵 **Commercially this is the most actionable item in the APAC section.** The buyer moved from one
+  ministry to **a thousand-plus schools and their committees**, the selection test became
+  *"verified tools only"*, and the reported field complaints are **device management, teacher
+  training and staffing** — none of which is a model problem. 🟢 **That is a services market, not a
+  licence market**, and `P10` (teacher enablement at system scale) and `P8` (per-institution
+  metering and exit) are the two patterns written for it.
 
 ### LATAM
 

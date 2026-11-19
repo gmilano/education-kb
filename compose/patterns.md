@@ -175,6 +175,39 @@ three: they protect the client from a licence that is worse than it looks. This 
 education ceiling is 76 ★, silently dropping `NOASSERTION` rows throws away the top of the shelf
 (`swl10/pyslet`: verbatim BSD-3-Clause, byte-read, reported `NOASSERTION`).
 
+### The classifier axis, added as gate `912-G1` in p912
+
+The four axes above all assume that **when you read the licence text, you read it correctly.**
+`p912` measured this base's own authority instrument against five granted repositories and it was
+wrong on two, in opposite directions, on byte-identical payloads (`T38`):
+
+- `Nugestudent2026/EdTech` is the **Boost Software License 1.0**. `ingest/p880-licence-byteread.sh`
+  reports **MIT**, because Boost's text contains MIT's exact trigger phrase *"Permission is hereby
+  granted, free of charge"*. 🔴 **A false positive on a first-match classifier.**
+- `hasensaramii977-cpu/Grade-12-National-Exam-Training-Model` is **CC0-1.0**. `p880` reports
+  `UNKNOWN-TEMPLATE`, because it carries **no Creative Commons detector at all**. 🔴 **A false
+  negative on exactly the licence family `T25` and `T32` are about.**
+
+**Gate rule `912-G1`.** Grant detection is a **set membership test run cumulatively, specific
+before generic** — never a first match:
+
+```
+# the ordering that matters, and why
+BSL-1.0   before MIT        # Boost contains MIT's trigger phrase verbatim
+AGPL/LGPL before GPL        # both contain "GNU GENERAL PUBLIC LICENSE"
+CC0/CC-BY/CC-BY-SA/CC-BY-NC at all   # p880 had none of them
+ISC, Unlicense              # absent from p880, present in education supply
+```
+
+Run it with `ingest/p912-grant-family.sh OUT.tsv <slug>...`. It refuses empty input (`rc=2`,
+the `Gap 245` class) and carries both of the above as controls. 🔵 **Two operational consequences
+for a client engagement.** (1) **A Creative Commons grant on a code repository is a scope question,
+not a verdict** — the instrument flags it rather than clearing it, because CC licences address
+content and say little about the software built around it. (2) **A permissive verdict is not enough
+to generate the notice file**: MIT and Boost are both permissive and their notice obligations
+differ, so the **family**, not the permissiveness, is what the attribution step consumes.
+🔴 `p880` is left in place unmodified — retiring it against these two controls is a pass of its own.
+
 ## P1 — Licence-clean AI tutor on a permissive LMS
 
 **For:** any client who needs to keep the result closed, or who has no incumbent LMS.
@@ -2587,3 +2620,83 @@ and nothing in this KB's Nigerian supply addresses it.
 🔵 **Honest scope.** This is a **6–10 week** discovery-and-prototype shape, not a national rollout:
 steps 1, 2, 4 and 6 are deliverable from verified open supply, and step 3 is blocked on a board
 agreement no amount of engineering substitutes for.
+
+## P31 — Examination-board engagement where the board publishes nothing (measured `p912`)
+
+**For:** a national or regional examination authority — WAEC, JAMB, NECO, NABTEB, KNEC, CENEVAL,
+DEMRE, UNEB, NEAEA — or a ministry buying on one's behalf.
+
+### Why this pattern exists
+
+`P30` scopes building an examination platform. This pattern addresses what `p912` measured about
+the **counterparty**: five of eight boards probed **hold their own GitHub namespace and have
+published nothing into it**, and three more have had the namespace taken by an unrelated account
+(`T37`, `verticals/solutions.md`). So there is no board-published question schema, results format
+or blueprint to integrate against — while in Nigeria alone **four independent permissive CBT
+implementations** are already integrating against that undocumented target (`p911`).
+
+🔵 **The consequence is specific: the integration contract is the deliverable.** Not the tutor, not
+the item generator — the **schema**. Whoever writes it first defines the market, and a board that
+already owns its namespace has a publication channel sitting unused.
+
+### Stack
+
+| Layer | Component | Licence | Why this one |
+|---|---|---|---|
+| Item and blueprint schema | **QTI 3** via https://github.com/QFlowLearn/qti3 | **MIT** (1,072 B · `00ed05b90bf8`, byte-read `p912`) | Do not invent a format. QTI is the only interoperability standard a board can be shown as prior art. This one **renders, scores, validates and migrates** QTI 3 items. 🔴 **Note the address**: this base carried it as `longsightgroup/qti3` since `p900`; it has been **renamed to `QFlowLearn/qti3`** and the old address survives only as a GitHub redirect (`912-F5`). |
+| Item rendering (alternative) | https://github.com/Citolab/qti-components | 🔴 **GPL-3.0** | QTI 3 web components for item rendering. 🔴 **Copyleft, and it is a rendering library that ships to the browser** — keep it at arm's length in any proprietary build, exactly as `repos/foundations.md` records. Prefer the MIT row above unless the client's deliverable is itself GPL-compatible. |
+| CBT delivery reference | https://github.com/Kirchhoff-dev/cbt-app-updates (offline, 30+ subjects) and https://github.com/edunelsonit/Jambora (Apache-2.0) | permissive | `p911`'s Nigerian cluster. Use them as the **conformance corpus** for the schema: a format three independent implementations can already emit is a format a board can adopt. |
+| Past-paper corpus | https://github.com/001kenji/KCSE-predictor (Apache-2.0, 20+ years of KCSE papers), https://github.com/HostServer001/jee_mains_pyqs_data_base (MIT, 14,000 items) | Apache-2.0 / MIT | Longitudinal board papers are the input for blueprint analysis and item generation. Both byte-read. |
+| Marking, deterministic | https://github.com/Udayraj123/OMRChecker (OMR) + https://github.com/openedx/edx-ora2 (response assessment) | Apache-2.0 / AGPL-3.0 ⚠️ | ⚠️ `edx-ora2` is AGPL — fine inside an Open edX deployment, a licence event in a standalone service. Read `G1` first. |
+| Agent tier | evidence extraction only, scoring deterministic | — | `P9`'s rule, and Annex III's requirement. The model never holds the score. |
+| Offline / low-connectivity | https://github.com/learningequality/kolibri (**MIT**) and https://github.com/iiab/iiab (🔴 **GPL-2.0**) | mixed — read before bundling | Non-negotiable for WAEC, KNEC and NEAEA catchments; `ElnatanAnbelu/ethioexam` is the market's own worked example of the same constraint. 🔴 **The two grants differ and the table says so deliberately**: Kolibri is MIT, Internet-in-a-Box is **GPL-2.0** (with LGPL components), so bundling IIAB into an appliance is a copyleft event and Kolibri alone is not. |
+
+### How it wires together
+
+1. **Probe the namespace before the first meeting.** `evidence/p912-board-owner-channel.2026-11-19-p912.tsv`
+   has the eight already measured; re-probe on **two channels** (`912-F1`: the search index's
+   `user:` arm returns the *same* `422` for a real-but-empty owner as for a nonexistent one, so the
+   profile page is the channel that discriminates). 🔵 Walking in knowing the board already owns
+   `github.com/<board>` changes the proposal from *"adopt a platform"* to *"publish your schema."*
+2. **Normalise the examination vocabulary first.** `p912` found one Ethiopian instrument written
+   `EUEE`, `ESSLCE`, `EHSLCE` and `EAES` across repositories, with the university **exit** exam
+   sharing an acronym with the **entrance** exam. Build the controlled vocabulary as step one; it is
+   a data-contract problem on arrival, not a later refinement.
+3. **Emit QTI 3 from the existing third-party implementations** and treat agreement between them as
+   the schema's acceptance test.
+4. **Keep scoring deterministic and anchored per criterion, with a separate regrade path** (`P9`).
+   This is what makes an appeal procedure possible, which is what the EU's Annex III, Vietnam's
+   high-risk list and China's `考试评价` scope all actually require.
+5. **Publish the schema under the board's own namespace**, Apache-2.0 or CC-BY, as a named
+   contractual deliverable.
+
+### The design rules that make it defensible
+
+- 🔴 **Never price board-schema access as an engineering task.** `P30` already states that the
+  board agreement is the critical path; `p912` adds that there is **no interface to reverse-engineer
+  either**, so a schedule that assumes discovery from documentation is wrong by construction.
+- 🟢 **Portability is the client's interest and must be in the contract.** With no published format,
+  each board integration is bespoke. Commit to QTI 3 on the wire so a second board is a
+  configuration, not a rebuild.
+- 🔴 **Run `G1` and `912-G1` over every row above before the kickoff deck.** One AGPL component
+  (`edx-ora2`) and one Creative Commons corpus question sit in this stack on purpose.
+
+### Deliverables
+
+A published item-and-results schema in the board's namespace; a QTI 3 conformance suite; a
+deterministic marking service with per-criterion evidence anchors and a regrade path; an offline
+delivery profile; and the vocabulary register from step 2.
+
+### Estimate
+
+**8–12 weeks** for schema, conformance suite and marking service against **one** board, assuming the
+board agreement from `P30` step 3 exists. 🔴 **Without that agreement this pattern does not start**
+— and unlike `P30`, no part of it is deliverable from open supply alone, because its subject is the
+counterparty's own format.
+
+### Where it does not apply
+
+- Markets where the board **does** publish — none measured so far, but `p912` probed eight of them,
+  not all.
+- Any engagement where the client wants a tutor or an item generator. That is `P23` or `P29`; this
+  pattern is infrastructure for the authority, and its buyer is a ministry.

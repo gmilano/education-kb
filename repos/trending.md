@@ -4,6 +4,99 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p912) — **Ethiopia's examination tier measured for the first time: 43 repositories, 81.4% with no grant at all, 0 of 43 clearing 100 ★ and a ceiling of 7. The weakest supply this KB has recorded — and 40% of it was pushed this quarter. Two licence verdicts on this cohort were produced wrong by the instrument that graded every licence cell in this base.**
+
+**Channel.** `gh api search/repositories`, 10 legs (5 Ethiopian examination terms × bare and
+co-termed), top 25 by stars per leg, sorted by stars descending; grants byte-read on the resolved
+default branch with **`ingest/p912-grant-family.sh`**, this pass's corrected authority instrument.
+Per-row evidence at `evidence/p912-ethiopia-rows.2026-11-19-p912.tsv`, legs at
+`evidence/p912-ethiopia-legs.2026-11-19-p912.tsv`, grants at
+`evidence/p912-grant-family.2026-11-19-p912.tsv`. HEAD identity by `git ls-remote --symref`.
+
+### The repository posture of this tier, measured
+
+| | `p912` (Ethiopia) | `p911` (7 markets) | `p910` (APAC/EMEA) | Curated shelf (`p909`) |
+|---|---|---|---|---|
+| Distinct repositories sampled | **43** | 491 | 255 | — |
+| Permissive (MIT/Apache/BSD/ISC/Unlicense/BSL) | 🔴 **7 = 16.3%** | 15.6% | 25.1% | 🟢 **68.8%** |
+| **No `LICENSE` file at all** | 🔴 **35 = 81.4%** | 73.7% | 63.9% | 5.3% |
+| Zero stars | 🔴 **30 = 70%** | 35% | — | — |
+| **Clearing 100 ★** | 🔴 **0 of 43** | 4 of 205 | — | — |
+| Ceiling | 🔴 **7 ★** | 23 ★ | 3,149 ★ | — |
+| Pushed on or after `2026-09-01` | 🟡 **17 = 40%** | 19% | — | — |
+| Pushed in the 7 days to `2026-11-19` | 🟡 **3** | 8 | — | — |
+
+🔴 **`81.4%` ungranted is the highest figure this KB holds**, and `0 of 43` clearing `100 ★` the
+lowest ceiling of any market measured. Licence *field* distribution over the 43: `NONE` 35 · MIT 4 ·
+Apache-2.0 2 · CC0-1.0 1 · BSL-1.0 1. 🟡 **And it is live** — two-fifths pushed within the quarter,
+three within the week. **A tier of students and teachers building examination tools in public and
+never adding a `LICENSE`**, which is `T34` in its most extreme instance to date.
+
+### Leg totals, exact
+
+| Term | Bare | Co-termed | Co-term used |
+|---|---|---|---|
+| `EUEE` | 86 | 14 | `EUEE exam` |
+| `NEAEA` | 11 | 4 | `NEAEA exam` |
+| `Ethiopia matric` | 5 | 2 | `Ethiopia matric exam` |
+| `Ethiopian national exam` | 22 | 9 | `Ethiopian national exam grade` |
+| `ethiopia grade 12` | 59 | 26 | `ethiopia grade 12 exam` |
+
+🔵 **`911-F2`'s market-dependent recall cost reappears, mildly**: every leg survives co-terming with
+a usable yield, unlike Mexico's `COMIPEMS examen` (which went empty) or Germany's `Abitur Mathematik`
+(`7`). **Ethiopia is reachable on this channel** — it had simply never been queried (`911-G4`).
+
+### The three rows promoted, and why these three
+
+- 🟢 **`DeepBlue-dot/Ethio-Adaptive-Learning`** — Apache-2.0 (11,357 B · `c71d239df917`), **7 ★**,
+  pushed 2026-05-31, TypeScript. AI-driven adaptive learning for the Grade 12 national examination.
+  **The ceiling of the whole cohort**, and the only row above `3 ★`.
+- 🟢 **`ElnatanAnbelu/ethioexam`** — MIT (1,072 B · `fba331165d0b`), 0 ★, pushed 2026-09-20.
+  **Offline** practice for the Grade 9–12 Natural Science examination. 🔵 **The offline property is
+  why a `0 ★` row earns a place**: it is built for the constraint that actually governs deployment
+  in this market, and it belongs beside `kolibri` and `iiab` rather than beside the tutors.
+- 🟢 **`robelasefa/eaes-bot`** — MIT (1,067 B · `cb1a9de3b176`), 1 ★, pushed 2026-09-16. Telegram
+  bot tracking EAES results. 🔵 **The delivery surface is the artefact** (`T22`): where a board
+  publishes results as a web drop and candidates hold no institutional account, the messaging
+  channel *is* the product.
+
+Two further rows went to `repos/foundations.md` as **assets rather than agents**, and both are there
+because of what their licence turned out to be: a **CC0-1.0** Grade 12 preparation programme
+(7,048 B · `a2010f343487`) and a **BSL-1.0** EUEE material set (1,338 B · `c9bff7573892`).
+
+### 🔴 Both of those two were graded wrong by `p880-licence-byteread.sh`
+
+The CC0 row came back `UNKNOWN-TEMPLATE` (the instrument carries **no** Creative Commons detector);
+the Boost row came back **MIT** (Boost's text contains MIT's exact trigger phrase). 🟢 **Same bytes,
+same `sha256₁₂`, different verdict** — `ingest/p912-grant-family.sh` resolves both on the payloads
+`p880` itself fetched. Full account in `agents/trending.md` `912-F2`, rule as gate `912-G1` in
+`compose/patterns.md`, trend as `T38`. 🔴 **Consequence for this file specifically**: any `MIT` cell
+anywhere in this KB that was produced over a Boost payload is wrong, and `912-G1` is the re-run that
+would find them.
+
+### 🟡 Fold check, run because the licence hash invites the mistake
+
+`abm74/Ethio-Adaptive-Learning` carries a **byte-identical** licence payload to
+`DeepBlue-dot/Ethio-Adaptive-Learning` (11,357 B · `c71d239df917`) and a **different HEAD**
+(`336bf17` vs `3ad39ba`). **A diverged fork, not a fold-duplicate.** 🔵 The payload is the stock
+Apache-2.0 template that `Jambora` (Nigeria) and `KCSE-predictor` (Kenya) also carry, so **licence
+identity is no evidence whatsoever of repository identity** — a control worth keeping now that three
+countries' rows on `agents/top.md` share one hash.
+
+### 🔴 What this channel did **not** return
+
+- **No examination-authority publication.** `moe-ethiopia` resolves on the search index with `0`
+  repositories; `NEAEA` does not resolve as an owner at all. Eight examination boards were probed
+  this pass and **five hold a registered namespace with zero public repositories** (`912-F1`,
+  `T37`, `verticals/solutions.md`).
+- **No Ethiopian past-paper corpus under any grant.** The Kenyan and Indian equivalents
+  (`001kenji/KCSE-predictor`, `HostServer001/jee_mains_pyqs_data_base`) have no Ethiopian
+  counterpart in these 43 rows. 🔵 **That is the asset to build or license first**, and `P31` scopes
+  it.
+- **No consistent examination vocabulary.** One instrument appears as `EUEE`, `ESSLCE`, `EHSLCE` and
+  `EAES`, and the university **exit** examination shares `EUEE` with the **entrance** examination.
+  **Normalisation is step one, not a refinement.**
+
 ## `2026-11-19` (p911) — **The national-examination repository tier in seven new markets: 491 repositories, 73.7% with no grant at all, and `4` of `205` clearing 100 ★. India has the only real pool; Mexico has one permissive repository and it is a student's subject list.**
 
 **Channel.** `gh api search/repositories`, 28 legs (14 national-examination terms × bare and

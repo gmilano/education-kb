@@ -4,6 +4,250 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p912) — **Three registered gaps discharged, and the pass's own authority instrument failed two controls. The five examination boards `911-G1` named have all registered their GitHub namespace and published nothing into it — and the channel this base uses cannot tell a real-but-empty owner from one that does not exist. Ethiopia measured: 81.4% ungranted, ceiling 7★, the weakest market in this KB. Japan's guideline revision names agentic AI and is open now.**
+
+**Channels and posture.** `gh api search/repositories` (**19 legs**: 11 owner probes, 5 Ethiopian
+examination terms bare and co-termed), `raw.githubusercontent.com` with the default branch resolved
+from the search channel first (`884-G2`), **plain HTTPS GET of the GitHub profile page** as a second
+owner channel, `git ls-remote --symref` for HEAD identity, and **3 WebSearch legs in Japanese,
+Korean and Simplified Chinese** — `911-G3`'s unrun remedy. 🔴 `curl -sI` on `github.com` was **not**
+used as a verification channel (`907-F2`). Negative control ran on **both** owner channels:
+`nonexistentorg999` returns `422 Validation Failed` from `search/repositories` and **`HTTP 404`**
+from the profile channel.
+
+🟢 **Closing gate: 6 addresses byte-read on their resolved default branch before any was written to
+a delivery file; all 6 returned a grant.** `0` broken rows added. No row below came from a search
+snippet. 🔴 **And two of the six were graded wrong by the instrument that has graded every licence
+cell in this base since `p880`** — which is this pass's largest finding and the reason it ships a
+replacement.
+
+🟢 **Instruments committed:** `ingest/p912-grant-family.sh` (corrected grant-family byte-read,
+refuses empty input → `rc=2`, the `Gap 245` class). Evidence:
+`evidence/p912-grant-family.2026-11-19-p912.tsv`,
+`evidence/p912-board-owner-channel.2026-11-19-p912.tsv`,
+`evidence/p912-ethiopia-rows.2026-11-19-p912.tsv`,
+`evidence/p912-ethiopia-legs.2026-11-19-p912.tsv`,
+`evidence/p912-ministry-legs.2026-11-19-p912.tsv`.
+
+### 🔴 `912-F1` `911-G1`'s prescribed probe is **unrunnable on the channel this base uses**, and the boards it named are **present and silent**
+
+`911-G1` named the cheap next probe: *"enumerate `WAEC`, `JAMB`, `KNEC`, `DEMRE` and `CENEVAL` as
+GitHub orgs before searching by acronym again. Cost: one pass."* Run, the probe splits into two
+different findings.
+
+🔴 **First, the REST org endpoint is closed to this session entirely.** `gh api orgs/WAEC/repos`
+returns `403 — sessions are bound to their configured repositories`, and it returns the **same 403
+for the nonexistent control**, so it carries no information either way. The search index's `user:`
+qualifier is the only arm available — and it is worse than unavailable, it is **misleading**:
+
+| Owner | `user:<owner>` search arm | Profile-page channel | Public repos |
+|---|---|---|---|
+| `WAEC` | 🔴 `422 Validation Failed` | 🟢 **real org page** | 🔴 **0** |
+| `KNEC` | 🔴 `422 Validation Failed` | 🟢 **real profile** | 🔴 **0** |
+| `CENEVAL` | 🔴 `422 Validation Failed` | 🟢 **real org page** | 🔴 **0** |
+| `NABTEB` | 🔴 `422 Validation Failed` | 🟢 **real org page** (`NabTeb`) | 🔴 **0** |
+| `nonexistentorg999` **(control)** | 🔴 `422 Validation Failed` | 🔴 **HTTP 404** | n/a |
+
+🔴 **Four of four examination boards exist on GitHub and all four are invisible to the search arm,
+which returns the identical `422` it returns for an owner that was never created.** 🟢 **The profile
+channel discriminates perfectly**: `404` for the control, a rendered page for all four boards. 🔵
+**This is `907-F2`'s class, one layer up** — `907-F2` established that a `403` from `curl -sI` is not
+an existence test; `912-F1` establishes that a `422` from `user:` is not an *absence* test. **A
+"not found" from the owner channel is a channel fact, not a market fact**, and any pass that
+enumerates owners must carry the profile channel and the `404` control.
+
+🟡 **`JAMB` behaves differently and the difference is unexplained**: it returns `total_count: 0` —
+indexed, and empty — rather than `422`. Both are users-or-orgs with zero public repositories, so
+the split is a property of index inclusion this pass could not account for. **Measured, not
+explained.**
+
+### 🔴 `912-F2` The instrument that grades every licence cell in this base was wrong **in both directions on one five-row cohort**, and the published `spdx_id` field was right both times
+
+`ingest/p880-licence-byteread.sh` is this base's licence authority. Over `p912`'s five granted
+Ethiopian repositories:
+
+| Repository | GitHub field | `p880` verdict | Byte truth | Bytes · `sha256₁₂` |
+|---|---|---|---|---|
+| `Nugestudent2026/EdTech` | BSL-1.0 | 🔴 **MIT** | **BSL-1.0** | 1,338 · `c9bff7573892` |
+| `hasensaramii977-cpu/Grade-12-National-Exam-Training-Model` | CC0-1.0 | 🔴 `UNKNOWN-TEMPLATE` | **CC0-1.0** | 7,048 · `a2010f343487` |
+| `DeepBlue-dot/Ethio-Adaptive-Learning` | Apache-2.0 | 🟢 Apache-2.0 | Apache-2.0 | 11,357 · `c71d239df917` |
+| `robelasefa/eaes-bot` | MIT | 🟢 MIT | MIT | 1,067 · `cb1a9de3b176` |
+| `ElnatanAnbelu/ethioexam` | MIT | 🟢 MIT | MIT | 1,072 · `fba331165d0b` |
+
+🔴 **The false positive and its cause.** The **Boost Software License 1.0** opens *"Permission is
+hereby granted, free of charge, to any person or organization…"*; `p880`'s MIT detector greps for
+*"Permission is hereby granted, free of charge"*. **Boost is a prefix-collision of the MIT trigger
+phrase.** Every MIT verdict a single-phrase classifier ever emitted over a Boost payload is wrong.
+🔵 Both are permissive, so **no commercial conclusion in this base inverts** — but the **notice
+obligations differ**, and this base publishes notice obligations.
+
+🔴 **The false negative, and it has more reach than its row.**
+`grep -ci 'creative commons\|CC0\|CC-BY' ingest/p880-licence-byteread.sh` → **`0`**. The authority
+instrument carries **no Creative Commons detector at all**, so the one licence family that `T25`
+(the trap has moved to data and content assets) and `T32` (the agent-skill tier is arriving under
+Creative Commons) are *about* came back `UNKNOWN-TEMPLATE` every time it was read.
+
+🟢 **Same bytes, same hash, different verdict.** `ingest/p912-grant-family.sh` resolves both
+controls on the **byte-identical payloads** `p880` fetched — the payloads always agreed and only
+the classifier disagreed, which is the cleanest form this finding could take. Rule published as
+gate **`912-G1`** in `compose/patterns.md`: grant detection is cumulative set membership,
+**specific before generic** (Boost before MIT, AGPL/LGPL before GPL), with CC, ISC and Unlicense
+present at all. 🔴 **`p880` is left in place unmodified** — thirty-odd passes of cells came from it
+and `Gap 245` forbids shipping a correction and a re-measurement together. Retirement is `912-G1`.
+
+🔵 **And the reading that matters for `T19`.** `T19` says published licence metadata errs in both
+directions and implies the byte-read settles it. **Here the field was right twice and this base's
+byte-read was wrong twice.** The byte-read channel is itself a source of error. Carried as `T38`.
+
+### 🟢 `912-F3` Ethiopia, queried for the first time (`911-G4`): the **weakest market this KB has measured**, and live
+
+`911-G4` registered Ethiopia as *"surfaced by accident and never queried"* — two Ethiopian artefacts
+had arrived on `p911`'s South-African `matric` legs, which is a homonym, not a channel. Five terms,
+bare and co-termed, **43 distinct repositories**:
+
+| | Ethiopia (`p912`) | `p911` cohort | `p910` cohort | Curated shelf (`p909`) |
+|---|---|---|---|---|
+| Permissive | 🔴 **7 = 16.3%** | 15.6% | 25.1% | 🟢 **68.8%** |
+| **No licence file at all** | 🔴 **35 = 81.4%** | 73.7% | 63.9% | 5.3% |
+| Zero stars | 🔴 **30 = 70%** | 35% | — | — |
+| **Clearing 100 ★** | 🔴 **0 of 43** | 4 of 205 | — | — |
+| Ceiling | 🔴 **7 ★** | 23 ★ | 3,149 ★ | — |
+| Pushed ≥ `2026-09-01` | 🟡 17 = 40% | 19% | — | — |
+
+🔴 **`81.4%` ungranted is the highest this KB has recorded** and `0 of 43` clearing `100 ★` the
+lowest ceiling. 🟡 **It is not abandonment**: `40%` pushed within the quarter, three within the week.
+🟢 **Three rows are promotable and all three were byte-read**: an Apache-2.0 adaptive platform for
+the Grade 12 examination (`7 ★`, the cohort ceiling), an MIT **offline** Grade 9–12 practice app,
+and an MIT **Telegram results bot**. 🔵 **Offline and messaging are the delivery surfaces the market
+itself chose** — `T22` appearing in the poorest market measured, unprompted.
+
+🔴 **A naming hazard worth more than the rows.** One instrument appears as `EUEE`, `ESSLCE`,
+`EHSLCE` and `EAES` across repositories, and the university **exit** examination shares the acronym
+`EUEE` with the **entrance** examination. **Normalise the examination vocabulary as step one of any
+Ethiopian engagement**; it is a data-contract problem on arrival. Folded into `P31`.
+
+🟡 **Fold check ran.** `DeepBlue-dot/Ethio-Adaptive-Learning` and `abm74/Ethio-Adaptive-Learning`
+carry a **byte-identical licence payload** (11,357 · `c71d239df917`) and **different HEADs**
+(`3ad39ba` vs `336bf17`, `git ls-remote --symref`). **A diverged fork, not a fold-duplicate** — the
+licence file is the stock Apache-2.0 template, so licence identity is no evidence of repository
+identity. 🔵 **A control worth keeping**: three rows already on `agents/top.md` (`Jambora`,
+`KCSE-predictor`, `Ethio-Adaptive-Learning`) share that exact hash across three countries.
+
+### 🔴 `912-F4` The homonym defect family (`911-F4`) has an **owner-level** axis, and it is worse because it looks like a result
+
+`911-F4` measured homonyms at the **term** level — `learn` ← *deep learning*, `CAPS` ← *capstone*.
+`p912` found the same defect at the **owner** level, where it produces a non-empty answer:
+
+| Probed as the board | What `github.com/<name>` actually is | Search arm said |
+|---|---|---|
+| `DEMRE` (Chile's examination body) | 🔴 a personal account: a Next.js site template, a movie app, *"Config files for my GitHub profile"* | **4 repositories** |
+| `NECO` (Nigeria's examinations council) | 🔴 a Ruby **PBX and ticketing** shop, every repository 2009–2010 | **5 repositories** |
+| `UNEB` (Uganda's examinations board) | 🟡 one `0 ★` `unhackthon`, idle since **2014-09-20** | **1 repository** |
+
+🔴 **A pass that trusted the owner channel would have published "DEMRE: 4 repositories" and "NECO:
+5 repositories" as examination-board estates.** 🔵 **The general rule, and it is the one to carry:
+an acronym is not an identity on either axis.** A term-level homonym inflates a *count*; an
+owner-level homonym fabricates an *institution*, and an institutional claim is the kind this KB
+publishes to clients. **Affiliation must be adjudicated from the payload, never from the name
+matching.**
+
+### 🔴 `912-F5` A shelf row has been **renamed under this base's feet**, and `912-F1`'s own rule is what caught it — plus two licence cells this pass got wrong before publishing them
+
+🔵 **This finding exists because the pass verified its own new prose rather than only its new rows.**
+`P31` cites ten repositories this base already holds. Re-checked rather than inherited, three came
+back different from what was about to be published:
+
+| Row | Published state | Measured `2026-11-19` | Action |
+|---|---|---|---|
+| `longsightgroup/qti3` | address carried since `p900` | 🔴 **renamed to `QFlowLearn/qti3`** — the search arm returns `422` on the old owner, and the **profile channel** shows the repository alive: MIT, `6 ★`, pushed `2026-11-18` | address corrected in `repos/foundations.md` |
+| `Citolab/qti-components` | `P31` draft said *"Apache-2.0 / permissive"* | 🔴 **GPL-3.0** | corrected in `P31` before publication; `repos/foundations.md` had it right all along |
+| `iiab/iiab` | `P31` draft grouped it with Kolibri as *"permissive"* | 🔴 **GPL-2.0** | corrected; the two grants are now stated separately |
+
+🔴 **The rename is the one with reach.** `git ls-remote --symref` on **both** addresses returns the
+**identical HEAD** (`0742122f8d37`), so GitHub's redirect keeps the stale address working — which is
+precisely why nothing noticed. 🔵 **A redirect is a liveness answer, not an identity answer**: any
+census that keys on the owner (`user:` legs, org estates, fold-identity groups) silently loses the
+row, because `longsightgroup` **no longer exists as an owner** and `422` is what the channel returns
+for it. 🟡 **And it is `912-F1` twice over**: the same `422` that four live examination boards return,
+on a repository that is also live. **A `422` means "ask another channel", nothing more.**
+🟡 The licence payload also moved — `p900` byte-read `LICENSE.md@HEAD` at 1,071 B, `p912` reads
+`LICENSE@main` at 1,072 B · `00ed05b90bf8`. Same grant, reorganised repository; `p900` is not
+contradicted.
+
+🔴 **The two licence corrections are this pass's own errors, caught before publication, and they
+belong in the record.** A draft stack table asserted `Apache-2.0/permissive` for a **GPL-3.0**
+rendering library and folded a **GPL-2.0** appliance in with an MIT one. 🔵 **Both would have been
+licence advice, not typos** — which is the argument for `912-G1`'s rule applying to *cited* rows and
+not only to newly discovered ones. **Every row a pattern names must be re-read at the moment the
+pattern is written.**
+
+### 🟢 `911-G3` discharged — the Japanese, Korean and Simplified-Chinese ministry legs, and all three returned procurement
+
+`Gap 254`'s remedy predicted these legs would return **procurement rather than news**. They did.
+Full text in `intel/market.md` APAC; the headlines:
+
+- 🟢 **China — 《"人工智能+教育"行动计划》, `教科信〔2026〕1号`, April 2026, signed by *five* bodies**
+  (MoE, NDRC, MIIT, MOST, **National Data Administration**). 🔴 **The 2026 target names `考试评价`
+  — examination and assessment** — alongside curriculum standards and daily teaching, in a market
+  that also mandates content labelling (`T7`) and restricts affective design (`T14`). **Deep
+  integration by 2030.** 🔵 Five signatures makes this industrial policy with an education delivery
+  arm, and the data regulator is one of them.
+- 🟢 **Japan — MEXT's generative-AI guideline `Ver.2.0` (Dec 2024) is operative, and a revision to
+  `Ver.2.1` opened `2026-06-30`** at the Central Council for Education's digital-learning-
+  infrastructure committee, **deliberately ahead of the next `学習指導要領`**, explicitly to cover
+  **`エージェントAI` — agentic AI**. Planned within FY2026; **unpublished as of September 2026**.
+  🟢 **The most favourable timing signal in this file**: the specification is being written now.
+  🔵 `2026-07-03`: generative-AI and **security** guidance revised together under `次世代校務DX` —
+  **administration, not instruction, is where Japan is spending.**
+- 🔴 **Korea — the `AI 디지털교과서` was reclassified by the National Assembly from `교과서`
+  (textbook) to `교육자료` (educational material).** Not abolished — **re-procured**. A textbook is
+  bought centrally; an educational material is **chosen by the school**, subject to its
+  `학교운영위원회`. The 2026 work plan renames it `AI 교육자료` and adds **`K-교육 AI`** for
+  instruction *and* administration. 🟢 **The buyer moved from one ministry to a thousand-plus
+  schools**, the test became *"verified tools only"*, and the reported complaints are device
+  management, teacher training and staffing — **a services market, not a licence market**
+  (`P10`, `P8`). 🟡 School counts conflict across sources (**1,000** `AI 중점학교` vs **1,900**
+  `AI 선도학교`); carried as a conflict, not a figure.
+
+### 🔴 Goals and standing gaps, with what was actually tested
+
+- 🟢 **`911-G1` ANSWERED, and the answer is better than the question.** Not *"does a board platform
+  exist"* (it does not) but *"the boards are present and silent"* — five namespaces registered, zero
+  publications, three taken by unrelated accounts. Published in `verticals/solutions.md`, `T37` and
+  `P31`.
+- 🟢 **`911-G3` DISCHARGED.** All three ministry legs run; all three paid.
+- 🟢 **`911-G4` DISCHARGED.** Ethiopia queried on five terms; `43` repositories; three promoted.
+- 🔴 **New: `912-G1` — retire `p880-licence-byteread.sh` against this pass's two controls.** Every
+  `N B · sha256₁₂` cell in this base came from an instrument now measured wrong in both directions.
+  🔵 **Cost: one pass, and no search step** — re-run `ingest/p912-grant-family.sh` over the shelf's
+  existing slug list and diff the verdict column. 🔴 **Expected non-zero**: any Boost payload on the
+  shelf currently reads MIT, and any Creative Commons payload reads `UNKNOWN-TEMPLATE`.
+- 🔴 **New: `912-G2` — `911-F4`'s homonym control must be extended to the *owner* axis.** The
+  committed classifier adjudicates repository rows, not owners. 🔵 **Cost: one leg**, and the shape
+  is fixed: an owner's affiliation is adjudicated from its repositories' payloads, never from its
+  name.
+- 🔴 **New: `912-G3` — Ethiopia's demand side is unmeasured.** This pass measured supply only: no
+  Ethiopian policy, procurement, connectivity or budget instrument was retrieved. 🔵 **Cost: one
+  regional leg**, and `911-G4`'s general question is still unpriced — **how many markets are
+  reachable only as another market's homonym?**
+- 🔴 **`911-G2` restated and still binding.** `p912`'s Ethiopian percentages are a **top-25-per-leg
+  sample** over a cohort where `70%` have zero stars, so the star sort is near-arbitrary across most
+  of it. **The leg totals (`86/14`, `11/4`, `5/2`, `22/9`, `59/26`) are exact; `81.4%` is not a
+  census.**
+- 🔴 **`DigComp 3.0` — not re-tested this pass.** Fifth consecutive pass unresolved; `p911` measured
+  all three EU domains returning connection failure at `2026-11-19` and this pass added no new
+  attempt. **Inherited gap, explicitly not re-measured** (`Gap 56`, `Gap 241`).
+- 🔴 **`ACTION TQ` and `ACTION TW` NOT RUN** — eighth pass.
+- 🔴 **Inherited red, re-measured rather than asserted — and the two runs are byte-identical.**
+  `make hooks` was run twice, once on this pass's tree and once on a clean `git worktree` checkout
+  of `596dbf4`, and the suite's own summary line is the **same string** in both:
+  **`53/76 gates green`, with the same 23 gates red in the same order.** 🟢 **`p912` introduces no
+  new red gate and clears none.** 🔵 `gate-shelf-consistency`'s detail was diffed specifically,
+  because this pass adds licence cells: **the same 5 disagreeing slugs** in both runs
+  (`h5p-php-library`, `hkuds/deeptutor`, `openeducat_erp`, `prairielearn`, `sonstellar969/open-moodle`)
+  — **none of p912's new cells disagrees with anything**. 🔴 The 19 non-`DECLARED_RED` failures
+  remain a pass of their own, for the reason `p911` gave and `Gap 245` requires.
+
 ## `2026-11-19` (p911) — **`906-G2` discharged on its last six markets, and the instrument that discharged it was measured wrong four times before it was published. Same 272 rows, two defensible classifiers, a 13-point spread on the headline. The co-term fix generalises in direction and collapses the channel in exactly the four markets with the least supply. India's examination tier is the first permissive national-curriculum supply this KB holds; Mexico's is one repository.**
 
 **Channels and posture.** `gh api search/repositories` (**28 legs**, 14 terms × bare and co-termed)

@@ -1536,3 +1536,88 @@ disputed and found **32 education, 13 not**
 directions, and only the hand count could say so. 🔴 **Three of those 45 were real education supply
 attributed to the wrong country** (Ethiopian matric tooling on a South African leg, a Vietnamese
 university's exam clients on a Chilean one): **a national-exam acronym is not a national boundary.**
+
+## T37 — The institutions that own the examinations have **claimed their namespace and published nothing**, and "present and silent" is a different market from "absent" (measured `p912`)
+
+Through `p911` this KB recorded the board-grade examination tier as a gap — *no delivery or marking
+platform exists under any licence* (`911-G1`). That is a statement about supply. `p912` asked the
+complementary question, which no pass had asked: **do the boards themselves publish anything?**
+
+Eight examination authorities, probed on two channels with a negative control:
+
+| Board | Market | Namespace | Public repositories |
+|---|---|---|---|
+| WAEC | Nigeria / Ghana / Sierra Leone / Gambia / Liberia | 🟢 exists | 🔴 **0** |
+| KNEC | Kenya | 🟢 exists | 🔴 **0** |
+| CENEVAL | Mexico | 🟢 exists | 🔴 **0** |
+| NABTEB | Nigeria | 🟢 exists | 🔴 **0** |
+| JAMB | Nigeria | 🟢 exists, indexed | 🔴 **0** |
+| NECO | Nigeria | 🔴 unrelated account (Ruby PBX shop, 2009–2010) | n/a |
+| DEMRE | Chile | 🔴 unrelated personal account | n/a |
+| UNEB | Uganda | 🟡 one `0 ★` hackathon repo, idle since 2014 | 🔴 1 |
+
+🟢 **Five boards have registered their own name on the platform and published nothing into it.**
+That is not the same fact as absence, and it changes the conversation in three ways.
+
+1. 🔵 **The ask is publication, not onboarding.** An institution that already holds its namespace
+   has made an institutional decision to be present. A studio engagement can propose *publishing
+   the question schema, the results format, the blueprint* as a deliverable, rather than proposing
+   that a ministry join a platform.
+2. 🔴 **There is no board-published interface to conform to, so the first builder defines it.**
+   Nigeria already has **four independent permissive CBT implementations** (`p911`) integrating
+   against a target with no published schema. 🔴 **Portability between boards cannot be assumed and
+   must be priced** — this is the concrete cost of the silence.
+3. 🟡 **And the silence is not evenly distributed.** Where the board name is *taken by somebody
+   else* — `NECO`, `DEMRE` — a studio cannot even propose the namespace as the publication channel,
+   and three of eight are in that state.
+
+🔴 **The inverse trend is worth stating too, because it is the one that pays.** Every artefact this
+KB holds for WAEC, JAMB, KNEC, PAES, EXANI and the EUEE was built by **students, teachers and
+tuition centres** — not one by the authority whose examination it targets. **The entire open
+examination layer of this industry is third-party**, and `T34`'s licence posture is the direct
+consequence: third parties building in public do not add a `LICENSE`.
+
+## T38 — The byte-read channel is itself a source of licence error, and this KB's own authority instrument was wrong in **both** directions on one five-row cohort (measured `p912`)
+
+`T19` records that published licence metadata is wrong often enough to be a procurement risk, and
+that the errors run both ways. It rests on an unstated premise: that **reading the bytes settles
+it**. `p912` measured the byte-read channel against itself and the premise does not hold.
+
+`ingest/p880-licence-byteread.sh` has been this base's licence authority since `p880` — every
+`N B · sha256₁₂` cell on these shelves came from it. Run over five granted repositories in `p912`'s
+Ethiopian cohort it was wrong on **two**, in opposite directions, on **byte-identical payloads**:
+
+| Repository | GitHub field | `p880` verdict | Byte truth | Defect |
+|---|---|---|---|---|
+| `Nugestudent2026/EdTech` | BSL-1.0 | 🔴 **MIT** | **BSL-1.0** (Boost, 1,338 B · `c9bff7573892`) | 🔴 **false positive** |
+| `hasensaramii977-cpu/Grade-12-National-Exam-Training-Model` | CC0-1.0 | 🔴 `UNKNOWN-TEMPLATE` | **CC0-1.0** (7,048 B · `a2010f343487`) | 🔴 **false negative** |
+
+🔴 **The false positive is the serious one, and its cause generalises.** The **Boost Software
+License 1.0** contains the string *"Permission is hereby granted, free of charge, to any person or
+organization"*; `p880`'s MIT detector greps for *"Permission is hereby granted, free of charge"*.
+**Boost is a prefix-collision of the MIT trigger phrase**, so every MIT verdict any
+single-phrase classifier has ever emitted over a Boost payload is wrong. 🔵 Both grants are
+permissive, so **no commercial conclusion in this KB inverts** — but the **notice obligations
+differ** (Boost 1.0 does not require reproducing the licence for binary-only distribution; MIT
+does), and this KB publishes notice obligations.
+
+🔴 **The false negative has more reach than its one row.** `p880` carries **zero** Creative Commons
+detectors — `grep -ci 'creative commons\|CC0\|CC-BY'` over the instrument returns `0`. So the
+licence family that `T25` (the trap has moved to data and content assets) and `T32` (the agent-skill
+tier is appearing under Creative Commons) are *about* is the one family the authority instrument
+could not see. **Every CC-licensed education asset it ever read came back `UNKNOWN-TEMPLATE`.**
+
+🟢 **The correction, and what it costs.** `ingest/p912-grant-family.sh` tests
+**specific-before-generic** (Boost suppresses MIT), adds CC0 / CC-BY / CC-BY-SA / CC-BY-NC, ISC and
+Unlicense detectors, flags any Creative Commons grant on a code repository as a scope question
+rather than a verdict, and refuses empty input. It resolves both controls on the same bytes and the
+same `sha256₁₂` as `p880` produced — **the payloads always agreed; only the classifier disagreed**.
+🔴 `p880` is deliberately **left in place and unmodified**: thirty-odd passes of cells came from it,
+and `Gap 245`'s rule is that a correction and a re-measurement do not ship together. Retiring it
+against these two controls is `912-G1`.
+
+🔵 **The standing rule for anyone reading this KB's licence cells.** A grant family is a **set** of
+detectors run cumulatively with the specific before the generic, never a first-match. And the
+sharpest form of the lesson: in both misses here **the published `spdx_id` field was right and this
+base's own byte-read was wrong** — the inverse of what `T19` would predict, and the reason `T19` now
+carries this trend as its counterweight rather than standing alone.

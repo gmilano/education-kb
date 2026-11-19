@@ -1,0 +1,11 @@
+owner	board	search_user_arm	http_profile_channel	public_repos	affiliation_verdict	note
+WAEC	West African Examinations Council (Nigeria/Ghana/SL/Gambia/Liberia)	422 Validation Failed	200 real org page	0	NAMESPACE REGISTERED, EMPTY	identical rc to nonexistent control on the search arm; org page renders
+KNEC	Kenya National Examinations Council	422 Validation Failed	200 real profile	0	NAMESPACE REGISTERED, EMPTY	"knec doesn't have any public repositories yet"
+CENEVAL	Centro Nacional de Evaluacion para la Educacion Superior (Mexico)	422 Validation Failed	200 real org page	0	NAMESPACE REGISTERED, EMPTY	"This organization has no public repositories"
+NABTEB	National Business and Technical Examinations Board (Nigeria)	422 Validation Failed	200 real org page	0	NAMESPACE REGISTERED, EMPTY	renders as "NabTeb"
+JAMB	Joint Admissions and Matriculation Board (Nigeria)	0 total_count	not probed	0	INDEXED, EMPTY	in the search index and empty, unlike the four above
+DEMRE	Departamento de Evaluacion Medicion y Registro Educacional (Chile)	4 total_count	not probed	4	HOMONYM - NOT THE BOARD	nextjs-site-template, movie-app, "Config files for my GitHub profile"
+NECO	National Examinations Council (Nigeria)	5 total_count	not probed	5	HOMONYM - NOT THE BOARD	Ruby PBX/ticketing shop, all repos 2009-2010
+UNEB	Uganda National Examinations Board	1 total_count	not probed	1	HOMONYM OR DORMANT	single repo "unhackthon", 0 stars, idle since 2014-09-20
+moe-ethiopia	Ministry of Education (Ethiopia) - candidate	0 total_count	not probed	0	INDEXED, EMPTY	probed under 911-G4
+nonexistentorg999	NEGATIVE CONTROL	422 Validation Failed	404 Not Found	n/a	DOES NOT EXIST	the control that makes the two channels separable
