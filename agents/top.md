@@ -312,6 +312,36 @@ fitness — `edutelligence` (17 ★) and `Pyris` (12 ★) run in production at T
 several repos above them are weekend projects. Treat stars as evidence of momentum and the
 origin column as evidence of durability.
 
+## National-examination agents — the six markets `906-G2` named, added `p911`
+
+🟢 **Every grant below was byte-read on the default branch resolved from the search channel**
+(`ingest/p880-licence-byteread.sh`, `2026-11-19`), and **one of the nineteen resolved on `master`**
+(`lindnerju/ePaeko`) — the `884-G2` default-branch fix paying for the second consecutive pass.
+🔴 **These are small.** The largest is `23 ★` and most are `0`–`3 ★`: `911-F3` measures that this
+tier has **no concentration at all** — `4` of `205` education-context repositories clear `100 ★`
+across all fourteen terms. 🔵 **Read them as reference implementations and starting points for a
+named market, not as products to adopt** — which is precisely what a studio entering Nigeria,
+Kenya, Chile, Colombia or an Indian state board needs and did not have in this KB before.
+
+| Agent | Repo | Licence | ★ | Last push | What it does | Origin |
+|---|---|---|---|---|---|---|
+| **Jambora** | https://github.com/edunelsonit/Jambora | Apache-2.0 (11,357 B · `c71d239df917`) | 1 | 2026-03-24 | AI-powered CBT application for Nigeria's JAMB. 🟢 **The most commercially relevant row in this section**, because WAEC and NECO are moving the WASSCE to full computer-based testing with **essay components** in 2026 (`intel/market.md` EMEA) — this is an open starting point aimed at exactly that transition. 🔵 Standard unmodified Apache-2.0 payload, byte-identical to three other rows promoted this pass. | EMEA — Nigeria |
+| **NAIJASCHOLAR** | https://github.com/ALIYUAAM10/NAIJASCHOLAR | MIT (1,082 B · `6fd3e72cd64d`) | 1 | **2026-11-19** | Free, open-source exam prep for Nigerian students across JAMB, WAEC and NECO. 🟢 **Pushed on the day of this pass** — the clearest evidence for `911-F3`'s claim that this tier is *live and ungranted* rather than abandoned, and this one **is** granted. | EMEA — Nigeria |
+| **KCSE-predictor** | https://github.com/001kenji/KCSE-predictor | Apache-2.0 (11,357 B · `c71d239df917`) | 1 | 2026-01-05 | Predicts likely examination topics by analysing **20+ years of KCSE past papers**. 🔵 **The method is the asset, not the prediction**: a longitudinal corpus of a national board's own papers is the input a studio needs for item generation and blueprint analysis, and Kenya's National AI Strategy 2025–2030 puts higher-education institutions at the centre of implementation (`intel/market.md` EMEA). 🟡 No published accuracy evaluation — treat the predictive claim as unvalidated. | EMEA — Kenya |
+| **ICFES-Exam-Engine** | https://github.com/theteacherbot/ICFES-Exam-Engine | MIT (1,067 B · `95927f6f69fa`) | 0 | 2026-08-01 | Generates Saber 11 / ICFES-style assessments. 🟢 **The first Colombian examination agent this KB has ever carried**, and `911-F4` finds Colombia has the deepest permissive exam tier of the four LATAM markets measured — ahead of both Brazil and Mexico, which inverts the order market size would suggest. | LATAM — Colombia |
+| **paes-ensayos** | https://github.com/matmiidu/paes-ensayos | MIT (1,065 B · `db233fe3a19a`) | 0 | 2026-08-12 | Configurable PAES mock exams: the user chooses the test, the content axes and the number of items. 🟢 **The first Chilean `PAES` row in this KB.** 🔵 Chile is also the region's most advanced regulator — National AI Policy since 2021 with a law in discussion — so a Chilean engagement has both an open starting point and a published compliance target. | LATAM — Chile |
+| **Study-assistant** | https://github.com/Reethureddy8/Study-assistant | MIT (1,069 B · `ff3eb0698f8a`) | 2 | 2026-10-28 | Grounded RAG study assistant over **NCERT Class 9 Science** that **cites its sources**. 🟢 **Citation-grounding is the property that matters here**, not the size: it is the acceptance test `P23` is built around and the control India's own coverage says is missing. | APAC — India |
+| **RAG-Enhanced-NCERT-Tutor** | https://github.com/praj2408/RAG-Enhanced-NCERT-Tutor | MIT (1,072 B · `8a909947f61b`) | 6 | 🔴 2024-10-20 | AI tutor over the NCERT curriculum. 🔴 **Two years without a push** — carried as a worked reference for the retrieval layer over NCERT material, **not** as a maintained dependency. | APAC — India |
+| **Ncert__RAG__Chatbot** | https://github.com/MichealQuelazar/Ncert__RAG__Chatbot | MIT (1,075 B · `13908cd9b08e`) | 1 | 🔴 2025-12-18 | Full-stack application turning NCERT textbooks into a conversational tutor. 🟡 Self-described as production-ready at `1 ★` with no push in eleven months; the **full-stack shape** is the useful part. | APAC — India |
+| **Sanshodhan** | https://github.com/datastiltskin/Sanshodhan | MIT (1,073 B · `909fd4f320c0`) | 1 | 2026-10-21 | **A `git diff` for NCERT textbooks across editions** — shows what changed in the national curriculum over time. 🟢 **The most original artefact in this section and the one with no equivalent anywhere in this KB.** 🔵 **Why it matters commercially**: every curriculum-aligned product this KB scopes (`P22`, `P23`, `P29`) silently assumes the curriculum is static. India's AI-and-computational-thinking rollout changes the syllabus from Class 3 in 2026-27 and Classes 9–10 in 2027-28, so **curriculum drift is a live maintenance cost**, and this is an instrument for measuring it. | APAC — India |
+| **ePäko** | https://github.com/lindnerju/ePaeko | MIT (1,086 B · `5a44d126d2e6`, on `master`) | 3 | 🔴 2024-01-24 | Interactive tool for choosing Abitur examination subjects (`Prüfungsfachwahl`). 🟡 **Germany's only promotable row from this channel, and it is a form-logic helper rather than an AI agent** — which is itself the finding: the `Abitur` leg returned the pass's worst collision rate and just `7` nominal hits when co-termed (`911-F2`), so German examination supply is **unreachable on this channel**, not merely absent. | EMEA — Germany |
+
+🔴 **Ten rows, and the number is the finding rather than a shortfall.** `14` terms × `2` query forms
+returned `491` distinct repositories and `205` with education context; `32` carried a permissive
+licence *field*; `19` were byte-read; `10` are agents worth a row here and `9` went to
+`repos/foundations.md` and `verticals/solutions.md`. 🔵 **Fewer real rows beat padding** — and the
+funnel from `637,622` nominal hits to `10` published agent rows is the honest cost of this channel.
+
 ## The per-institution LMS bridge (class `T30`) — restored and extended in `p908`
 
 🔴 **Read this heading as a repair notice.** `p908` audited every line in this KB's two trending

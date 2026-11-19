@@ -498,6 +498,43 @@ holds, the US gap is not tooling but *alignment artefacts* — machine-readable 
 and that is testable with an `SAT`/`AP`/`STAAR` run of this instrument.** Registered as the
 highest-value North America probe for a later pass; **not asserted here**.
 
+
+🟢 **Added `p911` — the prescribed North America leg, and it is the first time this file can state
+the *governance* gap as a measured number rather than as a shape.**
+
+- 🔴 **Only `6%` of teachers say their school's AI policy is clear** — Stanford's **AI Index 2026**,
+  reported via The Next Web. 🔵 **Why this is the most commercially useful number in the leg**:
+  every other figure in this file measures *adoption*, and this one measures whether anyone knows
+  the rules. It is the demand signal for governance work, which is the service line that does not
+  depend on a district having budget for a product.
+- 🔴 **More than `4` in `5` US teens have used AI tools and over two-thirds use them regularly**
+  (June 2026 report, *single source*), against **half of schools having no AI policy at all**.
+  🟡 Adoption has outrun governance here exactly as `T4` records for LATAM; the difference is that
+  the US has a legislative response in flight and LATAM largely does not.
+- 🟢 **The state-level instruments are named, and they are deadlines rather than aspirations.**
+  **Illinois** requires the state board to publish district and educator AI guidance by
+  **2026-07-01** (already carried in this KB — recorded here as a corroborating second channel, not
+  a new fact). **North Carolina** directs its state board to adopt **K-12 AI standards** covering
+  core functions and responsible use. **Virginia `S.B. 394`** directs the state education agency to
+  issue guidance **including teacher training**. 🔵 Counts diverge by tracker — *"at least 15
+  states"* on one, *"nearly 100 state bills this year"* on another — so the **direction** is
+  multi-source and the **magnitude** is not; quote the named instruments, not the tally.
+- 🟢 **Federal money has a stated AI priority with a dated competition.** The US Department of
+  Education's *AI in Education* discretionary-grant priority directs funding at AI literacy,
+  personalised learning and educator professional development, with **first competitions expected
+  in the 2026-27 cycle**. 🔵 **This is a procurement calendar, not a trend**: it tells a studio when
+  a proposal has to exist.
+- 🟡 **North America is still the largest market at a reported `38%` share** (*single source*,
+  secondary) **while the fastest expansion is in APAC** (OECD-based analysis). Both halves matter:
+  the budget is here and the growth is not.
+
+🔴 **Declared null for this leg, stated rather than left as silence:** no open-source North American
+education artefact was surfaced by this pass. The channel that paid this pass was the
+national-examination channel (`911-F1`), and **the United States has no single national examination**
+for it to query — the SAT/ACT/AP tier is privately owned and its item banks are not published under
+any licence. 🔵 **That is a structural property of the market, not a gap in the search**, and it is
+why `agents/top.md` has no US exam-prep row to promote.
+
 ### EMEA
 
 🟢 **Promoted in `p902` — four facts held only in the log until now** (see `902-F1`; the
@@ -1243,6 +1280,80 @@ directions:
 proxy when re-tested on 2026-11-19. Third consecutive pass. The EU AI-literacy framework remains a
 **gap in this file, not a fact in it**.
 
+
+🟢 **Added `p911` — Africa enters this file as placed intelligence for the first time, and the
+instrument that paid was the national-examination channel (`911-F1`), not a news leg.**
+
+🔴 **Nigeria is the single most actionable procurement in this pass, in any region.** **WAEC** and
+**NECO** are moving the **WASSCE to full computer-based testing**, with reports that **both the
+objective *and* essay components go computer-based by May–June 2026**, delivered through
+**accredited `JAMB` and `NOUN` CBT centres rather than schools**. **JAMB** separately *"rounded off
+automation of question setting"* (July 2026).
+
+- 🔵 **Why this is a Globant-shaped opportunity rather than a news item**: a national board putting
+  **essay** components on screen has, by construction, created demand for **automated and
+  assisted marking at national scale** — the exact capability `T21`'s permissive grading tier and
+  `Gap 246`'s feature-extractor work are about. The buyer is identified, the deadline is published,
+  and the delivery estate (`JAMB`/`NOUN` centres) already exists.
+- 🟡 **And the risk is published with it.** Stakeholders have raised readiness objections; the CBT
+  centre proprietors' association flags the cost of networked computers for schools; and one report
+  refers to a **House of Representatives request to suspend computer-based WAEC until 2030**
+  (*single source, detail not readable in this environment*). 🔴 **Do not price a 2026 delivery on
+  the 2026 date alone** — the political risk is live and is the first thing a client will raise.
+- 🟢 **Local supply exists and is permissive**, which is new to this file: `p911` byte-read and
+  promoted Nigerian CBT simulators and exam-prep tools under **MIT** and **Apache-2.0** (see
+  `agents/top.md`, `repos/foundations.md`). Commercial incumbents are also named — **Class54**
+  (AI tools for JAMB/WAEC, *"over 300,000 students"*, self-reported) and **EDUVATE CBT** (AI topic
+  tutor, 49 institutions, founder's own post) — so a studio is entering a contested market, not an
+  empty one.
+
+🟢 **Kenya — the strategy names the buyer and the teacher pipeline is already funded.** Kenya's
+**National AI Strategy 2025–2030** places **higher-education institutions at the centre** of
+national implementation, the OECD lists a **nationwide AI curriculum** among its measures, and the
+Ministry of Education reports **more than 62,000 teachers trained in ICT integration by July 2026**.
+A June 2026 Nairobi dialogue was convened specifically on the **gap between AI ambition and
+institutional adoption** in higher education. 🔵 **Read commercially**: the mandate and the teacher
+base exist, and the declared gap is *adoption*, which is delivery work.
+
+🟡 **South Africa — the regulation is the least settled of the three and the institutions are the
+most advanced.** The OECD's April 2026 table lists South Africa's AI policy framework as **still
+under development** (**POPIA** and an **NRF AI Skills Fund** are what exist), while **the University
+of Cape Town, the University of Johannesburg and the University of KwaZulu-Natal have all adopted
+official institutional AI policies** — reported as **the main exception among African universities**.
+**Microsoft** has a stated goal of AI and digital skills for **a million South Africans by 2026**.
+🔵 **So the entry point here is institutional, not ministerial**: the universities are the ones with
+a policy to implement.
+
+🔴 **The regional frame a client will ask for, and it is unflattering in a useful way.** A study of
+**47 African higher-education institutions and 199 edtech companies** (November 2025) found that
+**over 83% of African AI startup funding in early 2025 went to four countries — Kenya, Nigeria,
+South Africa and Egypt**, and a February 2026 report on the same study found **60% of African
+universities lack an AI policy**. 🔵 **Both halves are the pitch**: capital is concentrated in
+exactly the markets above, and the governance deficit is the service line.
+
+🟡 **Germany — the framework moved in October 2026 and the exam reform is dated to 2030.** The
+**KMK** adopted an update to its competency framework *Bildung in der digitalen Welt* on
+**2026-10-16**, and a **"KMK-Navigator für KI-Kompetenzen"** is to be integrated into the
+**shared `AIS.chat` chatbot**. 🔴 **The criticism is as load-bearing as the decision**: commentary
+(GEW) notes the resolution names **neither additional resources nor binding teacher-qualification
+requirements**. In **North Rhine-Westphalia**, AI use in new examination formats is foreseen under
+conditions, the **APO-GOSt** draft went to the Landtag in **April 2026**, and the reform starts in
+the **2027/28** school year, with the **first Abitur under the new rules in 2030**. 🔵 **`AIS.chat`
+is the named state-level artefact to investigate** — a public education chatbot with a federal
+framework being wired into it is the procurement shape this file should be tracking in EMEA.
+
+🔴 **Declared nulls for this leg, because an informed gap is information:**
+
+- **No open-source CBT or marking platform for the WAEC/NECO transition was found**, on a leg run
+  specifically for it. 🔵 Remedy and cost: the supply promoted this pass is **candidate simulators,
+  not board-grade delivery software**; the board-grade tier is a **build**, and that is the finding.
+- **No KMK decision regulating AI in the Abitur specifically, and nothing at all on open source in
+  German examination software.** The Abitur co-term leg also returned the pass's worst collision
+  rate (`911-F2`), so German supply is not merely unfound — it is **unreachable on this channel**.
+- 🔴 **`DigComp 3.0` — fourth consecutive pass blocked.** `ec.europa.eu`,
+  `digital-skills-jobs.europa.eu` and `eur-lex.europa.eu` all returned connection failure from the
+  egress proxy at `2026-11-19`. Recorded as a gap (`Gap 56`, `Gap 241`), not a fact.
+
 ### APAC
 
 🟢 **Promoted in `p902` — two convening facts, plus the region's one dataset-scale supply row**
@@ -1846,6 +1957,55 @@ risk: a delivery team that greps GitHub for "KSSM" or "SNBT" will find Kotlin st
 Minecraft serialisation libraries (`910-F1`), and a team that finds the real repositories will find
 no grant on two-thirds of them.
 
+
+🟢 **Added `p911` — and this block exists to close `Gap 254`, which recorded that APAC coverage in
+this file was *regulation only, for a second consecutive pass* while the three highest-adoption
+agents on `agents/top.md` are APAC university projects.** 🔵 **`Gap 254`'s prescribed remedy was
+per-ministry legs rather than a fifth generic English query. The leg below was run that way — India's
+ministry and boards by name — and it returned a curriculum rollout with dates, owners and a named
+binding constraint.**
+
+🔴 **India has made AI a mandatory school subject with a dated rollout, and the dates are inside a
+studio's planning horizon.**
+
+- 🟢 **AI and Computational Thinking become mandatory from `Class 3`, starting the `2026-27`
+  academic year**, with **Classes 9–10 expanding in `2027-28`** (Ministry of Education; carried by
+  several independent outlets).
+- 🟢 **Ownership is named and it is split**: **`NCERT`** reviews the draft curriculum and a
+  **`NCERT`–`CBSE` Coordination Committee** oversees integration. 🔵 **That matters for who a studio
+  sells to** — the content authority and the examining board are different bodies, and this KB's
+  `P22`-shaped curriculum-spine work has to satisfy both.
+- 🟡 **What `CBSE` actually offers today is much smaller than the mandate**: a **15-hour AI skills
+  module for Class VI** and an **elective AI subject for Classes IX–XII**. 🔵 **The gap between the
+  15-hour module and a Class-3-upward mandate is the work.**
+- 🔴 **The binding constraint is stated by the officials themselves: teacher capacity, with over
+  `10 million` teachers needing training.** This is `T11` ("AI literacy is becoming a statutory
+  curriculum mandate, and teacher capacity is the binding constraint") instantiated at the largest
+  scale this KB has recorded. 🔵 **Teacher-facing enablement is therefore the larger line item than
+  student-facing product**, and it is the one with a statutory deadline behind it.
+- 🔴 **Two demand-side cautions a client will raise first.** **State board schools — which enrol the
+  overwhelming majority of India's students — are described as operating in "an entirely different
+  infrastructure reality"** from CBSE schools, and one report finds **most students stop using AI
+  tools after one or two sessions**. 🟡 **So a deliverable priced for CBSE-grade connectivity does
+  not transfer to the state boards**, which is where the volume is.
+- 🟢 **Singapore** (Smart Nation) plans to **train teachers at all levels on AI in education by
+  2026** — a second APAC market whose teacher pipeline is a funded programme rather than an
+  aspiration.
+
+🟢 **Supply, and this is the half `Gap 254` said was missing.** The `CBSE`/`NCERT`/`JEE`/`NEET` legs
+of `911-F1` surfaced and byte-read the first **India-specific, permissively licensed, curriculum-
+aligned** rows this KB holds — a **14,000-item JEE Main previous-year question store**, two
+**grounded RAG tutors over NCERT textbooks that cite their source**, a **curriculum-drift differ for
+NCERT textbooks across editions**, and a repository tracking **`CBSE` AI subject code `417`**
+itself. All are on `agents/top.md` and `repos/foundations.md` with byte-read grants. 🔵 **`Code 417`
+is the row to notice**: it is open supply tracking the exact subject the mandate above expands.
+
+🔴 **Declared limit on this leg, stated plainly:** it was run against **India** by ministry and board
+name, and **only** India. **China, Japan, Korea and Australia were not queried for procurement this
+pass** — the generic APAC English leg returned, as `p910` predicted it would, nothing this tree did
+not already hold. 🔵 `Gap 254`'s remedy named Japanese, Korean and Simplified-Chinese ministry legs;
+India consumed the budget and **those three remain unrun**. Carried forward as `911-G3`.
+
 ### LATAM
 
 🟢 **Promoted in `p902` — two facts held only in the log** (method: `902-F1`):
@@ -2369,6 +2529,68 @@ finding **sharpens why that matters**: the one market in this pass with a machin
 syllabus published it under **CC BY-NC**, which is unusable in a paid engagement. A studio that
 holds a re-authored, grant-clean BNCC spine (`P22`) holds the thing that six of this pass's eight
 APAC markets lack entirely — and that is a **LATAM-built asset sellable outside LATAM**.
+
+
+🟢 **Added `p911` — the four LATAM national-examination markets this KB had never queried
+(`PAES`, `EXANI`, `COMIPEMS`, `ICFES`/`Saber 11`), plus the regulatory and adoption leg run in
+Spanish.** 🔵 **`p904` recorded Mexico as this base's largest supply-side hole and `p910` did not
+touch it. It is touched here, and the answer is specific rather than encouraging.**
+
+🔴 **The region's adoption numbers are the highest in this file, and they are student-led.**
+
+- **AI in Higher Education LATAM Survey 2026: `92%` of students use AI regularly and `67%` at least
+  weekly.** In **Mexico**, **`66%` of university students use these tools at least weekly and `79%`
+  use them to generate text**. 🔵 **Read against `T4`**: adoption has outrun governance here more
+  than anywhere, and the `79%` text-generation figure is an **assessment-integrity** number before
+  it is an adoption number — it is the business case for `T10`'s assessment redesign.
+- **Chile** was studied at scale on the supply side of the classroom: a study of **more than 2,000
+  teachers** on AI knowledge and classroom use.
+
+🟡 **Regulation splits the two biggest markets in opposite directions, and this is the single most
+useful distinction for scoping a LATAM engagement:**
+
+- 🟢 **Chile leads**: a **National AI Policy since 2021** and **a law in discussion** (January 2026
+  analysis). **Brazil and Colombia** have national strategies **but no education-sector-specific
+  regulation**.
+- 🔴 **Mexico has no national law, no binding guidelines, and has chosen not to make any.** The
+  **SEP**'s stated approach is a set of **ten principles rather than prohibitions**. 🔵 **For a
+  studio this is a *faster* market, not a looser one**: with no statutory spec to build to, the
+  buyer's own governance document becomes the acceptance criterion — which is exactly the
+  deliverable `P14`-shaped governance work produces. 🟡 **A Tec de Monterrey critique names the
+  failure mode**: rules that *"enumerate aspirations without explaining how to apply them in schools
+  with different resources"*. Quote it; it is the objection a Mexican client will already have.
+- 🟢 **UNESCO signed an agreement with Chile's CENIA** to promote ethical AI in education across the
+  region, **including the integration of `Latam-GPT`**, the open regional language model. 🔵 **This
+  is the regional sovereignty channel (`T6`) with an education mandate attached** — and `Latam-GPT`
+  is already a named asset in this KB.
+
+🟢 **Supply, byte-read this pass — and LATAM's permissive examination tier is no longer empty.**
+`p911` promoted the first **Chilean `PAES`** row (**MIT**, a configurable PAES mock-exam generator),
+the first **Colombian `Saber 11`/`ICFES`** rows (**MIT** item generation and an **Apache-2.0**
+assessment platform), and a **Mexican `COMIPEMS`** syllabus repository (**Apache-2.0**) — see
+`agents/top.md`, `repos/foundations.md` and `verticals/solutions.md`. 🔵 **Colombia, not Brazil or
+Mexico, has the deepest permissive exam tier of the four**, which inverts the order a studio would
+assume from market size.
+
+🔴 **Declared nulls and measured limits for this leg — all four are informative, none is silence:**
+
+- 🔴 **`EXANI` and `COMIPEMS` are the weakest channels measured anywhere in this pass.** `EXANI`
+  bare returns `215` nominal hits at **100% collision** (the acronym matches the `exania` product
+  name), and its co-term leg returns **one** repository. **`COMIPEMS examen` returns `0`** — the
+  co-term **annihilated** the channel (`911-F2`). 🔵 **So `p904`'s "Mexico is the largest supply hole"
+  is now explained rather than merely restated: Mexican exam supply is not hidden, it is
+  substantially absent, and the one permissive row found is a student's subject list.**
+- 🔴 **No Spanish-language source was found connecting AI policy to `PAES` or `EXANI` specifically.**
+  The Spanish leg returned national AI policy and university adoption, and **nothing on the
+  admissions examinations themselves**. 🔵 One indirect signal was seen and **is not carried as a
+  fact**: an August 2026 CIPER piece referring to AI-linked problems in UNAM admissions testing,
+  which could not be opened in this environment.
+- 🟡 **`PAES` surfaces non-Chilean supply.** The `PAES` leg returned a **Vietnamese** university's
+  exam clients (`anhvlttfs/FPTExamClients`) and the `matric` leg returned **Ethiopian** matric
+  tooling — `3` of `45` hand-adjudicated rows were real education supply attributed to the **wrong
+  country** (`evidence/p911-adjudication.2026-11-19-p911.tsv`). 🔵 **Recorded as a property of the
+  channel**: a national-exam acronym is not a national boundary, and the misattribution is a *source
+  of discovery* (Ethiopia was never queried) as well as an error.
 
 ### Global
 

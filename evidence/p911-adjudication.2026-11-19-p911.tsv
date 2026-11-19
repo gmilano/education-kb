@@ -1,0 +1,46 @@
+repo	stars	market	hand_verdict	ground
+jeeliz/jeelizFaceFilter	2957	India	NOT-EDU	WebGL multi-face tracking library; `learn` matched `deep-learning` in topics
+gram-ai/capsule-networks	1755	South Africa	NOT-EDU	PyTorch NIPS-2017 capsule-network implementation; `CAPS` acronym collision
+jeeliz/jeelizWeboji	1101	India	NOT-EDU	WebGL face/expression tracking
+jeeliz/jeelizAR	371	India	NOT-EDU	JavaScript object detection for AR
+brunnergino/JamBot	64	Nigeria	NOT-EDU	Music chord-model research; `JAMB` acronym collision
+LoserCheems/WonderfulMatrices	44	South Africa	NOT-EDU	Small language models; `matric` collision
+HostServer001/jee_mains_pyqs_data_base	23	India	EDU	14k+ JEE Main previous-year questions with semantic clustering
+srigalibe/NCERT_India_Grade_Mathematics	16	India	EDU	India mathematics, grades 6-12
+anhvlttfs/FPTExamClients	16	Chile	EDU-WRONG-MARKET	FPT University (Vietnam) exam clients; surfaced on a Chilean PAES query
+KosinskiLab/AlphaJudge	16	Chile	NOT-EDU	AlphaFold protein-complex evaluation pipeline
+Shabber10/ALL-PYQ-Papers	15	India	EDU	State board, CBSE, JEE, UPSC past papers
+yornaya/Railway-Management-System	8	India	EDU	CBSE AISSCE practical-assessment project
+alvaretto/r-exams_matematicas	8	Colombia	EDU	Secondary mathematics exercise bank on R/exams
+gadepall/cbse-papers	7	India	EDU	CBSE question papers
+ShaheerCH/Capstone	6	South Africa	NOT-EDU	Personal bootcamp portfolio project, not education supply
+simonlsgr/Anki-Project	4	Germany	EDU	Anki decks built in preparation for the Abitur
+ScarVite/Sort-Algorithm-Visualiser	4	Germany	EDU-MARGINAL	Student artefact for an oral final exam; not reusable supply
+CarlosLlano/ds4a-app	3	Colombia	NOT-EDU	Data-science training-programme capstone, not education supply
+gadepall/ncert-archive	2	India	EDU	Math and computing worked from NCERT textbooks, classes 9-12
+CodeLeom/e-exam	2	Nigeria	EDU	PHP/MySQL CBT serving JAMB past questions
+exohood/exania-machine-learning	2	Mexico	NOT-EDU	`EXANI` matched the `exania` product name
+exohood/exania-telegram-bot	2	Mexico	NOT-EDU	`EXANI` matched the `exania` product name
+Somsubhra/ncert-readability	1	India	EDU	Readability-index study of NCERT textbooks
+MichealQuelazar/Ncert__RAG__Chatbot	1	India	EDU	Full-stack RAG over NCERT textbooks
+austainodedon/NaijaExams	1	Nigeria	EDU	JAMB CBT web app
+chineduokore/SciCBT.ng	1	Nigeria	EDU	WAEC/NECO/JAMB practice CBT
+tomreising/KCSecuredDockerStack	1	Kenya	NOT-EDU	Docker front-end login; `KCS` collision
+zuchuzuhura1508-bot/Knec-John	1	Kenya	EDU-BARRED	Education context, but the repository advertises leaked KCSE papers; unusable
+wamaithaNyamu/KCSE-Analysis	1	Kenya	EDU	KCSE dataset analysis and reporting
+ethioska/G-Matrix	1	South Africa	EDU-WRONG-MARKET	Ethiopian matric/regional results bot; surfaced on a South African query
+exohood/exania-quantum	1	Mexico	NOT-EDU	Quantum computing; `exania` name collision
+Santiago-Soria/PreparateCOMIPEMSWeb	1	Mexico	EDU	COMIPEMS preparation site, university coursework
+rajibtaranidas-star/CBSE-SIKSHA	0	India	EDU	CBSE syllabus study app
+tksiakor/passco	0	Nigeria	EDU	WAEC exam preparation
+peteruz158-afk/ExamAi-bot	0	Nigeria	EDU	WAEC AI Telegram tutor bot
+philemon-kibor001/kcse-course-predictor	0	Kenya	EDU	Predicts university courses from KCSE results
+philemon-kibor001/kcse-course-predictor-app	0	Kenya	EDU	App form of the same predictor
+steve-ongera/KNEC-Exam-Management-System	0	Kenya	EDU	Django examination-management system for KNEC
+hamawy5/matricpulse-ai-	0	South Africa	EDU-WRONG-MARKET	Ethiopian matric exam prep; surfaced on a South African query
+macbuse/random-matrices-	0	South Africa	EDU	Random matrices for teaching and exams
+antderas/PROGIII_0519	0	Chile	EDU	PAES preparation coursework
+Leonardoat20/paes-prep	0	Chile	EDU	PAES preparation app
+maldana-cas/lecmafis	0	Colombia	EDU	Saber 11 / ICFES preparation platform
+hecmendoza/proyecto-saber11	0	Colombia	EDU	Saber 11 global-score prediction, scikit-learn + open data
+JP-Danix/Saber11-CRISP-DM	0	Colombia	EDU	Saber 11 score prediction, CRISP-DM + XGBoost

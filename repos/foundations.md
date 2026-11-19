@@ -194,6 +194,27 @@ is the most technically interesting item found) and `123chenqi98/EduMultimark` (
 marking on a fine-tuned LLaVA-13B, the only **multimodal** grader found in any language this pass).
 Recorded in `intel/measured-unusable.md`. **No licence is not a permissive licence.**
 
+## National-examination corpora and curriculum assets — added `p911`
+
+🔵 **Why these are foundations and not agents**: each is a *corpus* or a *curriculum artefact*, which
+is the layer `T26` says is now the unit of publication and `T34` says is two-thirds ungranted. The
+five below are the permissive exceptions, byte-read on `2026-11-19`.
+
+| Repo | Licence | Role |
+|---|---|---|
+| https://github.com/HostServer001/jee_mains_pyqs_data_base | 🟢 **MIT** (1,070 B · `ad8519669214`) | **14,000+ JEE Main previous-year questions** with semantic clustering — **23 ★, pushed 2026-05-11**, the largest permissive artefact this pass found in any of the fourteen markets. 🟢 **The item bank is the scarce asset.** `P29` (p910) exists because Singapore's and Japan's national corpora are `CC BY-NC` and cannot be adopted; this one **can**. 🔵 **It is also how the classifier was caught being wrong**: v2 of `p911`'s instrument graded this row NOT-EDU because India's own word for a past paper is `pyq`, which an English education vocabulary does not contain (`911-F5`). |
+| https://github.com/alvaretto/r-exams_matematicas | 🟢 **MIT** (1,078 B · `67a6e5e5a2af`) | Secondary-level mathematics exercise bank built on **R/exams** — **8 ★**, 🔴 pushed 2024-03-18. 🟢 **The format is the value**: R/exams produces parameterised items that render to print, Moodle and QTI from one source, so this is a worked Spanish-language example of the **item-as-code** pattern `P29` prescribes. 🟡 Unmaintained for 20 months; read as a template. |
+| https://github.com/SettibathulaJyothi/Aritificial-Intelligence-Code-417-Skill-Education-Class-10 | 🟢 **MIT** (1,076 B · `40a516b92bfb`) | Supporting material for **CBSE subject code `417` — "Artificial Intelligence", Class 10**. 🟢 **Open supply tracking the exact subject India's mandate expands**: AI and Computational Thinking become compulsory from Class 3 in **2026-27** and Classes 9–10 in **2027-28** (`intel/market.md` APAC). 🔵 `1 ★`, pushed 2026-10-30 — small, current, and the only row in this KB pinned to a named CBSE subject code. |
+| https://github.com/zayn-anwar/NCERTTBDL | 🟢 **MIT** (1,067 B · `c2cd195af659`) | NCERT textbook downloader — **2 ★**, 🔴 pushed 2025-02-14. 🔵 **Infrastructure, not content**: it is the acquisition step in front of any NCERT-grounded build, and it is the step every Indian tutor row in `agents/top.md` reimplements privately. 🟡 Scraping a ministry site is a **terms-of-use** question before it is a licence question — the MIT grant covers the tool, not the material it fetches. |
+| https://github.com/LiraJ07/Temario_Comipems_Crissbeck001 | 🟡 **Apache-2.0** (11,357 B · `c71d239df917`) | The **COMIPEMS** subject list (Mexico City upper-secondary admissions) — `0 ★`, 🔴 pushed 2025-04-30, self-described as *"just the subjects from my school"*. 🔴 **It is carried for one reason and the reason is a negative result**: it is the **only** permissively licensed Mexican examination artefact found across the `EXANI` and `COMIPEMS` legs, where `EXANI examen` returned **one** repository and `COMIPEMS examen` returned **zero** (`911-F2`). 🔵 **`p904`'s "Mexico is the largest supply-side hole" is now measured rather than asserted** — the hole is real, and this row is its floor. |
+
+🔴 **One row is deliberately published as barred rather than dropped**, because an absence a later
+pass cannot see is worse than a visible refusal:
+
+| Repo | Licence | Role |
+|---|---|---|
+| https://github.com/steve-ongera/KNEC-Exam-Management-System | 🔴 **No `LICENSE` file — unusable** | A Django examination-management system for **Kenya's KNEC** — functionally the most substantial Kenyan artefact this pass surfaced, and 🔴 **not adoptable**. 🟢 **Proven live-and-ungranted rather than assumed**, applying `909-G2`'s gate (*"`NORESOLVE` on a fixed ladder is not absence"*) with a **Django-idiomatic path**: `README.md` and `manage.py` return `200` at `HEAD` while `LICENSE` and `requirements.txt` return `404`, and `git ls-remote --symref` resolves — whereas the nonexistent control `nonexistentorg999/nope999` returns `404` on all four paths and resolves nowhere. 🔵 **Both came back from the licence instrument as the same verdict (`NO-LICENCE-FILE-FOUND`)**, which is exactly the conflation `909-F1` warned about; the discriminative probe is what tells them apart. 🔵 **Commercial read**: this is a **licence request**, not a dead end — see `intel/licence-requests/`. |
+
 ## Notebook-native teaching and assessment — added `p902`
 
 🔵 **Why this section exists.** This file held `nbgrader` and `jupyterhub` and nothing else from the

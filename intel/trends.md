@@ -1388,7 +1388,9 @@ of the 201 by vehicle — education-code amendment versus standalone AI act. If 
 amendments are rising while standalone AI bills fall, `T33` graduates from a shape to a measured
 distribution, and the ordering in `T1` needs revisiting.
 
-## T25 — National-curriculum-aligned supply is the **inverse** of the curated open-source shelf: live, diffuse, and two-thirds ungranted (measured `p910`)
+## T34 — National-curriculum-aligned supply is the **inverse** of the curated open-source shelf: live, diffuse, and two-thirds ungranted (measured `p910`)
+
+🔴 **Renumbered by `p911`, and the reason is recorded rather than tidied away.** `p910` published this trend as **`T25`** while `T25` was already taken — the data-and-content licence trap, added `p902` (line 11 of this file says so) — and this file's maximum was `T33`. 🔵 **Nothing in the tree is harmed by the renumber**: all 13 `T25` citations in `agents/trending.md` and all 10 in the delivery files resolve to the `p902` trend, and `p910` never cited its own by number. 🟢 **A gate now prevents the recurrence** — `compose/code/p911-identifier-collision/`, wired into `make hooks`, on the same reasoning `gate-case-collision` (p439) applies to repository addresses: two spellings of one repository compile to two entities, and two trends under one identifier compile to **one**, leaving the other unreachable. 🔴 **Cite this trend as `T34`; a citation to "`p910`'s `T25`" means this row.**
 
 🔵 **The claim this trend replaces.** Every trend above this one is about the open education tier
 that *can* be adopted — `T21`'s mature permissive grading stack, `T17`'s permissive extension
@@ -1437,3 +1439,100 @@ is the client's unfinished internal build. The defensible asset is the **re-auth
 curriculum spine** (`compose/patterns.md` **P22** for Brazil's BNCC, **P29** for the APAC exam
 tier): the one thing the open tier cannot supply here, because where a national syllabus *has* been
 published machine-readably, it was published NonCommercial.
+
+## T35 — A national-examination discovery channel buys precision with recall, and the bill falls on exactly the markets that have the least supply
+
+🔵 **What this trend is about.** `p910` opened the national-examination channel and found the bare
+acronym tier is mostly homonym noise, fixable with one co-term. `p911` ran the same instrument on
+**14 new terms across 7 new markets** (India, Nigeria, Kenya, South Africa, Germany, Chile, Mexico,
+Colombia) and the fix **holds in direction and fails in distribution** — which is the part a studio
+has to plan around.
+
+🟢 **The aggregate, from the committed instrument** (`ingest/p911-exam-channel.py`,
+`evidence/p911-exam-summary.2026-11-19-p911.tsv`):
+
+| | Bare acronym | With one co-term |
+|---|---|---|
+| Nominal hits across 14 terms | **637,622** | 🟢 **2,427** |
+| Rows sampled (top 25 by stars per leg) | 340 | 272 |
+| Education context | 71 | 203 |
+| **Collision rate** | 🔴 **79%** | 🟢 **25%** |
+
+🔴 **`263×`.** The co-term does not filter the channel, it **replaces** it: nominal hits fall by
+two and a half orders of magnitude. 🔵 **So the co-termed run can never be quoted as a census** —
+`910-G1` registered that as a gate on one term's evidence (`NAPLAN`), and it is now measured across
+fourteen.
+
+🟡 **And the per-term picture is where the planning consequence is.** The co-term improved **12 of
+14** terms, several to **0%** collision (`CBSE`, `NCERT`, `JAMB`, `CAPS`, `PAES`, `EXANI`), but:
+
+| Term | Market | Collision | Nominal hits |
+|---|---|---|---|
+| `Abitur` → `Abitur Mathematik` | Germany | 🔴 52% → **71%** (*worse*) | 738 → **7** |
+| `COMIPEMS` → `COMIPEMS examen` | Mexico | 🔴 80% → **channel empty** | 15 → **0** |
+| `EXANI` → `EXANI examen` | Mexico | 🟢 100% → 0% | 215 → **1** |
+| `PAES` → `PAES prueba` | Chile | 🟢 100% → 0% | 2,000 → **21** |
+| `KCSE` → `KCSE exam` | Kenya | 🟢 84% → 17% | 410 → **18** |
+| `NEET` → `NEET exam` | India | 🟢 64% → 16% | 87,226 → **838** |
+| `WAEC` → `WAEC exam` | Nigeria | 🟢 68% → 20% | 1,176 → **151** |
+
+🔴 **The pattern, stated as the trend:** the four markets whose co-termed channel collapses to
+**`21` nominal hits or fewer — Mexico, Chile, Germany, Kenya — are the same four markets with the
+least open supply.** In India and Nigeria, where the pool is large, the co-term is nearly free. **So
+the instrument is least usable precisely where a studio most needs discovery**, and a thin result
+from a thin market cannot be distinguished from an absent one without running the bare leg and
+reading it by hand.
+
+🟢 **The operational rule this produces** (and it is a rule, not a preference): run **both** legs,
+always; treat the co-termed leg as **precision** and the bare leg as **recall**; and **never report
+a thin co-termed result as a market's supply** without the bare leg read by a human. 🔵 **`p910`'s
+`NAPLAN` case is the proof it matters** — the single best institutional artefact in that market
+(`nsip/nias2`, Apache-2.0) appears **only** on the bare term, because infrastructure projects
+describe themselves as *"validation and postprocessing"* rather than as *"assessment"*.
+
+## T36 — A published open-source supply count is a property of the classifier that produced it, and the classifier is almost never published
+
+🔵 **Why this is a trend and not an internal note.** Every market-sizing claim about open-source
+supply in this KB — and in every analyst report it cites — rests on somebody deciding which
+repositories *count*. `p911` is the first pass to run **two classifiers over the same rows** and
+publish the disagreement.
+
+🔴 **Same 272 rows, same day, same queries, two defensible classifiers, two different headlines:**
+
+| Classifier | Bare collision | Co-term collision |
+|---|---|---|
+| **v1** — a flat education-keyword list (the shape `p910` ran) | 76% | 🟢 **12%** |
+| **v4** — homonym-guarded, two-tier, vernacular-aware (committed) | 79% | 🔴 **25%** |
+
+🔴 **A 13-point spread on the headline number, from nothing but the classifier.** 🔵 **The lower
+number is the wrong one**, and three measured defect families say why:
+
+1. 🔴 **Software homonyms.** `learn` matches `deep-learning` in GitHub **topics**, so
+   `jeeliz/jeelizFaceFilter` — a WebGL face-tracking library at **2,957 ★** — graded as Indian
+   exam-prep supply. Also `exam` ← *example*, `tutor` ← *tutorial*, `grade` ← *gradient*. **58 of
+   v1's 263 education verdicts (22%), over 56 distinct repositories, rest on nothing
+   else.**
+2. 🔴 **Education context is not education supply.** The bare `CAPS` leg returns `capstone`, and a
+   bootcamp's *"Microverse curriculum"* then supplies a strong curriculum term: **11 of the 54**
+   permissive candidates v1 accepts are personal bootcamp portfolio pieces.
+3. 🔴 **Vernacular under-reading, and this is the one with a market consequence.** India's own word
+   for a past paper is **`pyq`** (*previous year question*); the CBSE board examination is
+   **`AISSCE`**; Kenya's board is **`KNEC`**; Nigeria's sibling board is **`NECO`**. A classifier
+   built from English education vocabulary **cannot see any of them**, and it discarded a
+   **14,000-item JEE Main question store** (`HostServer001/jee_mains_pyqs_data_base`, MIT, 23 ★) as
+   not-education. 🔵 **This is `T20`'s finding — vernacular education supply is not a translation of
+   the English kind — arriving in the *measuring instrument* rather than in the data.**
+
+🟡 **A fourth, structural one, because it was a rule inherited from the prior pass rather than a
+bug.** `p910`'s rule *"the queried term may not be its own evidence"* is correct for a bare acronym
+and **wrong for a co-term**: applied to `WAEC exam` it deletes the word *exam* from the row's own
+description. Measured cost: `macbuse/random-matrices-` (*"random matrices for teaching and exams"*)
+graded NOT-EDU on the `matric exam` leg because its strongest signal had been struck out.
+
+🟢 **The rule that follows, and it is cheap:** a supply count must ship with its classifier, its
+controls, and a **hand-adjudicated sample**. `p911` hand-read the **45** rows the two classifiers
+disputed and found **32 education, 13 not**
+(`evidence/p911-adjudication.2026-11-19-p911.tsv`) — so both machines were wrong, in opposite
+directions, and only the hand count could say so. 🔴 **Three of those 45 were real education supply
+attributed to the wrong country** (Ethiopian matric tooling on a South African leg, a Vietnamese
+university's exam clients on a Chilean one): **a national-exam acronym is not a national boundary.**

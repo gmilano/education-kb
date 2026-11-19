@@ -1,0 +1,29 @@
+market	region	bare_term	kind	query	nominal_hits	sampled	education_context	collision	education_context_v1	collision_v1	note
+India	APAC	CBSE	bare	CBSE	4191	25	11	56%	11	56%	
+India	APAC	CBSE	coterm	CBSE syllabus	121	25	25	0%	25	0%	
+India	APAC	NCERT	bare	NCERT	2227	25	16	36%	14	44%	
+India	APAC	NCERT	coterm	NCERT textbook	174	25	25	0%	25	0%	
+India	APAC	JEE	bare	JEE	57418	25	1	96%	3	88%	
+India	APAC	JEE	coterm	JEE mains	355	25	8	68%	9	64%	
+India	APAC	NEET	bare	NEET	87227	25	9	64%	10	60%	
+India	APAC	NEET	coterm	NEET exam	838	25	21	16%	25	0%	
+Nigeria	EMEA	WAEC	bare	WAEC	1176	25	8	68%	8	68%	
+Nigeria	EMEA	WAEC	coterm	WAEC exam	151	25	20	20%	25	0%	
+Nigeria	EMEA	JAMB	bare	JAMB	6697	25	1	96%	2	92%	
+Nigeria	EMEA	JAMB	coterm	JAMB cbt	286	25	25	0%	25	0%	
+Kenya	EMEA	KCSE	bare	KCSE	410	25	4	84%	6	76%	
+Kenya	EMEA	KCSE	coterm	KCSE exam	18	18	15	17%	18	0%	
+South Africa	EMEA	matric	bare	matric	22568	25	0	100%	1	96%	
+South Africa	EMEA	matric	coterm	matric exam	123	25	12	52%	25	0%	
+South Africa	EMEA	CAPS	bare	CAPS	451941	25	0	100%	1	96%	
+South Africa	EMEA	CAPS	coterm	CAPS curriculum	206	25	7	72%	25	0%	
+Germany	EMEA	Abitur	bare	Abitur	738	25	12	52%	11	56%	
+Germany	EMEA	Abitur	coterm	Abitur Mathematik	7	7	2	71%	1	86%	
+Chile	LATAM	PAES	bare	PAES	2000	25	0	100%	2	92%	
+Chile	LATAM	PAES	coterm	PAES prueba	21	21	21	0%	21	0%	
+Mexico	LATAM	EXANI	bare	EXANI	215	25	0	100%	3	88%	
+Mexico	LATAM	EXANI	coterm	EXANI examen	1	1	1	0%	1	0%	
+Mexico	LATAM	COMIPEMS	bare	COMIPEMS	15	15	3	80%	4	73%	
+Mexico	LATAM	COMIPEMS	coterm	COMIPEMS examen	0	0	0	n/a	0	n/a	
+Colombia	LATAM	ICFES	bare	ICFES	799	25	6	76%	7	72%	
+Colombia	LATAM	ICFES	coterm	ICFES Saber	126	25	21	16%	15	40%	

@@ -155,7 +155,8 @@ HOOK_GATES = gate-header-signature gate-offline recount gate-derived-counts gate
              gate-promotion gate-recency gate-promotion-ledger \
              gate-grant-presence gate-cell-reproduction \
              gate-promotion-ratchet gate-evidence-address \
-             gate-slug-presence
+             gate-slug-presence \
+             gate-identifier-collision gate-exam-classifier
 
 # ---------------------------------------------------------------- p427
 # 🟢 p427: A GRANT MAY CARRY TWO FAMILIES CONJUNCTIVELY, AND THIS BASE HAD NO SCOPE FOR
@@ -1652,3 +1653,28 @@ delivery-fitness: ## p556 — the measurement alone: grade a harvest TSV against
 gate-evidence-address: ## p797 — ACTION p796-E: a published address may not wear a status marker.  Scoped to the evidence files that DECLARE column 0 an address (696 of 2 093 when built).  No network.
 	@cd compose/code/p797-evidence-address-gate && { $(PY) -I test_evidence_address_gate.py > $(GATE_LOG) 2>&1 || { echo "🔴 p797-evidence-address-gate FAILED — its own report follows:" ; sed "s/^/   /" $(GATE_LOG) ; false ; } ; } && echo "── p797-evidence-address-gate (21 field cases + 3 scope assertions; 4 of the kinds present are ones that broke an earlier version of this gate)" && echo "   PASS" || exit 1
 	@$(PY) -I compose/code/p797-evidence-address-gate/evidence_address_gate.py . || exit 1
+
+# ---------------------------------------------------------------- p911
+# 🔴 `p910` published a second `## T25` in `intel/trends.md` while `T25` was already taken
+# (the data-and-content licence trap, `p902`) and the file's maximum was `T33`.  139 gates ran
+# in `make hooks` and not one checked that a delivery file's own identifiers are distinct.
+#
+# `gate-case-collision` (p439) has guarded exactly this property for repository ADDRESSES since
+# p423 — *"two spellings of one repository compile to two entities"*.  The converse is as bad:
+# two trends under one identifier compile to ONE entity, so `T25` resolves to whichever the
+# compiler reads last and the other is unreachable.  Under `M1 cite or disclaim`, a KB cannot
+# have ambiguous cite targets.  Monotonic succession is deliberately NOT asserted — re-scoped
+# rows leave real holes in these registers and demanding density would fail honest files.
+gate-identifier-collision: ## p911 — a published `## T<n>`/`## P<n>` identifier may not name two different things.  Catches the real p910 defect; refuses an empty register (p541/Gap 245).  No network.
+	@cd compose/code/p911-identifier-collision && { $(PY) -I test_collision_gate.py > $(GATE_LOG) 2>&1 || { echo "🔴 p911-identifier-collision FAILED — its own report follows:" ; sed "s/^/   /" $(GATE_LOG) ; false ; } ; } && echo "── p911-identifier-collision (10 controls: p910's real duplicate T25, legal sequence gaps, ### subsections, prose mentions, empty-register refusal, absent files, arity)" && echo "   PASS" || exit 1
+	@$(PY) -I compose/code/p911-identifier-collision/collision_gate.py . || exit 1
+
+# 🔴 v1 of p911's national-exam education classifier shelved `jeeliz/jeelizFaceFilter` — a WebGL
+# face-tracking library, 2,957 ★ — as Indian exam-prep supply, because `learn` matches
+# `deep-learning` in its GitHub topics.  43 of 164 education verdicts (26%) rested ONLY on a
+# keyword with a software-domain homonym.  This is p910's Minecraft-NBT failure mode arriving
+# through the CLASSIFIER rather than the query, so the four measured false positives are kept as
+# standing controls and the suite asserts they still FIRE under v1 — a control that cannot fail
+# is not a control.
+gate-exam-classifier: ## p911 — the national-exam education classifier's homonym guards and its two-tier boundary, with v1's four measured false positives as standing controls.  No network.
+	@cd compose/code/p911-exam-classifier && { $(PY) -I test_classifier.py > $(GATE_LOG) 2>&1 || { echo "🔴 p911-exam-classifier FAILED — its own report follows:" ; sed "s/^/   /" $(GATE_LOG) ; false ; } ; } && echo "── p911-exam-classifier (21 field cases: 4 of v1's measured false positives, 4 of v2's measured false negatives and 2 of v3's, all asserted non-vacuous)" && echo "   PASS" || exit 1

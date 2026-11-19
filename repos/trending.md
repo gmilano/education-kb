@@ -4,6 +4,78 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p911) — **The national-examination repository tier in seven new markets: 491 repositories, 73.7% with no grant at all, and `4` of `205` clearing 100 ★. India has the only real pool; Mexico has one permissive repository and it is a student's subject list.**
+
+**Channel.** `gh api search/repositories`, 28 legs (14 national-examination terms × bare and
+co-termed), top 25 by stars per leg, sorted by stars descending. Instrument committed at
+`ingest/p911-exam-channel.py`; per-row evidence at
+`evidence/p911-exam-rows.2026-11-19-p911.tsv`, per-leg summary at
+`evidence/p911-exam-summary.2026-11-19-p911.tsv`, hand adjudication of the disputed rows at
+`evidence/p911-adjudication.2026-11-19-p911.tsv`. Grants byte-read through
+`ingest/p880-licence-byteread.sh` on the default branch resolved from the search channel.
+
+### The repository posture of this tier, measured
+
+| | `p911` (India, Nigeria, Kenya, South Africa, Germany, Chile, Mexico, Colombia) |
+|---|---|
+| Distinct repositories sampled | **491** |
+| With education context (committed classifier) | **205** |
+| Permissive (MIT/Apache/BSD/ISC/Unlicense) | 🔴 **32 = 15.6%** |
+| **No `LICENSE` file at all** | 🔴 **151 = 73.7%** |
+| Copyleft (AGPL/GPL/LGPL) | 14 = 6.8% |
+| `NOASSERTION` (byte-read required to decide) | 6 = 2.9% |
+| Pushed on or after 2026-09-01 | 39 = 19% |
+| Pushed in the 7 days to 2026-11-19 | 8 |
+| Zero stars | 🔴 **71 = 35%** |
+| **Clearing 100 ★** | 🔴 **4 of 205** |
+
+🔵 **Against the curated shelf's 68.8% permissive (`p909`), this tier is the inverse** — and it is
+**more** inverted than `p910`'s APAC/EMEA cohort (63.9% ungranted). 🟡 **It is not abandonment**: 19%
+pushed within the quarter, 8 within the week, one on the day of the pass. **It is a tier of students,
+teachers and tuition centres building exam tools in public without ever adding a `LICENSE`.**
+
+### Trending by market, with what each market actually has
+
+- 🟢 **India — the only market in this pass with a genuine pool.** `CBSE` (4,191 nominal bare),
+  `NCERT` (2,227), `JEE` (57,418), `NEET` (87,226). Permissive supply is real and includes the
+  largest artefact of the pass: a **14,000-item JEE Main previous-year question store** with semantic
+  clustering (`HostServer001/jee_mains_pyqs_data_base`, MIT, 23 ★). 🔵 Also two grounded RAG tutors
+  over NCERT that **cite their sources**, a repository tracking **CBSE AI subject code `417`**, and
+  a **curriculum-drift differ** for NCERT textbooks across editions (`datastiltskin/Sanshodhan`) —
+  the most original artefact found anywhere this pass.
+- 🟢 **Nigeria — the deepest CBT tier of any market measured, and the one with a procurement behind
+  it.** Four independent permissive CBT implementations (`cbt-app-updates` offline across 30+
+  subjects, `TTL_CBT`, `cbt-app`, `Jambora`) plus `NAIJASCHOLAR` pushed on the day of the pass. 🔵
+  **Three permissive codebases solving one requirement is a demand signal**, and WAEC/NECO's full-CBT
+  transition (`intel/market.md` EMEA) is what it is responding to.
+- 🟡 **Kenya — small but institutional.** `KCSE` returns 410 bare / 18 co-termed. The two most
+  substantial artefacts are a **20-year KCSE past-paper topic predictor** (Apache-2.0) and a **Django
+  KNEC examination-management system** that is 🔴 **live and ungranted** — published as a barred row
+  with discriminative evidence (`909-G2`), and a licence-request candidate.
+- 🔴 **South Africa — unusable as a discovery channel in bare form.** `matric` returns 22,568
+  nominal at **100%** collision; `CAPS` returns **451,939** at 100%. Co-terming fixes both
+  (`CAPS curriculum` → 0%) but the yield is tiny, and the `CAPS`/`capstone` collision produced a
+  whole false-positive family of bootcamp portfolio projects (`911-F4`). **No South-African-origin
+  row was promotable.**
+- 🔴 **Germany — supply is unreachable on this channel, not merely absent.** `Abitur` is the only
+  term where the co-term made collisions **worse** (52% → 71%) and it collapses to **7** nominal
+  hits. One MIT row promoted (`ePaeko`, an Abitur subject-choice helper, last pushed 2024).
+- 🟢 **Colombia — the deepest permissive examination tier in LATAM, ahead of Brazil and Mexico.**
+  MIT `Saber 11`/`ICFES` item generation, an Apache-2.0 assessment platform covering the full item
+  lifecycle (`simic`), and an MIT R/exams secondary-maths bank. 🔵 **This inverts the order market
+  size would predict.**
+- 🟡 **Chile — one promotable row, and the channel is thin.** `PAES` → `PAES prueba` drops 2,000
+  nominal to **21**. `matmiidu/paes-ensayos` (MIT) is this KB's first Chilean PAES artefact. 🔴 The
+  `PAES` leg also returned a **Vietnamese** university's exam clients — the acronym is not a
+  boundary.
+- 🔴 **Mexico — the floor.** `EXANI examen` returns **one** repository; `COMIPEMS examen` returns
+  **zero**. The single permissive Mexican artefact is a syllabus list self-described as *"just the
+  subjects from my school"*. 🔵 **`p904`'s "largest supply-side hole" is now measured: the hole is
+  real.**
+
+🔴 **Stated limit (`911-G2`):** this is a **sample**, not a census — top 25 by stars per leg over a
+cohort where 35% have zero stars. The nominal counts are exact; the percentages are not.
+
 ## `2026-11-19` (p910) — **A supply tier this KB had never queried: 14 national-examination markets, 11,508 nominal hits, 255 distinct live education repositories — and 63.9% of them carry no licence file at all. Measured inverse of the shelf's 68.8% permissive. The bare-acronym channel is 63% homonym noise; one co-term takes it to 4%.**
 
 **Channels.** `gh api search/repositories` (26 queries) and `raw.githubusercontent.com` with the

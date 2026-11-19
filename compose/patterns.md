@@ -2518,3 +2518,72 @@ the delivered value is. 🔴 **No row in this pattern was run**: the grants were
 architectures were read, and nothing here has been executed against a live exam cohort. 🟡 Korea is
 the weakest leg — the capability exists only as an ungranted repository, so a Korea engagement
 starts with a rebuild and should be priced accordingly.
+
+## P30 — Assisted marking for a national board putting essays on screen: the Nigeria WAEC/NECO window (added `p911`)
+
+🔵 **Why this pattern and not another.** Every other pattern in this file starts from supply — a
+corpus, a platform, an agent worth composing. **This one starts from a dated procurement.** WAEC and
+NECO are moving Nigeria's WASSCE to **full computer-based testing, objective *and* essay
+components**, reported for **May–June 2026**, delivered through **accredited `JAMB` and `NOUN` CBT
+centres rather than schools** (`intel/market.md` EMEA). 🔴 **A national board putting *essay*
+components on screen has, by construction, created national-scale demand for assisted marking** —
+and nothing in this KB's Nigerian supply addresses it.
+
+### What exists, byte-read, and what does not
+
+| Layer | What exists | Grant |
+|---|---|---|
+| CBT delivery (practice tier) | [`Kirchhoff-dev/cbt-app-updates`](https://github.com/Kirchhoff-dev/cbt-app-updates) — **offline** JAMB/WAEC/Post-UTME simulator, 30+ subjects | 🟢 MIT · 1,071 B · `9f194f984482` |
+| CBT delivery (institutional tier) | [`idrismukthar/TTL_CBT`](https://github.com/idrismukthar/TTL_CBT) — school termly examinations | 🟢 MIT · 1,087 B · `30062651a966` |
+| AI-assisted CBT | [`edunelsonit/Jambora`](https://github.com/edunelsonit/Jambora) | 🟢 Apache-2.0 · 11,357 B · `c71d239df917` |
+| Exam-prep content | [`ALIYUAAM10/NAIJASCHOLAR`](https://github.com/ALIYUAAM10/NAIJASCHOLAR) — JAMB/WAEC/NECO | 🟢 MIT · 1,082 B · `6fd3e72cd64d` |
+| Grading engine | `ls1intum/Athena` + the permissive grading tier (`T21`) | 🟢 permissive, already shelved |
+| 🔴 **Essay scoring for the target language variety** | 🔴 **nothing** | — |
+| 🔴 **Board-grade delivery / marking platform** | 🔴 **nothing, under any licence** (`911-G1`) | — |
+
+### The recipe
+
+1. 🟢 **Start from the grading tier this KB already verified, not from the Nigerian rows.** `T21`
+   records the open grading stack as mature, permissive and university-built; `ls1intum/Athena` is
+   the assisted-marking core. The Nigerian rows above are **delivery and practice**, and they are
+   the wrong layer for marking.
+2. 🟢 **Take the item and delivery shape from the local rows.** `cbt-app-updates` is **offline-first
+   across 30+ WASSCE subjects**, which matters because the CBT-centre proprietors' own stated
+   objection to the transition is the **cost of networked computers**. Build to that constraint from
+   the start; do not assume centre connectivity.
+3. 🔴 **Price essay scoring as a build, and inherit `Gap 246`'s split.** English-medium WASSCE
+   removes `Gap 239`'s Portuguese language problem, so `wwrwbs/AI_AWE` (Apache-2.0, permissive
+   closure across its whole tree) **transfers architecturally** — but its feature layer is
+   calibrated on a different writing population. 🔴 **The expensive part is not the model, it is the
+   agreement study**: a WASSCE rubric with WAEC-graded scripts, which only the board can supply.
+   **That is the contract conversation, and it is the first one to have.**
+4. 🟢 **Use `001kenji/KCSE-predictor`'s method, not its predictions, for blueprint work.** A
+   longitudinal corpus of a board's own past papers (Apache-2.0, 20+ years of KCSE) is the worked
+   example of **blueprint and topic-coverage analysis** — the analysis a board needs before it can
+   generate items, and the one transferable Kenyan asset for a Nigerian engagement.
+5. 🟡 **Enter a contested market knowingly.** **Class54** (AI tools for JAMB/WAEC, *"over 300,000
+   students"*, self-reported) and **EDUVATE CBT** (AI topic tutor, 49 institutions, founder's own
+   post) are already there. 🔵 **The defensible position is the board side, not the student side**:
+   marking, blueprinting and delivery assurance, where the incumbents are not.
+6. 🔴 **Write the political risk into the plan, do not discover it.** One report refers to a **House
+   of Representatives request to suspend computer-based WAEC until 2030** (*single source, not
+   readable in this environment*). 🔵 **Scope the engagement so phase one is valuable even if the
+   national date slips** — step 2's institutional tier (`TTL_CBT`'s shape: a school's own termly
+   examinations) is that hedge, and it needs no ministry procurement at all.
+
+### Acceptance tests
+
+- 🟢 **Offline**: a full 30-subject objective paper delivers and scores with the network cable out.
+- 🟢 **Marking**: assisted scores agree with WAEC-graded scripts at a stated, measured rate — **and
+  the rate is published before the engagement claims the capability** (`P23`'s shape).
+- 🔴 **Licence closure**: every dependency's grant byte-read, including the scoring model's
+  artefacts — `Gap 246` is this KB's record of model artefacts carrying different terms from the
+  MIT code that loads them (`pt_core_news_*` is **CC-BY-SA-4.0**; `es_core_news_*` is **GPL-3.0**).
+- 🟡 **No corpus is adopted that cannot be licensed.** `910-F2` found `NOASSERTION` resolving to
+  **`CC BY-NC`** twice, including a national syllabus; NC bars a paid engagement outright. If the
+  WAEC item bank cannot be licensed, `P29`'s answer applies — **re-author the spine so the client
+  owns the grant.**
+
+🔵 **Honest scope.** This is a **6–10 week** discovery-and-prototype shape, not a national rollout:
+steps 1, 2, 4 and 6 are deliverable from verified open supply, and step 3 is blocked on a board
+agreement no amount of engineering substitutes for.

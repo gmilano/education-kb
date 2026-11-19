@@ -420,6 +420,27 @@ applications. Singapore's machine-readable **MOE 2021 Primary Mathematics syllab
 is **CC BY-NC 4.0** while GitHub's field says `NOASSERTION` — **NonCommercial, so it is barred from
 a paid engagement**, and the syllabus spine must be re-authored (`compose/patterns.md` **P29**).
 
+## National-examination delivery — the CBT tier, added `p911`
+
+🔵 **Why this section exists next to `p910`'s**: `p910` added national-examination *platforms* from
+the APAC/EMEA-UK terms. This is the **computer-based-testing delivery** tier from the six markets
+`906-G2` named, and it is concentrated almost entirely in **Nigeria** — because Nigeria is the one
+market in this pass with a **dated national CBT transition** behind it (WAEC and NECO to full
+computer-based WASSCE, objective *and* essay, reported for May–June 2026; `intel/market.md` EMEA).
+
+| Platform | Repo | Licence | ★ | Last push | What it is |
+|---|---|---|---|---|---|
+| **cbt-app-updates** | https://github.com/Kirchhoff-dev/cbt-app-updates | 🟢 MIT (1,071 B · `9f194f984482`) | 1 | **2026-11-14** | **Offline** JAMB, WAEC and Post-UTME CBT simulator spanning 30+ subjects. 🟢 **Offline is the feature, not a limitation**: the CBT-centre proprietors' own objection to Nigeria's transition is the cost of networked computers in schools, so an offline-capable simulator is aimed at the actual constraint. Pushed five days before this pass. |
+| **TTL_CBT** | https://github.com/idrismukthar/TTL_CBT | 🟢 MIT (1,087 B · `30062651a966`) | 1 | 2026-01-09 | School examination platform for **termly internal** exams rather than the national board. 🔵 **The institutional rung below the board** — a school's own assessment cycle is where a studio can deliver without a ministry procurement, and it is the same software shape. |
+| **cbt-app** | https://github.com/Toochidennis/cbt-app | 🟢 MIT (1,073 B · `093eb2efcb60`) | 1 | 2026-01-10 | JAMB CBT **desktop** application. 🟡 Carried as the third independent Nigerian implementation of the same requirement — three permissive CBT codebases from one market is a signal about demand, not about quality. |
+| **SIMIC** | https://github.com/Dramoscuello/simic | 🟢 Apache-2.0 (11,357 B · `c71d239df917`) | 2 | 2026-07-23 | Open-source platform for **generating, administering and analysing** assessments (Spanish). 🟢 **The most complete LATAM assessment platform this KB has found**, and it covers the full item lifecycle rather than practice delivery alone. 🔵 Pairs with `theteacherbot/ICFES-Exam-Engine` (`agents/top.md`) as generator plus delivery for a Colombian engagement. |
+
+🔴 **What is not here, stated so a later pass does not re-search it:** **no board-grade examination
+delivery or marking platform** was found under any licence for WAEC, NECO, KNEC, PAES, EXANI or the
+Abitur. The four rows above are **candidate simulators and an assessment platform**; the
+national-delivery tier is a **build**, and that is the finding rather than a gap in the search
+(`911-G1`).
+
 ## Honest gaps
 
 - **Unlicensed content corpora are the biggest trap in this category (added p891).** The largest

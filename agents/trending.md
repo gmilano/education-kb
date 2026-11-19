@@ -4,6 +4,244 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p911) — **`906-G2` discharged on its last six markets, and the instrument that discharged it was measured wrong four times before it was published. Same 272 rows, two defensible classifiers, a 13-point spread on the headline. The co-term fix generalises in direction and collapses the channel in exactly the four markets with the least supply. India's examination tier is the first permissive national-curriculum supply this KB holds; Mexico's is one repository.**
+
+**Channels and posture.** `gh api search/repositories` (**28 legs**, 14 terms × bare and co-termed)
+and `raw.githubusercontent.com` with the **default branch resolved from the search channel first**
+(`884-G2`), through `ingest/p880-licence-byteread.sh`. **12 WebSearch legs** ran (4 global, 4
+prescribed regional, 4 national-language/ministry legs per `Gap 254`'s remedy). 🔴 `curl -sI` on
+`github.com` was **not** used as a verification channel (`907-F2`). Both nonexistent controls ran:
+`nonexistentorg999/nope999` returns `422 Validation Failed` from `search/repositories`, `404` on
+every raw path probed, and **does not resolve under `git ls-remote --symref`**.
+
+🟢 **Closing gate: 20 addresses were byte-read on their resolved default branch before any was
+written to a delivery file. 19 returned a grant; 1 returned none and is published as a barred row
+rather than dropped.** `0` broken rows added. No row below came from a search snippet. **One of the
+19 resolved on `master`** (`lindnerju/ePaeko`) — the `884-G2` fix paying for a second consecutive
+pass.
+
+🔴 **The instrument is committed this time.** `p910` named this channel, ran it by hand and committed
+no script, which is how `p907`–`p909` inherited a named-but-untried instrument three passes running.
+It is now `ingest/p911-exam-channel.py`, it **refuses empty input** (`main([]) → 2`, the `Gap 245`
+class), and it carries two gates in `make hooks`.
+
+### 🔴 `911-F1` `906-G2` is discharged: 14 terms, 7 markets, 491 repositories — and the headline number is **79% → 25%**, not `p910`'s `63% → 4%`
+
+The terms `p910` left unrun, run both ways as `910-G1` requires:
+
+| | Bare acronym | With one co-term |
+|---|---|---|
+| Nominal hits across 14 terms | **637,622** | 🟢 **2,427** |
+| Sampled (top 25 by stars per leg) | 340 | 272 |
+| Education context | 71 | 203 |
+| **Collision** | 🔴 **79%** | 🟢 **25%** |
+
+🟢 **The fix generalises in direction** — 12 of 14 terms improved, six of them to **0%**. 🔴 **It
+does not generalise in magnitude**: this cohort's bare tier is noisier than `p910`'s (79% vs 63%)
+and its co-termed tier is **six times** noisier (25% vs 4%). **`p910`'s `4%` is a property of its
+term set, not of the instrument**, and a later pass must not quote it as the channel's precision.
+
+### 🔴 `911-F2` The co-term's recall cost is **market-dependent**, and it falls on the four markets that have the least supply
+
+`910-G1` measured this on one term (`NAPLAN`). Measured on fourteen, the shape is specific:
+
+| Term → co-term | Market | Collision | Nominal |
+|---|---|---|---|
+| `Abitur` → `Abitur Mathematik` | Germany | 🔴 52% → **71%** | 738 → **7** |
+| `COMIPEMS` → `COMIPEMS examen` | Mexico | 🔴 80% → **empty** | 15 → **0** |
+| `EXANI` → `EXANI examen` | Mexico | 100% → 0% | 215 → **1** |
+| `PAES` → `PAES prueba` | Chile | 100% → 0% | 2,000 → **21** |
+| `KCSE` → `KCSE exam` | Kenya | 84% → 17% | 410 → **18** |
+| `CAPS` → `CAPS curriculum` | South Africa | 100% → 0% | 451,939 → 206 |
+| `NEET` → `NEET exam` | India | 64% → 16% | 87,226 → 838 |
+
+🔴 **Mexico, Chile, Germany and Kenya end with `≤ 21` nominal hits — and they are the four markets
+with the least open supply.** In India and Nigeria the co-term is nearly free. 🔵 **So a thin
+co-termed result cannot be told apart from an absent market without reading the bare leg by hand**,
+and that is now a standing rule rather than this pass's observation (**`T35`**).
+
+### 🔴 `911-F3` The licence inversion `p910` found is **sharper** here: `73.7%` of this tier carries no grant at all, against the curated shelf's `68.8%` permissive
+
+| | `p911` cohort (7 markets) | `p910` cohort | Curated shelf (`p909`) |
+|---|---|---|---|
+| Permissive (MIT/Apache/BSD/ISC/Unlicense) | 🔴 **32 = 15.6%** | 25.1% | 🟢 **68.8%** |
+| **No licence file at all** | 🔴 **151 = 73.7%** | 63.9% | 5.3% |
+| Copyleft (AGPL/GPL/LGPL) | 14 = 6.8% | 3.9% | 13.6% |
+| `NOASSERTION` (byte-read required) | 6 = 2.9% | 5.5% | 8.6% |
+
+Field distribution over the 205 education-context repositories: `NULL` 151 · MIT 27 · GPL-3.0 12 ·
+`NOASSERTION` 6 · Apache-2.0 5 · CC-BY-SA-4.0 1 · LGPL-2.1 1 · MPL-2.0 1 · AGPL-3.0 1.
+
+🟡 **And it has no concentration whatsoever**: **35%** have zero stars and **only 4 of 205 clear
+`100 ★`**. 🔵 **19% were pushed on or after 2026-09-01 and 8 within the seven days to 2026-11-19**,
+one of them on the day of this pass (`ALIYUAAM10/NAIJASCHOLAR`, MIT) — **live and ungranted**, not
+abandoned. 🔴 **Operational consequence, unchanged from `p910` and now true of six more markets: the
+exam-aligned layer is a build, not an adoption.**
+
+### 🔴 `911-F4` The pass's own classifier was wrong four times, and the fourth error was inherited from `p910` as a *rule*
+
+🔴 **This is the finding with the longest reach, because it applies to every supply count this KB
+has ever published.** v1 of this pass's classifier — a flat education-keyword list, the shape `p910`
+ran — graded **`jeeliz/jeelizFaceFilter`**, a **WebGL face-tracking library at 2,957 ★**, as Indian
+exam-prep supply, because `learn` matches `deep-learning` in its GitHub **topics**. Four defect
+families, each measured and each now a standing control:
+
+1. 🔴 **Software homonyms** — `learn` ← *deep/machine learning*, `exam` ← *example*, `tutor` ←
+   *tutorial*, `grade` ← *gradient*. **58 of v1's 263 education verdicts (22%)**, over
+   **56 distinct repositories**, rest on nothing else.
+2. 🔴 **Context is not supply** — the bare `CAPS` leg returns `capstone`, and *"Microverse
+   curriculum"* then supplies a strong curriculum term. **11 of the 54** permissive candidates v1
+   accepts are bootcamp portfolio pieces.
+3. 🔴 **Vernacular under-reading** — India writes **`pyq`** for a past paper, the CBSE board exam is
+   **`AISSCE`**, Kenya's board is **`KNEC`**, Nigeria's sibling board is **`NECO`**. An
+   English-vocabulary classifier sees none of them, and v2 discarded a **14,000-item JEE Main
+   question store** (MIT, 23 ★) as not-education. 🔵 **`T20` in the instrument rather than the data.**
+4. 🔴 **An inherited rule applied out of scope** — `p910`'s *"the queried term may not be its own
+   evidence"* is right for a bare acronym and **wrong for a co-term**: on `WAEC exam` it deletes the
+   word *exam* from the row's own description. `macbuse/random-matrices-` (*"random matrices for
+   teaching and exams"*) graded NOT-EDU for exactly that reason.
+
+🟢 **Same 272 rows, two defensible classifiers, two headlines: v1 says `12%` co-term collision, v4
+says `25%`.** 🔴 **A 13-point spread from nothing but the classifier** — and `p910` published a
+single number from a single unguarded classifier with no controls (**`T36`**).
+
+### 🟢 `911-F5` The adjudication: both machines were wrong, in opposite directions, and only the hand count could say so
+
+The **45** rows the two classifiers disputed were read by hand
+(`evidence/p911-adjudication.2026-11-19-p911.tsv`): **32 education, 13 not.** 🔵 So v1 over-counted
+by 13 and v2 under-counted by 32 on the same set. 🔴 **Three of the 32 are real education supply
+attributed to the wrong country** — Ethiopian matric tooling on a South African leg
+(`ethioska/G-Matrix`, `hamawy5/matricpulse-ai-`) and a **Vietnamese** university's exam clients on a
+Chilean one (`anhvlttfs/FPTExamClients`). **A national-exam acronym is not a national boundary**, and
+the misattribution is also a discovery channel: **Ethiopia was never queried.**
+
+### 🟢 `911-F6` A delivery-file defect that 139 gates could not see, now fixed and gated
+
+🔴 **`p910` published its new trend as `T25` while `T25` was already taken** (the data-and-content
+licence trap, `p902`) **and this file's maximum was `T33`.** 🔵 Under `M1 cite or disclaim`, a KB
+cannot have ambiguous cite targets: two trends under one identifier compile to **one** entity and the
+other becomes unreachable. 🟢 **Renumbered to `T34`** — all 13 `T25` citations in this file and all
+10 in the delivery files resolve to the `p902` trend, and `p910` never cited its own by number, so
+nothing was harmed. 🟢 **`compose/code/p911-identifier-collision/` now gates it** (10 controls,
+including `p910`'s real duplicate as the primary fixture, legal sequence gaps, `###` subsections,
+prose mentions and an **empty-register refusal**), wired into `make hooks` on the same reasoning
+`gate-case-collision` (p439) applies to repository addresses.
+
+### 🟡 One correction `p911` made to itself before publishing
+
+🔴 **The first draft of `911-F4` published "43 of v1's 164 education verdicts (26%)" and that figure
+does not reproduce from the committed evidence.** It was computed against an **intermediate**
+generation of the instrument — before the co-term striking fix — and when the fix landed, v1's own
+column changed with it. 🟢 **The committed file yields `58 of 263 = 22%` over `56` distinct
+repositories**, and that is what the delivery files now say. 🔵 **How it was caught**: every
+published count in this pass was recomputed from
+`evidence/p911-exam-rows.2026-11-19-p911.tsv` and
+`evidence/p911-exam-summary.2026-11-19-p911.tsv` **after** the files were written — 32 claims
+checked, **29 reproduced exactly, 3 did not**, and all three were the figures carried over from an
+intermediate run. 🔴 **The lesson is the one `T36` states about other people's numbers, turned
+inward: a count is only as good as the artefact it can be recomputed from**, and a figure quoted
+from a draft of an instrument is not a measurement of anything that still exists.
+
+### 🟢 New verified rows promoted this pass
+
+All grants byte-read on the default branch **resolved from the search channel**, `2026-11-19`.
+
+| Repository | ★ | Grant (bytes · `sha256₁₂`) | Pushed | Market | Promoted to |
+|---|---|---|---|---|---|
+| [`HostServer001/jee_mains_pyqs_data_base`](https://github.com/HostServer001/jee_mains_pyqs_data_base) | **23** | 🟢 MIT, 1,070 B · `ad8519669214` | 2026-05-11 | APAC — India | `repos/foundations.md` |
+| [`alvaretto/r-exams_matematicas`](https://github.com/alvaretto/r-exams_matematicas) | 8 | 🟢 MIT, 1,078 B · `67a6e5e5a2af` | 🔴 2024-03-18 | LATAM — Colombia | `repos/foundations.md` |
+| [`praj2408/RAG-Enhanced-NCERT-Tutor`](https://github.com/praj2408/RAG-Enhanced-NCERT-Tutor) | 6 | 🟢 MIT, 1,072 B · `8a909947f61b` | 🔴 2024-10-20 | APAC — India | `agents/top.md` |
+| [`lindnerju/ePaeko`](https://github.com/lindnerju/ePaeko) | 3 | 🟢 MIT, 1,086 B · `5a44d126d2e6` (`master`) | 🔴 2024-01-24 | EMEA — Germany | `agents/top.md` |
+| [`Reethureddy8/Study-assistant`](https://github.com/Reethureddy8/Study-assistant) | 2 | 🟢 MIT, 1,069 B · `ff3eb0698f8a` | 2026-10-28 | APAC — India | `agents/top.md` |
+| [`zayn-anwar/NCERTTBDL`](https://github.com/zayn-anwar/NCERTTBDL) | 2 | 🟢 MIT, 1,067 B · `c2cd195af659` | 🔴 2025-02-14 | APAC — India | `repos/foundations.md` |
+| [`Dramoscuello/simic`](https://github.com/Dramoscuello/simic) | 2 | 🟢 Apache-2.0, 11,357 B · `c71d239df917` | 2026-07-23 | LATAM — Colombia | `verticals/solutions.md` |
+| [`Kirchhoff-dev/cbt-app-updates`](https://github.com/Kirchhoff-dev/cbt-app-updates) | 1 | 🟢 MIT, 1,071 B · `9f194f984482` | **2026-11-14** | EMEA — Nigeria | `verticals/solutions.md` |
+| [`ALIYUAAM10/NAIJASCHOLAR`](https://github.com/ALIYUAAM10/NAIJASCHOLAR) | 1 | 🟢 MIT, 1,082 B · `6fd3e72cd64d` | **2026-11-19** | EMEA — Nigeria | `agents/top.md` |
+| [`edunelsonit/Jambora`](https://github.com/edunelsonit/Jambora) | 1 | 🟢 Apache-2.0, 11,357 B · `c71d239df917` | 2026-03-24 | EMEA — Nigeria | `agents/top.md` |
+| [`idrismukthar/TTL_CBT`](https://github.com/idrismukthar/TTL_CBT) | 1 | 🟢 MIT, 1,087 B · `30062651a966` | 2026-01-09 | EMEA — Nigeria | `verticals/solutions.md` |
+| [`Toochidennis/cbt-app`](https://github.com/Toochidennis/cbt-app) | 1 | 🟢 MIT, 1,073 B · `093eb2efcb60` | 2026-01-10 | EMEA — Nigeria | `verticals/solutions.md` |
+| [`001kenji/KCSE-predictor`](https://github.com/001kenji/KCSE-predictor) | 1 | 🟢 Apache-2.0, 11,357 B · `c71d239df917` | 2026-01-05 | EMEA — Kenya | `agents/top.md` |
+| [`datastiltskin/Sanshodhan`](https://github.com/datastiltskin/Sanshodhan) | 1 | 🟢 MIT, 1,073 B · `909fd4f320c0` | 2026-10-21 | APAC — India | `agents/top.md` |
+| [`MichealQuelazar/Ncert__RAG__Chatbot`](https://github.com/MichealQuelazar/Ncert__RAG__Chatbot) | 1 | 🟢 MIT, 1,075 B · `13908cd9b08e` | 🔴 2025-12-18 | APAC — India | `agents/top.md` |
+| [`SettibathulaJyothi/Aritificial-Intelligence-Code-417-Skill-Education-Class-10`](https://github.com/SettibathulaJyothi/Aritificial-Intelligence-Code-417-Skill-Education-Class-10) | 1 | 🟢 MIT, 1,076 B · `40a516b92bfb` | 2026-10-30 | APAC — India | `repos/foundations.md` |
+| [`matmiidu/paes-ensayos`](https://github.com/matmiidu/paes-ensayos) | 0 | 🟢 MIT, 1,065 B · `db233fe3a19a` | 2026-08-12 | LATAM — Chile | `agents/top.md` |
+| [`theteacherbot/ICFES-Exam-Engine`](https://github.com/theteacherbot/ICFES-Exam-Engine) | 0 | 🟢 MIT, 1,067 B · `95927f6f69fa` | 2026-08-01 | LATAM — Colombia | `agents/top.md` |
+| [`LiraJ07/Temario_Comipems_Crissbeck001`](https://github.com/LiraJ07/Temario_Comipems_Crissbeck001) | 0 | 🟡 Apache-2.0, 11,357 B · `c71d239df917` | 🔴 2025-04-30 | LATAM — Mexico | `repos/foundations.md` |
+| [`steve-ongera/KNEC-Exam-Management-System`](https://github.com/steve-ongera/KNEC-Exam-Management-System) | 0 | 🔴 **no `LICENSE` — barred, kept visible** | 🔴 2025-11-05 | EMEA — Kenya | `repos/foundations.md` |
+
+🟢 **The barred row is evidenced discriminatively, not by a bare absence** (`909-G2`): `README.md`
+and **`manage.py`** return `200` at `HEAD` while `LICENSE` and `requirements.txt` return `404`, and
+`ls-remote` resolves — against a control that is `404` on all four and resolves nowhere. 🔴 **Both
+came back from the licence instrument as the same verdict**, which is the conflation `909-F1`
+warned about; the Django-idiomatic path is what separates them.
+
+### 🟡 Regional legs — and for the first time in four passes the prose channel paid
+
+🔵 **`p904` recorded three consecutive nulls on the generic English legs and `p910` recorded a fourth,
+calling it a property of the base. `p911`'s 4 global legs were the same null** (DeepTutor,
+`interactive-learning`, Claw-ED and `ChinaTextbook` — all already held). 🟢 **The 4 prescribed
+regional legs and 4 national-language ministry legs paid substantially**, which is `Gap 254`'s
+remedy working as prescribed. Placed in `intel/market.md`:
+
+- 🟢 **North America** — Stanford **AI Index 2026**: **only 6% of teachers say their school's AI
+  policy is clear**; >4 in 5 teens use AI, half of schools have no policy; named instruments
+  (North Carolina K-12 AI standards, Virginia `S.B. 394`, Illinois' July 2026 deadline); US ED
+  *AI in Education* grant priority with **first competitions in the 2026-27 cycle**.
+- 🟢 **EMEA** — **Nigeria's WAEC/NECO full-CBT transition including essay components, May–June
+  2026**, through `JAMB`/`NOUN` centres, with a House request to suspend until 2030 as the live
+  political risk; **Kenya's National AI Strategy 2025–2030** and **62,000+ teachers** ICT-trained
+  by July 2026; **South Africa's** framework still *under development* while **UCT, UJ and UKZN**
+  hold institutional AI policies; **83% of African AI startup funding to four countries**, **60% of
+  African universities without an AI policy**; **Germany's KMK** framework update of **2026-10-16**
+  and the **`AIS.chat`** integration.
+- 🟢 **APAC** — **India makes AI and Computational Thinking mandatory from Class 3 in 2026-27**,
+  Classes 9–10 in 2027-28, owned jointly by **`NCERT` and a `NCERT`–`CBSE` Coordination
+  Committee**, against a **>10 million teacher** training requirement. 🟢 **This closes `Gap 254`'s
+  complaint that APAC coverage was regulation-only.**
+- 🟢 **LATAM** — **92% of students use AI regularly, 67% weekly** (AI in Higher Education LATAM
+  Survey 2026); **Mexico 66% weekly, 79% for text generation**; **Chile leads** (National AI Policy
+  since 2021, law in discussion) while **Mexico has chosen principles over prohibitions** (SEP's
+  ten principles); **UNESCO–CENIA** agreement integrating **`Latam-GPT`**.
+
+### 🔴 Goals and standing gaps, with what was actually tested
+
+- 🟢 **`906-G2` DISCHARGED.** All six markets it named — India, Nigeria, Kenya, South Africa, Chile,
+  Germany — were run through the dual instrument, plus Mexico and Colombia. **India was the claim it
+  said this instrument would price, and it is priced** (`911-F1`, `911-F3`).
+- 🔴 **New: `911-G1` — no board-grade examination delivery or marking platform exists under any
+  licence** for WAEC, NECO, KNEC, PAES, EXANI or the Abitur. 🔵 **Remedy and cost**: this is not a
+  search gap, it is a **build**, and `P30` scopes the first 6–10 weeks of it. The cheap next probe
+  is the **ministry/agency org channel** (`Gap 251`'s shape, which yielded 8 shelf rows from 15
+  payload reads at `Opetushallitus`): enumerate `WAEC`, `JAMB`, `KNEC`, `DEMRE` and `CENEVAL` as
+  GitHub orgs before searching by acronym again. **Cost: one pass.**
+- 🔴 **New: `911-G2` — the 205-repository posture is a SAMPLE, not a census** (`910-G3` restated and
+  still binding): top-25-by-stars per leg, over a cohort where **35% have zero stars**, so the star
+  sort is near-arbitrary over a third of it. The **nominal counts (637,622 bare / 2,427 co-termed)
+  are exact**; the posture percentages are not. **Do not quote `73.7%` as a census.**
+- 🔴 **New: `911-G3` — `Gap 254`'s Japanese, Korean and Simplified-Chinese ministry legs remain
+  unrun.** India's ministry leg consumed the regional budget. 🔵 **Cost: one pass**, and the expected
+  shape is procurement rather than news — the shape India's leg actually returned, which is the
+  evidence the remedy works.
+- 🔴 **New: `911-G4` — Ethiopia surfaced by accident and was never queried.** Two Ethiopian matric
+  artefacts arrived on South African legs. 🔵 **Cost: one leg.** 🟡 And the general rule it implies
+  is unpriced: **how many markets are reachable only as another market's homonym?**
+- 🔴 **`DigComp 3.0` — fourth consecutive pass blocked**, re-tested rather than inherited:
+  `ec.europa.eu`, `digital-skills-jobs.europa.eu` and `eur-lex.europa.eu` all returned connection
+  failure at `2026-11-19`. Gap, not fact (`Gap 56`, `Gap 241`).
+- 🔴 **`ACTION TQ` and `ACTION TW` NOT RUN** — seventh pass.
+- 🔴 **Inherited red, measured rather than asserted.** `make hooks` was run **twice** — once on this
+  pass's tree and once on a clean checkout of `4b836e0` — and the two red sets are **identical**:
+  **23 gates red, the same 23, in both runs.** 🟢 **`p911` introduces no new red gate and adds two
+  green ones** (`51/74` → `53/76`). 🔵 The inherited reds include `gate-prose-claims` (**11 LOST**
+  registered claims, damage from the `p871` rewrite), `gate-dates`, `gate-case-collision`,
+  `gate-enumeration` and `gate-cell-reproduction`, and **only four of the 23 are in
+  `DECLARED_RED`** — so `make commit-gates` has been blocking on 19 inherited failures for some
+  number of passes. 🔴 **Named here rather than fixed**: 19 gates is a pass of its own, and
+  bundling it with this pass's measurements would leave neither verifiable — the same reasoning
+  `Gap 245` used to decline 23 edits in one pass. 🔵 **Cheapest first probe for whoever takes it**:
+  `gate-prose-claims`' 11 LOST claims are enumerated by the gate itself, so there is no search
+  step.
+
 ## `2026-11-19` (p910) — **`906-G2`'s named instrument finally ran, and it is 63% noise until you add one word. The national-examination tier is the inverse of this KB's shelf: 255 live repositories, 63.9% carrying no grant at all against the shelf's 68.8% permissive. `NOASSERTION` resolved to **NonCommercial** on both byte-reads, one of them the largest artefact in the cohort at 3,149 ★.**
 
 **Channels and posture.** `gh api search/repositories` (26 queries) and `raw.githubusercontent.com`
