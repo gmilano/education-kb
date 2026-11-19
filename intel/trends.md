@@ -6,7 +6,7 @@ updated: 2026-11-19
 
 # Current trends — education
 
-**Sixty trends, re-counted mechanically in `p925`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **60**; `T59`–`T60` added in `p925`, command run after writing them and before writing this number). 🔴 **This line read *"Fifty-six"* and was four short — `T57`–`T58` were added in `p922` and neither that pass nor the two after it re-ran the command, which is the fifth recurrence of the drift this sentence exists to stop.** 🔵 The count is `grep -cE '^## T[0-9]+' intel/trends.md`; **do not hand-edit it.** *(prior banner:* **Fifty-six trends, re-counted mechanically in `p921`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **56**; `T55`–`T56` added in `p921`, command run after writing them and before writing this number — 🟢 three passes running that the rule has held. *(prior banner:* **Fifty-four trends, re-counted mechanically in `p920`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **54**; `T53`–`T54` added in `p920`, and the command was run after writing them and before writing this number. 🟢 Two passes running that the rule has held.*)* *(prior banner:* **Fifty-two trends, re-counted mechanically in `p919`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **52**; `T51`–`T52` added in `p919`, and the command was run after writing them and before writing this number. `T50` was added in `p918` without this banner being re-run, which is the drift this sentence exists to catch — caught one pass later this time.)*) (*prior banner:* **Forty-nine trends, re-counted mechanically in `p917`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **49**; `T48`–`T49` added in `p917`, and the command was run before the word was written, not after). (*prior banner:* **Forty-seven trends, re-counted mechanically in `p916`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **47**; `T44`–`T47` added in `p916`. 🔵 The rule this line has now carried through four passes finally held: `p916` ran the command rather than editing the word.).) (*prior banner:* **Forty-three trends, re-counted mechanically in `p915`** (🔴 **this line read *"Thirty-nine"* and was four short — `T40`–`T42` were added in `p914` and `T43` in `p915`, and `p914` incremented nothing. That is the *third* consecutive recurrence of the drift this very sentence was written to stop, which makes the rule worth restating as a procedure rather than a warning: 🔵 the count is `grep -cE '^## T[0-9]+' intel/trends.md`, it is **43**, and a pass that adds a trend re-runs that command instead of editing the word.*)* (🔴 this line read *"Thirty-one"* and was **eight short**: `T32`–`T38` were added in `p908`–`p912` and `T39` in `p913`. `compose/patterns.md` carries the rule — *a pass that adds one should re-count, not increment* — and this file drifted the same way and further. 🔵 The count is `grep -cE '^## T[0-9]+' intel/trends.md`; **do not hand-edit it.** `T37` is **materially corrected in `p913`** and `T38` has a second chapter added in `p913`.) (**T30 and T31 added in `p907`** — the LMS-to-agent bridge being built per-institution on the *user's own credentials*, which needs no institutional consent; and the agent-skill marketplaces having no education tier at all, which makes `T26`'s distribution channel measurably empty. Both are the first trends in this file derived from **global code search**, an instrument this base had recorded as unusable; **T29 added in `p906`** — vernacular open education supply measured across eight languages and found to be a single-country phenomenon, with *no licence at all* the default state in the other seven; **T26 added in `p903`** — the unit of publication shifting from the
+**Sixty-two trends, re-counted mechanically in `p926`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **62**; `T61`–`T62` added in `p926`, command run after writing them and before writing this number — 🟢 **two passes running that the rule has held, and the first time this banner has been correct on arrival rather than corrected on the next pass**). 🔵 The count is `grep -cE '^## T[0-9]+' intel/trends.md`; **do not hand-edit it.** *(prior banner:* **Sixty trends, re-counted mechanically in `p925`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **60**; `T59`–`T60` added in `p925`, command run after writing them and before writing this number). *)* 🔴 **This line read *"Fifty-six"* and was four short — `T57`–`T58` were added in `p922` and neither that pass nor the two after it re-ran the command, which is the fifth recurrence of the drift this sentence exists to stop.** 🔵 The count is `grep -cE '^## T[0-9]+' intel/trends.md`; **do not hand-edit it.** *(prior banner:* **Fifty-six trends, re-counted mechanically in `p921`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **56**; `T55`–`T56` added in `p921`, command run after writing them and before writing this number — 🟢 three passes running that the rule has held. *(prior banner:* **Fifty-four trends, re-counted mechanically in `p920`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **54**; `T53`–`T54` added in `p920`, and the command was run after writing them and before writing this number. 🟢 Two passes running that the rule has held.*)* *(prior banner:* **Fifty-two trends, re-counted mechanically in `p919`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **52**; `T51`–`T52` added in `p919`, and the command was run after writing them and before writing this number. `T50` was added in `p918` without this banner being re-run, which is the drift this sentence exists to catch — caught one pass later this time.)*) (*prior banner:* **Forty-nine trends, re-counted mechanically in `p917`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **49**; `T48`–`T49` added in `p917`, and the command was run before the word was written, not after). (*prior banner:* **Forty-seven trends, re-counted mechanically in `p916`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **47**; `T44`–`T47` added in `p916`. 🔵 The rule this line has now carried through four passes finally held: `p916` ran the command rather than editing the word.).) (*prior banner:* **Forty-three trends, re-counted mechanically in `p915`** (🔴 **this line read *"Thirty-nine"* and was four short — `T40`–`T42` were added in `p914` and `T43` in `p915`, and `p914` incremented nothing. That is the *third* consecutive recurrence of the drift this very sentence was written to stop, which makes the rule worth restating as a procedure rather than a warning: 🔵 the count is `grep -cE '^## T[0-9]+' intel/trends.md`, it is **43**, and a pass that adds a trend re-runs that command instead of editing the word.*)* (🔴 this line read *"Thirty-one"* and was **eight short**: `T32`–`T38` were added in `p908`–`p912` and `T39` in `p913`. `compose/patterns.md` carries the rule — *a pass that adds one should re-count, not increment* — and this file drifted the same way and further. 🔵 The count is `grep -cE '^## T[0-9]+' intel/trends.md`; **do not hand-edit it.** `T37` is **materially corrected in `p913`** and `T38` has a second chapter added in `p913`.) (**T30 and T31 added in `p907`** — the LMS-to-agent bridge being built per-institution on the *user's own credentials*, which needs no institutional consent; and the agent-skill marketplaces having no education tier at all, which makes `T26`'s distribution channel measurably empty. Both are the first trends in this file derived from **global code search**, an instrument this base had recorded as unusable; **T29 added in `p906`** — vernacular open education supply measured across eight languages and found to be a single-country phenomenon, with *no licence at all* the default state in the other seven; **T26 added in `p903`** — the unit of publication shifting from the
 application to the agent-addressable curriculum corpus, the first trend in this file derived from a
 non-English repository channel; **T25 added in `p902`** — the licence trap moving from code to the data
 and content assets, where no index can see it; **T24 added in `p901`** — path-dependent licences, the first trend in this file derived from repositories the SPDX channel refused to resolve at all; **T23 added in `p900`** — the first trend in this file derived from a
@@ -2469,6 +2469,71 @@ capability is in daily use and the rule is missing. Same product, opposite pitch
 `openedx/openedx-aspects` for analytics; `microsoft/StudentSim` (MIT, added `p925`) for the
 outcome-evidence half, since it is the first artefact on this base that evaluates a tutoring method
 rather than delivering one. The gap is integration, not invention.
+
+## T61 — Education AI's evidence layer and its product layer have separated into two non-overlapping populations, and the evidence that exists is mostly negative (added `p926`)
+
+**The measurement.** The two largest open education agents in existence — `HKUDS/DeepTutor`
+(60,777 ★) and `amosblomqvist/learnharness` (10,457 ★) — **publish no learning-outcome study**, a
+caveat `agents/top.md` has carried against them for thirty passes. In the same pass,
+`topic:knowledge-tracing` and `topic:adaptive-learning` returned **140 repositories this base had
+never held**, seven of which are MIT-licensed, name a **public benchmark**, state an **evaluation
+protocol**, and publish a number. **Not one of those seven is a product, and not one of the products
+cites any of them.** The populations do not intersect.
+
+**What the evidence says when you read it.** It is not flattering to the product layer:
+
+- `mad707/masar`, on ASSISTments 2009 with a strict student-level, time-respecting split: a tuned
+  **DKT LSTM reaches AUC ≈0.75 and does not beat a PFA logistic-regression baseline at 0.760.** The
+  gains came from features describing a student's history, not from model capacity — explicitly
+  replicating the published *"How Deep is Knowledge Tracing?"* result.
+- `farroshsy/hcie-system`, on genuine cold start: **AUC 0.6051**, which the author states is *on par
+  with* baselines rather than above them.
+- `clementina-tom/PLRS` is the one strong positive, and the win is **architectural, not learned**:
+  **0% prerequisite violations against 81%+** comes from a DAG constraint layer, not from the model.
+
+**Why it is a trend and not a quirk.** Three independent implementations, three datasets, and the
+consistent finding is that **the deep model is not where the gain is**. Meanwhile the capital and
+the stars are flowing to agents that measure nothing. 🔵 **Implication for delivery: evidence is
+procurable separately from product.** A studio can attach a licensed, checkable evaluation to a
+client's tutor without building the tutor — and in a market where `intel/market.md` records 134 US
+bills, EU Annex III classification and Vietnam's conformity assessments all converging on
+*demonstrable oversight*, the evaluation is the part that is becoming mandatory. 🔴 **The corollary
+is a risk to state plainly in any deck: the claim "our AI tutor improves outcomes" currently has no
+open artefact behind it at the top of the shelf**, and the open artefacts that do exist mostly say
+the simple baseline is competitive.
+
+## T62 — Offline-first tutoring converged as a design in 2026, it came from the global South, and it is the same architecture that answers the student-data rules (added `p926`)
+
+**The measurement.** In one pass, two unrelated teams on two continents shipped **MIT-licensed
+tutors whose reasoning never touches a server**, both built for hackathons, within three months of
+each other:
+
+- **`ArushJain-697/namma-ai` (SAKSHI)** — India. A Raspberry Pi 5 in a 3D-printed case, 176×220
+  screen, three buttons, a USB camera to photograph a page. Ships its own **GURU-0.6B** model
+  ("Grounded Understanding, Runs Unplugged") as a release artefact, and does quizzing, knowledge
+  tracing and spaced revision **with the network off**. Winner, Namma AI Hackathon 2026
+  (Arm × IIIT Bangalore × NASSCOM), Problem Statement 1 — *AI for Inclusive Education*.
+- **`siyegs/rung`** — an SAT coach that runs **on the phone**; the published demo invites you to turn
+  on airplane mode mid-session and watch the tutoring continue.
+
+Add `farroshsy/hcie-system` (Indonesia — adaptive tutoring with **no embeddings and no GPU**) and
+the design is three-for-three from outside the US and Europe.
+
+**Two different pressures, one architecture.** The global-South driver is connectivity and cost. The
+North American and European driver is **student data leaving the institution** — California AB 1159
+would bar student data from training models, 35+ US states have issued guidance, and the EU's
+Annex III classification lands on assessment. 🔵 **A tutor that never sends the student's work
+anywhere satisfies both, and it is the only design that satisfies the privacy requirement by
+construction rather than by contract.** `agents/top.md` now also carries `robzilla1738/Memorwise`
+(MIT), which does document chat with chunking and embedding on the learner's own machine, as the
+desktop expression of the same idea.
+
+**What makes it buildable now and not in 2024.** Small models crossed the line where a 0.6B
+tutor-specific model is useful, and the cold-start work (**T61**) shows the learner model does not
+need a deep network to be competitive. 🔴 **The constraint to design against is evaluation, not
+capability**: an on-device tutor is also an unobservable one, so the measurement layer has to be
+built in from the start — which is why `compose/patterns.md` **P52** wires a knowledge-tracing
+estimator into the appliance rather than bolting analytics on afterwards.
 
 ## T56 — A licence index stops being evidence exactly where the grant is a notice rather than a licence body, and that is disproportionately the non-English shelf (added `p921`)
 

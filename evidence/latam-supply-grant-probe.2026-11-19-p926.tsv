@@ -1,0 +1,6 @@
+repo	country_signal	search_spdx	raw_grant	bytes	sha256_12	verdict
+reamat/CalculoNumerico	BR (pt, REAMAT)	NOASSERTION	CC (Portuguese text) master/LICENSE.md	303	54a16da9fcb5	content licence, invisible to SPDX
+reamat/Calculo	BR (pt)	NONE	no licence file (4 paths, 2 branches)	0	-	no grant
+laurahernandez7-sudo/Tutor-inteligente-ingles---EVA	ES-language adaptive EN tutor	NONE	no licence file	0	-	no grant
+jhondados/edu-desempenho-alunos	BR (ENEM)	NONE	no licence file	0	-	no grant
+vruizz22/innova-backend-serverless	Innova EdTech	GPL-3.0	GPL-3.0 main/LICENSE	35149	3972dc9744f6	copyleft, confirmed

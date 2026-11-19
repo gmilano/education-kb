@@ -160,6 +160,40 @@ The capability every tutor in `agents/top.md` is described as lacking, available
 | https://github.com/CAHLR/pyBKT | **MIT** (`LICENSE@master`, 1,132 B, `sha256₁₂ ad0c7a38bf01`, *"Copyright (c) 2021 Computational Approaches to Human Learning"*) | **Bayesian Knowledge Tracing** and its standard extensions, 292 ★, pushed 2026-11-02. The canonical open implementation of the model that estimates *"has this learner mastered this skill yet"* from a response history — the learner-state primitive that `LearnHarness` is praised in `agents/top.md` for having and that nothing else in that table implements. From **UC Berkeley CAHLR** (Zachary Pardos et al., author emails `@berkeley.edu`), the same lab as `OATutor`, with the original xBKT work shared with MIT CSAIL. MIT-licensed, C++-accelerated, callable from a Python agent in one import. **Pair it with any tutor in `agents/top.md` to replace a vibes-based "do they know it" judgement with a fitted model.** |
 | https://github.com/pykt-team/pykt-toolkit | MIT | **Added p900 (logged 5×).** **Deep-learning knowledge tracing, with a benchmark harness** — 462 ★, pushed 2026-10-18. 🔵 The row above is classical Bayesian Knowledge Tracing; this is the neural half **and the standard way to show a client that your learner model beats the classical baseline rather than asserting it.** Together they close the capability every tutor in `agents/top.md` is described as lacking |
 
+## Knowledge tracing with a measured result attached — added `p926`
+
+🟢 **The single most useful thing in the `p926` backlog is not a tutor. It is a cohort of
+MIT-licensed knowledge-tracing implementations that report a number on a *named public benchmark*
+with a *stated evaluation protocol*.** This base records of its two largest agents — `DeepTutor`
+(60,777 ★) and `LearnHarness` (10,457 ★) — that neither has a published learning-outcome study, and
+`agents/top.md` has carried "no published learning-outcome study" as a standing caveat for thirty
+passes. **The measurement layer those agents lack exists, it is permissively licensed, and no prose
+leg has ever surfaced it**, because it lives under `topic:knowledge-tracing` and
+`topic:adaptive-learning` — two of the thirteen topic words this base had never asked
+(`agents/top.md`, `p926` banner).
+
+🔵 **How to read this section.** These are small repositories — 0 to 3 ★ — and the star count is
+not the signal. The signal is that each one names its dataset, states its split, and publishes a
+number that can be checked and argued with. **Three of them report results that are modest or
+negative, which is why they are worth more than a tutor with a demo video.** All grants byte-read
+2026-11-19 from `raw.githubusercontent.com` (`evidence/grant-byte-read.2026-11-19-p926.tsv`).
+
+| Repo | Licence | ★ | Dataset / protocol | The result, as published | Region |
+|---|---|---|---|---|---|
+| https://github.com/mad707/masar | **MIT** (`main/LICENSE`, 1,083 B, `sha256₁₂ cd63915e037f`) | 1 | **ASSISTments 2009**; strict **student-level, time-respecting split**, leak-free at every rung | 🔴 **A tuned DKT LSTM reaches test AUC ≈0.75 and does *not* beat a well-built PFA logistic-regression baseline at 0.760.** It decisively beats item-only and IRT baselines. Most of the gain came from **features describing a student's history, not from model complexity**; DKT overfit quickly and needed early stopping. Explicitly agrees with the published *"How Deep is Knowledge Tracing?"* finding. | Global |
+| https://github.com/clementina-tom/Personalized-Learning-Recommendation-System | **MIT** (`main/LICENSE`, 1,071 B, `sha256₁₂ 2471962b29fc`) | 3 | **SAKT with Ebbinghaus forgetting-curve decay** (`SAKTWithDecay`) over a **DAG prerequisite-constraint layer** | 🟢 **0% prerequisite-violation rate, against 81%+ for collaborative-filtering baselines.** The constraint layer, not the model, is what guarantees a learner is never recommended a topic they are not ready for. 🔵 **Ships two knowledge maps built from the Nigerian NERDC secondary-school curriculum (JSS3–SS2)** — a real national curriculum graph under MIT, which is the exact asset `intel/trends.md` **T26** records as existing at national scale and carrying no grant. | EMEA — Nigeria |
+| https://github.com/Jiaclv/error-driven-question-recommender | **MIT** (`main/LICENSE`, 1,056 B, `sha256₁₂ 06dcddbb6908`) | 0 | **XES3G5M** (NeurIPS 2023 Datasets & Benchmarks); ADGKT knowledge tracing, Prediction-Select-Verify | **AUC 0.961.** Inverts the recommender objective: predict which questions the student is **about to answer incorrectly** and recommend exactly those, so practice goes to real gaps instead of comfortable repetition. Full write-up in `docs/report.pdf`. | Global |
+| https://github.com/farroshsy/hcie-system | **MIT** (`main/LICENSE`, 1,076 B, `sha256₁₂ bca6680cab90`) | 0 | Cold start — **no interaction history, no per-learner embeddings, no GPU**; mastery as a **lagged-Kalman estimate over a prerequisite graph** | 🟡 **AUC 0.6051, which the author states is "on par with" the baselines rather than above them.** Undergraduate thesis, Informatics Engineering, **ITS (Institut Teknologi Sepuluh Nopember)**, written for the case **Indonesia created in 2025 when coding and AI opened as a school subject and every learner and every concept starts cold**. 🔵 The honest number is the point: this is the regime a new national subject actually presents, and it is where the deep models have nothing to trace. | APAC — Indonesia |
+| https://github.com/Aditya-Ranjan1234/NS-CausalKT-Agentic-Grader | **MIT** (`main/LICENSE`, 1,056 B, `sha256₁₂ 1126322e2cc8`) | 1 | Neural-symbolic: **hybrid Transformer-plus-logic**, structural causal model, Pearl **do-calculus** | Moves grading from *score prediction* to **root-cause diagnosis of the misconception**, with the symbolic layer carrying the transparency the Transformer cannot. 🔵 This is the architecture a jurisdiction that bans AI-only grading can actually defend — see `intel/trends.md` **T1** and Oklahoma SB 1734. | Global |
+| https://github.com/Rishabh-bgp/vedic-math-hybrid-kt | **MIT** (`main/LICENSE`, 1,074 B, `sha256₁₂ 45267e9b5775`) | 0 | Random-forest item classification + NN knowledge tracing **under noisy skill tags**; 10,000-item synthetic corpus | Rule-based engine implementing the classical sutras (*Urdhva-Tiryagbhyam*, *Nikhilam Navatashcaramam Dashatah*, *Yavadunam*), with ML choosing the optimal sutra per item. 🔵 **The transferable contribution is the noisy-skill-tag treatment**: every real client item bank has wrong skill tags, and this is the only row here that models that rather than assuming clean labels. | APAC — India |
+| https://github.com/BhimPrasadAdhikari/lagnever-learning-knowledge-graph | **MIT** (`main/LICENSE`, 1,094 B, `sha256₁₂ 3d54cdda6168`, *"Copyright (c) 2026 Lagnever Technologies Private Limited"*) | 0 | Curriculum knowledge graph on **Neo4j** for **CBSE / JEE** mathematics | **Agents propose the graph, deterministic code builds it**, and each student gets a personal mastery map so the tutor knows what the learner needs **before it speaks**. Production-adjacent: built for `app.lagnever.ai` and plugs into a companion voice tutor. 🔵 The agent-proposes/code-builds split is the governance pattern — the model never writes the graph directly. | APAC — India |
+
+🔴 **What this section does not contain.** None of these is a deployable product, none has a user
+base, and four of the seven are student or thesis work. **Read them as reference implementations and
+as evidence for a claim in a client deck, not as dependencies to adopt.** The adoptable libraries
+remain `pyBKT` and `pykt-toolkit` in the section above; what `p926` adds is the *worked evaluation*
+those libraries do not ship with.
+
 ## Learning analytics (xAPI / LRS)
 
 Where the evidence for "did the AI actually help" has to live.

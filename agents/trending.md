@@ -4,6 +4,199 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p926) — **`p925` emptied the five topics it asked and called the channel open. The same channel, asked thirteen words it had never used, returned 601 more. Exhaustion was never measured against the vocabulary.**
+
+🔵 **Summary.** The four mandated prose legs ran and filed as one line (`920-G3`), nil for the
+forty-fifth consecutive pass. `p925`'s own topic legs, re-run, are **genuinely near-empty** — its
+intake worked. **Thirteen topic words it never asked returned 601 unheld repositories.** 53 are
+permissive education software, **24 grants byte-read, 24 of 24 resolved, 22 MIT + 2 Apache-2.0,
+zero 404s**; **22 rows shelved** across three files. **Two candidates refused with reasons.** The
+whole 301-row published shelf was re-measured: **40 star moves, 0 renames, 0 archived, licence
+column holds, 3 false absences (2 of them silent).** One standing claim of `agents/top.md` is
+**displaced by a shelved row**, and the LATAM leg returns a **measured** answer for the first time.
+
+### 🟢 `926-F1` The topic channel is exhausted only against the words it was asked
+
+`p925` ran six topic qualifiers and four prose qualifiers, returned 141 rows / 97 unheld, shelved 19,
+and wrote that the prose nil was "a property of the instrument". That was right. **It then left the
+instrument's own vocabulary unmeasured.** `p926` re-ran `p925`'s legs and added 24 more:
+
+| Leg | Rows | Unheld | Reading |
+|---|---|---|---|
+| `topic:edtech stars:>40 pushed:>2026-07-01` | 63 | 🟢 **1** | `p925` shelved this tier |
+| `topic:education topic:ai stars:>60` | 37 | 🟢 **2** | same |
+| `topic:ai-education stars:>25` | 17 | 🟢 **0** | same |
+| `topic:lms stars:>80` | 34 | 🟢 **2** | same |
+| `topic:e-learning stars:>60` | 11 | 🟢 **2** | same |
+| `topic:student-information-system` | 100 | 🔴 **81** | never asked |
+| `topic:mooc stars:>20` | 90 | 🔴 **81** | never asked |
+| `topic:knowledge-tracing` | 100 | 🔴 **73** | never asked — **and it holds the measurement cohort** |
+| `topic:adaptive-learning` | 100 | 🔴 **67** | never asked |
+| `topic:open-educational-resources` | 100 | 🔴 **67** | never asked |
+| `topic:language-learning stars:>80` | 63 | 🔴 **39** | never asked |
+| `topic:courseware stars:>10` | 45 | 🔴 **37** | never asked |
+| `topic:teaching stars:>40` | 52 | 🔴 **34** | never asked |
+| `topic:curriculum stars:>40` | 45 | 🔴 **22** | never asked |
+| `topic:exam stars:>40` | 32 | 🔴 **21** | never asked |
+| `topic:intelligent-tutoring-system` | 49 | 🔴 **18** | never asked |
+| `topic:spaced-repetition stars:>60` | 61 | 🔴 **14** | never asked |
+| `topic:classroom stars:>20` | 20 | 🔴 **12** | never asked |
+| **30 legs, deduplicated against 6,535 repositories this base has ever named** | — | 🔴 **601** | `evidence/unheld-backlog.2026-11-19-p926.tsv` |
+
+🔵 **`926-R1` — a discovery channel is exhausted only against the vocabulary it was asked with.**
+`p925` retired "the shelf is exhausted"; this retires "the topic channel is open and worked". Both
+sentences were true of a leg list and published as facts about supply. **The next pass should assume
+the same of this leg list**: 24 of these 30 words were chosen by one pass in one sitting.
+
+### 🔴 `926-F2` The high-star tail of the topic index is course *content*, not education software
+
+Sorted by stars, the 601 open with `Ebazhanov/linkedin-skill-assessments-quizzes` (28,884 ★,
+AGPL-3.0), `TheOdinProject/curriculum` (13,269 ★), `ctjhoa/rust-learning` (12,286 ★, **no licence**),
+Coursera solution dumps and awesome-lists. 🔵 **This is the homonym pollution this base measured in
+`p646`, now quantified at the tail: of 601 unheld rows, filtering to permissive-licensed,
+recently-pushed, AI-or-agent education *software* leaves 53 — 8.8%.** A pass that reads the topic
+channel star-first will spend its whole budget on reading lists. **Filter before sorting.**
+
+### 🟢 `926-F3` The measurement layer this base says its tutors lack exists, under a topic word nobody asked
+
+`agents/top.md` carries "no published learning-outcome study" as a standing caveat against
+`DeepTutor` (60,777 ★) and `LearnHarness` (10,457 ★). `topic:knowledge-tracing` returned **73 unheld
+repositories**, and seven of them are MIT with a **named public benchmark and a stated evaluation
+protocol**. They are shelved in `repos/foundations.md` under *Knowledge tracing with a measured
+result attached*. The three that matter most report results that are **modest or negative**:
+
+- 🔴 **`mad707/masar`** — ASSISTments 2009, strict student-level time-respecting split: a tuned
+  **DKT LSTM reaches AUC ≈0.75 and does not beat a PFA logistic-regression baseline at 0.760.**
+  Most of the gain came from history features, not model complexity. **This is the single most
+  useful sentence in the backlog for a client conversation**: it is a licensed, reproducible
+  argument against starting a tutoring engagement by training a deep knowledge-tracing model.
+- 🟢 **`clementina-tom/PLRS`** — SAKT + Ebbinghaus decay over a DAG prerequisite layer:
+  **0% prerequisite-violation rate vs 81%+ for collaborative filtering.** Ships knowledge maps from
+  the **Nigerian NERDC secondary curriculum (JSS3–SS2)** — a national curriculum graph under MIT.
+- 🟡 **`farroshsy/hcie-system`** — cold start with no embeddings and no GPU, mastery as a
+  lagged-Kalman estimate over a prerequisite graph: **AUC 0.6051, "on par with" baselines**, stated
+  as such. Written for the regime **Indonesia created in 2025** by opening coding and AI as a school
+  subject, where every learner and every concept starts cold.
+
+🔵 **Why the star count is the wrong filter here.** These are 0–3 ★ repositories. The prose legs
+cannot see them, a star sort buries them under reading lists, and they are the only rows in this
+entire knowledge base that attach a checkable number to a pedagogical claim.
+
+### 🔴 `926-F4` `AutoPPT` displaces a standing claim in `agents/top.md`
+
+That file records `frametell` (**AGPL-3.0**) as "the only open *content-production* agent in this
+table — courseware generation rather than tutoring". **`xingjunm/autoppt` is courseware generation
+under MIT** (byte-read, 1,092 B, `sha256₁₂ db50831211a3`), 57 ★, created 2026-11-02, generating
+interactive lecture slides a week at a time under **Claude Code or OpenAI Codex**. The claim was
+true when written and is now false: **courseware generation is available to a closed, branded
+deliverable.** `compose/patterns.md` **P51** is built on it.
+
+### 🔴 `926-F5` Two candidates refused, and the reason is an intake gap, not a licence
+
+**`openaisolutions/AutodidactAI`** — MIT, 12 ★, pushed 2026-11-12, created 2023, description reads
+as an education platform. It passed **every mechanical gate this base applies**. Its README calls it
+*"a proposed AI-driven platform"*, *"currently a theoretical project"*, *"a conceptual framework"*.
+**There is no system.** 🔵 **`926-R2`: a licence probe, a star count and a push date cannot tell
+software from a proposal.** Quote the repository's own claim about its implementation state before
+writing a row. The contrast is published in `verticals/solutions.md`: `Noggin-Labs/Noggin`, from the
+same backlog, ships an explicit **Implemented / In development / Planned** table and names the code
+as authoritative — the posture that makes a week-old project shelvable.
+**`MLShukai/pamiq-core`** (MIT, 29 ★) — real and well-kept, but a general real-time adaptive *agent
+framework*, not education software. Recorded so it is not re-proposed.
+
+### 🟡 `926-F6` Shelf re-measure, all 301 rows — and the first star decline of size
+
+`evidence/shelf-remeasure.2026-11-19-p926.tsv`. **40 star cells moved, 0 renames, 0 newly archived**,
+and the **licence column held**: the only three divergences from SPDX are the three already carried
+as known. Largest movers `HKUDS/DeepTutor` **+299**, `amosblomqvist/learnharness` **+244**,
+`molly554/whiteboard-ai-tutor` **+83**. 🔴 **`kad-xyz/spbstu-mcp` fell 19 → 10 ★ (−47%)** — the first
+star *decline* of size this base has recorded. The repo is alive (MIT, pushed 2026-11-19), so this is
+**un-starring, not deletion**, and a shelf that only ever revises upward would have missed it.
+Smaller declines: `boyuchengz/canvas-mcp` −2, `zuhairhalawa/studyai` −1.
+
+### 🔴 `926-F7` The false-absence rate on the published shelf is 1.0%, and two thirds of it is silent
+
+Of 301 rows, **3 came back absent from `search/repositories`**: `mitodl/open-learning-ai-tutor` and
+`DaRL-GenAI/instructional_agents` return **`total_count: 0` with no error**, and
+`tokenaii/horus-taleeq-0.2b-base` returns **HTTP 422**. All three serve `LICENSE` and `README.md`
+`200` on `raw.githubusercontent.com`, and all three are **MIT**
+(`evidence/false-absence.2026-11-19-p926.tsv`). 🔵 **The batch sweep that found them reported
+`errors: 0`** — a batched `repo:`-qualified query drops a missing row without raising anything.
+**`926-R3`: a batch count is not a liveness check.** Reconcile the returned set against the requested
+set; that reconciliation is the only reason these three surfaced.
+
+### 🔴 `926-F8` An automation was built, measured against the files, and thrown away
+
+A script was written to update the star figures that `repos/foundations.md` and
+`verticals/solutions.md` carry **in prose** (`8,242 ★`) rather than in a column. It proposed **52
+substitutions**. Reading them before applying: `Mentingo (109 ★)` would have been overwritten with
+Pupilfirst's 982 because both names sit on one line; `0 → 10,002 ★ in 27 days` — **a deliberate
+historical record** — would have become `0 → 10,457 ★`; and `netless-io/flat` would have taken
+Jitsi's 30,255. 🟢 **The edit was reverted in full and only the header-anchored column update kept**
+(`evidence/prose-star-automation-rejected.2026-11-19-p926.tsv` records all 52 rejected
+substitutions). 🔵 **`926-R4`: prose star figures are narrative — historical claims, neighbouring
+repositories' numbers, and ranges — and must not be bulk-edited.** An earlier version of this same
+script also overwrote three cells of the `p905` dependency-pinning table, whose numeric column is
+**pinned-dependency counts, not stars** (`openedx-platform` 311, `tutor` 28, `odoo` 60). That was
+caught by reading the diff, and is the sharpest instance this base has of its own standing warning:
+**inferences become wrong data.**
+
+### 🔵 `926-G1` The mandated legs, filed
+
+All four prose legs plus four regional legs ran and are filed in
+`evidence/websearch-legs.2026-11-19-p926.tsv`. **Unheld education repositories returned: 0, across
+all eight.** The vertical leg returned ten of ten results from **one vendor's marketing site**
+(OpenEduCat, LGPL-3.0) for the third consecutive pass. `p924` recommended reshaping it; `p926` ran
+the reshape — `open source student information system self-hosted github 2026 alternative to
+PowerSchool` — which returned **RosarioSIS, OpenEduCat, GegoK12, Academico and OpenEMIS, all five
+already held**. 🟢 **The reshape worked as a query and the tier is confirmed saturated** — that is a
+measured result, not another unsearched nil.
+
+### 🔴 `926-G2` LATAM, measured rather than reported absent
+
+This base has recorded a LATAM supply gap for many passes without measuring it. The 601-row backlog
+contains **11 Spanish- or Portuguese-language education rows, and not one of them is permissively
+licensed.** Five were probed on the raw channel
+(`evidence/latam-supply-grant-probe.2026-11-19-p926.tsv`):
+
+- `laurahernandez7-sudo/Tutor-inteligente-ingles---EVA` — a Spanish-language **adaptive AI English
+  tutor**, exactly the subject of this KB — **no licence file on any probed path**.
+- `jhondados/edu-desempenho-alunos` — predicts student performance on Brazil's **ENEM** with ML —
+  **no licence file**.
+- `reamat/Calculo` — **no licence file**; the REAMAT estate's six open-courseware repositories carry
+  between them one grant.
+- `reamat/CalculoNumerico` — 🔵 **the search channel reports `NOASSERTION`; the raw channel serves a
+  303-byte `LICENSE.md` containing a Creative Commons grant written in Portuguese.** A licence false
+  negative in the non-English direction — and a **content** licence, not a software one.
+- `vruizz22/innova-backend-serverless` — Innova EdTech, **GPL-3.0 confirmed byte-read** (35,149 B).
+
+🔵 **So the LATAM finding is not "nothing exists". It is: the supply exists, it is in the right
+subject, and its default licence state is no licence at all** — which makes it unusable to Globant
+as a starting point and makes *licensing and productising it* the opportunity.
+`intel/market.md` carries this under **Opportunities by region → LATAM**, and it is the regional
+instance of the pattern `intel/trends.md` **T29** named across eight languages.
+
+### 🟢 `926-F9` What was shelved
+
+**22 rows, all grants byte-read 2026-11-19** (`evidence/grant-byte-read.2026-11-19-p926.tsv`):
+
+- **`agents/top.md` — 13 rows.** `SAKSHI`/`namma-ai` (MIT, India, Raspberry Pi 5 with the network
+  off, ships **GURU-0.6B**, winner of the Namma AI Hackathon 2026 — Arm × IIIT Bangalore × NASSCOM);
+  `Rung` (MIT, on-device SAT coach that survives airplane mode); `AutoPPT` (MIT, China);
+  `notebooklm-ai-plugin` (MIT); `Zusia` (MIT, **first row that lives inside a reference manager** —
+  Zotero 7–10, any ACP agent, no API keys); `teachback` (MIT); `Learn-Anything` (MIT);
+  `VuongEdu` (MIT, **first Vietnam-origin agent this table has carried**, created and pushed the day
+  it was measured); `Postgrad Study Engine` (MIT, China, 考研); `Memorwise` (MIT, local-first);
+  `Litera-AI` Android + iOS (MIT, Indonesia); `one-tutor` (MIT); `anki-cli` (MIT).
+- **`repos/foundations.md` — 7 rows**, the knowledge-tracing cohort of `926-F3`.
+- **`verticals/solutions.md` — 2 rows**, `LEA-platform` and `Noggin`, both Apache-2.0.
+
+🔵 **Two independent on-device rows arrived in one pass** — `SAKSHI` (India, Raspberry Pi) and
+`Rung` (Nigeria-authored, phone) — from unrelated teams on different continents, both built for a
+hackathon, both MIT. `compose/patterns.md` **P52** is built on that convergence.
+
+---
+
 ## `2026-11-19` (p925) — **The forty-fourth consecutive nil was never a fact about education software. It was a fact about the query shape. The prose legs returned 0 unheld repositories; the topic index returned 97, of which 19 are permissive, byte-read and new.**
 
 🔵 **Summary.** The four mandated English prose legs ran and filed as one line (`920-G3`). A

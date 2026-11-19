@@ -4,6 +4,76 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p926) — **The trending shelf's intake is now limited by its topic vocabulary, not by its channel. Thirteen unasked words returned 601 repositories; 8.8% of them were software.**
+
+### 🟢 What changed since `p925`
+
+`p925` opened GitHub's **topic index** as a discovery channel and shelved 19 rows from it. `p926`
+re-ran `p925`'s own legs and they are **near-empty** — `topic:edtech` **1** unheld,
+`topic:ai-education` **0**, `topic:lms` **2**. 🔵 **That is the correct result and it is worth
+stating plainly: `p925`'s intake worked, and a trending file should record when a channel it opened
+actually drained.** The full leg table is in `agents/trending.md` `926-F1`; the yields are in
+`evidence/topic-vocabulary-yield.2026-11-19-p926.tsv`.
+
+What `p925` left unmeasured was **its own vocabulary**. Twenty-four topic words it never asked
+returned **601 repositories this base has never held**, deduplicated against the **6,535** it has
+ever named — the largest unheld population this file has recorded in one pass.
+
+### 🔴 The number this file most needs: 601 unheld, 53 usable
+
+Sorted by stars the backlog opens with `Ebazhanov/linkedin-skill-assessments-quizzes` (**28,884 ★**,
+AGPL-3.0), `TheOdinProject/curriculum` (**13,269 ★**), `ctjhoa/rust-learning` (**12,286 ★**, no
+licence), `greyhatguy007/Machine-Learning-Specialization-Coursera` (**8,182 ★**),
+`yandexdataschool/Practical_RL` (**6,622 ★**, Unlicense), `github/training-kit` (**5,164 ★**,
+CC-BY-4.0). **None of these is education software.** They are course notes, solution dumps,
+curricula and awesome-lists — the `p646` homonym-pollution class, now measured at the tail:
+
+| Filter | Rows remaining |
+|---|---|
+| unheld, from 30 topic legs | **601** |
+| minus archived | 601 |
+| permissive grant (MIT / Apache-2.0 / BSD / ISC / MPL-2.0 / Unlicense) | 214 |
+| **and** pushed since 2026-05-01 | 121 |
+| **and** AI/agent/tutor/grading signal in name or description | 78 |
+| **and** not a reading list, solution dump, cheat sheet or course-notes repo | 🟢 **53** |
+
+🔵 **8.8% of the topic index's unheld tail is software this base can use.** A pass that reads this
+channel star-first spends its budget on reading lists. **Filter, then sort** — the reverse of what a
+trending file naturally wants to do.
+
+### 🟢 What came out of it — 24 byte-read, 22 shelved
+
+24 candidates had their grant read from `raw.githubusercontent.com`: **24 of 24 resolved, 22 MIT,
+2 Apache-2.0, zero 404s** (`evidence/grant-byte-read.2026-11-19-p926.tsv`). Full account in
+`agents/trending.md` `926-F9`. For this file, the three that change what the shelf can claim:
+
+- 🔴 **`xingjunm/autoppt`** (MIT, 57 ★, created **2026-11-02**) — **the newest repository shelved
+  this pass and the one that displaces a standing claim.** `agents/top.md` recorded `frametell`
+  (AGPL-3.0) as the only open courseware-*production* agent. AutoPPT generates interactive lecture
+  slides under **Claude Code or OpenAI Codex**, under MIT. Courseware generation is now available to
+  a closed deliverable.
+- 🟢 **`topic:knowledge-tracing`, 73 unheld** — holds a cohort of MIT implementations that report a
+  number on a named public benchmark. `mad707/masar` publishes a **negative** result (DKT AUC ≈0.75
+  **fails to beat** a PFA baseline at 0.760 under a leak-free split). **This file has never before
+  recorded a trending find whose value is that it argues against building something.**
+- 🟢 **`ArushJain-697/namma-ai` (SAKSHI)** and **`siyegs/rung`** — two unrelated teams, two
+  continents, both hackathon-built, both MIT, both running the tutoring loop **with the network
+  off** (Raspberry Pi 5 + a 0.6B model; and a phone that keeps teaching through airplane mode).
+  A convergence, not a trend of one.
+
+### 🟡 Shelf hygiene this pass
+
+All 301 published rows re-measured: **40 star cells moved, 0 renames, 0 newly archived, licence
+column holds** (`evidence/shelf-remeasure.2026-11-19-p926.tsv`). 🔴 **`kad-xyz/spbstu-mcp` fell
+19 → 10 ★** — the first star decline of size this base has recorded, on a repo that is alive and was
+pushed the same day. A trending shelf that only revises upward cannot see a project losing interest.
+
+🔴 **Three of the 301 came back absent from `search/repositories` and are alive on the raw channel**
+— two of them **silently** (`total_count: 0`, no error), inside a batch that reported `errors: 0`.
+**A batch count is not a liveness check** (`926-R3`).
+
+---
+
 ## `2026-11-19` (p925) — **97 unheld repositories came out of GitHub's topic index in one pass, after forty-four passes of prose queries returned none. The trending shelf's intake problem was never supply.**
 
 ### 🟢 The channel — GitHub's **topic** index, via `search/repositories`

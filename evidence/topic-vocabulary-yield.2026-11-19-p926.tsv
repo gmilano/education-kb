@@ -1,0 +1,31 @@
+leg	rows_returned	unheld
+topic:edtech stars:>40 pushed:>2026-07-01	63	1
+topic:education topic:ai stars:>60 pushed:>2026-07-01	37	2
+topic:ai-education stars:>25 pushed:>2026-06-01	17	0
+topic:intelligent-tutoring-system	49	18
+topic:learning-management-system stars:>30 pushed:>2026-01-01	21	3
+topic:e-learning stars:>60 pushed:>2026-06-01	11	2
+topic:lms stars:>80 pushed:>2026-06-01	34	2
+topic:student-information-system	100	81
+topic:school-management stars:>20 pushed:>2026-01-01	16	3
+topic:tutoring stars:>15 pushed:>2026-06-01	7	0
+topic:education topic:llm stars:>40 pushed:>2026-06-01	41	2
+topic:education topic:agent stars:>20 pushed:>2026-06-01	7	2
+topic:quiz-generator stars:>30 pushed:>2026-01-01	4	1
+topic:flashcards topic:ai stars:>30 pushed:>2026-06-01	8	4
+topic:spaced-repetition stars:>60 pushed:>2026-06-01	61	14
+topic:grading stars:>20 pushed:>2026-01-01	15	3
+topic:assessment topic:ai stars:>20 pushed:>2026-01-01	1	0
+topic:mooc stars:>20	90	81
+topic:courseware stars:>10	45	37
+topic:curriculum stars:>40 pushed:>2026-01-01	45	22
+topic:edtech topic:opensource stars:>15	0	0
+topic:education topic:mcp stars:>10 pushed:>2026-06-01	33	6
+topic:study-tools stars:>25 pushed:>2026-06-01	16	4
+topic:language-learning stars:>80 pushed:>2026-06-01	63	39
+topic:teaching stars:>40 pushed:>2026-06-01	52	34
+topic:classroom stars:>20 pushed:>2026-01-01	20	12
+topic:open-educational-resources	100	67
+topic:adaptive-learning	100	67
+topic:knowledge-tracing	100	73
+topic:exam stars:>40 pushed:>2026-06-01	32	21

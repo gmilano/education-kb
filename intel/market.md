@@ -99,6 +99,27 @@ data access* rather than education agents.
 
 ### North America
 
+#### 🆕 `p926` — two instruments this file had not recorded, and an on-device answer to the one that bites
+
+🟢 **New to this file.** The **US Department of Education published a *Framework for Responsible Use
+and Development of Artificial Intelligence in Education* in March 2026** *(single source: Allainews
+2026 guide; confirm against the primary text before it goes in a deck)*. Federal AI policy otherwise
+runs through executive action rather than statute. 🟢 **Florida SB1194** — the State Board adopted a
+**parental-notification** policy, joining the Florida rule requiring its **28 public colleges** to
+bar AI on graded work unless the instructor permits it. Both are additions to the deadline table
+above, not replacements for it.
+
+🔵 **The commercial reading has not changed, and one of this pass's shelved rows speaks to it
+directly.** The binding constraint in this region is **student data leaving the institution**, which
+is what California AB 1159 and the state privacy bills are all circling.
+`agents/top.md` now carries two rows that answer it architecturally rather than contractually:
+**`robzilla1738/Memorwise`** (MIT) does NotebookLM-class document chat with chunking and embedding
+**on the student's own machine** and a bring-your-own provider, and **`siyegs/rung`** (MIT) runs an
+SAT coaching loop **entirely on the phone** — the demo asks you to cut your connection mid-session.
+🟡 **Rung is aimed at the North American exam market but is not North America-origin**; this file
+places it as Global and names the market here, because the two are different facts.
+
+
 #### 🆕 `p925` — the regulatory surface is now the engagement, and it has dates attached
 
 **Volume.** One tracker counts **134 AI-in-education bills introduced across 31 states in 2026**,
@@ -774,6 +795,32 @@ A 9190, EO 14277, the US Department of Education framework and Berkeley Law were
 already written.
 
 ### EMEA
+
+#### 🆕 `p926` — the region supplied this pass's most reusable asset, and it did not come from Europe
+
+🟢 **Two EMEA-origin rows were shelved this pass, and the more valuable one is African.**
+**`clementina-tom/PLRS`** (MIT) is a prerequisite-constrained learning recommender — SAKT with
+Ebbinghaus decay over a DAG constraint layer, **0% prerequisite-violation rate against 81%+ for
+collaborative-filtering baselines** — and it **ships two knowledge maps built from the Nigerian
+NERDC secondary-school curriculum (JSS3–SS2)**. 🔵 **That is a national curriculum graph under a
+permissive licence**, which is the asset `intel/trends.md` **T26** records as existing at national
+scale almost everywhere and carrying no grant almost everywhere. It joins `elimu-ai` as the second
+Africa-origin permissive education asset this KB has verified, and unlike `elimu-ai` it is a
+*model*, not a delivery platform.
+
+**`tep00018/LEA-platform`** (Apache-2.0) is a tri-modal agentic STEM tutor — chat, guided tutoring
+and calibrated quizzing over knowledge-component modelling — from an **MSc thesis at Abertay
+University, Scotland**. 🟡 **Scope it against its own data-availability note**: the institutional
+course materials, KC models, vector stores and real-course evaluation data are **not released**. The
+architecture transfers; the content and the evidence do not.
+
+🔵 **Regulatory position is unchanged from `p925` and remains the commercial clock**: the Digital
+Omnibus, **Regulation (EU) 2026/1744**, moved the Annex III stand-alone high-risk obligations —
+which is where admissions, student evaluation and exam scoring sit — to **2 December 2027**. Sources
+still conflict on this date and it should be confirmed against the Official Journal before it goes
+in a deck. The UK DfE generative-AI product safety standards (January 2026) and Ofqual's
+coursework-integrity material (March 2026) are the national-level instruments underneath it.
+
 
 #### 🆕 `p925` — the EU AI Act's enforcement teeth landed in August 2026, and education is named high-risk
 
@@ -1933,6 +1980,47 @@ problem — so this nil is still not evidence of saturation.
 
 ### APAC
 
+#### 🆕 `p926` — Vietnam's registration mechanism, and the region that supplied half this pass's shelf
+
+🟢 **New to this file: Vietnam's high-risk regime has an *operating* mechanism, not just a
+classification.** Education is one of the six sectors on the high-risk list set by a **July 2026
+decision**, covering automated assessment and behavioural systems, and the obligations are
+procedural: **pre-deployment registration in the National AI Database**, conformity assessment,
+**mandatory human oversight**, and **incident reporting within 72 hours**. Systems already operating
+in education are given extra time to comply. 🔴 **Dates conflict sharply across sources** — one
+gives the law an effective date of 1 March 2026, another runs education deadlines to September 2027,
+a third cites March 2027 *(multiple sources, mutually inconsistent; confirm against the official
+text before committing to any date in a client plan)*. 🔵 **The commercial point does not depend on
+the date**: registration and 72-hour incident reporting are *build* requirements. An assessment
+agent shipped into Vietnam needs an audit trail and an incident path designed in, and retrofitting
+those is the expensive path.
+
+🟢 **APAC supplied the majority of this pass's shelved rows**, and the spread is the signal — India,
+China, Vietnam and Indonesia, four countries, none of them a port of the others:
+
+- **India** — `ArushJain-697/namma-ai` (**SAKSHI**, MIT): a tutor on a **Raspberry Pi 5 with the
+  network off**, shipping its own 0.6B model, **winner of the Namma AI Hackathon 2026 (Arm × IIIT
+  Bangalore × NASSCOM), Problem Statement 1 — AI for Inclusive Education**. Plus
+  `lagnever-learning-knowledge-graph` (MIT, CBSE/JEE curriculum graph on Neo4j, production-adjacent)
+  and `vedic-math-hybrid-kt` (MIT, knowledge tracing **under noisy skill tags**).
+- **China** — `xingjunm/autoppt` (MIT): interactive courseware generation driven by Claude Code or
+  Codex, which **displaces this KB's standing claim** that open courseware production is AGPL-only.
+  Plus `wysking/postgrad-study-engine` (MIT, 考研, per-learner forgetting-curve fitting).
+- **Vietnam** — `VuongPhan-09/vuongedu` (MIT): textbook RAG with **page citations**, SM-2 spaced
+  repetition over an 82-topic prerequisite graph, and a study-plan agent that **checks and repairs
+  its own plan against explicit rules**. 🔵 That self-repair step is exactly the "mandatory human
+  oversight"-adjacent control the registration regime above will ask about.
+- **Indonesia** — `farroshsy/hcie-system` (MIT): cold-start adaptive tutoring with **no embeddings
+  and no GPU**, written for the case **Indonesia created in 2025 by opening coding and AI as a
+  school subject**, where every learner and every concept starts cold. Reports **AUC 0.6051** and
+  says so. Plus `Litera-AI` Android/iOS (MIT).
+
+🔵 **The regional pattern worth carrying into an engagement**: APAC's open education supply is
+**constraint-shaped** — no connectivity, no GPU, no prior interaction history, a national exam to
+clear. Those constraints produce architectures that transfer to any underserved market, which is why
+this cohort is worth more to a global studio than its star counts suggest.
+
+
 #### 🆕 `p925` — two statutes in force, education named high-risk in one, and a curriculum mandate with a period count
 
 **Regulation is a patchwork with three shapes**, per a law-firm overview: **comprehensive**
@@ -2937,6 +3025,48 @@ and own**, not a vendor to partner with.
 regulatory-led posture and Australia's National AI Plan were all returned and all already written.
 
 ### LATAM
+
+#### 🆕 `p926` — the supply gap, measured: the software exists, in the right subject, with no licence on it
+
+🔴 **This file has reported a LATAM open-source supply gap for many passes without measuring it.
+`p926` measured it.** Of **601 unheld repositories** returned by 30 topic-qualified legs,
+**11 are Spanish- or Portuguese-language education repositories, and not one is permissively
+licensed.** Five were probed byte-level on `raw.githubusercontent.com`
+(`evidence/latam-supply-grant-probe.2026-11-19-p926.tsv`):
+
+| Repository | What it is | Grant, byte-read |
+|---|---|---|
+| `laurahernandez7-sudo/Tutor-inteligente-ingles---EVA` | Spanish-language **adaptive AI tutor for English learning** — precisely this KB's subject | 🔴 **no licence file on any probed path** |
+| `jhondados/edu-desempenho-alunos` | ML prediction of student performance on Brazil's **ENEM**, identifying learning gaps | 🔴 **no licence file** |
+| `reamat/Calculo` | Brazilian collaborative open courseware (UFRGS REAMAT estate, 6 repos) | 🔴 **no licence file** |
+| `reamat/CalculoNumerico` | Same estate, numerical calculus | 🟡 **Creative Commons, written in Portuguese** (`master/LICENSE.md`, 303 B, `sha256₁₂ 54a16da9fcb5`). The search channel reports `NOASSERTION` — a **licence false negative in the non-English direction**, and a *content* licence, not a software one |
+| `vruizz22/innova-backend-serverless` | Innova EdTech backend, NestJS + TypeScript + Prisma | 🟡 **GPL-3.0**, confirmed byte-read (35,149 B, `sha256₁₂ 3972dc9744f6`) |
+
+🔵 **So the finding is not "nothing exists in LATAM".** The region's open education software exists,
+it is in the right subject, and **its default licence state is no licence at all** — which under
+default copyright means a Globant engagement cannot build on it, fork it or ship it. This is the
+regional instance of the pattern `intel/trends.md` **T29** measured across eight languages, and it
+is a **sharper** result than the global one because the subject match is exact.
+
+🟢 **The opportunity that follows is different in kind from the other three regions.** Elsewhere the
+work is to adopt permissive upstreams and add a layer. Here:
+
+1. **Licensing as the first deliverable.** The assets exist and are unusable. An engagement that
+   begins by getting a grant attached — with the institution that wrote the code — converts a dead
+   repository into a reusable one, and is cheap.
+2. **Bring the measurement layer to the curriculum, not the other way round.** `clementina-tom/PLRS`
+   (MIT) is a prerequisite-constrained recommender that ships a **national curriculum graph for
+   Nigeria**. Nothing equivalent exists for any LATAM national curriculum. The same pattern against
+   the Brazilian BNCC or a Mexican SEP curriculum is a studio asset, and `repos/foundations.md`
+   now carries the seven permissive knowledge-tracing implementations that would sit under it.
+3. **The governance gap remains the live commercial opening** — 92% student adoption against 26% of
+   institutions with a formal AI strategy (`p925`, above). That has not changed, and it is still the
+   largest in the world.
+
+🔴 **Declared gap, stated rather than implied: this pass found no LATAM-origin permissively licensed
+AI-education repository at all.** Not a small one, not an old one. That is a measured nil against a
+named channel (30 topic legs, 601 rows, dedupe against 6,535), not an unsearched one.
+
 
 #### 🆕 `p925` — the highest adoption numbers in the world, attached to the thinnest institutional strategy
 

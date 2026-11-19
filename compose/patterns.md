@@ -10,7 +10,7 @@ Concrete recipes. Each names the exact repos, how they wire together, the licenc
 the result, and a realistic build estimate. Every repo referenced is verified in
 `agents/top.md`, `repos/foundations.md` or `verticals/solutions.md`.
 
-**Fifty patterns, re-counted mechanically in `p925`** (`grep -cE '^## P[0-9]+' compose/patterns.md` → **50**; `P48`–`P50` added in `p925`, command run after writing them and before writing this number). 🔴 **This line read *"Thirty-seven"* and was ten short — `P38`–`P47` were added across `p917`–`p923` and not one of those passes re-ran the command.** That is the largest drift this sentence has ever had to correct, and the fourth time it has had to. 🔵 The count is `grep -cE '^## P[0-9]+' compose/patterns.md`; **do not hand-edit it.** *(prior banner:* **Thirty-seven patterns, re-counted mechanically in `p916`** (`grep -cE '^## P[0-9]+' compose/patterns.md` → **37**; `P36`–`P37` added in `p916`, both run through the command rather than the word) (*prior banner:* **Thirty-five patterns, re-counted mechanically in `p915`** (🔴 **this line read *"Thirty-two"* and was three short — `P33` was added in `p914` and `P34`–`P35` in `p915`.** The count is `grep -cE '^## P[0-9]+' compose/patterns.md`, it is **35**, and a pass that adds one re-runs that command rather than editing the word — the same drift recurred in `intel/trends.md` this pass and is corrected there too.*)* (🔴 this line read *"Twenty-six, counted mechanically in `p907`"* and was **six short**: `P27`–`P31` were added in `p908`–`p912` and `P32` in `p913`, none of them re-counting. `p907` corrected the same line from *"twenty-three"* and wrote the rule — **a pass that adds a pattern should re-count, not increment** — and the drift resumed on the very next pass. 🔵 The count is now `grep -cE '^## P[0-9]+' compose/patterns.md`; **do not hand-edit this number**), **plus the G1 licence gate added in p897 and extended with gate `904-G1` in p904, `905-G1` in p905, `907-G1` in `p907`, `912-G1` in `p912` and `913-G1` in `p913`** (**P26 added in `p907`** — the sanctioned LMS-to-agent bridge, built from the seven per-institution user-credential bridges `intel/trends.md` **T30** measured, and the only end-to-end permissive pattern here that touches a commercial LMS) (**P22 added in `p903`** — the
+**Fifty-three patterns, re-counted mechanically in `p926`** (`grep -cE '^## P[0-9]+' compose/patterns.md` → **53**; `P51`–`P53` added in `p926`, command run after writing them and before writing this number). 🟢 **Two passes running that the rule has held.** 🔵 The count is `grep -cE '^## P[0-9]+' compose/patterns.md`; **do not hand-edit it.** *(prior banner:* **Fifty patterns, re-counted mechanically in `p925`** (`grep -cE '^## P[0-9]+' compose/patterns.md` → **50**; `P48`–`P50` added in `p925`, command run after writing them and before writing this number). *)* 🔴 **This line read *"Thirty-seven"* and was ten short — `P38`–`P47` were added across `p917`–`p923` and not one of those passes re-ran the command.** That is the largest drift this sentence has ever had to correct, and the fourth time it has had to. 🔵 The count is `grep -cE '^## P[0-9]+' compose/patterns.md`; **do not hand-edit it.** *(prior banner:* **Thirty-seven patterns, re-counted mechanically in `p916`** (`grep -cE '^## P[0-9]+' compose/patterns.md` → **37**; `P36`–`P37` added in `p916`, both run through the command rather than the word) (*prior banner:* **Thirty-five patterns, re-counted mechanically in `p915`** (🔴 **this line read *"Thirty-two"* and was three short — `P33` was added in `p914` and `P34`–`P35` in `p915`.** The count is `grep -cE '^## P[0-9]+' compose/patterns.md`, it is **35**, and a pass that adds one re-runs that command rather than editing the word — the same drift recurred in `intel/trends.md` this pass and is corrected there too.*)* (🔴 this line read *"Twenty-six, counted mechanically in `p907`"* and was **six short**: `P27`–`P31` were added in `p908`–`p912` and `P32` in `p913`, none of them re-counting. `p907` corrected the same line from *"twenty-three"* and wrote the rule — **a pass that adds a pattern should re-count, not increment** — and the drift resumed on the very next pass. 🔵 The count is now `grep -cE '^## P[0-9]+' compose/patterns.md`; **do not hand-edit this number**), **plus the G1 licence gate added in p897 and extended with gate `904-G1` in p904, `905-G1` in p905, `907-G1` in `p907`, `912-G1` in `p912` and `913-G1` in `p913`** (**P26 added in `p907`** — the sanctioned LMS-to-agent bridge, built from the seven per-institution user-credential bridges `intel/trends.md` **T30** measured, and the only end-to-end permissive pattern here that touches a commercial LMS) (**P22 added in `p903`** — the
 national-curriculum corpus pattern, built from the Arabic-language channel's finding that the
 curriculum exists at national scale and carries no grant; see `intel/trends.md` **T26**) (**P20 added in `p901`** — the first end-to-end permissive *synchronous* pattern in this file, unlocked by `p901`'s verification of `jitsi/jitsi-meet` at Apache-2.0) (**P19 added in `p900`** — the
 first end-to-end permissive pattern in this file that is not offline-first, built entirely from
@@ -3790,4 +3790,110 @@ part that took judgment, and you own the data, which is the part that carries th
 move from code to the data and content assets, where no index can see it. `p925` found the second
 instance at **8,648 stars**. Two instances at seven and eight thousand stars is a regularity, and a
 regularity in this position needs a standing procedure rather than a warning.
+
+## P51 — The permissive courseware production line: a week of interactive lessons, generated, graded and delivered, with nothing copyleft in the shippable path (added `p926`)
+
+**What it is.** A teacher names a topic and a week's worth of **interactive** courseware comes out —
+slides, in-lesson activities, a quiz, and the marking for it — delivered through whatever LMS the
+client already runs, with the generated artefacts and the generator both licensed for a closed,
+branded deliverable.
+
+🔴 **Why this pattern did not exist before `p926`.** `agents/top.md` recorded `frametell`
+(**AGPL-3.0**) as the only open courseware-*production* agent in this KB. Every content-generation
+recipe therefore had to either go copyleft or stop at tutoring. **`xingjunm/autoppt` is MIT**
+(byte-read `main/LICENSE`, 1,092 B, `sha256₁₂ db50831211a3`), created 2026-11-02, 57 ★, and
+generates interactive lecture slides a week at a time driven by **Claude Code or OpenAI Codex**.
+
+**The wiring.**
+
+| Step | Component | Licence | What it does here |
+|---|---|---|---|
+| 0 | **G1 licence gate** | — | Run it first, as always. Every component below is MIT or Apache-2.0; the only copyleft in this recipe is the LMS, and step 4 is what keeps it at arm's length |
+| 1 | `xingjunm/autoppt` | **MIT** | Teacher gives a topic and a week's scope → interactive slide decks and in-lesson activities. Runs under Claude Code or Codex, so it is driven by the same agent runtime as the rest of the studio's tooling |
+| 2 | `THU-MAIC/OpenMAIC` | **MIT**, 43,952 ★ | The multi-agent classroom tier: generates quizzes and project-based activities from the same source, and **grades quiz answers**. Already this KB's largest MIT education agent |
+| 3 | `proyecto26/notebooklm-ai-plugin` (**optional**) | **MIT** | Where the client wants audio overviews or video from the same material, this reaches NotebookLM's 9 artefact types from the agent. 🟡 **It is a client for a hosted proprietary service** — the MIT grant covers the plugin, not NotebookLM. Drop this step for an air-gapped or data-resident client |
+| 4 | `Cvmcosta/ltijs` | **Apache-2.0** | **LTI 1.3 tool provider.** This is the step that matters legally: the courseware is delivered to Moodle (GPL-3.0), Open edX (AGPL-3.0) or Canvas (AGPL-3.0) **as a separate work over a standard protocol**, so no copyleft reaches the generated artefacts or the generator |
+| 5 | `Faixiang/Moodle-MCP` or `vishalsachdev/canvas-mcp` | **MIT** | Read-only MCP into the live LMS so the generator sees the real course structure, deadlines and roster shape before it writes anything |
+
+**Licence posture of the result:** 🟢 **MIT/Apache-2.0 end to end in the shippable path.** The LMS
+stays copyleft and stays *separate*; the client may take a proprietary derivative of everything the
+studio writes.
+
+**Build estimate:** 5–7 weeks. Most of it is step 4 and the LTI launch/grade-passback
+round trip, not the generation — steps 1 and 2 work out of the box.
+
+🔴 **The two things that will bite.** **(a)** OpenMAIC declares **178 npm packages with no lockfile
+on any path probed** (`p905`) and AutoPPT is three weeks old — vendor both at a SHA and build your
+own lockfile before anything is promised. **(b)** Automated marking is a **regulated act** in a
+growing list of jurisdictions: Oklahoma SB 1734 bars AI used *solely* for grading, and the EU's
+Annex III puts student evaluation in the high-risk tier. **Step 2's grading output must land in
+front of a human with an override**, and the override must be logged — see `intel/trends.md`
+**T1** and **T60**.
+
+## P52 — The offline tutoring appliance: a tutor that never reaches the network, and measures itself anyway (added `p926`)
+
+**What it is.** A tutoring device or app for a school with no reliable connectivity — or for a
+client whose rules forbid student work leaving the premises — that diagnoses *which
+misconception* a learner holds, schedules revision against it, and **produces the evidence a
+regulator or a board will ask for**, all without a server.
+
+🟢 **Why now.** `p926` shelved **two independent MIT implementations of this design from unrelated
+teams on two continents** (`intel/trends.md` **T62**), plus the cold-start learner model that makes
+it work on day one with no interaction history.
+
+**The wiring.**
+
+| Step | Component | Licence | What it does here |
+|---|---|---|---|
+| 1 | `ArushJain-697/namma-ai` (**SAKSHI**) | **MIT** | **The reference implementation of the whole appliance**: Raspberry Pi 5, 176×220 screen, three buttons, USB camera to photograph a worksheet. Ships **GURU-0.6B** as a release artefact, and documents its retention maths in-repo. Start here rather than from scratch |
+| 2 | `siyegs/rung` | **MIT** | The phone expression of the same loop, and the better source for **the misconception-diagnosis step**: it infers which specific mistake recurs and rebuilds the plan around it, entirely on-device |
+| 3 | `farroshsy/hcie-system` | **MIT** | **The cold-start learner model.** Mastery as a lagged-Kalman estimate over a prerequisite graph — **no per-learner embeddings, no GPU, no interaction history required**. This is what makes day one work; published at **AUC 0.6051**, honestly reported as on par with baselines |
+| 4 | `CAHLR/pyBKT` | **MIT** | The adoptable, maintained knowledge-tracing library for the steady state once interaction history exists. Swap in behind the same interface as step 3 |
+| 5 | `clementina-tom/PLRS` constraint layer | **MIT** | The **DAG prerequisite gate** — the component with the strongest published result in this KB (**0% prerequisite violations vs 81%+** for collaborative filtering). Keeps the appliance from ever recommending a topic the learner is not ready for, which is a pedagogical guarantee you can write into a contract |
+| 6 | `elimu-ai/webapp` + `elimu-ai/appstore`, or `learningequality/kolibri` | **MIT** | Content delivery and **APK distribution with no app store and no network** — the tier this KB has verified for Sub-Saharan deployment |
+| 7 | `mad707/masar`'s evaluation protocol | **MIT** | Not a dependency — **a method to copy**: the strict student-level, time-respecting, leak-free split. Reuse it to report your appliance's numbers so they survive scrutiny |
+
+**Licence posture:** 🟢 **MIT end to end.** Every component, including the content-delivery tier.
+This is the second end-to-end permissive pattern in this file and the first that is also
+evidence-producing.
+
+**Build estimate:** 8–10 weeks to a deployable pilot from SAKSHI's hardware design; 4–5 weeks
+for the phone-only variant starting from `rung`.
+
+🔵 **The design rule that makes this sellable.** An on-device tutor is an **unobservable** tutor, so
+the measurement has to be built in at step 3, not bolted on. The appliance should write a local,
+exportable interaction log in the shape masar's protocol expects — then a periodic sync (or a
+physically carried file) produces exactly the outcome evidence the North American, EU and Vietnamese
+regimes are all converging on, **without the student's work ever leaving the device**.
+
+## P53 — Attaching evidence to a tutor the client already has (added `p926`)
+
+**What it is.** The short engagement for a client who has **already bought or built** an AI tutor
+and now has to defend it — to a board, a ministry, a procurement review or an EU conformity
+assessment. You do not replace the tutor. You instrument it.
+
+🔴 **The problem, measured.** `intel/trends.md` **T61**: the two largest open education agents in
+existence publish **no learning-outcome study**, and neither do most commercial ones. The evidence
+layer exists as a **separate, permissively licensed population** that no product cites.
+
+**The wiring.**
+
+| Step | Component | Licence | What it does here |
+|---|---|---|---|
+| 1 | `Apereo-Learning-Analytics-Initiative/OpenLRS` or an **xAPI** LRS | Apache-2.0 | Capture the interaction stream from the existing tutor. If it emits nothing, the LTI 1.3 grade-passback and the LMS MCP seams (`Faixiang/Moodle-MCP`, `vishalsachdev/canvas-mcp`, both MIT) are the two places to tap it without modifying the product |
+| 2 | `mad707/masar` | **MIT** | **Copy the protocol, not the model.** Strict student-level, time-respecting split, leak-free at every rung, and a ladder of baselines — item-only, IRT, PFA logistic regression — *before* anything deep |
+| 3 | `CAHLR/pyBKT` and `pykt-team/pykt-toolkit` | **MIT** | The maintained estimators to run on that stream |
+| 4 | `Aditya-Ranjan1234/NS-CausalKT-Agentic-Grader` | **MIT** | Where the client needs **diagnosis rather than prediction** — a neural-symbolic design whose symbolic layer gives a defensible account of *why* a learner was marked as they were. This is the shape that survives a jurisdiction that bans AI-only grading |
+| 5 | `clementina-tom/PLRS` | **MIT** | Audit the tutor's *sequencing*: measure its prerequisite-violation rate against PLRS's DAG. **81%+ for collaborative-filtering baselines** is the number to beat, and most engagement-optimised products will not |
+
+**Licence posture:** 🟢 MIT/Apache-2.0 throughout. Nothing here is delivered to the end user, so
+even the copyleft tutor underneath is untouched.
+
+**Build estimate:** 3–4 weeks. This is the cheapest pattern in this file and, given
+`intel/market.md`'s regulatory calendar, likely the most frequently needed.
+
+🔴 **Set the expectation before step 2 runs.** The published results say the simple baseline is
+competitive (**DKT ≈0.75 vs PFA 0.760**). **A fair evaluation may well show the client's tutor is
+not beating logistic regression.** That is a finding worth being paid for, and it is much cheaper to
+agree that in the statement of work than to discover it in the readout.
 

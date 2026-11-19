@@ -380,6 +380,26 @@ Shelved so a later pass does not rediscover them and mistake them for permissive
 | https://github.com/LearnPress/learnpress | 275 | 🔴 **No licence file on 18 probed paths.** `readme.txt` serves `200` — the WordPress convention of a `License:` header inside the readme. The grant is **unresolved by file**, so the row is not shelved. |
 | https://github.com/Azure/Moodle | 186 | Not refused on the grant (MIT, 1,090 B, `91f7258203fd`) — it is **deployment tooling for Moodle**, so it belongs beside the Moodle row above rather than as a platform of its own. Worth knowing it exists before anyone rebuilds it. |
 
+## 🆕 `p926` — two agent-native platforms, and the one honesty test that separates them
+
+Both came out of the `p926` topic backlog, both are **Apache-2.0** with the grant byte-read, and
+both are **early**. They are shelved together because the contrast between them is the reusable
+lesson: a permissive licence and a recent push say nothing about whether a thing exists.
+
+| Platform | Repo | Licence | What it is | Read it as | Region |
+|---|---|---|---|---|---|
+| **LEA — Learning Engagement Assistant** | https://github.com/tep00018/LEA-platform | **Apache-2.0**, byte-read `main/LICENSE.txt` (11,378 B, `sha256₁₂ d17f7fd47c98`) — 🔵 note the path: `LICENSE.txt`, which an 8-path probe keyed to `LICENSE` alone will miss | Tri-modal agentic STEM tutoring — **Chat** (course-grounded Q&A), **Tutor** (guided instruction with adaptive scaffolding) and **Quiz** (dynamic assessment with difficulty calibration) — over **knowledge-component modelling** with hierarchical objectives and mastery tracking, grounded by RAG in course materials. Scaffolding adjusts on **cognitive load** in real time. | 🟢 **A reference architecture with a thesis behind it:** MSc, Teri Rumble, **Abertay University**. 🟡 **Read the data-availability note before scoping:** institutional course materials, knowledge-component models, vector stores and real-course evaluation data are **not released**. What ships is one open course (`AIML101`, built from MIT-licensed material) and a synthetic `DEMO101`. So the *architecture* transfers and the *content and evaluation* do not — which is the normal state for university work and is stated plainly here, unlike most. A companion repo `tep00018/LEA` carries the same system. | EMEA — UK (Scotland) |
+| **Noggin** | https://github.com/Noggin-Labs/Noggin | **Apache-2.0**, byte-read `main/LICENSE` (11,357 B, `sha256₁₂ c71d239df917`) | Adaptive learning platform designed around **neurodivergent learners** — "different minds, different strengths, different ways of understanding" — rather than retrofitted for accessibility. Invites accessibility reviews as a contribution category. | 🟢 **Shelved for its status discipline as much as its code.** Noggin publishes a three-state table — **Implemented / In development / Planned** — and names "the source code, tests, issues and release notes" as the authoritative reference for which is which. 🔴 **Created 2026-11-07 and 10 ★: this is a week-old project.** Treat it as a design to watch and a posture to copy, not a dependency. | Global |
+
+🔴 **The contrast, and why it is in this file.** A third candidate from the same backlog —
+`openaisolutions/AutodidactAI` (MIT, 12 ★, pushed 2026-11-12, created 2023) — passed every
+mechanical gate this base applies and **is not software**: its own README calls it *"a proposed
+AI-driven platform"* and *"currently a theoretical project"* offering *"a conceptual framework"*.
+🔵 **Noggin and AutodidactAI are indistinguishable to a licence probe, a star count and a push
+date.** They are told apart by one step — **reading what the repository says it is** — and a
+platform that publishes an Implemented/Planned table is doing that work for you. **`926-R2`: before
+a platform row is written, quote the repository's own claim about its implementation state.**
+
 ## What you inherit when you deploy one of these — measured `p905`
 
 A vertical platform is chosen on features and deployed with its dependency tree. This section records
@@ -438,7 +458,7 @@ deferred. Grants byte-read in `p908`.
 |---|---|---|---|---|---|---|
 | **Apache OpenMeetings** | https://github.com/apache/openmeetings | **Apache-2.0** (`50,907 B`) | 691 | 2026-11-16 | Self-hosted **live classroom**: rooms, whiteboard, polls, recording. Apache-governed, so the licence will not move | 🟢 The **recording** is the seam: transcript → per-student summary → assessment items. Permissive end to end, which no other live-classroom row in this file is. 🔵 SPDX reports `NOASSERTION`; the `50,907 B` payload opens *"Apache License"* |
 | **Open TutorAI (CE)** | https://github.com/Open-TutorAi/open-tutor-ai-CE | **BSD-3-Clause** (`1,531 B`, three numbered conditions read) | 119 | 2026-06-26 | Avatar-fronted tutoring platform, Community Edition | Pedagogy and persona are configuration, so the seam is the model backend. 🟡 Last push `2026-06-26` — **five months quiet**; verify maintenance before it anchors a build |
-| **ClassroomIO** | https://github.com/classroomio/classroomio | 🔴 **AGPL-3.0** (`34,523 B`) | 1,748 | 2026-11-18 | Customer-training / academy platform — the *corporate* academy shape, not K-12 | 🔴 **AGPL is network copyleft: hosting a derivative as a service triggers the source obligation.** Usable as a deployed platform, unusable as the base of a closed product |
+| **ClassroomIO** | https://github.com/classroomio/classroomio | 🔴 **AGPL-3.0** (`34,523 B`) | 1,750 | 2026-11-18 | Customer-training / academy platform — the *corporate* academy shape, not K-12 | 🔴 **AGPL is network copyleft: hosting a derivative as a service triggers the source obligation.** Usable as a deployed platform, unusable as the base of a closed product |
 | **FenixEdu Academic** | https://github.com/FenixEdu/fenixedu-academic | 🔴 **LGPL-3.0** (`7,652 B`) | 175 | 🔴 **2023-06-14** | A full open **SIS** — degrees, enrolment, curricular plans — built and run at IST Lisbon (EMEA 🇵🇹) | 🔴 **Three and a half years without a push.** Filed as a *reference data model* for European registrarial structure, **not as a deployment target**. The honest use is reading its domain model, not running it |
 | **TurnKey Canvas** | https://github.com/turnkeylinux-apps/canvas | 🔴 **no licence file** (`README.rst` `200`; Canvas itself is AGPL-3.0) | 13 | 2026-11-16 | Pre-built **Canvas LMS appliance** — the fastest path to a running Canvas for a demo or a pilot | 🟡 The appliance *build scripts* carry no grant; the platform it installs is AGPL. Fine for a time-boxed evaluation environment, not a distribution base. **`p907` measured and deferred this row; `p908` read it and files it with the licence gap stated** |
 
