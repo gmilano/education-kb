@@ -874,6 +874,28 @@ statute itself. The studio-side implication is unchanged and now better evidence
 transfers to the US with the curriculum swapped and the compliance wrapper changed.
 
 
+
+#### 🆕 `p929` — the attack tooling measured this week is aimed at this region's platforms, and that is the engagement
+
+🔴 **`929-F2` extended `928-F5`'s auto-solver tier from three to six, and the two new ones are
+North-America-shaped.** `rushilbh27/finish-my-work` (MIT, byte-read) names **Canvas, Moodle,
+Blackboard and Google Forms** — three of those four are North American platforms with North American
+install bases — and `luvswallow-creator/gptzero-bypass-2026` (MIT) targets **Turnitin and GPTZero**,
+both dominant in US and Canadian academic-integrity workflows.
+
+🔵 **So the integrity conversation here cannot be *which platform* or *which detector*.** One free
+MIT tool covers every platform the client runs; another defeats the detector they would fall back
+to. 🟢 **The engagement is `compose/patterns.md` `P57`** — assessment redesign with the trace as the
+submission — and its opening line writes itself: *the tool your policy is written against is free,
+covers all four of your platforms, and defeats your detector.*
+
+🟡 **Policy context: at parity, which is itself the signal.** `929-F6` graded the regional prose leg
+on facts rather than repositories and **15 of 15 were already held** — 134 AI-in-education bills
+across 31 states, NY A 9190, NC Session Law 2026-41, CA AB 1159, Idaho SB 1227, the federal
+framework of March 2026, EO 14277. 🔵 **North American AI-in-education policy is the best-covered
+regulatory surface in this KB**, so a client conversation here starts from specifics rather than
+from discovery.
+
 ### EMEA
 
 🔵 **`p930` regional leg (2026-11-19).** The **AI Act** remains the forcing function and the
@@ -2117,6 +2139,37 @@ assumption holds for the AI Act's horizontal obligations and **not** for nationa
 which range from Vietnam-style statutory high-risk to nothing at all. Ask per country.
 
 
+
+#### 🆕 `p929` — EMEA supplies the *institutionally deployable* end of the campus-client stratum
+
+🟢 **`T68` measured 136 personal LMS clients and concluded, rightly, that none is a dependency you
+can adopt. Two exceptions are worth naming, and both are EMEA-shaped by design rather than by
+accident.** `HHBYTe/uab-campus-mcp` (MIT, byte-read, created **2026-11-15**) serves **Universitat
+Autònoma de Barcelona**'s Campus Virtual and ships a **self-hosted transport** — the property that
+turns a personal script into something a university can run, and the only instance of it in the
+stratum. `jackdsjk/awesome-monash-tools` is the other, **read-only by construction**. 🔵 Alongside
+`saigyujikingyo-png/edinburgh-study-agent`, the *institutionally deployable* design is
+disproportionately European; the generic student-side design is not.
+
+🟢 **And a delivery surface nothing else in this base occupies.** `alexmodrono/Findle` (Apache-2.0,
+byte-read `11,353 B`, 19 ★) mounts **Moodle and OpenLMS natively into macOS Finder** via the File
+Provider API. For an institution whose staff want materials rather than chat, the LMS-as-filesystem
+is a shorter path to adoption than any agent surface.
+
+🟢 **The local-first argument here is a regulatory argument, and `929-F3` adds supply to it.** The EU
+AI Act's prohibition on **emotion recognition in schools** has applied since February 2025 and the
+high-risk obligations for admissions, evaluation and exam scoring sit at **2 December 2027** after
+the Digital Omnibus. `neuronection/study-assistant` (Apache-2.0, *"your files never leave"*),
+`cyyyp100/meta-capp` (**100% offline**) and `Macro002/AnkiBase` (self-hosted) answer that posture by
+**architecture rather than by contract** — which, with `927-F4`'s three local-first proctoring
+designs and `927-F6`'s **SCORM** seam, makes EMEA the region where this base's permissive shelf
+lines up best with the binding rules.
+
+🟡 **EMEA-origin product supply stays thin at the tutor layer** — `stegra05/Lectern` (Germany, 6 ★)
+and `Mohamed-El-Sharqawy/agent-tutor` (Egypt, 9 ★) are this pass's two EMEA rows. 🔵 `p904`'s rule
+holds: **bring the tutor, adopt the institutional spine** — and the spine now includes a
+self-hostable campus bridge.
+
 ### APAC
 
 🔵 **`p930` regional leg (2026-11-19).** 🟡 `SNIPPET-ONLY`: APAC is reported as **over 45% of the
@@ -3228,6 +3281,40 @@ binding constraint as **institutional alignment across ministries, providers, em
 funders** — not technology — which is the same finding from the consulting side.
 
 
+
+#### 🆕 `p929` — APAC supplies both the densest named-institution bridges and the entire offline tier
+
+🟢 **Named-institution bridges cluster here.** `cwon-z/skku-icampus-mcp` (**Sungkyunkwan**, MIT —
+serves the student's own iCampus data over **both** a REST API and MCP, the shape that survives a
+change of agent protocol), `Aspirin0000/sjtu-canvas-assistant` (**Shanghai Jiao Tong**),
+`hoangcoderr/TDTUElearningMCP` (**Tôn Đức Thắng, Vietnam**), two independent `MUSTer_MCP`
+implementations by different authors for **Macau University of Science & Technology** — `T68`'s
+atomisation reproducing inside a single institution — and `jackdsjk/awesome-monash-tools`
+(**Monash**, 22 tools, read-only by construction).
+
+🟢 **And APAC supplies the offline tier outright, for the third consecutive pass (`T62`).** Every
+local-first row `929-F3` shelved except one is APAC-origin: `cyyyp100/meta-capp` (China, **100%
+offline**, Gemma via Ollama), `AsadullahAlMunib/MathMind` (**Bangladesh**, offline fallback,
+bilingual, Android APK), `AlphaNerdFx/Tango` (24 languages, **offline dictionaries**),
+`Lintao-Lab/faithful-lecture-notes` (engineered against hallucination),
+`InHyunseo/pdf2md-study` (Korea), `Liangzhen-Chen/literature-guide-read` (China, offline reading
+page), `cskwork/supertutor-skill` (Korea), `aimerfeng/ists` (China — **IELTS**, high-stakes language
+certification, a segment this base had no permissive system for).
+
+🔵 **Why that pairing matters commercially.** `T66` recorded that APAC's measured gap is *tutor*
+adoption rather than AI adoption, with **infrastructure** as the stated cause. The supply this
+region produces is infrastructure-light by construction: device-local, offline-capable,
+low-bandwidth. 🟢 **The regional supply is already shaped for the regional constraint** — a better
+engagement story than importing a cloud tutor and meeting the connectivity floor afterwards.
+
+🟡 **Regulatory spine, re-confirmed and already held** (`929-F6`): Vietnam's **MOET Decision 2422**
+(12 periods of AI content per class per year, grades 1–12) alongside its AI law listing **education
+among high-risk sectors** with an 18-month transition; Korea's **AI Basic Act** in force since
+January 2026; China's dated content-labelling requirements (`T7`); Japan voluntary; Australia on
+existing law. 🔵 **Vietnam is the only jurisdiction in this base that has made AI in education both a
+curriculum mandate and a high-risk classification** — the clearest single-country case for an
+engagement that must satisfy a regulator and a curriculum at once.
+
 ### LATAM
 
 🔵 **`p930` regional leg (2026-11-19).** 🔴 **The adoption/governance gap is now quantified on both
@@ -4219,6 +4306,53 @@ the standing advice is unchanged and its evidence is stronger: **bring the tutor
 institutional spine.** See `agents/top.md` `927-F5` and `verticals/solutions.md`.
 
 
+
+#### 🆕 `p929` — the licence floor measured by language, and an absence in both campus strata
+
+🔴 **Declared absence, searched for rather than assumed.** `T68`'s 136-row personal-LMS-client
+stratum and this pass's 50-row campus-MCP cut were both searched for a Latin American institution —
+by name (UNAM, Tec de Monterrey, USP, Unicamp, UBA, PUCP, Universidad de Chile, Los Andes,
+Javeriana) and by country TLD (`.br`, `.mx`, `.ar`, `.cl`, `.co`). **Neither contains one.** Bridges
+exist for Barcelona, Edinburgh, Sungkyunkwan, Shanghai Jiao Tong, Macau, Tôn Đức Thắng, Monash and
+Toronto. 🔵 Given `T68`'s finding that this tier is atomised and individually built, the absence does
+not mean the demand is absent — it means **nobody has published one**, which makes LATAM the
+cheapest region in which to be first.
+
+🔴 **`p928` measured 49.0% of its unheld rows ungranted. Cut by language, the number lands where it
+has commercial consequence.** 328 Spanish- and Portuguese-language education rows
+(`evidence/iberian-language-shelf.2026-11-19-p929.tsv`):
+
+| Grant | Rows | Share |
+|---|---|---|
+| 🔴 **No licence file at all** | **163** | **49.7%** |
+| MIT | 106 | 32.3% |
+| `NOASSERTION` | 32 | 9.8% |
+| GPL-3.0 | 10 | 3.0% |
+| Apache-2.0 | 7 | 2.1% |
+| CC-BY-SA-4.0 / LGPL-3.0 / AGPL-3.0 | 7 | 2.1% |
+
+🟢 **113 rows are permissive; 82 are permissive and pushed since May 2026.** That retires `926-G2`'s
+*"not one of them is permissively licensed"* at thirty times its original sample and confirms
+`927-F5`. 🔴 **But 59.5% is ungranted or unreadable** — `T29` landing on the region this base sells
+into most, with a number attached. 🔵 The engagement line from `p904` gains a third clause: **bring
+the tutor, adopt the institutional spine, and licence the spine** — because half of what is there
+cannot be adopted until someone asks its author to add a `LICENSE` file, which is a week of work and
+the cheapest value this base can point at.
+
+🟢 **The highest-starred artefact in the entire campus-client stratum is Spanish-language and has no
+AI in it.** `frankrubio/pandex` (**MIT**, byte-read `1,062 B`, **15 ★**, pushed **2026-11-19**, CI
+tests, Windows and Linux) syncs Canvas course material, files it by week and converts PDFs and
+slides to Markdown — *"Gratis, en tu PC y sin IA."* Against a stratum `928-F2` measured at 90.7%
+≤2 ★, the most-adopted artefact **does not use a model**. 🔵 Worth saying to a client before
+proposing an agent: in this tier, reliability and zero cost out-adopt intelligence. 🟡 **Region not
+placed** — the repository is Spanish-language and this base does not infer a country from a
+language (`T29`'s own caution); it is not counted as LATAM supply.
+
+🟡 **Institutional rows do exist and are the shape `927-F5` predicted** —
+`Origenes-System-Develop/polar` (MIT, pushed 2026-11-17, *gestão de ocorrências escolares*) and
+`MuriloLimadeSouza/Project-ABC` (MIT, early-years teaching), alongside `p927`'s `uemanet/harpia`,
+the nine-year-old academic system of a Brazilian **state** university.
+
 ### Global
 
 #### 🆕 `p928` — the four mandated prose legs are a **nil for the forty-seventh consecutive pass**, and this pass measured the channel that is not nil
@@ -4406,6 +4540,35 @@ Both are vendor-blog citations of unnamed primary reports. **See
 [`## Market size — and why the numbers disagree`](#market-size--and-why-the-numbers-disagree); `p908`
 adds two more disagreeing figures and no new primary source.**
 
+
+#### 🆕 `p929` — what to say when a client asks how much open source exists
+
+🔵 **Give the number with its method attached, or do not give it.** `929-F1` found that ten of
+`p927`'s published legs concealed **27.4× on the mean** because the published label dropped a
+`stars:>N` floor — and `928-F2` independently measured that **90.7%** of the usable shelf sits at
+**≤2 ★**, which is precisely what such a floor deletes. 🔵 `T71` is the generalisation and `929-G1`
+is the gate: **publish the query verbatim, or publish no count.** A supply figure without its query,
+its page depth and its ceiling is not evidence.
+
+🟢 **The commercially useful form of the answer.** The open education shelf is far deeper than any
+vendor shortlist admits — `p928` reached **20,203 unheld repositories** — *and* the overwhelming
+majority is unusable: atomised, sub-two-star, and in the Iberian-language cut **49.7% carries no
+licence at all**. 🔵 **The scarce asset is not the repository, it is the filter.** That is the honest
+answer to *why pay for a shortlist we could search for ourselves*, and it is this base's actual
+product.
+
+🟢 **Accessibility, newly represented and globally applicable.** `Codexia-afk/PDFtoAudio` (MIT,
+byte-read `1,067 B`) converts PDFs, DOCX and eBooks into neural audiobooks and sentence-synchronised
+playback. 🔵 Document accessibility is a **statutory procurement requirement in every region in this
+file** — EU accessibility rules, US Section 508, and the equivalent provisions in APAC and LATAM
+public procurement — and until this pass this base carried almost nothing permissive that addressed
+it. A small repository and a large door.
+
+🔴 **One global caveat on method, applying to every count in this file.** `topic:study-tools` reports
+a `total_count` of **817** and serves **499** — below the API's 1,000-row ceiling, with no error and
+`incomplete_results: false`. **A leg that returns fewer rows than it promised has not necessarily
+been exhausted**, and neither this pass's instrument nor `p928`'s detects the condition.
+
 ## Declared gaps
 
 ### Declared in `p930`
@@ -4432,6 +4595,31 @@ adds two more disagreeing figures and no new primary source.**
   the fraction a client's legal review stops on, every row is listed in
   `evidence/shelf-depth-audit.2026-11-19-p930.tsv`, and `930-F4` shows at least some `NOASSERTION`
   rows are **concatenated multi-grant files** that resolve cleanly on a hand-read.
+### Declared in `p929`
+
+Gaps this pass **looked for and did not find**, recorded so absence is distinguishable from
+coverage.
+
+- 🔴 **No LATAM institution in either campus stratum** — not in `T68`'s 136 personal LMS clients,
+  not in this pass's 50-row campus-MCP cut. Searched by institution name and by country TLD. Seven
+  other territories returned named-institution bridges.
+- 🔴 **49.7% of the 328 Spanish- and Portuguese-language education rows carry no licence file at
+  all**; 59.5% is ungranted or unreadable. The permissive remainder (113 rows, 82 freshly pushed) is
+  real and retires `926-G2`.
+- 🔴 **`p927`'s published leg table cannot be used as a coverage record.** Ten of thirty-five legs
+  carried an undisclosed star floor (`929-F1`). Any downstream claim resting on `927-F1`'s counts
+  should be re-derived.
+- 🔴 **`topic:study-tools` reports 817 and serves 499**, below the 1,000-row ceiling, with no error.
+  No instrument in this base detects a leg that under-serves its own `total_count`.
+- 🟡 **No learning-outcome evidence, again.** Nothing in this pass's backlog changes the standing
+  caveat: no credible primary evidence of learning-outcome gains from AI at scale. `927-F8`'s
+  `10kH/MisconceptDialogue` remains the strongest licensed, citable response, and `T61` records that
+  what evidence exists is mostly negative.
+- 🟡 **The prose channel returned no new facts.** 15 of 15 named regulatory and market facts were
+  already held (`929-F6`) — a verification instrument now, not a discovery one.
+- 🔵 **Not attempted this pass:** the non-Iberian vernacular shelves (`T29`'s other seven languages)
+  were not cut from this backlog, and the `topic:` vocabulary was not extended beyond `p927`'s 35
+  words. This pass spent its budget on `p928`'s unfinished business, not on new breadth.
 
 ### Declared in `p917`
 

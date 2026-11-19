@@ -1,0 +1,136 @@
+topic:ai-tutor	1	986	100	100
+topic:ai-tutor	2	986	100	200
+topic:ai-tutor	3	986	100	300
+topic:ai-tutor	4	986	100	400
+topic:ai-tutor	5	986	100	500
+topic:ai-tutor	6	986	100	600
+topic:ai-tutor	7	986	100	700
+topic:ai-tutor	8	986	100	800
+topic:ai-tutor	9	986	100	900
+topic:ai-tutor	10	986	86	986
+topic:study-tools	1	817	100	100
+topic:study-tools	2	817	100	200
+topic:study-tools	3	817	100	300
+topic:study-tools	4	817	100	400
+topic:study-tools	5	817	99	499
+topic:canvas-lms	1	505	100	100
+topic:canvas-lms	2	505	100	200
+topic:canvas-lms	3	505	100	300
+topic:canvas-lms	4	505	100	400
+topic:canvas-lms	5	505	100	500
+topic:canvas-lms	6	505	5	505
+topic:tutoring	1	499	100	100
+topic:tutoring	2	499	100	200
+topic:tutoring	3	499	100	300
+topic:tutoring	4	499	100	400
+topic:tutoring	5	499	99	499
+topic:learning-analytics	1	424	100	100
+topic:learning-analytics	2	424	100	200
+topic:learning-analytics	3	424	100	300
+topic:learning-analytics	4	424	100	400
+topic:learning-analytics	5	424	24	424
+topic:plagiarism-detection	1	408	100	100
+topic:plagiarism-detection	2	408	100	200
+topic:plagiarism-detection	3	408	100	300
+topic:plagiarism-detection	4	408	100	400
+topic:plagiarism-detection	5	408	8	408
+topic:grading	1	305	100	100
+topic:grading	2	305	100	200
+topic:grading	3	305	100	300
+topic:grading	4	305	5	305
+topic:xapi	1	284	100	100
+topic:xapi	2	284	100	200
+topic:xapi	3	284	84	284
+topic:stem-education	1	275	100	100
+topic:stem-education	2	275	100	200
+topic:stem-education	3	275	75	275
+topic:pedagogy	1	272	100	100
+topic:pedagogy	2	272	100	200
+topic:pedagogy	3	272	72	272
+topic:scorm	1	246	100	100
+topic:scorm	2	246	100	200
+topic:scorm	3	246	46	246
+topic:question-generation	1	241	100	100
+topic:question-generation	2	241	100	200
+topic:question-generation	3	241	41	241
+topic:moodle	1	2390	100	100
+topic:moodle	2	2390	100	200
+topic:moodle	3	2390	100	300
+topic:moodle	4	2390	100	400
+topic:moodle	5	2390	100	500
+topic:moodle	6	2390	100	600
+topic:moodle	7	2390	100	700
+topic:moodle	8	2390	100	800
+topic:moodle	9	2390	100	900
+topic:moodle	10	2390	100	1000
+topic:lti	1	190	100	100
+topic:lti	2	190	90	190
+topic:proctoring	1	176	100	100
+topic:proctoring	2	176	76	176
+topic:educational	1	7504	100	100
+topic:educational	2	7504	100	200
+topic:educational	3	7504	100	300
+topic:educational	4	7504	100	400
+topic:educational	5	7504	100	500
+topic:educational	6	7504	100	600
+topic:educational	7	7504	100	700
+topic:educational	8	7504	100	800
+topic:educational	9	7504	100	900
+topic:educational	10	7504	100	1000
+topic:math-education	1	168	100	100
+topic:math-education	2	168	68	168
+topic:flashcards	1	3600	100	100
+topic:flashcards	2	3600	100	200
+topic:flashcards	3	3600	100	300
+topic:flashcards	4	3600	100	400
+topic:flashcards	5	3600	100	500
+topic:flashcards	6	3600	100	600
+topic:flashcards	7	3600	100	700
+topic:flashcards	8	3600	100	800
+topic:flashcards	9	3600	100	900
+topic:flashcards	10	3600	100	1000
+topic:openedx	1	145	100	100
+topic:openedx	2	145	45	145
+topic:gradebook	1	144	100	100
+topic:gradebook	2	144	44	144
+topic:quiz	1	7230	100	100
+topic:quiz	2	7230	100	200
+topic:quiz	3	7230	100	300
+topic:quiz	4	7230	100	400
+topic:quiz	5	7230	100	500
+topic:quiz	6	7230	100	600
+topic:quiz	7	7230	100	700
+topic:quiz	8	7230	100	800
+topic:quiz	9	7230	100	900
+topic:quiz	10	7230	100	1000
+topic:literacy	1	128	100	100
+topic:literacy	2	128	28	128
+topic:homework	1	3173	100	100
+topic:homework	2	3173	100	200
+topic:homework	3	3173	100	300
+topic:homework	4	3173	100	400
+topic:homework	5	3173	100	500
+topic:homework	6	3173	100	600
+topic:homework	7	3173	100	700
+topic:homework	8	3173	100	800
+topic:homework	9	3173	100	900
+topic:homework	10	3173	100	1000
+topic:note-taking topic:education	1	102	100	100
+topic:note-taking topic:education	2	102	2	102
+topic:student-management stars:>=10	1	64	64	64
+topic:student-management stars:5..9	1	51	51	51
+topic:student-management stars:2..4	1	178	100	100
+topic:student-management stars:2..4	2	178	78	178
+topic:student-management stars:1	1	290	100	100
+topic:student-management stars:1	2	290	100	200
+topic:student-management stars:1	3	290	90	290
+topic:student-management stars:0	1	1068	100	100
+topic:student-management stars:0	2	1068	100	200
+topic:student-management stars:0	3	1068	100	300
+topic:student-management stars:0	4	1068	100	400
+topic:student-management stars:0	5	1068	100	500
+topic:student-management stars:0	6	1068	100	600
+topic:student-management stars:0	7	1068	100	700
+topic:student-management stars:0	8	1068	100	800
+topic:student-management stars:0	9	1068	100	900
+topic:student-management stars:0	10	1068	100	1000

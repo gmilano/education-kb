@@ -2808,6 +2808,75 @@ The *prevalence* (10 Rust crates in 618 addresses) is specific to this base's cu
 says nothing about education supply at large. The manifest families other than Cargo are **not**
 probed yet and that is this trend's open edge.
 
+## T71 — The instrument's third silent error class is not a lost row, it is a number published under a name it did not have (added `p929`)
+
+**What we measured.** `T69` named two silent, instrument-produced error classes: a batched
+`repo:`-qualified search that **drops a missing row without reporting an error** (`p926`), and a
+control harness that **manufactures divergences that are not there** (`p928`). `p929` found a third,
+and it is upstream of both — it corrupts not the data but the *label*.
+
+🔴 **Ten of `p927`'s thirty-five published legs carried an undisclosed `stars:>N` floor.** `927-F1`
+printed them as bare `topic:X`. Unqualified, they return **29,582** against the **1,078** published
+— **27.4× concealed on the mean**, 52.0× at the extreme (`topic:quiz`: 139 published, 7,230 actual).
+The counts are stable — probed twice, identical, `incomplete_results: false` — and the legs `p927`
+sent unqualified re-measure within ±1, so this is not drift, not growth and not retrieval loss.
+**Nothing was lost in transit. The number was simply published under a name it did not have.**
+
+**Why it is a trend and not a bug report.** `T36` established that *a published open-source supply
+count is a property of the classifier that produced it, and the classifier is almost never
+published*. `T71` extends that from third-party counts to **this base's own**, and sharpens the
+mechanism: the classifier here was not merely unpublished, it was **mis-stated**, and the
+mis-statement was invisible to every downstream reader including the next two passes.
+
+🔴 **The blast radius is directional, which is what makes it expensive.** The qualifier dropped was
+a **star floor** — the one filter this base had explicitly ruled out, twice. `926-F2` established
+*filter before sorting*; `p904` measured a **6 ★ ceiling** on LATAM supply. A `stars:>30` leg cannot
+see regional supply at all. 🔵 And `928-F2` independently measured that **90.7% of the usable open
+education shelf sits at two stars or fewer** — so the floor was deleting, by construction, nine
+tenths of the market. Three consecutive passes read a tail one of their instruments was configured
+to remove.
+
+**What it implies for delivery.** 🔵 **`929-G1`: publish the query string that was sent, verbatim, or
+publish no leg table at all.** A prettified leg label is not a citation. When a client asks *how much
+open source exists for X*, the honest answer carries its query, its page depth and its ceiling — and
+this base can now give one for education, with the method named rather than implied.
+
+## T72 — Counter-detection is now a supplied, permissively licensed product, which settles T10 on the supply side (added `p929`)
+
+**What we measured.** `928-F5` hand-verified **three** permissively licensed LMS auto-solvers and
+published three. `p929` byte-read **six**, all MIT, all live. Three were new, and two of those three
+change what the tier means:
+
+- 🔴 **`luvswallow-creator/gptzero-bypass-2026`** (MIT, byte-read `1,070 B`) — *"humanize any AI text
+  to bypass GPTZero and Turnitin detection with one click"*. It attacks **the detection layer
+  itself**, by name.
+- 🔴 **`rushilbh27/finish-my-work`** (MIT, byte-read `1,068 B`) — auto-answers quizzes and homework on
+  **Canvas, Moodle, Blackboard and Google Forms**, in one tool.
+
+Plus `im23b-busere/QuizGPT` (MIT) and `Shahzaib-XVII/RMU-LMS-Auto-Quiz-Solver` (MIT, *"works on any
+university LMS"*).
+
+**Why it is a trend.** `T10` — *detection is being abandoned as an integrity control, and assessment
+redesign is what replaces it* — has rested on institutional policy announcements since it was
+written. It now rests on supply. 🔵 **And the two controls an institution reaches for first are both
+already answered.** `928-F5` concluded that an in-browser quiz cannot be the graded artefact, which
+treats the threat as platform-specific; `finish-my-work` covers all four major platforms at once, so
+**switching platform is not a mitigation**. The usual fallback is a detector; `gptzero-bypass-2026`
+is free, MIT and one click, so **falling back to detection is not a mitigation either**.
+
+🔵 **The deeper point is architectural, and it is `T30`'s property with its sign reversed.** `T30`
+recorded that the per-institution LMS bridge *"removes procurement from the critical path, and
+removes the licence with it"*, and `T68` measured that stratum at 136 rows. That property has no
+sign: a browser extension on a student's own credentials needs no procurement, no approval and no
+licence negotiation, and that is exactly as true of `finish-my-work` as of a campus study client.
+**At the metadata layer — topic, licence, freshness, star band, description shape — there is no one
+class and another.** A blocklist is therefore not a control.
+
+**What it implies for delivery.** The control point moves to **what the student is asked to
+produce** and to **process evidence**, not to the artefact or the platform.
+`compose/patterns.md` **P57**, which composes it from `P55`'s compliant-by-architecture designs and
+the provenance-bearing generation rows `929-F3` shelved. 🟡 Recorded as threat intelligence: none of
+the six is shelved in `agents/top.md` and none should be.
 ## T73 — A licence classifier that matches licence **names** inside licence **text** fails toward false divergence, and the two biggest copyleft families are exactly where it fails (measured `p930`)
 
 🔵 **The observation.** `p930` byte-read **255** `LICENSE` payloads from the published shelf and

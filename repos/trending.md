@@ -112,6 +112,62 @@ byte-reads to move one row's licence and four rows' addresses; at that yield its
    resolve** from this environment. The demand side is snippet-only by construction.
 
 ---
+## `2026-11-19` (p929) — **`p928` removed the page cap by sharding. This pass paginated the same channel and found the thing the cap was never the cause of: ten of `p927`'s published legs had been silently filtered to repositories above ten, twenty, thirty or sixty stars.**
+
+🔵 **`p928`'s reach supersedes this pass's.** Star-band sharding returned **21,238 unique
+repositories / 20,203 unheld**; straight pagination over 39 legs returned **21,911 rows, 16,142
+unique, 15,070 still unheld**. Cite `928-F1` for the population. This section records the three
+things pagination showed that sharding did not.
+
+### 🔴 The leg labels were wrong, and the defect points at the regional tail
+
+| Leg as `p927` published it | `p927` | Query actually sent | True | Concealed |
+|---|---|---|---|---|
+| `topic:quiz` | 139 | `topic:quiz stars:>30` | **7,230** | 52.0× |
+| `topic:educational` | 176 | `topic:educational stars:>60` | **7,505** | 42.6× |
+| `topic:educational-game` | 49 | `… stars:>20` | 1,903 | 38.8× |
+| `topic:homework` | 107 | `… stars:>10` | 3,173 | 29.7× |
+| `topic:flashcards` | 156 | `… stars:>30` | 3,600 | 23.1× |
+| `topic:school-management` | 70 | `… stars:>10` | 1,289 | 18.4× |
+| `topic:assessment` | 68 | `… stars:>20` | 1,087 | 16.0× |
+| `topic:computer-science-education` | 25 | `… stars:>20` | 331 | 13.2× |
+| `topic:moodle` | 190 | `… stars:>10` | 2,390 | 12.6× |
+| `topic:online-learning` | 98 | `… stars:>30` | 1,084 | 11.1× |
+| **Ten legs** | **1,078** | — | 🔴 **29,582** | **27.4× mean** |
+
+🔵 **Every "trending" claim in this file derived from one of those ten legs described the popular
+head of a topic, not the topic** — and `928-F2`'s finding that 90.7% of the usable shelf sits at
+≤2 ★ is exactly what a star floor deletes. `agents/trending.md` **`929-F1`**, gate **`929-G1`**,
+`intel/trends.md` **`T71`**.
+
+### 🟢 Depth in this channel is an overlap gradient, not a quality gradient
+
+| Page | 1 | 2 | 3 | 5 | 7 | 9 | 10 |
+|---|---|---|---|---|---|---|---|
+| Unheld rate | 76.8% | 93.5% | 95.6% | 97.0% | 96.5% | 98.8% | 98.0% |
+
+Page one is the **least** productive page, because earlier passes already took it. 🔵 The cap never
+filtered for quality — which is what makes `928`'s "the hidden tail is uniformly tiny" a statement
+about **supply** rather than about what the cap happened to keep.
+
+🟡 **`topic:study-tools` reports 817 and serves 499**, below the 1,000-row ceiling, no error,
+`incomplete_results: false`. A leg that returns fewer rows than it promised has not necessarily been
+exhausted, and neither pass's instrument detects the condition.
+
+### 🟢 What is new in the tail this fortnight
+
+- **Lecture → study artefact grew a provenance layer.** `stegra05/Lectern` (MIT, pushed 2026-11-17)
+  ships **per-card provenance and a visible coverage map**; `Lintao-Lab/faithful-lecture-notes`
+  (MIT) is *engineered against hallucination*, Architect-plans / Assemblers-write-from-source. 🔵
+  First convergence in this tail on **verifiability** rather than capability.
+- **Local-first again (`T62`).** `neuronection/study-assistant` (Apache-2.0, pushed **2026-11-19**),
+  `cyyyp100/meta-capp` (MIT, 100% offline, Gemma via Ollama), `Jasonsu22/Nomi` (MIT, on-device
+  macOS transcription).
+- 🔴 **And the auto-solver tier is six, not `928-F5`'s three** — `im23b-busere/QuizGPT` (MIT,
+  2026-11-16), `rushilbh27/finish-my-work` (MIT — **Canvas, Moodle, Blackboard and Google Forms**),
+  `luvswallow-creator/gptzero-bypass-2026` (MIT — **Turnitin and GPTZero by name**),
+  `Shahzaib-XVII/RMU-LMS-Auto-Quiz-Solver` (MIT). Threat intelligence, **not shelved**: `929-F2`,
+  `T72`, `P57`.
 
 ## `2026-11-19` (p928) — **The backlog this file has been recording for four passes is now measured to the bottom, and the right conclusion is to stop recording it.**
 
@@ -15650,7 +15706,7 @@ Learning Equality also archived `kolibri-installer-windows` (`6★`), `kolibri-i
 |---|---|--:|---|
 | [`scratchfoundation/scratch-editor`](https://github.com/scratchfoundation/scratch-editor) | 🔴 **AGPL-3.0** `34,523 B` sha256₁₂ `8486a10c4393`, ref **`develop`** | 310 | The live Scratch tree. README title: *“The Scratch Editor Monorepo”*. Licence unchanged from `scratch-gui`, so the network-copyleft planning fact holds — **what changed is which address you fork** |
 | [`SiriusFzh/NovaForge`](https://github.com/SiriusFzh/NovaForge) | 🟢 **MIT** `1,066 B` sha256₁₂ `2f50a18b8856` | 723 | The **only** real education asset in `172` repositories under `topic:study-notes`. LaTeX + Typst + Markdown note-system templates for 考研 / 考公 — the document substrate an authoring agent writes into. APAC on **named examination systems of one jurisdiction**, not on language |
-| [`kael-odin/awesome-academic-research-skills`](https://github.com/kael-odin/awesome-academic-research-skills) | 🟢 **MIT** `1,066 B` sha256₁₂ `a5ba667c70f8` | 198 | Filed as a **channel**, not just a repository: an auto-updated **daily ranking** of research agent-skill repos. `692` passes of this base discovered skills by sweeping topic heads and watching them saturate (`T74`); this is a third party running that sweep continuously — **a channel to read rather than a shelf to rebuild** |
+| [`kael-odin/awesome-academic-research-skills`](https://github.com/kael-odin/awesome-academic-research-skills) | 🟢 **MIT** `1,066 B` sha256₁₂ `a5ba667c70f8` | 198 | Filed as a **channel**, not just a repository: an auto-updated **daily ranking** of research agent-skill repos. `692` passes of this base discovered skills by sweeping topic heads and watching them saturate (`T72`); this is a third party running that sweep continuously — **a channel to read rather than a shelf to rebuild** |
 | [`ShaishavMaisuria/research-paper-lifecycle-skills`](https://github.com/ShaishavMaisuria/research-paper-lifecycle-skills) | 🟢 **Apache-2.0** `10,278 B` sha256₁₂ `b86e218eca4d`, body **verbatim** | 60 | `42` skills across the research lifecycle. **And the cleanest demonstration of `676-A`'s rule this base has:** residual **−`1,080 B`** against canonical, normalised operative body **`9,130` vs `9,130`, §1–§9 all present** |
 
 ### 🔴 692-S — the byte-count collision, and both instruments failing on one pair
@@ -16064,7 +16120,7 @@ The census cost `104` search-API calls at the `30/min` limit and took roughly se
 
 - `topic:open-badges` — `3` candidates in total. 🔴 **The head is empty, not unexplored**, which also answers the 1EdTech digital-credentials trend from the demand side: the standard has institutional momentum and **no permissive open-source implementation shelf behind it**. Declared gap, not silence.
 - `education verifiable credentials wallet diploma stars:>10` — `0` rows returned.
-- `topic:lti` (`39`) and `topic:knowledge-tracing` (`25`) behaved as controls should: already swept, nothing adoptable, consistent with `T74`.
+- `topic:lti` (`39`) and `topic:knowledge-tracing` (`25`) behaved as controls should: already swept, nothing adoptable, consistent with `T72`.
 - `topic:accessibility education` returned `12`, all of them general-purpose (a p5.js website, a keyboard utility, two teaching programming languages). 🔴 **No accessibility-remediation asset surfaced for the April 2026 US obligation** — `T29` stands unimproved.
 
 ---
@@ -16180,7 +16236,7 @@ Line numbers are **pre-p682**.
 
 ---
 
-## 🆕 2026-11-06 (p681) — 🔴 **A `123,056★` MIT REPOSITORY WAS IN THIS BASE'S OWN LEDGER SINCE `p367` CARRYING `licence = unstated`, AND THE PASS THAT DIAGNOSED "A DECLARED FILING IS NOT A FILED ROW" FAILED TO FILE IT. 🟢 THE OER CORPUS IS REACHABLE UNDER MIT EVEN THOUGH ITS PLATFORM IS COPYLEFT. 🔴 `T73`'s CLASSROOM REGIME DOES NOT BELONG TO CURRICULA — 12 POINTS, FIVE REFUTATIONS. 🔴 A NEW GRANT-DEFECT CLASS: TERMS NAMED CORRECTLY, BYTES NOT SHIPPED.**
+## 🆕 2026-11-06 (p681) — 🔴 **A `123,056★` MIT REPOSITORY WAS IN THIS BASE'S OWN LEDGER SINCE `p367` CARRYING `licence = unstated`, AND THE PASS THAT DIAGNOSED "A DECLARED FILING IS NOT A FILED ROW" FAILED TO FILE IT. 🟢 THE OER CORPUS IS REACHABLE UNDER MIT EVEN THOUGH ITS PLATFORM IS COPYLEFT. 🔴 `T71`'s CLASSROOM REGIME DOES NOT BELONG TO CURRICULA — 12 POINTS, FIVE REFUTATIONS. 🔴 A NEW GRANT-DEFECT CLASS: TERMS NAMED CORRECTLY, BYTES NOT SHIPPED.**
 
 **Four rows filed on `repos/foundations.md` (`139` → `143`), re-derived by counting the table.**
 
@@ -16210,9 +16266,9 @@ Line numbers are **pre-p682**.
 
 **No MCP server or agent bridge exists for LibreTexts, OpenStax, the Open Textbook Library, or OER Commons.** All four probed; all four nil. `pressbooks-cli` is the only permissive access layer over any major OER corpus, and it is a CLI with agent-shaped JSON output rather than an MCP server. 🔵 **A gap with a permissive floor already poured** — the hard part (the undocumented, rate-capped, `User-Agent`-filtering shape of a real Pressbooks network) is solved under MIT and documented in that project's README. See `compose/patterns.md` **P56**.
 
-### 🔴 `681-G` — `T73` re-tested on 12 points: the platform/library boundary holds, the *Classroom* regime does not
+### 🔴 `681-G` — `T71` re-tested on 12 points: the platform/library boundary holds, the *Classroom* regime does not
 
-Full table in [`evidence/forks-per-star-t71-retest.2026-11-06-p681.tsv`](../evidence/forks-per-star-t71-retest.2026-11-06-p681.tsv) and in `repos/foundations.md` `681-G`. In one line: **five permissive curricula span `f/★` `0.104`–`0.536` and not one approaches `T73`'s `~10`**, with the largest of them (`generative-ai-for-beginners`, `0.536`) landing in the *Deployment* band beside `moodle/moodle` (`1.015`) and `openedx/openedx-platform` (`0.533`). 🟢 `T65`'s `0.5` platform/library boundary held without exception. 🔵 **What `jsboige/CoursIA`'s `9.563` marks is a curriculum with no hosted reading surface** — notebooks must be copied to be used, websites do not. **The regime is a property of the delivery format, not the pedagogy**, which narrows where `T73`'s "read the fork count before dropping it" rule should fire: notebook and template repositories, not curricula generally.
+Full table in [`evidence/forks-per-star-t71-retest.2026-11-06-p681.tsv`](../evidence/forks-per-star-t71-retest.2026-11-06-p681.tsv) and in `repos/foundations.md` `681-G`. In one line: **five permissive curricula span `f/★` `0.104`–`0.536` and not one approaches `T71`'s `~10`**, with the largest of them (`generative-ai-for-beginners`, `0.536`) landing in the *Deployment* band beside `moodle/moodle` (`1.015`) and `openedx/openedx-platform` (`0.533`). 🟢 `T65`'s `0.5` platform/library boundary held without exception. 🔵 **What `jsboige/CoursIA`'s `9.563` marks is a curriculum with no hosted reading surface** — notebooks must be copied to be used, websites do not. **The regime is a property of the delivery format, not the pedagogy**, which narrows where `T71`'s "read the fork count before dropping it" rule should fire: notebook and template repositories, not curricula generally.
 
 ### 🆕 `681-I` — an eighth grant-defect class: the terms are named correctly and the bytes are not shipped
 
