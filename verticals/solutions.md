@@ -702,3 +702,28 @@ is what keeps your work a separate work; linking it into a platform plugin is wh
 🔴 Do not reach for https://github.com/vngrs-ai/vnlp (Turkish, 291 ★): **AGPL-3.0** by byte-read, and
 a hosted tutor calling it inherits the network-use disclosure duty.
 
+
+## Localising a deployment: which substrate pairs with which platform — added `p922`
+
+The platforms above are the *delivery* tier; `repos/foundations.md`'s twenty-tier table is the
+*language* tier. An engagement needs both, and the pairing is where proposals go wrong: a Moodle
+or Kolibri rollout in a `NOT DELIVERABLE` language is a materially different budget from the same
+rollout in a `DELIVERABLE` one, because free-text marking, search and pronunciation feedback all
+sit on the vernacular stack rather than on the LMS.
+
+| Deployment | Language tier | Substrate to adopt | Licence seam to watch |
+|---|---|---|---|
+| **Kolibri** (MIT, offline) in Cambodia or Laos | 🔴 KM / LO **NOT DELIVERABLE** | none — `khmer-nltk` is 247 days idle, `LaoNLP` is 35 ★ | Budget a multilingual model plus your own evaluation set and glossary. 🔵 Lao fails on **stars alone**; one engagement's contribution to https://github.com/wannaphong/LaoNLP (Apache-2.0, maintained) would carry the tier |
+| **Moodle** or **ILIAS** (GPL-3.0) across Central Europe | 🟢 CS **DELIVERABLE — WEAK COPYLEFT** | https://github.com/ufal/udpipe (MPL-2.0) — one binary covers Czech and ~100 other UD treebanks | 🟡 MPL-2.0 is **file-level** copyleft: changes to MPL files must be published, your own files need not be. It is GPL-compatible, so it composes with a Moodle/ILIAS plugin; MPL-**1.1** would not |
+| **Moodle** in Finland or Hungary | 🟢 FI / HU **DELIVERABLE** | https://github.com/mikahama/uralicNLP (Apache-2.0) · https://github.com/huspacy/huspacy (Apache-2.0) | Both permissive. 🔴 Reach for https://github.com/flammie/omorfi only where **GPL-3.0** is acceptable in the deliverable |
+| **Canvas** or **Open edX** in the Philippines | 🟢 TL **DELIVERABLE** | https://github.com/ljvmiranda921/calamanCy (MIT), drops into an existing spaCy pipeline | Clean MIT. The LMS above it is AGPL-3.0 — that is the binding constraint, not the substrate |
+| **Chamilo** or **Moodle** in Bangladesh | 🟢 BN **DELIVERABLE** | https://github.com/sagorbrur/bnlp (MIT), 313 ★ | Clean MIT |
+| **Kolibri** / **Moodle** in Ethiopia | 🟢 AM **DELIVERABLE** (tokenisation only) | https://github.com/sefineh-ai/Amharic-Tokenizer (MIT) | 🟡 Tokenisation is the *only* layer that passes. Downstream tagging and parsing are yours to build |
+| Any deployment in **Kiswahili** or **Basque** | 🔴 SW / EU **NOT DELIVERABLE** | none — 9 ★ and 38 ★ / 339 days idle | As with KM/LO: multilingual model plus your own eval set |
+
+🔴 **One caveat this section inherits from `922-F5`, and it applies to the platform rows above as
+much as to the substrate rows.** A repository's `LICENSE` file is not always a licence: `omorfi`
+serves **seven bytes** reading `COPYING`, and the real grant — GPL-3.0 — is in the file it names.
+Several platforms in this file use the same convention (Moodle's grant is in `COPYING.txt`).
+🔵 **Read the file the pointer names before quoting a licence in a proposal**; this base's grant
+authority now follows the pointer, but a human reading the repository in a browser will not.

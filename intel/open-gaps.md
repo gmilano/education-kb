@@ -4,6 +4,45 @@ region: Global
 updated: 2026-11-19
 ---
 
+## 🆕 `p922` · 2026-11-19 — **`921-G5` discharged by falsifying the rule it was written to protect, and the successor I pre-registered died in the same pass. 🔴 Three defects in the grant authority, one of them created by this pass's own fix and caught by its own controls.**
+
+🔵 **Summary.** 8 mandated WebSearch legs filed as one line (`920-G3`), **two discovery legs over
+ten language-substrate tiers** chosen to break a published rule, **18 repositories byte-read**,
+**three instrument fixes** with a 9-repository control run, one published rule retracted across
+three files, one trend retracted and two added, two compose patterns. 🔴 12 named facts from the
+mandated legs probed: **12 of 12 already present**.
+
+| Gap | Status | Evidence |
+|---|---|---|
+| 🔴 **`921-G5`** — `921-R1` is fitted to its own evidence; test it on tiers chosen by the predicted mechanism | 🟢 **DISCHARGED, and the rule did not survive** | Ten tiers, predictions pre-registered before the legs ran. **`921-R1` scored 4 of 10.** Khmer and Lao (no word spacing) are dead; Tagalog, Czech and Bengali (whitespace) are alive. `922-F1` · [grading](../evidence/substrate-falsification.2026-11-19-p922.tsv) · [pre-registration](../evidence/prereg.2026-11-19-p922.md) |
+| **`921-G3`** — `918-R1` grades a tier by its top passing member and has no role test | 🟢 **DISCHARGED — adopted as `922-R1`** | The passing member must be the tier's *general* artefact, not an adjacent single-purpose tool and not a catalogue; a copyleft pass publishes as `DELIVERABLE — COPYLEFT`. **Re-grades Portuguese from DELIVERABLE to NOT**; excludes Khmer's and Hungarian's ungranted *awesome* lists. `922-R1` |
+| **`921-F5`** — re-probe `har07/PySastrawi` first; one push moves Indonesian | 🟢 **DISCHARGED WITH A NIL** | Unmoved: **366 ★, MIT (1,084 B `35e398410198`), pushed 2026-05-21 — now 182 days**, still two days outside. **The threshold was not renegotiated.** `922-F6` |
+| 🔴 **`921-F4`** — the version-dropping defect, declared "fixed at every size" | 🔴 **RE-OPENED AND RE-FIXED — the axis was wrong for the third time** | It is not size and not the grader in general: it is the **family allow-list** (`case "${fam[0]}" in GPL|LGPL)`). `ufal/udpipe`, 16,725 B titled *"Mozilla Public License Version 2.0"*, published as a bare `MPL`. **Zero live cells affected** — first MPL payload this base has byte-read. `922-F3` |
+| **`921-G4`** — the TR/AR agent layer rests on `p903`, 18 passes old | 🔴 **NOT REACHED** | Carried forward unchanged. The budget went to `921-G5`, which `p921` itself ranked higher |
+| **`921-G1`** (model hub unreachable), **`921-G2`** (sibling probe is a named list), **`920-G5`**/`919-G1`/`918-G1` (no primary legal text), **`920-G6`**, **`920-G7`** (incl. `919-G2`'s 216-address residue queue, `918-G3`) | 🔴 **NOT REACHED** | Carried forward unchanged. 🔵 `919-G2` remains the largest known, costed, **network-free** unit of work on this base's books — now **four passes** unreached, and it is the cheapest thing a pass with no network budget could do |
+
+### Gaps declared in `p922`
+
+| Gap | Remedy | Cost |
+|---|---|---|
+| 🔴 **`922-G1`** — **this base has no predictive rule for an unmeasured language tier, and two attempts have now failed out of sample.** `T57` publishes the table and withholds the mechanism, which is correct and is not the same as knowing nothing | Do **not** fit a third rule to these twenty tiers — that is how both failures happened. Either (a) accept the table as a lookup and measure each new tier at ~2 legs + 1 byte-read, or (b) build a candidate on a **held-out** set: fit on ten tiers, state the rule, and score the other ten without re-reading them | (a) 3 legs per new tier; (b) one pass, no new network |
+| 🔴 **`922-G2`** — **a fix scoped by an allow-list will be wrong on the next family encountered**, and `922-F3` is the third framing of one defect. EPL, CDDL and the CC family are still unversioned by the authority, and `*"apache license"*` is hard-coded to `Apache-2.0` — **Apache-1.1 exists and would be published as 2.0** | Generalise the title-block version read to every family that has versions, and add an Apache-1.1 fixture. 🔵 No fixture is in hand for Apache-1.1 on this shelf, so this is declared rather than claimed | one rule change + one fixture hunt |
+| **`922-G3`** — **`922-R2` rests on five catalogues and five is not a sample.** Four have no grant and the one that does is the smallest, which is also what a small sample looks like | Byte-read the national catalogue for every tier in the twenty-tier table (~15 more probes, no new search legs — the slugs are already on the shelf). 🔵 A single large *granted* catalogue weakens the claim usefully; a proposal should quote the four measured ones by name either way | ~15 probes, low network |
+| 🟡 **`922-G4`** — **`ufal/udpipe` passes `918-R1` with 19 days of margin** and carries the entire Czech tier, which is now published in `repos/foundations.md`, `verticals/solutions.md` and **P45** | Re-probe its push date before any Central European proposal quotes it. If it crosses 180 days the tier moves to `NOT DELIVERABLE` and P45 degrades to P44's shape | 1 probe |
+| **`922-G5`** — **the role test `922-R1` is applied by judgement, not by an instrument.** This pass called a *tokeniser* the general artefact for Amharic and an *OCR engine* single-purpose for Khmer; both are defensible and neither is mechanical | Write the predicate down as a checklist the next pass applies before grading — at minimum: does the artefact serve more than one downstream task, and is it the tier's entry point? 🔵 Until then, every `922-R1` exclusion should name the reason in its row, as this pass's rows do | one rule change, no network |
+
+### 🟡 One defect of my own, and it is the same class `p921` recorded against itself
+
+`922-F4` — the conjunctive-grant dedup comparing the **versioned string** rather than the family —
+**was created by this pass's own `922-F3` fix** and existed for exactly one run, in which
+`ufal/udpipe` was published as `MPL-2.0+MPL / CONJUNCTIVE`: a two-licence notice obligation that
+does not exist. It was caught because the fix was re-run over the whole cohort with controls before
+it was believed — which is `921-F4`'s own prescription. 🔵 **The extension this pass adds to that
+prescription: a fix must be re-controlled against every stage *downstream* of it, not only against
+the cohort it was derived from.** `921-F4` changed a value that a later stage compared by equality,
+and nothing in "run it over the cohort" would have caught that if the cohort had contained no MPL.
+
+
 ## 🆕 `p921` · 2026-11-19 — **Three of `p920`'s gaps discharged, one of them by building the instrument it asked for and then finding that the gap was stated too narrowly. 🔴 The pass's largest yield was a correction to a sentence this base published itself: "there is nothing to adopt" was a verdict with no layer named, and at the layer it did not name there is a 1,379 ★ Apache-2.0 stack.**
 
 🔵 **Summary.** 8 mandated WebSearch legs filed as one line (`920-G3`), 4 language-substrate

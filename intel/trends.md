@@ -2249,7 +2249,15 @@ the deliverability test. 🟡 The honest caveat, carried from `T50`: vernacular 
 instrument. A tier reading zero means *this base found nothing*, and for Thailand that nil has now
 reproduced twice while Indonesia's collapsed on the first reshaped query.
 
-## T55 — The vernacular NLP substrate survives exactly where tokenisation is hard, and dies where it is easy — regardless of how many people speak the language (added `p921`)
+## T55 — 🔴 **RETRACTED `p922`.** ~~The vernacular NLP substrate survives exactly where tokenisation is hard, and dies where it is easy~~ — regardless of how many people speak the language (added `p921`, retracted `p922`)
+
+🔴 **This trend was tested on ten tiers it had never seen and scored 4 of 10.** Khmer and Lao have
+no word spacing and are dead; Tagalog, Czech and Bengali tokenise on whitespace and are alive. The
+mechanism is withdrawn. 🟢 **The clause after the dash survives and is the only part to quote:**
+*speaker population and market size predict nothing here* — Bengali at 270 M and Basque at 750 k
+land on the opposite sides of the line from the ones their size implies. The replacement is `T57`.
+The text below is kept, struck, because a retracted trend that is deleted is one the next pass
+re-derives from the same ten tiers. See `agents/trending.md` `922-F1`.
 
 Ten language tiers have now been graded at the substrate layer against `918-R1`
 ([record](../evidence/substrate-918R1-grading.2026-11-19-p921.tsv)). The split is total and it does
@@ -2276,6 +2284,51 @@ model plus your own evaluation set and glossary, while a mid-size agglutinative 
 repositories on GitHub*. Whether these stacks moved to a model hub rather than dying is the obvious
 competing explanation and it is **untestable from this session** — `huggingface.co` fails DNS here
 (`921-G1`). It is recorded as a hypothesis, not folded into the trend.
+
+## T57 — Two mechanisms for open-source language supply have now been fitted to the same evidence and both failed out of sample; the measurement is sound and the explanation is not (added `p922`)
+
+Twenty language tiers have been graded at the substrate layer against `918-R1` plus `922-R1`'s role
+test. The grading is reproducible and the verdicts are stable. **What is not available is a rule
+that predicts a tier this base has not measured.**
+
+- `921-R1` (tokenisation difficulty) fitted **10 of 10** tiers it was derived from and scored
+  **4 of 10** on tiers chosen to break it
+  ([grading](../evidence/substrate-falsification.2026-11-19-p922.tsv)).
+- `922-H1` (a long-lived institution ships the pipeline) was **pre-registered before the legs ran**
+  ([record](../evidence/prereg.2026-11-19-p922.md)) and scored **1 of 4**. Basque killed it: the
+  IXA/HiTZ centre is among Europe's longest-funded NLP groups and its largest repository is an
+  *English* model, while its Basque LLM is 339 days idle.
+
+🔵 **The operative instruction for a delivery team.** Look the language up in
+`repos/foundations.md`'s twenty-tier table; **do not extrapolate it.** For a language not on the
+table, the honest answer is *unmeasured*, and measuring it costs two search legs and one byte-read
+— which is cheaper than being wrong about a budget line.
+
+🔵 **The methodological rule, which is the part that transfers beyond this industry.** A
+generalisation is not a finding until it has been run against cases **chosen to break it**. Both
+failed rules looked strong for the same reason: they were scored on the evidence that produced
+them. 🟡 `p921` knew this — its own gap register said *"the rule fits 10/10, which is also what a
+rule fitted to its own evidence does"* — and published the headline anyway. **The register was
+right and the headline was wrong**, and the gap between them is the thing to watch for.
+
+## T58 — The national "awesome" catalogue is the largest asset in its language tier and it has no licence grant (added `p922`)
+
+Five national NLP catalogues have now been byte-read on 25 licence paths across 3 branches each.
+**Four carry no licence file at all:** `AI4Bharat/indicnlp_catalog` (641 ★),
+`banglakit/awesome-bangla` (580 ★), `oroszgy/awesome-hungarian-nlp` (287 ★),
+`seanghay/awesome-khmer-language` (207 ★). The one that is licensed —
+`wannaphong/Awesome-Lao-NLP`, MIT — is **19 ★**, by far the smallest.
+
+🔴 **In three of those tiers the ungranted catalogue is the tier's largest member**, so a count of
+"open supply" that includes it overstates what is adoptable.
+
+🔵 **Why this is a different kind of claim from `T55`.** It is not a mechanism fitted to tier
+outcomes; it is a measured property of a **filetype**. A curated index is written as documentation
+and published without anyone deciding it is software, which is `T25`'s licence trap landing on the
+asset class whose *curation is the deliverable* — the first thing a localisation engagement copies.
+
+🟡 **Declared limit (`922-G3`): five is not a sample.** The claim to make in a proposal is the
+measured one — *these four specific catalogues have no grant* — not the general one.
 
 ## T56 — A licence index stops being evidence exactly where the grant is a notice rather than a licence body, and that is disproportionately the non-English shelf (added `p921`)
 

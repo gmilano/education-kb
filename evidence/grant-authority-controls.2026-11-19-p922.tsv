@@ -1,0 +1,10 @@
+repo	branch	path	http	bytes	sha256_12	families	verdict	note
+ufal/udpipe	master	LICENSE	200	16725	1f256ecad192	MPL-2.0	MPL-2.0	version read from the title block (922-F3); MPL-1.1 is GPL-incompatible and MPL-2.0 is not
+ufal/morphodita	master	LICENSE	200	16725	1f256ecad192	MPL-2.0	MPL-2.0	version read from the title block (922-F3); MPL-1.1 is GPL-incompatible and MPL-2.0 is not
+flammie/omorfi	main	COPYING	200	35140	39ebd7598688	GPL-3.0	GPL-3.0	version read from the title block (921-F4); the "or later" election is NOT in the licence text — read the program's own notice
+quadrismegistus/prosodic	master	LICENSE.md	200	35141	589ed823e9a8	GPL-3.0	GPL-3.0	version read from the title block (921-F4); the "or later" election is NOT in the licence text — read the program's own notice
+konlpy/konlpy	master	LICENSE	200	722	a66980ac3c64	GPL-3.0-or-later	GPL-3.0-or-later	NOTICE-STYLE payload (722 B) — family from the title line, VERSION recovered from the prose (921-F1 / 920-G2)
+mikahama/uralicNLP	master	LICENSE	200	11353	82727434fd5f	Apache-2.0	Apache-2.0	
+ljvmiranda921/calamanCy	master	LICENSE	200	1095	09da5a2dfb62	MIT	MIT	
+huspacy/huspacy	master	LICENSE	200	11347	04108063fd07	Apache-2.0	Apache-2.0	
+sagorbrur/bnlp	main	LICENSE	200	1069	643fa15c5813	MIT	MIT	

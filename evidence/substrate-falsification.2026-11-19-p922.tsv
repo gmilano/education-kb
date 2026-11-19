@@ -1,0 +1,24 @@
+# p922 — 921-G5 discharged.  Ten substrate tiers this base had never measured, graded against
+# 918-R1 (>=50 stars · byte-read grant != NONE · pushed within 180 days, i.e. >= 2026-05-23)
+# and against 922-R1 (role test: the passing member must be the tier's GENERAL artefact).
+# Predictions in cols 8-9 were written BEFORE the legs ran (scratchpad/p922/prereg.md).
+# Channels: stars/push = gh api search/repositories; grant = ingest/p913-grant-authority.sh (byte-read).
+lang	leg	best_member	stars	grant_byteread	pushed	idle_days	pred_921R1	pred_922H1	measured	note
+km	A	seanghay/awesome-khmer-language	207	NO-LICENCE-FILE-FOUND (25 names x 3 branches)	2026-11-09	10	DELIVERABLE	-	NOT DELIVERABLE	largest member is an ungranted catalogue (922-R2)
+km	A	VietHoang1512/khmer-nltk	86	Apache-2.0 (11357 B c71d239df917)	2026-03-17	247	-	-	FAIL recency	the tier's general artefact, 67 days outside 918-R1
+km	A	seanghay/KhmerOCR	60	MIT (1069 B 617ad948555e)	2026-02-12	280	-	-	FAIL recency+role	OCR is single-purpose
+lo	A	wannaphong/LaoNLP	35	Apache-2.0 (11357 B c71d239df917)	2026-09-23	57	DELIVERABLE	-	NOT DELIVERABLE	fails on stars only; nothing else in tier >= 20 stars
+fi	A	mikahama/uralicNLP	101	Apache-2.0 (11353 B 82727434fd5f)	2026-11-13	6	DELIVERABLE	-	DELIVERABLE	general Uralic/Finnish morphology stack
+fi	A	flammie/omorfi	108	GPL-3.0 (35140 B 39ebd7598688 via COPYING)	2026-08-24	87	-	-	DELIVERABLE - COPYLEFT	922-F2: LICENSE is a 7 B pointer stub reading "COPYING"
+hu	A	huspacy/huspacy	194	Apache-2.0 (11347 B 04108063fd07)	2026-11-16	3	DELIVERABLE	-	DELIVERABLE	general spaCy pipeline for Hungarian
+hu	A	oroszgy/awesome-hungarian-nlp	287	NO-LICENCE-FILE-FOUND (25 names x 3 branches)	2026-10-21	29	-	-	excluded by role	ungranted catalogue (922-R2)
+sw	A	tomeliud/Natural-Language-Processings-NLP-on-Swahili-News-Classification-	9	not probed (<50 stars)	2020-08-29	2273	NOT DELIVERABLE	-	NOT DELIVERABLE	tier tops out at 9 stars across 2 legs
+tl	A	ljvmiranda921/calamanCy	77	MIT (1095 B 09da5a2dfb62)	2026-10-05	45	NOT DELIVERABLE	-	DELIVERABLE	general spaCy pipeline for Tagalog/Filipino
+cs	B	ufal/udpipe	426	MPL-2.0 (16725 B 1f256ecad192)	2026-06-11	161	NOT DELIVERABLE	DELIVERABLE	DELIVERABLE - WEAK COPYLEFT	922-F3: published as a bare "MPL" before this pass's fix
+cs	B	ufal/morphodita	85	MPL-2.0 (16725 B 1f256ecad192)	2026-01-28	295	-	-	FAIL recency	same payload hash as udpipe
+eu	B	hitz-zentroa/latxa	38	MIT (1069 B afc19cc7779d)	2025-12-15	339	DELIVERABLE	DELIVERABLE	NOT DELIVERABLE	ixa-ehu estate tops at 31 stars; HiTZ's largest repo (GoLLIE 445) is not a Basque stack
+am	B	sefineh-ai/Amharic-Tokenizer	99	MIT (1069 B 83e775edbdd9)	2026-09-24	56	DELIVERABLE	NOT DELIVERABLE	DELIVERABLE	tokeniser IS the substrate tier's core artefact
+bn	B	sagorbrur/bnlp	313	MIT (1069 B 643fa15c5813)	2026-10-31	19	NOT DELIVERABLE	NOT DELIVERABLE	DELIVERABLE	general Bengali NLP library
+bn	B	banglakit/awesome-bangla	580	NO-LICENCE-FILE-FOUND (25 names x 3 branches)	2026-05-16	187	-	-	excluded by role	largest member of the tier, ungranted (922-R2)
+lo	A	wannaphong/Awesome-Lao-NLP	19	MIT (1084 B 0f9ff3a57af6)	2025-03-07	622	-	-	922-R2 COUNTER-EXAMPLE	the one national catalogue measured that DOES carry a grant, and the smallest
+id	-	har07/PySastrawi	366	MIT (1084 B 35e398410198)	2026-05-21	182	-	-	FAIL recency	921-F5 re-probe: unmoved, still two days outside 918-R1

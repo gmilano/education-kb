@@ -4,6 +4,58 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p922) — **Six substrate tiers this base wrote off, or never looked at, have a maintained permissive stack: Tagalog, Czech, Amharic and Bengali among them — `bnlp` is **313 ★ MIT**, pushed 19 days ago. 🔴 And the 426 ★ repository carrying the whole Czech tier was published as a bare `MPL` because this base's grant authority reads versions for the GNU family and no other.**
+
+🔵 **18 repositories byte-read**, all 18 new to this base, across ten language tiers chosen to
+**break** `921-R1` rather than confirm it
+([grading](../evidence/substrate-falsification.2026-11-19-p922.tsv),
+[pre-registration](../evidence/prereg.2026-11-19-p922.md)). The rule broke: **4 of 10**. See
+`agents/trending.md` `922-F1`.
+
+### 🟢 New repositories, graded against `918-R1` + `922-R1`
+
+| Repo | Lang | ★ | Grant — **byte-read `p922`** | Pushed | Verdict |
+|---|---|---|---|---|---|
+| [`ufal/udpipe`](https://github.com/ufal/udpipe) | CS | **426** | 🟡 **MPL-2.0** — 16,725 B, `sha256₁₂ 1f256ecad192` | 2026-06-11 | 🟢 **DELIVERABLE — WEAK COPYLEFT** |
+| [`sagorbrur/bnlp`](https://github.com/sagorbrur/bnlp) | BN | **313** | 🟢 MIT — 1,069 B, `643fa15c5813` | 2026-10-31 | 🟢 **DELIVERABLE** |
+| [`huspacy/huspacy`](https://github.com/huspacy/huspacy) | HU | 194 | 🟢 Apache-2.0 — 11,347 B, `04108063fd07` | 2026-11-16 | 🟢 **DELIVERABLE** |
+| [`flammie/omorfi`](https://github.com/flammie/omorfi) | FI | 108 | 🔴 **GPL-3.0** — 35,140 B, `39ebd7598688`, **read via a 7-byte `LICENSE` pointer stub** (`922-F5`) | 2026-08-24 | 🟡 **DELIVERABLE — COPYLEFT** |
+| [`mikahama/uralicNLP`](https://github.com/mikahama/uralicNLP) | FI | 101 | 🟢 Apache-2.0 — 11,353 B, `82727434fd5f` | 2026-11-13 | 🟢 **DELIVERABLE** |
+| [`sefineh-ai/Amharic-Tokenizer`](https://github.com/sefineh-ai/Amharic-Tokenizer) | AM | 99 | 🟢 MIT — 1,069 B, `83e775edbdd9` | 2026-09-24 | 🟢 **DELIVERABLE** |
+| [`VietHoang1512/khmer-nltk`](https://github.com/VietHoang1512/khmer-nltk) | KM | 86 | 🟢 Apache-2.0 — 11,357 B, `c71d239df917` | 2026-03-17 | 🔴 **247 days idle — FAIL** |
+| [`ufal/morphodita`](https://github.com/ufal/morphodita) | CS | 85 | 🟡 MPL-2.0 — same payload hash as `udpipe` | 2026-01-28 | 🔴 295 days idle — FAIL |
+| [`ljvmiranda921/calamanCy`](https://github.com/ljvmiranda921/calamanCy) | TL | 77 | 🟢 MIT — 1,095 B, `09da5a2dfb62` | 2026-10-05 | 🟢 **DELIVERABLE** |
+| [`seanghay/KhmerOCR`](https://github.com/seanghay/KhmerOCR) | KM | 60 | 🟢 MIT — 1,069 B, `617ad948555e` | 2026-02-12 | 🔴 FAIL — recency **and** role (`922-R1`) |
+| [`hitz-zentroa/latxa`](https://github.com/hitz-zentroa/latxa) | EU | 38 | 🟢 MIT — 1,069 B, `afc19cc7779d` | 2025-12-15 | 🔴 339 days idle — FAIL |
+| [`wannaphong/LaoNLP`](https://github.com/wannaphong/LaoNLP) | LO | 35 | 🟢 Apache-2.0 — 11,357 B, `c71d239df917` | 2026-09-23 | 🔴 FAIL on stars only |
+
+🔴 **Four national catalogues, four with no grant** — `banglakit/awesome-bangla` **580 ★**,
+`oroszgy/awesome-hungarian-nlp` **287 ★**, `seanghay/awesome-khmer-language` **207 ★**, and
+`p921`'s `AI4Bharat/indicnlp_catalog` 641 ★ — against one counter-example,
+`wannaphong/Awesome-Lao-NLP` (19 ★, 🟢 MIT). In three of those tiers the ungranted catalogue is the
+**largest member**. See `922-R2`.
+
+### 🔴 The instrument, and what it had been getting wrong
+
+- **`ufal/udpipe` was a bare `MPL`.** The version read added by `921-F4` is gated on
+  `case "${fam[0]}" in GPL|LGPL)` — an allow-list. MPL fell straight through. 🔵 MPL-1.1 is
+  GPL-incompatible; MPL-2.0 is compatible by construction. Fixed (`922-F3`); **zero published
+  cells were affected**, because this is the first MPL payload this base has byte-read.
+- **`flammie/omorfi` was `none / UNKNOWN-TEMPLATE`.** Its `LICENSE` is seven bytes containing the
+  word `COPYING`. Fixed (`922-F5`) — the probe now follows a pointer stub to the file it names,
+  and the emitted `path` column shows the file actually read, which is the evidence.
+- **The `922-F3` fix then broke the conjunctive-grant stage** and briefly published a two-licence
+  obligation that does not exist. Caught by this pass's own controls, fixed (`922-F4`).
+  [9-repository control run](../evidence/grant-authority-controls.2026-11-19-p922.tsv), all green.
+
+### 🔵 Nil, recorded so it is not re-spent
+
+`github trending education AI 2026` and the three other mandated English legs returned **zero
+repositories** for the forty-first consecutive pass. 🔴 Lao, Swahili and Basque were each probed on
+**two** legs and the best members are **35 ★, 9 ★ and 38 ★** respectively — these are measured
+absences, not unsearched ones.
+
+
 ## `2026-11-19` (p921) — **A 1,379 ★ Apache-2.0 Turkish language stack, pushed two days ago, that this base's own published verdict said did not exist. 🔴 And the licence channel got it wrong on the tier's largest member for the third time.**
 
 ### 🔴 `921-R1` — what `918-R1` grades when you run it over ten language tiers instead of one

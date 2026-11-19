@@ -3467,3 +3467,68 @@ in the path, because there is no third party.
 proposal**: the reason it is not 6 is the absence this pattern is named for, and a competitor who
 costs it at 6 is costing a library that has not been pushed since 2024.
 
+
+## P45 — A Central European engagement: one MPL-2.0 binary covers Czech and ~100 other treebanks (added `p922`)
+
+**When to use it.** A Moodle or ILIAS rollout across Czechia, Slovakia, Poland, Hungary or the
+Baltics, where the client wants free-text marking, search or feedback in the local language and the
+proposal must name a substrate rather than hand-wave at "a multilingual model".
+
+**What you wire together.**
+
+1. **Platform** — https://github.com/moodle/moodle (GPL-3.0) or
+   https://github.com/ILIAS-eLearning/ILIAS (GPL-3.0), whichever the client already runs.
+2. **Language substrate** — https://github.com/ufal/udpipe (**MPL-2.0**, 426 ★, byte-read 16,725 B
+   `sha256₁₂ 1f256ecad192`). Tokenise, tag, lemmatise and dependency-parse from **one binary across
+   ~100 Universal Dependencies treebanks** — this is the step that makes the pattern cover the
+   region rather than one country. For Hungarian specifically, prefer
+   https://github.com/huspacy/huspacy (Apache-2.0, 194 ★): it is a drop-in spaCy pipeline and
+   permissive, so it needs no licence conversation at all.
+3. **Agent tier** — https://github.com/HKUDS/DeepTutor (Apache-2.0) or
+   https://github.com/crewAIInc/crewAI (MIT), reached from the LMS over **LTI 1.3** or MCP.
+4. **Evaluation** — https://github.com/agentscope-ai/OpenJudge (Apache-2.0) with
+   https://github.com/AI-for-Education/pedagogy-benchmark (MIT) as the education rubric, run on a
+   held-out set of the client's own marked scripts.
+
+**How to wire it so the licences hold.** Run UDPipe as a **separate process behind HTTP or MCP**,
+not linked into a Moodle plugin. 🟡 MPL-2.0 is **file-level** copyleft: modifications to MPL files
+must be published, your own files need not be, and MPL-2.0 is GPL-compatible by construction
+(s.3.3) — so it composes with a GPL-3.0 platform where **MPL-1.1 would not**. That distinction is
+the whole reason this base now reads MPL versions (`922-F3`); until this pass it published a bare
+`MPL`, which is unquotable either way.
+
+🔴 **The one check to run before quoting this.** `ufal/udpipe` was pushed **2026-06-11** — inside
+`918-R1`'s 180-day window with **19 days of margin**. Re-probe the push date before the proposal
+goes out; if it has crossed, the pattern degrades to P44's shape and the budget changes.
+
+## P46 — Enter a market this base told you was dead: the Philippines, Bangladesh and Ethiopia (added `p922`)
+
+**When to use it.** A Filipino, Bengali or Amharic engagement — three tiers that `921-R1` predicted
+had no adoptable substrate and that **measurement contradicted**. Read this as the correction to
+P44: it exists to stop a studio costing a from-scratch language budget where a maintained
+permissive stack is already on the shelf.
+
+**What you wire together, by language.**
+
+| Market | Substrate (all byte-read `p922`) | What it gives you | What is still yours to build |
+|---|---|---|---|
+| **Philippines** (TL) | https://github.com/ljvmiranda921/calamanCy — **MIT**, 77 ★, 2026-10-05 | spaCy pipelines on Universal Dependencies + TLUnified: tokenisation, POS, NER | Domain lexicon, and the code-switching case — Taglish is the normal register in Philippine classrooms and no pipeline here handles it |
+| **Bangladesh / West Bengal** (BN) | https://github.com/sagorbrur/bnlp — **MIT**, 313 ★, 2026-10-31 | Tokenisation, embeddings, POS, NER, a sentencepiece model | Curriculum alignment; the stack is general-purpose, not education-tuned |
+| **Ethiopia** (AM) | https://github.com/sefineh-ai/Amharic-Tokenizer — **MIT**, 99 ★, 2026-09-24 | Ge'ez-script tokenisation — and **only** tokenisation | 🔴 Tagging, parsing and any morphological analysis. This tier passes at exactly one layer; cost it that way |
+
+**The rest of the stack is the same in all three** and is unchanged from P42: an Apache-2.0 or MIT
+agent tier (**DeepTutor**, **crewAI**), served over **LTI 1.3** into whatever LMS the client runs,
+with **OpenJudge** + **pedagogy-benchmark** as the efficacy harness, and a client-specific
+evaluation set built in week one rather than month six.
+
+🔵 **The sequencing that makes this pattern cheap.** Build the evaluation set **before** the agent
+tier. In all three markets the substrate gives you tokenisation and tagging and nothing about
+whether a tutor's output is any good in that language — so the evaluation set is the long-lead item
+and the only artefact that cannot be bought.
+
+🔴 **And the three tiers this pattern does *not* cover, named so they are not assumed.** **Khmer,
+Lao, Kiswahili and Basque are `NOT DELIVERABLE`** — best members 86 ★ at 247 days idle, 35 ★, 9 ★,
+and 38 ★ at 339 days idle respectively. There, P44's costing stands: a multilingual model plus your
+own evaluation set and glossary. 🟢 **Lao is the exception worth proposing to a client as goodwill**
+— https://github.com/wannaphong/LaoNLP is Apache-2.0 and actively maintained and fails `918-R1` on
+**star count alone**; upstreaming one engagement's work would carry the tier.

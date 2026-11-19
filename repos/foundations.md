@@ -522,13 +522,71 @@ https://github.com/vngrs-ai/vnlp (291 ★, Turkish) is **AGPL-3.0** — byte-rea
 | **HI/Indic** | `goru001/inltk` | 838 | MIT | **1,034 d** | 🔴 `AI4Bharat/indicnlp_catalog` — **641 ★, the catalogue the field points newcomers at — carries no licence file on any of 25 probed paths**. `IndicTrans2` (497 ★, MIT) is the freshest at 412 days idle |
 | **PT** Portuguese | `ajdavidl/Portuguese-NLP` | 375 | 🔴 **none — both channels**: `search` reports `NULL` and the authority finds no licence file on any of 25 names over 4 branches | 147 d | A curated **list**, not a library. The only maintained member is https://github.com/bretttolbert/verbecc (106 ★, **LGPL-3.0** byte-read from its title block, 7,652 B, `sha256₁₂ e3a994d82e64`) — a verb conjugator for five Romance languages. `Nkluge-correa/Tucano` (86 ★, Apache-2.0) is idle 268 days |
 
-🔵 **`921-R1`, the rule these ten tiers fall into, and it is the part to carry into a proposal.**
-A vernacular substrate stays maintained **exactly where whitespace and a regex cannot produce
-model-ready tokens** — no word spacing (ZH, JA, TH), syllable spacing (VI), or agglutinative/
-clitic-heavy morphology (KO, TR, AR). Where tokenisation is easy (ID, HI, PT) the stacks have been
-absorbed by multilingual models and left idle, at 200 M, 600 M and 260 M speakers respectively.
-**Speaker population and market size predict nothing here.** The rule even predicts the survivor's
-shape: the one maintained Portuguese library does verb conjugation — the one thing a regex cannot do.
+🔴 **`921-R1` IS RETIRED — tested `p922` on ten tiers it had never seen and scored 4 of 10.**
+Khmer and Lao have no word spacing and are **dead**; Tagalog, Czech and Bengali tokenise on
+whitespace and are **alive**. Do **not** carry the paragraph below into a proposal — carry the
+measured table in *"Twenty tiers"* instead. It is kept here, struck, because a retracted rule that
+is deleted is a rule the next pass re-derives. Account: `agents/trending.md` `922-F1`.
+
+> 🔵 ~~**`921-R1`, the rule these ten tiers fall into, and it is the part to carry into a proposal.**~~
+> ~~A vernacular substrate stays maintained **exactly where whitespace and a regex cannot produce
+> model-ready tokens** — no word spacing (ZH, JA, TH), syllable spacing (VI), or agglutinative/
+> clitic-heavy morphology (KO, TR, AR). Where tokenisation is easy (ID, HI, PT) the stacks have been
+> absorbed by multilingual models and left idle.~~ 🟢 **Still true and still load-bearing:**
+> *speaker population and market size predict nothing here* — Bengali at 270 M and Basque at 750 k
+> land on opposite sides of the line from the one their size implies.
+
+## Twenty tiers, measured — added `p922`, discharging `921-G3` and `921-G5`
+
+`p922` tested `921-R1` on **ten tiers chosen to break it** and it broke
+([grading](../evidence/substrate-falsification.2026-11-19-p922.tsv),
+[pre-registration](../evidence/prereg.2026-11-19-p922.md)). A successor hypothesis, pre-registered
+before the legs ran, scored **1 of 4** and is retired on the same pass. 🔵 **This file therefore
+publishes the table and no mechanism.** Use it as a lookup; do not extrapolate it to an unmeasured
+language, because two attempts to say *why* have now failed out of sample.
+
+🟢 **`922-R1` — the role test `921-G3` asked for, now binding on every tier verdict.** A tier passes
+`918-R1` only if the passing member is the tier's **general** artefact — not an adjacent
+single-purpose tool, not a curated catalogue — and a copyleft pass is published as
+**`DELIVERABLE — COPYLEFT`** rather than counted as adoptable. It re-grades Portuguese from
+DELIVERABLE to **NOT** (it passed only on a 106 ★ LGPL-3.0 verb conjugator) and it excludes
+Khmer's and Hungarian's largest members, which are ungranted *awesome* lists.
+
+| 🟢 **DELIVERABLE — adopt the named stack** | 🔴 **NOT DELIVERABLE — budget a multilingual model + your own eval set and glossary** |
+|---|---|
+| ZH · JA · TH · VI · KO · TR · AR · **FI · HU · TL · CS\*** · **AM · BN** | ID · HI · **PT**\*\* · **KM · LO · SW · EU** |
+
+\* Czech is **weak copyleft** (MPL-2.0, file-level). \*\* Portuguese re-graded by `922-R1`.
+
+### 🟢 Adopt these — new rows, every grant byte-read `p922`
+
+| Repo | Lang | Licence (byte-read) | ★ / pushed | Role |
+|---|---|---|---|---|
+| https://github.com/sagorbrur/bnlp | BN | 🟢 **MIT** — 1,069 B, `sha256₁₂ 643fa15c5813` | **313 ★** / 2026-10-31 | Bengali tokenisation, embedding, POS, NER and a sentencepiece model. **The largest permissive vernacular stack this base has found outside East Asia and Turkey**, and it exists in a tier both published rules predicted would be dead. Bangladesh and West Bengal are ~270 M speakers |
+| https://github.com/ufal/udpipe | CS | 🟡 **MPL-2.0** — 16,725 B, `sha256₁₂ 1f256ecad192`. 🔴 Published as a bare `MPL` until `922-F3` | **426 ★** / 2026-06-11 | Tokenise + tag + lemmatise + dependency-parse, trained on Universal Dependencies, from ÚFAL at Charles University. Covers Czech and **~100 other UD treebanks from one binary**, which is why it is the row to reach for in any Central/Eastern European engagement. 🟡 **Weak, file-level copyleft: modifications to MPL files must be published, your own files need not be.** 161 days idle — inside `918-R1` with 19 days of margin, so **re-probe it before it is quoted in a proposal** |
+| https://github.com/huspacy/huspacy | HU | 🟢 Apache-2.0 — 11,347 B, `sha256₁₂ 04108063fd07` | 194 ★ / **2026-11-16** | Industrial-strength Hungarian for **spaCy** — tokenisation, lemmatisation, POS, morphology, dependency parsing, NER, word vectors. Drops into an existing spaCy pipeline, which makes it the cheapest substrate row in this section to integrate |
+| https://github.com/mikahama/uralicNLP | FI | 🟢 Apache-2.0 — 11,353 B, `sha256₁₂ 82727434fd5f` | 101 ★ / **2026-11-13** | Morphological analysis, generation, lemmatisation and dictionaries for Finnish **and ~30 other Uralic and endangered languages** via Giellatekno/HFST. 🔵 The breadth is the point: one dependency covers Finnish, Sámi and Estonian for a Nordic public-sector engagement |
+| https://github.com/ljvmiranda921/calamanCy | TL | 🟢 MIT — 1,095 B, `sha256₁₂ 09da5a2dfb62` | 77 ★ / 2026-10-05 | Tagalog/Filipino NLP pipelines for spaCy, trained on Universal Dependencies and TLUnified. 🔴 **This base predicted this tier was dead.** The Philippines is a major APAC delivery and BPO market; the stack is MIT and maintained |
+| https://github.com/sefineh-ai/Amharic-Tokenizer | AM | 🟢 MIT — 1,069 B, `sha256₁₂ 83e775edbdd9` | 99 ★ / 2026-09-24 | Tokenisation for Amharic (Ge'ez script). **The only member of the Ethiopian tier that passes `918-R1`**, and the substrate layer's core artefact rather than an adjacent tool — which is what `922-R1` requires |
+| https://github.com/flammie/omorfi | FI | 🔴 **GPL-3.0** — 35,140 B, `sha256₁₂ 39ebd7598688`, read through a **7-byte `LICENSE` pointer stub** (`922-F5`) | 108 ★ / 2026-08-24 | Open morphology for Finnish — the fuller analyser where `uralicNLP` is the broader one. 🔴 **`DELIVERABLE — COPYLEFT`: adopt `uralicNLP` for a client deliverable and reach for this only where the GPL is acceptable.** `search/repositories` reports it `NOASSERTION`; both channels were wrong about this repository, in different ways, at the same time |
+
+### 🔴 Measured and empty — four more tiers with nothing to adopt
+
+| Tier | Best member | ★ | Grant | Why it fails |
+|---|---|---|---|---|
+| **KM** Khmer | `VietHoang1512/khmer-nltk` | 86 | 🟢 Apache-2.0 | **247 days idle.** The only live ≥50 ★ member is `seanghay/awesome-khmer-language` (207 ★) and it has **no licence file**; `seanghay/KhmerOCR` (60 ★, MIT) is 280 days idle *and* single-purpose |
+| **LO** Lao | `wannaphong/LaoNLP` | **35** | 🟢 Apache-2.0 | Fails on **stars alone** — it is maintained (2026-09-23) and permissive. Nothing else in the tier reaches 20 ★ across two legs. 🔵 The cheapest tier on this shelf to *fund*: one engagement's contribution would carry it |
+| **SW** Swahili | `tomeliud/…Swahili-News-Classification-` | **9** | — | The tier tops out at **9 ★** across two legs. ~200 M speakers across East Africa and the most extreme measured absence in this base after Mexico's 2 ★ |
+| **EU** Basque | `hitz-zentroa/latxa` | 38 | 🟢 MIT | **339 days idle.** 🔵 The sharpest case against institutional explanations: the IXA/HiTZ group is one of Europe's longest-funded NLP centres and its largest repository, `GoLLIE` (445 ★, Apache-2.0), is an **English** information-extraction model |
+
+🔴 **`922-R2` — the national catalogue is the tier's largest asset and it has no grant.** Four of
+five byte-read: `AI4Bharat/indicnlp_catalog` 641 ★, `banglakit/awesome-bangla` 580 ★,
+`oroszgy/awesome-hungarian-nlp` 287 ★, `seanghay/awesome-khmer-language` 207 ★ — **none carries a
+licence file on any of 25 probed paths**. The counter-example is `wannaphong/Awesome-Lao-NLP`
+(19 ★, 🟢 MIT) and it is the smallest. 🔵 This is a property of a *filetype*, not a fitted
+mechanism: a curated index is written as documentation and published without anyone deciding it is
+software. It matters because **the curation is the deliverable** — it is the first asset a
+localisation engagement copies from.
 
 ## National-curriculum data as an agent substrate — added `p904`
 

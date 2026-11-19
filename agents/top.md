@@ -29,6 +29,19 @@ curriculum graph, correct for the asset and a trap for anyone who reads the repo
 `master/README.rst`.** That is `p900`'s false-absence class landing on the AGPL anchor of the
 whole LMS tier; the two-channel rule caught it. See `agents/trending.md` `901-F3`.
 
+**Latest sweep — `p922` (2026-11-19).** 🔴 **No remeasure of this file's rows and no new agent rows
+— the forty-first consecutive nil at the agent layer**, and the budget went where `921-G5` said it
+should. The eight mandated English legs returned **zero repositories** and **12 of 12 named facts
+this base already holds**; the two substrate legs returned **18 repositories byte-read, 18 unseen**.
+🟢 **What changed for this file is a rule, not a row.** `922-R1` — the role test `921-G3`
+prescribed — is now binding on every tier verdict this base publishes: *the passing member must be
+the tier's general artefact, not an adjacent single-purpose tool and not a catalogue, and a
+copyleft pass is published as `DELIVERABLE — COPYLEFT`.* It re-grades Portuguese from DELIVERABLE
+to **NOT**. 🔴 And `921-R1`, published one pass ago as the mechanism behind every tier verdict in
+this base, **scored 4 of 10 against tiers chosen to break it and is retired** — along with the
+successor `p922` pre-registered, which scored 1 of 4. See `agents/trending.md` `922-F1`/`922-F2`
+and the twenty-tier table in `repos/foundations.md`.
+
 **Latest sweep — `p921` (2026-11-19).** 🔴 **No remeasure of this file's rows this pass, and no
 new agent rows — because the agent layer returned nothing again and the substrate layer returned
 everything.** The four discovery legs were Turkish, Arabic, Indonesian and Indic *language

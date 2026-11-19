@@ -4,6 +4,154 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p922) — **`921-R1` was published yesterday as the rule governing which languages have an adoptable substrate. It was tested this pass on ten tiers it had never seen and scored **4 of 10** — worse than a coin. 🔴 The replacement hypothesis I pre-registered before measuring scored **1 of 4**. Both are retired; what survives is a twenty-tier lookup table and no mechanism at all.**
+
+🔵 **Summary.** The 8 mandated WebSearch legs (one line, per `920-G3`), **two discovery legs over
+ten language-substrate tiers**, **18 repositories byte-read**, **three defects found in this base's
+grant authority — one of them created by this pass's own fix and caught by its own controls** —
+one published rule falsified, one pre-registered successor falsified in the same pass, one gap
+discharged with a nil, and one new regularity that is a property of an artefact class rather than
+a post-hoc fit.
+
+### 🔴 `922-F1` — `921-G5` discharged, and `921-R1` does not survive it
+
+`p921` published `921-R1`: *a vernacular substrate stays alive exactly where the text cannot be
+turned into model-ready tokens with whitespace and a regex.* It fitted **10 of 10** tiers. `921-G5`
+said so itself — *"the rule is derived from ten tiers chosen by this base's own history, not
+sampled… a single falsification is worth more than five confirmations"* — and named the tiers to
+test it on. They were tested. Predictions were written down **before** the legs ran
+([pre-registration](../evidence/prereg.2026-11-19-p922.md)); the grading is
+[here](../evidence/substrate-falsification.2026-11-19-p922.tsv).
+
+| Tier | `921-R1` said | Measured | |
+|---|---|---|---|
+| **Khmer** — no word spacing | DELIVERABLE | 🔴 **NOT** — `khmer-nltk` 86 ★ Apache-2.0 is **247 days** idle; the only live ≥50 ★ member is an **ungranted** catalogue | ❌ |
+| **Lao** — no word spacing | DELIVERABLE | 🔴 **NOT** — `wannaphong/LaoNLP` is **35 ★**; nothing else in the tier reaches 20 | ❌ |
+| **Finnish** — agglutinative | DELIVERABLE | 🟢 **DELIVERABLE** — `mikahama/uralicNLP` 101 ★ Apache-2.0, pushed 6 days ago | ✅ |
+| **Hungarian** — agglutinative | DELIVERABLE | 🟢 **DELIVERABLE** — `huspacy/huspacy` 194 ★ Apache-2.0, pushed 3 days ago | ✅ |
+| **Swahili** — whitespace | NOT | 🟢 **NOT** — the tier tops out at **9 ★** across two legs | ✅ |
+| **Tagalog** — whitespace | NOT | 🔴 **DELIVERABLE** — `ljvmiranda921/calamanCy` **77 ★ MIT**, pushed 2026-10-05 | ❌ |
+| **Czech** — whitespace, fusional | NOT | 🔴 **DELIVERABLE** — `ufal/udpipe` **426 ★ MPL-2.0**, pushed 2026-06-11 | ❌ |
+| **Basque** — agglutinative | DELIVERABLE | 🔴 **NOT** — `ixa-ehu` tops at 31 ★; `hitz-zentroa/latxa` 38 ★, **339 days** idle | ❌ |
+| **Amharic** — templatic | DELIVERABLE | 🟢 **DELIVERABLE** — `sefineh-ai/Amharic-Tokenizer` 99 ★ MIT, 56 days | ✅ |
+| **Bengali** — whitespace | NOT | 🔴 **DELIVERABLE** — `sagorbrur/bnlp` **313 ★ MIT**, pushed 19 days ago | ❌ |
+
+🔴 **4 of 10.** A rule that fits 10/10 of the cases it was built on and 4/10 of the cases it had
+not seen is not a mechanism; it is a description of this base's own browsing history. 🔵 **The
+transferable rule, and it costs nothing: a generalisation is not a finding until it has been run
+against cases chosen to break it.** `921-R1` was published with a confidence its evidence never
+licensed, and the pass that published it *said so in its own gap register* — the register was
+right and the headline was wrong.
+
+### 🔴 `922-F2` — I pre-registered the successor, and it died faster than the rule it replaced
+
+Before the second leg ran, `922-H1` was written down: *a substrate stays alive where a long-lived
+institution ships and maintains a general pipeline, regardless of tokenisation.* Czech and Amharic
+were chosen because the two hypotheses **disagree** on them.
+
+| Tier | `921-R1` | `922-H1` | Measured |
+|---|---|---|---|
+| Czech — ÚFAL/Charles Univ., 30-year NLP institution | NOT | DELIVERABLE | 🟢 **DELIVERABLE** → favours `922-H1` |
+| Amharic — no sustained institutional host | DELIVERABLE | NOT | 🟢 **DELIVERABLE** → favours `921-R1` |
+| Basque — IXA/HiTZ, funded, 750 k speakers | DELIVERABLE | DELIVERABLE | 🔴 **NOT** → **both wrong** |
+| Bengali — 270 M speakers, no single host | NOT | NOT | 🔴 **DELIVERABLE** → **both wrong** |
+
+🔴 **`922-H1` scores 1 of 4 and is retired on the pass that proposed it.** Basque is the sharpest
+case against it: the Basque Country funds one of Europe's longest-running NLP groups, its successor
+centre's largest repository is **445 ★** — and that repository (`hitz-zentroa/GoLLIE`) is an
+*English* information-extraction model. **An institution can be alive while its vernacular stack is
+not**, because the institution's incentive is publication, and publication has moved to
+multilingual models.
+
+🔵 **What this pass therefore does *not* do is propose a third rule.** Two mechanisms have now been
+fitted to this evidence and both failed out of sample. The honest position is that **the mechanism
+is unknown and the measurement is not**.
+
+### 🟢 `922-R1` — what replaces the rule: the table, and a role test
+
+`921-G3` asked for a role predicate on `918-R1`, with fixtures ready. It is adopted here as
+`922-R1`: **the passing member must be the tier's *general* artefact, not an adjacent
+single-purpose tool and not a catalogue, and a copyleft pass is reported as `DELIVERABLE —
+COPYLEFT` rather than silently counted as adoptable.** It changes three verdicts: Portuguese
+(passed only on a 106 ★ LGPL-3.0 verb conjugator) becomes **NOT DELIVERABLE**; Finnish carries
+`omorfi` as `DELIVERABLE — COPYLEFT` beside permissive `uralicNLP`; Czech is **`DELIVERABLE —
+WEAK COPYLEFT`** on MPL-2.0.
+
+**Twenty tiers, measured, no mechanism claimed:**
+
+| 🟢 **DELIVERABLE** (adopt the named stack) | 🔴 **NOT DELIVERABLE** (budget a multilingual model + your own eval set and glossary) |
+|---|---|
+| ZH · JA · TH · VI · KO (`p919`/`p920`) · TR · AR (`p921`) · **FI · HU · TL · CS\* · AM · BN** (`p922`) | ID · HI (`p921`) · **PT\*\*** · **KM · LO · SW · EU** (`p922`) |
+
+\* Czech passes on MPL-2.0 — weak, file-level copyleft, not in the MIT/Apache/BSD set.
+\*\* Portuguese is **re-graded this pass** by `922-R1` and moves from DELIVERABLE to NOT.
+
+### 🟢 `922-R2` — the one regularity this pass will stand behind, because it is about an artefact class
+
+Four of the five national "awesome" catalogues this base has now byte-read carry **no licence file
+on any of 25 probed paths**, and in three of their tiers the catalogue is the **largest member**:
+
+| Catalogue | ★ | Grant (byte-read) |
+|---|---|---|
+| [`AI4Bharat/indicnlp_catalog`](https://github.com/AI4Bharat/indicnlp_catalog) (`p921`) | 641 | 🔴 none |
+| [`banglakit/awesome-bangla`](https://github.com/banglakit/awesome-bangla) | **580** | 🔴 none |
+| [`oroszgy/awesome-hungarian-nlp`](https://github.com/oroszgy/awesome-hungarian-nlp) | 287 | 🔴 none |
+| [`seanghay/awesome-khmer-language`](https://github.com/seanghay/awesome-khmer-language) | 207 | 🔴 none |
+| [`wannaphong/Awesome-Lao-NLP`](https://github.com/wannaphong/Awesome-Lao-NLP) | 19 | 🟢 **MIT** — the counter-example, and the smallest |
+
+🔵 Unlike `921-R1` this is not a fitted mechanism — it is a measured property of a *filetype*: a
+curated index is written as documentation and published without anyone deciding it is software.
+🔴 **It matters because the catalogue is the asset a localisation engagement copies from first** —
+its curation is the deliverable — and in four of five tiers that asset has no grant at all.
+Declared as `922-G3`: five is not a sample.
+
+### 🔴 `922-F3` / `922-F4` / `922-F5` — three defects in the grant authority, one of them mine
+
+- 🔴 **`922-F3` — `921-F4` fixed the wrong axis, for the third time on one defect.** `920-G2`
+  framed the version-dropping defect as a property of *short* payloads; `921-F4` refuted that,
+  reframed it as a property of the grader *"at every size"*, and fixed it — inside
+  `case "${fam[0]}" in GPL|LGPL)`. The axis is neither size nor the grader in general: it is the
+  **family allow-list**. `ufal/udpipe`, the only artefact carrying the entire Czech tier,
+  byte-reads 16,725 B whose first line is *"Mozilla Public License Version 2.0"* and was graded a
+  bare **`MPL`**. 🔵 **MPL-1.1 is GPL-incompatible and MPL-2.0 is compatible by construction**,
+  which is the only question a delivery team asks of an MPL row. Fixed. 🟡 Measured blast radius
+  on the live shelves: **zero published cells** — this is the first MPL payload this base has ever
+  byte-read, which is why it survived three framings.
+- 🔴 **`922-F4` — the fix for `922-F3` broke the stage after it, and this pass's own controls
+  caught it.** Once the title read `MPL-2.0`, the conjunctive-grant dedup — which compares the
+  **versioned string**, not the family — stopped matching and re-detected the same licence in the
+  body as a second grant: `ufal/udpipe` was published for one run as `MPL-2.0+MPL / CONJUNCTIVE`,
+  **a two-licence notice obligation that does not exist**. Fixed by comparing family roots.
+  🔵 `921-F4`'s own lesson, paying out twice in one pass: a fix is run over the cohort before it is
+  believed — *and re-controlled against every stage downstream of it*.
+- 🔴 **`922-F5` — a pointer is not a payload, and the probe stopped at the first HTTP 200 rather
+  than at the first grant.** `flammie/omorfi` (108 ★, the Finnish open-morphology stack) serves a
+  **seven-byte** `LICENSE` whose entire content is the string `COPYING`; `COPYING` is a 35,140 B
+  **GPL-3.0** text. The authority published `none / UNKNOWN-TEMPLATE` for a repository with an
+  unambiguous copyleft grant. 🔵 Every earlier fix in this instrument answers *what to read*; this
+  one answers *when to stop*. Without it, Finland's copyleft member would have entered the shelf
+  this pass as ungranted.
+  [Controls](../evidence/grant-authority-controls.2026-11-19-p922.tsv): 9 repositories, all three
+  fixes green, **no regression** on `prosodic` (GPL-3.0), `konlpy` (GPL-3.0-or-later), `uralicNLP`
+  (Apache-2.0), `calamanCy`/`bnlp` (MIT).
+
+### 🟢 `922-F6` — `921-F5`'s re-probe, discharged with a nil
+
+`p921` named `har07/PySastrawi` **the row to re-probe first** — one push would move Indonesian from
+`NOT DELIVERABLE` to `DELIVERABLE`. Re-probed: **366 ★ (unchanged), MIT (1,084 B,
+`sha256₁₂ 35e398410198`), pushed 2026-05-21 — now 182 days, still two days outside `918-R1`.**
+🔵 The threshold was not renegotiated and the verdict is unchanged. **Indonesian stays NOT
+DELIVERABLE.**
+
+### 🔵 `922-F7` — the mandated legs, one line per `920-G3`
+
+All 8 run. **12 named facts probed mechanically against the live shelf: 12 of 12 already present**
+— including the UAE's 25 generative-AI school prohibitions, which `intel/market.md` already
+carries under a different hyphenation. **Zero repositories. Forty-first consecutive nil** at the
+top of the English-language shelf. The two substrate legs returned **18 repositories byte-read, 18
+this base had never held.**
+
+
 ## `2026-11-19` (p921) — **This base published *"at the agent tier in Arabic, Persian, Hebrew and Turkish there is nothing to adopt"* and left it there. At the substrate tier Turkish has a 1,379 ★ Apache-2.0 stack pushed two days ago, and the search channel reports its licence as `NOASSERTION`. 🔴 Indonesian and Indic, measured for the first time at this layer, are dead — and the ten tiers now measured fall into a rule that is not about market size.**
 
 🔵 **Summary.** The 8 mandated WebSearch legs (filed as one line below, per `920-G3`), 4

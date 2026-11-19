@@ -169,8 +169,29 @@ adjudicate() {
   # bare version (`LGPL-3.0`) and never an `-or-later` suffix.  That is why this stage runs
   # BEFORE 921-F1's and leaves short payloads to it.  Control: `vngrs-ai/vnlp`, 34,523 B stock
   # AGPL-3.0 (`sha256_12 8486a10c4393`), which already carries its version in the family.
+  # ── 922-F3.  921-F4 FIXED THE WRONG AXIS, FOR THE THIRD TIME ON ONE DEFECT.
+  # `920-G2` framed the version-dropping defect as a property of SHORT payloads.  `921-F4`
+  # refuted that, reframed it as a property of the grader "at EVERY size", and fixed it — inside
+  # `case "${fam[0]}" in GPL|LGPL)`.  The axis is neither size nor the grader in general: it is
+  # the FAMILY ALLOW-LIST.  Measured p922 on `ufal/udpipe`, the only artefact carrying the Czech
+  # substrate tier: a 16,725 B payload whose first line is "Mozilla Public License Version 2.0"
+  # was published as a bare `MPL`.  🔵 MPL-1.1 and MPL-2.0 are NOT interchangeable — 1.1 is
+  # GPL-INCOMPATIBLE and 2.0 is compatible by construction (s.3.3), which is the whole question
+  # a delivery team asks of an MPL row.  The transferable rule, and it is 913-F2's lesson again:
+  # A FIX SCOPED BY AN ALLOW-LIST IS A FIX THAT WILL BE WRONG ON THE NEXT FAMILY ENCOUNTERED.
   if [ "${#fam[@]}" -gt 0 ] && [ "$bytes" -ge 1500 ]; then
     case "${fam[0]}" in
+      MPL)
+        local mver=""
+        if   printf '%s' "$t" | grep -qiE 'version 2\.0'; then mver="2.0"
+        elif printf '%s' "$t" | grep -qiE 'version 1\.1'; then mver="1.1"
+        elif printf '%s' "$t" | grep -qiE 'version 1\.0'; then mver="1.0"; fi
+        if [ -n "$mver" ]; then
+          fam[0]="MPL-${mver}"
+          note="version read from the title block (922-F3); MPL-1.1 is GPL-incompatible and MPL-2.0 is not"
+        else
+          note="MPL family with NO recoverable version in the title block — do not assume 2.0 (922-F3)"
+        fi ;;
       GPL|LGPL)
         local tver=""
         if   printf '%s' "$t" | grep -qiE 'version 3'; then tver="3.0"
@@ -214,12 +235,19 @@ adjudicate() {
     # (apereo/java-cas-client = Apache-2.0 notice + a separate JA-SIG BSD-3-Clause grant) is
     # the reason this runs for EVERY title-graded family, not just the GNU ones.
     local extra=() head_fam="${fam[0]}"
-    [ "$head_fam" != "Apache-2.0" ] && grep -qi "apache license" "$B" && extra+=("Apache-2.0")
-    [ "$head_fam" != "MIT" ] && [ "$head_fam" != "BSL-1.0" ] \
+    # ── 922-F4.  THE CONJUNCTIVE DEDUP COMPARED THE VERSIONED STRING, NOT THE FAMILY.  Found by
+    # running 922-F3's own fix: once the title read `MPL-2.0`, `[ "$head_fam" != "MPL" ]` stopped
+    # matching and the SAME licence was re-detected in the body as a second grant — `ufal/udpipe`
+    # published as `MPL-2.0+MPL / CONJUNCTIVE`, a two-licence notice obligation that does not
+    # exist.  🔵 This is 921-F4's own lesson paying out twice in one pass: a fix is run over the
+    # cohort before it is believed, AND its interaction with every later stage is re-controlled.
+    local head_root="${head_fam%%-[0-9]*}"
+    [ "$head_root" != "Apache" ] && grep -qi "apache license" "$B" && extra+=("Apache-2.0")
+    [ "$head_root" != "MIT" ] && [ "$head_root" != "BSL" ] \
       && grep -q "Permission is hereby granted, free of charge" "$B" && extra+=("MIT")
-    [ "$head_fam" != "BSD" ] \
+    [ "$head_root" != "BSD" ] \
       && grep -qi "Redistribution and use in source and binary" "$B" && extra+=("BSD")
-    [ "$head_fam" != "MPL" ] && grep -qi "mozilla public license" "$B" && extra+=("MPL")
+    [ "$head_root" != "MPL" ] && grep -qi "mozilla public license" "$B" && extra+=("MPL")
     case "$head_fam" in CC-*|CC0-*) : ;; *)
       grep -qi "creative commons" "$B" && extra+=("CC-UNSPECIFIED") ;; esac
     if [ "${#extra[@]}" -gt 0 ]; then
@@ -371,6 +399,26 @@ else
       code=$(curl -sS --max-time 30 -o "$D/p" -w '%{http_code}' \
              "https://raw.githubusercontent.com/$slug/$br/$f" 2>/dev/null)
       [ "$code" = "200" ] || continue
+      # ── 922-F2.  A POINTER IS NOT A PAYLOAD, AND THE PROBE STOPPED AT THE FIRST HTTP 200
+      # RATHER THAN AT THE FIRST GRANT.  Measured p922 on `flammie/omorfi` (108 ★, the Finnish
+      # open-morphology stack): `LICENSE` is SEVEN BYTES whose entire content is the string
+      # `COPYING`, and `COPYING` is a 35,140 B GNU GPL-3.0 text.  The authority published
+      # `none / UNKNOWN-TEMPLATE` for a repository with an unambiguous copyleft grant — a
+      # FALSE-PERMISSIVE-ADJACENT read on the exact artefact class this instrument exists for.
+      # 🔵 Every earlier grant fix in this file answers WHAT TO READ; this one answers WHEN TO
+      # STOP.  Narrow by construction: fires only when the payload is under 64 B and its trimmed
+      # content is itself one of the names already being probed.
+      if [ "$(wc -c < "$D/p")" -lt 64 ]; then
+        ptr=$(tr -d ' \t\r\n' < "$D/p")
+        for n in "${NAMES[@]}" "${SIBLINGS[@]}"; do
+          [ "$ptr" = "$n" ] || continue
+          pc=$(curl -sS --max-time 30 -o "$D/p2" -w '%{http_code}' \
+               "https://raw.githubusercontent.com/$slug/$br/$ptr" 2>/dev/null)
+          if [ "$pc" = "200" ]; then mv "$D/p2" "$D/p"; f="$ptr"
+            fi   # the emitted `path` column then shows the POINTED-TO file, which is the evidence
+          break
+        done
+      fi
       emit "$slug" "$br" "$f"; found=1
       # 921-F2 / 920-G1: the primary payload is not necessarily the only grant.  Probe the named
       # asset-sibling list on the SAME branch and emit a row for EVERY one that resolves.  A repo

@@ -88,6 +88,14 @@ data access* rather than education agents.
 
 ### North America
 
+#### 🆕 `p922` — the leg ran, returned nothing new, and this line is the whole entry per `920-G3`
+12 named facts from the 8 mandated legs probed mechanically against the live shelf: **12 of 12
+already present** — Stanford AI Index's *6% of teachers say their school's AI policy is clear*,
+the PIE Network's ~100 state bills, Virginia S.B. 394, Illinois' 1 July 2026 guidance deadline,
+and the rest. **Zero repositories, forty-first consecutive nil.** 🔵 **The regional budget is
+better spent on language supply than on English-language demand**, which is where it went this
+pass — see the entry under *Global* below.
+
 #### 🆕 `p921` — the leg was run and returned nothing again; this line is the whole entry, by rule
 
 🔵 `920-G3` made this a one-line filing. The North America mandated leg returned **seven named facts,
@@ -683,6 +691,21 @@ A 9190, EO 14277, the US Department of Education framework and Berkeley Law were
 already written.
 
 ### EMEA
+
+#### 🆕 `p922` — EMEA gains three deliverable language tiers and loses one
+🟢 **Finnish, Hungarian and Czech all pass `918-R1` at the substrate layer** — measured, byte-read:
+`huspacy/huspacy` **194 ★ Apache-2.0** (pushed 2026-11-16), `mikahama/uralicNLP` **101 ★
+Apache-2.0** (2026-11-13), `ufal/udpipe` **426 ★ MPL-2.0** (2026-06-11, ~100 UD treebanks from one
+binary). 🟡 Czech is **weak, file-level copyleft**, which is a reading a proposal must make
+explicitly; it is GPL-compatible and composes with a Moodle or ILIAS plugin.
+🔴 **Basque fails, and it is the result that should change how this base reasons about EMEA
+public funding.** The IXA/HiTZ group at UPV/EHU is one of Europe's longest-funded NLP centres; its
+largest repository is a **445 ★ English** information-extraction model and its Basque LLM
+(`latxa`, 38 ★) has not been pushed in **339 days**. **A funded institution is not evidence of a
+maintained vernacular stack** — check the stack.
+🔵 Demand-side, nothing new: Futuresource's 67% of teachers, Epson's 80%-worried / 87%-weekly, the
+Fosway 11%→26% vendor-feature move and the EU AI Act's August 2026 full-enforcement date are all
+already on this shelf.
 
 #### 🆕 `p921` — Türkiye and the Gulf acquire a supply story, and it is the substrate tier, not the agent tier
 
@@ -1752,6 +1775,22 @@ problem — so this nil is still not evidence of saturation.
 
 ### APAC
 
+#### 🆕 `p922` — the Philippines is open for a vernacular engagement and Cambodia and Laos are not
+🟢 **Tagalog/Filipino passes.** `ljvmiranda921/calamanCy` — **77 ★, MIT, pushed 2026-10-05**,
+spaCy pipelines trained on Universal Dependencies and TLUnified. 🔴 **This base had predicted this
+tier was dead**, which matters commercially: the Philippines is a major APAC delivery and BPO
+market and the stack is permissive and maintained.
+🟢 **Bengali passes** — `sagorbrur/bnlp`, **313 ★ MIT**, pushed 19 days ago, ~270 M speakers across
+Bangladesh and West Bengal.
+🔴 **Khmer and Lao do not.** Khmer's general artefact (`khmer-nltk`, 86 ★ Apache-2.0) is **247 days
+idle** and its only live ≥50 ★ member is an **ungranted** catalogue; Lao's `LaoNLP` is maintained
+and Apache-2.0 but **35 ★**, failing on size alone. 🔵 **Lao is the cheapest tier on this shelf to
+change**: one engagement's upstream contribution would carry it past `918-R1`.
+🟢 **Indonesian re-probed and unchanged** — `har07/PySastrawi` still 2026-05-21, now **182 days**,
+two days outside the window. The threshold was not renegotiated.
+🔵 Demand-side, nothing new: Arizton's >45% APAC share of global EdTech and the UAE's 25
+generative-AI school prohibitions (Feb 2026) are both already held.
+
 #### 🆕 `p921` — Indonesia and India measured at the substrate layer: both empty, and the Indian national catalogue is ungranted
 
 - 🔴 **Indonesia (`920-G4` discharged).** Five candidates byte-read; **every one fails `918-R1`**.
@@ -2664,6 +2703,19 @@ regulatory-led posture and Australia's National AI Plan were all returned and al
 
 ### LATAM
 
+#### 🆕 `p922` — Portuguese is **downgraded**, and the downgrade is this base correcting itself
+🔴 **Portuguese moves from `DELIVERABLE` to `NOT DELIVERABLE`** under `922-R1`, the role test. It
+had passed `918-R1` only on [`bretttolbert/verbecc`](https://github.com/bretttolbert/verbecc) —
+**106 ★, LGPL-3.0, a verb conjugator for five Romance languages**. That is not a Portuguese stack
+and it is not permissive, and a tier verdict that rests on it was overstating Brazil's open supply.
+🔵 **What this changes for a Brazilian engagement:** the vernacular line item is a multilingual
+model plus your own evaluation set and glossary — not an adoptable library. The
+**national-curriculum data** cluster (`portabilis/i-educar` + `i-diario`, AGPL-3.0, 117 ★) is
+unaffected and remains LATAM's strongest open asset.
+🔵 Demand-side, nothing new: the Digital Education Council's LATAM survey (92% of students, 79% of
+faculty, 30,000+ responses across 29 institutions), the IDB's 193 mapped initiatives and the
+EdTech Hub / Fundación Ceibal partnership are all already on this shelf.
+
 #### 🆕 `p921` — Brazil's Portuguese substrate measured, and the honest answer is that there is nothing to adopt
 
 🔴 **Portuguese joins Indonesian and Indic in the empty column.** The tier's largest member,
@@ -3454,6 +3506,21 @@ obligations or sanctions on private suppliers**, which remains the most sellable
 the region — a funded buyer with no compliance gate to clear.
 
 ### Global
+
+#### 🆕 `p922` — the twenty-tier table, and the retraction behind it
+🔴 **`921-R1` — published one pass ago as the mechanism behind every language verdict in this base
+— scored 4 of 10 against tiers chosen to break it, and a successor hypothesis pre-registered this
+pass scored 1 of 4.** Both are retired. What a studio should carry into a proposal is the measured
+table in `repos/foundations.md`, not a story about why: 🟢 **DELIVERABLE** — ZH, JA, TH, VI, KO,
+TR, AR, FI, HU, TL, CS (weak copyleft), AM, BN; 🔴 **NOT DELIVERABLE** — ID, HI, PT, KM, LO, SW, EU.
+🔵 **The one generalisation that survived** is the one about size: *speaker population and market
+size predict nothing here.* Bengali at 270 M and Basque at 750 k land on the opposite sides of the
+line from the ones their size implies.
+🔴 **`922-R2` — the licence trap has a new address: the national catalogue.** Four of five
+byte-read carry **no licence file at all** (`indicnlp_catalog` 641 ★, `awesome-bangla` 580 ★,
+`awesome-hungarian-nlp` 287 ★, `awesome-khmer-language` 207 ★); the one that does is the smallest.
+In three of those tiers the ungranted catalogue is the **largest member**, and curation is exactly
+what a localisation engagement copies first.
 
 #### 🆕 `p918` — the market numbers still disagree, and the disagreement is the finding
 
