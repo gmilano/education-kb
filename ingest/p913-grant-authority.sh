@@ -82,13 +82,19 @@ adjudicate() {
   t=$(printf '%s' "$title" | tr '[:upper:]' '[:lower:]')
   # ---- PRIMARY: the title line.  specific-before-generic throughout. ----
   case "$t" in
-    *"gnu affero general public license"*)  fam=("AGPL-3.0") ;;
+    *"gnu affero general public license"*)  fam=("AGPL") ;;   # 923-F2: AGPL-1.0 (2002) exists
     *"gnu lesser general public license"*)  fam=("LGPL") ;;
     *"gnu general public license"*)         fam=("GPL") ;;   # 913-F1: reached only via the title
     *"boost software license"*)             fam=("BSL-1.0") ;;
-    *"apache license"*)                     fam=("Apache-2.0") ;;
+    # ── 923-F1.  SPECIFIC BEFORE GENERIC, AND THE OLDER NAME FIRST.  Apache-1.1 is titled
+    # "The Apache Software License, Version 1.1" and Apache-1.0 carries NO licence title at
+    # all — only a copyright notice.  Neither contains the string `apache license`, so
+    # neither ever reached the version stage `922-F3` fixed.  Measured p923 on the ASF's own
+    # published texts: both graded `BSD / BODY-BSD`.  Root only; the version stage decides.
+    *"apache software license"*)            fam=("Apache") ;;
+    *"apache license"*)                     fam=("Apache") ;;
     *"mozilla public license"*)             fam=("MPL") ;;
-    *"educational community license"*)      fam=("ECL-2.0") ;;
+    *"educational community license"*)      fam=("ECL") ;;    # 923-F2: ECL-1.0 is OSI-approved
     *"elastic license"*)                    fam=("Elastic") ;;
     # 913-F7: Open Data Commons.  `withmarbleapp/os-taxonomy` is **ODbL** — a share-alike
     # licence for a DATABASE, which is exactly the asset class `T25` says the licence trap moved
@@ -97,11 +103,34 @@ adjudicate() {
     *"open database license"*|*"odbl"*)     fam=("ODbL-1.0") ;;
     *"open data commons attribution"*)      fam=("ODC-By") ;;
     *"public domain dedication and license"*|*"odc pddl"*) fam=("PDDL-1.0") ;;
+    # 923-F2: EPL and CDDL were named in `922-G2` as families this authority cannot see at
+    # all.  Both are versioned and both are weak-copyleft — an EPL row and a CDDL row carry
+    # a file-level reciprocity obligation that a `UNKNOWN-TEMPLATE` cell does not state.
+    *"eclipse public license"*)             fam=("EPL") ;;
+    *"common development and distribution license"*|*"cddl"*) fam=("CDDL") ;;
     *"cc0 1.0 universal"*)                  fam=("CC0-1.0") ;;
-    *"attribution-sharealike"*)             fam=("CC-BY-SA") ;;
-    *"attribution-noncommercial"*)          fam=("CC-BY-NC") ;;
-    *"creative commons attribution"*)       fam=("CC-BY") ;;
-    *"creative commons"*)                   fam=("CC-UNSPECIFIED") ;;
+    # ── 923-F5.  THE SECOND FAMILY THIS PASS FOUND WITH 923-F1'S DEFECT, AND IT WAS FOUND
+    # INDEPENDENTLY, WHICH IS WHY IT IS A RULE AND NOT AN ANECDOTE.  A CC licence's own legal
+    # code is titled by its ELEMENTS — `Attribution 4.0 International` — and the words
+    # "Creative Commons Attribution" never appear adjacently in the title block.  The only
+    # `creative commons` string within the first 300 bytes is the boilerplate disclaimer
+    # ("Creative Commons Corporation ... is not a law firm"), so a real CC-BY-4.0 payload fell
+    # through to the generic arm.  Measured p923 on `bilalabic/awesome-turkish-datasets`
+    # (18,657 B, `sha256_12 9ba9550ad484`): published **`CC-UNSPECIFIED`** where the search
+    # channel said CC-BY-4.0 and the bytes agree with the channel.
+    # 🔴 THE ORDERING IS LOAD-BEARING, and the old arms had it wrong: `*"attribution-noncommercial"*`
+    # preceded any ShareAlike test, so an `Attribution-NonCommercial-ShareAlike` payload was
+    # published as `CC-BY-NC` and its SHARE-ALIKE obligation — the one that infects a derived
+    # database (`T25`) — was silently dropped.  Specific before generic, longest first.
+    *"attribution-noncommercial-sharealike"*)   fam=("CC-BY-NC-SA") ;;
+    *"attribution-noncommercial-noderiv"*)      fam=("CC-BY-NC-ND") ;;
+    *"attribution-noncommercial"*)              fam=("CC-BY-NC") ;;
+    *"attribution-sharealike"*)                 fam=("CC-BY-SA") ;;
+    *"attribution-noderiv"*)                    fam=("CC-BY-ND") ;;
+    # anchored at the START of the title block: this is the plain CC-BY legal code's own first line.
+    attribution\ [0-9]*)                        fam=("CC-BY") ;;
+    *"creative commons attribution"*)           fam=("CC-BY") ;;
+    *"creative commons"*)                       fam=("CC-UNSPECIFIED") ;;
     # 913-F5: the Mulan family.  `ECNU/EduWork` (East China Normal University) is
     # 木兰宽松许可证 第2版 / Mulan Permissive Software License v2 — OSI-approved, permissive,
     # bilingual, and carrying an Apache-style PATENT grant with litigation-termination that MIT
@@ -109,8 +138,8 @@ adjudicate() {
     # shelf published it as **MIT**.  This is the licence family of Chinese education supply,
     # which `T20`/`T29` record as a measured single-country phenomenon, so the blind spot is
     # aimed exactly at the tier this base says is distinctive.
-    *"木兰宽松许可证"*|*"mulan permissive software license"*) fam=("MulanPSL-2.0") ;;
-    *"木兰公共许可证"*|*"mulan public license"*)              fam=("MulanPubL-2.0") ;;
+    *"木兰宽松许可证"*|*"mulan permissive software license"*) fam=("MulanPSL") ;;  # 923-F2: v1 exists
+    *"木兰公共许可证"*|*"mulan public license"*)              fam=("MulanPubL") ;;  # 923-F2: v1 exists
     *"mit license"*)                        fam=("MIT") ;;
     *"bsd "*|*"bsd-"*)                      fam=("BSD") ;;
     *"isc license"*)                        fam=("ISC") ;;
@@ -179,44 +208,121 @@ adjudicate() {
   # GPL-INCOMPATIBLE and 2.0 is compatible by construction (s.3.3), which is the whole question
   # a delivery team asks of an MPL row.  The transferable rule, and it is 913-F2's lesson again:
   # A FIX SCOPED BY AN ALLOW-LIST IS A FIX THAT WILL BE WRONG ON THE NEXT FAMILY ENCOUNTERED.
+  # ── 923-F2.  THE ALLOW-LIST IS REPLACED BY A TABLE, AND THE TABLE IS THE WHOLE RULE.
+  # `922-G2` asked for this and predicted the live defect would be Apache-1.1 published as 2.0.
+  # 🔴 It is not: `923-F1` measured Apache-1.1 and Apache-1.0 as **`BSD / BODY-BSD`** — the
+  # version stage was never reached, because the FAMILY detector is keyed on `apache license`,
+  # a string the ASF only adopted at 2.0.  Four framings of one defect, each correcting the
+  # last and each still naming the wrong axis: size (`920-G2`) → the grader (`921-F4`) → the
+  # version stage's allow-list (`922-F3`) → the family detector itself (`923-F1`).
+  # 🔵 THE TRANSFERABLE RULE: a detector keyed on a product's CURRENT name cannot see that
+  # product's EARLIER names, and a version stage cannot be wrong about a family it is never
+  # handed.  So the version read is now driven by one table covering every family that has more
+  # than one published version.  A family whose root is in the table and whose version is NOT
+  # recoverable stays a BARE ROOT and says so — `922-F3`'s MPL precedent, generalised.
+  VERSIONED_ROOTS="Apache MPL GPL LGPL AGPL ECL EPL CDDL MulanPSL MulanPubL CC-BY CC-BY-SA CC-BY-NC CC-BY-ND CC-BY-NC-SA CC-BY-NC-ND"
+  # root<TAB>regex<TAB>version, specific before generic, first match wins.
+  VERSION_TABLE=$(cat <<'VT'
+Apache	version 2\.0	2.0
+Apache	version 1\.1	1.1
+Apache	version 1\.0	1.0
+MPL	version 2\.0	2.0
+MPL	version 1\.1	1.1
+MPL	version 1\.0	1.0
+GPL	version 3	3.0
+GPL	version 2\.1	2.1
+GPL	version 2	2.0
+LGPL	version 3	3.0
+LGPL	version 2\.1	2.1
+LGPL	version 2	2.0
+AGPL	version 3	3.0
+AGPL	version 1	1.0
+ECL	version 2\.0	2.0
+ECL	version 1\.0	1.0
+EPL	version 2\.0	2.0
+EPL	version 1\.0	1.0
+CDDL	version 1\.1	1.1
+CDDL	version 1\.0	1.0
+MulanPSL	第2版|version 2	2.0
+MulanPSL	第1版|version 1	1.0
+MulanPubL	第2版|version 2	2.0
+MulanPubL	第1版|version 1	1.0
+CC-BY	4\.0	4.0
+CC-BY	3\.0	3.0
+CC-BY	2\.5	2.5
+CC-BY	2\.0	2.0
+CC-BY	1\.0	1.0
+CC-BY-SA	4\.0	4.0
+CC-BY-SA	3\.0	3.0
+CC-BY-SA	2\.5	2.5
+CC-BY-SA	2\.0	2.0
+CC-BY-SA	1\.0	1.0
+CC-BY-NC	4\.0	4.0
+CC-BY-NC	3\.0	3.0
+CC-BY-NC	2\.5	2.5
+CC-BY-NC	2\.0	2.0
+CC-BY-NC	1\.0	1.0
+CC-BY-ND	4\.0	4.0
+CC-BY-ND	3\.0	3.0
+CC-BY-ND	2\.5	2.5
+CC-BY-ND	2\.0	2.0
+CC-BY-ND	1\.0	1.0
+CC-BY-NC-SA	4\.0	4.0
+CC-BY-NC-SA	3\.0	3.0
+CC-BY-NC-SA	2\.5	2.5
+CC-BY-NC-SA	2\.0	2.0
+CC-BY-NC-SA	1\.0	1.0
+CC-BY-NC-ND	4\.0	4.0
+CC-BY-NC-ND	3\.0	3.0
+CC-BY-NC-ND	2\.5	2.5
+CC-BY-NC-ND	2\.0	2.0
+CC-BY-NC-ND	1\.0	1.0
+VT
+)
   if [ "${#fam[@]}" -gt 0 ] && [ "$bytes" -ge 1500 ]; then
-    case "${fam[0]}" in
-      MPL)
-        local mver=""
-        if   printf '%s' "$t" | grep -qiE 'version 2\.0'; then mver="2.0"
-        elif printf '%s' "$t" | grep -qiE 'version 1\.1'; then mver="1.1"
-        elif printf '%s' "$t" | grep -qiE 'version 1\.0'; then mver="1.0"; fi
-        if [ -n "$mver" ]; then
-          fam[0]="MPL-${mver}"
-          note="version read from the title block (922-F3); MPL-1.1 is GPL-incompatible and MPL-2.0 is not"
+    local root="${fam[0]}" rver=""
+    case " $VERSIONED_ROOTS " in
+      *" $root "*)
+        while IFS=$'\t' read -r vr vx vv; do
+          [ "$vr" = "$root" ] || continue
+          printf '%s' "$t" | grep -qiE "$vx" && { rver="$vv"; break; }
+        done <<< "$VERSION_TABLE"
+        if [ -n "$rver" ]; then
+          fam[0]="${root}-${rver}"
+          case "$root" in
+            GPL|LGPL|AGPL) note="version read from the title block (921-F4/923-F2); the \"or later\" election is NOT in the licence text — read the program's own notice" ;;
+            MPL)    note="version read from the title block (922-F3/923-F2); MPL-1.1 is GPL-incompatible and MPL-2.0 is not" ;;
+            Apache) note="version read from the title block (923-F2); Apache-1.0 and 1.1 are GPL-INCOMPATIBLE and carry NO patent grant — only 2.0 does" ;;
+            *)      note="version read from the title block (923-F2)" ;;
+          esac
         else
-          note="MPL family with NO recoverable version in the title block — do not assume 2.0 (922-F3)"
-        fi ;;
-      GPL|LGPL)
-        local tver=""
-        if   printf '%s' "$t" | grep -qiE 'version 3'; then tver="3.0"
-        elif printf '%s' "$t" | grep -qiE 'version 2\.1'; then tver="2.1"
-        elif printf '%s' "$t" | grep -qiE 'version 2'; then tver="2.0"; fi
-        if [ -n "$tver" ]; then
-          fam[0]="${fam[0]}-${tver}"
-          note="version read from the title block (921-F4); the \"or later\" election is NOT in the licence text — read the program's own notice"
+          # ── 923-F3.  APACHE-1.0 HAS NO LICENCE TITLE AT ALL — only `Copyright (c) 1995-1999 The
+          # Apache Group`.  There is no version to read, so the discriminator has to be STRUCTURAL:
+          # clause 3 of 1.0 is the ADVERTISING clause ("All advertising materials mentioning
+          # features or use"), which 1.1 removed and replaced with a documentation acknowledgment.
+          # That clause is also what makes it BSD-4-Clause-shaped, i.e. GPL-INCOMPATIBLE.
+          if [ "$root" = "Apache" ] && grep -qiE 'all advertising materials mentioning features' "$B"; then
+            fam[0]="Apache-1.0"
+            note="no version in the title; graded 1.0 STRUCTURALLY on the advertising clause (923-F3) — BSD-4-Clause-shaped, GPL-INCOMPATIBLE, no patent grant"
+          else
+            note="${root} family with NO recoverable version in the title block — do not assume the current one (922-F3/923-F2)"
+          fi
         fi ;;
     esac
   fi
 
   if [ "${#fam[@]}" -gt 0 ] && [ "$bytes" -lt 1500 ]; then
+    # 923-F2: this stage keyed on `AGPL-3.0`, the versioned string the title case used to emit.
+    # Once the title case emitted the ROOT, a notice-style Affero payload stopped reaching it.
     case "${fam[0]}" in
-      GPL|LGPL|AGPL-3.0)
+      GPL|LGPL|AGPL)
         local vnum="" vtail=""
         if   grep -qiE 'version 3[^0-9]' "$B"; then vnum="3.0"
         elif grep -qiE 'version 2\.1' "$B";   then vnum="2.1"
         elif grep -qiE 'version 2[^0-9]' "$B"; then vnum="2.0"; fi
         if [ -n "$vnum" ]; then
           if grep -qiE 'any later version' "$B"; then vtail="-or-later"; else vtail="-only"; fi
-          case "${fam[0]}" in
-            AGPL-3.0) fam[0]="AGPL-${vnum}${vtail}" ;;
-            *)        fam[0]="${fam[0]}-${vnum}${vtail}" ;;
-          esac
+          fam[0]="${fam[0]}-${vnum}${vtail}"
           note="NOTICE-STYLE payload (${bytes} B) — family from the title line, VERSION recovered from the prose (921-F1 / 920-G2)"
         else
           note="NOTICE-STYLE payload (${bytes} B) naming a GNU family with NO recoverable version — do not assume 3.0 (921-F1)"
@@ -245,7 +351,16 @@ adjudicate() {
     [ "$head_root" != "Apache" ] && grep -qi "apache license" "$B" && extra+=("Apache-2.0")
     [ "$head_root" != "MIT" ] && [ "$head_root" != "BSL" ] \
       && grep -q "Permission is hereby granted, free of charge" "$B" && extra+=("MIT")
-    [ "$head_root" != "BSD" ] \
+    # ── 923-F4.  THE 922-F4 CLASS, REPRODUCED BY THIS PASS'S OWN FIX AND CAUGHT BY ITS OWN
+    # CONTROLS.  Once `923-F1` made Apache-1.1 reachable, the BSD probe below fired on its body
+    # and it published as `Apache-1.1+BSD / CONJUNCTIVE` — a two-licence notice obligation that
+    # does not exist.  Apache-1.0/1.1 are BSD-PHRASED BY CONSTRUCTION ("Redistribution and use in
+    # source and binary forms" is clause 1 of the Apache text itself), so for those two versions
+    # the BSD hit is the SAME grant, not a second one.  Apache-2.0 is not BSD-phrased, so it is
+    # deliberately NOT exempted here.  🔵 `921-F4`'s prescription paying out a third time: a fix
+    # is re-controlled against every stage DOWNSTREAM of it, not only the cohort it came from.
+    local ap1x=0; case "$head_fam" in Apache-1.0|Apache-1.1) ap1x=1 ;; esac
+    [ "$head_root" != "BSD" ] && [ "$ap1x" -eq 0 ] \
       && grep -qi "Redistribution and use in source and binary" "$B" && extra+=("BSD")
     [ "$head_root" != "MPL" ] && grep -qi "mozilla public license" "$B" && extra+=("MPL")
     case "$head_fam" in CC-*|CC0-*) : ;; *)
@@ -302,9 +417,25 @@ adjudicate() {
   fi
   local bfam=() boost=0
   grep -qi "Boost Software License" "$B" && { bfam+=("BSL-1.0"); boost=1; }
-  grep -qi "Apache License" "$B" && bfam+=("Apache-2.0")
+  grep -qi "Apache License, Version 2.0\|Apache License\b" "$B" && bfam+=("Apache-2.0")   # 923-F2: body probe sees only the 2.0 name
   [ "$boost" -eq 0 ] && grep -q "Permission is hereby granted, free of charge" "$B" && bfam+=("MIT")
-  grep -qi "Redistribution and use in source and binary" "$B" && bfam+=("BSD")
+  # ── 923-F3.  APACHE-1.0 CARRIES NO LICENCE TITLE AT ALL — its payload opens
+  # `Copyright (c) 1995-1999 The Apache Group.  All rights reserved.`  There is nothing for a
+  # title-line grader to match, so `923-F1`'s family fix cannot reach it and it was still
+  # published as `BSD / BODY-BSD`.  The only available discriminator is STRUCTURAL: clause 3
+  # of Apache-1.0 is the ADVERTISING clause, which 1.1 removed and replaced with a
+  # documentation acknowledgment, and which is also what makes 1.0 BSD-4-Clause-shaped and
+  # therefore GPL-INCOMPATIBLE.  A bare `BSD` cell is read as BSD-3-Clause, which is
+  # GPL-COMPATIBLE — so the misgrade ran in the PERMISSIVE direction, which is the direction
+  # that loses a client an argument it cannot win back.  Requires BOTH the clause and the
+  # Apache attribution string, so a generic BSD-4-Clause payload is not captured.
+  if grep -qiE "all advertising materials mentioning features" "$B" \
+     && grep -qiE "the apache group|apache software foundation" "$B"; then
+    bfam+=("Apache-1.0")
+    note="${note:+$note; }no licence title; graded Apache-1.0 STRUCTURALLY on the advertising clause + ASF attribution (923-F3) — BSD-4-Clause-shaped, GPL-INCOMPATIBLE, no patent grant"
+  else
+    grep -qi "Redistribution and use in source and binary" "$B" && bfam+=("BSD")
+  fi
   # 913-F1: in the body the GNU families are decided by COUNT, never by presence.
   if grep -qi "general public license" "$B"; then
     local na; na=$(grep -oic "affero" "$B")

@@ -250,6 +250,49 @@ present) and **SPLIT-BY-ASSET-TYPE** (code MIT, data CC-BY, one repository — `
 payload). 🔴 **A single licence cell cannot express the last three**, so the gate's output is what
 the notice step should consume, not the cell.
 
+### The identity axis, added as gate `923-G1` in `p923`
+
+Every axis above asks the grader a better question about a payload it already holds. This one asks
+whether the grader can **see the family at all** — and twice in one pass, in two unrelated
+families, it could not.
+
+🔴 **Measured, on the ASF's own published texts:** `Apache-1.1` and `Apache-1.0` both graded
+**`BSD / BODY-BSD`**. Apache-1.1 is titled *"The Apache Software License, Version 1.1"*; Apache-1.0
+carries **no licence title at all**. Neither contains the string `apache license`, which the ASF
+adopted only at 2.0, so neither ever reached the version stage that `922-F3` had just fixed.
+🔴 **And independently, on a live shelf row:** `bilalabic/awesome-turkish-datasets` graded
+**`CC-UNSPECIFIED`** where its bytes are `CC-BY-4.0`, because a CC legal code is titled by its
+elements — *"Attribution 4.0 International"* — and never by the words *"Creative Commons
+Attribution"*.
+
+**Gate rule `923-G1`, three limbs.**
+
+1. 🔵 **A detector keyed on a product's *current* name cannot see that product's *earlier* names.**
+   Before trusting any family arm, establish the family's **earliest** published version and check
+   whether its title string differs from the arm's pattern. Apache and CC are the two found; there
+   is no reason to think they are the only two.
+2. 🔴 **Where no version is recoverable, publish the bare root and say so — never the current
+   version.** `Apache`, `MPL`, `ECL`, `MulanPSL`, `AGPL` and the CC elements are now roots that a
+   table versions; a root that reaches the shelf unversioned is a *measurement*, not a default.
+   This matters commercially in both directions: **Apache-1.0/1.1 are GPL-INCOMPATIBLE and carry no
+   patent grant**, while a bare `BSD` cell reads as BSD-3-Clause, which is GPL-compatible — so the
+   old grade understated the constraint.
+3. 🔴 **Order the arms longest-element-first.** `attribution-noncommercial` preceding every
+   ShareAlike arm published `CC-BY-NC-SA` as **`CC-BY-NC`** — dropping the share-alike term that
+   infects a derived database, which is `T25`'s whole subject.
+
+🟡 **And one limb about absence, from `923-F6`.** A `NO-LICENCE-FILE-FOUND` is not *"no grant"*:
+`jnehring/awesome-low-resource-languages` grants **CC-BY-SA-4.0** in its README and ships no
+`LICENSE` file, and both the search channel and the byte-read report nothing. 🔴 **Do not fix this
+with a README grep.** A curated index's content *is* other projects' licences — measured on the four
+largest ungranted catalogues, a substring grep would have invented a grant for **three of four**.
+The discriminator that works is **structural** (a `## License` heading), and until it is folded into
+the authority (`923-G3`) a catalogue row's absence claim should be read as *"no grant in a file"*.
+
+Run the fixtures with `ingest/p923-adjudicator-harness.sh ingest/fixtures-p923/*.payload`. The
+harness extracts `adjudicate()` **by its own delimiters**, not by line range, because a line-range
+extract silently broke on this pass's first cut when the file grew.
+
 ## P1 — Licence-clean AI tutor on a permissive LMS
 
 **For:** any client who needs to keep the result closed, or who has no incumbent LMS.
@@ -3532,3 +3575,44 @@ and 38 ★ at 339 days idle respectively. There, P44's costing stands: a multili
 own evaluation set and glossary. 🟢 **Lao is the exception worth proposing to a client as goodwill**
 — https://github.com/wannaphong/LaoNLP is Apache-2.0 and actively maintained and fails `918-R1` on
 **star count alone**; upstreaming one engagement's work would carry the tier.
+
+## P47 — The localisation kick-off: clear the curation you are about to copy (added `p923`)
+
+**For:** the first two weeks of any vernacular or multi-market education engagement, before a line
+of the tutor is written. **Cost:** ~3 days, no model spend.
+
+🔵 **The thing nobody budgets for.** A localisation engagement's first act is always the same: find
+the national "awesome" list for the language, and work the stack out from it. That list *is* the
+deliverable you are copying — its curation is months of somebody's unpaid work — and in **13 of the
+20 tiers this base has byte-read it carries no grant at all**. 🔴 In one more
+(`jnehring/awesome-low-resource-languages`) the grant is **CC-BY-SA-4.0 declared only in the
+README**, which means a derived index inherits **share-alike** and neither GitHub's licence field
+nor a `LICENSE`-file probe will tell you.
+
+### The three days
+
+| Day | Do | With |
+|---|---|---|
+| **1** | Run the **grant gate** over every catalogue, library and corpus in the tier — not the libraries alone. Catalogues are usually missed because they look like documentation | `ingest/p913-grant-authority.sh OUT.tsv <slug>...` — gate `923-G1` |
+| **2** | For every `NO-LICENCE-FILE-FOUND`, run the **structural** prose probe: a `## License` heading, then the grant string within ~6 lines of it. 🔴 **Not** a README substring grep — on the four largest ungranted catalogues that invents a grant for three of four, because a catalogue's content *is* other projects' licences | [`evidence/catalogue-prose-grant-probe.2026-11-19-p923.tsv`](../evidence/catalogue-prose-grant-probe.2026-11-19-p923.tsv) is the worked example |
+| **3** | Split the result three ways and **write the email on day 3, not month 3** | below |
+
+### The three buckets, and what each one costs
+
+| Bucket | What it means | Action |
+|---|---|---|
+| 🟢 **Granted, software licence** — `crownpku/Awesome-Chinese-NLP` (Apache-2.0), `wannaphong/Awesome-Lao-NLP` (MIT) | copy the curation, keep the notice | ship it |
+| 🟡 **Granted, content licence** — `taishi-i/awesome-japanese-nlp-resources`, `JousiaPiha/awesome-finnish-nlp`, `tuanone123/awesome-vietnamese-llm-dataset` (CC0-1.0); `bilalabic/awesome-turkish-datasets` (CC-BY-4.0) | CC0 obliges nothing; CC-BY obliges attribution **in the derived index**, which teams forget because an index does not feel like a work | add the attribution line to the artefact, not to a slide |
+| 🔴 **Ungranted** — the ZH, KO, AR, HU, BN, HI, KM, TH, TR and PT catalogues | you have **no licence to copy the curation**, however public the repository is | **email the curator.** They are almost always one person, usually responsive, and a two-line permission is worth more than a month of legal review |
+
+🔵 **Why the email is the pattern and not a footnote.** Four of the five catalogues `p922` probed
+and nine of the fifteen `p923` probed are ungranted *because nobody decided they were software* —
+a curated index is written as documentation and published without a licence choice ever being made.
+🟢 **That is the opposite of a refusal**, and it is why this is a three-day task rather than a
+blocker: the usual answer to "may we build on your list, and would you like a licence on it?" is
+yes, plus an `MIT` or `CC-BY-4.0` commit that helps every later engagement in that tier.
+
+🔴 **Where this pattern does not apply:** **Tagalog, Czech, Amharic, Kiswahili and Basque have no
+catalogue to clear.** Four of the five have a maintained permissive *library* (P45, P46) — so go
+straight to the library tier and budget the curation as **your own work product**, which is the one
+case in this pattern where the curation becomes an asset you own outright.

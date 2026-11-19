@@ -5,6 +5,13 @@ silently-truncated fixture cannot pass the suite.
 import os
 import unittest
 
+import os
+import sys
+# p923: `python3 -I` (the Makefile's own invocation) strips the SCRIPT'S OWN DIRECTORY from
+# sys.path, so a bare sibling import fails at IMPORT time -- before one assertion runs.  This is
+# the idiom 234 of this tree's 306 test files already carry; these two did not, and `923-F8`
+# measured what that cost.
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import grant_titles_x as X
 
 F = os.path.join(os.path.dirname(os.path.abspath(__file__)), "fixtures")

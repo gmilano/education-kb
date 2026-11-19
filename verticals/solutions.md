@@ -283,6 +283,27 @@ copyleft licences while the *tooling* stays permissive — the inverse of the pl
 split in this KB's headline fact. Licence triage therefore has to be run per artefact class,
 not once per engagement.
 
+### 🆕 `p923` — the third artefact class in this category, and the only one with no grant at all
+
+A **curated index** — the national "awesome" list a localisation engagement reads first — is a
+content asset by every practical test: its value is the curation, and copying the curation is the
+whole point of opening it. Twenty have now been byte-read across the language tiers
+([census](../evidence/catalogue-grant-census.2026-11-19-p923.tsv)). 🔴 **Thirteen carry no licence
+file, and one more grants only in its README.**
+
+| Grant shape | Count | Named | What a studio may do |
+|---|---|---|---|
+| 🟢 Software licence | 2 | `crownpku/Awesome-Chinese-NLP` (**Apache-2.0**, 7,920 ★), `wannaphong/Awesome-Lao-NLP` (**MIT**, 19 ★) | copy the curation, keep the notice |
+| 🟡 Content licence | 4 | `taishi-i/awesome-japanese-nlp-resources`, `JousiaPiha/awesome-finnish-nlp`, `tuanone123/awesome-vietnamese-llm-dataset` (**CC0-1.0**); `bilalabic/awesome-turkish-datasets` (**CC-BY-4.0**) | CC0 obliges nothing; CC-BY obliges attribution **in the derived index** |
+| 🔴 Prose only | 1 | `jnehring/awesome-low-resource-languages` — **CC-BY-SA-4.0** in a `## License` section, **no `LICENSE` file** | share-alike on a derived index, and **invisible to both channels** (`923-F6`) |
+| 🔴 No grant | 13 | the ZH (84,685 ★ and 22,786 ★), KO, AR, HU, BN, HI, KM, TH, TR and PT indexes | **no licence to copy the curation** — ask the curator (`compose/patterns.md` **P47**) |
+
+🔵 **This sharpens, rather than repeats, the pattern above.** `os-taxonomy` shows a content asset
+granted under a *data* licence with real obligations. The catalogue tier shows the step before
+that: an asset published with **no licence decision having been made at all**, because a curated
+index is written as documentation. 🟢 That is usually a *default*, not a refusal — which is why
+clearing it is a three-day task and not a blocker.
+
 **63 platforms and content assets, all URL- and licence-verified**, counted programmatically
 across this file's tables (`UniTime` and `Timetablely` were restored in p894). **15 were restored
 in `p896`** — four mobile clients, six proctoring tools, two Brazilian school systems, two CAS

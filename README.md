@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-18
+updated: 2026-11-19
 ---
 
 # Globant AI Studios — Education KB

@@ -3,6 +3,75 @@ industry: education
 region: Global
 updated: 2026-11-19
 ---
+## `2026-11-19` (p923) — **The catalogue tier, measured for the first time across ten language tiers: 15 repositories byte-read, **10 of them carry no grant at all** — including the 84,685 ★ repository that is the largest artefact this base has ever probed. 🔴 And `922-R2`'s sharp half is refuted: the granted ones are not the small ones.**
+
+🔵 `922-G3` asked for this and **under-costed it**: it said *"the slugs are already on the shelf"*.
+🔴 They are not — only **3 of the 15** unmeasured tiers carried a catalogue slug, so the tier had to
+be **discovered** first ([candidates](../evidence/catalogue-candidates.2026-11-19-p923.tsv),
+[census](../evidence/catalogue-grant-census.2026-11-19-p923.tsv)). A slug is measured here through
+the search channel, never guessed from a naming convention: a guessed slug that 404s is
+indistinguishable from an absent catalogue.
+
+### 🟢 The catalogue tier, byte-read
+
+| Catalogue | Tier | ★ | Grant — **byte-read `p923`** | |
+|---|---|---|---|---|
+| [`fighting41love/funNLP`](https://github.com/fighting41love/funNLP) | ZH | **84,685** | 🔴 **none** on any probed path | idle since 2024-05-10 |
+| [`AiHubCN/Awesome-Chinese-LLM`](https://github.com/AiHubCN/Awesome-Chinese-LLM) | ZH | **22,786** | 🔴 **none** | |
+| [`crownpku/Awesome-Chinese-NLP`](https://github.com/crownpku/Awesome-Chinese-NLP) | ZH | **7,920** | 🟢 **Apache-2.0** — 11,357 B, `c71d239df917` | **the counter-example `922-R2` did not predict** |
+| [`taishi-i/awesome-japanese-nlp-resources`](https://github.com/taishi-i/awesome-japanese-nlp-resources) | JA | 1,031 | 🟡 **CC0-1.0** — 7,048 B, `a2010f343487` | pushed 2 days ago |
+| [`datanada/Awesome-Korean-NLP`](https://github.com/datanada/Awesome-Korean-NLP) | KO | 661 | 🔴 **none** | idle since 2020 |
+| [`01walid/awesome-arabic`](https://github.com/01walid/awesome-arabic) | AR | 562 | 🔴 **none** | |
+| [`h9-tec/Awesome_Arabic_NLP`](https://github.com/h9-tec/Awesome_Arabic_NLP) | AR | 260 | 🔴 **none** — and its README names **six** licences, all of them *other projects'* | |
+| [`changukshin/Awesome-Korean-NLP-Papers`](https://github.com/changukshin/Awesome-Korean-NLP-Papers) | KO | 201 | 🔴 **none** | paper list, not a resource index |
+| [`xbklairith/Awesome-Thai-Library`](https://github.com/xbklairith/Awesome-Thai-Library) | TH | 64 | 🔴 **none** | |
+| [`yusufusta/awesome-turkish-nlp`](https://github.com/yusufusta/awesome-turkish-nlp) | TR | 48 | 🔴 **none** | |
+| [`davidsbatista/awesome-Portuguese-NLP`](https://github.com/davidsbatista/awesome-Portuguese-NLP) | PT | 19 | 🔴 **none** | 507 B README; idle since 2017 |
+| [`bilalabic/awesome-turkish-datasets`](https://github.com/bilalabic/awesome-turkish-datasets) | TR | 9 | 🟡 **CC-BY-4.0** — 18,657 B, `9ba9550ad484` | **published as `CC-UNSPECIFIED` until `923-F5`** |
+| [`JousiaPiha/awesome-finnish-nlp`](https://github.com/JousiaPiha/awesome-finnish-nlp) | FI | 5 | 🟡 **CC0-1.0** — 7,048 B, `a2010f343487` | |
+| [`tuanone123/awesome-vietnamese-llm-dataset`](https://github.com/tuanone123/awesome-vietnamese-llm-dataset) | VI | **0** | 🟡 **CC0-1.0** — 6,460 B, `f0f96b4f190e` | granted, and nobody uses it |
+| [`jnehring/awesome-low-resource-languages`](https://github.com/jnehring/awesome-low-resource-languages) | cross | 40,951 B | 🟡 **CC-BY-SA-4.0 — IN PROSE ONLY, no `LICENSE` file** (`923-F6`) | not a national catalogue |
+
+### 🔴 Five tiers where the catalogue layer is a measured nil
+
+**Tagalog, Czech, Amharic, Swahili and Basque returned no catalogue at all** on the discovery leg —
+not a small one, none. 🔵 Four of those five are tiers `p922` graded `DELIVERABLE` on a *library*
+(`calamanCy`, `udpipe`, `Amharic-Tokenizer`): **a tier can have a maintained permissive stack and no
+curated index**, which is the opposite of the Khmer and Hungarian shape, where the ungranted
+catalogue is the largest member and the library is dead.
+
+### 🔴 What this does to `922-R2`
+
+`922-R2` was published on five catalogues: *curated indexes carry no grant, and the one that does is
+the smallest.* Twenty are now measured.
+
+| | p921–p922 (5) | **p923 (15)** | **Total (20)** |
+|---|---|---|---|
+| 🔴 No grant anywhere | 4 | 9 | **13 (65%)** |
+| 🟢 Granted by `LICENSE` file | 1 | 5 | **6** |
+| 🟡 Granted in **prose only** | 0 | 1 | **1** |
+
+🟢 **The direction survives: two catalogues in three carry no grant at all.** 🔴 **The sharp half is
+refuted.** `922-R2` said the sole granted catalogue was the smallest, at 19 ★. `crownpku/Awesome-Chinese-NLP`
+is **Apache-2.0 at 7,920 ★** — four hundred times larger — and `taishi-i` is CC0 at 1,031 ★.
+
+🔵 **Two descriptions, offered as descriptions and not as a mechanism.** `922-G1` says do not fit a
+third rule to this evidence, and two rules have already died out of sample here, so this pass
+proposes none:
+1. **Where a catalogue *is* granted, the grant is usually a *content* licence.** Five of the seven
+   grants are CC0 / CC-BY / CC-BY-SA; only two (`Awesome-Lao-NLP` MIT, `crownpku` Apache-2.0) are
+   software licences — an instrument that does not fit a list of links especially well.
+2. **Every grant sits below 8,000 ★, and the three largest catalogues measured — 84,685 ★,
+   22,786 ★, 661 ★ — carry none.** 🔴 State this as the twenty rows it is. It is not a prediction,
+   and `921-R1` fitted ten of ten before it scored four of ten.
+
+### 🔵 The practical consequence, which does not depend on any mechanism
+
+**The catalogue is the asset a localisation engagement copies first** — its curation *is* the
+deliverable. In 13 of 20 tiers that asset has **no grant at all**, and in one more the grant is
+**share-alike and invisible to both channels**. 🟢 The two reusable ones are named above:
+`crownpku` (Apache-2.0) and `Awesome-Lao-NLP` (MIT). Everything else needs the curator asked.
+
 
 ## `2026-11-19` (p922) — **Six substrate tiers this base wrote off, or never looked at, have a maintained permissive stack: Tagalog, Czech, Amharic and Bengali among them — `bnlp` is **313 ★ MIT**, pushed 19 days ago. 🔴 And the 426 ★ repository carrying the whole Czech tier was published as a bare `MPL` because this base's grant authority reads versions for the GNU family and no other.**
 

@@ -2311,7 +2311,7 @@ them. 🟡 `p921` knew this — its own gap register said *"the rule fits 10/10,
 rule fitted to its own evidence does"* — and published the headline anyway. **The register was
 right and the headline was wrong**, and the gap between them is the thing to watch for.
 
-## T58 — The national "awesome" catalogue is the largest asset in its language tier and it has no licence grant (added `p922`)
+## T58 — The national "awesome" catalogue is the asset a localisation engagement copies first, and two in three carry no grant (added `p922`, tested out of sample and **revised** in `p923`)
 
 Five national NLP catalogues have now been byte-read on 25 licence paths across 3 branches each.
 **Four carry no licence file at all:** `AI4Bharat/indicnlp_catalog` (641 ★),
@@ -2327,8 +2327,53 @@ outcomes; it is a measured property of a **filetype**. A curated index is writte
 and published without anyone deciding it is software, which is `T25`'s licence trap landing on the
 asset class whose *curation is the deliverable* — the first thing a localisation engagement copies.
 
-🟡 **Declared limit (`922-G3`): five is not a sample.** The claim to make in a proposal is the
-measured one — *these four specific catalogues have no grant* — not the general one.
+### 🔄 Revised `p923`: fifteen more measured, and the sharp half does not survive
+
+`922-G3` declared *"five is not a sample"* and asked for the rest of the twenty-tier table.
+**Fifteen more catalogues were discovered and byte-read** ([census](../evidence/catalogue-grant-census.2026-11-19-p923.tsv)).
+
+| | `p921`–`p922` (5) | **`p923` (15)** | **Total (20)** |
+|---|---|---|---|
+| 🔴 No grant anywhere | 4 | 9 | **13 (65%)** |
+| 🟢 Granted by `LICENSE` file | 1 | 5 | **6** |
+| 🟡 Granted in **prose only** | 0 | 1 | **1** |
+
+🟢 **The trend survives in direction**: two catalogues in three carry no grant, and the three
+largest measured — `fighting41love/funNLP` (**84,685 ★**), `AiHubCN/Awesome-Chinese-LLM`
+(22,786 ★) and `datanada/Awesome-Korean-NLP` (661 ★) — are all ungranted.
+
+🔴 **The sharp half is refuted.** `p922` wrote that the one granted catalogue was *"by far the
+smallest"* at 19 ★. [`crownpku/Awesome-Chinese-NLP`](https://github.com/crownpku/Awesome-Chinese-NLP)
+is **Apache-2.0 at 7,920 ★**, four hundred times larger, and
+[`taishi-i/awesome-japanese-nlp-resources`](https://github.com/taishi-i/awesome-japanese-nlp-resources)
+is CC0-1.0 at 1,031 ★ and was pushed two days ago. **Size does not predict the grant.**
+
+🔵 **Two descriptions, and deliberately no mechanism.** `922-G1` forbids fitting a third rule to
+this evidence, and two rules have already died out of sample on this shelf, so:
+(a) where a catalogue *is* granted, the grant is usually a **content** licence — five of seven are
+CC0/CC-BY/CC-BY-SA and only two are software licences; (b) every grant observed sits below
+8,000 ★. 🔴 **These are twenty rows, not a prediction.** `921-R1` fitted ten of ten before it
+scored four of ten.
+
+🔴 **And the absence claim is weaker than it reads.** `923-F6`:
+[`jnehring/awesome-low-resource-languages`](https://github.com/jnehring/awesome-low-resource-languages)
+grants **CC-BY-SA-4.0** in a `## License` section of its README and ships **no `LICENSE` file** —
+share-alike on a derived index, invisible to the search channel *and* to a file probe. 🔵 The
+obvious remedy is actively wrong for this filetype: a catalogue's content *is* other projects'
+licences, and on the four largest ungranted catalogues a README substring grep would have invented
+a grant for **three of four** (`funNLP` names GPL — describing *Lit-LLaMA*; `Awesome-Chinese-LLM`
+names CC0 — describing a listed dataset; `Awesome_Arabic_NLP` yields six licence strings, none its
+own). The discriminator that works is **structural**, not lexical.
+
+🟡 **Declared limits.** `923-G3`: the prose grant is found by a separate script, not by the
+authority. `923-G4`: five tiers (TL, CS, AM, SW, EU) returned **no catalogue at all**, on a single
+query shape — a nil on one shape is weaker than a nil on two. 🔵 Four of those five nonetheless
+have a maintained permissive **library**, so a tier can have an adoptable stack and no curated
+index.
+
+🟢 **What to say in a proposal, which does not depend on any of the above being a mechanism:**
+*"The curation you are about to copy is unlicensed in two tiers out of three. Clearing it is three
+days (see `compose/patterns.md` **P47**), and the usual answer is yes."*
 
 ## T56 — A licence index stops being evidence exactly where the grant is a notice rather than a licence body, and that is disproportionately the non-English shelf (added `p921`)
 

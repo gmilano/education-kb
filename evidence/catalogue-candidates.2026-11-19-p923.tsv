@@ -1,0 +1,36 @@
+tier	query	slug	stars	spdx_channel	pushed	description
+ZH	awesome chinese nlp	fighting41love/funNLP	84685	NONE	2024-05-10	中英文敏感词、语言检测、中外手机/电话归属地/运营商查询、名字推断性别、手机号抽取、身份证抽取、邮箱抽取、中日文人名库、中文缩写库、拆字词典、词汇情感值、停用词、反动词表、暴恐词表
+ZH	awesome chinese nlp	AiHubCN/Awesome-Chinese-LLM	22786	NONE	2026-05-10	整理开源的中文大语言模型，以规模较小、可私有化部署、训练成本较低的模型为主，包括底座模型，垂直领域微调及应用，数据集与教程等。
+ZH	awesome chinese nlp	crownpku/Awesome-Chinese-NLP	7920	Apache-2.0	2023-07-27	A curated list of resources for Chinese NLP 中文自然语言处理相关资料
+ZH	awesome chinese nlp	lonePatient/awesome-pretrained-chinese-nlp-models	5620	MIT	2026-08-30	Awesome Pretrained Chinese NLP Models，高质量中文预训练模型&大模型&多模态模型&大语言模型集合
+ZH	awesome chinese nlp	cirosantilli/china-dictatorship	3355	CC-BY-SA-4.0	2026-02-05	反中共政治宣传库。Anti Chinese government propaganda. 住在中国真名用户的网友请别给星星，不然你要被警察请喝茶。常见问答集，新闻集和饭店和音乐建议
+JA	awesome japanese nlp	taishi-i/awesome-japanese-nlp-resources	1031	CC0-1.0	2026-11-17	A curated list of resources for Japanese natural language processing (NLP): Python librari
+JA	awesome japanese nlp	himkt/awesome-bert-japanese	132	NONE	2023-03-15	📝 A list of pre-trained BERT models for Japanese with word/subword tokenization + vocabula
+JA	awesome japanese nlp	mhagiwara/awesome-japanese-nlp	9	NONE	2019-11-12	📖 A curated list of resources for Japanese Natural Language Processing (NLP)
+JA	awesome japanese nlp	taishi-i/awesome-japanese-nlp-slides	1	CC0-1.0	2026-11-15	Practical Japanese NLP slides and articles published by companies and developers. Includes
+TH	awesome thai nlp	fighting41love/funNLP	84685	NONE	2024-05-10	中英文敏感词、语言检测、中外手机/电话归属地/运营商查询、名字推断性别、手机号抽取、身份证抽取、邮箱抽取、中日文人名库、中文缩写库、拆字词典、词汇情感值、停用词、反动词表、暴恐词表
+TH	awesome thai nlp	xbklairith/Awesome-Thai-Library	64	NONE	2026-06-14	แหล่งรวม library ไทยๆ เกี่ยวกับ "ประเทศไทย" และ "ภาษาไทย" -  Delightful Thai packages and 
+TH	awesome thai nlp	wit543/awesome-thai-nlp	0	NONE	2017-06-28	-
+VI	awesome vietnamese nlp	tuanone123/awesome-vietnamese-llm-dataset	0	CC0-1.0	2026-09-07	A curated, LLM-era list of Vietnamese-language datasets: pretraining, SFT, benchmarks, tra
+KO	awesome korean nlp	datanada/Awesome-Korean-NLP	661	NONE	2020-09-18	A curated list of resources for NLP (Natural Language Processing) for Korean
+KO	awesome korean nlp	changukshin/Awesome-Korean-NLP-Papers	201	NONE	2020-06-22	This repository provides list of Korean NLP papers.
+KO	awesome korean nlp	fuzzythecat/awesome-spacer	44	MIT	2019-12-18	Automatic Korean word spacing with TensorFlow 2.0 + Keras
+KO	awesome korean nlp	osslab/Awesome-Korean-NLP	6	NONE	2016-11-04	A curated list of resources for NLP (Natural Language Processing) for Korean
+KO	awesome korean nlp	Astro36/awesome-korean-nlp	5	NONE	2019-02-27	Korean NLP Program List
+TR	awesome turkish nlp	yusufusta/awesome-turkish-nlp	48	NONE	2020-09-12	A curated list of awesome Turkish language processing libraries, models, resources and dat
+TR	awesome turkish nlp	ozturkoktay/Turkish-NLP	27	NONE	2021-04-01	A curated list of awesome Turkish NLP frameworks, libraries, datasets and resources.
+TR	awesome turkish nlp	bilalabic/awesome-turkish-datasets	9	CC-BY-4.0	2026-11-01	A verified catalog of Turkish datasets for NLP, LLMs, speech, vision and OCR, with licence
+TR	awesome turkish nlp	atasoglu/awesome-turkish-vlm	4	MIT	2025-07-13	A curated list of models, datasets and other useful resources for Turkish Vision-Language 
+TR	awesome turkish nlp	gokhanturer/Awesome-Turkish-NLP	1	NONE	2021-04-17	-
+AR	awesome arabic nlp	01walid/awesome-arabic	562	NONE	2026-06-09	A curated list of awesome projects and dev/design resources for supporting Arabic computat
+AR	awesome arabic nlp	h9-tec/Awesome_Arabic_NLP	260	NONE	2026-10-04	-
+AR	awesome arabic nlp	Curated-Awesome-Lists/awesome-arabic-nlp	64	NONE	2023-10-30	Dive into the world of Arabic NLP with this extensive collection of resources, tools, data
+AR	awesome arabic nlp	UM6P-EMINES/Awesome-Darija-Arabic-NLP-Resources	22	MIT	2025-04-22	Awesome Darija Arabic NLP Resources
+AR	awesome arabic nlp	issam9/awesome-moroccan-arabic-nlp	16	NONE	2022-10-03	A list of Natural Language Processing resources for Moroccan Arabic (Darija)
+FI	awesome finnish nlp	JousiaPiha/awesome-finnish-nlp	5	CC0-1.0	2026-07-30	A curated list of awesome Finnish NLP resources, models, datasets, and tools.
+ID	awesome indonesian nlp	richardy-lobo-sapan/awesome-nlp-id	2	MIT	2026-06-06	A curated list of NLP resources for Bahasa Indonesia and Indonesia's regional languages
+ID	awesome indonesian nlp	ridloabelian/awesome-huggingface-id	1	NOASSERTION	2026-07-18	Kurasi Hugging Face untuk developer Indonesia: model, dataset, Spaces, dan deployment AI.
+ID	awesome indonesian nlp	EzkielynaGroup/awesome-ai-indonesia	0	CC0-1.0	2026-11-11	Daftar kurasi AI untuk developer & UMKM Indonesia: LLM bahasa Indonesia, dataset, NLP, sua
+PT	awesome portuguese nlp	davidsbatista/awesome-Portuguese-NLP	19	NONE	2017-05-22	A list of libraries and NLP projects for Portuguese
+PT	awesome portuguese nlp	henrycunh/awesome-pt-nlp	3	NONE	2022-02-04	📖  Um índice com iniciativas e recursos de NLP em português
+PT	awesome portuguese nlp	lgabs/nlp-pt-resources	0	NONE	2020-05-17	Awesome resources in NLP, were portuguese good content is highlighted.

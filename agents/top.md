@@ -871,6 +871,31 @@ foreign-built tutor gets wrong.
 
 Recording gaps because an unrecorded gap looks exactly like coverage.
 
+- 🔵 **Forty-second consecutive nil at the top of the English-language agent shelf (`p923`).** All
+  four mandated global legs ran. Every repository they named — `GarethManning/education-agent-skills`,
+  `SirhanMacx/Claw-ED`, `geekjourneyx/interactive-learning`, `TapXWorld/ChinaTextbook`, HKUDS'
+  `DeepTutor` — **was already held**, and **39 named facts probed mechanically returned 36 already
+  present** ([probe](../evidence/websearch-exhaustion-probe.2026-11-19-p923.tsv)). 🔴 This is a
+  *measured* exhaustion of one channel, not of the subject: the same pass's catalogue legs returned
+  **15 repositories this base had never held**. 🟢 Operative consequence, and it is `920-G3`'s
+  standing instruction: **the discovery budget belongs on the language-supply side**, filed in one
+  line here, with the detail in `repos/trending.md`.
+
+- 🔴 **Five language tiers have no curated index at all (new `p923`): Tagalog, Czech, Amharic,
+  Kiswahili and Basque.** Discovery returned nothing for any of them, while four of the five have a
+  *maintained permissive library* (`calamanCy` MIT, `udpipe` MPL-2.0, `Amharic-Tokenizer` MIT).
+  🔵 **A tier can have an adoptable stack and no curated index** — the inverse of the Khmer and
+  Hungarian shape, where the ungranted catalogue is the tier's largest member and the library is
+  dead. 🟡 Declared limit (`923-G4`): this nil rests on **one** query shape, and `921-F5` is this
+  base's own precedent for how much a second leg can move a verdict.
+
+- 🟡 **`923-R1` supersedes `922-R1` as the role predicate for grading a tier, and it is not yet
+  applied here.** The five tests — Identity, Class, Domain, Generality, Grant shape — are written
+  out in `repos/foundations.md`, each keyed to a real false positive this base produced (a
+  **Chinese** catalogue returned by the **Thai** leg at 84,685 ★; a political repository returned by
+  a ZH NLP leg; a Korean *spacing tool* returned as a catalogue). 🔴 The agent rows in this file
+  were graded before it existed — `923-G5`.
+
 - 🔴 **APAC produced nothing shelvable this pass, and that is stated rather than left as silence.**
   Of `p917`'s **17** promotion candidates, **zero** placed APAC on any channel — not the README, not
   a packaging manifest, not an institutional e-mail domain. The WebSearch leg for the region was

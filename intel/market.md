@@ -88,6 +88,20 @@ data access* rather than education agents.
 
 ### North America
 
+
+#### 🆕 `p923` — one new figure, and it is a secondary one
+🟡 **"Institution-wide implementation of AI has reached 66%"** — a market-research figure surfaced
+by this pass's North America leg and **new to this shelf**. 🔴 File it as **secondary and
+unreconciled**: the same leg returned *86% of North American educational organizations use
+generative AI* from a different house, and the two are not measuring the same thing — *use somewhere*
+and *implemented institution-wide* differ by roughly the whole governance problem this base
+documents in `T4`. 🔵 In a proposal, quote the **gap between the two numbers**, not either one:
+it is the most defensible statement of the pilots-to-production distance in the region, and it is
+the distance a Globant engagement is sold to close.
+
+Everything else the leg named was already held — ~100 state bills, Virginia S.B. 394, Illinois'
+1 July 2026 deadline, the ECS policy tracker, Chegg's 45% staff cut. **Zero repositories.**
+
 #### 🆕 `p922` — the leg ran, returned nothing new, and this line is the whole entry per `920-G3`
 12 named facts from the 8 mandated legs probed mechanically against the live shelf: **12 of 12
 already present** — Stanford AI Index's *6% of teachers say their school's AI policy is clear*,
@@ -691,6 +705,21 @@ A 9190, EO 14277, the US Department of Education framework and Berkeley Law were
 already written.
 
 ### EMEA
+
+
+#### 🆕 `p923` — the EMEA leg returned **nothing new**, and that is recorded rather than left silent
+🔵 All six named facts the leg produced were **already on this shelf**: Futuresource's *67% of
+teachers now using AI tools*; the Epson survey (~3,360 respondents across the UK, France, Italy,
+Germany, Spain and Poland, Jul–Aug 2026) and its *87% of students use AI at least weekly*;
+Eurydice's *Digital education at school in Europe 2026*; the Council of Europe's education-specific
+guidance work; Fosway's *vendor AI features 11% → 26%*; and Spain's absence of national classroom
+AI regulation. 🔴 **Zero repositories, zero new facts** — a measured nil, not an unsearched region.
+
+🔵 **What this means for the regional budget.** EMEA's *demand-side* English-language channel is
+exhausted at this cadence — six for six, after 26-of-28 in `p921` and 12-of-12 in `p922`. The
+yield this pass came from the **supply** side instead: `p922` put Finnish, Hungarian and Czech on
+the deliverable list, and `p923` byte-read their catalogue tier (`repos/foundations.md`) — where
+Finland's index is CC0-1.0 and Hungary's 287 ★ index carries **no grant at all**.
 
 #### 🆕 `p922` — EMEA gains three deliverable language tiers and loses one
 🟢 **Finnish, Hungarian and Czech all pass `918-R1` at the substrate layer** — measured, byte-read:
@@ -1775,6 +1804,21 @@ problem — so this nil is still not evidence of saturation.
 
 ### APAC
 
+
+#### 🆕 `p923` — the regional-share figure, and why it is quotable in only one direction
+🟡 **"APAC is over 45% of global EdTech market share"** — new to this shelf, from a vendor-adjacent
+analyst blog. 🔴 It is **EdTech**, not AI-in-education, and it is a share claim with no stated
+denominator, so it does not belong in a sizing slide. 🟢 It *is* usable as a **prioritisation**
+argument, where it agrees with three figures this base already holds from independent sources
+(China as the largest country revenue pool, India as the fastest-growing, APAC as the fastest
+expansion against a North American revenue lead). 🔵 When four houses disagree on the number and
+agree on the ranking, **sell the ranking**.
+
+🔵 The rest of the leg was already held: the UAE's 25 generative-AI school prohibitions (Feb 2026),
+the World Bank's Seoul Global EdTech Policy Academy (31 Aug – 4 Sep 2026), Cambridge English's
+May 2026 Asia-Pacific summit, the Ipsos education monitor, EdTech Hub's Southeast Asia briefs, and
+the 30% virtual-tutor adoption figure.
+
 #### 🆕 `p922` — the Philippines is open for a vernacular engagement and Cambodia and Laos are not
 🟢 **Tagalog/Filipino passes.** `ljvmiranda921/calamanCy` — **77 ★, MIT, pushed 2026-10-05**,
 spaCy pipelines trained on Universal Dependencies and TLUnified. 🔴 **This base had predicted this
@@ -2703,6 +2747,24 @@ regulatory-led posture and Australia's National AI Plan were all returned and al
 
 ### LATAM
 
+
+#### 🆕 `p923` — the LATAM leg returned **nothing new**, and the reason is worth naming
+🔵 Every named fact was already held: the UNESCO IESALC working paper and its 200-institution,
+19-country regional survey; the Digital Education Council / Tec de Monterrey LATAM survey
+(29 universities, **92%** of students using AI regularly, **67%** weekly, **79%** of faculty);
+*only 30% of universities have published an AI policy*; the IDB's 193-initiative catalogue; the
+ILIA's *14% of global AI-tool visits against 11% of internet users*; and the EdTech Hub /
+Fundación Ceibal partnership (Sept 2026). 🔴 **Zero repositories.**
+
+🔴 **The gap that is not closing.** Four passes of English-language LATAM legs have returned
+adoption and governance figures and **no open-source supply**. 🔵 That is consistent with what this
+base measured directly: Brazilian Portuguese is **`NOT DELIVERABLE`** at the substrate tier
+(`p921`, re-graded `p922` under `922-R1` — it passed only on a 106 ★ LGPL-3.0 verb conjugator), and
+`p923` found the Portuguese catalogue tier is a **19 ★ index, ungranted, idle since 2017**
+(`davidsbatista/awesome-Portuguese-NLP`, 507 B README). 🟢 **Cost a LATAM vernacular engagement as
+P44 — deliberately no substrate** — and read the regional opportunity as governance retrofit
+(`P5`), which is where the measured demand actually is.
+
 #### 🆕 `p922` — Portuguese is **downgraded**, and the downgrade is this base correcting itself
 🔴 **Portuguese moves from `DELIVERABLE` to `NOT DELIVERABLE`** under `922-R1`, the role test. It
 had passed `918-R1` only on [`bretttolbert/verbecc`](https://github.com/bretttolbert/verbecc) —
@@ -3506,6 +3568,20 @@ obligations or sanctions on private suppliers**, which remains the most sellable
 the region — a funded buyer with no compliance gate to clear.
 
 ### Global
+
+
+#### 🆕 `p923` — student usage, and the one number that moves a procurement conversation
+🟡 **"~54% of students use AI every week; 24% use it daily"** — new to this shelf. 🔵 It matters
+because it is the **Global** counterpart to two regional figures this base already carries and
+which are far higher: **87%** of EMEA students use AI at least weekly (Epson, ~3,360 respondents
+across six countries, Jul–Aug 2026) and **92%** of LATAM students use it regularly with **67%**
+weekly (Digital Education Council / Tec de Monterrey, 29 universities).
+
+🔴 **Do not average these.** They are different instruments on different populations and the spread
+is the finding: **student adoption is already universal in the two regions where institutional
+governance is measurably weakest** (`T4`). 🟢 The procurement sentence that follows is the same in
+both: the question is not whether students use it, it is whether the institution can evidence how —
+which is what `P5` (LATAM governance retrofit) and `P4` (EMEA AI Act conformity) are built to sell.
 
 #### 🆕 `p922` — the twenty-tier table, and the retraction behind it
 🔴 **`921-R1` — published one pass ago as the mechanism behind every language verdict in this base

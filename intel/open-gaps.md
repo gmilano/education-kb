@@ -3,6 +3,71 @@ industry: education
 region: Global
 updated: 2026-11-19
 ---
+## 🆕 `p923` · 2026-11-19 — **Four of `p922`'s five gaps discharged, and the two that mattered were discharged by *refuting their own stated mechanism*. 🔴 Five defects in the grant authority; two were created by this pass's fixes and caught by its controls, and a third was caught only by re-reading the code, which means the control set does not cover it.**
+
+🔵 **Summary.** 8 mandated WebSearch legs filed as one line (`920-G3`), **one discovery leg over
+fifteen language tiers**, **15 catalogues byte-read** plus a 9-repository prose probe, **five
+instrument fixes** with an 11-row control run executed twice, one published claim half-refuted out
+of sample, one role predicate adopted, **no new mechanism proposed**. 🔴 39 named facts probed:
+**36 of 39 already present.**
+
+| Gap | Status | Evidence |
+|---|---|---|
+| 🔴 **`922-G2`** — generalise the version read beyond the GPL/LGPL allow-list; add an Apache-1.1 fixture | 🟢 **DISCHARGED — and its stated mechanism is refuted** | It predicted Apache-1.1 would publish as `Apache-2.0`. **Measured: `BSD` / `BODY-BSD`** on the ASF's own texts. The allow-list was never reached; the **family detector** is keyed on `apache license`, a name adopted only at 2.0. Fourth framing of one defect. `923-F1` · [fixtures](../ingest/fixtures-p923/) |
+| **`922-G2`** (second half) — EPL, CDDL and the CC family are unversioned | 🟢 **DISCHARGED, and the CC half was worse than stated** | CC-BY was not *unversioned* — it was **unidentified**. A real `CC-BY-4.0` payload published as `CC-UNSPECIFIED`, because CC's legal code is titled by its elements (*"Attribution 4.0 International"*). 🔴 And `attribution-noncommercial` preceded every ShareAlike arm, so `CC-BY-NC-SA` published as `CC-BY-NC` — **share-alike silently dropped**. EPL and CDDL now detected. `923-F5` |
+| 🔴 **`922-G3`** — byte-read the national catalogue for every tier; *"the slugs are already on the shelf"* | 🟢 **DISCHARGED, and the cost estimate was wrong** | Only **3 of 15** unmeasured tiers carried a slug, so the tier had to be discovered first. 15 catalogues byte-read. **`922-R2` survives in direction (13 of 20 ungranted) and its sharp half is refuted** — the sole granted catalogue was said to be the smallest; `crownpku/Awesome-Chinese-NLP` is **Apache-2.0 at 7,920 ★**. [census](../evidence/catalogue-grant-census.2026-11-19-p923.tsv) · [candidates](../evidence/catalogue-candidates.2026-11-19-p923.tsv) |
+| 🟡 **`922-G4`** — re-probe `ufal/udpipe` before any Central European proposal quotes it | 🟢 **DISCHARGED AS A DATE, which is more useful than the nil it asked for** | **426 ★, MPL-2.0, pushed 2026-06-11 — unchanged, because `p922` ran today.** A same-day re-probe measures nothing. 161 of 180 days elapsed: 🔴 **Czech crosses on `2026-12-08`.** After that date, re-probe or drop the tier and degrade **P45** to P44's shape |
+| **`922-G5`** — the role test `922-R1` is applied by judgement, not by an instrument | 🟢 **DISCHARGED — adopted as `923-R1`**, with fixtures from this pass's own false positives | Five tests, applied before grading, each exclusion naming the test it failed. Fixtures: `fighting41love/funNLP` returned by the **Thai** leg (a Chinese catalogue — fails *identity*); `cirosantilli/china-dictatorship` returned by the ZH leg (fails *class*); `changukshin/…-NLP-Papers` is a paper list, not a resource index (fails *class*). See `repos/foundations.md` |
+| 🔴 **`922-G1`** — no predictive rule for an unmeasured tier; **do not fit a third one** | 🟡 **OBEYED, NOT DISCHARGED — and it was live this pass** | `p923` had twenty catalogue rows and an obvious size story in them, and **published the rows and no mechanism**. The gap stays open because obeying it is not the same as closing it. The remedy it names — fit on ten tiers, score the other ten **without re-reading them** — is still unspent and still needs no network |
+| **`921-G4`** (TR/AR agent layer rests on `p903`), **`921-G1`** (model hub unreachable), **`921-G2`** (sibling probe is a named list), **`920-G5`**/`919-G1`/`918-G1` (no primary legal text), **`920-G6`**, **`920-G7`** (incl. `919-G2`'s 216-address residue queue, `918-G3`) | 🔴 **NOT REACHED** | Carried forward unchanged. 🔵 `919-G2` is now **five passes** unreached and remains the largest known, costed, **network-free** unit of work on this base's books |
+
+### Gaps declared in `p923`
+
+| Gap | Remedy | Cost |
+|---|---|---|
+| 🔴 **`923-G1`** — **`923-F1` fixed two families; the same test has not been run on the other sixteen title arms.** The defect is *"the detector is keyed on the family's current name"*, and it was found twice in one pass in two unrelated families. There is no reason to believe Apache and CC are the only two | For every arm in the title `case`, establish the family's **earliest** published version and compare its title string to the arm's pattern. BSD (4-clause→3-clause→2-clause), ISC, Artistic, Zlib and the Mulan pair are the obvious candidates. 🔵 This is mostly **reasoning over licence history, not network** — the fixture hunt is only for the arms that turn out to differ | one pass, low network |
+| 🔴 **`923-G2`** — **the CC element ordering is unit-tested, not measured.** The `CC-BY-NC-SA → CC-BY-NC` share-alike drop is reasoned from the arm order and demonstrated on **synthetic** title lines, which are not evidence about any repository | Byte-read one real `CC-BY-NC-SA` payload. 🔴 Neither available channel serves one: `creativecommons.org` is **HTTP 403 at the proxy** and GitHub's licence search rejects `license:cc-by-nc-sa-4.0` as unindexed (**HTTP 422**). A third route is needed — most likely a repository found by text search and probed by path | 1 probe once a route exists |
+| 🟡 **`923-G3`** — **`923-F6`: the authority cannot see a grant that lives only in prose**, and the obvious remedy is actively wrong. `jnehring/awesome-low-resource-languages` grants **CC-BY-SA-4.0** in its README with no `LICENSE` file; both channels report no grant. But a README substring grep would have invented a grant for **three of the four** largest ungranted catalogues, because a catalogue's content *is* other projects' licences | Fold the **structural** probe (a `## License`-style heading, then the grant string within ~6 lines of it) into the authority as a final stage emitting `PROSE-<family>` — explicitly weaker evidence than `BODY-`, as `BODY-` is weaker than a title. Then re-run over the 13 ungranted catalogue rows | one rule change + 13 probes |
+| 🟡 **`923-G4`** — **five tiers' catalogue nil rests on a single query shape.** Tagalog, Czech, Amharic, Swahili and Basque returned nothing for `awesome <lang> nlp`. A nil on one query shape is weaker than a nil on two, and this base has `921-F5`'s precedent for how much one more leg can move a verdict | Re-probe those five with a second shape (`<language> nlp resources`, `awesome <endonym>`). 🔵 If they hold, the nil is worth publishing as a measured property of those tiers; if any moves, `922-R2`'s denominator changes | 5 legs |
+| **`923-G5`** — **`923-R1` was applied to catalogues only.** The twenty-tier *library* table was graded under `922-R1`, which `923-R1` supersedes, and has not been re-graded against the stricter predicate | Re-grade the twenty library rows against `923-R1`'s five tests, naming the failed test in any row that moves. No new network — the slugs and payloads are all on the shelf | one pass, no network |
+| 🟡 **`923-G7`** — **`919-G10` is now four passes old and `p923` added +2 to it** (`repos/foundations.md` 36 → 38 uncounted address-bearing tables; the other two shelves unmoved). 🔴 Its `C14` limb reports **zero** tables matched on all three shelves, which means the declared-literal list in `ingest/derive-counts.py` does not describe the current shelf **at all** — it is not drift, it is a different document | Re-cut `SHELVES` from the live headers. 🔴 **In a commit of its own**, with no measurement change landing beside it: `SHELVES` feeds the count derivation, so a re-cut is an instrument change that will move published counts, and `913-G1` limb 2 requires those to be adjudicated per row rather than taken from the newer instrument | one pass, no network |
+| 🔵 **`923-G6`** — **a third host joins `920-G5`.** `creativecommons.org` returns **403 at the proxy**, as `huggingface.co` (`921-G1`) and the legal-text host before it. Three hosts, one symptom, and the base still has no primary legal text | Nothing to do until a channel exists — but it is now worth recording as **one** gap with three instances rather than three separate ones, because the remedy, if it ever arrives, is the same for all three | nil |
+
+### 🟢 Two gates inherited red, and `gate-offline` is green for the first time this pass can see
+
+`make commit-gates` was already red at `p922`'s HEAD on two gates `p923` did not touch — measured
+on the clean tree before any edit. Both are now fixed, and one of them was carrying something worse
+than an unpinned row:
+
+- 🔴 **`p252-ungated-floors`** — of its three unpinned suites, **two could not import**.
+  `python3 -I`, the Makefile's own invocation, strips the script's directory from `sys.path`, so
+  `p884-edu-vocabulary` and `p886-dual-channel-grant` died with `ModuleNotFoundError` **before a
+  single assertion ran**. 🔵 Running `--pin` first — the module's documented remedy — would have
+  recorded a floor for a suite that asserts nothing, which is the `lazy_lint.py` defect `p252`
+  exists to prevent, inside `p252`'s own remedy. Suites fixed, verified, **then** pinned.
+  Additive diff; census literals `71 → 74` under `p332`'s precedent. **47/47.**
+- 🟢 **`p253-captured-body-census`** — one unpinned capture site, `p881-channel-probe/probe.sh`,
+  benign `BODY-ONLY` verdict. Pinned, additive, **31/31**.
+
+🔴 **`gate-header-signature` stays red and this pass added +2**, declared as `923-G7` above and
+landed with `SKIP_COMMIT_GATES=1` — said here rather than left in a terminal, which is what the
+hook asks for.
+
+### 🟡 Two defects of my own, one of which the controls would not have caught
+
+`923-F4` — the conjunctive stage re-detecting Apache-1.x's own BSD phrasing as a **second grant**
+— is `922-F4`'s class exactly, one pass later, in a different stage. It was caught, as prescribed,
+by re-running the fix over the cohort **and** against the stages downstream of it.
+
+🔴 **But the third defect was not caught that way.** Emitting family *roots* broke the notice-style
+stage, which keyed on the literal string `AGPL-3.0` that the title case used to emit. No payload in
+the control set is a notice-style Affero payload, so **every control would have stayed green while
+the stage was dead**. It was found by reading the downstream stages, not by running them.
+🔵 **The extension this pass adds to `922-F4`'s prescription: re-controlling a fix only proves the
+stages your cohort happens to reach. When a fix changes the *shape* of a value rather than its
+content, every consumer of that value has to be read, because a control set is a sample and a
+consumer list is not.**
+
 
 ## 🆕 `p922` · 2026-11-19 — **`921-G5` discharged by falsifying the rule it was written to protect, and the successor I pre-registered died in the same pass. 🔴 Three defects in the grant authority, one of them created by this pass's own fix and caught by its own controls.**
 

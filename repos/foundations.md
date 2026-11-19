@@ -1290,3 +1290,64 @@ then the one to trust. No repo in this set is archived.
 - **`adlnet/ADL_LRS`** (335 ★) — last push 2025-11-14, 369 days idle.
 - **`flysheep-ai/education-skills`** (125 ★) — last push 2026-01-30, 292 days idle.
 
+
+## The curated-index tier — added `p923`, discharging `922-G3`
+
+A **catalogue** is the artefact a localisation engagement copies from first: its curation *is* the
+deliverable, and copying it is the fastest way to inherit somebody else's reading of a market.
+Twenty national catalogues are now byte-read across the twenty-tier table. 🔴 **Thirteen carry no
+grant at all, and one more grants only in prose.** Full census and hashes in
+[`repos/trending.md`](trending.md) and
+[`evidence/catalogue-grant-census.2026-11-19-p923.tsv`](../evidence/catalogue-grant-census.2026-11-19-p923.tsv).
+
+### 🟢 The two a studio can actually copy
+
+| Catalogue | Tier | ★ | Grant — byte-read | Notes |
+|---|---|---|---|---|
+| [`crownpku/Awesome-Chinese-NLP`](https://github.com/crownpku/Awesome-Chinese-NLP) | ZH | 7,920 | 🟢 **Apache-2.0** — 11,357 B, `c71d239df917` | a *software* licence on an index; idle since 2023-07-27 |
+| [`wannaphong/Awesome-Lao-NLP`](https://github.com/wannaphong/Awesome-Lao-NLP) | LO | 19 | 🟢 **MIT** | `p922`'s counter-example, still the only MIT one |
+
+### 🟡 Granted, but as *content* — read the scope before you build
+
+| Catalogue | Tier | ★ | Grant — byte-read | What it obliges |
+|---|---|---|---|---|
+| [`taishi-i/awesome-japanese-nlp-resources`](https://github.com/taishi-i/awesome-japanese-nlp-resources) | JA | 1,031 | 🟡 **CC0-1.0** — 7,048 B, `a2010f343487` | nothing — public-domain dedication |
+| [`bilalabic/awesome-turkish-datasets`](https://github.com/bilalabic/awesome-turkish-datasets) | TR | 9 | 🟡 **CC-BY-4.0** — 18,657 B, `9ba9550ad484` | attribution |
+| [`JousiaPiha/awesome-finnish-nlp`](https://github.com/JousiaPiha/awesome-finnish-nlp) | FI | 5 | 🟡 **CC0-1.0** — same payload as `taishi-i` | nothing |
+| [`tuanone123/awesome-vietnamese-llm-dataset`](https://github.com/tuanone123/awesome-vietnamese-llm-dataset) | VI | 0 | 🟡 **CC0-1.0** — 6,460 B, `f0f96b4f190e` | nothing |
+| [`jnehring/awesome-low-resource-languages`](https://github.com/jnehring/awesome-low-resource-languages) | cross | — | 🔴 **CC-BY-SA-4.0 — IN PROSE ONLY, no `LICENSE` file** | **share-alike on a derived index** — and *invisible to both channels* (`923-F6`) |
+
+### 🔴 Ungranted, and three of them are the largest in their tier
+
+`fighting41love/funNLP` (**84,685 ★**, ZH) · `AiHubCN/Awesome-Chinese-LLM` (22,786 ★, ZH) ·
+`AI4Bharat/indicnlp_catalog` (641 ★, HI) · `datanada/Awesome-Korean-NLP` (661 ★, KO) ·
+`banglakit/awesome-bangla` (580 ★, BN) · `01walid/awesome-arabic` (562 ★, AR) ·
+`oroszgy/awesome-hungarian-nlp` (287 ★, HU) · `h9-tec/Awesome_Arabic_NLP` (260 ★, AR) ·
+`seanghay/awesome-khmer-language` (207 ★, KM) · `changukshin/Awesome-Korean-NLP-Papers` (201 ★, KO) ·
+`xbklairith/Awesome-Thai-Library` (64 ★, TH) · `yusufusta/awesome-turkish-nlp` (48 ★, TR) ·
+`davidsbatista/awesome-Portuguese-NLP` (19 ★, PT)
+
+🔵 **Tagalog, Czech, Amharic, Swahili and Basque have no catalogue at all** on the query shape
+tested — and four of those five have a *maintained permissive library*. A tier can have an
+adoptable stack and no curated index; declared as `923-G4`, because one query shape is one query
+shape.
+
+## `923-R1` — the role predicate, written down so it is applied by instrument and not by taste
+
+`922-G5` recorded that `922-R1`'s role test was *"applied by judgement, not by an instrument"* and
+asked for a checklist the next pass applies **before** grading. This is it. Every test is keyed to
+a real false positive this base produced, not to a hypothetical.
+
+| # | Test | Fails when… | Fixture that forced the test |
+|---|---|---|---|
+| 1 | **Identity** — does the artefact name *this tier's language* in its own title or description? | the search channel token-matched something from another language | 🔴 `fighting41love/funNLP` was returned by the **Thai** leg. It is a **Chinese** resource index, and at 84,685 ★ it would have topped the tier |
+| 2 | **Class** — is it the class the row claims: catalogue, library, model, or paper list? | a paper list is graded as a resource index, or a tool as a stack | 🔴 `changukshin/Awesome-Korean-NLP-Papers` (201 ★) is a **paper** list; `fuzzythecat/awesome-spacer` (44 ★) was returned by the KO leg and is a **spacing tool** |
+| 3 | **Domain** — is it an artefact of this domain at all? | the query matched on country or language, not on subject | 🔴 `cirosantilli/china-dictatorship` (3,355 ★) was returned by the **ZH NLP** leg |
+| 4 | **Generality** — does it serve more than one downstream task, and is it the tier's entry point? | the passing member is an adjacent single-purpose tool | `922-R1`'s own wording; `seanghay/KhmerOCR` failed it in `p922` |
+| 5 | **Grant shape** — is the grant the *kind* the row's use implies? | a content licence is counted as a software grant, or copyleft as adoptable | publish `— COPYLEFT`, `— WEAK COPYLEFT` or `— CONTENT LICENCE` rather than collapsing to "granted" |
+
+🔵 **And the reporting rule, which is half the value:** every exclusion names the test it failed, in
+its own row. A row that says *"excluded"* and a row that says *"excluded — fails Identity: Chinese
+catalogue returned by the Thai leg"* cost the same to write and are worth very different amounts to
+the next pass. 🔴 `923-R1` has **not** yet been applied to the twenty-tier library table, which was
+graded under `922-R1` — declared as `923-G5`.

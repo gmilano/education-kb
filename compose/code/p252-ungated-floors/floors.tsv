@@ -68,5 +68,8 @@ p637-cross-instrument-licence-agreement/test_agreement.py	UNITTEST-MAIN	9
 p786-scope-verdict-agreement/test_agree.py	UNITTEST-MAIN	15
 p799-board-census/test_census.py	UNITTEST-MAIN	12
 p800-region-provenance/test_region_provenance.py	UNITTEST-MAIN	8
+p884-edu-vocabulary/test_edu_vocabulary.py	UNITTEST-MAIN	13
+p885-symref-grant-ladder/test_symref_ladder.py	UNITTEST-MAIN	17
+p886-dual-channel-grant/test_grant_titles_x.py	UNITTEST-MAIN	18
 pattern-citation-audit/test_audit.py	UNITTEST-MAIN	21
 registry-recency-channel/test_registry_recency.py	UNITTEST-MAIN	20

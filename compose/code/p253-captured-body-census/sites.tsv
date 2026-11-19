@@ -79,5 +79,6 @@ p725-readme-payload-sweep/readme_vs_payload.sh	BODY-ONLY	1	0	1	0
 p759-four-layer-grant-probe/probe.sh	BODY-ONLY	1	0	6	0
 p779/ecl_decide.sh	BODY-ONLY	1	0	0	0
 p784-licence-scope-map/probe.sh	BODY-ONLY	1	0	0	0
+p881-channel-probe/probe.sh	BODY-ONLY	1	0	0	0
 registry-license-remeasure/measure_candidate.sh	BODY-ONLY	2	0	0	0
 registry-license-remeasure/remeasure.sh	BODY-ONLY	1	0	0	0

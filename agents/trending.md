@@ -4,6 +4,191 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p923) — **`922-G2` predicted that Apache-1.1 would be published as 2.0. It is published as **`BSD`** — the version stage `922-F3` fixed was never reached, because the family detector is keyed on a name the ASF only adopted at 2.0. 🔴 The same defect was then found, independently, in Creative Commons: a real `CC-BY-4.0` catalogue on this shelf was published as `CC-UNSPECIFIED`.**
+
+🔵 **Summary.** The 8 mandated WebSearch legs (one line, per `920-G3`), **15 national catalogues
+discovered and byte-read** across ten previously unmeasured language tiers, **five defects in the
+grant authority — two of them created by this pass's own fixes and caught by its own controls**,
+one published claim tested out of sample and half-refuted, one gap discharged with a date instead
+of a nil, and **no new mechanism proposed**, which is `922-G1` being obeyed rather than quoted.
+
+### 🔴 `923-F1` — `922-G2` named the right defect and the wrong mechanism, for the fourth time on one bug
+
+`922-G2` said: *"`*"apache license"*` is hard-coded to `Apache-2.0` — Apache-1.1 exists and would
+be published as 2.0."* It was tested against the ASF's own published texts
+([fixtures](../ingest/fixtures-p923/)).
+
+| Payload | `922-G2` predicted | **Measured on the unfixed instrument** | |
+|---|---|---|---|
+| Apache-1.1 (2,827 B) | `Apache-2.0` | 🔴 **`BSD` / `BODY-BSD`** | ❌ |
+| Apache-1.0 (2,848 B) | *(not considered)* | 🔴 **`BSD` / `BODY-BSD`** | ❌ |
+
+Apache-1.1 is titled ***"The Apache Software License, Version 1.1"***. Apache-1.0 carries **no
+licence title at all** — only `Copyright (c) 1995-1999 The Apache Group`. Neither contains the
+string `apache license`, so neither was ever handed to the version stage. 🔵 **A version stage
+cannot be wrong about a family it is never given.**
+
+**Four framings of one defect, each correcting the last and each still on the wrong axis:**
+
+| Pass | Said the axis was | Refuted by |
+|---|---|---|
+| `920-G2` | the payload's **size** | `921-F4` |
+| `921-F4` | the **grader**, at every size | `922-F3` |
+| `922-F3` | the version stage's **family allow-list** | **`923-F1`** |
+| **`923-F1`** | the **family detector** — the allow-list was never reached | *(open to the same treatment)* |
+
+🔵 **The transferable rule: a detector keyed on a product's *current* name cannot see that
+product's *earlier* names.** 🔴 And the commercial direction is the bad one. A bare `BSD` cell is
+read as BSD-3-Clause, which is **GPL-compatible**. Apache-1.0 carries the **advertising clause**
+(clause 3 — BSD-4-Clause's defining term) and Apache-1.1 carries a documentation-acknowledgment
+and name-use clause; **both are GPL-INCOMPATIBLE and neither has a patent grant**. The misgrade ran
+in the **permissive** direction — the direction that loses a client an argument it cannot win back.
+
+### 🔴 `923-F5` — the same defect, found independently, in the family this industry actually trips over
+
+While byte-reading catalogues for `922-G3`, `bilalabic/awesome-turkish-datasets` graded
+**`CC-UNSPECIFIED`** where the search channel said `CC-BY-4.0`. The bytes agree with the channel
+and the grader was wrong: a CC licence's legal code is titled by its **elements** —
+`Attribution 4.0 International` — and the words *"Creative Commons Attribution"* never appear
+adjacently in the title block. The only `creative commons` string inside the first 300 bytes is the
+boilerplate disclaimer *("Creative Commons Corporation … is not a law firm")*, so a real CC-BY-4.0
+payload fell through to the generic arm.
+
+🔴 **And the old arms were mis-ordered.** `*"attribution-noncommercial"*` preceded every ShareAlike
+test, so an `Attribution-NonCommercial-ShareAlike` payload published as `CC-BY-NC` — **the
+share-alike obligation, the one that infects a derived database (`T25`), was silently dropped.**
+
+🔵 Two families, two different maintainers, one mechanism, found in one pass and *not* looked for
+the second time. That is what makes `923-F1` a rule rather than an anecdote — and it is the first
+generalisation this base has published since `921-R1` died, because it was confirmed out of sample
+**before** it was written down rather than after.
+
+### 🔴 `923-F3` / `923-F4` — two defects created by this pass's own fixes, both caught by its own controls
+
+- 🔴 **`923-F4`** — once `923-F1` made Apache-1.1 reachable, the conjunctive stage fired on its
+  body and published **`Apache-1.1+BSD / CONJUNCTIVE`**: a two-licence notice obligation that does
+  not exist. Apache-1.0/1.1 are **BSD-phrased by construction** — *"Redistribution and use in
+  source and binary forms"* is clause 1 of the Apache text itself. Exempted for 1.x only; **2.0 is
+  deliberately not exempted**, because 2.0 is not BSD-phrased. 🔵 This is `922-F4` to the letter,
+  one pass later, in a different stage: *a fix must be re-controlled against every stage
+  downstream of it.*
+- 🔴 **`923-F3`** — the first cut of the Apache-1.0 fix was **unreachable**. Its structural probe
+  lived inside the version stage, which is gated on a family having already been detected — and
+  Apache-1.0 has no licence title to detect. It was still publishing `BSD / BODY-BSD` after the
+  "fix". Moved into the body stage, where the misgrade actually happens, and keyed on **clause 3's
+  advertising term plus the ASF attribution string**, so a generic BSD-4-Clause payload is not
+  captured.
+- 🟡 A third, quieter one: emitting family **roots** broke the notice-style stage, which keyed on
+  the literal string `AGPL-3.0` that the title case used to emit. Found by re-reading the
+  downstream stages rather than by a control — which means the control set would not have caught
+  it, and that is worth saying out loud.
+
+### 🟢 `923-F2` — what replaces the allow-list, and what else it was hiding
+
+One table now drives the version read for **every** family that has more than one published
+version. Three further hard-coded versions were sitting in the title case, same class, unreported:
+
+| Was | Is | Why it matters |
+|---|---|---|
+| `AGPL-3.0` | `AGPL` + table | **AGPL-1.0 (2002) exists** — in the family this base says matters most |
+| `ECL-2.0` | `ECL` + table | ECL-1.0 is OSI-approved, and ECL is *the* education licence (Sakai) |
+| `MulanPSL-2.0` / `MulanPubL-2.0` | roots + table | v1 of both exist; this is the licence family of Chinese education supply |
+
+**EPL** and **CDDL**, which `922-G2` named as invisible, are now detected — both weak-copyleft, both
+carrying a file-level reciprocity obligation an `UNKNOWN-TEMPLATE` cell does not state.
+
+🟢 [**Controls**](../evidence/grant-authority-controls.2026-11-19-p923.tsv): 11 rows. All ten
+pre-existing rows are **byte-identical to `p922` in payload hash, family and verdict** — `prosodic`
+(GPL-3.0), `konlpy` (GPL-3.0-or-later), `uralicNLP`/`huspacy` (Apache-2.0), `calamanCy`/`bnlp`
+(MIT), `udpipe` (MPL-2.0, and it did **not** regress to `922-F4`'s conjunctive bug), `omorfi`
+(GPL-3.0 via the pointer stub), `unidic-lite` (MIT + BSD sibling). **Zero regression**, run twice —
+once after the Apache fix and again after the CC fix.
+
+### 🟡 `923-F6` — the absence claim has a blind spot, and the obvious remedy is *actively wrong* for this artefact class
+
+Ten of the fifteen catalogues byte-read this pass returned `NO-LICENCE-FILE-FOUND`. Probing their
+READMEs ([evidence](../evidence/catalogue-prose-grant-probe.2026-11-19-p923.tsv)) found that one
+of them **does** carry a grant: [`jnehring/awesome-low-resource-languages`](https://github.com/jnehring/awesome-low-resource-languages)
+has a `## License` section declaring **CC BY-SA 4.0** and **ships no `LICENSE` file**. The search
+channel reports `NONE`; the byte-read reports absence; **both are wrong**, and the grant is
+*share-alike*.
+
+🔴 **But do not fix this with a README grep.** A catalogue's entire content *is* other projects'
+licences. Measured on the four largest ungranted catalogues: `fighting41love/funNLP` (138,594 B
+README) names GPL — describing **Lit-LLaMA**, a listed project. `AiHubCN/Awesome-Chinese-LLM` names
+CC0 — a listed **dataset**. `h9-tec/Awesome_Arabic_NLP` yields **six** licence strings, none of them
+its own. 🔵 A substring grep would have invented a grant for three of four. **The discriminator
+that works is structural — a `## License` heading — not lexical**, which is `923-F3`'s lesson
+arriving by a completely different route in the same pass.
+
+### 🟡 `922-G4` — discharged with a **date**, which is more useful than the nil it asked for
+
+`ufal/udpipe` re-probed: **426 ★, MPL-2.0, pushed 2026-06-11 — unchanged, because `p922` ran
+today.** A same-day re-probe measures nothing, so the gap is converted instead of pretended:
+161 days elapsed of the 180 `918-R1` allows. 🔴 **Czech crosses the threshold on `2026-12-08`.**
+Any Central European proposal quoting `udpipe`, `repos/foundations.md`, `verticals/solutions.md`
+or **P45** after that date must re-probe first, or drop the tier to `NOT DELIVERABLE` and degrade
+P45 to P44's shape.
+
+### 🔴 `923-F8` — two suites in this repository have never been able to run, and the gate that should have said so was about to pin them as clean
+
+`make commit-gates` was **already red at `p922`'s HEAD**, on two gates this pass did not touch.
+Measured on the clean tree before any `p923` edit, so this is inheritance, not breakage. One of
+them was worth the detour.
+
+🔴 **`p252-ungated-floors` reported three unpinned suites. Two of them could not import.**
+`p884-edu-vocabulary/test_edu_vocabulary.py` and `p886-dual-channel-grant/test_grant_titles_x.py`
+import their sibling module by bare name — `import classify_edu`, `import grant_titles_x` — and the
+Makefile invokes every suite as **`python3 -I`**. 🔵 **Isolated mode strips the script's own
+directory from `sys.path`**, so both died with `ModuleNotFoundError` **at import time, before a
+single assertion ran**. 234 of this tree's 306 test files already carry the
+`sys.path.insert(0, dirname(abspath(__file__)))` guard; these two did not, and nothing noticed
+because an unpinned row and an unrunnable row look identical from outside.
+
+🔴 **And the obvious remedy would have made it worse.** `p252`'s documented fix for an unpinned row
+is `--pin`. Running it first would have recorded a floor for a suite that asserts **nothing** —
+which is `lazy_lint.py` exactly, the defect `p252` was built to prevent, arriving inside `p252`'s
+own remedy. 🟢 The suites were **fixed first**, both verified to run and pass, and only then
+pinned (at 13 and 18). The pin diff is **additive**: three rows added, **no existing floor
+changed**. Census literals moved `71 → 74` under `p332`'s precedent — the population grew; no floor
+was edited down.
+
+🟢 **`p253-captured-body-census`** was red on one unpinned capture site,
+`p881-channel-probe/probe.sh`, verdict `BODY-ONLY` — the module's own benign class. Pinned;
+additive, one row; **31/31**.
+
+🟢 **`make gate-offline` now passes end to end for the first time in this pass's visible history.**
+
+🔴 **`gate-header-signature` is still red, and this pass adds to it.** That is `919-G10`, registered
+and carried since `p919`: the declared-literal list in `ingest/derive-counts.py` is stale against
+shelves that have grown for hundreds of passes, and **C14 reports zero tables matched on all
+three** — so the list does not describe the current shelf at all. Measured both sides, as `919-G10`
+itself did:
+
+| Shelf | `p922` HEAD | **`p923`** |
+|---|---|---|
+| `agents/top.md` | 15 | 15 |
+| `repos/foundations.md` | 36 | **38** |
+| `verticals/solutions.md` | 23 | 23 |
+
+🔵 **+2, and they are this pass's two catalogue tables.** The re-cut `919-G10` prescribes is not
+attempted here **on purpose**: `SHELVES` feeds the count derivation, and re-cutting it in the same
+commit as five grant-authority fixes would mix an instrument change into a measurement change —
+which is `913-G1` limb 2, the rule this base wrote after `912-G1` nearly overwrote 22 correct cells.
+🔴 **So this commit is landed with `SKIP_COMMIT_GATES=1`, and that is said here rather than left in
+somebody's terminal**, which is what the hook asks for.
+
+### 🔵 `923-F7` — the mandated legs, one line per `920-G3`
+
+All 8 run. **39 named facts probed mechanically against the live shelf: 36 of 39 already present**
+([probe](../evidence/websearch-exhaustion-probe.2026-11-19-p923.tsv)). The three new ones are all
+secondary analyst or vendor figures and are filed in `intel/market.md` marked as such. **Zero
+repositories — forty-second consecutive nil** at the top of the English-language shelf: every repo
+the trending leg named (`education-agent-skills`, `Claw-ED`, `interactive-learning`,
+`ChinaTextbook`, `DeepTutor`) was already held. The catalogue legs returned **15 repositories, 15
+this base had never held.**
+
+
 ## `2026-11-19` (p922) — **`921-R1` was published yesterday as the rule governing which languages have an adoptable substrate. It was tested this pass on ten tiers it had never seen and scored **4 of 10** — worse than a coin. 🔴 The replacement hypothesis I pre-registered before measuring scored **1 of 4**. Both are retired; what survives is a twenty-tier lookup table and no mechanism at all.**
 
 🔵 **Summary.** The 8 mandated WebSearch legs (one line, per `920-G3`), **two discovery legs over

@@ -1,0 +1,39 @@
+G-aiagentsdirectory-edu	PRESENT	agents/top.md agents/trending.md 
+G-openclaw-385407	PRESENT	agents/trending.md repos/trending.md 
+T-education-agent-skills	PRESENT	agents/top.md agents/trending.md repos/foundations.md repos/trending.md intel/trends.md intel/open-gaps.md 
+T-claw-ed	PRESENT	agents/top.md agents/trending.md repos/trending.md intel/market.md intel/trends.md compose/patterns.md intel/open-gaps.md 
+T-interactive-learning	PRESENT	agents/top.md agents/trending.md repos/trending.md intel/market.md compose/patterns.md intel/open-gaps.md 
+T-chinatextbook	PRESENT	agents/top.md agents/trending.md repos/trending.md verticals/solutions.md intel/market.md compose/patterns.md intel/open-gaps.md 
+T-deeptutor-trending	PRESENT	agents/top.md agents/trending.md repos/foundations.md repos/trending.md intel/market.md intel/trends.md compose/patterns.md intel/open-gaps.md 
+V-openeducat-lgpl	PRESENT	agents/top.md agents/trending.md repos/foundations.md repos/trending.md verticals/solutions.md intel/market.md compose/patterns.md intel/open-gaps.md 
+V-openeducat-g2	NEW	-
+TR-microsoft-86pct	PRESENT	agents/top.md agents/trending.md repos/trending.md intel/market.md intel/open-gaps.md 
+TR-students-54pct-weekly	NEW	-
+TR-essa-45pct	PRESENT	agents/top.md agents/trending.md repos/foundations.md repos/trending.md verticals/solutions.md intel/market.md intel/trends.md compose/patterns.md intel/open-gaps.md 
+TR-holoniq-2026	PRESENT	agents/trending.md repos/trending.md intel/market.md intel/open-gaps.md 
+TR-market-112B-2034	PRESENT	agents/trending.md repos/trending.md intel/open-gaps.md 
+TR-market-1169B-2035	PRESENT	agents/top.md agents/trending.md repos/trending.md intel/market.md intel/open-gaps.md 
+NA-66pct-institutionwide	PRESENT	agents/trending.md repos/trending.md intel/market.md compose/patterns.md intel/open-gaps.md 
+NA-100-state-bills	PRESENT	agents/trending.md intel/market.md 
+NA-chegg-45pct	PRESENT	agents/trending.md intel/market.md 
+NA-ecs-tracker	PRESENT	agents/trending.md intel/market.md 
+NA-illinois-jul2026	PRESENT	agents/trending.md repos/foundations.md repos/trending.md verticals/solutions.md intel/market.md intel/trends.md intel/open-gaps.md 
+NA-virginia-sb394	PRESENT	agents/trending.md intel/market.md 
+EMEA-futuresource-67pct	PRESENT	agents/trending.md repos/trending.md intel/market.md intel/open-gaps.md 
+EMEA-epson-87pct	PRESENT	agents/trending.md repos/trending.md intel/market.md intel/trends.md compose/patterns.md intel/open-gaps.md 
+EMEA-dec-summit-emea	PRESENT	agents/trending.md repos/trending.md intel/market.md intel/trends.md intel/open-gaps.md 
+EMEA-fosway-11-26	PRESENT	agents/trending.md repos/trending.md intel/market.md 
+EMEA-spain-no-regulation	PRESENT	agents/trending.md repos/trending.md verticals/solutions.md intel/market.md intel/open-gaps.md 
+EMEA-lithuania	PRESENT	intel/open-gaps.md 
+APAC-45pct-share	NEW	-
+APAC-uae-25-prohibitions	PRESENT	agents/trending.md intel/market.md 
+APAC-cambridge-english	PRESENT	agents/trending.md intel/market.md 
+APAC-worldbank-seoul	PRESENT	agents/trending.md intel/market.md 
+APAC-virtual-tutors-30pct	PRESENT	agents/trending.md 
+APAC-edtechhub-sea	PRESENT	agents/top.md agents/trending.md intel/market.md intel/open-gaps.md 
+LATAM-dec-92pct	PRESENT	agents/trending.md repos/trending.md intel/market.md intel/trends.md intel/open-gaps.md 
+LATAM-iesalc-200-19	PRESENT	agents/top.md agents/trending.md repos/trending.md intel/market.md intel/trends.md intel/open-gaps.md 
+LATAM-idb-193	PRESENT	agents/top.md agents/trending.md repos/trending.md intel/market.md intel/trends.md compose/patterns.md intel/open-gaps.md 
+LATAM-ilia-14pct	PRESENT	agents/top.md agents/trending.md repos/foundations.md repos/trending.md verticals/solutions.md intel/market.md intel/trends.md compose/patterns.md intel/open-gaps.md 
+LATAM-ceibal	PRESENT	agents/top.md agents/trending.md repos/trending.md intel/market.md intel/open-gaps.md 
+LATAM-30pct-policies	PRESENT	agents/trending.md intel/market.md intel/open-gaps.md 

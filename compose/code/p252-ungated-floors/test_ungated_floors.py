@@ -253,7 +253,29 @@ chk("p280 a DIRECTORY alone still does not gate (p251, preserved)",
 # 🔵 FIFTEENTH consecutive pass in which this census went red before the prose did — and
 # this one is the shape p294 called the direction a coverage census must never miss, run
 # forwards: a suite leaving the backlog BY BEING GATED reads as progress, and here it is.
-chk("ungated AND silent-zero (the XR population)", len(POP), 71)
+# 🔴 p923: 71 -> 74, and the three rows were UNPINNED for several passes — but that is the
+# smaller half of what the census caught.  TWO OF THE THREE COULD NOT RUN AT ALL.
+# `p884-edu-vocabulary/test_edu_vocabulary.py` and `p886-dual-channel-grant/test_grant_titles_x.py`
+# import their sibling module by bare name (`import classify_edu`, `import grant_titles_x`), and
+# the Makefile invokes every suite as `python3 -I`.  🔵 **`-I` strips the SCRIPT'S OWN DIRECTORY
+# from `sys.path`**, so both died with `ModuleNotFoundError` at IMPORT time — before a single
+# assertion ran.  234 of this tree's 306 test files already carry the
+# `sys.path.insert(0, dirname(abspath(__file__)))` guard; these two did not.
+# 🔴 Why this is worse than an unpinned row, and why `--pin` was NOT run first: pinning a suite
+# that cannot import would have recorded a floor for a suite that asserts NOTHING — which is
+# `lazy_lint.py` exactly, the defect `p252` exists to prevent, arriving inside `p252`'s own
+# remedy.  The suites were FIXED first (`923-F8`), both verified to run and pass, and only then
+# pinned at 13 and 18.
+# 🟢 The pin diff is additive: three rows added, NO existing floor changed.  `p885`'s suite was
+# the only one of the three that ran, and it was unpinned for the ordinary p332 reason.
+# 🔵 Why bumping these literals is p332's fix and not the error the README warns about: the
+# README forbids editing a floor DOWN to match a suite that broke.  No floor moved down, and
+# nothing broke here that was ever working — two of these suites have been unrunnable since they
+# were written.  The POPULATION grew; these literals are a census of the population, so they
+# track it.  The floors themselves were measured by `--pin`, never chosen.
+# 🔴 What this does NOT mean: the three are now covered.  They are PINNED and they RUN.  All
+# three are still UNGATED.  The XR backlog is 74, three worse than p404 left it.
+chk("ungated AND silent-zero (the XR population)", len(POP), 74)
 # 🔴 p404: explicit-exit 109 -> 111, AND THIS MOVEMENT IS A PRE-EXISTING DRIFT, not this
 # pass's work.  `p404` added ONE suite (`p404-fork-direction/test_verdict.py`) and wired it into
 # `HOOK_GATES` as `gate-fork-direction` in the SAME change, with an explicit `sys.exit(1)` —
@@ -301,7 +323,7 @@ chk("the pin file holds no row outside the population",
     sorted(set(FLOORS) - {r["relpath"] for r in POP}), [])
 chk("no floor is zero (a zero floor pins nothing)",
     sorted(k for k, v in FLOORS.items() if v < 1), [])
-chk("floors.tsv is the pinned count of the population", len(FLOORS), 71)
+chk("floors.tsv is the pinned count of the population", len(FLOORS), 74)   # p923
 
 # ── verdict_for: the grading, and its precedence ──
 chk("a count at the floor is OK",
@@ -346,11 +368,11 @@ chk("and it names the suite", [r for r, _ in _fails], [_victim])
 
 _fails_nopin, _ = uf.verify(floors={}, rows=POP)
 chk("a MISSING pin file fails as UNPINNED, it does not read as clean",
-    len(_fails_nopin), 71)
+    len(_fails_nopin), 74)   # p923
 
 _clean, _table = uf.verify(floors=FLOORS, rows=POP)
 chk("the real population verifies clean", _clean, [])
-chk("the table has one row per member", len(_table), 71)
+chk("the table has one row per member", len(_table), 74)   # p923
 
 chk("read_floors on a missing path returns empty, not an exception",
     uf.read_floors(os.path.join(uf.HERE, "no-such-file.tsv")), {})
