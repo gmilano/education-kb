@@ -1,0 +1,321 @@
+100205ivan/eyeep	D3	100205ivan/EyeEP	1	NONE	2026-10-02	AI-assisted Individualized Education Program (IEP) management system for special education teachers.
+4rays/swift-fsrs	D8	4rays/swift-fsrs	34	MIT	2024-10-25	A Swift implementation of the FSRS spaced repetition algorithm
+a-sit-plus/vck	G4e	a-sit-plus/vck	77	Apache-2.0	2026-11-19	Kotlin Multiplatform library implementing W3C VC Data Model, SD-JWT and ISO 18013-5 credentials
+academic-innovation/django-lti	G5e	academic-innovation/django-lti	26	MIT	2026-11-17	LTI Advantage support for Django projects.
+acblacksimt/iepdraft	D3	acblacksimt/iepdraft	0	NONE	2026-05-28	 AI-powered IEP goal generator for special education teachers.   
+acc235-ua/tutor-virtual-inteligente	G5f	acc235-ua/tutor-virtual-inteligente	0	NONE	2026-09-01	Tutor virtual inteligente. proyecto TFG, chat basado en LLM con sistema RAG para asistir al proceso de educación,  adaptándose al nivel del alumno. 
+acdpdev/move	G5g	ACDPDEV/move	1	GPL-3.0	2026-03-06	Plataforma educativa interactiva diseñada para facilitar el aprendizaje de física y matemáticas mediante simulaciones visuales accesibles desde la web.
+achique-luisdan/sti-aurora-digital	G5f	achique-luisdan/sti-aurora-digital	0	NONE	2021-11-10	Sistema Tutor Inteligente para la Construcción del Pensamiento Computacional en los Estudiantes de Educación Media General de Venezuela 
+adam-elharouchi/analytiq	G5d	adam-elharouchi/AnalytIQ	0	NOASSERTION	2026-10-30	AI-powered analytics learning platform. Generates coursework from a professor's own material and grades student code by executing it — Python, R, JS, SQL, Java.
+adamcsvarga/essay_scoring	D1	adamcsvarga/essay_scoring	7	NONE	2016-08-19	automated essay scoring on Kaggle data
+adamgibbons/guru	D8	adamgibbons/guru	22	NONE	2016-01-19	Implements SuperMemo-2, a spaced repetition algorithm that optimizes learning based on assigning difficulty levels to paired associates.
+aditya-alchemist/credchain-lms	G4c	Aditya-alchemist/CredChain-LMS	0	NONE	2025-12-27	A decentralized micro-LMS credentialing solution built on Ethereum ERC-721 NFTs. Issuers mint tamper-proof credential tokens, learners hold them in their wallet
+aegonwolf/eduquest	D2	aegonwolf/EduQuest	4	NONE	2024-01-12	EduQuest Question Generation for Higher Education
+ahmarshahid/university-clo-s-management	D9	ahmarshahid/University-CLO-s-Management	0	NONE	2024-04-14	My latest creation: a Course Learning Outcomes (CLO) Management System powered by C# and a robust database backend! 🚀  This innovative system empowers education
+aicryptocoin/how-to-understand-the-market	D5	AICryptoCoin/how-to-understand-the-market	0	NONE	2026-09-26	How to Understand the Market: Measure, Don't Guess. A free, non-commercial Russian-language book on reading the economy with data, and the open measurement pipe
+akarpo/tsd-standards	D9	akarpo/tsd-standards	0	NOASSERTION	2026-05-05	Michigan K-12 academic standards & skills matrix (Math, ELA, Science, Economics, CS) with free learning resources, AP/NWEA alignment, and a Troy School District
+alankan886/supermemo2	D8	alankan886/SuperMemo2	121	MIT	2024-06-23	📦 Published package for spaced repetition algorithm SM-2 
+albertusk95/nips-challenge-essay-scoring-arabic	D1	albertusk95/nips-challenge-essay-scoring-arabic	6	MIT	2018-01-31	Global NIPS Paper Implementation Challenge - An Automated System for Essay Scoring of Online Exams in Arabic based on Stemming Techniques and Levenshtein Edit O
+alejlatorre/lti-provider	G5d	alejlatorre/lti-provider	0	Apache-2.0	2026-06-12	A FastAPI-based Learning Tools Interoperability (LTI) 1.3 provider implementation
+alivcor/aes	D1	alivcor/aes	5	MIT	2017-10-23	Automated Essay Scoring
+alyssaxuu/carden	D8	alyssaxuu/carden	489	MIT	2022-06-17	Flashcards with spaced repetition and gamification 🌱
+amaanwarsi/proctora	D7	amaanwarsi/Proctora	3	MIT	2026-04-07	Proctora is an open-source online exam proctoring demo built with Flask, OpenCV, and MediaPipe. It offers a browser-based fullscreen exam environment with webca
+amador-m/logicup	G5i	amador-m/Logicup	1	MIT	2026-11-17	LogiCup é uma plataforma gamificada voltada ao ensino de programação em Java, tornando o aprendizado mais interativo, prático e motivador por meio de desafios, 
+andre1araujo/csp-for-school-timetables	D4	andre1araujo/CSP-for-School-Timetables	7	Apache-2.0	2024-01-18	This repository hosts a Jupyter Notebook on which a Constraint Satisfaction Problem is used to solve a specific Scheduling Problem. Here the algorithm helps the
+andreasabela/redeprecepta	G5i	andreasabela/RedePrecepta	0	NONE	2026-08-17	Plataforma inteligente de integração, preceptoria e educação na Atenção Primária à Saúde. Conectando pessoas, organizando informações e fortalecendo a integraçã
+aniket20june/time-table-scheduling-using-genetic-algorithm	D4	aniket20june/Time-Table-Scheduling-using-Genetic-Algorithm	6	NONE	2021-06-01	One of the most challenging task for every college, school, and company administrator is to create an efficient timetable every year or every semester. The herc
+animeshjn/atguide	D3	animeshjn/ATGuide	1	NONE	2017-12-22	Assistive Technology Consideration Guide is an Android application helping to choose assistive technologies in special education of differently abled people. ID
+ap4y/leaf	D8	ap4y/leaf	40	MIT	2023-01-06	Flashcard app that uses spaced repetition algorithms for interval calculations
+api-evangelist/credly	G4b	api-evangelist/credly	0	NONE	2026-10-29	Credly — independent third-party profile of a public API surface, by API Evangelist. Credly is a digital credential and open badge platform, owned by Pearson (a
+api-evangelist/sertifier	G4b	api-evangelist/sertifier	0	NONE	2026-11-01	Sertifier — independent third-party profile of a public API surface, by API Evangelist. Sertifier is a digital credential and certificate/badge management platf
+appinventor-foundation/csta-linking	D9	appinventor-foundation/csta-linking	1	MIT	2025-08-27	Web tool that scans curriculum PDFs to pinpoint and highlight their alignment with CSTA standards
+arkonoficial/arkon	G5g	arkonoficial/ARKON	1	NONE	2026-11-13	ARKON | Aprende y Prepárate  Plataforma educativa interactiva que fortalece la convivencia, la ciudadanía y las habilidades laborales mediante recursos, activid
+arockiasachin/ai-assessment-platform	D10	arockiasachin/ai-assessment-platform	0	NONE	2026-09-28	AI-powered collaborative learning and assessment platform: LLM quiz generation, rubric-based grading with teacher review, sandboxed code evaluation, and team/pe
+artourter/europass	G4f	ArTourter/europass	2	NONE	2013-07-06	
+artyom7774/schedule	D4	artyom7774/Schedule	12	Apache-2.0	2026-11-19	SuperZavych - your digital assistant for automatic scheduling.
+ashish-chokhani/grammarml-eduassessment	D6	Ashish-Chokhani/GrammarML-EduAssessment	3	NONE	2025-05-29	This repository implements "Grammar Language Modeling for Automated Educational Assessment." It features a machine learning-powered grammar checker for educatio
+asifsaho/europasscv	G4f	asifsaho/europasscv	7	NONE	2026-02-12	Europass CV HTML
+ask4moreish/decentralized-global-education-skills-passport	G4a	ask4moreish/Decentralized-Global-Education-Skills-Passport	2	MIT	2026-11-11	Decentralized Global Education & Skills Passport on Stellar Soroban: verifiable credential issuance, cryptographic hash commitments, privacy-preserving selectiv
+asmarchioli/educatio-quiz	G5i	asmarchioli/educatio-quiz	2	NONE	2025-12-01	O “Educatio Quiz” consiste em uma plataforma de quizzes voltados para as diferentes áreas da educação, seja para ensino fundamental ou até ensino superior. Os p
+awg12345/zcontent	D9	awg12345/zcontent	0	ODbL-1.0	2026-10-23	Marble Skill Taxonomy — what children learn across primary/elementary years (micro-topics, prerequisite graph, curriculum standards alignment)
+aws-samples/educational-course-content-generator-with-qna-bot-using-bedrock	D2	aws-samples/educational-course-content-generator-with-qna-bot-using-bedrock	10	MIT-0	2026-04-14	A  serverless AWS application that combines AI-powered course content generation with an interactive question-answering system. Built using Amazon Bedrock, this
+b1n9ui/ai-university	D5	b1n9ui/ai-university	0	MIT	2026-11-14	Ten complete AI-authored open textbooks in English and Chinese, with interactive diagrams, worked solutions, and downloadable editions. No model API.
+b33kman/special-education-due-process-complaint	D3	b33kman/special-education-due-process-complaint	1	MIT	2026-10-10	Special Education Due Process Complaint Writer: a free AI plugin for Claude, ChatGPT and other AI chat apps. It writes an IDEA due process complaint from your c
+begin0808/course_scheduling_system	D4	begin0808/Course_Scheduling_System	19	AGPL-3.0	2026-11-19	開源免費、單校自架的中小學排課與調代課系統(國小/國中/高中職)。Free, self-hosted course-scheduling & teacher-substitution system for Taiwan K–12 schools.
+benhamner/asap-aes	D1	benhamner/ASAP-AES	43	BSD-2-Clause	2012-02-23	Evaluation Metrics for the Hewlett Foundation's Automated Essay Scoring competition
+benxene/class-scheduler	D4	benxene/class-scheduler	10	MIT	2023-01-07	A zero dependency class schedule manager.
+bermpje/eurocv	G4f	Bermpje/EuroCV	3	MIT	2025-10-25	Convert PDF/DOCX resumes to Europass CV format via CLI, API, or Docker
+blackboard/bbdn-lti-1p3-tool-example	G5d	blackboard/BBDN-lti-1p3-tool-example	1	Apache-2.0	2023-11-13	An example LTI 1.3/Advantage tool written in Python and Flask with deployment to AWS
+blackmath88/digital-credentials-demo	G4b	blackmath88/digital-credentials-demo	0	NONE	2026-10-16	Portable, verifiable certificates for learning. Open Badges 3.0 · W3C Verifiable Credentials Inspired by the MIT Digital Credentials ecosystem
+bookpublisher/most-professional-and-affordable-international-book-publishing-service	D5	bookpublisher/Most-professional-and-affordable-International-Book-Publishing-Service	0	NONE	2021-06-07	Book Publisher International is an international publishing organization that publishes textbooks, atlases, monographs, e-books, reference books in scientific, 
+caglarorhan/applicant-profile-protocol	G4f	caglarorhan/Applicant-Profile-Protocol	4	Apache-2.0	2026-09-18	The Applicant Profile Protocol (APP) is an open, JSON-based specification for representing a job applicant’s professional profile in a structured, interoperable
+caio-de-souza-marinho/ft_printf	D9	Caio-de-Souza-Marinho/ft_printf	1	MIT	2026-03-18	Reimplementation of the C standard printf() function as part of the 42 curriculum. This project includes full support for format parsing, variadic arguments, an
+cashcoin123/cashcoin123	D2	Cashcoin123/Cashcoin123	7	NONE	2026-10-05	# Application card: GitHub Copilot Chat  Learn how to use GitHub Copilot Chat responsibly by understanding its purposes, capabilities, and limitations.  ## What
+chakrix-com/swaya.me	D7	Chakrix-com/Swaya.me	4	NOASSERTION	2026-11-03	Open-source live audience engagement platform — quizzes, polls, word clouds, and proctored exams. No app required.
+chelseaschool/myiep	D3	ChelseaSchool/MyIEP	5	NOASSERTION	2016-05-28	Web Based IEP and Special-Education Program Management
+christophse/django-lti-tool	G5d	christophse/django-lti-tool	2	BSD-3-Clause	2024-06-20	LTI 1.3 tool integration for Django
+chsc1053/curriculum-redefined	D9	chsc1053/curriculum-redefined	0	GPL-3.0	2024-07-04	A Python-based web app to evaluate and enhance university curricula in alignment with industry standards
+chunngai/aes-papers	D1	Chunngai/aes-papers	17	NONE	2025-03-31	Paper list for automated essay scoring (AES).
+cnit-organization/ltitoolkit	G5d	CNIT-Organization/ltitoolkit	0	MIT	2026-08-05	PYPI Package — LTI 1.3 Advantage toolkit for Python
+confused4now-books/author-guide	D5	confused4now-books/author-guide	0	NOASSERTION	2026-10-25	An A–Z guide for authors on Confused for Now: from a folder of Word files to a published open textbook.
+cooperiano/edu-question-gen	D2	Cooperiano/edu-question-gen	1	MIT	2026-11-14	Knowledge-tree-driven question generation: multi-model staged pipeline plus LLM-as-judge assessment, orchestrated with LangGraph StateGraph.
+ctchanandy/moodle-mod_assessment	D10	ctchanandy/moodle-mod_assessment	1	NONE	2020-10-20	Assessment module for Moodle 2.X, it support teacher, self and peer assessment using rubric as grading method.
+cyberdocs120/stellarlearn	G4c	cyberdocs120/stellarLearn	0	MIT	2026-05-16	AI-powered LMS on Stellar – personalised learning paths that adapt in real time, tamper-proof credential NFTs minted to your wallet, and automatic LEARN token r
+cybermax4200/stellarlearn	G4c	cybermax4200/stellarLearn	0	MIT	2026-11-05	AI-powered LMS on Stellar – personalised learning paths that adapt in real time, tamper-proof credential NFTs minted to your wallet, and automatic LEARN token r
+dancodemonkey/kidcoin-dsm3s	G5i	DanCodeMonkey/kidcoin-dsm3s	1	NONE	2026-03-24	Projeto Integrador do 3º semestre do curso de Desenvolvimento de Software Multiplataforma da FATEC Votorantim. O projeto consiste em uma plataforma gamificada p
+daniel-cisneros-rojas/hanzi-play-learn	G5g	Daniel-Cisneros-Rojas/Hanzi-Play-Learn	1	NONE	2026-07-15	Aplicación web educativa desarrollada con Laravel 12 que emplea técnicas de gamificación para facilitar el aprendizaje de caracteres chinos (Hanzi) de una maner
+danielcregg/coderunner-skill	D2	danielcregg/coderunner-skill	4	MIT	2026-04-10	Claude skill for generating Moodle CodeRunner programming questions with automated test cases. Java, Python, C/C++, and more. First-of-its-kind — no other CodeR
+danielrmangru/ca-standards-based-lesson-planner	D9	DanielRMangru/CA-Standards-Based-Lesson-Planner	0	NONE	2026-07-08	Standards-Based Lesson Planner is a TypeScript-powered web app that helps educators design, organize, and manage lesson plans aligned to academic standards. It 
+dankimio/repetition	D8	dankimio/repetition	22	MIT	2022-12-06	Ruby implementation of the SuperMemo2 spaced-repetition algorithm
+dappermarce/neuromind-atlas	G5g	Dappermarce/NeuroMind-Atlas	1	NONE	2026-09-25	NeuroMind Atlas es una plataforma educativa sobre psicología y psiquiatría que abarca las ciencias del cerebro, los trastornos de salud mental, los fundamentos 
+darshan-panchal1/curriculum-forge	D9	darshan-panchal1/curriculum-forge	1	NONE	2026-01-06	AI-powered educational curriculum generator with async LangGraph orchestration, Groq LLM, Qdrant vector DB, automated WCAG accessibility auditing, and Common Co
+deekshasriv1111-cpu/curriculum-alignment-checker	D9	deekshasriv1111-cpu/curriculum-alignment-checker	0	NONE	2026-08-06	Paste a lesson plan, get the IB-style standards it hits and misses with confidence scores, and accept or reject each flag. Runs entirely in the browser — no API
+dendmitriev/schooltimetable	D4	DenDmitriev/SchoolTimetable	11	MIT	2024-01-13	Example of an application with a school schedule
+determinate/octoeye	D7	determinate/octoeye	0	NOASSERTION	2026-10-29	Open-source on-premise online proctoring and exam video monitoring system. Zero-install web browser proctoring, dual webcam & screen recording, WebRTC HLS strea
+dhananjay6561/classsync-gssoc	D4	dhananjay6561/ClassSync-GSSOC	8	MIT	2025-08-12	School scheduling platform that automates teacher substitutions, leave approvals and timetables. React, Express, MongoDB. GSSoC project.
+dhyanamgit/nodemeet	G5d	dhyanamgit/nodemeet	5	NOASSERTION	2026-10-06	Embed live video meetings and scheduling in your Python app. Self-hosted, LTI 1.3, free for noncommercial use.
+digitalcredentials/dcc-known-registries	G4c	digitalcredentials/dcc-known-registries	1	MIT	2026-06-03	A list of DID registries that the DCC Learner Credential Wallet and VerifierPlus check when verifying a VC.
+digitalcredentials/lcw-front-end	G4c	digitalcredentials/lcw-front-end	0	NONE	2026-11-18	react front end for the Learner Credential Wallet
+digitalcredentials/lcw-mock	G4c	digitalcredentials/lcw-mock	0	MIT	2025-08-01	Plays the part of the learner credential wallet when given a deep link, posting a DIDAuth to the vc_request_url.
+digitalcredentials/lcw-welcome	G4c	digitalcredentials/lcw-welcome	0	NONE	2026-11-18	Welcome page and sign-up for Learner Credential Wallet (welcome.alpha.lcw.app)
+digitalcredentials/learner-credential-wallet-site	G4c	digitalcredentials/learner-credential-wallet-site	1	NONE	2026-09-01	
+digitalharborfoundation/llm-math-education	D2	DigitalHarborFoundation/llm-math-education	47	MIT	2026-11-14	Retrieval augmented generation for middle-school math question answering and hint generation.
+discrafty-cpu/rms-standards-alignment	D9	discrafty-cpu/RMS-Standards-Alignment	0	NONE	2026-04-09	CPM Curriculum vs State Standards Alignment Database & Viewer — Drummond Math Solutions
+dmitry-viskov/pylti1.3	G5d	dmitry-viskov/pylti1.3	138	MIT	2024-08-18	LTI 1.3 Advantage Tool
+dmitry-viskov/pylti1.3-django-example	G5c	dmitry-viskov/pylti1.3-django-example	31	MIT	2024-03-08	PyLTI1p3 Django usage example
+dmitry-viskov/pylti1.3-flask-example	G5c	dmitry-viskov/pylti1.3-flask-example	23	MIT	2023-12-21	PyLTI1p3 Flask usage example
+eakarsu/ai-special-education-iep-compliance	D3	eakarsu/ai-special-education-iep-compliance	0	NONE	2026-10-23	
+eannchen/leetsolv	D8	eannchen/leetsolv	133	MIT	2026-07-17	A spaced repetition CLI for DSA, powered by a custom SM-2 algorithm for deliberate practice.
+easyvibecoding/vibe-resume	G4f	easyvibecoding/vibe-resume	4	MIT	2026-06-02	Turn your AI coding history (Claude Code, Cursor, Copilot, ChatGPT exports, git commits) into a versioned, reviewer-ready résumé — 9 locales, JIS履歴書 grid, Europ
+eduwallet/veramo-agent	G4e	eduwallet/veramo-agent	3	Apache-2.0	2026-11-17	Implementation of a generic veramo agent for VC issuance using the OpenID4VCI protocol
+edwin1719/avataracademy	G5f	Edwin1719/AvatarAcademy	1	MIT	2025-12-04	Revoluciona el aprendizaje con tutores de video impulsados por IA. Esta plataforma en Python usa GPT-4o   y avatares realistas para generar lecciones dinámicas 
+egorkhaklin/polaris-id	G4e	EgorKhaklin/polaris-id	6	Apache-2.0	2026-11-19	Identity credentials built to be checked, not trusted: an OpenID4VP 1.0 + HAIP 1.0 verifier for SD-JWT VC, offline ML-DSA-65 verification, and refusal test vect
+epoko77-ai/examguard	D7	epoko77-ai/examguard	3	MIT	2026-11-09	수능·시험장 스마트안경 점검: BLE 단서, 광고 패킷 복합 필터, 교탁 위 광학 판독, 실물 도감. Open-source web prototype for exam proctors.
+espresse/spaced_repetition	D8	espresse/spaced_repetition	60	NONE	2012-02-18	SM2 spaced repetition algorithm for Ruby
+eu-digital-identity-wallet/eudi-lib-android-wallet-core	G4e	eu-digital-identity-wallet/eudi-lib-android-wallet-core	64	Apache-2.0	2026-11-18	
+eu-digital-identity-wallet/eudi-lib-ios-openid4vci-swift	G4e	eu-digital-identity-wallet/eudi-lib-ios-openid4vci-swift	19	Apache-2.0	2026-11-16	Implementation of OpenID for Verifiable Credential Issuance protocol (wallet's role) in Swift
+eu-digital-identity-wallet/eudi-lib-jvm-openid4vci-kt	G4e	eu-digital-identity-wallet/eudi-lib-jvm-openid4vci-kt	47	Apache-2.0	2026-11-17	Implementation of OpenID for Verifiable Credential Issuance protocol (wallet's role) in Kotlin
+eu-digital-identity-wallet/eudi-srv-pid-issuer	G4e	eu-digital-identity-wallet/eudi-srv-pid-issuer	43	Apache-2.0	2026-11-06	A micro-service acting like PID/mDL Issuer according to OpenID4VCI
+eu-digital-identity-wallet/eudi-srv-wallet-provider	G4e	eu-digital-identity-wallet/eudi-srv-wallet-provider	6	Apache-2.0	2026-11-02	An implementation of a Wallet Provider service according to OpenId4VCI 1.0, and EUDI Wallet Standards and Technical Specifications.
+europass/europasscv-parser-js	G4f	europass/europasscv-parser-js	18	MIT	2022-12-10	Parse EuropassCV PDF/XML using JavaScript
+europass/ewa-cedefop	G4f	europass/ewa-cedefop	10	NOASSERTION	2022-11-24	EWA (Europass Web Apps - Cedefop) is a Java-based web system helping EU Citizens create their CV in the standardised Europass format.
+europass/rest-examples-java	G4f	europass/rest-examples-java	8	NONE	2023-10-27	Java-based examples for the Europass REST API
+europass/rest-examples-php	G4f	europass/rest-examples-php	5	NONE	2018-01-04	PHP-based examples for the Europass REST API
+europass/sample-tools-java	G4f	europass/sample-tools-java	12	NONE	2018-01-05	Java-based sample application demonstrating how to parse a Europass document and store the information in a DB
+europass/sample-tools-php	G4f	europass/sample-tools-php	11	NONE	2018-05-03	PHP-based sample application demonstrating how to parse a Europass document and store the information in a DB
+european-commission-empl/europass-authority-lists	G4f	european-commission-empl/Europass-Authority-Lists	5	NONE	2020-01-15	Europass Controlled Lists
+european-commission-empl/european-learning-model	G4f	european-commission-empl/European-Learning-Model	54	EUPL-1.2	2024-02-14	Data Model for the Europass Digital Credentials Infrastructure
+evertonsilvarocha-del/o-futuro-do-aprendizado	G5i	evertonsilvarocha-del/O-futuro-do-aprendizado	0	MIT	2026-07-02	A fusão entre tecnologia e educação transforma o aprendizado. Ferramentas digitais, IA e plataformas interativas conectam alunos ao conhecimento global, tornand
+fabrica-rea/repolibras	G5i	Fabrica-REA/repolibras	1	NONE	2026-05-05	Plataforma colaborativa para pesquisa, visualização e contribuição de vídeos de sinais em Libras, desenvolvida para promover inclusão, ensino e divulgação na UF
+feifeigao0302-gif/protracker	D3	feifeigao0302-gif/ProTracker	0	NONE	2026-05-07	(Special Education) IEP data collect tool
+felipeyan7/notebooklmprimeiropassoweb	G5h	FelipeYan7/NotebookLMPrimeiroPassoWeb	0	NONE	2026-01-11	Modelo educacional desenvolvido com NotebookLM para ensino de programação a iniciantes, baseado em Aprendizagem Ativa (Active Learning). Atua como um tutor virt
+firedigger/linkedin-resume-parser	G4f	firedigger/linkedin-resume-parser	3	Unlicense	2026-04-05	Parse a LinkedIn profile PDF into JSON Resume, Europass XML, and LaTeX/PDF
+forestvongram/red-social-de-aprendizaje-colaborativo	G5g	ForestVonGram/Red-Social-de-Aprendizaje-Colaborativo	1	AGPL-3.0	2025-05-31	El proyecto consiste en desarrollar una plataforma que simule una red social educativa, en la cual los usuarios (estudiantes) puedan compartir recursos de apren
+forkbombeu/credimi	G4e	ForkbombEu/credimi	18	AGPL-3.0	2026-11-18	Automated conformance and interoperability testing platform and hub for EUDI and SSI wallets, credential issuers and verifiers (OpenID4VCI, OpenID4VP, FCAF)
+forkbombeu/didroom-docs	G4e	ForkbombEu/didroom-docs	6	NONE	2025-12-16	Documentation for DIDroom, the open-source SSI/EUDI wallet and issuer stack supporting OpenID4VCI, OpenID4VP and SD-JWT VC
+frandony/gamificacao-aplicada-a-matematica-do-ensino-fundamental-medio	G5i	frandony/GAMIFICACAO-APLICADA-A-MATEMATICA-DO-ENSINO-FUNDAMENTAL-MEDIO	0	MIT	2026-06-06	Jogo educativo de classificação de equações de 1º e 2º grau desenvolvido na plataforma Wordwall, como parte do Projeto de Extensão ODS 4 (Educação de Qualidade)
+gabrielazm/finlab	G5i	GabrielAzM/FINLAB	0	NONE	2026-10-15	Desenvolvimento e avaliação de uma plataforma de educação financeira com trilhas progressivas e oficinas maker para estudantes do ensino médio
+gaurav-pande/aes_dl	D1	Gaurav-Pande/AES_DL	45	NONE	2022-12-08	Automated Essay Scoring using BERT
+gdufsnlp/pmaes	D1	gdufsnlp/PMAES	12	NONE	2023-10-06	Code for Paper "PMAES: Prompt-mapping Contrastive Learning for Cross-prompt Automated Essay Scoring" ACL2023
+geo-777/make-table-frontend	D4	geo-777/Make-Table-Frontend	11	NONE	2026-06-09	Front-end codebase for MakeTable — a web-based automated timetable generator designed specifically for schools and educational institutions. Creates optimal, co
+geosoft-global/timetablely	D4	GEOSOFT-GLOBAL/timetablely	27	MIT	2026-08-17	an open-source automated timetable generator for schools, colleges, and universities. It ingests courses, instructors, rooms, and constraints, then outputs opti
+geraldooliveira4/geonexus-educacao	G5i	GeraldoOliveira4/geonexus-educacao	0	NONE	2026-07-18	Plataforma de Inteligência Territorial para Instituições de Ensino
+getonepass/onepass.credentials.dashboard	G4g	getonepass/onepass.credentials.dashboard	0	Apache-2.0	2025-09-29	Open source dashboard for Issuers and Verifiers of Verifiable Credentials. Specifically designed to work with EBSI credentials, but can support other credential
+ghuysmans/ocaml-fet	D4	ghuysmans/ocaml-fet	6	NONE	2020-11-14	"FET is open source free software for automatically scheduling the timetable of a school, high-school or university."
+giovannifrontera/ai-wiki-graph-rag-lms	G5d	giovannifrontera/ai-wiki-graph-RAG-lms	0	AGPL-3.0	2026-05-30	LTI 1.3 backend for AI-driven knowledge ecosystems. RAG + semantic knowledge graph + D3.js UI for Moodle, Canvas, Blackboard, Sakai and Open edX.
+gipplab/physwikiquiz	D2	gipplab/PhysWikiQuiz	12	Apache-2.0	2023-02-25	>>PhysWikiQuiz<< - a Physics Question Generation and Interrogation System
+glenn-watt/lti-1p3-reference-tool	G5d	glenn-watt/lti-1p3-reference-tool	0	MIT	2026-06-18	A working LTI 1.3 / LTI Advantage reference tool in Python + Flask — OIDC, JWKS validation, AGS, NRPS, and Deep Linking implemented from first principles.
+gmazzamuto/europasscv	G4f	gmazzamuto/europasscv	127	NONE	2024-03-14	Unofficial LaTeX class for the new version of the Europass curriculum vitae
+goensino/goensino	G5i	GoEnsino/GoEnsino	0	NONE	2021-05-31	GoEnsino é uma plataforma gamificada que analisa dados de educação e recomenda conteúdos com o objetivo de auxiliar alunos com dificuldades em matérias do ensin
+gsmedicine73-byte/neurosvaldo-school-	G5i	gsmedicine73-byte/Neurosvaldo-School-	0	NONE	2025-08-17	Plataforma de ensino online da Neurosvaldo School, com cursos em Forex, Inglês e Informática, certificados e sistema de pagamento integrado.
+gsu-cetloe/lti1p3library-python	G5d	GSU-CETLOE/lti1p3Library-python	0	MIT	2026-10-28	A Python library for the tool side of LTI 1.3 Advantage. It handles the OIDC login and launch, Deep Linking 2.0, the Assignment and Grades Service (AGS) 2.0, an
+hadealahmad/monthlyquran	D8	hadealahmad/MonthlyQuran	22	NONE	2026-10-09	A Progressive Web App (PWA) for tracking Quran memorization using a scientifically-backed 7-station spaced repetition algorithm.
+hafizmz/tcs56-programme-alignment	D9	hafizmz/tcs56-programme-alignment	0	MIT	2026-11-16	Assess one programme's curriculum against the IAEA TCS-56 medical physics education standard (MATLAB)
+helephant/spacedrepetition.net	D8	helephant/SpacedRepetition.Net	21	MIT	2020-04-13	A .NET library that implements spaced repetition algorithms
+hengdapi/school-timetable-generator	D4	hengdapi/School-Timetable-Generator	5	GPL-3.0	2026-11-08	一个可以帮助中小学生成符合需求的课程表的小工具                                          A small tool that can help primary and secondary schools generate course schedules that meet th
+hernanto/scolve	G5g	HernanTo/Scolve	1	NONE	2023-08-15	Plataforma educativa diseñada para simplificar la enseñanza y el aprendizaje en línea.
+htmlstaticworks/special_education_advocacy_iep_consulting_service	D3	HTMLStaticWorks/Special_Education_Advocacy_IEP_Consulting_Service	0	NONE	2026-10-13	Automated website repository for Special_Education_Advocacy_IEP_Consulting_Service
+humaima/-language-learning-web-app---english-to-french-translator-flashcards-	D6	Humaima/-Language-Learning-Web-App---English-to-French-Translator-Flashcards-	0	NONE	2026-07-20	This Flask web app helps users learn French through flashcards, translations, and speech synthesis. It uses **MarianMT** for translation, **gTTS** for pronuncia
+human-centric-machine-learning/memorize	D8	Human-Centric-Machine-Learning/memorize	191	MIT	2023-01-10	Code and real data for "Enhancing Human Learning via Spaced Repetition Optimization", PNAS 2019
+hzy0913/timetable	D4	Hzy0913/Timetable	251	MIT	2021-07-30	📆 timetables.js plugin, timetable schedule school-timetable 课程表 大学课表 日程表 插件
+icobc/icb-p07-open-badges-3-0-verifiable-credentials	G4b	ICoBC/icb-p07-open-badges-3-0-verifiable-credentials	0	NOASSERTION	2026-11-06	Open Badges 3.0 and Verifiable Credentials: Hands-on Lab
+idfoundry/oid4vcgo	G4e	IDFoundry/OID4VCgo	4	MIT	2026-11-19	OIDF-certified OpenID4VCI 1.0 + OpenID4VP 1.0 for Go: HAIP 1.0 profile with DPoP, PAR and Wallet Attestation.
+igoldstein19/waypoint-challenge	D3	igoldstein19/waypoint-challenge	3	NONE	2026-05-04	The Special Education Challenge: build an MCP server that helps teachers differentiate instruction for students with Individualized Education Programs (IEPs) - 
+ilario/documents_in_latex-cv_europass	G4f	ilario/documents_in_latex-CV_europass	3	NONE	2026-11-17	My Curriculum Vitae written in LaTeX
+im-zhong/eduagent	D2	im-zhong/eduagent	1	NONE	2026-01-16	Education Agent: An Intelligent Question Generation System
+imfahim/education-record-program	D3	imfahim/Education-Record-Program	1	MIT	2018-04-11	The Individualized Education Program, also called the IEP, is a document that is developed for each public school child who needs special education. 
+impierce/openid4vc	G4e	impierce/openid4vc	42	Apache-2.0	2026-11-19	Rust implementation of the OpenID4VC standards. The library offers implementations for SIOPv2, OpenID4VP and OpenID4VCI.
+indenetwork/indenetwork	G5g	IndeNetwork/IndeNetwork	1	NONE	2024-09-09	¡Descubre IndeNetwork: tu plataforma educativa en línea que fomenta la colaboración y el                         aprendizaje mutuo! Conecta con otros estudiante
+iris2hu/l2c-rater	D1	iris2hu/L2C-rater	33	NONE	2022-03-17	Automated Essay Scoring Method for Chinese Second Language Writing
+isaquelc/projeto-do-ensino-medio	G5i	Isaquelc/Projeto-do-ensino-medio	0	NONE	2017-09-24	Plataforma Virtual de Educação em Exatas
+isgoodda/zcs	G5a	IsGoodDa/zcs	1	NONE	2023-04-05	字初识-一款基于人工智能和AR技术结合的开放式识字应用，享受沉浸式的学习，解放学习场景，当学习的主导者；Initial literacy - an open literacy application based on the combination of artificial intelligence and AR t
+ishita98/automatedessayscoring	D1	Ishita98/AutomatedEssayScoring	9	NONE	2019-07-21	Automatically Grades Essays using previous observations of grading using NLP tools
+ishitbansal/grammar-language-modeling-for-assessment	D6	ishitbansal/Grammar-Language-Modeling-for-Assessment	0	NONE	2025-06-01	This repository features a machine learning-powered grammar checker for educational institutions, with automated grammar evaluation, jumbled sentence exercises,
+ivandavidgaonaaristizabal-png/think_so_fast.github.io	G5g	ivandavidgaonaaristizabal-png/think_so_fast.github.io	1	NONE	2026-05-05	El proyecto “Think So Fast” es una plataforma educativa que busca apoyar a estudiantes en su preparación para la prueba Saber 11. A través de simulacros y recur
+ivuk/europass-latex-hr	G4f	ivuk/Europass-LaTeX-hr	5	NONE	2016-11-15	Prilagodba neslužbene LaTeX Europass klase za hrvatski jezik.
+jagdishsolunke682/proctoredge-	D7	jagdishsolunke682/ProctorEdge-	0	NONE	2026-05-11	ProctorEdge AI is an open-source, AI-powered proctoring system that secures remote exams through computer vision and analytics, ensuring integrity without compr
+jakobovski/sanememo	D8	Jakobovski/SaneMemo	36	MIT	2023-05-22	The only open-source, well documented spaced repetition algorithm.
+jchartrand/learner-credential-portal	G4c	jchartrand/learner-credential-portal	0	NONE	2024-01-19	Coordinates credential collection by student/wallet from issuer.
+jdlopez/europass	G4f	jdlopez/europass	4	MIT	2024-09-03	Europass CV application
+jeabtie/iep-gen-assistant	D3	JeabtiE/iep-gen-assistant	1	NONE	2026-09-14	AI assistant for special education teachers: Enter student data once to instantly generate IEP goals, a recommended teaching materials list based on the A-B (Go
+jettbrains/-l-	G4d	jettbrains/-L-	171	GPL-3.0	2021-08-18	W3C Strategic Highlights  September 2019  This report was prepared for the September 2019 W3C Advisory Committee Meeting (W3C Member link). See the accompanying
+jinlize-tech/edu-curriculum-standards-alignment	D9	jinlize-tech/edu-curriculum-standards-alignment	0	Apache-2.0	2026-11-08	Skill | 03 教学教研中心 | Planned / 待研发
+jjrsylvestre/dla	D5	jjrsylvestre/dla	13	NOASSERTION	2026-08-24	Discover Linear Algebra - An open-access linear algebra textbook authored in PreTeXt.
+johnny-brav0/automaticevaluation	D1	johnny-brav0/AutomaticEvaluation	6	NONE	2022-03-17	Automatic Evaluation of Textual Answers on the famous Kaggle Automated Essay Scoring (AES) dataset.
+jordan-guanga-portfolio/curriculum-mapper	D9	jordan-guanga-portfolio/curriculum-mapper	0	NOASSERTION	2026-08-25	Standards-alignment tool: maps courses, units & assessments to frameworks (e.g. CCSS), surfaces coverage gaps, and exports a curriculum outline. Next.js · TypeS
+jpclaussen-rgb/iccsd-iep-special-education-tool-hub	D3	jpclaussen-rgb/ICCSD-IEP-Special-Education-Tool-Hub	0	NONE	2026-04-10	A hub with AI assisted tools to support various aspects of Special Education
+jpcoelhoatipbdotpt/led_laboratorios_de_educacao_digital	G5i	jpcoelhoATipbDOTpt/LED_Laboratorios_de_Educacao_Digital	0	NONE	2024-01-05	Curso de programação para a plataforma Arduino para docentes do ensino básico/secundário
+juandresqm/algorit-plus	G5g	JuandresQm/Algorit-Plus	1	NONE	2026-07-15	Plataforma educativa orientada al aprendizaje de pseudocódigo
+juanpablor-js/projeto-unicheck	G5i	JuanPabloR-js/Projeto-UniCheck	0	NONE	2026-05-14	UniCheck é uma plataforma de educação voltada para faculdades, criada para facilitar a entrada de calouros que muitas vezes chegam sem informações relevantes so
+july-tea/essaymate	D1	July-Tea/EssayMate	39	NOASSERTION	2025-06-19	EssayMate 是一个基于 AI 的雅思/托福/GRE作文批改助手，支持自动评分、详细反馈和智能建议。 / EssayMate is an AI-powered IELTS / TOEFL / GRE essay correction assistant that provides automated scorin
+junjie1005/plataforma-ia-educativa-rutas-personalizadas	G5f	junjie1005/Plataforma-IA-Educativa-Rutas-Personalizadas	0	NONE	2026-08-10	Plataforma educativa basada en Inteligencia Artificial para ofrecer rutas de aprendizaje personalizadas. El proyecto aborda el uso de IA en la educación mediant
+kabudahab/europassjs	G4f	kabudahab/EuropassJS	4	MPL-2.0	2015-07-16	
+karlosvas/amanahacademia	G5g	karlosvas/amanahacademia	2	NOASSERTION	2026-11-07	Plataforma educativa innovadora especializada en la enseñanza del español mediante un enfoque culturalmente inmersivo. Dirigida por Ana Ortega, conecta a estudi
+kayaelle/obv3-vc-wallet-demo	G4b	kayaelle/obv3-vc-wallet-demo	2	NONE	2023-05-17	Demonstration code of how to issue an Open Badge to a Verifiable Credential wallet
+kimberlymuckerjohnson-cpu/progress-monitoring	D3	kimberlymuckerjohnson-cpu/Progress-Monitoring	1	NONE	2025-11-24	Progress-Monitoring is a streamlined online tool designed for special education and intervention teachers. The app supports student goal management, general ski
+kramer588/exam-question-generation	D2	Kramer588/exam-question-generation	3	MIT	2026-11-17	
+kretiandpleti/skola-24-haos-integration	D4	Kretiandpleti/skola-24-haos-integration	5	MIT	2026-10-25	Home Assistant integration for Skola24 school schedules.
+kushu30/quizup	D7	kushu30/quizup	0	NONE	2026-10-23	QuizUp is an open-source, real-time assessment platform for classrooms and hiring. Run live quizzes, adaptive quizzes or proctored timed exams, with AI-generate
+lemoncode/manfred-to-europass	G4f	Lemoncode/manfred-to-europass	2	MIT	2022-07-26	Work in progress... tool to convert from MAC Json to Europass
+leoherrmann/timetable	D4	LeoHerrmann/timetable	12	GPL-3.0	2021-04-20	A simple progressive web application helping you to keep track of your school or university schedule
+liamdugan/summary-qg	D2	liamdugan/summary-qg	16	MIT	2022-07-05	Code for the ACL 2022 Paper "A Feasibility Study of Answer-Agnostic Question Generation for Education"
+limaandrei472/plataforma-educacional	G5i	limaandrei472/plataforma-educacional	0	NONE	2025-11-28	plataforma para educação em ensino básico, usando ngrok e banco MySQL
+lingochamp/multi-scale-bert-aes	D1	lingochamp/Multi-Scale-BERT-AES	63	NONE	2022-05-03	Demo for the paper "On the Use of BERT for Automated Essay Scoring: Joint Learning of Multi-Scale Essay Representation"
+liviesnt/librasmath	G5i	liviesnt/librasmath	0	NONE	2025-11-27	Libras Math é uma plataforma educacional e interativa, destinada ao ensino da matemática para alunos com deficiência auditiva da educação básica. 
+lkl1111/multi-agent-educational-question-generation	D2	LKL1111/Multi-Agent-Educational-Question-Generation	1	NONE	2025-02-19	
+lmddc-lu/microlms	G5d	lmddc-lu/microlms	0	AGPL-3.0	2026-11-12	Reusable micro-LMS engine for Python: a FastAPI app factory with pluggable auth, storage and event hooks, and optional SCORM, cmi5, H5P and LTI 1.3 content modu
+lo-tp/sm2-plus	D8	lo-tp/sm2-plus	54	MIT	2019-01-29	A Javascript Implementation of an Improved Version of Spaced Repetition Algorithm.
+luciavalverdecp/proyectointegrador2025	G5g	luciavalverdecp/ProyectoIntegrador2025	1	NONE	2026-03-23	Plataforma web educativa desarrollada en .NET y C# que conecta docentes y estudiantes. Permite dictar clases en vivo, subir contenido grabado, compartir materia
+ludoo0d0a/resume	G4f	ludoo0d0a/resume	4	GPL-3.0	2026-10-02	My CV / Resume  in 2 languages - JsonResume / Europass standard
+luisangelss/mentoria-	G5g	LuisangelSS/MentorIA-	3	NONE	2025-11-25	MentorIA – Plataforma de Aprendizaje Adaptativo con IA  MentorIA es una plataforma web educativa que utiliza inteligencia artificial para ofrecer experiencias d
+luizcsx/centro-educacional-de-itaborai	G5i	luizcsx/centro-educacional-de-itaborai	0	MIT	2026-05-04	Plataforma pedagógica digital desenvolvida para fortalecer o ensino e a aprendizagem nas escolas municipais de Itaboraí, Rio de Janeiro.
+lumoin/verifiable	G4e	Lumoin/Verifiable	40	Apache-2.0	2026-10-19	A .NET implementation of decentralized identifiers and verifiable credentials, some associated protocols and cryptographic routines.
+ly398565721/high-school-timetable	D4	ly398565721/high-school-timetable	8	MIT	2026-08-28	A Codex Skill for constraint-based Chinese high-school timetable and duty scheduling using OR-Tools CP-SAT.
+m3fi/edusoft	G5g	M3fi/EduSoft	1	NONE	2025-06-21	plataforma web educativa interactiva orientada al aprendizaje personalizado y gamificado, diseñada para estudiantes desde primaria hasta bachillerato. Permite e
+maimemo/ssp-mmc	D8	maimemo/SSP-MMC	230	MIT	2025-11-28	A Stochastic Shortest Path Algorithm for Optimizing Spaced Repetition Scheduling
+manasa10-a/online_examination-portal	D7	Manasa10-A/Online_Examination-Portal	0	NONE	2026-07-24	Several GitHub repositories provide detailed descriptions of online examination portals, showcasing different tech stacks and features such as role-based access
+mankadronit/automated-essay--scoring	D1	mankadronit/Automated-Essay--Scoring	150	NONE	2020-03-01	Automatically Score essays using Deep Learning
+mariopel/learner-credential-wallet	G4c	mariopel/learner-credential-wallet	0	MIT	2026-05-20	
+matholroyd/tworgy-spaced-repetition	D8	matholroyd/tworgy-spaced-repetition	83	MIT	2010-02-26	Spaced repeitition algorithms and mixins (e.g. SuperMemo algorithm SM-2) 
+medransfinformatica/edugeogebra-	G5g	medransfinformatica/edugeogebra-	1	NONE	2026-10-20	EduGeoGebra es una plataforma web e interactiva orientada a la enseñanza y el aprendizaje de la matemática, combinando las herramientas dinámicas de GeoGebra co
+meghabyte/acl2021-education	D2	meghabyte/acl2021-education	33	NONE	2021-07-18	Code for "Question Generation for Adaptive Education", to appear at ACL 2021. 
+minseobkimm/neisapicrawlerwithkakao	D4	MinseobKimm/NeisApiCrawlerWithKakao	6	NONE	2026-05-25	Automates daily school meal, timetable, and schedule notifications using the NEIS Open API and KakaoTalk Desktop.
+mrdavidalv/plataforma-educativa	G5g	MrDavidAlv/plataforma-educativa	2	NONE	2024-06-24	Plataforma educativa desarrollada en ASP.NET Core para la gestión integral de cursos, estudiantes y profesores. Incluye funcionalidades de administración, segui
+myriam2002/critical_question_generation	D2	Myriam2002/Critical_Question_generation	1	MIT	2025-11-28	Trying different methodologies of generation of critical questions to help in education and self-verification of LLMs. 
+natancesar/grupo_esa_bncc_play	G5i	NatanCesar/GRUPO_ESA_BNCC_Play	1	MIT	2026-08-07	  Plataforma educacional gamificada voltada ao apoio do ensino de Computação na Educação Básica, alinhada às diretrizes da BNCC Computação
+natixco/tabby	D4	natixco/tabby	170	MIT	2021-03-28	Simple timetable desktop app to track your school schedule.
+ncreighton/0280569c-special-education--iep-busine	D3	ncreighton/0280569c-special-education--iep-busine	0	NONE	2026-08-05	Turn your IEP expertise into a fundable business plan and strategy template pack for special education private practice, consulting, or clinic startup.
+ncreighton/1e6fb98f-special-education--iep-propos	D3	ncreighton/1e6fb98f-special-education--iep-propos	0	NONE	2026-08-05	Streamline IEP proposals & contracts with customizable templates
+ncreighton/6561fe12-special-education--iep-pricin	D3	ncreighton/6561fe12-special-education--iep-pricin	0	NONE	2026-08-05	IEP pricing calculator & quote builder
+ncreighton/73819f6b-k-12-education-curriculum-mapp	D9	ncreighton/73819f6b-k-12-education-curriculum-mapp	0	NONE	2026-08-05	K-12 Education Curriculum Mapping And Standards Alignment — structured system that scales with your work. Ready to use immediately.
+ncreighton/78031130-special-education-iep-price	D3	ncreighton/78031130-special-education-iep-price	0	NONE	2026-08-07	Stop overpaying for special education resources and IEP materials. This extension hunts for the best prices and exclusive deals across hundreds of vendors every
+ncreighton/9816942f-special-education--iep-client	D3	ncreighton/9816942f-special-education--iep-client	0	NONE	2026-08-05	Notion CRM template for special education pros. Manage IEP cases, track pipelines, and automate compliance in one centralized workspace.
+ncreighton/a1601216-special-education-iep-matchi	D3	ncreighton/a1601216-special-education-iep-matchi	0	NONE	2026-08-05	AI-powered matching between Special Education & IEP entities — clients to services, products to needs
+ncreighton/b6747823-special-education-iep-search	D3	ncreighton/b6747823-special-education-iep-search	0	NONE	2026-08-05	Finding the right IEP accommodations and disability-specific resources shouldn't require hours of manual research across fragmented databases. The Special Educa
+ncreighton/special-education-iep-debug-dashboard-and-log-analyzer-vs-code-extension	D3	ncreighton/special-education-iep-debug-dashboard-and-log-analyzer-vs-code-extension	1	NONE	2026-08-05	Special Education & Iep Debug Dashboard And Log Analyzer VS Code extension — instant insights without breaking your focus.
+nickhnsn/facharbeit-spaced-repetition	D8	nickhnsn/facharbeit-spaced-repetition	31	GPL-3.0	2023-05-16	A Java Spaced Repetition API implementing various spaced repetition algorithms: Leitner's system, SuperMemo SM-2 algorithm and the Free Spaced Repetition Schedu
+nodphat/speiep	D3	nodphat/speiep	0	NONE	2016-12-01	IEP for Special Education
+noelistired/canvas-portflow-cli	G5d	NoelisTired/canvas-portflow-cli	1	MIT	2026-10-30	Sync a folder of evidence into your Fontys Canvas / Portflow portfolio. Playwright ADFS login + LTI 1.3 launch, idempotent add/version/skip.
+nukegeng/vietais-sentinel	D7	NukeGeng/VietAIS-Sentinel	0	AGPL-3.0	2026-10-14	Open-source AI engine for explainable exam proctoring, combining object detection, gaze and head-pose estimation, and temporal behavior analysis.
+nusnlp/nea	D1	nusnlp/nea	207	GPL-3.0	2018-01-17	Neural Essay Assessor: An Automated Essay Scoring System Based on Deep Neural Networks
+ogozuacik/automated_essay_scoring	D1	ogozuacik/automated_essay_scoring	7	MIT	2019-01-10	Automated essay scoring using stylometric features on the texts
+oluwatobilolba/special-education-iep	D3	oluwatobilolba/special-education-iep	0	NONE	2025-09-04	
+open-spaced-repetition/free-spaced-repetition-scheduler	D8	open-spaced-repetition/free-spaced-repetition-scheduler	740	MIT	2026-04-21	A spaced repetition algorithm based on DSR model
+open-spaced-repetition/fsrs.js	D8	open-spaced-repetition/fsrs.js	180	MIT	2024-04-10	A spaced repetition algorithm which overtakes Anki and catches up with SuperMemo.
+open-spaced-repetition/fsrs4anki	D8	open-spaced-repetition/fsrs4anki	4142	MIT	2026-08-14	A modern Anki custom scheduling based on Free Spaced Repetition Scheduler algorithm
+open-spaced-repetition/fsrs4remnote	D8	open-spaced-repetition/fsrs4remnote	27	MIT	2024-04-25	A modern RemNote scheduler plugin based on free spaced repetition scheduler algorithm
+open-spaced-repetition/srs-benchmark	D8	open-spaced-repetition/srs-benchmark	289	NONE	2026-11-19	A benchmark for spaced repetition schedulers/algorithms
+openid/openid4vci	G4e	openid/OpenID4VCI	131	NONE	2026-11-12	
+openproct/openproct	D7	OpenProct/openproct	2	MIT	2025-10-26	An Open-Source alternative for traditional Proctering services. Current proctoring solutions are invasive, expensive, and lock you into proprietary systems. We 
+openwallet-foundation-labs/identity-common-ts	G4e	openwallet-foundation-labs/identity-common-ts	18	Apache-2.0	2026-11-18	Identity Common TypeScript provides a shared library of TypeScript types and utilities for identity-related projects, promoting consistency and reducing duplica
+openwallet-foundation/multipaz	G4e	openwallet-foundation/multipaz	301	Apache-2.0	2026-11-18	SDK for Digital Credentials
+openwallet-foundation/multipaz-wallet	G4e	openwallet-foundation/multipaz-wallet	7	Apache-2.0	2026-11-18	A wallet for Digital Credentials built using the Multipaz SDK
+oscelot/blackboard-open-source-photo-roster	D7	OSCELOT/Blackboard-Open-Source-Photo-Roster	1	NOASSERTION	2021-06-02	OPEN PHOTO ROSTER 1 Abstract “ Remember that a person's name is, to that person, the sweetest and most importa nt  sound in any language.  The average person is
+otavio-emanoel/wizardnews	G5i	Otavio-Emanoel/WizardNews	7	NONE	2025-09-25	Wizard News é uma plataforma web voltada para divulgação, educação e conscientização sobre escolas sustentáveis e práticas ambientais. O projeto foi desenvolvid
+otton-orilhana/educacao-financeira-prototipo	G5i	Otton-Orilhana/educacao-financeira-prototipo	0	NONE	2026-07-30	Protótipo funcional de uma plataforma de educação financeira para alunos do ensino fundamental e médio. Desenvolvido em HTML, CSS e JavaScript. Backend em Pytho
+patrickq67/projeto-ods4-educacao-inteligente	G5i	Patrickq67/projeto-ods4-educacao-inteligente	0	NONE	2025-05-24	Plataforma web educacional com foco no ensino médio de matemática, utilizando análise de dados e machine learning para identificar dificuldades dos alunos e sug
+pavanred/nlp_automatic_grader	D1	pavanred/NLP_Automatic_Grader	10	NONE	2013-05-06	Automatic Essay Grader system scores and evaluates essays by natural language processing - detect errors in grammar, usage, semantics, coherence, length etc and
+pessahderek/kca_exam_timetable_simplifier	D4	PessahDerek/KCA_Exam_Timetable_Simplifier	5	NONE	2025-02-27	This is a simple application that extracts the exam schedule from the school exam timetable based on the units undertaken by the student.
+pitchfork-and-torch/source-protection-literacy-kits	G5a	Pitchfork-and-Torch/source-protection-literacy-kits	0	MIT	2026-09-18	Forged on GrokForge: Open Source-Protection Literacy Kits for Newsrooms and NGOs. Free open literacy kits so desks and sources practice safer, lawful tip handli
+procivis/one-core	G4e	procivis/one-core	163	Apache-2.0	2026-11-10	Issue, hold and verify digital identities and credentials on any device with eIDAS 2.0 compliancy, ISO 18013-5 mdocs, IETF SD-JWT VC, OID4VC, and W3C VCs.
+procivis/one-wallet	G4e	procivis/one-wallet	153	Apache-2.0	2026-11-10	Digital wallet with eIDAS 2.0 compliancy, ISO 18013-5 mdocs, IETF SD-JWT VC, OID4VC, and W3C VCs. 
+rageshvco/specialediep	D3	rageshvco/SpecialEdIEP	0	NONE	2023-02-03	Special education IEP
+ramosjazmin943-eng/protech-support-	G5g	ramosjazmin943-eng/ProTech-Support-	1	NONE	2026-10-07	ProTech Support  es una aplicación educativa de escuela técnica virtual destinada a estudiantes. La plataforma ofrecerá clases virtuales, horarios, materias, ma
+raphaelmun1z/projetojp	G5i	RaphaelMun1z/ProjetoJP	0	NONE	2026-07-03	Plataforma web desenvolvida para digitalizar e centralizar a gestão do projeto de extensão Jovens Programadores (UFU), integrando processos seletivos, acompanha
+raskolny/europass-cv	G4f	Raskolny/europass-cv	3	MIT	2026-09-23	Faithful, accessible Europass CV template for Typst — official EU two-column layout, CEFR language grid, GDPR clause, all 24 EU languages, PDF/UA-1 verified.
+reducar-dev/reducar	G5g	ReducAR-dev/ReducAr	3	NONE	2026-10-26	Plataforma educativa para explorar cursos, rutas de aprendizaje y oportunidades de formación digital.
+rlistengr/automated-essay-scoring	D1	rlistengr/automated-essay-scoring	27	NONE	2019-06-02	作文自动打分系统
+robert1ridley/cross-prompt-trait-scoring	D1	robert1ridley/cross-prompt-trait-scoring	34	NONE	2022-01-20	This repository contains the code used to produce the results from the paper Automated Cross-prompt Scoring of Essay Traits published in AAAI 2021.
+rodrigo-sola/proyecto-dam	G5g	Rodrigo-Sola/Proyecto-DAM	1	NONE	2025-11-14	Match Habilidades es una aplicación móvil educativa desarrollada en Android cuyo objetivo es conectar a personas que desean compartir y aprender habilidades. La
+roshini-nawanjala/studymate-ai	D2	roshini-nawanjala/StudyMate-AI	2	NONE	2026-08-04	StudyMate AI is an intelligent learning assistant built with Streamlit, LangChain, ChromaDB, and LLMs. It enables PDF-based summarization, RAG-powered question 
+ryjones/learner-credential-wallet	G4c	ryjones/learner-credential-wallet	91	MIT	2026-10-15	Learner Credential Wallet is a cross-platform iOS and Android mobile application for storing and sharing digital learner credentials.
+s7chak/quizardapp	D2	s7chak/QuizardApp	5	MIT	2024-11-30	An interactive interface with OpenAI's gpt-3.5 model (LLM) designed to generate quizzes based on any document the user provides. It leverages the concept of Ret
+sanyaade-teachings/capstone-evalsystem	D10	sanyaade-teachings/capstone-evalsystem	0	NONE	2026-05-22	An integrated academic evaluation system combining adviser assessments and peer evaluations to provide structured, rubric-based grading for student teams.
+saptya001/opti_class	D4	Saptya001/Opti_Class	6	NONE	2025-09-17	AI-powered Smart Classroom & Timetable Scheduler for schools & colleges | SIH 2025 Project – Team 404 Avengers
+sarahwsutton/introduction_to_datascience_for_librarians	D5	sarahwsutton/Introduction_to_datascience_for_librarians	1	MIT	2025-06-30	Open textbook developed for LI 862 Introduction to Datascience for Librarians taught at Emporia State University School of Library and Information Management. T
+sarriafreelancer/sarriatechcursos	G5g	SarriaFreelancer/sarriatechcursos	1	NONE	2026-07-24	🚀 SarriaTech LMS | Plataforma educativa moderna desarrollada con React, TypeScript, Node.js, Express, Prisma y MySQL. Permite gestionar cursos, estudiantes, pro
+sawssenhasni/quizpro---ai-based-automatic-exam-generation-for-education	D2	SawssenHasni/QuizPro---AI-Based-Automatic-Exam-Generation-for-Education	4	NONE	2025-01-29	Welcome to my Data Science and AI Project repository!  QuizPro is an intelligent educational platform developed as part of my Master's final project. It leverag
+scripts5/eduguide-ai	G5h	scripts5/EduGuide-AI	0	NONE	2026-09-08	Tutor de IA educacional para aprendizagem passo a passo, quizzes e acompanhamento de progresso.
+semanticpc/essay-scoring	D1	semanticpc/Essay-Scoring	9	NONE	2012-07-19	Automated Essay Scoring
+serophinamary/automatic-timetable-generator	D4	SerophinaMary/Automatic-Timetable-Generator	38	NONE	2025-05-10	The Automatic Timetable Generator is a software solution designed to create optimized, clash-free academic timetables for schools, colleges, or universities. It
+sfedfcv/redesigned-pancake	D2	Sfedfcv/redesigned-pancake	280	NONE	2021-05-16	Skip to content github / docs Code Issues 80 Pull requests 35 Discussions Actions Projects 2 Security Insights Merge branch 'main' into 1862-Add-Travis-CI-migra
+sh-31/neuralearn-ml-server-qg-rag-pipeline	D2	Sh-31/NeuraLearn-ML-Server-QG-RAG-Pipeline	4	MIT	2024-09-13	NeuraLearn Academy is a educational platform designed to enhance learning experience by integrating advanced technologies. Our goal is to create platform simila
+sharib3/voice_evaluation_microservice	D6	Sharib3/Voice_Evaluation_Microservice	0	NONE	2025-07-15	Voice Evaluation API built with FastAPI integrates AssemblyAI to analyze spoken responses for pronunciation confidence, speech rate, and filler word usage. Usef
+sheshal01/dsgp_group_27	D9	SHESHAL01/DSGP_Group_27	0	NONE	2026-04-04	SkillSync is an integrated AI platform that analyzes IT job market trends, evaluates academic curriculum alignment, and predicts graduate employability. Built w
+shraddhagupta37/codelens-proctor-exam-platform	D7	Shraddhagupta37/CodeLens-Proctor-Exam-Platform	0	NONE	2025-04-19	CodeLens : an open source & collaborative group project that provides a secure online assessment platform for evaluating hackathon candidates. Built with PHP, M
+shubhamk8597/college-project--automatic-question-generation-from-educational-text	D2	shubhamk8597/College-Project--Automatic-Question-Generation-From-Educational-Text	2	Apache-2.0	2022-04-22	
+shubhpawar/automated-essay-scoring	D1	shubhpawar/Automated-Essay-Scoring	32	MIT	2018-04-26	Automated Essay Scoring on The Hewlett Foundation dataset on Kaggle
+sicpa-dlab/openid4vc-rs	G4e	sicpa-dlab/openid4vc-rs	8	Apache-2.0	2024-11-15	OpenID4VCI and OpenID4VP implementations in Rust as services.
+silvapedrodev/kiddielingo	G5i	silvapedrodev/kiddieLingo	0	MIT	2025-09-26	O KiddieLingo é uma plataforma educacional para o ensino de inglês voltada para crianças de baixa renda, criada como parte de um trabalho acadêmico de Atividade
+singh-abhishek3/learner-credential-wallet	G4c	singh-abhishek3/learner-credential-wallet	0	NONE	2025-07-16	
+slfagrouche/tutor	D2	slfagrouche/TUTOR	3	MIT	2025-01-05	TOTUR is an AI-powered educational assistant designed to help users with audio transcription, PDF text extraction, and question answering. It leverages advanced
+smyleface18/lp-api	G5g	smyleface18/LP-API	1	Apache-2.0	2026-11-12	LinguaPlay API |  LinguaPlay es una plataforma educativa diseñada para facilitar el aprendizaje de idiomas.
+sohailamuhammed39-bot/volca	D6	sohailamuhammed39-bot/Volca	0	NONE	2026-05-09	Volca is an AI-powered language learning platform that helps users speak confidently with real-time pronunciation correction, grammar feedback, fluency analysis
+speechsuper/speechsuper-api-samples	D6	speechsuper/SpeechSuper-API-Samples	73	MIT	2024-06-06	Deep learning based speech and pronunciation assessment API for 8 languages.
+sphereon-opensource/oid4vc	G4e	Sphereon-Opensource/OID4VC	93	Apache-2.0	2026-07-03	OpenID for Verifiable Credentials - modules for issuers, holders and RPs
+sphereon-opensource/oid4vc-demo	G4e	Sphereon-Opensource/OID4VC-demo	24	Apache-2.0	2026-01-15	Demo for OID4VC, containing a configurable agent, OID4VCI Issuer and demopage as well as SIOPv2 and OID4VP RPs with demo page
+srisatyalokesh/pariksha	D7	SriSatyaLokesh/pariksha	0	AGPL-3.0	2026-11-07	Pariksha is a free, open-source exam platform that any school, company or community can run on its own account at zero cost. One deployment hosts many tests. Ea
+studioanime977/educlick	G5g	studioanime977/EduClick	1	NONE	2026-06-27	EduClick - Plataforma educativa interactiva para el aprendizaje digital.
+sumayah19/pronunciation-similarity-analysis-using-mfcc-feature-extraction-and-dynamic-time-warping	D6	sumayah19/Pronunciation-Similarity-Analysis-Using-MFCC-Feature-Extraction-and-Dynamic-Time-Warping	0	NONE	2026-07-15	Intelligent pronunciation assessment system using MFCC and Dynamic Time Warping (DTW) to compare user speech with reference audio, analyze pronunciation similar
+supercaly/europasscv2025	G4f	Supercaly/europasscv2025	4	LPPL-1.3c	2026-08-14	
+swayamrao/solve_for_textbook	D5	SwayamRao/Solve_For_Textbook	0	NONE	2024-03-23	Hello this is an attempt of mine to provide a detail solution for the problems given in textbook of the various authors related to cyber security. I hope it wou
+swedbankab/swedbank	D2	SwedbankAB/Swedbank	19	NONE	2022-07-09	employee benefits swedbank The bank does not apply a variable remuneration system with discretionary pension benefits. Bank officials can borrow up to SEK 2 mil
+syhen/2nd-place-solution-kaggle-learning-agency-lab-automated-essay-scoring-2.0	D1	Syhen/2nd-Place-Solution-Kaggle-Learning-Agency-Lab-Automated-Essay-Scoring-2.0	13	MIT	2024-07-13	2nd place training code for Kaggle AES2 competition.
+tanimowoobaloluwadavid/credential-lens	G4b	TanimowoObaloluwaDavid/credential-lens	1	MIT	2026-10-05	Inspect and validate Open Badges 3.0 and W3C Verifiable Credentials. Zero dependencies, works offline.
+tejasmedade/bus-ticket-reservation-system	D4	TejasMedade/Bus-Ticket-Reservation-System	8	NONE	2023-01-28	Designed a C.L.I based application for Bus Ticket Reservation System, which allows passengers to browse the Bus Schedule / Timetable and a Reserve Tickets for t
+tetwantstocode/capstone-merged-evaluation-system	D10	tetWantsToCode/capstone-merged-evaluation-system	0	NONE	2026-05-17	An integrated academic evaluation system combining adviser assessments and peer evaluations to provide structured, rubric-based grading for student teams.
+thecjhouston/clr	G4h	thecjhouston/CLR	0	NONE	2018-11-20	Comprehensive Learner Record
+thyagoluciano/sm2	D8	thyagoluciano/sm2	265	GPL-3.0	2022-01-14	SM-2 is a simple spaced repetition algorithm. It calculates the number of days to wait before reviewing a piece of information based on how easily the the infor
+tiagojr99/projeto-webedu	G5i	Tiagojr99/Projeto-WebEdu	0	NONE	2024-11-26	O WebEdu é um projeto voltado para democratizar o acesso à educação e orientação vocacional. A plataforma conecta adolescentes de baixa renda a cursos gratuitos
+timoglastra/openid4vci-issuer	G4e	TimoGlastra/openid4vci-issuer	3	NONE	2023-05-14	openid4vci-issuer
+trongnv2003/qa-generation-using-llms-for-education	D2	TrongNV2003/QA-Generation-using-LLMs-for-education	1	MIT	2024-10-18	Auto create question sheet: multiple-choice or sentences from provided document
+trza191/cn-education-platform	G5g	TrzA191/cn-education-platform	1	NONE	2026-05-14	Plataforma educativa cloud native con microservicios serverless para generación de rutas de aprendizaje personalizadas.
+tsadoq/europassmcp	G4f	Tsadoq/EuropassMCP	2	MIT	2026-08-26	An MCP server for authoring strictly schema-compliant Europass CV documents
+turanga1/automated-essay-scoring	D1	Turanga1/Automated-Essay-Scoring	58	NONE	2018-12-27	Kaggle 2012 Hewlett Automated Student Assessment Prize (ASAP) - Automated Essay Scoring
+ubugeeei/rust-challenge-2026	D2	ubugeeei/rust-challenge-2026	6	MIT	2026-08-29	A 235-question, four-choice quiz on Rust's semantics — from the basics to Polonius and the next-generation trait solver. Single page, answers in toggles, every 
+ucfopen/cookiecutter-python-lti	G5d	ucfopen/cookiecutter-python-lti	6	MIT	2026-05-12	Quickly spin up customized LTI 1.3 templates in Python
+venca24/europecv	G4f	Venca24/europecv	6	LPPL-1.3c	2017-07-08	LaTeX template for Europass CV
+victorwangzx/standard-aligned-lesson-designer	D9	victorwangzx/standard-aligned-lesson-designer	0	NONE	2026-09-08	Codex skill for textbook analysis, curriculum-standard alignment, staged planning ideas, and formal lesson designs
+viendinhcom/supermemo	D8	VienDinhCom/supermemo	338	MIT	2025-03-28	A JavaScript and TypeScript implementation of SuperMemo 2, a spaced repetition algorithm for flashcards.
+vlopezferrando/simple-spaced-repetition	D8	vlopezferrando/simple-spaced-repetition	52	MIT	2024-10-02	Simple spaced repetition scheduler based on the classic Anki algorithm.
+vtfanta/ilp-timetable-maker	D4	vtfanta/ILP-Timetable-Maker	10	MIT	2022-09-25	Integer linear programming (ILP) approach to the school timetabeling problem.
+walterscarborough/libspacey	D8	walterscarborough/LibSpacey	26	MIT	2023-01-05	A lightweight C++ implementation of the Supermemo SM2 algorithm for spaced based repetition flashcards that focuses on simplicity, portability, and testability.
+wangilawakhongola/school_management_system	D4	WangilaWakhongola/School_Management_System	8	NONE	2026-07-09	A Django REST API for managing school operations  - built with PostgreSQL and JWT role-based authentication (Admin, Teacher, Student, Parent). Covers 7 modules:
+warleysr/pronki	D6	warleysr/pronki	22	NONE	2025-12-14	PronKi is an Android app that allows you to practice your pronunciation using your Anki flashcards. It also has other features that can be helpful on your langu
+wesam-alsohle/automated-essay-scoring	D1	wesam-alsohle/AUTOMATED-ESSAY-SCORING	6	NONE	2022-09-27	An android app that can automatically score english essays. built using flutter, python and flask framework.
+wwwallet/wallet-common	G4e	wwWallet/wallet-common	4	BSD-2-Clause	2026-11-16	Shared TypeScript library for parsing, verifying and rendering digital credentials.
+wwwallet/wallet-frontend	G4e	wwWallet/wallet-frontend	47	BSD-2-Clause	2026-11-18	Web-first digital credential wallet supporting issuance, storage and presentation via OpenID4VCI and OpenID4VP.
+xiayuguo/lti-demo	G5d	xiayuguo/lti-demo	0	MIT	2026-06-15	A minimal, runnable LTI 1.3 implementation in Python / Flask — one Platform (LMS) and one Tool that complete the full OIDC handshake, grade passback (AGS), and 
+xing-wang-kai/companys_auto_learn_plataform	G5i	xing-wang-kai/COMPANYS_AUTO_LEARN_PLATAFORM	0	NONE	2026-04-06	Plataforma de educação para empresas, onde podem usar dados do firebase para criar uma plataforma de ensino corporativa e manter seus colaboradores sempre atual
+xipponk/vc-poc-th	G4a	xipponk/vc-poc-th	1	MIT	2025-06-30	POC of a Self-Sovereign Identity (SSI) based Verifiable Credential platform for Thailand's education sector, using Python and Blockchain.
+xronosschedulingltd/scheduler	D4	XronosSchedulingLtd/scheduler	9	GPL-2.0	2024-10-15	Xronos Scheduler
+xxinjie21/smart-quiz-tutor	D2	xxinjie21/Smart-Quiz-Tutor	10	0BSD	2026-09-22	Smart Question Tutor — AI quiz generation, SM-2 spaced repetition, wrong answer tracking, learning heatmap, exam recognition. Ollama & OpenAI compatible / 智学助手 
+yamil-abraham/learniverse	G5g	yamil-abraham/learniverse	5	MIT	2025-12-09	Plataforma educativa gamificada con avatares 3D para aprendizaje
+yilliee/fast_nuces_timetable_parser	D4	Yilliee/fast_nuces_timetable_parser	6	GPL-3.0	2024-08-10	Automate the extraction of course details and lecture schedules from FAST NUCES timetables, saving the data in CSV format. Tested on FSC (FAST School of Computi
+yohperez/yara	G5g	yohperez/Yara	1	MIT	2026-11-12	Plataforma educativa inclusiva impulsada por inteligencia artificial para el aprendizaje personalizado.
+yop007n/app-study	G5g	Yop007N/app-study	1	MIT	2026-03-08	Aplicación educativa de estudio. Stack: JavaScript, React. Plataforma de aprendizaje interactivo
+zhaozj89/educational-question-generation	D2	zhaozj89/Educational-Question-Generation	21	NONE	2023-01-10	
+zhuoyuewang/automatedessayscoring	D1	ZhuoyueWang/AutomatedEssayScoring	7	NONE	2018-05-05	Automated Essay Scoring System
+zion-support/curriculum-alignment-checker	D9	Zion-support/curriculum-alignment-checker	0	NONE	2026-10-04	Check course materials against curriculum standards automatically — Zion Tech Group App Network (Batch 68, Education & Learning AI).
+zlliang/essaysense	D1	zlliang/essaysense	28	MIT	2026-07-23	An experiment on Automated Essay Scoring
+zxc3285123-web/special-education-teacher-planner	D3	zxc3285123-web/special-education-teacher-planner	0	NONE	2026-10-21	특수교사를 위한 월 달력·업무·학생 카드·IEP 기록 수첩

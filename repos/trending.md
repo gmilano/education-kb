@@ -4,6 +4,128 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p917) — **`916-G4` is discharged, and the answer is not a number. The verifiable-credential tier for education is not built out of education repositories — it is the eIDAS 2.0 / OpenID4VCI wallet estate, which no education-named query can see. `europass` returns **252** and `OpenID4VCI` **85** against the three education-named sizes `916-G4` was told not to publish (2, 6, 11). Eleven repositories added, all byte-read, ten Apache-2.0 or BSD. 🔴 `916-G2` discharged with a rate: the file-header layer resolves 3 of 13 "ungranted" rows, a manifest 2 more, a README 2 more — and p913 was missing the Rails filename convention entirely.**
+
+**Channels and posture.** 28 `gh api search/repositories` legs; grants byte-read with
+`ingest/p913-grant-authority.sh` (patched this pass, `917-F4`); affiliation read with the new
+`ingest/p917-affiliation-manifest.sh`; header layer read with the new
+`ingest/p917-header-layer.sh`. Evidence: `evidence/p917-g4-legs`, `p917-g4-hits`,
+`p917-grants-reported`, `p917-header-layer`, `p917-region-placement`,
+`p917-affiliation-manifest`, `p917-g2-reversed-filename-control`, all `.2026-11-19-p917.tsv`.
+
+### 🟢 `917-R1` `916-G4` discharged — the tier was measured small because it was queried by *subject* instead of by *standard*
+
+`916-G4` recorded three irreconcilable sizes for the verifiable-credential tier and ordered:
+*publish no count for this tier until the union is measured.* Measured over all eight prescribed
+shapes:
+
+| Leg | Query shape | `total_count` |
+|---|---|---|
+| `G4a` | `"verifiable credential" education` | 2 |
+| `G4b` | `open badges verifiable credential` | 6 |
+| `G4c` | `learner credential wallet` | 12 |
+| `G4d` | `decentralized identifier education credential` | 1 |
+| `G4e` | `OpenID4VCI` | **85** |
+| `G4f` | `europass` | **252** |
+| `G4g` | `EBSI verifiable credential` | 1 |
+| `G4h` | `comprehensive learner record CLR` | 1 |
+
+Union of the top-25-by-stars window across all eight: **73 distinct repositories**.
+
+🔵 **The union count is the least useful thing this measurement produced.** The shape of the
+distribution is the finding. Every education-*named* shape returns 1–12; the two shapes that name a
+**standard or a programme** — `OpenID4VCI`, `europass` — return 85 and 252. `916-G4`'s three
+candidate sizes were not three measurements of one tier. They were three measurements of *how often
+people write the word "education" next to a credential library*, which is almost never, because the
+libraries are general-purpose identity infrastructure and education is one of their verticals.
+🔴 **`learner credential wallet` also drifted 11 → 12 between `p916` and `p917`, one day apart** —
+so even the small shapes are not stable enough to publish as a tier size. Registered as **`T980`**.
+
+### 🟢 `917-R2` Eleven repositories shelved from the credential estate — all byte-read, ten permissive
+
+Promoted to `repos/foundations.md` this pass. Grants are from
+`ingest/p913-grant-authority.sh`; regions from `evidence/p917-region-placement`.
+
+| Repo | Grant (byte-read) | Bytes | Stars | Last push | Region | What it is |
+|---|---|---|---|---|---|---|
+| `openwallet-foundation/multipaz` | **Apache-2.0** | 11,358 | 301 | 2026-11-18 | 🟡 unplaced | OpenWallet Foundation SDK for digital credentials; the vendor-neutral anchor of the tier |
+| `procivis/one-core` | **Apache-2.0** | 11,340 | 163 | 2026-11-10 | 🟡 unplaced | Issue, hold and verify credentials with eIDAS 2.0 compliance |
+| `procivis/one-wallet` | **Apache-2.0** | 11,340 | 153 | 2026-11-10 | 🟡 unplaced | Wallet: eIDAS 2.0, ISO 18013-5 mdocs, SD-JWT VC, OID4VC, W3C VC |
+| `Sphereon-Opensource/OID4VC` | **Apache-2.0** | 11,347 | 93 | 2026-07-03 | 🟡 unplaced | OpenID4VC modules for issuers, holders and relying parties |
+| `a-sit-plus/vck` | **Apache-2.0** | 11,358 | 77 | **2026-11-19** | **EMEA** | Kotlin Multiplatform W3C VC Data Model, SD-JWT, ISO 18013-5 |
+| `eu-digital-identity-wallet/eudi-lib-android-wallet-core` | **Apache-2.0** | 11,357 | 64 | 2026-11-18 | **EMEA** | 🟢 Official EU reference wallet core, Android |
+| `eu-digital-identity-wallet/eudi-lib-jvm-openid4vci-kt` | **Apache-2.0** | 9,425 | 47 | 2026-11-17 | **EMEA** | 🟢 Official EU OpenID4VCI issuance library, Kotlin/JVM |
+| `eu-digital-identity-wallet/eudi-srv-pid-issuer` | **Apache-2.0** | 9,425 | 43 | 2026-11-06 | **EMEA** | 🟢 Official EU PID/mDL issuer micro-service |
+| `wwWallet/wallet-frontend` | **BSD** | 1,309 | 47 | 2026-11-18 | **EMEA** | EU NGI-funded web-first credential wallet |
+| `impierce/openid4vc` | **Apache-2.0** | 9,145 | 42 | **2026-11-19** | 🟡 unplaced | Rust implementation of SIOPv2 + OID4VC |
+| `Lumoin/Verifiable` | **Apache-2.0** | 11,345 | 40 | 2026-10-19 | 🟡 unplaced | .NET DIDs and verifiable credentials, eIDAS-oriented |
+
+🔵 **Why this belongs in an education KB and not only in an identity one.** Micro-credentials and
+skills-based hiring are the one 2026 education trend that every regional WebSearch leg returned
+independently (`intel/trends.md`), and EMEA has a **statutory** driver the other regions do not:
+Europass plus eIDAS 2.0 make a learner-held, machine-verifiable diploma a compliance target rather
+than a product idea. This estate is what that is built from, and it is **Apache-2.0 almost
+throughout** — the most permissive tier this base has shelved in any pass.
+
+🔴 **One repository on this leg was deliberately NOT shelved.** `openid/OpenID4VCI` — 131 ★, the
+single most obvious hit on the `G4e` leg — reports SPDX `NONE` and is the **specification text**,
+not software. A spec repo in a foundations table reads as a dependency a client can build on. It is
+recorded here and nowhere else. `1EdTech/openbadges-specification` is the same class and is
+`UNGRANTED-AT-THREE-LAYERS` below.
+
+### 🟢 `917-R3` `916-G2` discharged with a rate — and the Moodle hypothesis is 2 of 2
+
+`916-G2` prescribed: over every row recorded as ungranted, probe the **file-header layer** for a
+full GNU/Apache block, *"starting with Moodle, WordPress and Drupal plugins, where a licence is
+mandated"*. Built as `ingest/p917-header-layer.sh`, which reads three layers and keeps them
+distinct. Over 13 rows that `p913` reported `NO-LICENCE-FILE-FOUND` or `NONE`:
+
+| Layer | Resolved | Rows |
+|---|---|---|
+| **HEADER** — grant reproduced in a source comment block | **3** | `justinhunt/moodle-mod_readaloud` → GPL-3.0-or-later (`version.php`); `marceloschmitt/moodle-block_analytics_graphs` → GPL-3.0-or-later (`version.php`); `OS4ED/openSIS-Classic` → GPL (`index.php`) |
+| **MANIFEST** — grant *named* in a package manifest (`905-G1`), weaker | **2** | `Lumieducation/Lumi` → AGPL-3.0 (`package.json`); `h5p/h5p-editor-php-library` → a *pointer*, `"SEE LICENSE IN README.md"` |
+| **README prose** — a fourth layer, found by chasing the pointer | **2** | `h5p/h5p-editor-php-library` → **MIT for all code + Apache-2.0 for the bundled Open Sans font**; `PRX/badges_engine` → `MIT-LICENSE` (see `917-F4`) |
+| **UNGRANTED-AT-THREE-LAYERS** | **8** → **6** after the above | five knowledge-tracing research repos, `1EdTech/openbadges-specification`, `openmichigan/open_badges`, `projectfedena/fedena`, `narender-rk10/MyProctor.ai…` |
+
+🟢 **`916-G2`'s Moodle hypothesis is confirmed exactly: 2 of 2.** Both Moodle plugins carry a full
+GPL header block in `version.php` and **neither has a readable licence file at the default
+branch.** The operative rule for this ecosystem: **for a Moodle plugin, `version.php` is the grant
+authority, not `LICENSE`.** This also retires a footnote carried in `repos/foundations.md` and
+`intel/trends.md` — that `moodle-block_analytics_graphs` has `LICENSE.md` *"only on branch 4.3"*.
+True, and no longer the only evidence: the grant is in `version.php` at `master`.
+
+🔵 **`h5p` is a `T25` split-by-asset-type declared three layers down.** Code MIT; a bundled font
+Apache-2.0. A single licence cell cannot express it and this base has now met that shape in
+Portuguese prose (`913-F8`), in a database licence (`913-F7`) and in a vendored font.
+
+### 🔴 `917-F4` `p913`'s filename list was missing the Rails convention, and the authority is patched
+
+`PRX/badges_engine` was reported `NO-LICENCE-FILE-FOUND`. Its README says *"This project uses
+MIT-LICENSE"*, and `master/MIT-LICENSE` is a genuine **1,048 B MIT text** — inside `p640`'s
+1,000–1,250 B MIT band. `p913`'s `NAMES` array carried `LICENSE-MIT` and **not `MIT-LICENSE`**,
+which is what `rails plugin new` emits.
+
+🟢 **Fixed in `ingest/p913-grant-authority.sh` itself**, not in a new script, because `913-F2`'s
+lesson is that a fix living outside the authority is a fix a later instrument drops. Nine
+filenames added (`MIT-LICENSE`, `MIT-LICENSE.txt`, `MIT_LICENSE`, `GPL-LICENSE`, `APACHE-LICENSE`,
+`BSD-LICENSE`, `MIT-License.txt`, `COPYRIGHT`, `COPYRIGHT.txt`). Re-run as a control, the row now
+reads `BODY-MIT` — a *body* verdict, correctly weaker, because the title line is the unfilled
+Rails template placeholder `Copyright 2011 YOURNAME`.
+🔵 **Blast radius measured, and it is narrow:** of the other six ungranted rows probed for
+reversed-order filenames, **zero** carry one. 1 of 13 in this cohort (7.7%).
+
+### 🟢 `917-R4` Five Python LTI 1.3 repositories shelved — see `agents/trending.md` `917-F3`
+
+`academic-innovation/django-lti` (MIT, 1,098 B, pushed 2026-11-17),
+`ucfopen/cookiecutter-python-lti` (MIT, 1,130 B, **North America** — `"Central Florida"` in the
+README), `GSU-CETLOE/lti1p3Library-python` (MIT, 1,083 B),
+`blackboard/BBDN-lti-1p3-tool-example` (Apache-2.0, 11,357 B) and `christophse/django-lti-tool`
+(BSD, 1,525 B). Plus `lmddc-lu/microlms` — **AGPL-3.0**, byte-read at **34,523 B**, which is the
+exact true-AGPL byte signature `913-F1` established, placed **EMEA** on `lmddc.lu`. Shelved with
+its copyleft flagged, not as a permissive option.
+
+---
+
 ## `2026-11-19` (p916) — **`p805` read Apereo's `NOASSERTION` as ECL-2.0 eleven passes ago and the estate still has no row on any delivery page. The instrument was never the failure here; the promotion step was. All four Apereo Learning Analytics repositories re-confirmed ECL-2.0 and `OpenLRW` finally shelved. Nine repos added. The Moodle plugin grant lives in the file header, not in a licence file — two of three plugins measured have no `LICENSE` at `master`.**
 
 **Channels and posture.** Eleven `gh api search/repositories` legs (quoted-phrase shape, after

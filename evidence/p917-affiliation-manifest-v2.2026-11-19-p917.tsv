@@ -1,0 +1,8 @@
+repo	file	signal_kind	signal
+academic-innovation/django-lti	-	NONE	no e-mail domain or institutional homepage in 14 manifest paths
+GSU-CETLOE/lti1p3Library-python	-	NONE	no e-mail domain or institutional homepage in 14 manifest paths
+christophse/django-lti-tool	-	NONE	no e-mail domain or institutional homepage in 14 manifest paths
+Sphereon-Opensource/OID4VC	-	NONE	no e-mail domain or institutional homepage in 14 manifest paths
+impierce/openid4vc	main/Cargo.toml	HOMEPAGE	www.impierce.com
+DigitalHarborFoundation/llm-math-education	main/pyproject.toml	EMAIL-DOMAIN	digitalharbor.org
+lmddc-lu/microlms	main/pyproject.toml	EMAIL-DOMAIN	lmddc.lu

@@ -1,0 +1,27 @@
+G4e	openwallet-foundation/multipaz	301	Apache-2.0	2026-11-18	SDK for Digital Credentials
+D2	Sfedfcv/redesigned-pancake	280	NONE	2021-05-16	Skip to content github / docs Code Issues 80 Pull requests 35 Discussions Actions Projects 2 Security Insights Merge branch 'main' into 1862-Add-Travis-CI-migra
+D8	thyagoluciano/sm2	265	GPL-3.0	2022-01-14	SM-2 is a simple spaced repetition algorithm. It calculates the number of days to wait before reviewing a piece of information based on how easily the the infor
+D4	Hzy0913/Timetable	251	MIT	2021-07-30	📆 timetables.js plugin, timetable schedule school-timetable 课程表 大学课表 日程表 插件
+G4d	jettbrains/-L-	171	GPL-3.0	2021-08-18	W3C Strategic Highlights  September 2019  This report was prepared for the September 2019 W3C Advisory Committee Meeting (W3C Member link). See the accompanying
+D4	natixco/tabby	170	MIT	2021-03-28	Simple timetable desktop app to track your school schedule.
+G4e	procivis/one-core	163	Apache-2.0	2026-11-10	Issue, hold and verify digital identities and credentials on any device with eIDAS 2.0 compliancy, ISO 18013-5 mdocs, IETF SD-JWT VC, OID4VC, and W3C VCs.
+G4e	procivis/one-wallet	153	Apache-2.0	2026-11-10	Digital wallet with eIDAS 2.0 compliancy, ISO 18013-5 mdocs, IETF SD-JWT VC, OID4VC, and W3C VCs. 
+D8	eannchen/leetsolv	133	MIT	2026-07-17	A spaced repetition CLI for DSA, powered by a custom SM-2 algorithm for deliberate practice.
+G4e	openid/OpenID4VCI	131	NONE	2026-11-12	
+G4f	gmazzamuto/europasscv	127	NONE	2024-03-14	Unofficial LaTeX class for the new version of the Europass curriculum vitae
+D8	alankan886/SuperMemo2	121	MIT	2024-06-23	📦 Published package for spaced repetition algorithm SM-2 
+G4e	Sphereon-Opensource/OID4VC	93	Apache-2.0	2026-07-03	OpenID for Verifiable Credentials - modules for issuers, holders and RPs
+D8	matholroyd/tworgy-spaced-repetition	83	MIT	2010-02-26	Spaced repeitition algorithms and mixins (e.g. SuperMemo algorithm SM-2) 
+G4e	a-sit-plus/vck	77	Apache-2.0	2026-11-19	Kotlin Multiplatform library implementing W3C VC Data Model, SD-JWT and ISO 18013-5 credentials
+G4e	eu-digital-identity-wallet/eudi-lib-android-wallet-core	64	Apache-2.0	2026-11-18	
+D8	espresse/spaced_repetition	60	NONE	2012-02-18	SM2 spaced repetition algorithm for Ruby
+D8	lo-tp/sm2-plus	54	MIT	2019-01-29	A Javascript Implementation of an Improved Version of Spaced Repetition Algorithm.
+D8	vlopezferrando/simple-spaced-repetition	52	MIT	2024-10-02	Simple spaced repetition scheduler based on the classic Anki algorithm.
+D2	DigitalHarborFoundation/llm-math-education	47	MIT	2026-11-14	Retrieval augmented generation for middle-school math question answering and hint generation.
+G4e	eu-digital-identity-wallet/eudi-lib-jvm-openid4vci-kt	47	Apache-2.0	2026-11-17	Implementation of OpenID for Verifiable Credential Issuance protocol (wallet's role) in Kotlin
+G4e	wwWallet/wallet-frontend	47	BSD-2-Clause	2026-11-18	Web-first digital credential wallet supporting issuance, storage and presentation via OpenID4VCI and OpenID4VP.
+D1	Gaurav-Pande/AES_DL	45	NONE	2022-12-08	Automated Essay Scoring using BERT
+G4e	eu-digital-identity-wallet/eudi-srv-pid-issuer	43	Apache-2.0	2026-11-06	A micro-service acting like PID/mDL Issuer according to OpenID4VCI
+G4e	impierce/openid4vc	42	Apache-2.0	2026-11-19	Rust implementation of the OpenID4VC standards. The library offers implementations for SIOPv2, OpenID4VP and OpenID4VCI.
+D8	ap4y/leaf	40	MIT	2023-01-06	Flashcard app that uses spaced repetition algorithms for interval calculations
+G4e	Lumoin/Verifiable	40	Apache-2.0	2026-10-19	A .NET implementation of decentralized identifiers and verifiable credentials, some associated protocols and cryptographic routines.

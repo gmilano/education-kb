@@ -4,6 +4,69 @@ region: Global
 updated: 2026-11-19
 ---
 
+## 🆕 `p917` · 2026-11-19 — **Four of `p916`'s six gaps discharged, and three of them discharged *against* the expectation that declared them. `916-G5` expected voids to fall and one held. `916-G4` asked for a union count and the count is the least useful thing it produced. `916-G2` asked whether a header layer resolves ungranted rows and the answer is a rate — 3 of 13 — plus a filename `p913` never carried. 🔴 One prior channel verdict corrected: `search/users` is NOT blocked.**
+
+🔵 **Summary.** 28 `gh api search/repositories` legs plus the eight mandated WebSearch legs.
+Seventeen repositories byte-read for their grant with `ingest/p913-grant-authority.sh`, **patched
+this pass**; **zero** `PAYLOAD-GONE`, **zero** `UNKNOWN-TEMPLATE`. Seventeen promoted to the
+delivery surface (11 credential infrastructure, 5 Python LTI 1.3, 1 education agent). Two new
+instruments committed. Addresses diffed against **18,883** slugs grepped from the delivery pages
+and this register.
+
+🔵 **Closed or settled this pass:**
+
+| Gap | Verdict | What settled it |
+|---|---|---|
+| **`916-G4`** — the verifiable-credential tier has three measured sizes and no agreed one | 🟢 **DISCHARGED, and the question was wrong** | All eight prescribed shapes measured. Education-named shapes return 1–12; `OpenID4VCI` → **85**; `europass` → **252**. The tier is not built from education repositories at all — it is the eIDAS 2.0 / OpenID4VCI wallet estate, which no education-named query can see. Union of top-25 windows: **73**. 🔴 But `learner credential wallet` drifted **11 → 12** in one day, so no tier size is published. **11 repositories shelved**, 10 Apache-2.0/BSD. `T980`, `repos/trending.md` `917-R1` |
+| **`916-G5`** — re-measure the four remaining voids in a shape their original did not use | 🟢 **DISCHARGED, 3 refuted / 1 confirmed** | Python LTI 1.3 → **14**; LATAM Spanish → **240** (was 4); LATAM Portuguese → **27** (was 2); `OpenLiteracy` → **0/2/0**, **CONFIRMED**. 🔵 The confirmation is the more valuable half: a void that survives a *different* instrument is the only kind this base should publish. `T977`, `agents/trending.md` `917-F1` |
+| **`916-G2`** — a licence-file sweep reports `NO-LICENCE-FILE-FOUND` for plainly granted ecosystem plugins | 🟢 **DISCHARGED with a rate** | `ingest/p917-header-layer.sh` over 13 ungranted rows: **HEADER resolves 3**, **MANIFEST 2**, **README prose 2**, **6 remain ungranted at three layers**. 🟢 The Moodle hypothesis is **2 of 2** — both plugins carry a full GPL block in `version.php` and neither has a readable licence file. **Operative rule: for a Moodle plugin, `version.php` is the grant authority, not `LICENSE`.** `repos/trending.md` `917-R3` |
+| **`916-G6`** — two rows unplaced by region with no second channel to place them on | 🟡 **HALF DISCHARGED, and the remedy worked** | `marceloschmitt/moodle-block_analytics_graphs` → **LATAM**, from `@copyright 2026 … <marcelo.schmitt@poa.ifrs.edu.br>` in Moodle `version.php`. 🔴 `kirstykitto/CLAtoolkit` **remains unplaced**: the prescribed probe was run over a 9,026 B README and 14 manifest paths and the signal is genuinely absent, not unreached. Re-declared as `917-G5` |
+| **`916-G3`** — re-run the grant authority over every `NOASSERTION` row in the delivery files | 🟡 **NOT RUN — scope was wrong, and saying so is cheaper than a bad run** | The delivery surface carries **42** `NOASSERTION` mentions, but nearly all are already-resolved rows that *record* the field's error in prose (`"BSD-3-Clause — the API reports NOASSERTION"`). The gap assumed a queue of unresolved rows; the queue is mostly discharged history. Re-scoped as `917-G2` |
+| **`916-G1`** — no primary legal text, sixth consecutive pass | 🔴 **RE-DECLARED UNCHANGED, seventh pass** | `eur-lex.europa.eu` still does not resolve. `915-F2` established the failure is DNS, not HTTP. Re-declared as `917-G1` |
+
+### 🔴 `917-G0` — a channel this base recorded as lost is not lost, and the correction matters more than the channel
+
+`916-F8` recorded `gh api users/{owner}` as blocked across fifteen owners — reproduced here, the
+refusal is real — and concluded *"every region placement in `p916` is from a byte-read README."*
+
+🔴 **`916-F8` never tried `search/users`, which is a *search* endpoint and answers normally.**
+`search/users?q=user:kirstykitto` returns `{"login":"kirstykitto","type":"User"}`. The conclusion
+`916-F8` reached is correct and **its stated reason is wrong**: the search *item* schema carries 20
+keys and none of them is `location`, `company`, `bio` or `email`, so the channel resolves
+**existence and account type** and cannot place a region.
+
+🔵 **Why this is worth a gap entry rather than a footnote.** A later pass reading *"channel
+blocked"* would never retry it for the thing it **can** do — telling a **User** from an
+**Organization** without spending a byte-read, which is the first question every affiliation probe
+asks. **Record what a channel cannot do, not that it is gone.**
+
+### 🔴 Live gaps declared by `p917`
+
+| Gap | Remedy | Cost |
+|---|---|---|
+| **`917-G1`** — `916-G1` re-declared unchanged. **Seventh consecutive pass with no primary legal text.** Every EU AI Act date in `intel/trends.md` and `intel/market.md` is secondary-sourced and marked so | One pass from a session whose network policy *resolves* `eur-lex.europa.eu`, `oecd.org`, `unesco.org`. 🔴 Do **not** spend a leg on another HTTP client — `915-F2` established the failure is DNS | a network-policy change; zero in-session effort |
+| **`917-G2`** — `916-G3` re-scoped. The real queue is not `NOASSERTION` rows but rows whose licence cell was written from the **search channel alone**, never byte-read | Grep the delivery files for licence cells carrying no byte-read provenance marker (`byte-read`, `sha256₁₂`, a byte count) and run the authority over exactly those | one byte-read per unmarked row |
+| 🔴 **`917-G3`** — **APAC placed zero of 17 promotion candidates**, against a demand picture the WebSearch leg showed is large and well-sourced (~86% SE Asian teacher use; Philippines DepEd `AGAP.AI`, Jan 2026) | Query APAC supply in **non-English shapes**. `917-F1` showed a vernacular query moved a LATAM count from 4 to 240; that experiment has **never** been run for Mandarin, Japanese, Korean, Bahasa or Hindi. 🔵 `T29` says vernacular supply is a single-country phenomenon — this is the test that would confirm or refute it | ~8 legs |
+| **`917-G4`** — the two LATAM voids are refuted **on count** and the shelf is still empty: 240 results whose most-starred member has **5 ★**, 27 whose top has **7 ★** | Decide and record a **top-of-shelf threshold** below which a tier is reported as *present but not deliverable*, and apply it to every count this base publishes. Without one, `917-F2` will be rediscovered | one decision; then mechanical |
+| **`917-G5`** — `kirstykitto/CLAtoolkit` still unplaced after the full `916-G6` remedy was run | 🔴 Do **not** re-probe the README or the manifests — `p917` did, over 14 paths, and the signal is absent. The remaining channels are the commit-author domain (`repos/{o}/{r}/commits` is **blocked** for third-party repos here) and the `CLAtoolkit-oldPrototypes` sibling the README links. 🟡 Or accept it as permanently unplaced and mark it so | 1–2 byte-reads, low expected yield |
+| **`917-G6`** — `p913`'s filename ladder was missing the Rails convention (`917-F4`). The fix is committed, but **the ladder has never been audited against a corpus of real licence filenames** | Enumerate the distinct licence filenames actually present across this base's ~370 shelf addresses — one `repos/{o}/{r}/contents` call is blocked, so use the ladder itself in probe mode — and report which names the array still lacks | one sweep over the shelf |
+| **`917-G7`** — `ingest/p917-affiliation-manifest.sh`'s domain classifier is a **hand-written deny-list**, not a measured one (`917-F6`) | The consumer-mailhost and platform-domain lists were written from the four false positives this pass happened to produce. Run the instrument over every placed row in the delivery files and report how many placements rest on a domain class the list does not cover | one sweep; no new channel |
+| 🔴 **`917-G8`** — **`make hooks` runs in this environment and reports 22 standing red gates, same set before and after `p917`.** `Gap 247` recorded it as denied; that verdict was session-local and has been carried as a property of the world | Read the 22. 🔴 **Start with `gate-promotion-ledger` and `gate-shelf-consistency`**: they have been failing on the `logged-not-shelved` class that `916-R1` and `917-F3` each rediscovered **by hand**, so the base has been paying twice — once to not read the gate, once to redo its work. `gate-derived-counts` and `gate-dates` are stale-date debt and are cheap | one pass, no network |
+
+### 🔵 `917-F6` — this pass's own instrument was wrong in two ways, and both are committed as comments
+
+`ingest/p917-affiliation-manifest.sh`'s first cut "placed" four rows on non-signals:
+**`gmail.com`** (`GSU-CETLOE/lti1p3Library-python`), **`posteo.me`**
+(`christophse/django-lti-tool`), **`academic-innovation.github.io`** — a platform domain — and
+**`1.0.1.patch`**, which is an npm `overrides` version string that the e-mail regex matched
+(`Sphereon-Opensource/OID4VC`). All four are suppressed by the committed version, which
+**classifies** domains rather than extracting them; the re-run as a control keeps the three real
+signals (`digitalharbor.org`, `lmddc.lu`, `www.impierce.com`) and rejects all four.
+🔴 **An owner name is not evidence** (`913-F2`): `GSU-CETLOE` plainly denotes Georgia State
+University and is reported **unplaced**, because the repository contains nothing that says so.
+
+---
+
 ## 🆕 `p916` · 2026-11-19 — **A void this register has carried since the sixth pass is REFUTED, and it was refuted by changing the question, not the world. `915-G3` discharged with a rate. One prior claim of novelty retracted before publication.**
 
 🔵 **Summary.** Eleven `gh api search/repositories` discovery legs plus the eight mandated WebSearch

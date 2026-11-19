@@ -1,0 +1,12 @@
+repo	file	signal_kind	signal
+academic-innovation/django-lti	main/pyproject.toml	HOMEPAGE	academic-innovation.github.io;docs.astral.sh
+GSU-CETLOE/lti1p3Library-python	main/pyproject.toml	EMAIL-DOMAIN	gmail.com
+blackboard/BBDN-lti-1p3-tool-example	-	NONE	no e-mail domain or institutional homepage in 14 manifest paths
+christophse/django-lti-tool	main/setup.cfg	EMAIL-DOMAIN	posteo.me
+Sphereon-Opensource/OID4VC	main/package.json	EMAIL-DOMAIN	1.0.1.patch;6.11.6.patch
+impierce/openid4vc	main/Cargo.toml	HOMEPAGE	www.impierce.com
+DigitalHarborFoundation/llm-math-education	main/pyproject.toml	EMAIL-DOMAIN	digitalharbor.org
+lmddc-lu/microlms	main/pyproject.toml	EMAIL-DOMAIN	lmddc.lu
+kirstykitto/CLAtoolkit	-	NONE	no e-mail domain or institutional homepage in 14 manifest paths
+openwallet-foundation/multipaz	main/build.gradle.kts	HOMEPAGE	central.sonatype.com;semver.org
+procivis/one-core	-	NONE	no e-mail domain or institutional homepage in 14 manifest paths

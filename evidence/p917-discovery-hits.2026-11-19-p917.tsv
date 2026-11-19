@@ -1,0 +1,174 @@
+leg_id	slug	stars	spdx	pushed_at	description
+D1	nusnlp/nea	207	GPL-3.0	2018-01-17	Neural Essay Assessor: An Automated Essay Scoring System Based on Deep Neural Networks
+D1	mankadronit/Automated-Essay--Scoring	150	NONE	2020-03-01	Automatically Score essays using Deep Learning
+D1	lingochamp/Multi-Scale-BERT-AES	63	NONE	2022-05-03	Demo for the paper "On the Use of BERT for Automated Essay Scoring: Joint Learning of Multi-Scale Essay Representation"
+D1	Turanga1/Automated-Essay-Scoring	58	NONE	2018-12-27	Kaggle 2012 Hewlett Automated Student Assessment Prize (ASAP) - Automated Essay Scoring
+D1	Gaurav-Pande/AES_DL	45	NONE	2022-12-08	Automated Essay Scoring using BERT
+D1	benhamner/ASAP-AES	43	BSD-2-Clause	2012-02-23	Evaluation Metrics for the Hewlett Foundation's Automated Essay Scoring competition
+D1	July-Tea/EssayMate	39	NOASSERTION	2025-06-19	EssayMate 是一个基于 AI 的雅思/托福/GRE作文批改助手，支持自动评分、详细反馈和智能建议。 / EssayMate is an AI-powered IELTS / TOEFL / GRE essay correction assistant that provides automated scorin
+D1	robert1ridley/cross-prompt-trait-scoring	34	NONE	2022-01-20	This repository contains the code used to produce the results from the paper Automated Cross-prompt Scoring of Essay Traits published in AAAI 2021.
+D1	iris2hu/L2C-rater	33	NONE	2022-03-17	Automated Essay Scoring Method for Chinese Second Language Writing
+D1	shubhpawar/Automated-Essay-Scoring	32	MIT	2018-04-26	Automated Essay Scoring on The Hewlett Foundation dataset on Kaggle
+D1	zlliang/essaysense	28	MIT	2026-07-23	An experiment on Automated Essay Scoring
+D1	rlistengr/automated-essay-scoring	27	NONE	2019-06-02	作文自动打分系统
+D1	Chunngai/aes-papers	17	NONE	2025-03-31	Paper list for automated essay scoring (AES).
+D1	Syhen/2nd-Place-Solution-Kaggle-Learning-Agency-Lab-Automated-Essay-Scoring-2.0	13	MIT	2024-07-13	2nd place training code for Kaggle AES2 competition.
+D1	gdufsnlp/PMAES	12	NONE	2023-10-06	Code for Paper "PMAES: Prompt-mapping Contrastive Learning for Cross-prompt Automated Essay Scoring" ACL2023
+D1	pavanred/NLP_Automatic_Grader	10	NONE	2013-05-06	Automatic Essay Grader system scores and evaluates essays by natural language processing - detect errors in grammar, usage, semantics, coherence, length etc and
+D1	semanticpc/Essay-Scoring	9	NONE	2012-07-19	Automated Essay Scoring
+D1	Ishita98/AutomatedEssayScoring	9	NONE	2019-07-21	Automatically Grades Essays using previous observations of grading using NLP tools
+D1	ZhuoyueWang/AutomatedEssayScoring	7	NONE	2018-05-05	Automated Essay Scoring System
+D1	ogozuacik/automated_essay_scoring	7	MIT	2019-01-10	Automated essay scoring using stylometric features on the texts
+D1	adamcsvarga/essay_scoring	7	NONE	2016-08-19	automated essay scoring on Kaggle data
+D1	wesam-alsohle/AUTOMATED-ESSAY-SCORING	6	NONE	2022-09-27	An android app that can automatically score english essays. built using flutter, python and flask framework.
+D1	albertusk95/nips-challenge-essay-scoring-arabic	6	MIT	2018-01-31	Global NIPS Paper Implementation Challenge - An Automated System for Essay Scoring of Online Exams in Arabic based on Stemming Techniques and Levenshtein Edit O
+D1	johnny-brav0/AutomaticEvaluation	6	NONE	2022-03-17	Automatic Evaluation of Textual Answers on the famous Kaggle Automated Essay Scoring (AES) dataset.
+D1	alivcor/aes	5	MIT	2017-10-23	Automated Essay Scoring
+D2	Sfedfcv/redesigned-pancake	280	NONE	2021-05-16	Skip to content github / docs Code Issues 80 Pull requests 35 Discussions Actions Projects 2 Security Insights Merge branch 'main' into 1862-Add-Travis-CI-migra
+D2	DigitalHarborFoundation/llm-math-education	47	MIT	2026-11-14	Retrieval augmented generation for middle-school math question answering and hint generation.
+D2	meghabyte/acl2021-education	33	NONE	2021-07-18	Code for "Question Generation for Adaptive Education", to appear at ACL 2021. 
+D2	zhaozj89/Educational-Question-Generation	21	NONE	2023-01-10	
+D2	SwedbankAB/Swedbank	19	NONE	2022-07-09	employee benefits swedbank The bank does not apply a variable remuneration system with discretionary pension benefits. Bank officials can borrow up to SEK 2 mil
+D2	liamdugan/summary-qg	16	MIT	2022-07-05	Code for the ACL 2022 Paper "A Feasibility Study of Answer-Agnostic Question Generation for Education"
+D2	gipplab/PhysWikiQuiz	12	Apache-2.0	2023-02-25	>>PhysWikiQuiz<< - a Physics Question Generation and Interrogation System
+D2	aws-samples/educational-course-content-generator-with-qna-bot-using-bedrock	10	MIT-0	2026-04-14	A  serverless AWS application that combines AI-powered course content generation with an interactive question-answering system. Built using Amazon Bedrock, this
+D2	xxinjie21/Smart-Quiz-Tutor	10	0BSD	2026-09-22	Smart Question Tutor — AI quiz generation, SM-2 spaced repetition, wrong answer tracking, learning heatmap, exam recognition. Ollama & OpenAI compatible / 智学助手 
+D2	Cashcoin123/Cashcoin123	7	NONE	2026-10-05	# Application card: GitHub Copilot Chat  Learn how to use GitHub Copilot Chat responsibly by understanding its purposes, capabilities, and limitations.  ## What
+D2	ubugeeei/rust-challenge-2026	6	MIT	2026-08-29	A 235-question, four-choice quiz on Rust's semantics — from the basics to Polonius and the next-generation trait solver. Single page, answers in toggles, every 
+D2	s7chak/QuizardApp	5	MIT	2024-11-30	An interactive interface with OpenAI's gpt-3.5 model (LLM) designed to generate quizzes based on any document the user provides. It leverages the concept of Ret
+D2	aegonwolf/EduQuest	4	NONE	2024-01-12	EduQuest Question Generation for Higher Education
+D2	SawssenHasni/QuizPro---AI-Based-Automatic-Exam-Generation-for-Education	4	NONE	2025-01-29	Welcome to my Data Science and AI Project repository!  QuizPro is an intelligent educational platform developed as part of my Master's final project. It leverag
+D2	danielcregg/coderunner-skill	4	MIT	2026-04-10	Claude skill for generating Moodle CodeRunner programming questions with automated test cases. Java, Python, C/C++, and more. First-of-its-kind — no other CodeR
+D2	Sh-31/NeuraLearn-ML-Server-QG-RAG-Pipeline	4	MIT	2024-09-13	NeuraLearn Academy is a educational platform designed to enhance learning experience by integrating advanced technologies. Our goal is to create platform simila
+D2	Kramer588/exam-question-generation	3	MIT	2026-11-17	
+D2	slfagrouche/TUTOR	3	MIT	2025-01-05	TOTUR is an AI-powered educational assistant designed to help users with audio transcription, PDF text extraction, and question answering. It leverages advanced
+D2	shubhamk8597/College-Project--Automatic-Question-Generation-From-Educational-Text	2	Apache-2.0	2022-04-22	
+D2	roshini-nawanjala/StudyMate-AI	2	NONE	2026-08-04	StudyMate AI is an intelligent learning assistant built with Streamlit, LangChain, ChromaDB, and LLMs. It enables PDF-based summarization, RAG-powered question 
+D2	LKL1111/Multi-Agent-Educational-Question-Generation	1	NONE	2025-02-19	
+D2	Myriam2002/Critical_Question_generation	1	MIT	2025-11-28	Trying different methodologies of generation of critical questions to help in education and self-verification of LLMs. 
+D2	TrongNV2003/QA-Generation-using-LLMs-for-education	1	MIT	2024-10-18	Auto create question sheet: multiple-choice or sentences from provided document
+D2	im-zhong/eduagent	1	NONE	2026-01-16	Education Agent: An Intelligent Question Generation System
+D2	Cooperiano/edu-question-gen	1	MIT	2026-11-14	Knowledge-tree-driven question generation: multi-model staged pipeline plus LLM-as-judge assessment, orchestrated with LangGraph StateGraph.
+D3	ChelseaSchool/MyIEP	5	NOASSERTION	2016-05-28	Web Based IEP and Special-Education Program Management
+D3	igoldstein19/waypoint-challenge	3	NONE	2026-05-04	The Special Education Challenge: build an MCP server that helps teachers differentiate instruction for students with Individualized Education Programs (IEPs) - 
+D3	100205ivan/EyeEP	1	NONE	2026-10-02	AI-assisted Individualized Education Program (IEP) management system for special education teachers.
+D3	ncreighton/special-education-iep-debug-dashboard-and-log-analyzer-vs-code-extension	1	NONE	2026-08-05	Special Education & Iep Debug Dashboard And Log Analyzer VS Code extension — instant insights without breaking your focus.
+D3	b33kman/special-education-due-process-complaint	1	MIT	2026-10-10	Special Education Due Process Complaint Writer: a free AI plugin for Claude, ChatGPT and other AI chat apps. It writes an IDEA due process complaint from your c
+D3	JeabtiE/iep-gen-assistant	1	NONE	2026-09-14	AI assistant for special education teachers: Enter student data once to instantly generate IEP goals, a recommended teaching materials list based on the A-B (Go
+D3	imfahim/Education-Record-Program	1	MIT	2018-04-11	The Individualized Education Program, also called the IEP, is a document that is developed for each public school child who needs special education. 
+D3	kimberlymuckerjohnson-cpu/Progress-Monitoring	1	NONE	2025-11-24	Progress-Monitoring is a streamlined online tool designed for special education and intervention teachers. The app supports student goal management, general ski
+D3	animeshjn/ATGuide	1	NONE	2017-12-22	Assistive Technology Consideration Guide is an Android application helping to choose assistive technologies in special education of differently abled people. ID
+D3	rageshvco/SpecialEdIEP	0	NONE	2023-02-03	Special education IEP
+D3	nodphat/speiep	0	NONE	2016-12-01	IEP for Special Education
+D3	oluwatobilolba/special-education-iep	0	NONE	2025-09-04	
+D3	feifeigao0302-gif/ProTracker	0	NONE	2026-05-07	(Special Education) IEP data collect tool
+D3	ncreighton/6561fe12-special-education--iep-pricin	0	NONE	2026-08-05	IEP pricing calculator & quote builder
+D3	zxc3285123-web/special-education-teacher-planner	0	NONE	2026-10-21	특수교사를 위한 월 달력·업무·학생 카드·IEP 기록 수첩
+D3	ncreighton/78031130-special-education-iep-price	0	NONE	2026-08-07	Stop overpaying for special education resources and IEP materials. This extension hunts for the best prices and exclusive deals across hundreds of vendors every
+D3	eakarsu/ai-special-education-iep-compliance	0	NONE	2026-10-23	
+D3	acblacksimt/iepdraft	0	NONE	2026-05-28	 AI-powered IEP goal generator for special education teachers.   
+D3	HTMLStaticWorks/Special_Education_Advocacy_IEP_Consulting_Service	0	NONE	2026-10-13	Automated website repository for Special_Education_Advocacy_IEP_Consulting_Service
+D3	ncreighton/b6747823-special-education-iep-search	0	NONE	2026-08-05	Finding the right IEP accommodations and disability-specific resources shouldn't require hours of manual research across fragmented databases. The Special Educa
+D3	ncreighton/0280569c-special-education--iep-busine	0	NONE	2026-08-05	Turn your IEP expertise into a fundable business plan and strategy template pack for special education private practice, consulting, or clinic startup.
+D3	ncreighton/9816942f-special-education--iep-client	0	NONE	2026-08-05	Notion CRM template for special education pros. Manage IEP cases, track pipelines, and automate compliance in one centralized workspace.
+D3	jpclaussen-rgb/ICCSD-IEP-Special-Education-Tool-Hub	0	NONE	2026-04-10	A hub with AI assisted tools to support various aspects of Special Education
+D3	ncreighton/1e6fb98f-special-education--iep-propos	0	NONE	2026-08-05	Streamline IEP proposals & contracts with customizable templates
+D3	ncreighton/a1601216-special-education-iep-matchi	0	NONE	2026-08-05	AI-powered matching between Special Education & IEP entities — clients to services, products to needs
+D4	Hzy0913/Timetable	251	MIT	2021-07-30	📆 timetables.js plugin, timetable schedule school-timetable 课程表 大学课表 日程表 插件
+D4	natixco/tabby	170	MIT	2021-03-28	Simple timetable desktop app to track your school schedule.
+D4	SerophinaMary/Automatic-Timetable-Generator	38	NONE	2025-05-10	The Automatic Timetable Generator is a software solution designed to create optimized, clash-free academic timetables for schools, colleges, or universities. It
+D4	GEOSOFT-GLOBAL/timetablely	27	MIT	2026-08-17	an open-source automated timetable generator for schools, colleges, and universities. It ingests courses, instructors, rooms, and constraints, then outputs opti
+D4	begin0808/Course_Scheduling_System	19	AGPL-3.0	2026-11-19	開源免費、單校自架的中小學排課與調代課系統(國小/國中/高中職)。Free, self-hosted course-scheduling & teacher-substitution system for Taiwan K–12 schools.
+D4	LeoHerrmann/timetable	12	GPL-3.0	2021-04-20	A simple progressive web application helping you to keep track of your school or university schedule
+D4	artyom7774/Schedule	12	Apache-2.0	2026-11-19	SuperZavych - your digital assistant for automatic scheduling.
+D4	DenDmitriev/SchoolTimetable	11	MIT	2024-01-13	Example of an application with a school schedule
+D4	geo-777/Make-Table-Frontend	11	NONE	2026-06-09	Front-end codebase for MakeTable — a web-based automated timetable generator designed specifically for schools and educational institutions. Creates optimal, co
+D4	vtfanta/ILP-Timetable-Maker	10	MIT	2022-09-25	Integer linear programming (ILP) approach to the school timetabeling problem.
+D4	benxene/class-scheduler	10	MIT	2023-01-07	A zero dependency class schedule manager.
+D4	XronosSchedulingLtd/scheduler	9	GPL-2.0	2024-10-15	Xronos Scheduler
+D4	dhananjay6561/ClassSync-GSSOC	8	MIT	2025-08-12	School scheduling platform that automates teacher substitutions, leave approvals and timetables. React, Express, MongoDB. GSSoC project.
+D4	ly398565721/high-school-timetable	8	MIT	2026-08-28	A Codex Skill for constraint-based Chinese high-school timetable and duty scheduling using OR-Tools CP-SAT.
+D4	TejasMedade/Bus-Ticket-Reservation-System	8	NONE	2023-01-28	Designed a C.L.I based application for Bus Ticket Reservation System, which allows passengers to browse the Bus Schedule / Timetable and a Reserve Tickets for t
+D4	WangilaWakhongola/School_Management_System	8	NONE	2026-07-09	A Django REST API for managing school operations  - built with PostgreSQL and JWT role-based authentication (Admin, Teacher, Student, Parent). Covers 7 modules:
+D4	andre1araujo/CSP-for-School-Timetables	7	Apache-2.0	2024-01-18	This repository hosts a Jupyter Notebook on which a Constraint Satisfaction Problem is used to solve a specific Scheduling Problem. Here the algorithm helps the
+D4	Saptya001/Opti_Class	6	NONE	2025-09-17	AI-powered Smart Classroom & Timetable Scheduler for schools & colleges | SIH 2025 Project – Team 404 Avengers
+D4	MinseobKimm/NeisApiCrawlerWithKakao	6	NONE	2026-05-25	Automates daily school meal, timetable, and schedule notifications using the NEIS Open API and KakaoTalk Desktop.
+D4	ghuysmans/ocaml-fet	6	NONE	2020-11-14	"FET is open source free software for automatically scheduling the timetable of a school, high-school or university."
+D4	Yilliee/fast_nuces_timetable_parser	6	GPL-3.0	2024-08-10	Automate the extraction of course details and lecture schedules from FAST NUCES timetables, saving the data in CSV format. Tested on FSC (FAST School of Computi
+D4	aniket20june/Time-Table-Scheduling-using-Genetic-Algorithm	6	NONE	2021-06-01	One of the most challenging task for every college, school, and company administrator is to create an efficient timetable every year or every semester. The herc
+D4	PessahDerek/KCA_Exam_Timetable_Simplifier	5	NONE	2025-02-27	This is a simple application that extracts the exam schedule from the school exam timetable based on the units undertaken by the student.
+D4	hengdapi/School-Timetable-Generator	5	GPL-3.0	2026-11-08	一个可以帮助中小学生成符合需求的课程表的小工具                                          A small tool that can help primary and secondary schools generate course schedules that meet th
+D4	Kretiandpleti/skola-24-haos-integration	5	MIT	2026-10-25	Home Assistant integration for Skola24 school schedules.
+D5	jjrsylvestre/dla	13	NOASSERTION	2026-08-24	Discover Linear Algebra - An open-access linear algebra textbook authored in PreTeXt.
+D5	sarahwsutton/Introduction_to_datascience_for_librarians	1	MIT	2025-06-30	Open textbook developed for LI 862 Introduction to Datascience for Librarians taught at Emporia State University School of Library and Information Management. T
+D5	SwayamRao/Solve_For_Textbook	0	NONE	2024-03-23	Hello this is an attempt of mine to provide a detail solution for the problems given in textbook of the various authors related to cyber security. I hope it wou
+D5	b1n9ui/ai-university	0	MIT	2026-11-14	Ten complete AI-authored open textbooks in English and Chinese, with interactive diagrams, worked solutions, and downloadable editions. No model API.
+D5	confused4now-books/author-guide	0	NOASSERTION	2026-10-25	An A–Z guide for authors on Confused for Now: from a folder of Word files to a published open textbook.
+D5	AICryptoCoin/how-to-understand-the-market	0	NONE	2026-09-26	How to Understand the Market: Measure, Don't Guess. A free, non-commercial Russian-language book on reading the economy with data, and the open measurement pipe
+D5	bookpublisher/Most-professional-and-affordable-International-Book-Publishing-Service	0	NONE	2021-06-07	Book Publisher International is an international publishing organization that publishes textbooks, atlases, monographs, e-books, reference books in scientific, 
+D6	speechsuper/SpeechSuper-API-Samples	73	MIT	2024-06-06	Deep learning based speech and pronunciation assessment API for 8 languages.
+D6	warleysr/pronki	22	NONE	2025-12-14	PronKi is an Android app that allows you to practice your pronunciation using your Anki flashcards. It also has other features that can be helpful on your langu
+D6	Ashish-Chokhani/GrammarML-EduAssessment	3	NONE	2025-05-29	This repository implements "Grammar Language Modeling for Automated Educational Assessment." It features a machine learning-powered grammar checker for educatio
+D6	ishitbansal/Grammar-Language-Modeling-for-Assessment	0	NONE	2025-06-01	This repository features a machine learning-powered grammar checker for educational institutions, with automated grammar evaluation, jumbled sentence exercises,
+D6	Humaima/-Language-Learning-Web-App---English-to-French-Translator-Flashcards-	0	NONE	2026-07-20	This Flask web app helps users learn French through flashcards, translations, and speech synthesis. It uses **MarianMT** for translation, **gTTS** for pronuncia
+D6	sumayah19/Pronunciation-Similarity-Analysis-Using-MFCC-Feature-Extraction-and-Dynamic-Time-Warping	0	NONE	2026-07-15	Intelligent pronunciation assessment system using MFCC and Dynamic Time Warping (DTW) to compare user speech with reference audio, analyze pronunciation similar
+D6	sohailamuhammed39-bot/Volca	0	NONE	2026-05-09	Volca is an AI-powered language learning platform that helps users speak confidently with real-time pronunciation correction, grammar feedback, fluency analysis
+D6	Sharib3/Voice_Evaluation_Microservice	0	NONE	2025-07-15	Voice Evaluation API built with FastAPI integrates AssemblyAI to analyze spoken responses for pronunciation confidence, speech rate, and filler word usage. Usef
+D7	Chakrix-com/Swaya.me	4	NOASSERTION	2026-11-03	Open-source live audience engagement platform — quizzes, polls, word clouds, and proctored exams. No app required.
+D7	epoko77-ai/examguard	3	MIT	2026-11-09	수능·시험장 스마트안경 점검: BLE 단서, 광고 패킷 복합 필터, 교탁 위 광학 판독, 실물 도감. Open-source web prototype for exam proctors.
+D7	amaanwarsi/Proctora	3	MIT	2026-04-07	Proctora is an open-source online exam proctoring demo built with Flask, OpenCV, and MediaPipe. It offers a browser-based fullscreen exam environment with webca
+D7	OpenProct/openproct	2	MIT	2025-10-26	An Open-Source alternative for traditional Proctering services. Current proctoring solutions are invasive, expensive, and lock you into proprietary systems. We 
+D7	OSCELOT/Blackboard-Open-Source-Photo-Roster	1	NOASSERTION	2021-06-02	OPEN PHOTO ROSTER 1 Abstract “ Remember that a person's name is, to that person, the sweetest and most importa nt  sound in any language.  The average person is
+D7	NukeGeng/VietAIS-Sentinel	0	AGPL-3.0	2026-10-14	Open-source AI engine for explainable exam proctoring, combining object detection, gaze and head-pose estimation, and temporal behavior analysis.
+D7	determinate/octoeye	0	NOASSERTION	2026-10-29	Open-source on-premise online proctoring and exam video monitoring system. Zero-install web browser proctoring, dual webcam & screen recording, WebRTC HLS strea
+D7	jagdishsolunke682/ProctorEdge-	0	NONE	2026-05-11	ProctorEdge AI is an open-source, AI-powered proctoring system that secures remote exams through computer vision and analytics, ensuring integrity without compr
+D7	Manasa10-A/Online_Examination-Portal	0	NONE	2026-07-24	Several GitHub repositories provide detailed descriptions of online examination portals, showcasing different tech stacks and features such as role-based access
+D7	Shraddhagupta37/CodeLens-Proctor-Exam-Platform	0	NONE	2025-04-19	CodeLens : an open source & collaborative group project that provides a secure online assessment platform for evaluating hackathon candidates. Built with PHP, M
+D7	kushu30/quizup	0	NONE	2026-10-23	QuizUp is an open-source, real-time assessment platform for classrooms and hiring. Run live quizzes, adaptive quizzes or proctored timed exams, with AI-generate
+D7	SriSatyaLokesh/pariksha	0	AGPL-3.0	2026-11-07	Pariksha is a free, open-source exam platform that any school, company or community can run on its own account at zero cost. One deployment hosts many tests. Ea
+D8	open-spaced-repetition/fsrs4anki	4142	MIT	2026-08-14	A modern Anki custom scheduling based on Free Spaced Repetition Scheduler algorithm
+D8	open-spaced-repetition/free-spaced-repetition-scheduler	740	MIT	2026-04-21	A spaced repetition algorithm based on DSR model
+D8	alyssaxuu/carden	489	MIT	2022-06-17	Flashcards with spaced repetition and gamification 🌱
+D8	VienDinhCom/supermemo	338	MIT	2025-03-28	A JavaScript and TypeScript implementation of SuperMemo 2, a spaced repetition algorithm for flashcards.
+D8	open-spaced-repetition/srs-benchmark	289	NONE	2026-11-19	A benchmark for spaced repetition schedulers/algorithms
+D8	thyagoluciano/sm2	265	GPL-3.0	2022-01-14	SM-2 is a simple spaced repetition algorithm. It calculates the number of days to wait before reviewing a piece of information based on how easily the the infor
+D8	maimemo/SSP-MMC	230	MIT	2025-11-28	A Stochastic Shortest Path Algorithm for Optimizing Spaced Repetition Scheduling
+D8	Human-Centric-Machine-Learning/memorize	191	MIT	2023-01-10	Code and real data for "Enhancing Human Learning via Spaced Repetition Optimization", PNAS 2019
+D8	open-spaced-repetition/fsrs.js	180	MIT	2024-04-10	A spaced repetition algorithm which overtakes Anki and catches up with SuperMemo.
+D8	eannchen/leetsolv	133	MIT	2026-07-17	A spaced repetition CLI for DSA, powered by a custom SM-2 algorithm for deliberate practice.
+D8	alankan886/SuperMemo2	121	MIT	2024-06-23	📦 Published package for spaced repetition algorithm SM-2 
+D8	matholroyd/tworgy-spaced-repetition	83	MIT	2010-02-26	Spaced repeitition algorithms and mixins (e.g. SuperMemo algorithm SM-2) 
+D8	espresse/spaced_repetition	60	NONE	2012-02-18	SM2 spaced repetition algorithm for Ruby
+D8	lo-tp/sm2-plus	54	MIT	2019-01-29	A Javascript Implementation of an Improved Version of Spaced Repetition Algorithm.
+D8	vlopezferrando/simple-spaced-repetition	52	MIT	2024-10-02	Simple spaced repetition scheduler based on the classic Anki algorithm.
+D8	ap4y/leaf	40	MIT	2023-01-06	Flashcard app that uses spaced repetition algorithms for interval calculations
+D8	Jakobovski/SaneMemo	36	MIT	2023-05-22	The only open-source, well documented spaced repetition algorithm.
+D8	4rays/swift-fsrs	34	MIT	2024-10-25	A Swift implementation of the FSRS spaced repetition algorithm
+D8	nickhnsn/facharbeit-spaced-repetition	31	GPL-3.0	2023-05-16	A Java Spaced Repetition API implementing various spaced repetition algorithms: Leitner's system, SuperMemo SM-2 algorithm and the Free Spaced Repetition Schedu
+D8	open-spaced-repetition/fsrs4remnote	27	MIT	2024-04-25	A modern RemNote scheduler plugin based on free spaced repetition scheduler algorithm
+D8	walterscarborough/LibSpacey	26	MIT	2023-01-05	A lightweight C++ implementation of the Supermemo SM2 algorithm for spaced based repetition flashcards that focuses on simplicity, portability, and testability.
+D8	dankimio/repetition	22	MIT	2022-12-06	Ruby implementation of the SuperMemo2 spaced-repetition algorithm
+D8	hadealahmad/MonthlyQuran	22	NONE	2026-10-09	A Progressive Web App (PWA) for tracking Quran memorization using a scientifically-backed 7-station spaced repetition algorithm.
+D8	adamgibbons/guru	22	NONE	2016-01-19	Implements SuperMemo-2, a spaced repetition algorithm that optimizes learning based on assigning difficulty levels to paired associates.
+D8	helephant/SpacedRepetition.Net	21	MIT	2020-04-13	A .NET library that implements spaced repetition algorithms
+D9	darshan-panchal1/curriculum-forge	1	NONE	2026-01-06	AI-powered educational curriculum generator with async LangGraph orchestration, Groq LLM, Qdrant vector DB, automated WCAG accessibility auditing, and Common Co
+D9	appinventor-foundation/csta-linking	1	MIT	2025-08-27	Web tool that scans curriculum PDFs to pinpoint and highlight their alignment with CSTA standards
+D9	Caio-de-Souza-Marinho/ft_printf	1	MIT	2026-03-18	Reimplementation of the C standard printf() function as part of the 42 curriculum. This project includes full support for format parsing, variadic arguments, an
+D9	jinlize-tech/edu-curriculum-standards-alignment	0	Apache-2.0	2026-11-08	Skill | 03 教学教研中心 | Planned / 待研发
+D9	discrafty-cpu/RMS-Standards-Alignment	0	NONE	2026-04-09	CPM Curriculum vs State Standards Alignment Database & Viewer — Drummond Math Solutions
+D9	Zion-support/curriculum-alignment-checker	0	NONE	2026-10-04	Check course materials against curriculum standards automatically — Zion Tech Group App Network (Batch 68, Education & Learning AI).
+D9	deekshasriv1111-cpu/curriculum-alignment-checker	0	NONE	2026-08-06	Paste a lesson plan, get the IB-style standards it hits and misses with confidence scores, and accept or reject each flag. Runs entirely in the browser — no API
+D9	chsc1053/curriculum-redefined	0	GPL-3.0	2024-07-04	A Python-based web app to evaluate and enhance university curricula in alignment with industry standards
+D9	hafizmz/tcs56-programme-alignment	0	MIT	2026-11-16	Assess one programme's curriculum against the IAEA TCS-56 medical physics education standard (MATLAB)
+D9	jordan-guanga-portfolio/curriculum-mapper	0	NOASSERTION	2026-08-25	Standards-alignment tool: maps courses, units & assessments to frameworks (e.g. CCSS), surfaces coverage gaps, and exports a curriculum outline. Next.js · TypeS
+D9	ncreighton/73819f6b-k-12-education-curriculum-mapp	0	NONE	2026-08-05	K-12 Education Curriculum Mapping And Standards Alignment — structured system that scales with your work. Ready to use immediately.
+D9	akarpo/tsd-standards	0	NOASSERTION	2026-05-05	Michigan K-12 academic standards & skills matrix (Math, ELA, Science, Economics, CS) with free learning resources, AP/NWEA alignment, and a Troy School District
+D9	awg12345/zcontent	0	ODbL-1.0	2026-10-23	Marble Skill Taxonomy — what children learn across primary/elementary years (micro-topics, prerequisite graph, curriculum standards alignment)
+D9	DanielRMangru/CA-Standards-Based-Lesson-Planner	0	NONE	2026-07-08	Standards-Based Lesson Planner is a TypeScript-powered web app that helps educators design, organize, and manage lesson plans aligned to academic standards. It 
+D9	victorwangzx/standard-aligned-lesson-designer	0	NONE	2026-09-08	Codex skill for textbook analysis, curriculum-standard alignment, staged planning ideas, and formal lesson designs
+D9	SHESHAL01/DSGP_Group_27	0	NONE	2026-04-04	SkillSync is an integrated AI platform that analyzes IT job market trends, evaluates academic curriculum alignment, and predicts graduate employability. Built w
+D9	ahmarshahid/University-CLO-s-Management	0	NONE	2024-04-14	My latest creation: a Course Learning Outcomes (CLO) Management System powered by C# and a robust database backend! 🚀  This innovative system empowers education
+D10	ctchanandy/moodle-mod_assessment	1	NONE	2020-10-20	Assessment module for Moodle 2.X, it support teacher, self and peer assessment using rubric as grading method.
+D10	arockiasachin/ai-assessment-platform	0	NONE	2026-09-28	AI-powered collaborative learning and assessment platform: LLM quiz generation, rubric-based grading with teacher review, sandboxed code evaluation, and team/pe
+D10	sanyaade-teachings/capstone-evalsystem	0	NONE	2026-05-22	An integrated academic evaluation system combining adviser assessments and peer evaluations to provide structured, rubric-based grading for student teams.
+D10	tetWantsToCode/capstone-merged-evaluation-system	0	NONE	2026-05-17	An integrated academic evaluation system combining adviser assessments and peer evaluations to provide structured, rubric-based grading for student teams.

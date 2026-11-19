@@ -3071,3 +3071,143 @@ lawful basis for processing a minor's voice is the question procurement will ask
 **Estimate.** Shape A: **3–5 weeks** — it is largely deployment, configuration and an on-premise
 speech tier, which is why it is the one to propose first. Shape B: **12–16 weeks** to a product,
 plus the data-protection tier.
+
+## P38 — Issue a verifiable diploma from the LMS the client already runs, under Europass / eIDAS 2.0 (added `p917`)
+
+**Who it is for.** An EMEA institution — university, polytechnic, national training agency — that
+must issue credentials a third party can verify without calling the registrar, and that already runs
+Moodle, Canvas or Open edX. 🔴 **This is the one pattern in this file with a statutory driver
+instead of a value proposition** (`T49`): Europass plus eIDAS 2.0 make learner-held
+machine-verifiable credentials a compliance target, and the European Commission publishes the
+reference implementation under **Apache-2.0**, so the build-versus-adopt question is pre-answered.
+
+### Stack
+
+| Layer | Repo | Licence | Why this one |
+|---|---|---|---|
+| LMS (unchanged) | `moodle/moodle` · `openedx/edx-platform` · `instructure/canvas-lms` | GPL-3.0 / AGPL-3.0 | 🔴 Never forked. Completion data is read out over LTI 1.3, so the copyleft stays on their side of the seam |
+| Launch + roster seam | `academic-innovation/django-lti` | **MIT** (byte-read 1,098 B) | 🟢 **Live** — pushed 2026-11-17. Use this, **not** `dmitry-viskov/pylti1.3`, which is 27 months idle (`917-F3`) |
+| Issuer service | `eu-digital-identity-wallet/eudi-srv-pid-issuer` | **Apache-2.0** (9,425 B) | The Commission's own OpenID4VCI issuer. Deploy it to get a working credential flow before writing any code |
+| Issuance library | `eu-digital-identity-wallet/eudi-lib-jvm-openid4vci-kt` | **Apache-2.0** (9,425 B) | Kotlin/JVM issuance half, for binding diploma attributes into the credential |
+| Learner wallet (web) | `wwWallet/wallet-frontend` | **BSD** (1,309 B) | 🟢 Browser-first, so **no app install** — the deciding factor for a cohort that will not download anything |
+| Learner wallet (mobile) | `a-sit-plus/vck` | **Apache-2.0** (11,358 B) | Kotlin Multiplatform: Android + iOS + JVM from one codebase. Pushed 2026-11-19 |
+| Jurisdiction-neutral alternative | `openwallet-foundation/multipaz` | **Apache-2.0** (11,358 B) | 🔵 Swap in when the client is **not** EU-bound and the EUDI stack would over-fit |
+
+### How it wires together
+
+```
+Moodle / Canvas / Open edX          (GPL-3.0 / AGPL-3.0 — untouched, not forked)
+        │
+        │  LTI 1.3 launch + Names-and-Roles + Assignment-and-Grade services
+        ▼
+academic-innovation/django-lti      (MIT — YOUR tool, a separate work)
+        │   reads: learner id, course, completion, final grade
+        ▼
+your attribute-mapping service      (studio IP — the only closed component)
+        │   maps LMS completion → a credential schema (Europass / ELM)
+        ▼
+eudi-srv-pid-issuer                 (Apache-2.0)
+ + eudi-lib-jvm-openid4vci-kt       (Apache-2.0)
+        │   OpenID4VCI issuance; SD-JWT VC so the holder discloses selectively
+        ▼
+wwWallet/wallet-frontend  (BSD)  ──or──  a-sit-plus/vck  (Apache-2.0)
+        │
+        ▼
+employer / another institution verifies offline against the issuer's public keys
+```
+
+### Licence posture of the result
+
+🟢 **Every component outside the LMS is Apache-2.0, MIT or BSD, and the LMS is never modified.** The
+attribute-mapping service — the part that encodes *this* institution's diploma semantics — is the
+studio's own work and can stay closed. This is the cleanest licence posture of any pattern in this
+file, and it is clean because the whole tier is integration code, where permissiveness is a
+precondition of adoption (`T48`).
+
+🔴 **Two traps.** `Sphereon-Opensource/OID4VC`'s grant is on branch **`develop`**, not `main` — a
+`main`-only licence probe reports it ungranted. And `openid/OpenID4VCI` (131 ★) is the
+**specification text**, SPDX `NONE`, *not software*: it is not a dependency, and importing it as one
+is how a spec repo ends up in a bill of materials.
+
+### Sequencing that makes it sellable
+
+1. **Weeks 1–2 — issue one credential, end to end.** Deploy `eudi-srv-pid-issuer` as shipped, issue
+   a hard-coded test credential, verify it in `wallet-frontend`. No LMS involved. This is the demo
+   that unlocks the budget, and it needs no integration work at all.
+2. **Weeks 3–5 — attach the LMS.** `django-lti` as a registered LTI 1.3 tool; read completion for
+   one course only.
+3. **Weeks 6–9 — the attribute mapping.** Map that course's completion to a Europass-shaped
+   credential schema. 🔵 This is where the engagement's real cost sits, and it is institution-specific
+   — which is exactly why it is defensible studio IP rather than something upstream will absorb.
+4. **Weeks 10–12 — the mobile wallet, only if asked.** `vck` across Android and iOS. Skip it when
+   the web wallet suffices; it frequently does.
+
+**Estimate.** **6–9 weeks** for web-only issuance against one course; **10–14 weeks** with a mobile
+wallet and more than one faculty's credential schemas.
+
+### Where it does not apply
+
+🔴 **Outside EMEA, do not lead with this.** North America, APAC and LATAM have no equivalent
+mandate, so there is no compliance driver and the pattern has to be justified on
+employer-verification value, which is a much harder sale and a longer pilot. For **LATAM**
+specifically, `gdgguadalajara/open-badges-platform` (AGPL-3.0, pushed 2026-08-31, Guadalajara) is the
+regionally-authored starting point and carries a sovereignty story the EU stack does not — but read
+its copyleft first: AGPL s.13 imposes network-use source disclosure on a hosted deployment.
+🔴 **And do not propose this on top of the Mozilla badging estate.** `mozilla/openbadges-*` is
+MPL-2.0 and marked *"No Longer Maintained"*; `1EdTech/openbadges-specification` is ungranted at four
+layers. The badging *platforms* are an archaeological site (`p916`); the infrastructure beneath them
+is not.
+
+## P39 — Maths hints, not maths answers, inside an existing tutoring deployment (added `p917`)
+
+**Who it is for.** A client running a maths intervention — district, tutoring provider, or a
+university's developmental-maths programme — that has learner mastery data and wants scaffolded
+hints rather than worked solutions.
+
+### Stack
+
+| Layer | Repo | Licence | Role |
+|---|---|---|---|
+| Hint generation | `DigitalHarborFoundation/llm-math-education` | **MIT** (byte-read 1,073 B) | 🟢 RAG for middle-school maths **question answering and hint generation**, with the retrieval corpus separable from the generator |
+| Mastery estimation | `CAHLR/OATutor` | **MIT** | Bayesian Knowledge Tracing + a scaffolded-hint UI that already assumes a hint, not an answer |
+| Knowledge-tracing models | `pykt-team/pykt-toolkit` | **MIT** | When BKT is too coarse and the client has enough interaction history to fit a deep KT model |
+| LMS seam | `academic-innovation/django-lti` | **MIT** | Launch and roster from Moodle / Canvas / Open edX without forking either |
+| Local inference | `ollama/ollama` or `vllm-project/vllm` | MIT / Apache-2.0 | 🔴 Minors' interaction data. On-premise is a procurement requirement in most of these buyers (`T6`) |
+
+### How it wires together
+
+```
+LMS  ──LTI 1.3──▶  django-lti (MIT)
+                        │  learner id + course context
+                        ▼
+                   OATutor (MIT) ── BKT mastery estimate per skill
+                        │  "this learner is weak on fraction equivalence"
+                        ▼
+          llm-math-education (MIT) ── retrieves from the DISTRICT's own
+                        │              curriculum corpus, generates a HINT
+                        ▼
+                   OATutor's scaffolded-hint UI renders it
+                        │
+                        ▼
+              interaction logged back ──▶ pykt-toolkit (MIT) refits the model
+```
+
+🟢 **The composition is the value, and neither project knows about the other.** `OATutor` decides
+*what the learner is weak on*; `llm-math-education` decides *what to say about it*. Every component
+is MIT, so the result can ship closed.
+
+🔴 **Swap the retrieval corpus before the first demo.** `llm-math-education`'s shipped corpus is
+middle-school maths from one US programme. Pointing it at the client's own curriculum is a day of
+work and is the difference between a demo and a pilot — and in LATAM or EMEA it is also the
+difference between a standards-aligned product and an imported one.
+
+**Estimate.** **4–6 weeks** for one skill area inside an existing OATutor deployment; **8–11 weeks**
+with on-premise inference and a client-supplied curriculum corpus.
+
+### Where it does not apply
+
+Not for summative assessment — this is a formative-feedback pattern, and `T10`'s finding that
+detection is being abandoned in favour of assessment redesign is the relevant caution: a hint
+generator inside a graded assessment is an integrity problem, not a feature. And not where the
+client cannot supply a curriculum corpus: without one, the retrieval tier has nothing to ground on
+and the output degrades to a general chatbot, which is the pitch `T10` records as fading.

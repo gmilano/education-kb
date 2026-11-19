@@ -6,7 +6,7 @@ updated: 2026-11-19
 
 # Current trends — education
 
-**Forty-seven trends, re-counted mechanically in `p916`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **47**; `T44`–`T47` added in `p916`. 🔵 The rule this line has now carried through four passes finally held: `p916` ran the command rather than editing the word.) (*prior banner:* **Forty-three trends, re-counted mechanically in `p915`** (🔴 **this line read *"Thirty-nine"* and was four short — `T40`–`T42` were added in `p914` and `T43` in `p915`, and `p914` incremented nothing. That is the *third* consecutive recurrence of the drift this very sentence was written to stop, which makes the rule worth restating as a procedure rather than a warning: 🔵 the count is `grep -cE '^## T[0-9]+' intel/trends.md`, it is **43**, and a pass that adds a trend re-runs that command instead of editing the word.*)* (🔴 this line read *"Thirty-one"* and was **eight short**: `T32`–`T38` were added in `p908`–`p912` and `T39` in `p913`. `compose/patterns.md` carries the rule — *a pass that adds one should re-count, not increment* — and this file drifted the same way and further. 🔵 The count is `grep -cE '^## T[0-9]+' intel/trends.md`; **do not hand-edit it.** `T37` is **materially corrected in `p913`** and `T38` has a second chapter added in `p913`.) (**T30 and T31 added in `p907`** — the LMS-to-agent bridge being built per-institution on the *user's own credentials*, which needs no institutional consent; and the agent-skill marketplaces having no education tier at all, which makes `T26`'s distribution channel measurably empty. Both are the first trends in this file derived from **global code search**, an instrument this base had recorded as unusable; **T29 added in `p906`** — vernacular open education supply measured across eight languages and found to be a single-country phenomenon, with *no licence at all* the default state in the other seven; **T26 added in `p903`** — the unit of publication shifting from the
+**Forty-nine trends, re-counted mechanically in `p917`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **49**; `T48`–`T49` added in `p917`, and the command was run before the word was written, not after). (*prior banner:* **Forty-seven trends, re-counted mechanically in `p916`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **47**; `T44`–`T47` added in `p916`. 🔵 The rule this line has now carried through four passes finally held: `p916` ran the command rather than editing the word.).) (*prior banner:* **Forty-three trends, re-counted mechanically in `p915`** (🔴 **this line read *"Thirty-nine"* and was four short — `T40`–`T42` were added in `p914` and `T43` in `p915`, and `p914` incremented nothing. That is the *third* consecutive recurrence of the drift this very sentence was written to stop, which makes the rule worth restating as a procedure rather than a warning: 🔵 the count is `grep -cE '^## T[0-9]+' intel/trends.md`, it is **43**, and a pass that adds a trend re-runs that command instead of editing the word.*)* (🔴 this line read *"Thirty-one"* and was **eight short**: `T32`–`T38` were added in `p908`–`p912` and `T39` in `p913`. `compose/patterns.md` carries the rule — *a pass that adds one should re-count, not increment* — and this file drifted the same way and further. 🔵 The count is `grep -cE '^## T[0-9]+' intel/trends.md`; **do not hand-edit it.** `T37` is **materially corrected in `p913`** and `T38` has a second chapter added in `p913`.) (**T30 and T31 added in `p907`** — the LMS-to-agent bridge being built per-institution on the *user's own credentials*, which needs no institutional consent; and the agent-skill marketplaces having no education tier at all, which makes `T26`'s distribution channel measurably empty. Both are the first trends in this file derived from **global code search**, an instrument this base had recorded as unusable; **T29 added in `p906`** — vernacular open education supply measured across eight languages and found to be a single-country phenomenon, with *no licence at all* the default state in the other seven; **T26 added in `p903`** — the unit of publication shifting from the
 application to the agent-addressable curriculum corpus, the first trend in this file derived from a
 non-English repository channel; **T25 added in `p902`** — the licence trap moving from code to the data
 and content assets, where no index can see it; **T24 added in `p901`** — path-dependent licences, the first trend in this file derived from repositories the SPDX channel refused to resolve at all; **T23 added in `p900`** — the first trend in this file derived from a
@@ -2035,3 +2035,53 @@ base holds many such plugins.
 
 **Implication for delivery.** `G1`'s pre-flight reads the file-header layer before recording any
 ecosystem-plugin row as ungranted. `916-G2` registers the sweep that bounds the class.
+
+## T48 — Education's new permissive supply is arriving as *infrastructure*, not as agents — and it is invisible to every education-named query
+
+**Added `p917`**, and it is a ratio rather than an observation. Twenty-eight `search/repositories`
+discovery legs this pass — eight on credential shapes, ten re-measuring voids, ten on angles no
+prior pass had run (essay scoring, question generation, IEP, timetabling, textbook authoring,
+pronunciation, proctoring, spaced repetition, standards alignment, peer assessment) — produced:
+
+| What was found | Count | Grants |
+|---|---|---|
+| New education-*specific* agents | **1** | `DigitalHarborFoundation/llm-math-education`, MIT |
+| New credential / identity **infrastructure** repositories | **11** | 10 × Apache-2.0 or BSD, 1 × BSD |
+| New LTI 1.3 **integration** repositories promoted from the log | **5** | 3 × MIT, 1 × Apache-2.0, 1 × BSD |
+
+🔴 **And the infrastructure cannot be found by asking for education.** Every education-named query
+shape for the credential tier returns 1–12 results; the two shapes that name a **standard or
+programme** return **85** (`OpenID4VCI`) and **252** (`europass`). The libraries are general-purpose
+identity infrastructure on which education credentials are one vertical, so they do not carry the
+word.
+
+**Implication for delivery.** A studio surveying "open source AI for education" by subject will
+conclude the field is thin and university-built — which is what `T2` says and what the global
+WebSearch legs still return. That survey misses the most permissive and most actively-pushed tier
+in this base. 🔵 **Query the standard, not the subject**: `OpenID4VCI`, `LTI 1.3`, `xAPI`, `Caliper`,
+`OneRoster`, `QTI`, `Ed-Fi`, `europass`. The integration seam is where the permissive code is,
+because the seam is where a licence has to be permissive for anyone to adopt it.
+
+## T49 — `T15` is complicated, not contradicted: where a regulator *publishes* rather than only prohibits, open supply is abundant and permissive
+
+**Added `p917`.** `T15` measured that open source has built least where regulation has decided most,
+and that still holds for the cohorts it measured — proctoring, emotion recognition, exam integrity:
+tiers where the regulation is a **prohibition**. `p917` measured a tier where the regulation is a
+**mandate with a reference implementation**, and the correlation inverts.
+
+| Regulatory posture | Example | Open-source supply |
+|---|---|---|
+| Prohibition (`T15`) | emotion recognition in schools, banned in the EU since 2026-02-02 | 🔴 effectively none, and what exists is unusable |
+| High-risk duty, no implementation published | Annex III education obligations, 2027-12-02 | 🟡 thin; compliance tooling is proprietary |
+| **Mandate + published reference implementation** | **Europass + eIDAS 2.0** | 🟢 **11 repositories, 10 Apache-2.0/BSD, three published by the European Commission itself** |
+
+🔵 **The mechanism is procurement, not altruism.** A mandate creates a verification requirement that
+every member state and every institution must satisfy interoperably; an interoperable requirement
+cannot be met by a proprietary reference, so the regulator publishes one permissively and the
+ecosystem builds against it. 🔴 **This is why EMEA is the only region where this tier is a
+compliance conversation rather than a product pitch** — and why the same technology must be sold on
+employer-verification value in North America, APAC and LATAM, which have no equivalent mandate.
+
+**Implication for delivery.** Before concluding a regulated tier has no open supply, check which
+*kind* of regulation it is. A prohibition suppresses supply; a mandate with a published reference
+implementation manufactures it. See `repos/foundations.md` and `verticals/solutions.md`.

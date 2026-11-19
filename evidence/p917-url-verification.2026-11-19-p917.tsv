@@ -1,0 +1,26 @@
+url	http_raw	verdict
+https://github.com/1EdTech/openbadges-specification	200	200 @ main/README.md
+https://github.com/DigitalHarborFoundation/llm-math-education	200	200 @ main/README.md
+https://github.com/GSU-CETLOE/lti1p3Library-python	200	200 @ main/README.md
+https://github.com/Lumieducation/Lumi	200	200 @ master/README.md
+https://github.com/Lumoin/Verifiable	200	200 @ main/README.md
+https://github.com/OWNER/REPO	N/A	PROSE PLACEHOLDER, not a data row — quoted verbatim inside finding 917-F10, which is ABOUT this placeholder being mistaken for a row. Uppercase is the discriminator; `grep -F 'owner/repo'` over the delivery pages returns nothing
+https://github.com/Sphereon-Opensource/OID4VC	200	200 @ main/README.md
+https://github.com/a-sit-plus/vck	200	200 @ main/README.md
+https://github.com/academic-innovation/django-lti	200	200 @ main/README.md
+https://github.com/blackboard/BBDN-lti-1p3-tool-example	200	200 @ main/README.md
+https://github.com/christophse/django-lti-tool	200	200 @ main/README.md
+https://github.com/dmitry-viskov/pylti1.3	200	200 @ master/README.rst
+https://github.com/eu-digital-identity-wallet/eudi-lib-android-wallet-core	200	200 @ main/README.md
+https://github.com/eu-digital-identity-wallet/eudi-lib-jvm-openid4vci-kt	200	200 @ main/README.md
+https://github.com/eu-digital-identity-wallet/eudi-srv-pid-issuer	200	200 @ main/README.md
+https://github.com/h5p/h5p-editor-php-library	200	200 @ master/README.md
+https://github.com/impierce/openid4vc	200	200 @ main/README.md
+https://github.com/justinhunt/moodle-mod_readaloud	200	200 @ master/README.md
+https://github.com/lmddc-lu/microlms	200	200 @ main/README.md
+https://github.com/marceloschmitt/moodle-block_analytics_graphs	200	200 @ master/README.md
+https://github.com/openwallet-foundation/multipaz	200	200 @ main/README.md
+https://github.com/procivis/one-core	200	200 @ main/README.md
+https://github.com/procivis/one-wallet	200	200 @ main/README.md
+https://github.com/ucfopen/cookiecutter-python-lti	200	200 @ main/README.md
+https://github.com/wwWallet/wallet-frontend	200	200 @ master/README.md

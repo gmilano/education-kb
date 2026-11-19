@@ -88,6 +88,23 @@ data access* rather than education agents.
 
 ### North America
 
+🟢 **Opportunity added `p917` — the maths-hint layer, and it is the only new education-specific
+agent 28 discovery legs produced.** `DigitalHarborFoundation/llm-math-education` (**MIT**, byte-read
+1,073 B, 47 ★, pushed 2026-11-14) is placed here on `digitalharbor.org` in its `pyproject.toml`. It
+generates **hints**, not answers — the output an intelligent-tutoring deployment needs — and it
+composes with `CAHLR/OATutor`'s Bayesian mastery estimates, which this base already holds and which
+is also North American (UC Berkeley). **The region's supply pattern from `p899` holds: North America
+builds the assessment and learner-modelling layer.**
+
+🔴 **Demand-side, re-measured `p917`.** Roughly **100 state bills** touching K-12 AI were tracked
+this year and **at least 15 states** have introduced or passed AI-in-education legislation — which
+for a national vendor is a **compliance-surface** problem, not a product problem, and is sellable as
+one. The US Department of Education released **$169M** in FIPSE awards including responsible-AI use.
+🔵 And the cautionary datum for anyone pitching homework-help: **Chegg cut 45% of staff (388 roles)**
+as AI tools took its traffic. 🟡 Every figure here is from secondary reporting; the state-level
+items are the better-sourced half.
+
+
 🟢 **Opportunity added `p916` — the registrarial and advising tier, and it is the one North American
 tier with *permissive* supply.** `p916`'s degree-audit and advising legs placed four rows in this
 region by README content: `Longhorn-Developers/Degree-Audit-Plus` (**MIT**, UT Austin, pushed
@@ -612,6 +629,28 @@ A 9190, EO 14277, the US Department of Education framework and Berkeley Law were
 already written.
 
 ### EMEA
+
+🟢 **Opportunity added `p917` — and it is the strongest regional asymmetry this base has measured.**
+`p917` discharged `916-G4` and found that the verifiable-credential tier is not built from education
+repositories at all but from the **eIDAS 2.0 / OpenID4VCI wallet estate** — eleven repositories
+shelved, **ten of them Apache-2.0 or BSD**, five placed EMEA, and **three published by the European
+Commission itself** (`eu-digital-identity-wallet/*`). See `repos/foundations.md`.
+
+🔴 **Why this is an EMEA opportunity and not a global one.** EMEA is the only region with a
+**statutory** driver: Europass plus eIDAS 2.0 make a learner-held, machine-verifiable diploma a
+compliance target, so the build-versus-adopt question is already settled by the Commission
+publishing the reference implementation under Apache-2.0. Everywhere else the same technology has to
+be sold on employer-verification value. **The engagement shape is integration, not invention.**
+
+🟡 **Demand-side, re-measured `p917`, and the regulatory date is unchanged and still unverified at
+source.** Six independent secondary analyses place Annex III / education high-risk obligations at
+**2 December 2027** under **Article 113(c)**; emotion recognition in schools has been prohibited
+since **2 February 2025**. Adoption is high and ungoverned — a Europe-wide study of adult educators
+found adoption *"largely autonomous and without a clear regulatory framework"*, with **>90% of
+Spanish respondents** using AI in their work, while the Commission's own Eurydice report finds
+school-level access to advanced AI *uneven*. 🔴 **Seventh consecutive pass with no primary legal
+text**: `eur-lex.europa.eu` does not resolve from this environment (`917-G1`).
+
 
 🟢 **Opportunity added `p916` — credentialing and in-LMS analytics, both with the copyleft question
 already answered.** `openbadgefactory/salava` (**Apache-2.0**, Discendum, **Finland**) is the only
@@ -1596,6 +1635,23 @@ problem — so this nil is still not evidence of saturation.
 
 ### APAC
 
+🔴 **`p917` placed NOTHING in this region, and that is recorded rather than left as silence.** Of
+this pass's **17** promotion candidates, **zero** placed APAC on any channel — not a README, not a
+packaging manifest, not an institutional e-mail domain. 🔵 **The gap is not low AI activity.** The
+regional WebSearch leg returned a great deal: roughly **86% of Southeast Asian teachers** already
+using AI tools (EdTech Hub, March 2026); the fastest regional growth of any market, though the CAGR
+estimates conflict badly (**20.9%** vs **35.3%**, which is itself the finding); and the Philippines'
+Department of Education launching **`AGAP.AI`** in January 2026, described as the country's first
+nationwide responsible-AI programme in basic education. **The gap is that none of this activity is
+arriving as permissively-licensed public repositories.** Governance is ministry-split across ASEAN
+and **fewer than half** of educators report confidence in institutional or government AI policy.
+
+🟡 **The delivery read.** APAC demand is real, large and *not* mediated by open source, so an APAC
+engagement is served by this base's `Global` tier plus national-programme integration — not by
+regional supply, because `p899`'s "APAC builds the tutors" pattern has produced no new permissive
+row in this pass. `917-G3`.
+
+
 🔴 **Declared gap, `p916`: eleven discovery legs produced *no* APAC-placed row.** The legs were
 dropout/early-warning, academic advising, degree audit, open badges, verifiable credentials, learner
 record, reading fluency, virtual laboratory, knowledge tracing, student information system and
@@ -2397,6 +2453,33 @@ regulatory-led posture and Australia's National AI Plan were all returned and al
 
 ### LATAM
 
+🟢 **One row placed LATAM this pass, and the channel that placed it is the transferable part.**
+`marceloschmitt/moodle-block_analytics_graphs` (GPL-3.0-or-later) was carried **unplaced** by `p916`
+and is now placed **Brazil** — from the `@copyright` line of its Moodle `version.php`, which carries
+the institutional e-mail domain `poa.ifrs.edu.br` (Instituto Federal do Rio Grande do Sul, Porto
+Alegre), with a **2026** copyright year. Half of `916-G6` discharged. 🔵 The generalisation now
+drives a committed instrument (`ingest/p917-affiliation-manifest.sh`): **where a README carries no
+country signal, the packaging manifest often does.**
+
+🔴 **And a correction to how this base has been reading LATAM supply.** `p917` refuted `p890`'s
+LATAM Spanish and Portuguese "voids" **on count** — `plataforma educativa aprendizaje` returns
+**240** against the original shape's 4, and `educacao plataforma ensino` returns **27** against 2.
+🔴 **But the shelf is still empty: the most-starred row in those 240 has 5 stars**, and in the 27 it
+has 7. **A refuted count is not a populated shelf**, and publishing the 240 without the
+top-of-shelf figure would misrepresent regional supply as something a client could build on
+(`917-F2`, `T978`).
+
+🟡 **Demand-side, re-measured `p917`, and the adoption-governance gap is the sellable one.** The
+Digital Education Council's 2026 LATAM survey puts **92% of students and 79% of faculty** actively
+engaging with AI while **only 30%** believe their institution has responded effectively — the widest
+adoption-versus-readiness gap of any region this base measures. UNESCO IESALC's September 2026
+working paper finds significant gaps **between private and public universities**; the IDB's analysis
+of **193 initiatives** describes the region as building *hybrid, context-sensitive* systems rather
+than importing designs. EdTech Hub and **Fundación Ceibal** announced a regional partnership in
+September 2026. 🔵 **The engagement is institutional AI governance, not tooling** — the tools are
+already in use.
+
+
 🟢 **Opportunity added `p916`, and it is the strongest regional supply finding in this pass.**
 **The only actively-developed standalone open-source Open Badges platform this base can find, in any
 region, is LATAM-origin**: `gdgguadalajara/open-badges-platform` (**AGPL-3.0**, Guadalajara,
@@ -3162,6 +3245,23 @@ Both are vendor-blog citations of unnamed primary reports. **See
 adds two more disagreeing figures and no new primary source.**
 
 ## Declared gaps
+
+### Declared in `p917`
+
+- 🔴 **`917-G1` — seventh consecutive pass with no primary legal text.** `eur-lex.europa.eu`,
+  `oecd.org` and `unesco.org` do not resolve from this environment; `915-F2` established the failure
+  is **DNS, not HTTP**, so another HTTP client is wasted effort. Every EU AI Act date in this file
+  is from secondary analysis and is marked as such. Remedy: one pass from a session whose network
+  policy resolves those three hosts.
+- 🔴 **`917-G3` — APAC placed zero rows against a demand picture that is large and well-sourced.**
+  See the APAC subsection. Remedy: a pass that queries APAC supply in **non-English shapes** — the
+  LATAM legs this pass showed a vernacular query can move a count by two orders of magnitude, and
+  that experiment has never been run for Mandarin, Japanese, Korean, Bahasa or Hindi.
+- 🟡 **`917-G4` — market size is unquotable and this file should stop implying otherwise.** The
+  `p917` legs returned, for the same year: **$10.6B → $42.48B by 2030 at 41.5% CAGR**, and
+  **$47.78B (2025) → $1,169.44B by 2035**. These differ by a factor of ~25 on the out-year. Remedy:
+  quote adoption rates, which are survey-measured and broadly agree, and quote market size only with
+  the source named inline.
 
 ### Declared in `p915`
 

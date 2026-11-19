@@ -1,0 +1,21 @@
+repo	region	signal	channel	note
+ucfopen/cookiecutter-python-lti	North America	"Central Florida"; "Michigan"	README byte-read	University of Central Florida open-source org
+DigitalHarborFoundation/llm-math-education	North America	digitalharbor.org	pyproject.toml e-mail domain	named foundation domain; Baltimore MD
+eu-digital-identity-wallet/eudi-lib-android-wallet-core	EMEA	European Commission; eIDAS	README byte-read	official EU reference implementation
+eu-digital-identity-wallet/eudi-lib-jvm-openid4vci-kt	EMEA	European Commission; eIDAS	README byte-read	same estate
+eu-digital-identity-wallet/eudi-srv-pid-issuer	EMEA	European Commission; eIDAS	README byte-read	same estate
+a-sit-plus/vck	EMEA	European Commission; European Union	README byte-read	A-SIT Plus
+wwWallet/wallet-frontend	EMEA	Greek; NGI	README byte-read	EU NGI-funded
+Lumoin/Verifiable	EMEA	eIDAS	README byte-read	eIDAS-oriented .NET implementation
+lmddc-lu/microlms	EMEA	lmddc.lu	pyproject.toml e-mail domain	.lu ccTLD
+marceloschmitt/moodle-block_analytics_graphs	LATAM	marcelo.schmitt@poa.ifrs.edu.br	version.php @copyright (916-G6)	IFRS Porto Alegre, Brazil; copyright year 2026
+academic-innovation/django-lti	UNPLACED	academic-innovation.github.io (PLATFORM, suppressed 917-F6)	README + 14 manifests	no institutional signal
+GSU-CETLOE/lti1p3Library-python	UNPLACED	gmail.com (CONSUMER MAILHOST, suppressed 917-F6)	README + 14 manifests	owner name is not evidence (913-F2)
+blackboard/BBDN-lti-1p3-tool-example	UNPLACED	none	README + 14 manifests	no signal
+christophse/django-lti-tool	UNPLACED	posteo.me (CONSUMER MAILHOST, suppressed 917-F6)	setup.cfg	no institutional signal
+Sphereon-Opensource/OID4VC	UNPLACED	1.0.1.patch (VERSION STRING, suppressed 917-F6)	package.json	false positive in p917's own first cut
+impierce/openid4vc	UNPLACED	www.impierce.com	Cargo.toml homepage	corporate homepage carries no country
+procivis/one-core	UNPLACED	none	README + 14 manifests	README names OpenWallet Foundation + eIDAS, neither a country
+openwallet-foundation/multipaz	UNPLACED	none	README + 14 manifests	foundation is multi-national by charter
+kirstykitto/CLAtoolkit	UNPLACED	none	README 9,026 B + 14 manifests	916-G6 remedy RUN and returned nothing
+APAC	NO-PLACEMENT	-	all channels	zero of 17 p917 promotion candidates placed APAC; declared, not glossed (917-G3)

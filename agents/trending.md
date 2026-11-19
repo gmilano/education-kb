@@ -4,6 +4,172 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p917) — **Three of the four voids `p890` left standing are REFUTED, and the fourth is CONFIRMED — so `916-G5` was right that re-running a query can only confirm, and wrong to expect every void to fall. The pass's own best find is not a discovery at all: the Python LTI 1.3 estate has FOUR live permissive repositories sitting in this log while the one row on the delivery surface is the one this base flags as 27 months idle. 🔴 `916-F8` overstated a lost channel: `search/users` is reachable here — it just cannot place a region.**
+
+**Channels and posture.** `gh api search/repositories` over **28** legs: 8 on `916-G4`'s
+credential shapes, 10 on `916-G5`'s void re-measurement, 10 on discovery angles distinct from
+`p914`'s seven, `p915`'s twelve and `p916`'s eleven (essay scoring, question generation, IEP,
+timetabling, textbook authoring, pronunciation, proctoring, spaced repetition, standards
+alignment, peer assessment). Diffed against **18,883** addresses and bare slugs grepped from the
+delivery pages and this register. Grants adjudicated with `ingest/p913-grant-authority.sh`,
+**patched this pass** (`917-F4`). Plus the **8 mandated WebSearch legs** (4 global, 4 regional).
+Evidence: `evidence/p917-g4-legs`, `p917-g4-hits`, `p917-g5-legs`, `p917-g5-hits`,
+`p917-discovery-legs`, `p917-discovery-hits`, `p917-grants-reported`, `p917-header-layer`,
+`p917-shelf-metrics`, `p917-region-placement`, `p917-affiliation-manifest`,
+`p917-websearch-legs`, all `.2026-11-19-p917.tsv`.
+
+### 🟢 `917-F1` `916-G5` discharged — **3 of 4 voids refuted by shape alone, 1 confirmed**
+
+`916-G5` called itself "the highest-value gap this pass declares": `916-F3` had refuted the oral
+reading fluency void by changing query shape, and the other three voids in `p890`'s table had only
+ever been confirmed by re-running their original query, which `T44` shows can only confirm.
+Re-measured in shapes their originals did not use:
+
+| Void | Original shape | p917's new shape | Verdict |
+|---|---|---|---|
+| Python LTI 1.3 | `python LTI 1.3`-style AND-match | `"LTI 1.3" python` → **14**; `pylti1p3` → 2; `lti advantage django` → 1 | 🔴 **REFUTED** |
+| LATAM Spanish shelf | `tutor inteligente educacion` → **4** | `plataforma educativa aprendizaje` → **240** | 🔴 **REFUTED on count** |
+| LATAM Portuguese shelf | `tutor educacional aprendizagem` → **2** | `educacao plataforma ensino` → **27** | 🔴 **REFUTED on count** |
+| `OpenLiteracy` | `OpenLiteracy` → **0** | `"open literacy"` → **2**; `early literacy screener assessment` → **0** | 🟢 **CONFIRMED** |
+
+🔵 **The confirmation matters as much as the refutations.** `OpenLiteracy` survived a shape change,
+and the two hits on `"open literacy"` are an AR Chinese character-recognition app with no grant and
+a newsroom *source-protection* literacy kit — neither is education literacy. A void that holds
+under a *different* instrument is the only kind this base should keep publishing. This is `T44`'s mechanism — *an in-query known-good control is
+annihilated by any other qualifier* — applied to absence rather than to presence, and it yields a
+rule this base did not have: **re-running the original query cannot confirm a void; only a
+different shape can.** Registered as **`T977`**.
+
+### 🔴 `917-F2` A refuted count is not a populated shelf — and the LATAM legs prove it
+
+The two LATAM refutations are refutations **of the count and of nothing else**. The search API was
+called with `sort=stars`, so the 25 rows returned per leg *are* the most-starred:
+
+| Leg | Query | `total_count` | Top row's stars |
+|---|---|---|---|
+| `G5f` | `tutor inteligente educacion` | 4 | 1 |
+| `G5g` | `plataforma educativa aprendizaje` | **240** | **5** |
+| `G5h` | `tutor educacional aprendizagem` | 2 | 0 |
+| `G5i` | `educacao plataforma ensino` | **27** | **7** |
+
+🔴 **240 results whose most-starred member has 5 stars is an empty shelf with a large count.** The
+top of `G5g` is `yamil-abraham/learniverse` (5 ★, MIT), `ReducAR-dev/ReducAr` (3 ★, no grant),
+`LuisangelSS/MentorIA-` (3 ★, no grant) — coursework-scale projects. So `p890`'s LATAM voids were
+wrong as *absences* and right as *delivery judgements*, and this base has been conflating the two.
+**The operative rule: report a tier's count and its top-of-shelf star figure together, or the
+count will be read as supply that does not exist.** Registered as **`T978`**.
+
+### 🔴 `917-F3` The pass's largest delivery defect: the Python LTI 1.3 estate is logged, not shelved
+
+This is `916-R1`'s `logged-not-shelved` pathology again, and this time it sits on the integration
+seam every education engagement crosses. LTI 1.3 is how an AI tool attaches to Moodle, Canvas or
+Open edX **without inheriting their copyleft** — `compose/patterns.md` says so in three places.
+
+A promotion census over the delivery files versus this log:
+
+| Repo | Grant (byte-read) | Stars | Last push | Where it lives today |
+|---|---|---|---|---|
+| `dmitry-viskov/pylti1.3` | MIT | 138 | 🔴 **2024-08-18** | `repos/foundations.md` — the **only** delivery row |
+| `academic-innovation/django-lti` | **MIT** (1,098 B) | 26 | 🟢 **2026-11-17** | log only |
+| `ucfopen/cookiecutter-python-lti` | **MIT** (1,130 B) | 6 | 🟢 2026-05-12 | log only |
+| `GSU-CETLOE/lti1p3Library-python` | **MIT** (1,083 B) | 0 | 🟢 2026-10-28 | log only |
+| `blackboard/BBDN-lti-1p3-tool-example` | **Apache-2.0** (11,357 B) | 1 | 🟡 2023-11-13 | log only |
+| `christophse/django-lti-tool` | **BSD** (1,525 B) | 2 | 🟡 2024-06-20 | log only |
+
+🔴 **The delivery surface currently tells a client to vendor a 27-month-idle library**, in
+`repos/foundations.md`'s own words — *"read it as a reference implementation to vendor, not an
+upstream to track"* — **while a live MIT alternative pushed two days ago sits in this log.**
+`academic-innovation/django-lti` is shelved to `repos/foundations.md` this pass, and the other four
+with it. 🔵 Note what did **not** happen: `pylti1.3` was *not* a p917 discovery. `p900` added it,
+"logged 12×". The grep that established this is the one `913-F2` mandates.
+
+### 🔵 `917-F5` `916-F8` overstated a lost channel — `search/users` is reachable, and places nothing
+
+`916-F8` recorded `gh api users/{owner}` as blocked across fifteen owners and concluded
+*"every region placement in `p916` is from a byte-read README"*. The block is real and reproduced
+here. But `916-F8` never tried `search/users`, which is a **search** endpoint and answers normally:
+`search/users?q=user:kirstykitto` returns `{"login":"kirstykitto","type":"User"}`.
+
+🔴 **It resolves existence and account type, and it cannot place a region**, because the search
+*item* schema omits `location`, `company`, `bio` and `email` — 20 keys, none of them affiliation.
+So the conclusion `916-F8` reached is correct and its stated reason is wrong, which matters because
+a later pass reading "channel blocked" would not have retried it for the thing it *can* do:
+distinguishing a **User** from an **Organization** without burning a byte-read.
+
+### 🟢 `917-F7` One new education agent, byte-read, and it is the only one of 28 legs to produce one
+
+`DigitalHarborFoundation/llm-math-education` — **MIT** (byte-read `main/LICENSE`, 1,073 B), 47 ★,
+pushed **2026-11-14**. Retrieval-augmented generation for **middle-school maths question answering
+and hint generation**. Placed **North America** on `digitalharbor.org` in `pyproject.toml`
+(`917-F6`). 🔵 Declared plainly: **28 discovery legs produced exactly one new education-specific
+agent.** The other 11 promotions are credential infrastructure (`917-F8`, `repos/trending.md`
+`917-R1`). That ratio is the finding — this field's new supply is arriving as *infrastructure*, not
+as agents.
+
+### 🔴 `917-F9` Three delivery rows are live on `raw` and ABSENT on `search` — and `p916`'s `edx-platform` absence has now reproduced
+
+`p916` found `openedx/edx-platform` returning *"resources do not exist"* from
+`search/repositories` while `raw.githubusercontent.com` served it `200`, and called it `p900`'s
+false-absence class landing on the AGPL anchor of the whole LMS tier. **It is not a blip.**
+Re-probed one day later, it returns the same refusal. Measured across the 199 slugs in
+`agents/top.md`, `search/repositories` resolved **195**; one more was a prose placeholder of this
+pass's own making (`917-F10`), and three are live-but-absent:
+
+| Row | `search/repositories` | `raw.githubusercontent.com` | Absence shape |
+|---|---|---|---|
+| `DaRL-GenAI/instructional_agents` | `total_count: 0` | 🟢 `200`, README **29,948 B** | **silent** |
+| `mitodl/open-learning-ai-tutor` | `total_count: 0` | 🟢 `200`, README 214 B | **silent** |
+| `TokenAII/horus-taleeq-0.2b-base` | `Validation Failed` | 🟢 `200`, README 3,400 B | **loud** |
+| `openedx/edx-platform` *(p916, re-probed)* | `Validation Failed` | 🟢 `200` | **loud**, reproduced |
+
+🔵 **There are two absence shapes, not three.** `p916` logged its `edx-platform` result as a `422`;
+read against `TokenAII`, it is the same *loud* shape — `"The listed users and repositories cannot be
+searched either because the resources do not exist or you do not have permission to view them."`
+The **silent** shape (`total_count: 0`, no error at all) is the dangerous one, and it is the one
+that hit the EACL 2026 paper repository this base has carried since its second education cycle.
+Rate on the delivery shelf: **3 of 195 (1.5%)**, plus one carried from `p916`. Registered as **`T979`**.
+
+### 🔵 `917-F10` A phantom row this pass manufactured, and caught in its own instrument
+
+p917's address extractor lower-cased `https://github.com/OWNER/REPO` out of `agents/top.md:957` —
+where it is **prose**, in a `p907` note saying that `curl -sI` on that URL is not a usable
+existence check — and fed `owner/repo` into the shelf remeasure as if it were a row. It came back
+`Validation Failed` and was briefly indistinguishable from `917-F9`'s loud absences.
+🔴 **An address extractor that does not exclude uppercase placeholder prose will manufacture a
+row, and the row will fail in exactly the shape of a real finding.** The delivery pages are clean —
+`grep -F 'owner/repo'` over `agents/top.md` returns nothing. The defect was entirely p917's.
+
+### 🔴 `917-F11` `make hooks` is NOT denied in this environment — and it reports **22 standing red gates**
+
+This base has recorded `make hooks` as unrunnable for many passes — `695-L` logs *"`Gap 247` unmet a
+THIRD consecutive pass, same cause: `make hooks` remains denied by this session's auto-mode"*.
+🟢 **It ran here, start to finish, in under five minutes.** This is the second channel this pass
+found alive after it had been written off (`917-G0` is the first), and the two together make the
+pattern worth stating: **a channel verdict is only true of the session that measured it, and this
+base has been carrying session-local verdicts as properties of the world.**
+
+🔵 **What it reports, measured against `HEAD` as a control.** `53 of 76` gates green; **22 red**.
+The same 22 are red **before and after `p917`'s changes** — stashed and re-run to confirm — so
+**`p917` broke none of them and fixed none of them.** They are standing debt, not this pass's:
+
+| Red gate (sample) | What it is complaining about |
+|---|---|
+| `gate-derived-counts` | a table header pinned to a stale date — *expected `\| Repo \| Licence \| Stars \| Status 2026-11-16 \|`* |
+| `gate-dates` | undated or stale date assertions in `intel/trends.md` prose, e.g. the `p890` Vietnam `Decision 33/2026/QD-TTg` line |
+| `gate-register-currency` | the gap register is behind the passes that cite it |
+| `gate-promotion-ledger`, `gate-shelf-consistency` | the `logged-not-shelved` pathology `916-R1` and `917-F3` both found by hand — **the gate was already failing on it** |
+
+🔴 **The last row is the uncomfortable one.** `917-F3` found the Python LTI 1.3 estate
+logged-and-never-shelved by writing a census by hand, and `gate-promotion-ledger` has been failing
+on that class the whole time with nobody reading it. 🟢 **Three gates did pass and are worth
+naming** because they bound this pass's own additions: `p911-identifier-collision` judged **88
+published identifiers — 39 in `compose/patterns.md`, 49 in `intel/trends.md` — and every one names
+exactly one thing**, which is what confirms `P38`/`P39` and `T48`/`T49` collide with nothing;
+`p797-evidence-address-gate` passed over **2,366** evidence files; `p853-slug-presence` passed 35
+controls. Registered as `917-G8`.
+
+---
+
 ## `2026-11-19` (p916) — **The `oral reading fluency` void, declared at this base's sixth pass and "reproduced exactly" ever since, is REFUTED — and it was never a fact about the world. `oral reading fluency assessment` returns `4`; `"reading fluency"` returns **102**. Every pass that reproduced the 4 was reproducing the *instrument*. 🔴 Reproducing a measurement exactly is not evidence that the measurement is right. `915-G3` discharged: the search channel fabricates a licence 1 time in 92 and **abstains** 14 times, and a byte-read resolves 10 of those. "No licence file" is not "no grant": `moodle-mod_readaloud` is GPL-3.0-or-later in every source header with no licence file at all.**
 
 **Channels and posture.** `gh api search/repositories` over **eleven** discovery legs on angles

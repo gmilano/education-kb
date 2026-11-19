@@ -600,8 +600,8 @@ deployable row — `916-R1`'s `logged-not-shelved` pathology again.
 | **Open Badge Passport** (community edition) | https://github.com/openbadgefactory/salava | 🟢 **Apache-2.0** (9,720 B, `sha256₁₂ e9852865aedf`) | 22 | 🔴 2020-10-02 | **The tier's only permissive platform**, from **Discendum, Finland** (**EMEA**, from README). Issue, earn, store and share badges with a public passport surface. 🟡 **Idle five years** — read it as a permissive *fork point*, which is exactly what a client needing a closed credential product has to do, because nothing else permissive is current |
 | **Open Badges Platform** | https://github.com/gdgguadalajara/open-badges-platform | 🔴 **AGPL-3.0** | 9 | 🟢 **2026-08-31** | **LATAM — Guadalajara, Mexico** (from README). *"Sovereign, immutable and standard-compliant recognition."* 🟢 **The only actively-developed standalone open-source Open Badges platform this base can find, in any region.** AGPL-3.0, so deploy-and-extend or reference architecture — not white-label |
 | **Open Badges for Moodle** | https://github.com/totara/openbadges | 🔴 GPL-3.0 | 26 | 🔴 2016-03-14 | Badge issuance wired into Moodle. Dead upstream, but the **integration shape** is the reusable part for a client already on Moodle |
-| *(standard)* **Open Badges specification** | https://github.com/1EdTech/openbadges-specification | 🔴 **no licence file** — byte-read, 16 names × 3 branches | 206 | 🟢 **2026-11-13** | 🔴 **The specification the whole tier implements is actively maintained and carries no grant on GitHub.** `T25`'s licence trap, sitting on the standard itself. Implementing a published spec is not a derivative-work question, but **do not vendor this repository's text into a deliverable** |
-| *(dead, recorded so they are not rediscovered)* | `mozilla/openbadges-badgekit` (123 ★, MPL-2.0, *"No Longer Maintained"*) · `mozilla/openbadges-discovery` (25 ★, MPL-2.0, *"INACTIVE"*) · `PRX/badges_engine` (37 ★, **MIT claimed, no payload** — `916-F1`) · `openmichigan/open_badges` (25 ★, no licence file) · `mozilla/openbadges-backpack` (`NOASSERTION`, payload unresolved) | — | — | 2011–2020 | The Mozilla badging estate, in full |
+| *(standard)* **Open Badges specification** | https://github.com/1EdTech/openbadges-specification | 🔴 **UNGRANTED AT FOUR LAYERS — re-probed `p917`.** No licence file (16 names × 3 branches), no grant header, no manifest field, and no licence section in the README | 206 | 🟢 **2026-11-13** | 🔴 **The specification the whole tier implements is actively maintained and carries no grant on GitHub.** `T25`'s licence trap, sitting on the standard itself. Implementing a published spec is not a derivative-work question, but **do not vendor this repository's text into a deliverable** |
+| *(dead, recorded so they are not rediscovered)* | `mozilla/openbadges-badgekit` (123 ★, MPL-2.0, *"No Longer Maintained"*) · `mozilla/openbadges-discovery` (25 ★, MPL-2.0, *"INACTIVE"*) · `PRX/badges_engine` (37 ★, 🟢 **MIT CONFIRMED `p917` — the payload was found**, 1,048 B at `master/MIT-LICENSE`, a filename `p913`'s ladder did not carry; `916-F1` read it as *claimed, no payload* and the shelf's claim was right) · `openmichigan/open_badges` (25 ★, no licence file) · `mozilla/openbadges-backpack` (`NOASSERTION`, payload unresolved) | — | — | 2011–2020 | The Mozilla badging estate, in full |
 
 🔴 **The delivery read, and it is a regional one.** For a **LATAM** engagement the live platform is
 regionally authored, standards-compliant and AGPL-3.0 — an asset, and a sovereignty story a Mexican
@@ -616,6 +616,30 @@ cost that belongs in the estimate. 🟢 For a client already on **Open edX**,
 `learner credential wallet` returned **11**. Three shapes, three populations — and `916-F7` shows
 query shape moves these numbers by orders of magnitude. **No count for the W3C VC education tier is
 published here**, deliberately. `916-G4` registers the union measurement.
+
+## The credential *infrastructure* under the badging tier — added `p917`
+
+`p916` called the digital-credentials tier *"an archaeological site"* and it was right about the
+**platforms**: the badging estate above is 2011–2020 Mozilla-era code with one live LATAM platform
+and one permissive-but-idle Finnish one. `p917` discharged `916-G4` and found why that reading was
+only half the picture. **The platforms are dead; the infrastructure beneath them is the most active,
+most permissive tier in this base.**
+
+| What a client asks for | Dead end to avoid | What `p917` shelved instead |
+|---|---|---|
+| *"issue verifiable diplomas"* | reviving `mozilla/openbadges-*` (MPL-2.0, *"No Longer Maintained"*) | `eu-digital-identity-wallet/eudi-srv-pid-issuer` + `eudi-lib-jvm-openid4vci-kt` (both Apache-2.0, official EU, pushed Nov 2026) |
+| *"a wallet our learners install"* | building one from a badging platform | `procivis/one-wallet` or `wwWallet/wallet-frontend` (Apache-2.0 / BSD) — the second needs no app install |
+| *"work on Android and iOS from one codebase"* | per-platform rewrites | `a-sit-plus/vck` — Kotlin Multiplatform, Apache-2.0, pushed 2026-11-19 |
+| *"no jurisdiction decided yet"* | committing to an EU-specific stack early | `openwallet-foundation/multipaz` (Apache-2.0, 301 ★) — vendor-neutral, OpenWallet Foundation |
+
+🔴 **The regional asymmetry is the commercial fact here.** In **EMEA** this is a *compliance*
+conversation — Europass and eIDAS 2.0 give an EU institution a statutory reason to issue
+machine-verifiable credentials, and the reference implementations are published by the European
+Commission itself, so the build-versus-adopt question is already answered. In **North America**,
+**APAC** and **LATAM** there is no equivalent mandate, so the same technology has to be sold on
+employer-verification value instead, and the LATAM row above (`gdgguadalajara/open-badges-platform`,
+AGPL-3.0, pushed 2026-08-31) remains the regionally-authored option. Full tier at
+`repos/foundations.md`.
 
 ## Honest gaps
 

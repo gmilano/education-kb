@@ -45,8 +45,17 @@ OUT="${1:?usage: p913-grant-authority.sh OUT.tsv (then either: slug... | --from-
 if [ "$#" -eq 0 ]; then echo "🔴 refusing empty input (Gap 245)" >&2; exit 2; fi
 
 D=$(mktemp -d); trap 'rm -rf "$D"' EXIT
+# ── 917-F4.  REVERSED-ORDER FILENAMES.  p913 carried `LICENSE-MIT` but NOT `MIT-LICENSE`, which
+# is the Rails/Ruby engine convention (`rails plugin new` emits it).  `PRX/badges_engine` was
+# reported NO-LICENCE-FILE-FOUND by p913 and byte-reads as a genuine 1,048 B MIT text at
+# `master/MIT-LICENSE` — inside p640's MIT size band.  Measured blast radius: 1 of 13 rows in
+# p917's ungranted cohort (7.7%); the other 6 probed carry no reversed-order filename, so the
+# defect is real and NARROW.  Added below rather than in a new script, because 913-F2's lesson is
+# that a fix living outside the authority is a fix a later instrument drops.
 NAMES=(LICENSE LICENSE.txt LICENSE.md LICENSE.TXT LICENCE LICENCE.txt COPYING COPYING.txt
-       license license.txt license.md licence licence.txt LICENSE.rst LICENSE-MIT LICENSE-APACHE)
+       license license.txt license.md licence licence.txt LICENSE.rst LICENSE-MIT LICENSE-APACHE
+       MIT-LICENSE MIT-LICENSE.txt MIT_LICENSE GPL-LICENSE APACHE-LICENSE BSD-LICENSE
+       MIT-License.txt COPYRIGHT COPYRIGHT.txt)
 
 # ---- the adjudicator.  $1 = payload file, $2 = bytes.  Prints "families<TAB>verdict<TAB>note". ----
 adjudicate() {

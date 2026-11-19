@@ -1,0 +1,74 @@
+leg_id	slug	stars	spdx	pushed_at	description
+G4a	ask4moreish/Decentralized-Global-Education-Skills-Passport	2	MIT	2026-11-11	Decentralized Global Education & Skills Passport on Stellar Soroban: verifiable credential issuance, cryptographic hash commitments, privacy-preserving selectiv
+G4a	xipponk/vc-poc-th	1	MIT	2025-06-30	POC of a Self-Sovereign Identity (SSI) based Verifiable Credential platform for Thailand's education sector, using Python and Blockchain.
+G4b	kayaelle/obv3-vc-wallet-demo	2	NONE	2023-05-17	Demonstration code of how to issue an Open Badge to a Verifiable Credential wallet
+G4b	TanimowoObaloluwaDavid/credential-lens	1	MIT	2026-10-05	Inspect and validate Open Badges 3.0 and W3C Verifiable Credentials. Zero dependencies, works offline.
+G4b	ICoBC/icb-p07-open-badges-3-0-verifiable-credentials	0	NOASSERTION	2026-11-06	Open Badges 3.0 and Verifiable Credentials: Hands-on Lab
+G4b	blackmath88/digital-credentials-demo	0	NONE	2026-10-16	Portable, verifiable certificates for learning. Open Badges 3.0 · W3C Verifiable Credentials Inspired by the MIT Digital Credentials ecosystem
+G4b	api-evangelist/sertifier	0	NONE	2026-11-01	Sertifier — independent third-party profile of a public API surface, by API Evangelist. Sertifier is a digital credential and certificate/badge management platf
+G4b	api-evangelist/credly	0	NONE	2026-10-29	Credly — independent third-party profile of a public API surface, by API Evangelist. Credly is a digital credential and open badge platform, owned by Pearson (a
+G4c	ryjones/learner-credential-wallet	91	MIT	2026-10-15	Learner Credential Wallet is a cross-platform iOS and Android mobile application for storing and sharing digital learner credentials.
+G4c	digitalcredentials/learner-credential-wallet-site	1	NONE	2026-09-01	
+G4c	digitalcredentials/dcc-known-registries	1	MIT	2026-06-03	A list of DID registries that the DCC Learner Credential Wallet and VerifierPlus check when verifying a VC.
+G4c	singh-abhishek3/learner-credential-wallet	0	NONE	2025-07-16	
+G4c	mariopel/learner-credential-wallet	0	MIT	2026-05-20	
+G4c	jchartrand/learner-credential-portal	0	NONE	2024-01-19	Coordinates credential collection by student/wallet from issuer.
+G4c	digitalcredentials/lcw-front-end	0	NONE	2026-11-18	react front end for the Learner Credential Wallet
+G4c	digitalcredentials/lcw-welcome	0	NONE	2026-11-18	Welcome page and sign-up for Learner Credential Wallet (welcome.alpha.lcw.app)
+G4c	digitalcredentials/lcw-mock	0	MIT	2025-08-01	Plays the part of the learner credential wallet when given a deep link, posting a DIDAuth to the vc_request_url.
+G4c	Aditya-alchemist/CredChain-LMS	0	NONE	2025-12-27	A decentralized micro-LMS credentialing solution built on Ethereum ERC-721 NFTs. Issuers mint tamper-proof credential tokens, learners hold them in their wallet
+G4c	cyberdocs120/stellarLearn	0	MIT	2026-05-16	AI-powered LMS on Stellar – personalised learning paths that adapt in real time, tamper-proof credential NFTs minted to your wallet, and automatic LEARN token r
+G4c	cybermax4200/stellarLearn	0	MIT	2026-11-05	AI-powered LMS on Stellar – personalised learning paths that adapt in real time, tamper-proof credential NFTs minted to your wallet, and automatic LEARN token r
+G4d	jettbrains/-L-	171	GPL-3.0	2021-08-18	W3C Strategic Highlights  September 2019  This report was prepared for the September 2019 W3C Advisory Committee Meeting (W3C Member link). See the accompanying
+G4e	openwallet-foundation/multipaz	301	Apache-2.0	2026-11-18	SDK for Digital Credentials
+G4e	procivis/one-core	163	Apache-2.0	2026-11-10	Issue, hold and verify digital identities and credentials on any device with eIDAS 2.0 compliancy, ISO 18013-5 mdocs, IETF SD-JWT VC, OID4VC, and W3C VCs.
+G4e	procivis/one-wallet	153	Apache-2.0	2026-11-10	Digital wallet with eIDAS 2.0 compliancy, ISO 18013-5 mdocs, IETF SD-JWT VC, OID4VC, and W3C VCs. 
+G4e	openid/OpenID4VCI	131	NONE	2026-11-12	
+G4e	Sphereon-Opensource/OID4VC	93	Apache-2.0	2026-07-03	OpenID for Verifiable Credentials - modules for issuers, holders and RPs
+G4e	a-sit-plus/vck	77	Apache-2.0	2026-11-19	Kotlin Multiplatform library implementing W3C VC Data Model, SD-JWT and ISO 18013-5 credentials
+G4e	eu-digital-identity-wallet/eudi-lib-android-wallet-core	64	Apache-2.0	2026-11-18	
+G4e	eu-digital-identity-wallet/eudi-lib-jvm-openid4vci-kt	47	Apache-2.0	2026-11-17	Implementation of OpenID for Verifiable Credential Issuance protocol (wallet's role) in Kotlin
+G4e	wwWallet/wallet-frontend	47	BSD-2-Clause	2026-11-18	Web-first digital credential wallet supporting issuance, storage and presentation via OpenID4VCI and OpenID4VP.
+G4e	eu-digital-identity-wallet/eudi-srv-pid-issuer	43	Apache-2.0	2026-11-06	A micro-service acting like PID/mDL Issuer according to OpenID4VCI
+G4e	impierce/openid4vc	42	Apache-2.0	2026-11-19	Rust implementation of the OpenID4VC standards. The library offers implementations for SIOPv2, OpenID4VP and OpenID4VCI.
+G4e	Lumoin/Verifiable	40	Apache-2.0	2026-10-19	A .NET implementation of decentralized identifiers and verifiable credentials, some associated protocols and cryptographic routines.
+G4e	Sphereon-Opensource/OID4VC-demo	24	Apache-2.0	2026-01-15	Demo for OID4VC, containing a configurable agent, OID4VCI Issuer and demopage as well as SIOPv2 and OID4VP RPs with demo page
+G4e	eu-digital-identity-wallet/eudi-lib-ios-openid4vci-swift	19	Apache-2.0	2026-11-16	Implementation of OpenID for Verifiable Credential Issuance protocol (wallet's role) in Swift
+G4e	openwallet-foundation-labs/identity-common-ts	18	Apache-2.0	2026-11-18	Identity Common TypeScript provides a shared library of TypeScript types and utilities for identity-related projects, promoting consistency and reducing duplica
+G4e	ForkbombEu/credimi	18	AGPL-3.0	2026-11-18	Automated conformance and interoperability testing platform and hub for EUDI and SSI wallets, credential issuers and verifiers (OpenID4VCI, OpenID4VP, FCAF)
+G4e	sicpa-dlab/openid4vc-rs	8	Apache-2.0	2024-11-15	OpenID4VCI and OpenID4VP implementations in Rust as services.
+G4e	openwallet-foundation/multipaz-wallet	7	Apache-2.0	2026-11-18	A wallet for Digital Credentials built using the Multipaz SDK
+G4e	eu-digital-identity-wallet/eudi-srv-wallet-provider	6	Apache-2.0	2026-11-02	An implementation of a Wallet Provider service according to OpenId4VCI 1.0, and EUDI Wallet Standards and Technical Specifications.
+G4e	ForkbombEu/didroom-docs	6	NONE	2025-12-16	Documentation for DIDroom, the open-source SSI/EUDI wallet and issuer stack supporting OpenID4VCI, OpenID4VP and SD-JWT VC
+G4e	EgorKhaklin/polaris-id	6	Apache-2.0	2026-11-19	Identity credentials built to be checked, not trusted: an OpenID4VP 1.0 + HAIP 1.0 verifier for SD-JWT VC, offline ML-DSA-65 verification, and refusal test vect
+G4e	IDFoundry/OID4VCgo	4	MIT	2026-11-19	OIDF-certified OpenID4VCI 1.0 + OpenID4VP 1.0 for Go: HAIP 1.0 profile with DPoP, PAR and Wallet Attestation.
+G4e	wwWallet/wallet-common	4	BSD-2-Clause	2026-11-16	Shared TypeScript library for parsing, verifying and rendering digital credentials.
+G4e	TimoGlastra/openid4vci-issuer	3	NONE	2023-05-14	openid4vci-issuer
+G4e	eduwallet/veramo-agent	3	Apache-2.0	2026-11-17	Implementation of a generic veramo agent for VC issuance using the OpenID4VCI protocol
+G4f	gmazzamuto/europasscv	127	NONE	2024-03-14	Unofficial LaTeX class for the new version of the Europass curriculum vitae
+G4f	european-commission-empl/European-Learning-Model	54	EUPL-1.2	2024-02-14	Data Model for the Europass Digital Credentials Infrastructure
+G4f	europass/europasscv-parser-js	18	MIT	2022-12-10	Parse EuropassCV PDF/XML using JavaScript
+G4f	europass/sample-tools-java	12	NONE	2018-01-05	Java-based sample application demonstrating how to parse a Europass document and store the information in a DB
+G4f	europass/sample-tools-php	11	NONE	2018-05-03	PHP-based sample application demonstrating how to parse a Europass document and store the information in a DB
+G4f	europass/ewa-cedefop	10	NOASSERTION	2022-11-24	EWA (Europass Web Apps - Cedefop) is a Java-based web system helping EU Citizens create their CV in the standardised Europass format.
+G4f	europass/rest-examples-java	8	NONE	2023-10-27	Java-based examples for the Europass REST API
+G4f	asifsaho/europasscv	7	NONE	2026-02-12	Europass CV HTML
+G4f	Venca24/europecv	6	LPPL-1.3c	2017-07-08	LaTeX template for Europass CV
+G4f	europass/rest-examples-php	5	NONE	2018-01-04	PHP-based examples for the Europass REST API
+G4f	european-commission-empl/Europass-Authority-Lists	5	NONE	2020-01-15	Europass Controlled Lists
+G4f	ivuk/Europass-LaTeX-hr	5	NONE	2016-11-15	Prilagodba neslužbene LaTeX Europass klase za hrvatski jezik.
+G4f	Supercaly/europasscv2025	4	LPPL-1.3c	2026-08-14	
+G4f	ludoo0d0a/resume	4	GPL-3.0	2026-10-02	My CV / Resume  in 2 languages - JsonResume / Europass standard
+G4f	kabudahab/EuropassJS	4	MPL-2.0	2015-07-16	
+G4f	jdlopez/europass	4	MIT	2024-09-03	Europass CV application
+G4f	easyvibecoding/vibe-resume	4	MIT	2026-06-02	Turn your AI coding history (Claude Code, Cursor, Copilot, ChatGPT exports, git commits) into a versioned, reviewer-ready résumé — 9 locales, JIS履歴書 grid, Europ
+G4f	caglarorhan/Applicant-Profile-Protocol	4	Apache-2.0	2026-09-18	The Applicant Profile Protocol (APP) is an open, JSON-based specification for representing a job applicant’s professional profile in a structured, interoperable
+G4f	Raskolny/europass-cv	3	MIT	2026-09-23	Faithful, accessible Europass CV template for Typst — official EU two-column layout, CEFR language grid, GDPR clause, all 24 EU languages, PDF/UA-1 verified.
+G4f	ilario/documents_in_latex-CV_europass	3	NONE	2026-11-17	My Curriculum Vitae written in LaTeX
+G4f	Bermpje/EuroCV	3	MIT	2025-10-25	Convert PDF/DOCX resumes to Europass CV format via CLI, API, or Docker
+G4f	firedigger/linkedin-resume-parser	3	Unlicense	2026-04-05	Parse a LinkedIn profile PDF into JSON Resume, Europass XML, and LaTeX/PDF
+G4f	Lemoncode/manfred-to-europass	2	MIT	2022-07-26	Work in progress... tool to convert from MAC Json to Europass
+G4f	Tsadoq/EuropassMCP	2	MIT	2026-08-26	An MCP server for authoring strictly schema-compliant Europass CV documents
+G4f	ArTourter/europass	2	NONE	2013-07-06	
+G4g	getonepass/onepass.credentials.dashboard	0	Apache-2.0	2025-09-29	Open source dashboard for Issuers and Verifiers of Verifiable Credentials. Specifically designed to work with EBSI credentials, but can support other credential
+G4h	thecjhouston/CLR	0	NONE	2018-11-20	Comprehensive Learner Record

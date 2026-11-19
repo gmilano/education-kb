@@ -1,0 +1,18 @@
+repo	branch	path	http	bytes	sha256_12	families	verdict	note
+academic-innovation/django-lti	main	LICENSE	200	1098	c24a6b35e390	MIT	MIT	
+ucfopen/cookiecutter-python-lti	main	LICENSE	200	1130	81b83cce5c26	MIT	MIT	
+GSU-CETLOE/lti1p3Library-python	main	LICENSE	200	1083	712361aab761	MIT	MIT	
+blackboard/BBDN-lti-1p3-tool-example	main	LICENSE	200	11357	c71d239df917	Apache-2.0	Apache-2.0	
+christophse/django-lti-tool	main	LICENSE	200	1525	110a063ba578	BSD	BSD	
+openwallet-foundation/multipaz	main	LICENSE	200	11358	cfc7749b96f6	Apache-2.0	Apache-2.0	
+eu-digital-identity-wallet/eudi-lib-android-wallet-core	main	LICENSE	200	11357	c71d239df917	Apache-2.0	Apache-2.0	
+eu-digital-identity-wallet/eudi-lib-jvm-openid4vci-kt	main	LICENSE	200	9425	30251107b551	Apache-2.0	Apache-2.0	
+eu-digital-identity-wallet/eudi-srv-pid-issuer	main	LICENSE	200	9425	30251107b551	Apache-2.0	Apache-2.0	
+Sphereon-Opensource/OID4VC	develop	LICENSE	200	11347	640f3b74b93e	Apache-2.0	Apache-2.0	
+procivis/one-core	main	LICENSE	200	11340	d3685c06c1d8	Apache-2.0	Apache-2.0	
+a-sit-plus/vck	main	LICENSE	200	11358	cfc7749b96f6	Apache-2.0	Apache-2.0	
+wwWallet/wallet-frontend	master	LICENSE	200	1309	2f91da11192e	BSD	BSD	
+impierce/openid4vc	main	LICENSE	200	9145	e9a2c83fd0c1	Apache-2.0	Apache-2.0	
+Lumoin/Verifiable	main	LICENSE	200	11345	55d0d0aadcd5	Apache-2.0	Apache-2.0	
+DigitalHarborFoundation/llm-math-education	main	LICENSE	200	1073	d52fb2e122b8	MIT	MIT	
+lmddc-lu/microlms	main	LICENSE	200	34523	0d96a4ff68ad	AGPL-3.0	AGPL-3.0	

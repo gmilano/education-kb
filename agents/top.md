@@ -29,6 +29,18 @@ curriculum graph, correct for the asset and a trap for anyone who reads the repo
 `master/README.rst`.** That is `p900`'s false-absence class landing on the AGPL anchor of the
 whole LMS tier; the two-channel rule caught it. See `agents/trending.md` `901-F3`.
 
+**Latest sweep — `p917` (2026-11-19).** All **199** addresses in this file re-probed.
+`search/repositories` resolved **195**: `OpenHands/OpenHands` **93,811** `MIT`,
+`microsoft/ai-agents-for-beginners` **80,437** `MIT`, `crewAIInc/crewAI` **61,093** `MIT`,
+`HKUDS/DeepTutor` **60,661** `Apache-2.0` (p901: 60,405), `langchain-ai/langgraph` **45,152** `MIT`,
+`THU-MAIC/OpenMAIC` **43,939** `MIT` (p901: 43,894), `patchy631/ai-engineering-hub` **42,021** `MIT`
+(p901: 41,998). 🔴 **Three rows are live on `raw` and ABSENT on `search`** —
+`DaRL-GenAI/instructional_agents` and `mitodl/open-learning-ai-tutor` return `total_count: 0` with
+no error at all, `TokenAII/horus-taleeq-0.2b-base` returns `Validation Failed`, and all three serve
+a `200` README. **`p916`'s `openedx/edx-platform` absence re-probed one day later and reproduced**,
+in the same *loud* shape — so there are **two** absence shapes, not three, and the silent one is the
+dangerous one. Rate on this shelf: **3 of 195 (1.5%)**. See `agents/trending.md` `917-F9`.
+
 🔴 **`p902` refused three rows that would have landed in this file, and they were fabricated.**
 `p901` recommended growing this base by auditing it against a stranger's curated list. `p902` ran
 that method over five unaudited indexes. The most topically-relevant one —
@@ -616,7 +628,7 @@ cell says so rather than guessing.
 
 | Agent | Repo | Licence | ★ | Last push | What it does | Origin |
 |---|---|---|---|---|---|---|
-| **Poodll ReadAloud** | https://github.com/justinhunt/moodle-mod_readaloud | 🔴 **GPL-3.0-or-later — and there is no licence file.** Byte-read over 16 filenames × 3 branches: `404` on every one. The grant is in the `README` (*"License: GNU GPL v3 or later"*) **and in the full GNU header block of `version.php`, `lib.php` and `mod_form.php`**. See `916-F2` | 6 | **2026-10-28** | Guided reading-fluency + comprehension activity for Moodle: student listens, practises line by line, reads aloud; **speech recognition scores words-per-minute and accuracy automatically**, then an optional comprehension quiz. The only actively-developed artefact in the tier | Global (Moodle plugin) |
+| **Poodll ReadAloud** | https://github.com/justinhunt/moodle-mod_readaloud | 🔴 **GPL-3.0-or-later — and there is no licence file.** Byte-read over 16 filenames × 3 branches: `404` on every one. The grant is in the `README` (*"License: GNU GPL v3 or later"*) **and in the full GNU header block of `version.php`, `lib.php` and `mod_form.php`**. See `916-F2` — 🟢 **independently reproduced `p917`** by `ingest/p917-header-layer.sh`, which discharges `916-G2` and makes this the general rule for the ecosystem: *for a Moodle plugin, `version.php` is the grant authority, not `LICENSE`* (2 of 2 plugins measured) | 6 | **2026-10-28** | Guided reading-fluency + comprehension activity for Moodle: student listens, practises line by line, reads aloud; **speech recognition scores words-per-minute and accuracy automatically**, then an optional comprehension quiz. The only actively-developed artefact in the tier | Global (Moodle plugin) |
 | **AIRFluTe** | https://github.com/OSU-slatelab/AIRFluTe | 🟢 **Apache-2.0** | 3 | 2022-12-08 | *An Intelligent Reading Fluency Teacher.* Streaming deep models fine-tuned on **children's** speech; real-time visual tracking plus a teacher model that prompts with synthesised voice on a hard word | **North America** — Ohio State SLaTe lab (from README) |
 | **LEPIC** | https://github.com/JambuOverflow/lepic | 🔴 GPL-3.0 | 7 | 2021-07-11 | Android/iOS app for teachers and literacy professionals: upload a student's read-aloud recording, mark the errors, get duration and words-per-minute. **Won the ICSE 2021 Student Contest on Software Engineering** | **LATAM** — Brazil, University of Pará (from README) |
 | **ReadPulse** | https://github.com/dungnotnull/ReadPulse-AI-Agent | 🟢 **MIT** | 3 | 2026-09-15 | Virtual reading-specialist **voice agent** on AssemblyAI; assesses a read-aloud in conversation. Three months old — read it as a reference implementation, not an upstream | 🟡 not placed — README carries no country signal |
@@ -666,9 +678,48 @@ MIT while every licence filename returns `404` and the per-repository endpoint r
 this session's scoping. 🔵 The third is the one with a method consequence: **a search-reported
 licence is not an independent second channel.** Full audit in `agents/trending.md` `915-F7`.
 
+## Maths tutoring with retrieval — added `p917`
+
+One row, and the ratio behind it is the finding. **28 discovery legs this pass produced exactly one
+new education-specific agent.** The other eleven promotions are credential *infrastructure*
+(`repos/trending.md` `917-R1`). New supply in this field is arriving as infrastructure, not as
+agents, and this file should say so rather than pad.
+
+| Agent | Repo | Licence (byte-read) | Stars | Last push | Origin | What it does |
+|---|---|---|---|---|---|---|
+| **llm-math-education** | https://github.com/DigitalHarborFoundation/llm-math-education | **MIT** (`main/LICENSE`, 1,073 B) | 47 | 2026-11-14 | **North America** — `digitalharbor.org` in `pyproject.toml` | Retrieval-augmented generation for **middle-school mathematics**: question answering and *hint* generation, with the retrieval corpus separated from the generator so a district can swap in its own curriculum |
+
+🔵 **Why the hint path matters more than the answer path.** This base's grading and tutoring tiers
+are full of systems that produce an answer; `llm-math-education` is built to produce a *hint*, which
+is the output an intelligent-tutoring deployment actually needs and the one `CAHLR/OATutor`'s
+scaffolded-hint design already assumes. It composes with OATutor's BKT mastery estimates without
+either project knowing about the other — see `compose/patterns.md`.
+
+🟡 **Placed on the manifest layer, not the README.** Its README carries no country signal at all.
+The placement comes from an institutional e-mail domain in `pyproject.toml`, via the new
+`ingest/p917-affiliation-manifest.sh`. That instrument's first cut was wrong in two ways and both
+are recorded at `917-F6`: a consumer mail host (`gmail.com`, `posteo.me`) is not an affiliation, and
+an npm version string (`pkg@1.0.1.patch`) is not an e-mail address.
+
 ## What we searched for and did not find
 
 Recording gaps because an unrecorded gap looks exactly like coverage.
+
+- 🔴 **APAC produced nothing shelvable this pass, and that is stated rather than left as silence.**
+  Of `p917`'s **17** promotion candidates, **zero** placed APAC on any channel — not the README, not
+  a packaging manifest, not an institutional e-mail domain. The WebSearch leg for the region was
+  not empty (EdTech Hub's ~86% teacher-use figure for Southeast Asia, the Philippines' DepEd
+  `AGAP.AI` national programme launched January 2026), so the gap is **not** low AI activity: it is
+  that the activity is not arriving as permissively-licensed public repositories this base can
+  place. `917-G3`.
+
+- 🟢 **The `OpenLiteracy` void CONFIRMED in a shape its original did not use (new `p917`).** This is
+  the one of `p890`'s four remaining voids that survived re-measurement: `OpenLiteracy` → **0**,
+  `"open literacy"` → **2**, `early literacy screener assessment` → **0**. The two hits are an AR
+  Chinese character-recognition app with no grant and a newsroom *source-protection* literacy kit —
+  neither is education literacy. 🔵 The other three voids were **refuted** by shape change alone
+  (`agents/trending.md` `917-F1`), so a void that holds under a *different* instrument is now the
+  only kind this file will publish.
 
 - 🔴 **The five national examination boards `911-G1` named have all registered their GitHub
   namespace and published nothing into it (new `p912`).** `911-G1` prescribed the org channel as

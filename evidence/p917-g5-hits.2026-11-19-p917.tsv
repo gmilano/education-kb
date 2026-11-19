@@ -1,0 +1,76 @@
+leg_id	slug	stars	spdx	pushed_at	description
+G5a	IsGoodDa/zcs	1	NONE	2023-04-05	字初识-一款基于人工智能和AR技术结合的开放式识字应用，享受沉浸式的学习，解放学习场景，当学习的主导者；Initial literacy - an open literacy application based on the combination of artificial intelligence and AR t
+G5a	Pitchfork-and-Torch/source-protection-literacy-kits	0	MIT	2026-09-18	Forged on GrokForge: Open Source-Protection Literacy Kits for Newsrooms and NGOs. Free open literacy kits so desks and sources practice safer, lawful tip handli
+G5c	dmitry-viskov/pylti1.3-django-example	31	MIT	2024-03-08	PyLTI1p3 Django usage example
+G5c	dmitry-viskov/pylti1.3-flask-example	23	MIT	2023-12-21	PyLTI1p3 Flask usage example
+G5d	dmitry-viskov/pylti1.3	138	MIT	2024-08-18	LTI 1.3 Advantage Tool
+G5d	ucfopen/cookiecutter-python-lti	6	MIT	2026-05-12	Quickly spin up customized LTI 1.3 templates in Python
+G5d	dhyanamgit/nodemeet	5	NOASSERTION	2026-10-06	Embed live video meetings and scheduling in your Python app. Self-hosted, LTI 1.3, free for noncommercial use.
+G5d	christophse/django-lti-tool	2	BSD-3-Clause	2024-06-20	LTI 1.3 tool integration for Django
+G5d	blackboard/BBDN-lti-1p3-tool-example	1	Apache-2.0	2023-11-13	An example LTI 1.3/Advantage tool written in Python and Flask with deployment to AWS
+G5d	NoelisTired/canvas-portflow-cli	1	MIT	2026-10-30	Sync a folder of evidence into your Fontys Canvas / Portflow portfolio. Playwright ADFS login + LTI 1.3 launch, idempotent add/version/skip.
+G5d	CNIT-Organization/ltitoolkit	0	MIT	2026-08-05	PYPI Package — LTI 1.3 Advantage toolkit for Python
+G5d	alejlatorre/lti-provider	0	Apache-2.0	2026-06-12	A FastAPI-based Learning Tools Interoperability (LTI) 1.3 provider implementation
+G5d	glenn-watt/lti-1p3-reference-tool	0	MIT	2026-06-18	A working LTI 1.3 / LTI Advantage reference tool in Python + Flask — OIDC, JWKS validation, AGS, NRPS, and Deep Linking implemented from first principles.
+G5d	giovannifrontera/ai-wiki-graph-RAG-lms	0	AGPL-3.0	2026-05-30	LTI 1.3 backend for AI-driven knowledge ecosystems. RAG + semantic knowledge graph + D3.js UI for Moodle, Canvas, Blackboard, Sakai and Open edX.
+G5d	xiayuguo/lti-demo	0	MIT	2026-06-15	A minimal, runnable LTI 1.3 implementation in Python / Flask — one Platform (LMS) and one Tool that complete the full OIDC handshake, grade passback (AGS), and 
+G5d	lmddc-lu/microlms	0	AGPL-3.0	2026-11-12	Reusable micro-LMS engine for Python: a FastAPI app factory with pluggable auth, storage and event hooks, and optional SCORM, cmi5, H5P and LTI 1.3 content modu
+G5d	adam-elharouchi/AnalytIQ	0	NOASSERTION	2026-10-30	AI-powered analytics learning platform. Generates coursework from a professor's own material and grades student code by executing it — Python, R, JS, SQL, Java.
+G5d	GSU-CETLOE/lti1p3Library-python	0	MIT	2026-10-28	A Python library for the tool side of LTI 1.3 Advantage. It handles the OIDC login and launch, Deep Linking 2.0, the Assignment and Grades Service (AGS) 2.0, an
+G5e	academic-innovation/django-lti	26	MIT	2026-11-17	LTI Advantage support for Django projects.
+G5f	Edwin1719/AvatarAcademy	1	MIT	2025-12-04	Revoluciona el aprendizaje con tutores de video impulsados por IA. Esta plataforma en Python usa GPT-4o   y avatares realistas para generar lecciones dinámicas 
+G5f	acc235-ua/tutor-virtual-inteligente	0	NONE	2026-09-01	Tutor virtual inteligente. proyecto TFG, chat basado en LLM con sistema RAG para asistir al proceso de educación,  adaptándose al nivel del alumno. 
+G5f	achique-luisdan/sti-aurora-digital	0	NONE	2021-11-10	Sistema Tutor Inteligente para la Construcción del Pensamiento Computacional en los Estudiantes de Educación Media General de Venezuela 
+G5f	junjie1005/Plataforma-IA-Educativa-Rutas-Personalizadas	0	NONE	2026-08-10	Plataforma educativa basada en Inteligencia Artificial para ofrecer rutas de aprendizaje personalizadas. El proyecto aborda el uso de IA en la educación mediant
+G5g	yamil-abraham/learniverse	5	MIT	2025-12-09	Plataforma educativa gamificada con avatares 3D para aprendizaje
+G5g	ReducAR-dev/ReducAr	3	NONE	2026-10-26	Plataforma educativa para explorar cursos, rutas de aprendizaje y oportunidades de formación digital.
+G5g	LuisangelSS/MentorIA-	3	NONE	2025-11-25	MentorIA – Plataforma de Aprendizaje Adaptativo con IA  MentorIA es una plataforma web educativa que utiliza inteligencia artificial para ofrecer experiencias d
+G5g	MrDavidAlv/plataforma-educativa	2	NONE	2024-06-24	Plataforma educativa desarrollada en ASP.NET Core para la gestión integral de cursos, estudiantes y profesores. Incluye funcionalidades de administración, segui
+G5g	karlosvas/amanahacademia	2	NOASSERTION	2026-11-07	Plataforma educativa innovadora especializada en la enseñanza del español mediante un enfoque culturalmente inmersivo. Dirigida por Ana Ortega, conecta a estudi
+G5g	JuandresQm/Algorit-Plus	1	NONE	2026-07-15	Plataforma educativa orientada al aprendizaje de pseudocódigo
+G5g	studioanime977/EduClick	1	NONE	2026-06-27	EduClick - Plataforma educativa interactiva para el aprendizaje digital.
+G5g	yohperez/Yara	1	MIT	2026-11-12	Plataforma educativa inclusiva impulsada por inteligencia artificial para el aprendizaje personalizado.
+G5g	Yop007N/app-study	1	MIT	2026-03-08	Aplicación educativa de estudio. Stack: JavaScript, React. Plataforma de aprendizaje interactivo
+G5g	HernanTo/Scolve	1	NONE	2023-08-15	Plataforma educativa diseñada para simplificar la enseñanza y el aprendizaje en línea.
+G5g	TrzA191/cn-education-platform	1	NONE	2026-05-14	Plataforma educativa cloud native con microservicios serverless para generación de rutas de aprendizaje personalizadas.
+G5g	smyleface18/LP-API	1	Apache-2.0	2026-11-12	LinguaPlay API |  LinguaPlay es una plataforma educativa diseñada para facilitar el aprendizaje de idiomas.
+G5g	Rodrigo-Sola/Proyecto-DAM	1	NONE	2025-11-14	Match Habilidades es una aplicación móvil educativa desarrollada en Android cuyo objetivo es conectar a personas que desean compartir y aprender habilidades. La
+G5g	ForestVonGram/Red-Social-de-Aprendizaje-Colaborativo	1	AGPL-3.0	2025-05-31	El proyecto consiste en desarrollar una plataforma que simule una red social educativa, en la cual los usuarios (estudiantes) puedan compartir recursos de apren
+G5g	ACDPDEV/move	1	GPL-3.0	2026-03-06	Plataforma educativa interactiva diseñada para facilitar el aprendizaje de física y matemáticas mediante simulaciones visuales accesibles desde la web.
+G5g	medransfinformatica/edugeogebra-	1	NONE	2026-10-20	EduGeoGebra es una plataforma web e interactiva orientada a la enseñanza y el aprendizaje de la matemática, combinando las herramientas dinámicas de GeoGebra co
+G5g	SarriaFreelancer/sarriatechcursos	1	NONE	2026-07-24	🚀 SarriaTech LMS | Plataforma educativa moderna desarrollada con React, TypeScript, Node.js, Express, Prisma y MySQL. Permite gestionar cursos, estudiantes, pro
+G5g	M3fi/EduSoft	1	NONE	2025-06-21	plataforma web educativa interactiva orientada al aprendizaje personalizado y gamificado, diseñada para estudiantes desde primaria hasta bachillerato. Permite e
+G5g	Dappermarce/NeuroMind-Atlas	1	NONE	2026-09-25	NeuroMind Atlas es una plataforma educativa sobre psicología y psiquiatría que abarca las ciencias del cerebro, los trastornos de salud mental, los fundamentos 
+G5g	IndeNetwork/IndeNetwork	1	NONE	2024-09-09	¡Descubre IndeNetwork: tu plataforma educativa en línea que fomenta la colaboración y el                         aprendizaje mutuo! Conecta con otros estudiante
+G5g	ramosjazmin943-eng/ProTech-Support-	1	NONE	2026-10-07	ProTech Support  es una aplicación educativa de escuela técnica virtual destinada a estudiantes. La plataforma ofrecerá clases virtuales, horarios, materias, ma
+G5g	luciavalverdecp/ProyectoIntegrador2025	1	NONE	2026-03-23	Plataforma web educativa desarrollada en .NET y C# que conecta docentes y estudiantes. Permite dictar clases en vivo, subir contenido grabado, compartir materia
+G5g	Daniel-Cisneros-Rojas/Hanzi-Play-Learn	1	NONE	2026-07-15	Aplicación web educativa desarrollada con Laravel 12 que emplea técnicas de gamificación para facilitar el aprendizaje de caracteres chinos (Hanzi) de una maner
+G5g	ivandavidgaonaaristizabal-png/think_so_fast.github.io	1	NONE	2026-05-05	El proyecto “Think So Fast” es una plataforma educativa que busca apoyar a estudiantes en su preparación para la prueba Saber 11. A través de simulacros y recur
+G5g	arkonoficial/ARKON	1	NONE	2026-11-13	ARKON | Aprende y Prepárate  Plataforma educativa interactiva que fortalece la convivencia, la ciudadanía y las habilidades laborales mediante recursos, activid
+G5h	scripts5/EduGuide-AI	0	NONE	2026-09-08	Tutor de IA educacional para aprendizagem passo a passo, quizzes e acompanhamento de progresso.
+G5h	FelipeYan7/NotebookLMPrimeiroPassoWeb	0	NONE	2026-01-11	Modelo educacional desenvolvido com NotebookLM para ensino de programação a iniciantes, baseado em Aprendizagem Ativa (Active Learning). Atua como um tutor virt
+G5i	Otavio-Emanoel/WizardNews	7	NONE	2025-09-25	Wizard News é uma plataforma web voltada para divulgação, educação e conscientização sobre escolas sustentáveis e práticas ambientais. O projeto foi desenvolvid
+G5i	asmarchioli/educatio-quiz	2	NONE	2025-12-01	O “Educatio Quiz” consiste em uma plataforma de quizzes voltados para as diferentes áreas da educação, seja para ensino fundamental ou até ensino superior. Os p
+G5i	NatanCesar/GRUPO_ESA_BNCC_Play	1	MIT	2026-08-07	  Plataforma educacional gamificada voltada ao apoio do ensino de Computação na Educação Básica, alinhada às diretrizes da BNCC Computação
+G5i	Fabrica-REA/repolibras	1	NONE	2026-05-05	Plataforma colaborativa para pesquisa, visualização e contribuição de vídeos de sinais em Libras, desenvolvida para promover inclusão, ensino e divulgação na UF
+G5i	amador-m/Logicup	1	MIT	2026-11-17	LogiCup é uma plataforma gamificada voltada ao ensino de programação em Java, tornando o aprendizado mais interativo, prático e motivador por meio de desafios, 
+G5i	DanCodeMonkey/kidcoin-dsm3s	1	NONE	2026-03-24	Projeto Integrador do 3º semestre do curso de Desenvolvimento de Software Multiplataforma da FATEC Votorantim. O projeto consiste em uma plataforma gamificada p
+G5i	Isaquelc/Projeto-do-ensino-medio	0	NONE	2017-09-24	Plataforma Virtual de Educação em Exatas
+G5i	GeraldoOliveira4/geonexus-educacao	0	NONE	2026-07-18	Plataforma de Inteligência Territorial para Instituições de Ensino
+G5i	limaandrei472/plataforma-educacional	0	NONE	2025-11-28	plataforma para educação em ensino básico, usando ngrok e banco MySQL
+G5i	jpcoelhoATipbDOTpt/LED_Laboratorios_de_Educacao_Digital	0	NONE	2024-01-05	Curso de programação para a plataforma Arduino para docentes do ensino básico/secundário
+G5i	GoEnsino/GoEnsino	0	NONE	2021-05-31	GoEnsino é uma plataforma gamificada que analisa dados de educação e recomenda conteúdos com o objetivo de auxiliar alunos com dificuldades em matérias do ensin
+G5i	Otton-Orilhana/educacao-financeira-prototipo	0	NONE	2026-07-30	Protótipo funcional de uma plataforma de educação financeira para alunos do ensino fundamental e médio. Desenvolvido em HTML, CSS e JavaScript. Backend em Pytho
+G5i	Patrickq67/projeto-ods4-educacao-inteligente	0	NONE	2025-05-24	Plataforma web educacional com foco no ensino médio de matemática, utilizando análise de dados e machine learning para identificar dificuldades dos alunos e sug
+G5i	luizcsx/centro-educacional-de-itaborai	0	MIT	2026-05-04	Plataforma pedagógica digital desenvolvida para fortalecer o ensino e a aprendizagem nas escolas municipais de Itaboraí, Rio de Janeiro.
+G5i	xing-wang-kai/COMPANYS_AUTO_LEARN_PLATAFORM	0	NONE	2026-04-06	Plataforma de educação para empresas, onde podem usar dados do firebase para criar uma plataforma de ensino corporativa e manter seus colaboradores sempre atual
+G5i	GabrielAzM/FINLAB	0	NONE	2026-10-15	Desenvolvimento e avaliação de uma plataforma de educação financeira com trilhas progressivas e oficinas maker para estudantes do ensino médio
+G5i	liviesnt/librasmath	0	NONE	2025-11-27	Libras Math é uma plataforma educacional e interativa, destinada ao ensino da matemática para alunos com deficiência auditiva da educação básica. 
+G5i	andreasabela/RedePrecepta	0	NONE	2026-08-17	Plataforma inteligente de integração, preceptoria e educação na Atenção Primária à Saúde. Conectando pessoas, organizando informações e fortalecendo a integraçã
+G5i	frandony/GAMIFICACAO-APLICADA-A-MATEMATICA-DO-ENSINO-FUNDAMENTAL-MEDIO	0	MIT	2026-06-06	Jogo educativo de classificação de equações de 1º e 2º grau desenvolvido na plataforma Wordwall, como parte do Projeto de Extensão ODS 4 (Educação de Qualidade)
+G5i	gsmedicine73-byte/Neurosvaldo-School-	0	NONE	2025-08-17	Plataforma de ensino online da Neurosvaldo School, com cursos em Forex, Inglês e Informática, certificados e sistema de pagamento integrado.
+G5i	RaphaelMun1z/ProjetoJP	0	NONE	2026-07-03	Plataforma web desenvolvida para digitalizar e centralizar a gestão do projeto de extensão Jovens Programadores (UFU), integrando processos seletivos, acompanha
+G5i	Tiagojr99/Projeto-WebEdu	0	NONE	2024-11-26	O WebEdu é um projeto voltado para democratizar o acesso à educação e orientação vocacional. A plataforma conecta adolescentes de baixa renda a cursos gratuitos
+G5i	JuanPabloR-js/Projeto-UniCheck	0	NONE	2026-05-14	UniCheck é uma plataforma de educação voltada para faculdades, criada para facilitar a entrada de calouros que muitas vezes chegam sem informações relevantes so
+G5i	evertonsilvarocha-del/O-futuro-do-aprendizado	0	MIT	2026-07-02	A fusão entre tecnologia e educação transforma o aprendizado. Ferramentas digitais, IA e plataformas interativas conectam alunos ao conhecimento global, tornand
+G5i	silvapedrodev/kiddieLingo	0	MIT	2025-09-26	O KiddieLingo é uma plataforma educacional para o ensino de inglês voltada para crianças de baixa renda, criada como parte de um trabalho acadêmico de Atividade

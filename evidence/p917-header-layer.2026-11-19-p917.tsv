@@ -1,0 +1,14 @@
+repo	branch	file	layer	family	evidence
+justinhunt/moodle-mod_readaloud	master	version.php	HEADER	GPL-3.0-or-later	// it under the terms of the GNU General Public License as published by
+marceloschmitt/moodle-block_analytics_graphs	4.3	version.php	HEADER	GPL-3.0-or-later	// it under the terms of the GNU General Public License as published by
+h5p/h5p-editor-php-library	master	package.json	MANIFEST	MANIFEST-SEE LICENSE IN README.md	named in package.json, grant text NOT reproduced (905-G1) — weaker than a header
+Lumieducation/Lumi	master	package.json	MANIFEST	MANIFEST-AGPL-3.0	named in package.json, grant text NOT reproduced (905-G1) — weaker than a header
+OS4ED/openSIS-Classic	master	index.php	HEADER	GPL	#  This program is released under the terms of the GNU General Public License as  
+PRX/badges_engine	-	-	NONE	UNGRANTED-AT-THREE-LAYERS	no licence file (p913), no grant header and no manifest field over 22 candidate paths
+openmichigan/open_badges	-	-	NONE	UNGRANTED-AT-THREE-LAYERS	no licence file (p913), no grant header and no manifest field over 22 candidate paths
+1EdTech/openbadges-specification	-	-	NONE	UNGRANTED-AT-THREE-LAYERS	no licence file (p913), no grant header and no manifest field over 22 candidate paths
+chrispiech/DeepKnowledgeTracing	-	-	NONE	UNGRANTED-AT-THREE-LAYERS	no licence file (p913), no grant header and no manifest field over 22 candidate paths
+jennyzhang0215/DKVMN	-	-	NONE	UNGRANTED-AT-THREE-LAYERS	no licence file (p913), no grant header and no manifest field over 22 candidate paths
+seewoo5/KT	-	-	NONE	UNGRANTED-AT-THREE-LAYERS	no licence file (p913), no grant header and no manifest field over 22 candidate paths
+projectfedena/fedena	-	-	NONE	UNGRANTED-AT-THREE-LAYERS	no licence file (p913), no grant header and no manifest field over 22 candidate paths
+narender-rk10/MyProctor.ai-AI-BASED-SMART-ONLINE-EXAMINATION-PROCTORING-SYSYTEM	-	-	NONE	UNGRANTED-AT-THREE-LAYERS	no licence file (p913), no grant header and no manifest field over 22 candidate paths
