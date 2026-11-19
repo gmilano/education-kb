@@ -10,7 +10,7 @@ Concrete recipes. Each names the exact repos, how they wire together, the licenc
 the result, and a realistic build estimate. Every repo referenced is verified in
 `agents/top.md`, `repos/foundations.md` or `verticals/solutions.md`.
 
-**Fifty-three patterns, re-counted mechanically in `p926`** (`grep -cE '^## P[0-9]+' compose/patterns.md` → **53**; `P51`–`P53` added in `p926`, command run after writing them and before writing this number). 🟢 **Two passes running that the rule has held.** 🔵 The count is `grep -cE '^## P[0-9]+' compose/patterns.md`; **do not hand-edit it.** *(prior banner:* **Fifty patterns, re-counted mechanically in `p925`** (`grep -cE '^## P[0-9]+' compose/patterns.md` → **50**; `P48`–`P50` added in `p925`, command run after writing them and before writing this number). *)* 🔴 **This line read *"Thirty-seven"* and was ten short — `P38`–`P47` were added across `p917`–`p923` and not one of those passes re-ran the command.** That is the largest drift this sentence has ever had to correct, and the fourth time it has had to. 🔵 The count is `grep -cE '^## P[0-9]+' compose/patterns.md`; **do not hand-edit it.** *(prior banner:* **Thirty-seven patterns, re-counted mechanically in `p916`** (`grep -cE '^## P[0-9]+' compose/patterns.md` → **37**; `P36`–`P37` added in `p916`, both run through the command rather than the word) (*prior banner:* **Thirty-five patterns, re-counted mechanically in `p915`** (🔴 **this line read *"Thirty-two"* and was three short — `P33` was added in `p914` and `P34`–`P35` in `p915`.** The count is `grep -cE '^## P[0-9]+' compose/patterns.md`, it is **35**, and a pass that adds one re-runs that command rather than editing the word — the same drift recurred in `intel/trends.md` this pass and is corrected there too.*)* (🔴 this line read *"Twenty-six, counted mechanically in `p907`"* and was **six short**: `P27`–`P31` were added in `p908`–`p912` and `P32` in `p913`, none of them re-counting. `p907` corrected the same line from *"twenty-three"* and wrote the rule — **a pass that adds a pattern should re-count, not increment** — and the drift resumed on the very next pass. 🔵 The count is now `grep -cE '^## P[0-9]+' compose/patterns.md`; **do not hand-edit this number**), **plus the G1 licence gate added in p897 and extended with gate `904-G1` in p904, `905-G1` in p905, `907-G1` in `p907`, `912-G1` in `p912` and `913-G1` in `p913`** (**P26 added in `p907`** — the sanctioned LMS-to-agent bridge, built from the seven per-institution user-credential bridges `intel/trends.md` **T30** measured, and the only end-to-end permissive pattern here that touches a commercial LMS) (**P22 added in `p903`** — the
+**Fifty-five patterns, re-counted mechanically in `p927`** (`grep -cE '^## P[0-9]+' compose/patterns.md` → **55**; `P54`–`P55` added in `p927`, command run after writing them and before writing this number), **plus the new payload-address licence gate `927-G1`**, which extends `904-G1` from *probe the payload directory* to **probe the payload repository, and read the README when there is no licence file**. 🟢 **Three passes running that the re-count rule has held.** 🔵 The count is `grep -cE '^## P[0-9]+' compose/patterns.md`; **do not hand-edit it.** *(prior banner:* **Fifty-three patterns, re-counted mechanically in `p926`** (`grep -cE '^## P[0-9]+' compose/patterns.md` → **53**; `P51`–`P53` added in `p926`, command run after writing them and before writing this number). 🟢 **Two passes running that the rule has held.** 🔵 The count is `grep -cE '^## P[0-9]+' compose/patterns.md`; **do not hand-edit it.** *(prior banner:* **Fifty patterns, re-counted mechanically in `p925`** (`grep -cE '^## P[0-9]+' compose/patterns.md` → **50**; `P48`–`P50` added in `p925`, command run after writing them and before writing this number). *)* 🔴 **This line read *"Thirty-seven"* and was ten short — `P38`–`P47` were added across `p917`–`p923` and not one of those passes re-ran the command.** That is the largest drift this sentence has ever had to correct, and the fourth time it has had to. 🔵 The count is `grep -cE '^## P[0-9]+' compose/patterns.md`; **do not hand-edit it.** *(prior banner:* **Thirty-seven patterns, re-counted mechanically in `p916`** (`grep -cE '^## P[0-9]+' compose/patterns.md` → **37**; `P36`–`P37` added in `p916`, both run through the command rather than the word) (*prior banner:* **Thirty-five patterns, re-counted mechanically in `p915`** (🔴 **this line read *"Thirty-two"* and was three short — `P33` was added in `p914` and `P34`–`P35` in `p915`.** The count is `grep -cE '^## P[0-9]+' compose/patterns.md`, it is **35**, and a pass that adds one re-runs that command rather than editing the word — the same drift recurred in `intel/trends.md` this pass and is corrected there too.*)* (🔴 this line read *"Twenty-six, counted mechanically in `p907`"* and was **six short**: `P27`–`P31` were added in `p908`–`p912` and `P32` in `p913`, none of them re-counting. `p907` corrected the same line from *"twenty-three"* and wrote the rule — **a pass that adds a pattern should re-count, not increment** — and the drift resumed on the very next pass. 🔵 The count is now `grep -cE '^## P[0-9]+' compose/patterns.md`; **do not hand-edit this number**), **plus the G1 licence gate added in p897 and extended with gate `904-G1` in p904, `905-G1` in p905, `907-G1` in `p907`, `912-G1` in `p912` and `913-G1` in `p913`** (**P26 added in `p907`** — the sanctioned LMS-to-agent bridge, built from the seven per-institution user-credential bridges `intel/trends.md` **T30** measured, and the only end-to-end permissive pattern here that touches a commercial LMS) (**P22 added in `p903`** — the
 national-curriculum corpus pattern, built from the Arabic-language channel's finding that the
 curriculum exists at national scale and carries no grant; see `intel/trends.md` **T26**) (**P20 added in `p901`** — the first end-to-end permissive *synchronous* pattern in this file, unlocked by `p901`'s verification of `jitsi/jitsi-meet` at Apache-2.0) (**P19 added in `p900`** — the
 first end-to-end permissive pattern in this file that is not offline-first, built entirely from
@@ -3897,3 +3897,156 @@ competitive (**DKT ≈0.75 vs PFA 0.760**). **A fair evaluation may well show th
 not beating logistic regression.** That is a finding worth being paid for, and it is much cheaper to
 agree that in the statement of work than to discover it in the readout.
 
+
+---
+
+## 927-G1 — Payload-address licence gate (extends `904-G1`) — added `p927`
+
+`904-G1` said: when a repository's payload is data or content, probe the **payload directory**
+(`dados/LICENSE.md`) before recording an SPDX value, because a root-only probe reports the wrong
+grant rather than no grant. `p927` found the same failure one level up, on a row this base
+publishes.
+
+**The case.** `CAHLR/OATutor` is **MIT**, byte-read, 283 ★, UC Berkeley, and is published in
+`agents/top.md` as an intelligent tutoring system *"with open problem banks"*. The problem banks
+are in **`CAHLR/OATutor-Content`** — a **different repository** — which has **no licence file on 14
+probed paths** and reports SPDX `NONE`. Both channels agree, so the two-channel rule does not fire.
+The grant exists **only as prose in the README**: CC BY 4.0, with attribution recorded **per JSON
+record**, per hint, scaffold and problem, because the content is curated from OpenStax plus
+classroom syllabi.
+
+**Run this before writing any row whose value is content.**
+
+- **Step 0c — find the payload's address.** Read the README of the code repository for a *Content
+  Repository*, *Data*, *Corpus* or *Assets* link. If the content is not in the repository you are
+  about to cite, **you are citing the wrong address.**
+- **Step 0d — probe *that* address**, with the full 14-path licence probe, not the code repository's.
+- **Step 0e — no licence file is not "unlicensed".** When the probe returns nothing, **read the
+  README for a prose grant**. Record it as *grant stated in README prose, no licence file* — which
+  is materially different from both *MIT* and *unlicensed*, and is the only honest cell.
+- **Step 0f — check whether the grant is per-record.** If the project says attribution or licensing
+  is recorded inside the data, that is a **delivery obligation with a build cost**: the deliverable
+  has to carry attribution per item through generation, packaging and display. **Put it in the
+  estimate.** No SPDX field, SBOM or scanner can represent it.
+
+🔵 **Why this is a gate and not a note.** Three of this base's most valuable content rows —
+`OATutor-Content`, `bncc-dados`, `learning-commons-org/knowledge-graph` — each fail a different
+step above, and in every case the *code* repository's licence cell was correct and useless. See
+`intel/trends.md` **T63**.
+
+---
+
+## P54 — Generate the courseware, ship it as SCORM, and never touch the client's LMS — added `p927`
+
+**The problem.** Every content pattern in this file ends at the same wall: the generated
+courseware has to get **into** the client's learning platform. The routes this base has documented
+— an LTI 1.3 tool, an MCP bridge, a Moodle plugin — all require the client's platform team to
+install, register and maintain something, which is a procurement conversation before it is an
+engineering one. For a corporate L&D buyer or an EMEA public-sector estate, it is usually the
+reason the pilot does not start.
+
+**The insight.** **SCORM 1.2 packages are ingested by every LMS in the market** — Moodle, Canvas,
+Open edX, Brightspace, SuccessFactors, Cornerstone — with **no plugin, no tool registration, no
+platform fork and no AGPL exposure.** It is the one delivery form that is indifferent to what the
+client runs, and this base had no row for it until `p927`.
+
+**The build.**
+
+1. **Author.** Generate the lesson with a content agent this base already holds —
+   `xingjunm/autoppt` (**MIT**, interactive lecture slides, `926-F4`) or
+   `532025497/video2lesson` for video-sourced material. Output a **Markdown storyboard**.
+2. **Compile.** `parthdhanani/storycraft` (**MIT**, `sha256₁₂ 51b37fff352e`) turns the Markdown
+   storyboard into a **SCORM 1.2 package**.
+3. **Validate and run.** `parthdhanani/scorm-kit` (**MIT**, identical grant) packages, **validates**
+   and provides the SCORM runtime. Validate **before** handing anything to the client — a package
+   the LMS rejects is the whole value of this pattern lost.
+4. **Interactivity.** Where the lesson needs interactions rather than slides, author them as H5P
+   and play them with `missing-elements/h5p-toolkit` (**MIT**) — which plays `.h5p` **with no H5P
+   server**, so the interactive tier does not re-introduce the platform dependency step 1 removed.
+5. **Credential the completion.** On pass criteria, issue with
+   `parler-haut-interagir-librement/certificates-bundle` (**MIT**, PDF + QR verification) and
+   `…/open-badges-bundle` (**MIT**), or `wonmortech/sanad` (**Apache-2.0**) where the client wants
+   **W3C Verifiable Credentials 2.0**. See `intel/trends.md` **T65**.
+6. **Measure.** SCORM 1.2 reports completion and score and little else. If the engagement promises
+   anything about learning, add `CAHLR/pyBKT` (**MIT**) over the item responses and read
+   `10kH/MisconceptDialogue` **before** agreeing the success criteria — see **P7** and `927-F8`.
+
+**Licence posture.** 🟢 **Permissive end to end.** Every component is MIT or Apache-2.0, byte-read.
+The client's LMS is never forked, never patched and never a dependency, so its AGPL or GPL status
+is irrelevant to the deliverable — which is the structural reason this pattern survives a licence
+review that `P11` and `P26` have to argue their way through.
+
+**Estimate.** **5–7 weeks** for a first package pipeline with one subject and one LMS validated;
+**+2 weeks** per additional interaction type. 🟡 `storycraft` and `scorm-kit` are 1–2 ★ and months
+old — **read them end to end and expect to maintain them**; they are small enough that this is a
+realistic plan and the plan should be stated to the client, not discovered later.
+
+**When not to use it.** SCORM is a **one-way** package format. If the engagement needs the tutor to
+read the gradebook, adapt across sessions or act on live learner state, SCORM cannot carry it —
+use `P11` (MCP into the LMS) or `P26` (sanctioned LMS-to-agent bridge) instead. **P54 is for
+delivery of content, not for an agent that lives inside the course.**
+
+---
+
+## P55 — Exam integrity that is compliant by architecture rather than by contract — added `p927`
+
+**The problem.** A client asks for proctoring. This base's standing answer has been *"do not
+propose it"*: under the EU AI Act, **inferring emotions in an education institution is a prohibited
+practice, in force since 2 February 2025**, exam proctoring is **separately Annex III high-risk**
+from 2 December 2027, Canadian higher education has broadly refused the tooling on privacy grounds
+(`p891`), and the open tier was six repositories whose largest was 16 ★ and dormant. That answer is
+correct and it loses the engagement.
+
+**The insight (`T64`).** The prohibition is on **emotion inference**, not on video; the privacy
+objection is to **student data leaving the institution**, not to monitoring as such. Both can be
+answered in the **design** rather than in the DPIA. `topic:proctoring` — 176 repositories, never
+asked until `p927` — contains worked examples of exactly that.
+
+**The build.**
+
+1. **Start from the floor, not the ceiling.** `tanzir71/tinyproctorjs` (**MIT**, 1,085 B byte-read)
+   is an integratable JS agent plus session dashboard doing **browser-integrity monitoring only** —
+   focus loss, tab switching, session state. 🟢 **It infers no affect at all**, so the prohibition
+   is not engaged by its design rather than by its configuration. For a large share of real
+   academic-integrity requirements, **this is the entire product** and nothing further is needed.
+2. **Add vision only if the client can state why integrity signals are insufficient**, and add it
+   **local-first**: `SHUBHJAIN139/Local-Exam-Proctoring-Engine` (**MIT**) runs WebAssembly MediaPipe
+   and TF.js **in the candidate's own browser**, so **no video leaves the device**. Transmit
+   **events and scores, never frames**. 🔴 Read `Aryansh909/Examshield-AI` (**MIT**, YOLOv8 +
+   MediaPipe 468-point) as the capability ceiling and **do not ship 468-point landmark tracking
+   without a written answer to what is computed from it** — that is the input affect inference is
+   built from.
+3. **Reduce what proctoring has to carry.** Randomised item generation makes copying worth less:
+   `PrairieLearn` (🔴 **AGPL-3.0 community edition, with a proprietary Enterprise tier including
+   `apps/course-agent/` — see `repos/foundations.md` `p899`**) or, permissively,
+   `openpatch/bitflow` (**MIT**) for branching assessment flows and
+   `mrlvsb/kelvin` (**MIT**, VŠB–TU Ostrava's production examinator) for code assessment.
+4. **Detect at the artefact, not at the face.** `alberto2005-coder/detector-ia` (**MIT**) scores
+   AI-generated text **and copying between submissions** across Jupyter, PDF, DOCX, MD and TXT.
+   🔵 Cross-submission comparison is what an integrity office actually asks for, and it needs no
+   camera at all.
+5. **Make the human the decision-maker, auditably.** Every flag goes to review, never to an
+   outcome. `Appsmith` (Apache-2.0) for the review queue; log the model version, the inputs, the
+   reviewer and the decision. 🔴 **Oklahoma SB 1734 bars AI used solely for grading, discipline or
+   promotion** — an automated integrity finding that reaches a student record without a human is
+   the exact prohibited shape.
+6. **Record the telemetry posture.** `CarlosEkRaigoza/privacy-preserving-educational-telemetry`
+   (**MIT**) is a published reference design for this layer, and **California AB 1159** bars
+   training models on student data outright — so the retention and training policy is a **design
+   artefact**, not a contract clause.
+
+**Licence posture.** 🟢 **Permissive end to end if `PrairieLearn` is replaced in step 3** with
+`bitflow` and `kelvin`; 🔴 **`DELIVERABLE — COPYLEFT` if `PrairieLearn` stays.** Decide this at
+architecture review, not at delivery.
+
+**Estimate.** **6–8 weeks** for steps 1, 4 and 5 — integrity signals, artefact detection and
+auditable human review — which is the version that is defensible in every region this base covers.
+**+4–6 weeks** for local-first vision in step 2, and that increment is where the legal review
+belongs.
+
+🔴 **What this pattern does not do.** It does not change the **risk classification**: exam-access
+and assessment proctoring is Annex III high-risk from 2 December 2027 whatever the architecture.
+It reduces **prohibition and privacy exposure**, which is a different thing, and the client must be
+told so plainly. 🟡 And the three proctoring rows are **0–1 ★ and months old** — they are
+**reference designs to read**, not dependencies to pin. The studio's first offer should still be
+**integrity by assessment design**; P55 exists so that the second offer is not a refusal.

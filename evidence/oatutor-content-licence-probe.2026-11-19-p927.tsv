@@ -1,0 +1,8 @@
+repo	channel	result	grant
+CAHLR/OATutor	raw main/LICENSE	200, 1105 B	MIT License (byte-read)
+CAHLR/OATutor	search/repositories	283 stars, pushed 2026-11-17	MIT
+CAHLR/OATutor-Tooling	raw main/LICENSE	200, 1105 B	MIT License (byte-read)
+CAHLR/OATutor-Content	raw, 14 paths probed	no licence file on any path	none
+CAHLR/OATutor-Content	search/repositories	9 stars, pushed 2026-11-13	NONE
+CAHLR/OATutor-Content	raw main/README.md	200	"All content in this repository is made available under the Creative Commons Attribution 4.0 International (CC BY 4.0) license. Attribution is given within each json file, indicating the authoring organization and license for each hint, scaffold, and problem." - PROSE ONLY
+CAHLR/OATutor-Content-Staging	search/repositories	0 stars, pushed 2026-11-17	NONE

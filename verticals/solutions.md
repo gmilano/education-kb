@@ -285,6 +285,30 @@ generation (`PrairieLearn`), authenticated submission over CAS, and auditable hu
 (`Appsmith`) — not behavioural surveillance. That is a studio position worth stating to a client
 before they ask for a proctoring pilot.
 
+
+### 🟢 `p927` — the category is still unadoptable, but the *architecture* is no longer the problem
+
+`topic:proctoring` returned **176 repositories and had never been asked** by any pass. 🔵 It does
+not overturn the paragraph above — the tier is still 0–3 ★ and months old, and proctoring remains
+**Annex III high-risk** with obligations from 2 December 2027. What it changes is narrower and
+more useful: **the "near-uniformly built on webcam behaviour analysis" characterisation no longer
+holds for the whole category.** Three MIT rows, all byte-read 2026-11-19, are built so the
+regulated inference never happens and the regulated data never moves:
+
+| Tool | Repo | Licence (byte-read) | Stars / last push | Why the architecture matters |
+|---|---|---|---|---|
+| **tinyproctorjs** | https://github.com/tanzir71/tinyproctorjs | **MIT** (1,085 B, `cc1b9d2387e8`) | 0 ★ · 2026-11-17 | 🟢 **Browser-integrity monitoring only** — focus loss, tab switching, session state. **It infers no affect at all**, so the EU prohibition is not engaged by its design rather than by its configuration. The compliant floor. |
+| **Local-Exam-Proctoring-Engine** | https://github.com/SHUBHJAIN139/Local-Exam-Proctoring-Engine | **MIT** (1,067 B, `91a47a93bbca`) | 0 ★ · 2026-10-12 | 🟢 WebAssembly MediaPipe and TF.js **in the candidate's browser**; **no video leaves the device.** That removes the transfer the privacy objection attaches to — the objection that made Canadian higher education refuse this tooling (`p891`). |
+| **Examshield-AI** | https://github.com/Aryansh909/Examshield-AI | **MIT** (1,070 B, `75107b398587`) | 1 ★ · 2026-08-01 | 🟡 YOLOv8 plus MediaPipe **468-point** facial landmarks — the most capable and the most exposed. 468-point tracking is the input affect inference is built from, so its compliance argument rests entirely on what is computed from it and where. The capability ceiling, read against `tinyproctorjs` as the floor. |
+
+🔵 **The studio position changes from "do not propose this" to a scoped build.** The defensible
+offer is still **integrity by assessment design** first. But when a client insists on proctoring,
+there are now three reference designs for a build whose exposure is **architectural rather than
+contractual** — no affect inference, no video egress — instead of a category with nothing in it but
+AGPL webcam surveillance. `compose/patterns.md` **P55** scopes it. 🟡 **None of these is adoptable
+as a dependency**: 0–1 ★, weeks to months old, single-author. They are designs to read.
+
+
 ## Curriculum data and learning-content assets
 
 **Added in pass p890.** Not platforms, but deployable/extensible content assets — and the
@@ -399,6 +423,20 @@ AI-driven platform"* and *"currently a theoretical project"* offering *"a concep
 date.** They are told apart by one step — **reading what the repository says it is** — and a
 platform that publishes an Implemented/Planned table is doing that work for you. **`926-R2`: before
 a platform row is written, quote the repository's own claim about its implementation state.**
+
+## 🆕 `p927` — a Brazilian state university's own academic system, and Canvas you can actually stand up
+
+Two rows from the 35-leg topic sweep (`agents/trending.md` `927-F1`), grants byte-read 2026-11-19.
+
+| Platform | Repo | Licence (byte-read) | Where it is strong | AI layering seam |
+|---|---|---|---|---|
+| **Harpia** | https://github.com/uemanet/harpia | **MIT** (`LICENSE@main`, 1,063 B, `sha256₁₂ afa9cfe1dcb6`) | 🟢 **The academic system of Universidade Estadual do Maranhão** — a Brazilian **state** university — open since **2017-12-21** and still pushed (2026-11-15), 28 ★. 🔵 **This is the row that corrects `926-G2`.** That pass measured eleven Spanish- and Portuguese-language rows, found none permissively licensed, and published *"the default licence state is no licence at all"* as a fact about LATAM. It was a fact about one leg list. 🟢 **The corrected claim is more useful to a studio:** LATAM permissive supply is concentrated in **institutional** software — a public university's own registrarial spine, maintained for nine years — and not in the general-purpose tutor, where `p904` measured a 6 ★ ceiling. | Registrarial data under a permissive grant is exactly what `compose/patterns.md` **P12** needs and has been scoping against `UniTime` alone. Pair it with the BNCC curriculum cluster in `repos/foundations.md` for a Brazil engagement that is permissive end to end. |
+| **Canvas LMS, dockerised** | https://github.com/ahamana/canvas-lms-docker | **MIT** (`LICENSE@main`, 1,071 B, `sha256₁₂ 21ba971d464e`) | Self-hosted **Canvas** configuration, 21 ★, created 2022-12-20, pushed 2026-11-19. 🔵 `instructure/canvas-lms` is **AGPL-3.0** and notoriously heavy to stand up; this is the MIT-licensed *deployment* of it. **The container recipe is not a derivative work of the LMS**, which is why the grants differ and why this row is usable in a closed engagement even though what it deploys is not. | Stand up a throwaway Canvas, attach `vishalsachdev/canvas-mcp` or `boyuchengz/canvas-mcp` (both MIT) and demo against a real gradebook instead of a mock. This is the missing first step of `compose/patterns.md` **P26**. |
+
+🟡 **`mrlvsb/kelvin`** (MIT, 35 ★ — **VŠB–TU Ostrava's production code examinator**) is the third
+deployable system from this sweep; its full row is in `repos/foundations.md` under the
+delivery-format tier, because it is used as a component more often than as a platform.
+
 
 ## What you inherit when you deploy one of these — measured `p905`
 

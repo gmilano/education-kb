@@ -6,7 +6,7 @@ updated: 2026-11-19
 
 # Current trends — education
 
-**Sixty-two trends, re-counted mechanically in `p926`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **62**; `T61`–`T62` added in `p926`, command run after writing them and before writing this number — 🟢 **two passes running that the rule has held, and the first time this banner has been correct on arrival rather than corrected on the next pass**). 🔵 The count is `grep -cE '^## T[0-9]+' intel/trends.md`; **do not hand-edit it.** *(prior banner:* **Sixty trends, re-counted mechanically in `p925`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **60**; `T59`–`T60` added in `p925`, command run after writing them and before writing this number). *)* 🔴 **This line read *"Fifty-six"* and was four short — `T57`–`T58` were added in `p922` and neither that pass nor the two after it re-ran the command, which is the fifth recurrence of the drift this sentence exists to stop.** 🔵 The count is `grep -cE '^## T[0-9]+' intel/trends.md`; **do not hand-edit it.** *(prior banner:* **Fifty-six trends, re-counted mechanically in `p921`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **56**; `T55`–`T56` added in `p921`, command run after writing them and before writing this number — 🟢 three passes running that the rule has held. *(prior banner:* **Fifty-four trends, re-counted mechanically in `p920`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **54**; `T53`–`T54` added in `p920`, and the command was run after writing them and before writing this number. 🟢 Two passes running that the rule has held.*)* *(prior banner:* **Fifty-two trends, re-counted mechanically in `p919`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **52**; `T51`–`T52` added in `p919`, and the command was run after writing them and before writing this number. `T50` was added in `p918` without this banner being re-run, which is the drift this sentence exists to catch — caught one pass later this time.)*) (*prior banner:* **Forty-nine trends, re-counted mechanically in `p917`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **49**; `T48`–`T49` added in `p917`, and the command was run before the word was written, not after). (*prior banner:* **Forty-seven trends, re-counted mechanically in `p916`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **47**; `T44`–`T47` added in `p916`. 🔵 The rule this line has now carried through four passes finally held: `p916` ran the command rather than editing the word.).) (*prior banner:* **Forty-three trends, re-counted mechanically in `p915`** (🔴 **this line read *"Thirty-nine"* and was four short — `T40`–`T42` were added in `p914` and `T43` in `p915`, and `p914` incremented nothing. That is the *third* consecutive recurrence of the drift this very sentence was written to stop, which makes the rule worth restating as a procedure rather than a warning: 🔵 the count is `grep -cE '^## T[0-9]+' intel/trends.md`, it is **43**, and a pass that adds a trend re-runs that command instead of editing the word.*)* (🔴 this line read *"Thirty-one"* and was **eight short**: `T32`–`T38` were added in `p908`–`p912` and `T39` in `p913`. `compose/patterns.md` carries the rule — *a pass that adds one should re-count, not increment* — and this file drifted the same way and further. 🔵 The count is `grep -cE '^## T[0-9]+' intel/trends.md`; **do not hand-edit it.** `T37` is **materially corrected in `p913`** and `T38` has a second chapter added in `p913`.) (**T30 and T31 added in `p907`** — the LMS-to-agent bridge being built per-institution on the *user's own credentials*, which needs no institutional consent; and the agent-skill marketplaces having no education tier at all, which makes `T26`'s distribution channel measurably empty. Both are the first trends in this file derived from **global code search**, an instrument this base had recorded as unusable; **T29 added in `p906`** — vernacular open education supply measured across eight languages and found to be a single-country phenomenon, with *no licence at all* the default state in the other seven; **T26 added in `p903`** — the unit of publication shifting from the
+**Sixty-seven trends, re-counted mechanically in `p927`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **67**; `T63`–`T67` added in `p927`, command run after writing them and before writing this number — 🟢 **three passes running that the rule has held**). 🔵 The count is `grep -cE '^## T[0-9]+' intel/trends.md`; **do not hand-edit it.** *(prior banner:* **Sixty-two trends, re-counted mechanically in `p926`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **62**; `T61`–`T62` added in `p926`, command run after writing them and before writing this number — 🟢 **two passes running that the rule has held, and the first time this banner has been correct on arrival rather than corrected on the next pass**). 🔵 The count is `grep -cE '^## T[0-9]+' intel/trends.md`; **do not hand-edit it.** *(prior banner:* **Sixty trends, re-counted mechanically in `p925`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **60**; `T59`–`T60` added in `p925`, command run after writing them and before writing this number). *)* 🔴 **This line read *"Fifty-six"* and was four short — `T57`–`T58` were added in `p922` and neither that pass nor the two after it re-ran the command, which is the fifth recurrence of the drift this sentence exists to stop.** 🔵 The count is `grep -cE '^## T[0-9]+' intel/trends.md`; **do not hand-edit it.** *(prior banner:* **Fifty-six trends, re-counted mechanically in `p921`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **56**; `T55`–`T56` added in `p921`, command run after writing them and before writing this number — 🟢 three passes running that the rule has held. *(prior banner:* **Fifty-four trends, re-counted mechanically in `p920`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **54**; `T53`–`T54` added in `p920`, and the command was run after writing them and before writing this number. 🟢 Two passes running that the rule has held.*)* *(prior banner:* **Fifty-two trends, re-counted mechanically in `p919`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **52**; `T51`–`T52` added in `p919`, and the command was run after writing them and before writing this number. `T50` was added in `p918` without this banner being re-run, which is the drift this sentence exists to catch — caught one pass later this time.)*) (*prior banner:* **Forty-nine trends, re-counted mechanically in `p917`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **49**; `T48`–`T49` added in `p917`, and the command was run before the word was written, not after). (*prior banner:* **Forty-seven trends, re-counted mechanically in `p916`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **47**; `T44`–`T47` added in `p916`. 🔵 The rule this line has now carried through four passes finally held: `p916` ran the command rather than editing the word.).) (*prior banner:* **Forty-three trends, re-counted mechanically in `p915`** (🔴 **this line read *"Thirty-nine"* and was four short — `T40`–`T42` were added in `p914` and `T43` in `p915`, and `p914` incremented nothing. That is the *third* consecutive recurrence of the drift this very sentence was written to stop, which makes the rule worth restating as a procedure rather than a warning: 🔵 the count is `grep -cE '^## T[0-9]+' intel/trends.md`, it is **43**, and a pass that adds a trend re-runs that command instead of editing the word.*)* (🔴 this line read *"Thirty-one"* and was **eight short**: `T32`–`T38` were added in `p908`–`p912` and `T39` in `p913`. `compose/patterns.md` carries the rule — *a pass that adds one should re-count, not increment* — and this file drifted the same way and further. 🔵 The count is `grep -cE '^## T[0-9]+' intel/trends.md`; **do not hand-edit it.** `T37` is **materially corrected in `p913`** and `T38` has a second chapter added in `p913`.) (**T30 and T31 added in `p907`** — the LMS-to-agent bridge being built per-institution on the *user's own credentials*, which needs no institutional consent; and the agent-skill marketplaces having no education tier at all, which makes `T26`'s distribution channel measurably empty. Both are the first trends in this file derived from **global code search**, an instrument this base had recorded as unusable; **T29 added in `p906`** — vernacular open education supply measured across eight languages and found to be a single-country phenomenon, with *no licence at all* the default state in the other seven; **T26 added in `p903`** — the unit of publication shifting from the
 application to the agent-addressable curriculum corpus, the first trend in this file derived from a
 non-English repository channel; **T25 added in `p902`** — the licence trap moving from code to the data
 and content assets, where no index can see it; **T24 added in `p901`** — path-dependent licences, the first trend in this file derived from repositories the SPDX channel refused to resolve at all; **T23 added in `p900`** — the first trend in this file derived from a
@@ -2552,3 +2552,121 @@ is**, and a team that filters a candidate list by the index's licence field will
 drop permissive non-Western repositories as "unlicensed". 🟢 Operative rule: **a licence payload
 under ~1,500 B is read, never classified** — and `ingest/p913-grant-authority.sh` now recovers the
 family *and the version* from such payloads (`921-F1`).
+
+## T63 — The licence of an education product now fragments across repository boundaries, and the operative grant increasingly lives nowhere a scanner looks (added `p927`)
+
+**Evidence.** `CAHLR/OATutor` is MIT, byte-read, 283 ★, from UC Berkeley. Its *"open problem banks"*
+— the thing that makes it an intelligent tutoring system rather than a UI — are in a **different
+repository**, `CAHLR/OATutor-Content`, which has **no licence file on 14 probed paths** and reports
+SPDX `NONE` on the search channel. Both channels agree, so no divergence check fires. The grant is
+stated **only as prose in the README** (CC BY 4.0) and the README says the operative licence and
+attribution are recorded **per JSON record**, per hint, per scaffold and per problem, because the
+content is curated from OpenStax plus classroom syllabi across seven textbooks.
+
+**Why it is a trend and not an anecdote.** This base has now recorded the same shape four separate
+ways: `bncc-dados` licenses MIT at its root and **CC BY 4.0 at `dados/LICENSE.md`** (`904-G1`);
+`bncc-pacotes` grants MIT code, CC BY data and **withholds the mark** (`T27`); Egypt's national
+curriculum is published at national scale with **no grant at all** (`T26`); and
+`learning-commons-org/knowledge-graph` splits its datasets across **Open, Open+Gated and Gated**
+tiers inside one licence file. 🔵 **The common cause is structural, not sloppiness.** An education
+product is a corpus plus a model plus code, those three things have different owners and different
+provenance, and the repository is the wrong unit to carry one licence for all of them.
+
+**What it implies for delivery.** The licence column in any inventory — this base's included — is
+a claim about a **repository address**, and the thing a client ships is the **payload**. Three
+operative rules: (1) find where the content actually lives before reading a grant; (2) a repository
+with no licence file is **not** necessarily unlicensed — read the README; (3) if attribution is
+per-record, it is a **build requirement** and belongs in the estimate, not in a licence table.
+Gate: `compose/patterns.md` **`927-G1`**, extending `904-G1`.
+
+## T64 — Proctoring is re-architecting around the prohibition instead of arguing with it (added `p927`)
+
+**Evidence.** Under the EU AI Act, inferring emotions in an education institution has been a
+**prohibited practice since 2 February 2025**, and exam proctoring is separately Annex III
+high-risk from 2 December 2027. This base recorded the open proctoring tier as **unadoptable**:
+six tools, largest 16 ★, dormant since 2025, near-uniformly webcam behaviour analysis — the exact
+capability the prohibition targets. The `topic:proctoring` index (**176 repositories**, never asked
+until `p927`) contains a different design: **`tanzir71/tinyproctorjs`** (MIT) monitors
+**browser integrity only and infers no affect at all**;
+**`SHUBHJAIN139/Local-Exam-Proctoring-Engine`** (MIT) runs WebAssembly MediaPipe and TF.js **in the
+candidate's own browser** so **no video leaves the device**.
+
+**The distinction that makes it a trend.** Earlier open proctoring tried to be the incumbent
+product and inherited its regulatory exposure. These invert the design: **the regulated inference
+is not performed, and the regulated data does not move.** That is compliance by architecture rather
+than by contract, DPIA or vendor attestation — and it generalises, because the same two moves
+answer the Canadian privacy refusal (`p891`) and **California AB 1159**'s bar on training models on
+student data, neither of which is an EU instrument.
+
+**What it implies for delivery.** Proctoring moves from *"do not propose this"* to **a scoped build
+with three reference designs and a stated compliance boundary** — while remaining Annex III
+high-risk, which the architecture does not change. 🟡 The rows are 0–1 ★ and months old: they are
+designs to read, not dependencies to pin. The studio's first offer should still be **integrity by
+assessment design**. `compose/patterns.md` **P55**.
+
+## T65 — Credentialing came back without the ledger (added `p927`)
+
+**Evidence.** The 2026 trend commentary this base's own prose leg returned lists **blockchain
+credentialing among the *fading* trends**, alongside full-classroom VR. `p916` found the open
+micro-credentialing tier to be *"an archaeological site"*. Meanwhile `topic:open-badges` (37
+repositories, never asked until `p927`) returns live, permissive work built on a **W3C
+recommendation**: **`wonmortech/sanad`** (Apache-2.0, byte-read 11,337 B) issues certificates and
+badges under **Verifiable Credentials 2.0**, and
+**`parler-haut-interagir-librement/open-badges-bundle`** and `certificates-bundle` (both MIT,
+identical grant hash, both pushed 2026-11-19) handle Open Badges issuance with a published issuer
+profile, keys and revocation, plus PDF certificates with QR verification.
+
+**Why the distinction matters commercially.** The blockchain era asked an institution to adopt a
+**ledger** — a shared, permanent, externally governed dependency, which is what made it fail
+procurement. W3C Verifiable Credentials asks it to publish an **issuer profile and a key**, which
+is a thing a registrar already understands and can revoke. 🔵 **The requirement never faded; the
+dependency did.** This also connects to the microcredential demand the 2026 outlooks record from
+the employer side — career-aligned credentials are rising while the mechanism that was supposed to
+carry them is being replaced.
+
+## T66 — APAC's measured gap is *tutor* adoption, not AI adoption, and the stated cause is infrastructure (added `p927`)
+
+**Evidence.** A *Times Higher Education* survey of Asian institutions puts **virtual-tutor adoption
+at 30%**, with uptake *"patchy"* and **connectivity named as a barrier** *(single source)*. Against
+it: **86% of education organisations** use generative AI (Microsoft, via Faculty Focus) and **67% of
+teachers** use AI tools (Futuresource, EMEA-weighted). 🔵 **A 30% tutor figure next to an
+80-percent-plus general-AI figure is not slow adoption of AI — it is a specific failure of the
+*hosted tutor* form.**
+
+**Why this is the most actionable regional finding in this file.** The two things a hosted tutor
+requires are a **connection** and **data leaving the institution**. Both are the named constraints
+in this region, and both are the constraints the **offline-first and on-device** tier removes —
+`SAKSHI` on a Raspberry Pi with the network off, `Rung` surviving airplane mode, `Memorwise`
+embedding locally, `missing-elements/h5p-toolkit` playing `.h5p` with no H5P server. 🟢 **In APAC
+the lead should be the deployment model, not the model quality** — which is the opposite of the
+pitch that works in North America. `compose/patterns.md` **P14** and **P52**.
+
+🔴 **An open contradiction, logged rather than resolved.** `T18` (added `p896`) records Ipsos data
+showing support for *banning* AI in education **rising** across APAC, Australia at 52%. `p927`'s
+leg returns a summary of the **Ipsos Education Monitor 2026** reporting support for banning
+**lower** across the Asian markets examined. Both are snippet-level and the cohorts are probably
+not the same — Australia is not "the Asian markets". **Neither figure should enter a client deck
+until the Ipsos tables are read directly.**
+
+## T67 — Teachers report policy *opacity*, not policy absence, and that is a cheaper problem to sell against (added `p927`)
+
+**Evidence.** Reporting on the **Stanford AI Index 2026** education chapter states that **only 6% of
+teachers say their school's AI policy is clear**, while roughly **half of schools have no policy at
+all** *(single source; confirm against the primary chapter)*. In LATAM the same split is visible
+from the institutional side: **92% of students use AI regularly** and **only 30% of universities
+have published a policy**. In EMEA, **80% of teachers** in a six-country survey report AI is
+arriving faster than their school can manage, while **67%** of them already use it.
+
+**The reading.** Every one of these pairs the same two facts: **the AI is already in the building,
+and the people using it cannot tell you what the rules are.** 🔵 **The 6% figure is the more
+commercially interesting of the two numbers, because it measures the institutions that already
+did the governance work and got no operational benefit from it.** A policy that exists and cannot
+be applied by a teacher carries the same audit exposure as no policy — and it is a far cheaper
+engagement to fix, because the hard part, agreeing the institution's position, has already
+happened.
+
+**What it implies for delivery.** The deliverable is **not** a policy document. It is the policy
+rendered operable: defaults configured in the LMS, an auditable record of what the AI did and who
+approved it, teacher-facing guidance at the point of use, and a reporting line an administrator can
+show an inspector. 🟢 That is `compose/patterns.md` **P8** (metering, attribution, exit) plus
+**P10** (teacher capacity) sold as one engagement, and `T67` is the sentence that opens it.

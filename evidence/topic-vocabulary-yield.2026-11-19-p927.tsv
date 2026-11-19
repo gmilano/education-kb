@@ -1,0 +1,36 @@
+leg	total_count	rows_returned
+topic:quiz stars:>30	139	100
+topic:flashcards stars:>30	156	100
+topic:grading	305	100
+topic:autograding	97	97
+topic:assessment stars:>20	68	68
+topic:tutoring	499	100
+topic:school-management stars:>10	70	70
+topic:learning-analytics	424	100
+topic:scorm	247	100
+topic:lti	190	100
+topic:xapi	284	100
+topic:gradebook	144	100
+topic:homework stars:>10	107	100
+topic:online-learning stars:>30	98	98
+topic:educational-game stars:>20	49	49
+topic:serious-games	90	90
+topic:math-education	167	100
+topic:stem-education	275	100
+topic:literacy	128	100
+topic:pedagogy	272	100
+topic:lesson-plan	49	49
+topic:question-generation	241	100
+topic:plagiarism-detection	407	100
+topic:proctoring	176	100
+topic:open-badges	37	37
+topic:moodle stars:>10	190	100
+topic:canvas-lms	505	100
+topic:openedx	145	100
+topic:virtual-classroom	49	49
+topic:computer-science-education stars:>20	25	25
+topic:educational stars:>60	176	100
+topic:study-tools	817	100
+topic:note-taking topic:education	102	100
+topic:ai-tutor	986	100
+topic:student-management	1651	100

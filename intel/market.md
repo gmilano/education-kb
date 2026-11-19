@@ -794,6 +794,43 @@ the easy half.**
 A 9190, EO 14277, the US Department of Education framework and Berkeley Law were all returned and all
 already written.
 
+
+#### 🆕 `p927` — the first figure this file has for how clear school AI policy is to the people inside it
+
+🔴 **The gap this base has described as "adoption has outrun governance" now has a number from the
+teacher's side.** Reporting on the **Stanford AI Index 2026** education chapter states that **only
+6% of teachers say their school's AI policy is clear**, and that roughly **half of schools have no
+policy at all** *(single source: TNW summarising the AI Index; confirm against the primary chapter
+before it goes in a deck)*. 🔵 **Read the two together and the sale is not "write a policy" — it is
+"make the policy you already have operable by a teacher on a Tuesday."** A policy that exists and
+cannot be applied produces the same audit exposure as no policy, and it is a far cheaper engagement
+to fix, because the governing decisions have already been taken.
+
+🟢 **Volume and deadlines, both new to this file.** The **PIE Network** tracked **close to 100 state
+bills** in the 2026 session that could directly affect students' use of AI in K-12 — a larger count
+than the **134 bills across 31 states** this file already carries from MultiState, and measuring a
+different thing (student-facing effect rather than all AI-in-education bills); both are recorded,
+neither is averaged. Named deadlines added this pass:
+
+- **Illinois** — the State Board of Education must **publish AI guidance for districts and
+  educators by 1 July 2026**.
+- **Virginia SB 394** — directs the state education agency to issue guidance explicitly covering
+  **teacher training**.
+- **Ohio** — Columbus City Schools adopted a district policy **ahead of** the state's July 2026
+  mandate, which this file already carries.
+- A **White House national AI policy framework (March 2026)** places workforce training and
+  education at the centre.
+- The **Education Commission of the States** published a state-by-state AI guidelines compilation
+  in **April 2026** — the closest thing to a single consolidated US map, and the right primary
+  source for a North America engagement.
+
+🔵 **Why this sharpens `T11` rather than repeating it.** Every instrument above lands on the same
+constraint: **teacher capacity**. Illinois and Virginia name teacher guidance and training in the
+statute itself. The studio-side implication is unchanged and now better evidenced —
+`compose/patterns.md` **P10** is the answer and it was written for India and Saudi Arabia. It
+transfers to the US with the curriculum swapped and the compliance wrapper changed.
+
+
 ### EMEA
 
 #### 🆕 `p926` — the region supplied this pass's most reusable asset, and it did not come from Europe
@@ -1978,6 +2015,42 @@ were all returned by this pass's EMEA leg and **all were already written here**.
 channel cause is now measured on two independent channels and is a **DNS allowlist**, not a search
 problem — so this nil is still not evidence of saturation.
 
+
+#### 🆕 `p927` — European teachers are not resisting AI, they are reporting that it is arriving faster than their institution can absorb
+
+🟢 **New to this file, and it is a procurement signal rather than a sentiment one.** An **Epson**
+survey of roughly **3,360 respondents across six European countries** found **80% of teachers worry
+AI is entering the classroom faster than schools can manage** *(single source; vendor-commissioned —
+treat the direction as sound and the figure as indicative)*. Alongside it, **Futuresource
+Consulting** reports **67% of teachers now use AI tools** and characterises 2026 as the year
+adoption moved **"from experimentation to structured implementation"**, with **AI PCs at roughly 15%
+of institutional PC shipments**. **Fosway Group**'s 2026 assessment records vendor AI features
+rising from **11% in 2025 to 26% in 2026**.
+
+🔵 **Put the three together and they describe one buyer.** Usage is high, institutional capacity to
+govern it is the stated constraint, and **vendor AI features have more than doubled in a year** —
+so the institution is absorbing new AI surface faster than it is absorbing new policy. 🟢 **That is
+the Jisc specification (`T9`) restated from the supply side**, and it is why `compose/patterns.md`
+**P8** — per-institution metering, cost attribution and exit — reads as a direct answer to a
+published buyer requirement rather than as studio positioning.
+
+🟢 **Two primary instruments to read before an EMEA engagement**, both new to this file:
+
+- **Eurydice, *Digital education at school in Europe 2026*** — the Commission's own comparative
+  survey of how AI and digital tooling are being integrated into school education. The right
+  national-by-national baseline, and the EU's, not a vendor's.
+- **Council of Europe, report of the 3rd working conference on AI and education (2026)** — builds
+  on the **AI Act and GDPR** and argues for **education-specific, capacity-focused guidance**.
+  🔵 Note what that implies: the Council of Europe's own position is that the AI Act **does not by
+  itself** tell an education institution what to do. That is the gap a studio sells into.
+
+🟡 **And a counter-example worth carrying, because it breaks the "EMEA means compliance" shorthand.**
+Reporting in *Il Sole 24 Ore* records that **Spain has no specific national rule on classroom AI
+use**, leaving adoption to individual teachers. 🔵 **EMEA is not uniform** — the regulated-market
+assumption holds for the AI Act's horizontal obligations and **not** for national education rules,
+which range from Vietnam-style statutory high-risk to nothing at all. Ask per country.
+
+
 ### APAC
 
 #### 🆕 `p926` — Vietnam's registration mechanism, and the region that supplied half this pass's shelf
@@ -3024,6 +3097,47 @@ and own**, not a vendor to partner with.
 🔴 **Demand side: nil.** Korea's AI Basic Act, Vietnam's education-high-risk listing, TEQSA's
 regulatory-led posture and Australia's National AI Plan were all returned and all already written.
 
+
+#### 🆕 `p927` — an adoption ceiling with a number on it, and a reading that contradicts `T18`
+
+🟢 **The first APAC adoption figure in this file that is not a market forecast.** A *Times Higher
+Education* survey of Asian institutions found **virtual-tutor adoption at 30% across the cohort**,
+with uptake of new technology **"patchy"** across the region and **connectivity named as a
+barrier** *(single source)*. 🔵 **30% is low against the 86%-of-organisations and
+67%-of-teachers figures this file carries for generative AI generally** — which says the gap is not
+*AI* adoption but **tutor** adoption specifically, and the stated reason is infrastructure. That is
+the clearest regional case this file has for the **offline-first and on-device** tier
+(`compose/patterns.md` **P14**, **P52**), and it is the argument to lead with in APAC rather than
+the model quality.
+
+🔴 **A contradiction this file is recording rather than resolving.** `p896` added **`T18`** on the
+strength of Ipsos data showing support for **banning** AI in education **rising** across APAC, with
+Australia at a **52% majority**. This pass's leg returns a summary of the **Ipsos Education Monitor
+2026** stating that support for banning AI in schools is **lower** across the Asian markets
+examined. 🔵 **Both readings are snippet-level summaries of the same publisher's work and the
+markets in each cohort are probably not the same** — Australia is not "the Asian markets". The
+honest position is that **`T18`'s direction is not confirmed by this pass and is not refuted by
+it**, and that this file should not use either figure in a client deck until the Ipsos tables are
+read directly. 🔵 Logged as an open question for `p928` rather than quietly dropped.
+
+🟢 **Two convening instruments, new to this file, that are where APAC education-AI policy is
+actually being written:**
+
+- The **World Bank Global EdTech Policy Academy on AI**, **Seoul, 31 August – 4 September 2026** —
+  a multi-country ministry-level programme.
+- **Cambridge English** convened **200+ senior leaders including Ministries of Education** across
+  Asia Pacific in **May 2026** to accelerate action on AI in education.
+- **EdTech Hub** ran a Southeast Asia session in **March 2026** launching AI-in-education topic
+  briefs on ethical governance, with **ASEAN–UK SAGE** support.
+
+🔵 **Why a studio should care about convenings.** This file has repeatedly measured APAC as
+**government-led** — the buyer is a ministry, and ministries buy after they have agreed a position
+in rooms like these. **The procurement follows the convening by 12–24 months**, which makes the
+attendee list a forward pipeline rather than conference news. **BCG (April 2026)** names the
+binding constraint as **institutional alignment across ministries, providers, employers and
+funders** — not technology — which is the same finding from the consulting side.
+
+
 ### LATAM
 
 #### 🆕 `p926` — the supply gap, measured: the software exists, in the right subject, with no licence on it
@@ -3950,6 +4064,47 @@ allows it, and extract the education-pillar budget line.**
 🟡 **The opportunity is unchanged and is the one `CONPES 4144` creates:** budget to 2030 with **no
 obligations or sanctions on private suppliers**, which remains the most sellable regulatory posture in
 the region — a funded buyer with no compliance gate to clear.
+
+
+#### 🆕 `p927` — the adoption-governance gap, now with both numbers on the same page
+
+🟢 **New figures, and they are the sharpest version of this file's standing LATAM thesis.** A 2026
+regional survey reports **92% of students use AI regularly and 67% at least weekly**, with **79% of
+faculty** also using it — while **only 30% of Latin American universities have published policies
+on how to use it** *(single source for each; corroborated in direction by the UNESCO IESALC work
+below)*. 🔵 **Set the two side by side: 92% use, 30% governed.** This file has described the LATAM
+offer as *"governance for AI already in use, not adoption"* since `p890`; this is the first pass
+where both halves of that sentence have a number attached from the same year.
+
+🟢 **The authority to cite, new to this file.** **UNESCO IESALC**, with **UNU-IAS**, published a
+2026 study on AI implementation in Latin American and Caribbean **higher education** (author
+Arianna Valentini), finding adoption *"neither uniform nor evenly distributed"* and mapping it
+across **five dimensions — teaching and learning, research, community engagement, administration
+and governance.** 🔵 **Those five dimensions are a ready-made engagement scope.** A LATAM
+university that has governed none of them is not buying a tutor; it is buying a programme, and the
+dimension list is the structure to propose it in.
+
+🟢 **Two instruments that change how a LATAM engagement should open:**
+
+- The **IDB**'s *"AI Here!"* call mapped **193 AI solutions already in use in real classrooms**
+  across the region. 🔵 **That is a competitive and partnership map a studio does not have to
+  build** — and it is evidence against proposing a greenfield build in a market where 193 things
+  are already running.
+- **EdTech Hub and Fundación Ceibal** launched a partnership in **September 2026** to help LATAM
+  education systems respond to AI. Ceibal is Uruguay's national programme and the region's most
+  credible public implementer; a partnership that names it is the closest thing to a public-sector
+  route to market in this file.
+
+🟡 **And the supply-side correction this pass owes LATAM.** `926-G2` measured eleven
+Spanish- and Portuguese-language repositories and concluded that LATAM open education supply is
+**unlicensed by default**. A second search vocabulary returned **MIT-licensed LATAM rows with the
+grants byte-read** — including **`uemanet/harpia`**, the academic system of a **Brazilian state
+university**, open since 2017. 🟢 **The corrected claim is better for an engagement, not worse:**
+LATAM's permissive open source is **institutional** — registrarial systems, integrity tooling,
+accessibility work — and not general-purpose tutors, where `p904` measured a **6 ★ ceiling**. So
+the standing advice is unchanged and its evidence is stronger: **bring the tutor, adopt the
+institutional spine.** See `agents/top.md` `927-F5` and `verticals/solutions.md`.
+
 
 ### Global
 

@@ -122,6 +122,15 @@ byte-verified. The affected hosts are listed under *Declared gaps* in `intel/mar
   localisation advice inverts: **bring the tutor, adopt the curriculum spine** (`compose/patterns.md`
   **P23**). 🟡 The gap moved rather than closed — **Spanish-speaking LATAM outside Colombia** is still
   nearly empty, and **Mexico returned a 0 ★ ceiling and no repository in any of the 26 queries.**
+  🟢 **`p927` strengthened this and retired `926-G2`'s harder version of it.** `p926` measured
+  eleven Spanish- and Portuguese-language rows, found **none** permissively licensed, and published
+  *"the default licence state is no licence at all"* as a fact about the region. A second search
+  vocabulary byte-read **MIT** on `uemanet/harpia` — the academic system of **Universidade Estadual
+  do Maranhão**, open since 2017 — plus `DerickxP/Learn-Quest-Serious-Game`,
+  `alberto2005-coder/detector-ia` and `Gehiner/KodlandFaster`. **LATAM permissive supply exists and
+  it is institutional**: registrarial spines and integrity tooling, not tutors. That is the same
+  instrument failure as `926-R1`, one level up — a claim about a leg list published as a claim
+  about a region.
   India, Africa and the Middle East remain as `p892`–`p903` recorded them, with MENA producing
   individuals rather than institutions.
 - **Africa and the Middle East are covered thinly, not absently** (updated p892). Dedicated
@@ -139,7 +148,15 @@ byte-verified. The affected hosts are listed under *Declared gaps* in `intel/mar
   SIS import, credit-registration and namespace tooling under MIT/Apache, restored to
   `repos/foundations.md`. (2) Proctoring is not an empty category but an **unadoptable** one —
   six open tools, the largest at 16 ★ and dormant since 2025, against an EU prohibition on
-  emotion inference that has been in force since 2 February 2025. See `verticals/solutions.md`.
+  emotion inference that has been in force since 2 February 2025. 🟢 **Qualified in `p927`: the
+  category is still unadoptable, but the architecture is no longer the problem.**
+  `topic:proctoring` — 176 repositories, never asked before `p927` — returns three MIT rows built
+  **local-first and in-browser**: `tinyproctorjs` infers **no affect at all**, and
+  `Local-Exam-Proctoring-Engine` keeps **every frame on the candidate's device**. The prohibition
+  is on emotion inference, not on video. So proctoring moves from *"do not propose this"* to **a
+  scoped build with three reference designs and a stated compliance boundary** — while remaining
+  Annex III high-risk, which no architecture changes. See `intel/trends.md` **T64**,
+  `compose/patterns.md` **P55** and `verticals/solutions.md`.
 - **No credible primary evidence of learning-outcome gains from AI at scale.** The widely
   quoted figures trace to blogs with no primary study. `compose/patterns.md` P7 exists to
   measure it rather than claim it.
@@ -156,7 +173,68 @@ append-only and retain their full history below the newest dated section.
 One substantive error was reported corrected — and `p896` found the correction itself was the
 error. See *Pass p896* below.
 
-### Pass p904 (2026-11-18, latest)
+### Pass p927 (2026-11-19, latest)
+
+**One job: take `926-R1` seriously.** `p926` had opened thirteen topic words `p925` never asked,
+returned **601 unheld repositories**, and written the rule — *a discovery channel is exhausted only
+against the vocabulary it was asked with* — then added: *the next pass should assume the same of
+this leg list.* `p927` asked **35 more words**.
+
+- 🔴 **2,298 unheld repositories**, deduplicated against the **8,432** slugs this base has ever
+  named — **3.8× `p926`'s own record**, from the channel `p926` had just measured. **36 grants
+  byte-read, 36 of 36 resolved, zero 404s. 34 rows shelved.**
+- 🔴 **And the number is a floor, not a measurement.** Fifteen of the 35 legs reported a
+  `total_count` larger than the 100-row page this base fetches — `topic:student-management`
+  **1,651**, `topic:ai-tutor` **986**, `topic:study-tools` **817**. 🔵 **Every sentence this base
+  has written about what the topic channel contains has been a sentence about a 100-row page.**
+  `p928`'s first job is to paginate.
+- 🔴 **A published row is materially qualified, and it opens a fifth licence axis (`T63`).**
+  `CAHLR/OATutor` (MIT, UC Berkeley) is carried as an ITS *"with open problem banks"*. The problem
+  banks are a **separate repository** — `CAHLR/OATutor-Content` — with **no licence file on 14
+  probed paths** and SPDX `NONE` on the search channel, so **both channels agree and no divergence
+  check fires**. The grant is **prose in the README** (CC BY 4.0), with attribution recorded **per
+  JSON record**. New gate **`927-G1`**: probe the payload *repository*, and read the README when
+  there is no licence file.
+- 🔴 **`926-G2`'s LATAM conclusion did not survive a second vocabulary.** That pass measured eleven
+  Spanish- and Portuguese-language rows, found none permissive, and published it as a fact about the
+  region. `p927` byte-read **MIT grants** on `uemanet/harpia` (the academic system of a **Brazilian
+  state university**, open since 2017), `DerickxP/Learn-Quest-Serious-Game`,
+  `alberto2005-coder/detector-ia` and `Gehiner/KodlandFaster`. 🟢 **The corrected claim is sharper:**
+  LATAM permissive supply is **institutional** — registrarial spines, integrity tooling — and not
+  general-purpose tutors, where `p904` measured a 6 ★ ceiling. *Bring the tutor, adopt the
+  institutional spine.*
+- 🟢 **Three tiers this base had no row for at all**: **SCORM** authoring and packaging
+  (`scorm-kit` + `storycraft`, both MIT, identical grant hash) — the one delivery form indifferent
+  to which LMS the client runs, and the basis of new pattern **P54**; **non-blockchain
+  credentialing** under **W3C Verifiable Credentials 2.0** (`sanad`, Apache-2.0) and Open Badges
+  (`open-badges-bundle`, MIT) — **T65**; and **H5P with no H5P server** (`h5p-toolkit`, MIT).
+- 🟢 **`T17` found in production.** `artevelde-uas/canvas-lms-app` (**ISC**, maintained by a Belgian
+  university since 2018) is a permissively licensed branding layer on an **AGPL** LMS — the
+  architecture `T17` was inferred from licence sorting, now a row that has been running for eight
+  years.
+- 🟢 **First `0BSD` row** (`xxinjie21/Smart-Quiz-Tutor`) — public-domain-equivalent, no attribution
+  requirement at all. New country origins: **Azerbaijan**, **Bulgaria**, **Japan**.
+- 🔵 **Regional legs returned 0 repositories and real intel**, now in `intel/market.md`: only **6%
+  of teachers say their school's AI policy is clear** (Stanford AI Index 2026) while half of schools
+  have none — **T67**, the operable-policy gap; **APAC virtual-tutor adoption at 30%** against
+  80-percent-plus general AI use, with **connectivity** the stated barrier — **T66**, which makes
+  offline-first the APAC lead; LATAM at **92% student use / 30% of universities with a published
+  policy**; and the **IDB's 193-solution map** of AI already running in LATAM classrooms.
+- 🔴 **One claim corrected before publication, recorded because the near-miss is the lesson.**
+  `jonsorr/D2L_Brightspace_APIs` was first written up as the *first Brightspace row in this base*.
+  It is not — `p914` closed that seam. 🔵 **The slug was unheld, so every mechanical gate passed it,
+  and "unheld slug" is not "uncovered category".** `927-R3`: before writing *first*, grep the tree
+  for the **platform name**, not the repository address.
+- 🔵 **Honest nulls:** four mandated prose legs **nil for the forty-sixth consecutive pass**; the
+  vertical leg returned the **OpenEduCat marketing site for the fourth consecutive pass** and should
+  not be re-run as written; `T18`'s APAC direction is **contradicted** by this pass's Ipsos summary
+  and both readings are snippet-level, so **neither belongs in a client deck** until the tables are
+  read directly.
+
+Append-only discipline preserved: `agents/trending.md` 93,286 → 93,562 lines,
+`repos/trending.md` 71,054 → 71,149; history untouched below.
+
+### Pass p904 (2026-11-18)
 
 **One job: run the discovery channel no pass had ever run.** `p903` established that generic English
 search is now a confirmation channel and that what still yields is byte-reading and **non-English

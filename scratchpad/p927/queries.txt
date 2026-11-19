@@ -1,0 +1,35 @@
+topic:quiz stars:>30
+topic:flashcards stars:>30
+topic:grading
+topic:autograding
+topic:assessment stars:>20
+topic:tutoring
+topic:school-management stars:>10
+topic:learning-analytics
+topic:scorm
+topic:lti
+topic:xapi
+topic:gradebook
+topic:homework stars:>10
+topic:online-learning stars:>30
+topic:educational-game stars:>20
+topic:serious-games
+topic:math-education
+topic:stem-education
+topic:literacy
+topic:pedagogy
+topic:lesson-plan
+topic:question-generation
+topic:plagiarism-detection
+topic:proctoring
+topic:open-badges
+topic:moodle stars:>10
+topic:canvas-lms
+topic:openedx
+topic:virtual-classroom
+topic:computer-science-education stars:>20
+topic:educational stars:>60
+topic:study-tools
+topic:note-taking topic:education
+topic:ai-tutor
+topic:student-management
