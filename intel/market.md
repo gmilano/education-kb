@@ -89,6 +89,18 @@ data access* rather than education agents.
 ### North America
 
 
+#### 🆕 `p924` — one new instrument, and it regulates a *device*, not a model
+🟢 **Utah H.B. 44** — new to this shelf. It lets school districts adopt policies governing **AI
+glasses** in schools, scoped to safety, special education and medical need. 🔵 **Why it is worth a
+row in a market file:** every other North American instrument this base tracks regulates a *use* of
+a model (Oklahoma bars AI-only grading; California **AB 1159** bars training on student data at
+all). This one regulates **hardware in the room** — always-on capture by a wearable — and that is a
+different compliance surface, closer to recording consent than to model governance. 🔵 For a
+Globant engagement it is a leading indicator rather than a constraint today: a district that has
+written a wearable-capture policy has already decided who owns classroom audio and video, which is
+the prerequisite conversation for any multimodal classroom product. 🔴 **Secondary source, single
+leg** — read the bill text before it is quoted to a client.
+
 #### 🆕 `p923` — one new figure, and it is a secondary one
 🟡 **"Institution-wide implementation of AI has reached 66%"** — a market-research figure surfaced
 by this pass's North America leg and **new to this shelf**. 🔴 File it as **secondary and
@@ -706,6 +718,23 @@ already written.
 
 ### EMEA
 
+
+#### 🆕 `p924` — the Gulf has the most concrete classroom rule this base has met, and the **APAC** leg is what found it
+🟢 **The UAE Ministry of Education issued 25 generative-AI prohibitions for schools in February
+2026**, covering age suitability, privacy, academic integrity and exam restrictions. New to this
+shelf. 🔵 **It is the opposite shape to everything else in EMEA.** The EU AI Act postponed
+high-risk education obligations to **2 December 2027** while Article 50 disclosure and the Article 4
+AI-literacy duty already bite; member states are, as this file records, fragmented to the point of
+Spain having no national classroom rule at all. Against that, an **enumerated list of 25 prohibited
+uses** is a specification, and a specification is something a delivery team can build a conformance
+check against. 🔵 **Commercially: the Gulf is the region where "auditable human oversight is the
+product" can be sold as a checklist rather than a principle.** 🔴 Secondary source, single leg —
+obtain the ministry circular before quoting the number.
+
+🔴 **And the finding carries a method warning, recorded in `agents/trending.md` `924-F11`:** this
+fact was returned by the **APAC** leg. The UAE is **EMEA** in this base's closed vocabulary. The
+region field is a property of the *subject*, never of the *query that found it* — file it where the
+country is, or the filter silently stops meaning anything.
 
 #### 🆕 `p923` — the EMEA leg returned **nothing new**, and that is recorded rather than left silent
 🔵 All six named facts the leg produced were **already on this shelf**: Futuresource's *67% of
@@ -1805,6 +1834,23 @@ problem — so this nil is still not evidence of saturation.
 ### APAC
 
 
+#### 🆕 `p924` — the APAC leg returned **no new APAC fact**, and its one new fact belongs to EMEA
+🔴 **A measured nil, and an unusually clean one.** Every APAC-located fact the leg returned was
+already on this shelf: the Ipsos *Education Monitor 2026* finding of lower support for school AI
+bans across Asian markets; Cambridge English's May 2026 Asia-Pacific ministerial summit; the World
+Bank **Global EdTech Policy Academy, Seoul, 31 Aug – 4 Sep 2026**; and the regional-share and
+China/Japan revenue-pool framing. 🔴 The leg's **only** new concrete instrument — the UAE Ministry of
+Education's 25 generative-AI prohibitions — is **EMEA**, and is filed there (`924-F11`).
+
+🟢 **Where APAC did move is the substrate layer, not the market layer.** `p924`'s second-shape probe
+confirmed the **Philippines/Tagalog** tier as the one APAC language tier with a maintained,
+permissive, *general* NLP stack — `ljvmiranda921/calamanCy`, 77 ★, MIT, re-read hash-identical this
+pass. For a Philippine BPO or public-education engagement that is the difference between localising
+and building. 🔴 It also carries a licence trap this file should state plainly: calamanCy's **code**
+is MIT, but its **training corpora are not** — TLUnified is GPL-3.0 and UD_Tagalog-Ugnayan is
+CC-BY-NC-SA-4.0. 🔵 **A model trained on a non-commercial corpus is not a commercial deliverable**,
+whatever the code licence says. Run licence triage per artefact class (`T25`), not once.
+
 #### 🆕 `p923` — the regional-share figure, and why it is quotable in only one direction
 🟡 **"APAC is over 45% of global EdTech market share"** — new to this shelf, from a vendor-adjacent
 analyst blog. 🔴 It is **EdTech**, not AI-in-education, and it is a share claim with no stated
@@ -2747,6 +2793,22 @@ regulatory-led posture and Australia's National AI Plan were all returned and al
 
 ### LATAM
 
+
+#### 🆕 `p924` — the LATAM leg returned **nothing new**, for the second consecutive pass
+🔴 **A measured nil.** Every named fact was already held: the UNESCO IESALC regional survey (200
+institutions, 19 countries) and its adoption/governance gap; the LATAM higher-education survey's
+**92%** of students using AI regularly and **67%** weekly; *only ~30% of universities have published
+an AI policy*; the IDB's **193**-initiative catalogue and its *"AI Here!"* call; the ProFuturo/OEI
+report; and the EdTech Hub / Fundación Ceibal partnership. Mexico's framing — that generative AI
+*"requires regulatory alignment, institutional reform and curriculum redesign"* — is a restatement of
+`T4`, not a new instrument.
+
+🔵 **Two consecutive nils is itself the finding.** LATAM's constraint, as measured, is **not** a
+shortage of pilots or of research voices; it is that **adoption has outrun governance by more than in
+any other region this base tracks** — students at 92%, institutional policy at 30%. That gap is the
+engagement: the saleable artefact is the policy-and-audit layer, not another tutor. 🔴 **Still
+unmeasured here, and now two passes old:** no national AI-in-education statute for Brazil, Mexico,
+Chile or Colombia has reached this shelf through any leg.
 
 #### 🆕 `p923` — the LATAM leg returned **nothing new**, and the reason is worth naming
 🔵 Every named fact was already held: the UNESCO IESALC working paper and its 200-institution,

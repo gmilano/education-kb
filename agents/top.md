@@ -29,6 +29,30 @@ curriculum graph, correct for the asset and a trap for anyone who reads the repo
 `master/README.rst`.** That is `p900`'s false-absence class landing on the AGPL anchor of the
 whole LMS tier; the two-channel rule caught it. See `agents/trending.md` `901-F3`.
 
+**Latest sweep — `p924` (2026-11-19).** 🔴 **No remeasure of this file's rows and no new agent rows
+— the forty-third consecutive nil at the agent layer.** The eight mandated English legs returned
+**zero repositories** and **21 of 24 named facts this base already holds**; the one repository the
+legs named that is on this shelf, `ljvmiranda921/calamanCy`, re-read **hash-identical**
+(1,095 B, `sha256₁₂ 09da5a2dfb62`) — a control, not a discovery. 🟢 **What changed for this file is
+the authority that grades every licence cell in it.** `923-G1` asked whether `923-F1`'s defect — a
+detector keyed on a family's *current* name — reaches other families. Run over **37 canonical
+licence texts** through a primary legal-text channel that did not exist for this base yesterday
+(`spdx/license-list-data` on `raw.githubusercontent.com`, 37/37 `200`), the unmodified authority
+produced **seven defects**: 🔴 `AGPL-1.0` → **`GPL`** (the network-use disclosure clause vanishes
+from the cell), 🔴 `LGPL-2.0` → **`GPL-2.0`** (weak copyleft published as full copyleft, *with a
+version*, so the cell reads as finished), 🔴 **the Unlicense — a public-domain dedication — →
+`NONCOMMERCIAL-TERM`**, 🔴 `CC-BY-3.0` → `CC-UNSPECIFIED`, 🔴 `Artistic` and `Zlib` invisible, and
+🔴 **`BSD-4-Clause` indistinguishable from `BSD-2-Clause`** though only the first is
+GPL-incompatible. 🔴 **The BSD defect has live blast radius on this base: 16 cells carry a bare
+`BSD`.** The four named ones were re-read structurally this pass — **none is 4-clause**, so no live
+cell is GPL-incompatible through the advertising clause, but two are BSD-3 and two are BSD-2, which
+differ in the non-endorsement obligation a client inherits when they ship a branded derivative.
+🔵 **And the sizes refute the cheap fix**: `apereo/java-cas-client` is **1,522 B and 2-clause-shaped**
+while `christophse/django-lti-tool` is **1,524 B and 3-clause** — two bytes apart, different
+licences, which is `920-G2`'s size axis failing one more time and `923-F3`'s structural method
+working. The other six families have **no** live cell. See `agents/trending.md` `924-F1`–`924-F7`,
+`924-F12` and `924-R1`.
+
 **Latest sweep — `p922` (2026-11-19).** 🔴 **No remeasure of this file's rows and no new agent rows
 — the forty-first consecutive nil at the agent layer**, and the budget went where `921-G5` said it
 should. The eight mandated English legs returned **zero repositories** and **12 of 12 named facts

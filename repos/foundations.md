@@ -10,6 +10,19 @@ The substrate an education engagement is built on. All URLs and licences verifie
 2026-11-18 via `raw.githubusercontent.com`, with the `p918` re-measure of 21 anchor rows in
 [this record](../evidence/shelf-remeasure.2026-11-19-p918.tsv) (see `agents/top.md` for method and limits).
 
+🔴 **`p924` — the instrument that fills the licence column was audited against 37 canonical licence
+texts, and the column has one measured residue.** Run through a primary legal-text channel this base
+did not have yesterday (`spdx/license-list-data` on `raw.githubusercontent.com`, 37/37 `200`), the
+grant authority produced **seven defects**, of which exactly one has live blast radius here: **the
+16 bare `BSD` cells in this file cannot be told apart from `BSD-4-Clause`.** Four were re-read
+structurally this pass and **none is 4-clause** — so nothing here is GPL-incompatible through the
+advertising clause — but two are **BSD-3** and two are **BSD-2**, and only BSD-3 carries the
+non-endorsement term. 🔵 Sizes do not separate them (`java-cas-client` 1,522 B is 2-clause,
+`django-lti-tool` 1,524 B is 3-clause): grade on the clause, not the byte count. The other six
+defects — `AGPL-1.0`→`GPL`, `LGPL-2.0`→`GPL-2.0`, **Unlicense→`NONCOMMERCIAL-TERM`**,
+`CC-BY-3.0`→`CC-UNSPECIFIED`, and `Artistic`/`Zlib` invisible — have **no** live cell in this file.
+Account: `agents/trending.md` `924-F1`–`924-F7`, `924-F12`.
+
 **Read the licence column before you promise anything.** Education's most important
 platforms are copyleft: Open edX, Canvas and Moodle are AGPL-3.0/GPL-3.0. That is fine
 for hosting and for plugins that stay separate, and it is a problem for a proprietary
@@ -576,8 +589,28 @@ Khmer's and Hungarian's largest members, which are ungranted *awesome* lists.
 |---|---|---|---|---|
 | **KM** Khmer | `VietHoang1512/khmer-nltk` | 86 | 🟢 Apache-2.0 | **247 days idle.** The only live ≥50 ★ member is `seanghay/awesome-khmer-language` (207 ★) and it has **no licence file**; `seanghay/KhmerOCR` (60 ★, MIT) is 280 days idle *and* single-purpose |
 | **LO** Lao | `wannaphong/LaoNLP` | **35** | 🟢 Apache-2.0 | Fails on **stars alone** — it is maintained (2026-09-23) and permissive. Nothing else in the tier reaches 20 ★ across two legs. 🔵 The cheapest tier on this shelf to *fund*: one engagement's contribution would carry it |
-| **SW** Swahili | `tomeliud/…Swahili-News-Classification-` | **9** | — | The tier tops out at **9 ★** across two legs. ~200 M speakers across East Africa and the most extreme measured absence in this base after Mexico's 2 ★ |
-| **EU** Basque | `hitz-zentroa/latxa` | 38 | 🟢 MIT | **339 days idle.** 🔵 The sharpest case against institutional explanations: the IXA/HiTZ group is one of Europe's longest-funded NLP centres and its largest repository, `GoLLIE` (445 ★, Apache-2.0), is an **English** information-extraction model |
+| **SW** Swahili | `tomeliud/…Swahili-News-Classification-` | **9** | — | 🔴 **The tier tops out at 9 ★ across THREE legs** (`p924` added a second query shape: `gatimartin/SwahBERT` 5 ★ **no licence file**, idle since 2022-07-15; `mary-africa/marynlp` 0 ★ Apache-2.0, idle since 2022-05-16). ~200 M speakers across East Africa and the most extreme measured absence in this base after Mexico's 2 ★ |
+| **EU** Basque | `hitz-zentroa/latxa` | 38 | 🟢 MIT | **339 days idle**, and `p924`'s second query shape returned **no GitHub repository of any kind** — only IXA/UPV-EHU and LINDAT institutional pages. 🔴 The hardest measured nil on this shelf. 🔵 The sharpest case against institutional explanations: the IXA/HiTZ group is one of Europe's longest-funded NLP centres and its largest repository, `GoLLIE` (445 ★, Apache-2.0), is an **English** information-extraction model |
+
+### 🟢 `p924` — Czech is maintained *and* not deliverable, and the Amharic catalogue is granted
+
+| Repo | Tier | ★ | Grant — byte-read | Pushed | `923-R1` role |
+|---|---|---|---|---|---|
+| https://github.com/EthioNLP/Ethiopian-Language-Survey | **AM** Amharic | 17 | 🟢 **MIT** — 1,103 B, `sha256₁₂ e268928bea59` (`search` agrees) | 2025-06-04 | **catalogue** — indexes the tier, does not implement it |
+| https://github.com/czcorpus/kontext | **CS** Czech | 80 | 🔴 **GPL-2.0** — 17,989 B | **2026-11-12** | 🔴 **fails** — corpus-search front-end, not the tier's general artefact |
+| https://github.com/czcorpus/manatee-open | **CS** Czech | 1 | 🔴 GPL-2.0 | 2026-11-03 | 🔴 fails — search engine, 1 ★ |
+| https://github.com/czcorpus/cnc-tskit | **CS** Czech | 1 | 🟢 Apache-2.0 — 11,357 B | 2026-09-29 | 🔴 fails — utility belt, 1 ★ |
+| https://github.com/yonasab12/amharicNLP | **AM** Amharic | 10 | 🔴 **an 11-byte file reading `MIT License` — a name, not a grant**; `search` says `NOASSERTION` and is right | 2026-09-15 | fails on stars and grant |
+
+🔵 **The Czech verdict this base could not previously state.** `ufal/udpipe` (426 ★, MPL-2.0) crosses
+`918-R1`'s 180-day line on **2026-12-08** (`922-G4`). The Czech National Corpus organisation is
+**actively maintained** and every member **fails `923-R1`'s role test**. So from 2026-12-08 the tier
+is **`NOT DELIVERABLE` at the general-artefact layer while remaining alive** — two different facts,
+separable only because `921-F3` requires a verdict to name its layer.
+
+🟢 **`922-R2`'s denominator moves: 21 catalogues byte-read, 13 ungranted, 8 granted.** The Amharic
+catalogue is the second *small* granted one after `wannaphong/Awesome-Lao-NLP` (19 ★, MIT) —
+consistent with `922-R2`'s direction, and leaving its sharp half where `923-F1` refuted it.
 
 🔴 **`922-R2` — the national catalogue is the tier's largest asset and it has no grant.** Four of
 five byte-read: `AI4Bharat/indicnlp_catalog` 641 ★, `banglakit/awesome-bangla` 580 ★,

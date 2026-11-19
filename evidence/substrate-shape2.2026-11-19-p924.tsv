@@ -1,0 +1,7 @@
+repo	branch	path	http	bytes	sha256_12	families	verdict	note
+ljvmiranda921/calamanCy	master	LICENSE	200	1095	09da5a2dfb62	MIT	MIT	
+czcorpus/kontext	master	COPYING	200	17989	c38aee9e3c8c	GPL-2.0	GPL-2.0	version read from the title block (921-F4/923-F2); the "or later" election is NOT in the licence text — read the program's own notice
+czcorpus/cnc-tskit	master	LICENSE	200	11357	c71d239df917	Apache-2.0	Apache-2.0	version read from the title block (923-F2); Apache-1.0 and 1.1 are GPL-INCOMPATIBLE and carry NO patent grant — only 2.0 does
+yonasab12/amharicNLP	main	LICENSE	200	11	abb2896dc3c2	MIT	MIT-TITLE-OUT-OF-BAND	MIT title at 11 B, outside the 1000-1250 B MIT band — read the modifications
+mary-africa/marynlp	develop	LICENSE	200	11357	c71d239df917	Apache-2.0	Apache-2.0	version read from the title block (923-F2); Apache-1.0 and 1.1 are GPL-INCOMPATIBLE and carry NO patent grant — only 2.0 does
+gatimartin/SwahBERT	-	-	404	0	-	none	NO-LICENCE-FILE-FOUND	searched 25 names over 3 branches

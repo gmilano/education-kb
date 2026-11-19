@@ -3,6 +3,75 @@ industry: education
 region: Global
 updated: 2026-11-19
 ---
+
+## `2026-11-19` (p924) — **Four of five catalogue nils survive a second query shape and become measured properties of their tiers; the fifth is a `922-R2` counter-example. 🟢 And a primary licence-text channel opened, on the one host this base already trusts.**
+
+### 🟢 The channel — `spdx/license-list-data`
+
+`923-G6` records three licence/legal-text hosts at **403 through this proxy**. SPDX serves the
+canonical plain text of every licence on its list from **`raw.githubusercontent.com`** — the host
+this base's entire two-channel rule is built on:
+
+```
+https://raw.githubusercontent.com/spdx/license-list-data/main/text/<SPDX-ID>.txt
+```
+
+**37 of 37 ids requested returned `200`.** Because they are served by owner/branch/path, they are
+readable by `ingest/p913-grant-authority.sh --from-tsv` with **no change to the instrument** — the
+same fetch and the same adjudication that grades the shelf. This is now the base's standing
+regression cohort for the grant authority, and it requires **no repository and no search quota**.
+Account and the seven defects it found: `agents/trending.md` `924-F1`–`924-F7`.
+[cohort](../evidence/spdx-family-audit.2026-11-19-p924.tsv)
+
+### 🟢 New substrate row — the Amharic catalogue, and it is granted
+
+| Repo | Tier | ★ | Grant — byte-read | Pushed | Role (`923-R1`) |
+|---|---|---|---|---|---|
+| https://github.com/EthioNLP/Ethiopian-Language-Survey | **AM** Amharic / Ethiopian | 17 | 🟢 **MIT** — 1,103 B, `sha256₁₂ e268928bea59`; `search` agrees `MIT` | 2025-06-04 | **catalogue** — indexes the tier, does not implement it |
+
+🔵 **`922-R2`'s denominator moves: 21 national catalogues byte-read, 13 ungranted, 8 granted.** This
+is the second *small* granted catalogue, after `wannaphong/Awesome-Lao-NLP` (19 ★, MIT) — consistent
+with `922-R2`'s direction and with `923-F1`'s refutation of its sharp half (`crownpku/Awesome-Chinese-NLP`,
+7,920 ★, Apache-2.0). 🔴 **It is a catalogue, so under `923-R1` it does not grade its tier**: it is the
+first asset a localisation engagement copies, not the artefact it builds on.
+
+### 🔴 Four nils are now measured, not merely unfound
+
+Second shape `<language> NLP resources github corpus toolkit`, after `awesome <lang> nlp` returned
+nothing at `p923`:
+
+| Tier | Shape 2 result | Verdict |
+|---|---|---|
+| **TL** Tagalog | libraries only — `ljvmiranda921/calamanCy`, already held | 🔴 **no catalogue on two shapes** |
+| **CS** Czech | organisation repos + institutional hosts (LINDAT/ÚFAL) | 🔴 **no catalogue on two shapes** |
+| **SW** Swahili | `gatimartin/SwahBERT` (5 ★, 🔴 **no licence file**, idle since 2022-07-15), `mary-africa/marynlp` (0 ★, Apache-2.0, idle since 2022-05-16) | 🔴 **no catalogue, and the tier's ceiling is confirmed** at 9 ★ across **three** legs |
+| **EU** Basque | 🔴 **no GitHub repository of any kind** — only IXA/UPV-EHU and LINDAT institutional pages | 🔴 **the hardest nil in the set** |
+
+🔵 **This is the useful half of the pass.** *"We did not find one"* and *"there is not one"* are
+different claims, and only the second survives a client asking why the localisation budget has a
+line for building what everybody else downloads.
+
+### 🟡 Czech is maintained *and*, from `2026-12-08`, not deliverable
+
+`922-G4` dated it: `ufal/udpipe` (426 ★, MPL-2.0, pushed 2026-06-11) crosses `918-R1`'s 180-day line
+on **2026-12-08**. The Czech National Corpus organisation is live and does **not** replace it:
+
+| Repo | ★ | Grant — byte-read | Pushed | `923-R1` |
+|---|---|---|---|---|
+| https://github.com/czcorpus/kontext | 80 | 🔴 **GPL-2.0** — 17,989 B | **2026-11-12** | 🔴 fails *role* — corpus-search front-end |
+| https://github.com/czcorpus/manatee-open | 1 | 🔴 GPL-2.0 | 2026-11-03 | 🔴 fails *role* and stars |
+| https://github.com/czcorpus/cnc-tskit | 1 | 🟢 Apache-2.0 — 11,357 B | 2026-09-29 | 🔴 fails *role* and stars |
+
+🔵 **The sayable verdict: actively maintained, and `NOT DELIVERABLE` at the general-artefact layer.**
+Those are not the same finding, and `921-F3` is why this base can now write the difference down.
+
+### 🔴 An 11-byte grant
+
+`yonasab12/amharicNLP` (10 ★) — `LICENSE` is **11 bytes**, content `MIT License`, nothing else. The
+search channel reports `NOASSERTION` and is **right**; the title-line read says `MIT` and is reading a
+label. Caught by p640's MIT size band as `MIT-TITLE-OUT-OF-BAND`. 🔵 *The file exists* and *the file
+grants something* are different findings. `agents/trending.md` `924-F9`.
+
 ## `2026-11-19` (p923) — **The catalogue tier, measured for the first time across ten language tiers: 15 repositories byte-read, **10 of them carry no grant at all** — including the 84,685 ★ repository that is the largest artefact this base has ever probed. 🔴 And `922-R2`'s sharp half is refuted: the granted ones are not the small ones.**
 
 🔵 `922-G3` asked for this and **under-costed it**: it said *"the slugs are already on the shelf"*.

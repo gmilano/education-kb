@@ -10,6 +10,24 @@ Deployable systems, not libraries: things a client may already be running, or ca
 in days, and that AI can be layered onto. All URLs and licences verified 2026-11-18 via
 `raw.githubusercontent.com`.
 
+🔴 **`p924` — no new platform, and that is a measured result rather than an unsearched one.** The
+mandated vertical leg (`open source platform education ERP CRM MIT Apache`) returned **one vendor's
+own marketing site** across ten of ten results — OpenEduCat, which this file already carries, built
+on **Odoo** and therefore **LGPL-3.0**, not the MIT/Apache the query asked for. 🔵 **The leg is
+exhausted as written**: a query naming two permissive licences returns a copyleft product, because
+the vertical education-ERP tier *is* copyleft, and the sole permissive exception this file records
+(**Mentingo**, MIT) was found by a different leg entirely. A future pass should change the query
+shape rather than re-run this one — the same lesson `923-G4` taught at the substrate layer.
+
+🟡 **`p924` — one licence correction that touches this file's integration tier.** The grant authority
+publishes `BSD` with no clause count, and `BSD-4-Clause` is GPL-incompatible while `BSD-2`/`BSD-3`
+are not. Two rows reachable from this file's integration recipes were re-read structurally:
+`christophse/django-lti-tool` is **BSD-3-Clause** (non-endorsement term) and
+`wwWallet/wallet-frontend` is **BSD-2-Clause**. 🔵 Neither is 4-clause, so no deliverable is blocked
+— but **BSD-3's non-endorsement term governs whether a client may brand a derivative**, which is the
+first question asked of both. Grade on the clause, not the byte count
+(`compose/patterns.md` **G1 step 0b**).
+
 Education's equivalent of "Odoo for ERP" is not one product but four categories: the LMS
 (Moodle, Open edX, Canvas), the SIS (RosarioSIS, Gibbon, openSIS, i-educar), the repository
 (DSpace, Koha, OJS) and the live-classroom stack (BigBlueButton, Opencast, OpenVidu). An

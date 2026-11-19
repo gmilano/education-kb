@@ -4,6 +4,308 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p924) — **`923-G1` asked whether other families share `923-F1`'s defect. Four do, and three of the four are *not* the defect `923-G1` described. 🔴 `AGPL-1.0` publishes as `GPL`, `LGPL-2.0` publishes as `GPL-2.0`, and **the Unlicense — a public-domain dedication — publishes as carrying a NONCOMMERCIAL term.** Measured on the ASF's, FSF's and SPDX's own published texts through a licence-text channel this base did not have yesterday.**
+
+🔵 **Summary.** The 8 mandated WebSearch legs filed as one line (`920-G3`), **a new primary
+legal-text channel** that discharges the live half of `923-G6`, **37 canonical licence texts run
+through the unmodified grant authority**, **seven defects in the grant authority**, `923-G2` and
+`923-G4` discharged with measurement, one rule published as a *unification of four already-recorded
+instances* rather than a new fit (`922-G1`), and **zero new agent rows — the forty-third
+consecutive nil** at the top of the English-language shelf.
+
+### 🟢 `924-F1` — a primary legal-text channel exists, and it was two hosts away the whole time
+
+`923-G6` records **three hosts, one symptom**: `creativecommons.org`, `huggingface.co` and the
+legal-text host before them all return **403 at this proxy**. The remedy it names is *"nothing to do
+until a channel exists."*
+
+🔵 **A channel exists.** SPDX publishes the canonical plain text of every licence on its list at
+`raw.githubusercontent.com/spdx/license-list-data/main/text/<SPDX-ID>.txt` — **the one host this
+base has proven, byte-read against, and built its whole two-channel rule on.** 37 of 37 requested
+ids returned `200`.
+
+🔵 **And it needs no new instrument.** Because the texts are served from `raw.githubusercontent.com`
+by owner/branch/path, `ingest/p913-grant-authority.sh --from-tsv` reads them **through its own
+`emit` path, unmodified** — the same code path, the same fetch, the same adjudication that grades
+the shelf. Nothing in this pass is a synthetic harness. [cohort](../evidence/spdx-family-audit.2026-11-19-p924.tsv)
+
+🔴 **What this does not discharge.** `923-G6`'s other two instances are unmoved: this is a
+*licence-text* channel, not a model-hub channel (`921-G1`) and not a statute channel
+(`920-G5`/`919-G1`/`918-G1`). The gap narrows from three instances to two; it does not close.
+
+### 🔴 `924-F2` — `AGPL-1.0` publishes as `GPL`, and the arm that would have caught it is unreachable by construction
+
+`923-G1` predicted the defect would be *"the family's earliest name differs from its current
+name."* For Affero that is true — AGPLv1 is titled **`AFFERO GENERAL PUBLIC LICENSE`**, with no
+`GNU` — **and it is not why the grade is wrong.**
+
+The authority's title block is `head -c 300`. AGPLv1's own third line, at byte 161, reads:
+
+> *"This license is a modified version of the **GNU General Public License** copyright (C) 1989, 1991 Free Software Foundation, Inc. made with their permission."*
+
+So `*"gnu general public license"*` **matches**, the `case` returns `fam=("GPL")` — and because the
+`case` matched, `913-F6`'s recovery stage, which carries a correct `affero` arm that grades this
+payload right, is **never reached**: it is gated on `[ "${#fam[@]}" -eq 0 ]`.
+
+🔵 **The transferable statement is not about names. A 300-byte window is not a title.** `913-F1`
+installed title-line adjudication precisely because body-substring grading let *GPL-3.0's*
+references to Affero misgrade it as AGPL. The window reaches into prose, so the same confusion
+returns through the rule that was installed to end it — **in the opposite direction, on the
+opposite licence.**
+
+🔴 **Direction: permissive.** AGPLv1 §2(d) is the original network-use disclosure clause. Published
+as `GPL`, that obligation disappears from the cell, and `913-F1`'s own words apply: understating it
+is the error that survives review.
+
+### 🔴 `924-F3` — `LGPL-2.0` publishes as `GPL-2.0`, with a version, which makes it read as *more* reliable
+
+LGPL-2.0 is titled **`GNU LIBRARY GENERAL PUBLIC LICENSE`**. *"Lesser"* is the name the FSF adopted
+at **2.1**, in 1999 — so this one *is* `923-G1`'s predicted mechanism, and `*"gnu lesser general
+public license"*` misses it. `*"gnu general public license"*` also misses (`library` intervenes).
+The payload falls to `913-F6`, whose `geral|generale|general` arm fires, yielding `GPL`; the
+version stage then reads *"Version 2"* out of the title block and publishes **`GPL-2.0`**.
+
+🔵 **The version is what makes this dangerous.** A bare family reads as an unfinished cell and
+invites a second look. `GPL-2.0` reads as a *completed* one. The instrument is most confident
+exactly where it is wrong.
+
+🔴 **Direction: restrictive.** LGPL-2.0 permits linking from a proprietary work; GPL-2.0 does not.
+Published this way, a client is told to drop a dependency they were entitled to use — the mirror of
+`913-F1`'s Koha/Chamilo/ILIAS finding, and the direction that quietly removes options from a design
+rather than creating liability.
+
+### 🔴 `924-F4` — the Unlicense publishes as `NONCOMMERCIAL-TERM`, on the words that grant commercial use
+
+The single worst row in the cohort, and it is not a version-naming defect at all.
+
+| | |
+|---|---|
+| Payload | `Unlicense`, 1,211 B, SPDX canonical |
+| True grant | **public-domain dedication — the most permissive grant that exists** |
+| **Published** | 🔴 **`NONCOMMERCIAL-TERM` / `BODY-NONCOMMERCIAL-TERM`** |
+
+Two defects compound. The canonical Unlicense **has no title** — it opens *"This is free and
+unencumbered software released into the public domain"* — so the `*"unlicense"*` arm never fires and
+the payload reaches the title-less body fallback. There, `918-F1`'s matcher runs:
+
+```
+if grep -qi "non-commercial\|noncommercial" "$B" \
+   && ! grep -qi "allowed only occasionally and noncommercially" "$B"; then
+```
+
+and the Unlicense says, in its grant: *"for any purpose, **commercial or non-commercial**, and by any
+means."*
+
+🔵 **`918-F1` installed an exception, not a predicate.** It met one payload that said `noncommercially`
+innocently (GNU §6) and excluded that one string. The token is not evidence of a restriction — here
+it is evidence of a *freedom* — and an exception list enumerated from the payloads you happened to
+meet cannot cover a phrase you have not met.
+
+🔴 **Direction: restrictive, at maximum amplitude.** `918-F1`'s own account says publishing a
+spurious noncommercial term is *"an error in the direction that KILLS a deliverable build."* It is
+reproduced here on the most permissive licence in existence.
+
+### 🟡 `924-F5` — `CC-BY-3.0` is the only CC cell that fails, and the reason is that one arm is anchored
+
+`923-F5` fixed Creative Commons at 4.0. Measured across generations, the family is *mostly* right:
+
+| Payload | Published | |
+|---|---|---|
+| `CC-BY-1.0`, `CC-BY-2.0`, `CC-BY-4.0` | correct | ✅ |
+| `CC-BY-SA-3.0`, `CC-BY-NC-SA-3.0` | correct | ✅ |
+| 🔴 **`CC-BY-3.0`** | 🔴 **`CC-UNSPECIFIED`** | ❌ |
+
+The 3.0 generation interposes a line — its title block is `Creative Commons Legal Code Attribution
+3.0 Unported` — which (a) breaks the **start-anchored** arm `attribution\ [0-9]*`, and (b) breaks the
+*adjacency* of `creative commons attribution`. The hyphenated element arms (`attribution-sharealike`,
+`attribution-noncommercial-sharealike`) are **unanchored substrings**, so they are untouched. That is
+why `-SA` and `-NC-SA` survive at 3.0 and plain `-BY` does not.
+
+🔵 **Blast radius is one cell type, and it was worth measuring rather than assuming.** The obvious
+prediction — *"CC before 4.0 fails"* — is **wrong in both directions**: 1.0 and 2.0 pass, and 3.0
+fails only on one element combination.
+
+### 🟢 `924-F6` — `923-G2` discharged, and the fix holds on a real payload
+
+`923-G2` recorded that `923-F5`'s share-alike repair was *"reasoned from the arm order and
+demonstrated on **synthetic** title lines, which are not evidence about any repository"*, and that
+neither available channel served a real `CC-BY-NC-SA` text (`creativecommons.org` 403, GitHub
+licence search 422).
+
+🔵 **The SPDX channel serves it.** `CC-BY-NC-SA-4.0` (19,018 B) publishes as **`CC-BY-NC-SA-4.0`**,
+and `CC-BY-NC-SA-3.0` (22,305 B) as **`CC-BY-NC-SA-3.0`**. The share-alike obligation that `923-F5`
+found being silently dropped is **not** dropped, on the canonical text of the licence itself.
+
+🔴 **Stated precisely, because the gap was precise:** this is the *canonical legal code published by
+SPDX*, not a LICENSE file in a client's repository. It proves the instrument, which is what `923-G2`
+asked. It does not prove that any particular repository's copy is unmodified.
+
+### 🔴 `924-F7` — three families are invisible, and `BSD` hides the one distinction that matters
+
+| Payload | Published | Consequence |
+|---|---|---|
+| `Artistic-1.0`, `Artistic-2.0` | 🔴 `UNKNOWN-TEMPLATE` | no arm exists; the whole family is invisible |
+| `Zlib` | 🔴 `UNKNOWN-TEMPLATE` | no arm exists |
+| `BSD-4-Clause` / `BSD-3-Clause` / `BSD-2-Clause` | 🔴 all three → bare **`BSD`** / `BODY-BSD` | **indistinguishable** |
+| `GPL-1.0` | 🟡 bare `GPL` | version present in the title, not read |
+| `EPL-1.0` / `EPL-2.0` | 🟡 both bare `EPL` | 2.0's secondary-licence/GPL-compatibility option is not in the cell |
+| `ECL-1.0` | 🟡 bare `ECL` | — |
+
+🔴 **The BSD row is `923-F1`'s commercial argument, now measured rather than reasoned.** `923-F1`
+observed that *"a bare `BSD` cell is read as BSD-3-Clause, which is GPL-compatible."* Measured: the
+**4-clause** text — which carries the **advertising clause** and is **GPL-INCOMPATIBLE** — produces a
+cell byte-identical to the 2-clause text's. None of the three canonical BSD texts carries a `BSD`
+title at all; all three reach the body fallback. 🔵 The discriminator is structural and cheap: the
+advertising clause for 4-clause, *"Neither the name"* for 3-clause, neither for 2-clause — the same
+shape as `923-F3`'s Apache-1.0 fix.
+
+### 🔵 `924-R1` — one rule, and it is a *unification of four instances this base already recorded*, not a fifth mechanism
+
+`922-G1` forbids fitting another mechanism. This is offered as the opposite: the four defects below
+are **already in this base's record**, in three different stages, and they are one statement.
+
+| Instance | The document says the string | because it is… |
+|---|---|---|
+| `913-F1` | GPL-3.0 §13 names *"GNU Affero General Public License"* | **naming a licence it can combine with** |
+| `918-F1` | GPL-3.0 §6 says *"only occasionally and noncommercially"* | **describing a permitted practice** |
+| **`924-F2`** | AGPL-1.0 says *"a modified version of the GNU General Public License"* | **citing its own ancestor** |
+| **`924-F4`** | Unlicense says *"for any purpose, commercial or non-commercial"* | 🔴 **granting the very thing the token is read as forbidding** |
+
+> 🔵 **`924-R1`** — *A licence text is a document **about** licensing. Every family name and every
+> obligation word appears in it for reasons other than being its grant. A detector keyed on a
+> **string** will therefore be wrong on exactly the payloads that discuss licensing most carefully;
+> only a detector keyed on **position** (it is the title) or on **structure** (it is the operative
+> clause) is reading the grant.*
+
+🔴 **Pre-registered falsification, so `p925` can kill it cheaply:** `924-R1` predicts that the
+remaining string-keyed stages fail on payloads that *discuss* their family. The sharpest available
+test is a **dual-licensed** payload and a **licence-comparison** document: if `924-R1` is right, both
+misgrade; if either grades correctly, the rule is over-stated. Both are reachable on the channel
+`924-F1` opened. **No repository is required.**
+
+### 🟢 `923-G4` discharged — the catalogue nil survives four tiers of five, and the fifth is a `922-R2` counter-example
+
+`923-G4` held that *"a nil on one query shape is weaker than a nil on two."* Second shape run on all
+five tiers (`<language> NLP resources github corpus toolkit`):
+
+| Tier | Catalogue on shape 2 | Verdict |
+|---|---|---|
+| **TL** Tagalog | none | 🔴 nil holds on two shapes |
+| **CS** Czech | none | 🔴 nil holds on two shapes |
+| **SW** Swahili | none | 🔴 nil holds on two shapes |
+| **EU** Basque | none — the shape returned **no GitHub repository at all**, only institutional pages (IXA/UPV-EHU, LINDAT) | 🔴 nil holds, and hardest |
+| 🟢 **AM** Amharic | **`EthioNLP/Ethiopian-Language-Survey`** | 🟢 **nil refuted** |
+
+🟢 **`EthioNLP/Ethiopian-Language-Survey` — 17 ★, MIT byte-read (1,103 B, `sha256₁₂ e268928bea59`),
+search channel agrees `MIT`.** It is the companion repository to the 2023 RAIL survey of Ethiopian-language
+NLP. 🔵 **`922-R2`'s denominator moves: 21 catalogues byte-read, 13 ungranted, 8 granted.** It is a
+second counter-example of the *small* kind, which leaves `922-R2` where `923-F1` left it — true in
+direction, refuted in its sharp half.
+
+🔴 **Four nils are now measured properties of those tiers, not artefacts of a query.** That is worth
+more than the one discovery: it is the difference between *"we did not find one"* and *"there is not
+one."*
+
+### 🟡 `924-F8` — Czech now has a dated fallback, and under `923-R1` it does not qualify
+
+`922-G4` fixed the date: `ufal/udpipe` (426 ★, MPL-2.0) crosses `918-R1`'s 180-day line on
+**2026-12-08**. This pass's Czech leg found the Czech National Corpus organisation, which is **live**:
+
+| Repo | ★ | Grant (byte-read) | Pushed | `923-R1` role test |
+|---|---|---|---|---|
+| `czcorpus/kontext` | 80 | 🔴 **GPL-2.0** (17,989 B) | **2026-11-12** | 🔴 **fails** — a corpus-search *front-end*, not the tier's general artefact |
+| `czcorpus/cnc-tskit` | 1 | 🟢 Apache-2.0 (11,357 B) | 2026-09-29 | 🔴 fails — a utility belt, and 1 ★ |
+| `czcorpus/manatee-open` | 1 | 🔴 GPL-2.0 | 2026-11-03 | 🔴 fails — a search engine |
+
+🔵 **So the correct verdict is one this base could not previously state: after `2026-12-08` the Czech
+tier is `NOT DELIVERABLE` at the general-artefact layer *while remaining actively maintained*.**
+Dormancy and undeliverability are different facts, and `921-F3`'s rule — *a tier verdict that does
+not name its layer is not a verdict* — is what makes the distinction sayable.
+
+### 🔴 `924-F9` — an 11-byte grant, and the channel that reports "no grant" is the one that is right
+
+`yonasab12/amharicNLP` (10 ★). Its `LICENSE` file is **11 bytes**, and its entire content is the
+string `MIT License` — no copyright holder, no permission clause, no warranty disclaimer.
+
+- `search/repositories` → **`NOASSERTION`**
+- the authority's title line → `MIT`, flagged **`MIT-TITLE-OUT-OF-BAND`** by p640's 1,000–1,250 B size band
+
+🔵 **The two channels disagree and the search channel is correct: a licence *name* is not a licence
+*grant*.** p640's size band — written for narrowed MIT derivatives — catches this class too, which is
+why the cell is flagged rather than published clean. 🔵 It also fixes a cheap habit: *the file exists*
+and *the file grants something* are different findings, and only the byte count distinguishes them.
+
+### 🔴 `924-F12` — I wrote that no live cell was affected, then measured it and the opposite was true
+
+Drafting `924-F7` I wrote, of the seven defects, *"no cell on this shelf is known to be wrong because
+of them."* 🔴 **This base carries 16 bare `BSD` cells** (`repos/foundations.md`, grant census). The
+sentence was an assumption with the grammar of a measurement, and it was caught only because it was
+checked before it was committed.
+
+Four named rows, re-read structurally this pass — advertising clause → 4-clause, *"Neither the
+name"* → 3-clause, neither → 2-clause:
+
+| Cell | Bytes | Advertising | "Neither the name" | **Really** |
+|---|---|---|---|---|
+| `christophse/django-lti-tool` | 1,524 | no | **yes** | **BSD-3-Clause** |
+| `polm/unidic-lite` → `LICENSE.unidic` | 1,514 | no | **yes** | **BSD-3-Clause** |
+| `wwWallet/wallet-frontend` | 1,308 | no | no | **BSD-2-Clause** |
+| `apereo/java-cas-client` (the JA-SIG arm) | 1,522 | no | no | **BSD-2-Clause-shaped** |
+
+🟢 **The reassuring half, now measured instead of assumed: none is 4-clause**, so no live cell on
+this shelf is GPL-incompatible through the advertising clause. 🔴 **The residue is real**: BSD-2 and
+BSD-3 differ in the **non-endorsement** term, which is the one a client trips over when they ship a
+*branded* derivative of an LTI tool or a wallet — and this base currently publishes both as `BSD`.
+
+🔵 **And the sizes kill the cheap fix before anyone proposes it.** `java-cas-client` is **1,522 B and
+2-clause-shaped**; `django-lti-tool` is **1,524 B and 3-clause**. **Two bytes apart, different
+licences.** That is `920-G2`'s size axis failing for the last time — the axis this base spent four
+passes refuting on Apache — and `923-F3`'s structural discriminator being the thing that actually
+works. 🔵 The generalisation of `923-F3` is therefore not Apache-specific: **where a family has no
+version to read, grade it on the clause that distinguishes the versions.**
+
+### 🔴 `924-F13` — the commit-gate line in this base's register has been reporting 3 of 18
+
+Measured this pass, because `923`'s entry said *"two gates inherited red"* and that number was worth
+checking: `make -k commit-gates` on the **clean tree at `p923`'s HEAD** returns **18 red gates**. On
+`p924`'s tree it returns **the same 18** — 🟢 **zero regressions, the sets are identical.**
+
+🔵 **The mechanism is the build tool.** Plain `make` stops at the first failure. Every pass that ran
+it saw `gate-header-signature` go red and stopped there, so **one known-red gate was concealing
+seventeen others** — nobody decided to under-report; the tool reported the first fact and was read as
+reporting the set. 🔵 `make -k` costs nothing and returns all of them.
+
+🔵 **And the concealed ones look cheap.** `gate-i2-sweep-crosscheck` fails on exactly one control:
+`C21` expects two mixed-case specimens (`ai-matrix-engine/aidream`, `mckaroff/graphlms`) to be
+findable on a **live** shelf, and they are on **no** live shelf in either tree — a control pinned to a
+shelf state that moved underneath it. **A stale pin, not a broken shelf.**
+
+🔴 **The register-level statement.** This base publishes, about its own search legs, that *an informed
+gap is information while silence looks exactly like coverage*. `923`'s gate line named three gates
+truthfully and gave no denominator, which is that same defect **inside the process ledger that is
+supposed to catch it**. Declared as `924-G7`: publish the full red set, with its count, every pass.
+
+### 🔵 `924-F10` — the mandated legs, one line per `920-G3`
+
+All 8 run. **24 named facts probed mechanically against the live shelf: 21 of 24 already present.**
+🔴 **Zero repositories — the forty-third consecutive nil** at the top of the English-language shelf:
+every repo the global legs named (`DeepTutor`, `education-agent-skills`, `ChinaTextbook`,
+`OpenEduCat`, `calamanCy`) was already held. 🔵 `calamanCy` re-read **hash-identical** to the shelf
+(1,095 B, `sha256₁₂ 09da5a2dfb62`) — a control, not a discovery. The three new facts are **Utah
+H.B. 44** and the **UAE Ministry of Education's 25 generative-AI prohibitions**, both filed in
+`intel/market.md` under the correct region, and one analyst panel not worth a row.
+
+### 🟡 `924-F11` — the region a leg *returns* is not the region field, and this pass's own legs proved it
+
+The **APAC** leg's single most concrete regulatory instance was the **UAE** Ministry of Education.
+The UAE is **EMEA** in this base's closed vocabulary.
+
+🔵 Small, but it is the exact failure mode the closed vocabulary exists to prevent: a leg named
+`APAC` returns a Gulf-state fact, the fact is filed where the leg was aimed, and the region filter
+silently stops meaning anything. **The region field is a property of the subject, never of the query
+that found it** — recorded here because it cost nothing to catch this time and is invisible once
+committed.
+
 ## `2026-11-19` (p923) — **`922-G2` predicted that Apache-1.1 would be published as 2.0. It is published as **`BSD`** — the version stage `922-F3` fixed was never reached, because the family detector is keyed on a name the ASF only adopted at 2.0. 🔴 The same defect was then found, independently, in Creative Commons: a real `CC-BY-4.0` catalogue on this shelf was published as `CC-UNSPECIFIED`.**
 
 🔵 **Summary.** The 8 mandated WebSearch legs (one line, per `920-G3`), **15 national catalogues

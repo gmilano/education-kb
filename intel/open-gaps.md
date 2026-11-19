@@ -3,6 +3,93 @@ industry: education
 region: Global
 updated: 2026-11-19
 ---
+## 🆕 `p924` · 2026-11-19 — **`923-G1`, `923-G2` and `923-G4` all discharged with measurement, and the live half of `923-G6` is discharged by a channel that was on the one host this base already trusts. 🔴 Seven defects in the grant authority, measured on canonical texts — and one claim of mine was false and was caught before the commit, not after.**
+
+🔵 **Summary.** 8 mandated WebSearch legs filed as one line (`920-G3`), **a new primary legal-text
+channel**, **37 canonical licence texts** run through the unmodified authority, **seven defects**,
+**five tiers re-probed on a second query shape**, 1 new catalogue row + 4 new substrate rows byte-read,
+one rule published as a **unification of four already-recorded instances** rather than a new fit,
+**zero new agent rows (forty-third consecutive nil)**. 🔴 24 named facts probed: **21 of 24 already
+present**.
+
+| Gap | Status | Evidence |
+|---|---|---|
+| 🔴 **`923-G1`** — run `923-F1`'s test on the other sixteen title arms | 🟢 **DISCHARGED — four families fail, and three fail for a reason `923-G1` did not describe** | Only **LGPL-2.0** is the predicted *earlier-name* defect (`GNU LIBRARY…`). 🔴 `AGPL-1.0` → **`GPL`** because its own third line cites the GPL **inside the 300-byte window** — *a window is not a title*. 🔴 Unlicense → **`NONCOMMERCIAL-TERM`** on the words granting commercial use. 🔴 `CC-BY-3.0` → `CC-UNSPECIFIED` (one **anchored** arm). `Artistic`/`Zlib` invisible; `BSD-4` ≡ `BSD-2`. `924-F2`–`924-F7` · [cohort](../evidence/spdx-family-audit.2026-11-19-p924.tsv) |
+| 🟡 **`923-G2`** — byte-read one real `CC-BY-NC-SA` payload; *"a third route is needed"* | 🟢 **DISCHARGED — the route is SPDX, and the fix holds** | `CC-BY-NC-SA-4.0` (19,018 B) → **`CC-BY-NC-SA-4.0`**; `CC-BY-NC-SA-3.0` (22,305 B) → **`CC-BY-NC-SA-3.0`**. `923-F5`'s share-alike repair is confirmed on canonical text, not synthetic title lines. 🔴 Stated precisely: this is SPDX's legal code, **not** a repository's copy. `924-F6` |
+| 🟡 **`923-G4`** — five tiers' catalogue nil rests on a single query shape | 🟢 **DISCHARGED — four nils hold, one moves** | Tagalog, Czech, Swahili, Basque: **no catalogue on two shapes** (Basque returned no GitHub repo at all). 🟢 Amharic moves: `EthioNLP/Ethiopian-Language-Survey`, **17 ★, MIT byte-read** (1,103 B, `e268928bea59`). **`922-R2`: 21 byte-read, 13 ungranted, 8 granted.** `924-F8` |
+| 🔵 **`923-G6`** — three hosts at 403, *"nothing to do until a channel exists"* | 🟡 **HALF DISCHARGED** | A **licence-text** channel exists: `spdx/license-list-data` on `raw.githubusercontent.com`, **37/37 `200`**, readable by the authority **unmodified**. 🔴 The model-hub (`921-G1`) and statute (`920-G5`) instances are **unmoved** — this is not a statute channel. Three instances → two. `924-F1` |
+| 🟡 **`922-G4`** — `ufal/udpipe` crosses on `2026-12-08` | 🟡 **ADVANCED, not discharged** | The successor question is answered early: the Czech tier is **alive** (`czcorpus/kontext`, 80 ★, pushed **2026-11-12**) and **every member fails `923-R1`'s role test**. So from 2026-12-08 Czech is **`NOT DELIVERABLE` while actively maintained** — a verdict `921-F3` makes sayable. `924-F8` |
+| 🔴 **`922-G1`** — no predictive rule for an unmeasured tier; **do not fit a third one** | 🟢 **OBEYED, and still not discharged** | `p924` fitted **no** tier mechanism. `924-R1` is a *unification of four defects already in this base's record* (`913-F1`, `918-F1`, `924-F2`, `924-F4`), with a pre-registered falsification that needs **no repository**. The gap's own remedy — fit on ten tiers, score the other ten without re-reading — remains **unspent** |
+| **`923-G3`** (prose grants), **`923-G5`** (re-grade 20 library rows under `923-R1`), **`923-G7`**/`919-G10` (re-cut `SHELVES`, own commit), **`921-G4`**, **`921-G1`**, **`921-G2`**, **`920-G5`**/`919-G1`/`918-G1`, **`920-G6`**, **`920-G7`** (incl. `919-G2`'s 216-address residue queue) | 🔴 **NOT REACHED** | Carried forward unchanged. 🔵 `919-G2` is now **six passes** unreached and remains the largest known, costed, **network-free** unit of work on this base's books. 🔵 `923-G5` is the cheapest: no network, slugs and payloads all on the shelf |
+
+### Gaps declared in `p924`
+
+| Gap | Remedy | Cost |
+|---|---|---|
+| 🔴 **`924-G1`** — **the title block is `head -c 300` of the payload, so it reads prose.** `AGPL-1.0` is graded `GPL` by a sentence citing its own ancestor, and because the `case` matched, `913-F6`'s recovery stage — which grades it **correctly** — is unreachable, being gated on `fam` empty | Stop the window **at the title**: take non-blank lines until the first line that ends in a sentence period or exceeds ~80 chars, rather than a fixed byte count. 🔴 Then re-run the full 37-text cohort **and** the 11-row control set, because this changes the input to *every* arm. `AGPL-1.0` is the standing fixture | one pass, no network (cohort is cached) |
+| 🔴 **`924-G2`** — **`918-F1` installed an exception, not a predicate.** The noncommercial matcher is a body grep for `non-commercial\|noncommercial` with one hard-coded GNU-§6 exclusion; the Unlicense's *grant* fires it | Replace the token test with a **restriction** test: require the token within ~10 words of a prohibitive construction (`may not`, `not permitted`, `is prohibited`, `NonCommercial` as a licence *element*). Three fixtures, all on the SPDX channel: `Unlicense` (must be clean), `GPL-3.0` (must be clean), `CC-BY-NC-4.0` (must fire) | one rule change + 3 probes |
+| 🔴 **`924-G3`** — **three families are invisible and one is under-specified.** `Artistic-1.0/2.0` and `Zlib` have no arm; `BSD-4/3/2` are one cell; `GPL-1.0`, `EPL-1.0/2.0` and `ECL-1.0` publish with no version | Add `artistic license` and `zlib license` arms; add `GPL`→1.0, `EPL`, `ECL` to `VERSIONED_ROOTS`; split BSD **structurally** (advertising clause → 4-clause, *"Neither the name"* → 3-clause, else 2-clause), which is `923-F3`'s method generalised. 🔴 **Then re-grade the 16 live `BSD` cells** — four are done (`924-F12`), twelve are not | one pass, ~12 probes |
+| 🟡 **`924-G4`** — **`CC-BY-3.0` fails on one anchored arm** while every other CC cell passes | Replace `attribution\ [0-9]*` with a test tolerant of a preceding `creative commons legal code` line. 🔵 Cheap, but it must be measured on **1.0, 2.0, 2.5, 3.0 and 4.0** before and after: this pass's own prediction (*"pre-4.0 fails"*) was wrong **in both directions**, so the arm's behaviour across generations is not intuitable | 5 probes |
+| 🟢 **`924-G5`** — **the 37-text cohort is a standing regression suite and is not wired in.** It needs no repository, no search quota and no `gh` | Add it to `make commit-gates` as a gate that fails when any row's verdict disagrees with its own SPDX filename, with the seven known defects pinned as **expected failures** until `924-G1`–`924-G4` land. 🔴 Land it in a commit of its own (`913-G1` limb 2) | one pass, no network |
+| 🔴 **`924-G7`** — **the register's gate line has been reporting 3 of 18.** `make` stops at the first failure, so one known-red gate concealed seventeen; `make -k` returns the set | Publish the full red set **with its count** every pass, and run `make -k`. Then triage the eighteen by cost: `gate-i2-sweep-crosscheck` fails on one control pinned to a shelf state that moved (`C21`), which looks typical — **stale pins, not broken shelves** | one pass, no network |
+| 🔵 **`924-G6`** — **`924-R1` is pre-registered but untested.** It predicts that string-keyed stages fail on payloads that *discuss* licensing | Run it on the two payload classes it names: a **dual-licensed** text and a **licence-comparison** document. Both reachable on the `924-F1` channel. 🔵 If either grades correctly, `924-R1` is over-stated and should be narrowed **in the same pass that finds it**, per `923-F1`'s four-framings lesson | 2 probes |
+
+### 🔴 One false claim of mine, caught before the commit rather than after
+
+Drafting `924-F7` I wrote that none of the seven defects touched a live cell. 🔴 **This base carries
+16 bare `BSD` cells.** The sentence had the grammar of a measurement and the content of an
+assumption. It was caught only because it was checked.
+
+🟢 **Checking it produced the better finding.** Four named rows re-read structurally: **none is
+4-clause** (so nothing here is GPL-incompatible through the advertising clause), two are **BSD-3**,
+two are **BSD-2**. And the sizes refute the cheap fix — `java-cas-client` **1,522 B / 2-clause**,
+`django-lti-tool` **1,524 B / 3-clause**. 🔵 **The transferable habit: a negative claim about blast
+radius is a measurement, and it is the one kind of claim that is never challenged in review, because
+it closes an inquiry rather than opening one.**
+
+### 🔴 Commit-gate status — **18 gates are red, and the register has been describing two**
+
+`p924` ran `make -k commit-gates` on the **clean tree at `p923`'s HEAD** before editing anything,
+and again on its own tree, and diffed the two.
+
+| | |
+|---|---|
+| Red at `p923` HEAD | 🔴 **18 gates** |
+| Red at `p924` HEAD | 🔴 **18 gates** |
+| **Regressions caused by `p924`** | 🟢 **zero — the two sets are identical** |
+
+```
+absence  action-answered  alias-canonical  case-collision  cell-reproduction
+census-currency  dates  enumeration  fold-identity  grant-path  header-signature
+i2-sweep-crosscheck  ladder-case  ledger  prose-claims  register-currency
+shelf-consistency  union-currency
+```
+
+🔴 **This is the finding, not the footnote.** `p923`'s entry reads *"Two gates inherited red"* and
+*"`gate-header-signature` stays red"* — three gates named, and the reader of this register has had no
+way to know the true figure was **eighteen**. The entries were not false about the gates they named;
+they were **silent about the denominator**, which is the same defect this base publishes about search
+legs (*"an informed gap is information, silence looks like coverage"*) occurring in its own
+process ledger. 🔵 **`make -k` is why.** Plain `make` stops at the first failing gate, so every pass
+that ran it saw `gate-header-signature` and stopped — **a red gate was hiding seventeen others, and
+the hiding was done by the build tool, not by anyone's judgement.**
+
+🔵 `gate-i2-sweep-crosscheck` illustrates the cost: its single failing control (`C21`) wants two
+mixed-case specimens on a **live** shelf, and `ai-matrix-engine/aidream` and `mckaroff/graphlms` are
+on **no** live shelf in either tree — the control is pinned to a shelf state that has since moved.
+That is a stale control, cheap to re-pin, and it has been invisible behind an earlier gate.
+
+🟡 **`923-G7`/`919-G10` measured on both sides, as it requires:** `agents/top.md` **15 → 15**,
+`verticals/solutions.md` **23 → 23**, `repos/foundations.md` **38 → 39** (`p924` adds one
+address-bearing table: the Czech/Amharic substrate rows). The `SHELVES` re-cut is **not** attempted
+here, for the reason `p923` gave and `913-G1` limb 2 requires: it is an instrument change and must
+not land beside a measurement change. Landed with `SKIP_COMMIT_GATES=1`, said here rather than left
+in a terminal.
+
+🔴 **`924-G7` declared:** publish the full red set every pass, and run `make -k` rather than `make`,
+so the register's gate line carries a denominator. Then triage the eighteen by cost — `C21` above is
+the worked example and looks typical: **stale pins, not broken shelves**.
+
 ## 🆕 `p923` · 2026-11-19 — **Four of `p922`'s five gaps discharged, and the two that mattered were discharged by *refuting their own stated mechanism*. 🔴 Five defects in the grant authority; two were created by this pass's fixes and caught by its controls, and a third was caught only by re-reading the code, which means the control set does not cover it.**
 
 🔵 **Summary.** 8 mandated WebSearch legs filed as one line (`920-G3`), **one discovery leg over

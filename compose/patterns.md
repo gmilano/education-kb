@@ -62,6 +62,61 @@ GitHub's SPDX detector, and this KB's own probe until now, **classify the reposi
 | `moodlehq/moodleapp` | `NO-LICENSE-FILE` | **Apache-2.0** at `main/COPYING.txt`, 11,358 B `cfc7749b96f6` |
 | `frappe/education` | `NOASSERTION` | **GPL-3.0**, a **19-byte** `license.txt` naming the licence without reproducing it |
 
+### 🆕 `p924` — step 0: validate the reader before you trust the bytes
+
+🔴 **A gate that reads bytes correctly and *grades* them wrongly produces a confident, wrong legal
+claim.** `p924` ran this base's own grant authority over **37 canonical licence texts** and found
+**seven defects** (`intel/trends.md` **T19**). Validate the reader first — it costs one command and
+no search quota:
+
+```bash
+# the cohort: SPDX serves every canonical licence text from the host we already trust
+for id in AGPL-1.0-only LGPL-2.0-only Unlicense CC-BY-3.0 BSD-4-Clause BSD-3-Clause \
+          BSD-2-Clause Artistic-2.0 Zlib Apache-1.1 CC-BY-NC-SA-4.0 MulanPSL-2.0; do
+  printf 'spdx/license-list-data\t-\tmain\ttext/%s.txt\t200\t-\n' "$id"
+done > /tmp/cohort.tsv
+sed -i '1i repo\tdb\tbranch\tpath\thttp\trest' /tmp/cohort.tsv
+
+ingest/p913-grant-authority.sh /tmp/verdicts.tsv --from-tsv /tmp/cohort.tsv
+```
+
+Any row whose verdict does not match its filename is a defect **in your scanner**, not in the
+repository you were about to assess. 🔵 Run the same cohort through the client's commercial SCA tool
+before you accept its output in a due-diligence report.
+
+### 🆕 `p924` — step 0b: a bare `BSD` verdict is not a licence, and the byte count will not save you
+
+🔴 This base carries **16 bare `BSD` cells**, and `BSD-4-Clause` is **GPL-incompatible** while
+`BSD-2`/`BSD-3` are not. No canonical BSD text carries a `BSD` title, so every one of them reaches a
+body fallback that cannot tell the three apart. Grade **structurally**:
+
+```bash
+# $L = the byte-read grant file
+grep -qi "all advertising materials mentioning features" "$L" && echo "BSD-4-Clause — GPL-INCOMPATIBLE"
+grep -qi "neither the name"                               "$L" && echo "BSD-3-Clause — non-endorsement term"
+# neither -> BSD-2-Clause
+```
+
+🔴 **Do not substitute size.** Measured on this shelf: `apereo/java-cas-client` is **1,522 B and
+2-clause-shaped**; `christophse/django-lti-tool` is **1,524 B and 3-clause**. Two bytes apart,
+different obligations. 🔵 The same shape applies wherever a family has **no version in its title**:
+grade on the clause that distinguishes the versions.
+
+🔵 **Which of the three you have decides one concrete thing**: BSD-3's non-endorsement term governs
+whether the client may put *their* brand on a derivative of the component — the exact question
+`P15` (branded closed mobile client) and `P17` (grading assist over a BSD autograder) turn on.
+
+### 🆕 `p924` — step 0c: a licence *name* is not a licence *grant*
+
+This gate already records `frappe/education`'s **19-byte** `license.txt` that names GPL-3.0 without
+reproducing it. `p924` met the class again: **`yonasab12/amharicNLP`'s entire `LICENSE` is 11 bytes
+reading `MIT License`** — no copyright holder, no permission clause, no warranty disclaimer.
+`search/repositories` reports **`NOASSERTION`** and is **right**.
+
+🔵 **Rule:** below roughly 1,000 B, a grant file is a *reference* and must be reported as
+`NAME-ONLY — no operative grant`, never as the family it names. A client cannot rely on it, and the
+remedy is a one-line issue to the maintainer, not a legal opinion.
+
 ### The two failure modes it is built to stop
 
 1. 🔴 **Shipping copyleft as permissive.** Several 2026 *"best open-source LMS"* comparisons list

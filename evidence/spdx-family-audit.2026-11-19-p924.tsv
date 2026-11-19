@@ -1,0 +1,38 @@
+repo	branch	path	http	bytes	sha256_12	families	verdict	note
+spdx/license-list-data	main	text/AGPL-1.0-only.txt	200	15839	0cf752be2bb9	GPL	GPL	GPL family with NO recoverable version in the title block — do not assume the current one (922-F3/923-F2)
+spdx/license-list-data	main	text/AGPL-3.0-only.txt	200	34020	d8a6cc31abc1	AGPL-3.0	AGPL-3.0	version read from the title block (921-F4/923-F2); the "or later" election is NOT in the licence text — read the program's own notice
+spdx/license-list-data	main	text/LGPL-2.0-only.txt	200	24877	86dc99d7e506	GPL-2.0	GPL-2.0	version read from the title block (921-F4/923-F2); the "or later" election is NOT in the licence text — read the program's own notice
+spdx/license-list-data	main	text/LGPL-2.1-only.txt	200	26001	5749785c8bde	LGPL-2.1	LGPL-2.1	version read from the title block (921-F4/923-F2); the "or later" election is NOT in the licence text — read the program's own notice
+spdx/license-list-data	main	text/LGPL-3.0-only.txt	200	42098	996af0513df2	LGPL-3.0	LGPL-3.0	version read from the title block (921-F4/923-F2); the "or later" election is NOT in the licence text — read the program's own notice
+spdx/license-list-data	main	text/GPL-1.0-only.txt	200	12235	da37ffd5fcdf	GPL	GPL	GPL family with NO recoverable version in the title block — do not assume the current one (922-F3/923-F2)
+spdx/license-list-data	main	text/GPL-2.0-only.txt	200	17337	aaf135472f81	GPL-2.0	GPL-2.0	version read from the title block (921-F4/923-F2); the "or later" election is NOT in the licence text — read the program's own notice
+spdx/license-list-data	main	text/CC-BY-1.0.txt	200	11405	1e4d54d3d9ba	CC-BY-1.0	CC-BY-1.0	version read from the title block (923-F2); Creative Commons grant — content licence, read scope before building on it
+spdx/license-list-data	main	text/CC-BY-2.0.txt	200	12572	f892996eb4b6	CC-BY-2.0	CC-BY-2.0	version read from the title block (923-F2); Creative Commons grant — content licence, read scope before building on it
+spdx/license-list-data	main	text/CC-BY-3.0.txt	200	19467	e6bc9e9c4747	CC-UNSPECIFIED	CC-UNSPECIFIED	Creative Commons grant — content licence, read scope before building on it
+spdx/license-list-data	main	text/CC-BY-4.0.txt	200	17023	d557539df68e	CC-BY-4.0	CC-BY-4.0	version read from the title block (923-F2); Creative Commons grant — content licence, read scope before building on it
+spdx/license-list-data	main	text/CC-BY-NC-SA-4.0.txt	200	19018	600ca4e25fe1	CC-BY-NC-SA-4.0	CC-BY-NC-SA-4.0	version read from the title block (923-F2); Creative Commons grant — content licence, read scope before building on it
+spdx/license-list-data	main	text/CC-BY-NC-SA-3.0.txt	200	22305	c6648565ca4a	CC-BY-NC-SA-3.0	CC-BY-NC-SA-3.0	version read from the title block (923-F2); Creative Commons grant — content licence, read scope before building on it
+spdx/license-list-data	main	text/CC-BY-SA-3.0.txt	200	22240	3f941b3b89cf	CC-BY-SA-3.0	CC-BY-SA-3.0	version read from the title block (923-F2); Creative Commons grant — content licence, read scope before building on it
+spdx/license-list-data	main	text/BSD-4-Clause.txt	200	1618	c80d927f03db	BSD	BODY-BSD	graded from the body, not a licence title — weaker evidence than a title verdict
+spdx/license-list-data	main	text/BSD-3-Clause.txt	200	1460	5a93d5831e12	BSD	BODY-BSD	graded from the body, not a licence title — weaker evidence than a title verdict
+spdx/license-list-data	main	text/BSD-2-Clause.txt	200	1267	f32fb3b417a1	BSD	BODY-BSD	graded from the body, not a licence title — weaker evidence than a title verdict
+spdx/license-list-data	main	text/Artistic-1.0.txt	200	4854	b50b4f007fb6	none	UNKNOWN-TEMPLATE	no licence title and no grant phrase; title block was: The Artistic License Preamble The intent of this document is
+spdx/license-list-data	main	text/Artistic-2.0.txt	200	8764	bae466ac8d71	none	UNKNOWN-TEMPLATE	no licence title and no grant phrase; title block was: The Artistic License 2.0 Copyright (c) 2000-2006, The Perl F
+spdx/license-list-data	main	text/Zlib.txt	200	838	bfb1112d49db	none	UNKNOWN-TEMPLATE	no licence title and no grant phrase; title block was: zlib License This software is provided 'as-is', without any 
+spdx/license-list-data	main	text/ISC.txt	200	737	521c6f0ed8e6	ISC	ISC	
+spdx/license-list-data	main	text/MIT.txt	200	1078	b05785f9f18e	MIT	MIT	
+spdx/license-list-data	main	text/MPL-1.0.txt	200	18272	819b323d7e6d	MPL-1.0	MPL-1.0	version read from the title block (922-F3/923-F2); MPL-1.1 is GPL-incompatible and MPL-2.0 is not
+spdx/license-list-data	main	text/MPL-2.0.txt	200	16727	66a3107d5ad6	MPL-2.0	MPL-2.0	version read from the title block (922-F3/923-F2); MPL-1.1 is GPL-incompatible and MPL-2.0 is not
+spdx/license-list-data	main	text/EPL-1.0.txt	200	11345	f3d8dc494be2	EPL	EPL	EPL family with NO recoverable version in the title block — do not assume the current one (922-F3/923-F2)
+spdx/license-list-data	main	text/EPL-2.0.txt	200	14020	61616a406670	EPL	EPL	EPL family with NO recoverable version in the title block — do not assume the current one (922-F3/923-F2)
+spdx/license-list-data	main	text/CDDL-1.0.txt	200	16514	fde9ef484615	CDDL-1.0	CDDL-1.0	version read from the title block (923-F2)
+spdx/license-list-data	main	text/ECL-1.0.txt	200	2425	c3b96326d1e6	ECL	ECL	ECL family with NO recoverable version in the title block — do not assume the current one (922-F3/923-F2)
+spdx/license-list-data	main	text/ECL-2.0.txt	200	11111	49831d277a9e	ECL-2.0	ECL-2.0	version read from the title block (923-F2)
+spdx/license-list-data	main	text/MulanPSL-1.0.txt	200	8908	b43343cd1c03	MulanPSL-1.0	MulanPSL-1.0	version read from the title block (923-F2)
+spdx/license-list-data	main	text/MulanPSL-2.0.txt	200	9233	eb7a1d713eb9	MulanPSL-2.0	MulanPSL-2.0	version read from the title block (923-F2)
+spdx/license-list-data	main	text/Apache-1.1.txt	200	2474	1521ffd9660f	Apache-1.1	Apache-1.1	version read from the title block (923-F2); Apache-1.0 and 1.1 are GPL-INCOMPATIBLE and carry NO patent grant — only 2.0 does
+spdx/license-list-data	main	text/Apache-2.0.txt	200	10280	074e6e32c86a	Apache-2.0	Apache-2.0	version read from the title block (923-F2); Apache-1.0 and 1.1 are GPL-INCOMPATIBLE and carry NO patent grant — only 2.0 does
+spdx/license-list-data	main	text/Unlicense.txt	200	1211	0bdebfeda07d	NONCOMMERCIAL-TERM	BODY-NONCOMMERCIAL-TERM	graded from the body, not a licence title — weaker evidence than a title verdict
+spdx/license-list-data	main	text/CC0-1.0.txt	200	7048	a2010f343487	CC0-1.0	CC0-1.0	Creative Commons grant — content licence, read scope before building on it
+spdx/license-list-data	main	text/ODbL-1.0.txt	200	25289	77d2692c3d64	ODbL-1.0	ODbL-1.0	
+spdx/license-list-data	main	text/BSL-1.0.txt	200	1338	84c6ef3ea9e3	BSL-1.0	BSL-1.0	

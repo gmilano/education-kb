@@ -610,6 +610,29 @@ client can keep what a studio builds. **Seven repositories carried on this KB's 
 unresolved licence were byte-read in p897. Five were wrong as recorded, and the errors did not
 share a direction.**
 
+🔴 **`p924` found the limb this trend was missing, and it is the limb underneath all the others:
+the *reader* can be wrong about bytes that are perfectly correct.** This trend's standing advice is
+*"the field decides nothing in either direction — only the bytes decide."* `p924` ran this base's own
+grant authority over **37 canonical licence texts** published by SPDX and found **seven defects**.
+On a byte-perfect, unmodified, authoritative licence text:
+
+| Payload | Published as | Direction |
+|---|---|---|
+| `AGPL-1.0` | 🔴 **`GPL`** | **permissive** — the network-use disclosure duty disappears |
+| `LGPL-2.0` | 🔴 **`GPL-2.0`** | **restrictive** — a linkable dependency reads as un-linkable, *and the cell carries a version, so it looks finished* |
+| **`Unlicense`** (public-domain dedication) | 🔴 **`NONCOMMERCIAL-TERM`** | **restrictive, at maximum amplitude** |
+| `CC-BY-3.0` | 🔴 `CC-UNSPECIFIED` | unusable |
+| `BSD-4-Clause` | 🔴 bare `BSD`, identical to `BSD-2-Clause` | **permissive** — GPL-incompatibility invisible |
+
+🔵 **So the procurement rule gains a third clause.** The published field is not evidence (`T19`
+original); the bytes are evidence **only together with a reader that has been tested against known
+texts**; and that test is now free, because SPDX serves every canonical licence text from
+`raw.githubusercontent.com` — the host this base already trusts — at
+`spdx/license-list-data/main/text/<SPDX-ID>.txt`. 🔴 **A licence scanner nobody has run over a known
+cohort is an unvalidated instrument making legal claims.** That is a sentence worth saying to a
+client's procurement team about *their* scanner, not only about this one. Account:
+`agents/trending.md` `924-F1`–`924-F7`, `924-F12`, rule `924-R1`.
+
 🔴 **`p906` found the direction this trend had never recorded: a published field that *invents* a
 restriction.** `yinuoguan/nengdou-ai-review-helper-web` (**193 ★**, the star ceiling of the Mandarin
 education channel) is labelled **`MulanPSL-2.0`** by GitHub's classifier. Its `LICENSE` at `main` is
