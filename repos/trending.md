@@ -4,6 +4,63 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p929) — **`p928` removed the page cap by sharding. This pass paginated the same channel and found the thing the cap was never the cause of: ten of `p927`'s published legs had been silently filtered to repositories above ten, twenty, thirty or sixty stars.**
+
+🔵 **`p928`'s reach supersedes this pass's.** Star-band sharding returned **21,238 unique
+repositories / 20,203 unheld**; straight pagination over 39 legs returned **21,911 rows, 16,142
+unique, 15,070 still unheld**. Cite `928-F1` for the population. This section records the three
+things pagination showed that sharding did not.
+
+### 🔴 The leg labels were wrong, and the defect points at the regional tail
+
+| Leg as `p927` published it | `p927` | Query actually sent | True | Concealed |
+|---|---|---|---|---|
+| `topic:quiz` | 139 | `topic:quiz stars:>30` | **7,230** | 52.0× |
+| `topic:educational` | 176 | `topic:educational stars:>60` | **7,505** | 42.6× |
+| `topic:educational-game` | 49 | `… stars:>20` | 1,903 | 38.8× |
+| `topic:homework` | 107 | `… stars:>10` | 3,173 | 29.7× |
+| `topic:flashcards` | 156 | `… stars:>30` | 3,600 | 23.1× |
+| `topic:school-management` | 70 | `… stars:>10` | 1,289 | 18.4× |
+| `topic:assessment` | 68 | `… stars:>20` | 1,087 | 16.0× |
+| `topic:computer-science-education` | 25 | `… stars:>20` | 331 | 13.2× |
+| `topic:moodle` | 190 | `… stars:>10` | 2,390 | 12.6× |
+| `topic:online-learning` | 98 | `… stars:>30` | 1,084 | 11.1× |
+| **Ten legs** | **1,078** | — | 🔴 **29,582** | **27.4× mean** |
+
+🔵 **Every "trending" claim in this file derived from one of those ten legs described the popular
+head of a topic, not the topic** — and `928-F2`'s finding that 90.7% of the usable shelf sits at
+≤2 ★ is exactly what a star floor deletes. `agents/trending.md` **`929-F1`**, gate **`929-G1`**,
+`intel/trends.md` **`T71`**.
+
+### 🟢 Depth in this channel is an overlap gradient, not a quality gradient
+
+| Page | 1 | 2 | 3 | 5 | 7 | 9 | 10 |
+|---|---|---|---|---|---|---|---|
+| Unheld rate | 76.8% | 93.5% | 95.6% | 97.0% | 96.5% | 98.8% | 98.0% |
+
+Page one is the **least** productive page, because earlier passes already took it. 🔵 The cap never
+filtered for quality — which is what makes `928`'s "the hidden tail is uniformly tiny" a statement
+about **supply** rather than about what the cap happened to keep.
+
+🟡 **`topic:study-tools` reports 817 and serves 499**, below the 1,000-row ceiling, no error,
+`incomplete_results: false`. A leg that returns fewer rows than it promised has not necessarily been
+exhausted, and neither pass's instrument detects the condition.
+
+### 🟢 What is new in the tail this fortnight
+
+- **Lecture → study artefact grew a provenance layer.** `stegra05/Lectern` (MIT, pushed 2026-11-17)
+  ships **per-card provenance and a visible coverage map**; `Lintao-Lab/faithful-lecture-notes`
+  (MIT) is *engineered against hallucination*, Architect-plans / Assemblers-write-from-source. 🔵
+  First convergence in this tail on **verifiability** rather than capability.
+- **Local-first again (`T62`).** `neuronection/study-assistant` (Apache-2.0, pushed **2026-11-19**),
+  `cyyyp100/meta-capp` (MIT, 100% offline, Gemma via Ollama), `Jasonsu22/Nomi` (MIT, on-device
+  macOS transcription).
+- 🔴 **And the auto-solver tier is six, not `928-F5`'s three** — `im23b-busere/QuizGPT` (MIT,
+  2026-11-16), `rushilbh27/finish-my-work` (MIT — **Canvas, Moodle, Blackboard and Google Forms**),
+  `luvswallow-creator/gptzero-bypass-2026` (MIT — **Turnitin and GPTZero by name**),
+  `Shahzaib-XVII/RMU-LMS-Auto-Quiz-Solver` (MIT). Threat intelligence, **not shelved**: `929-F2`,
+  `T72`, `P57`.
+
 ## `2026-11-19` (p928) — **The backlog this file has been recording for four passes is now measured to the bottom, and the right conclusion is to stop recording it.**
 
 ### 🟢 What `p927` asked for, and what it cost

@@ -4,6 +4,189 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p929) — **`p928` compared itself against "the 20 legs `p927` ran unqualified" and concluded `p927`'s counting was right. It was — for those twenty. The other fifteen were published as bare `topic:X` while carrying a `stars:>N` floor, and ten of them concealed between 11× and 52×.**
+
+🔵 **Read this section after `p928`'s, not instead of it.** `p928` discharged `927-R1` with
+star-band sharding and reached **21,238 unique repositories / 20,203 unheld** — a better instrument
+than the straight pagination run independently this pass (39 legs, 21,911 rows, 16,142 unique,
+**15,070 still unheld against the current corpus**), and its reach figure is the one this base
+should cite. 🟢 **This pass contributes four things `p928` did not reach**: the provenance defect in
+`p927`'s published leg table, three more members of its auto-solver tier including the one that
+attacks the detectors, 18 byte-read permissive rows absent from its haul, and the Iberian-language
+and LATAM cuts of the backlog.
+
+### 🔴 `929-F1` `p927`'s leg table dropped the qualifier that produced ten of its numbers
+
+`p928` noticed that only 20 of `p927`'s 35 legs were unqualified and, correctly, restricted its
+comparison to those. It did not say what the other fifteen were. 🔴 **Ten of them carried an
+undisclosed `stars:>N` floor, and `927-F1` published every one of them as a bare `topic:X`:**
+
+| Leg as `p927` published it | `p927` count | Query actually sent (`scratchpad/p927/queries.txt`) | True `total_count` | Concealed |
+|---|---|---|---|---|
+| `topic:quiz` | 139 | `topic:quiz stars:>30` | 🔴 **7,230** | **52.0×** |
+| `topic:educational` | 176 | `topic:educational stars:>60` | 🔴 **7,505** | **42.6×** |
+| `topic:educational-game` | 49 | `topic:educational-game stars:>20` | **1,903** | **38.8×** |
+| `topic:homework` | 107 | `topic:homework stars:>10` | **3,173** | **29.7×** |
+| `topic:flashcards` | 156 | `topic:flashcards stars:>30` | **3,600** | **23.1×** |
+| `topic:school-management` | 70 | `topic:school-management stars:>10` | **1,289** | **18.4×** |
+| `topic:assessment` | 68 | `topic:assessment stars:>20` | **1,087** | **16.0×** |
+| `topic:computer-science-education` | 25 | `topic:computer-science-education stars:>20` | **331** | **13.2×** |
+| `topic:moodle` | 190 | `topic:moodle stars:>10` | **2,390** | **12.6×** |
+| `topic:online-learning` | 98 | `topic:online-learning stars:>30` | **1,084** | **11.1×** |
+| **Ten legs** | **1,078** | — | 🔴 **29,582** | **27.4× mean** |
+
+🔵 **This is a labelling defect, not drift.** The counts were probed twice this pass, four minutes
+apart, returning byte-identical totals with `incomplete_results: false`
+(`evidence/count-stability.2026-11-19-p929.tsv`), and the legs `p927` sent unqualified re-measure
+within ±1 (`topic:plagiarism-detection` 407→408, `topic:scorm` 247→246, `topic:ai-tutor` 986→986).
+
+🔴 **And the qualifier that was dropped is the one this base had already ruled out.** `926-F2`
+established *filter before sorting*; `p904` measured a **6 ★ ceiling** on LATAM supply. A
+`stars:>30` leg cannot see regional supply **at all** — which is why `927-F5` could find permissive
+LATAM rows that `926-G2` had declared absent, and why `p928`'s own headline finding (**90.7% of the
+usable haul sits at ≤2 ★**) is the same fact seen from the other side. **Three consecutive passes
+have been reading a tail that one of their instruments was configured to delete.**
+
+🔵 **`929-G1` — gate.** **Publish the query string that was sent, verbatim, or publish no leg table
+at all.** 🔵 This is a third member of `p928`'s **`T69`** class — *the base's most expensive error
+classes are produced by the instrument and are silent* — and it is the first that is not a
+*retrieval* failure but a *provenance* one: nothing was lost in transit, the number was simply
+published under a name it did not have. `intel/trends.md` **`T71`**.
+
+### 🔴 `929-F2` `928-F5`'s auto-solver tier is six, not three — and the two it missed are the two that matter
+
+`928-F5` hand-verified three LMS auto-solvers and published three. A grant byte-read of this pass's
+own backlog returns **three more**, and they change the shape of the finding. **All six are MIT,
+all six byte-read this pass, 6/6 resolved**:
+
+| Repo | ★ | Grant (byte-read) | Pushed | In `928-F5`? |
+|---|---|---|---|---|
+| `Gavri-dev/kAIhoot` | 14 | MIT `1,124 B` | 2026-11-17 | ✅ |
+| `QuercusAlba15924/moodle-tampermonkey-auto-solver` | 8 | MIT `1,073 B` | 2026-10-28 | ✅ |
+| `im23b-busere/QuizGPT` | 5 | MIT `1,067 B` | 2026-11-16 | 🔴 new |
+| `luvswallow-creator/gptzero-bypass-2026` | 2 | MIT `1,070 B` | 2026-10-13 | 🔴 **new — attacks the detectors: GPTZero and Turnitin by name** |
+| `Shahzaib-XVII/RMU-LMS-Auto-Quiz-Solver` | 1 | MIT `1,074 B` | 2026-05-08 | 🔴 new |
+| `rushilbh27/finish-my-work` | 1 | MIT `1,068 B` | 2026-10-27 | 🔴 **new — Canvas, Moodle, Blackboard *and* Google Forms in one tool** |
+
+🔵 **Why the two new ones change the argument.** `928-F5` concluded, correctly, that *an in-browser
+quiz cannot be the graded artefact*. That reading treats the threat as **platform-specific**. It is
+not. `rushilbh27/finish-my-work` covers **all four major platforms at once**, so switching LMS is
+not a mitigation; and `luvswallow-creator/gptzero-bypass-2026` targets **the detection layer
+itself**, so the fallback control is not a mitigation either.
+
+🔵 **`T10` — *detection is being abandoned as an integrity control, and assessment redesign is what
+replaces it* — has until now rested on institutional policy announcements.** It now rests on
+supply: the counter-detection tool is **free, MIT, one click, and names Turnitin in its own
+description**. 🟡 Recorded as threat intelligence. **No row of this tier is shelved in
+`agents/top.md` and none should be.** `intel/trends.md` **`T72`**, `compose/patterns.md` **`P57`**.
+
+### 🟢 `929-F3` Eighteen permissive education rows `p928`'s haul does not contain
+
+Paginating best-match ordering and sharding by star band do not return the same set. **40 grants
+byte-read this pass, 40 of 40 resolved, zero 404s, 37 MIT + 3 Apache-2.0**
+(`evidence/grant-byte-read.2026-11-19-p929.tsv`); **31 published addresses re-verified, zero
+failures** (`evidence/url-verification.2026-11-19-p929.tsv`). Eighteen are shelved in
+`agents/top.md`, with the institutional and platform rows in `repos/foundations.md` and
+`verticals/solutions.md`. Three clusters:
+
+- 🟢 **Lecture → study artefact, and it has grown a provenance layer.** `stegra05/Lectern` (6 ★,
+  MIT) turns lecture PDFs into Anki cards **with per-card provenance and a visible coverage map**;
+  `Lintao-Lab/faithful-lecture-notes` (2 ★, MIT) is explicitly *engineered against hallucination*,
+  one Architect LLM planning and parallel Assemblers writing from full source. 🔵 Both answer *can I
+  trust the generated card* — the first time this base has seen the tail converge on
+  **verifiability** rather than capability, and the direct counterpart to `P57`'s requirement that
+  the submission be a trace.
+- 🟢 **Local-first, `T62` a third time.** `cyyyp100/meta-capp` (MIT, **100% offline**, Gemma via
+  Ollama), `neuronection/study-assistant` (Apache-2.0, pushed 2026-11-19), `Jasonsu22/Nomi` (MIT,
+  **on-device** macOS transcription), `Macro002/AnkiBase` (MIT, self-hosted Anki),
+  `AsadullahAlMunib/MathMind` (Apache-2.0, Bangladesh, offline fallback).
+- 🟢 **Accessibility, which this base has carried almost nothing in.** `Codexia-afk/PDFtoAudio`
+  (9 ★, MIT): PDFs, DOCX and eBooks → neural audiobooks and sentence-synchronised playback.
+  Document accessibility is a statutory procurement requirement in every region in this base.
+
+### 🔴 `929-F4` The Iberian-language cut, and a LATAM absence that `p928`'s regional reading does not show
+
+`p928` measured **49.0% of its unheld rows carry no licence**. Cutting this pass's backlog by
+language puts that number where it has commercial consequence. **328 Spanish- and
+Portuguese-language education rows** (`evidence/iberian-language-shelf.2026-11-19-p929.tsv`):
+
+| Grant | Rows | Share |
+|---|---|---|
+| 🔴 **No licence file at all** | **163** | **49.7%** |
+| MIT | 106 | 32.3% |
+| `NOASSERTION` | 32 | 9.8% |
+| GPL-3.0 | 10 | 3.0% |
+| Apache-2.0 | 7 | 2.1% |
+| CC-BY-SA-4.0 / LGPL-3.0 / AGPL-3.0 | 7 | 2.1% |
+
+🟢 **113 rows are permissive and 82 are permissive and pushed since May 2026** — which retires
+`926-G2`'s *"not one of them is permissively licensed"* at thirty times its original sample and
+confirms `927-F5`. 🔴 **But 59.5% is ungranted or unreadable**: `T29` landing on the region this
+base sells into most, with a number attached.
+
+🔴 **And a declared absence.** `928`'s 136-row personal-LMS-client stratum and this pass's 50-row
+campus-MCP cut were both searched for a Latin American institution — by name (UNAM, Tec de
+Monterrey, USP, Unicamp, UBA, PUCP, Universidad de Chile, Los Andes, Javeriana) and by country TLD.
+**Neither contains one.** Bridges exist for Barcelona, Edinburgh, Sungkyunkwan, Shanghai Jiao Tong,
+Macau, Tôn Đức Thắng, Monash and Toronto. 🔵 Given `T68`'s finding that this tier is atomised and
+individually built, the absence does not mean the demand is absent — it means **nobody has
+published one**, which makes LATAM the cheapest region in which to be first.
+
+🟢 **The highest-starred artefact in the whole campus-client stratum is Spanish-language and has no
+AI in it.** `frankrubio/pandex` (**MIT**, byte-read `1,062 B`, **15 ★**, pushed **2026-11-19**, CI
+tests, Windows and Linux) syncs Canvas course material, files it by week and converts PDFs and
+slides to Markdown — *"Gratis, en tu PC y sin IA."* Against a tier whose Canvas-MCP members top out
+at **2 ★**, the most-adopted artefact is the one that **does not use a model**. 🔵 Worth saying to a
+client before proposing an agent. 🟡 **Region not placed** — the repository is Spanish-language and
+this base does not infer a country from a language; it is not counted as LATAM supply.
+
+### 🟡 `929-F5` What straight pagination measures that sharding does not
+
+Superseded as a *reach* instrument by `928-F1`, but the depth profile is a separate measurement and
+this base had never taken it. Unheld rate by page, 39 legs, best-match ordering:
+
+| Page | 1 | 2 | 3 | 5 | 7 | 9 | 10 |
+|---|---|---|---|---|---|---|---|
+| Unheld rate | 76.8% | 93.5% | 95.6% | 97.0% | 96.5% | 98.8% | 98.0% |
+
+🔵 It rises and plateaus near 97%. **Page one is the least productive page**, because earlier passes
+already took it. **Depth in this channel is an overlap gradient, not a quality gradient** — so the
+100-row cap never filtered for quality, and `928`'s finding that the hidden tail is uniformly tiny
+is a fact about **supply**, not an artefact of what the cap kept.
+
+🟡 **And a defect neither pass's instrument detects.** `topic:study-tools` reports a `total_count`
+of **817** and stops serving at **499** across five pages — below the 1,000-row ceiling, with no
+error and `incomplete_results: false`. **A leg that returns fewer rows than it promised has not
+necessarily been exhausted.**
+
+### 🟡 `929-F7` One repair to `p928`'s own shelf
+
+`gate-tables` went red on `repos/foundations.md` on `p928`'s tree: **two stray blank lines split one
+published table into three fragments**, so `online-ml/river`, `mdbook-quiz`, `quiz-mate`,
+`notebooklm-chunker`, `Yomine`, `kotoba`, `GradeShelf` and `houselearning/home` rendered outside any
+table header. The rows and their byte-read grants are untouched and correct; only the rendering was
+broken. Blank lines removed, `gate-tables` green. 🔵 Recorded rather than silently fixed, because
+`p277`'s gate exists precisely so a split table is not read as a missing one.
+
+🟢 **Gate state for this pass.** `make hooks`: **23 red**, against **24** on `p928`'s tree and
+**22** before it. `p929` introduces **no** new gate failure and closes one (`gate-tables`); the
+remaining difference from the pre-`p928` baseline (`gate-offline`, `p253-captured-body-census`) was
+verified present on `p928`'s tree by stash-and-run and is not this pass's.
+
+### 🔵 `929-F6` The prose channel, nil again — and nil at the *fact* layer too
+
+The four global and four regional WebSearch legs ran
+(`evidence/websearch-legs.2026-11-19-p929.tsv`). **Zero unheld repositories — the forty-eighth
+consecutive nil.** All five repositories the legs named are already held. 🔵 This pass also graded
+the *other* half of what prose legs return, and **15 of 15 named regulatory and market facts were
+already in this base**: Vietnam's MOET Decision 2422, the Universidad de los Andes count of 716
+instruments across 23 countries, UNESCO's LAC Observatory, California AB 1159, New York A 9190,
+North Carolina Session Law 2026-41, Idaho SB 1227, the Digital Omnibus, EO 14277, the Ipsos
+Education Monitor, Cetic.br, the Digital Education Council survey and the Estonia / Slovakia /
+Greece programmes. 🟡 **The prose channel is at parity on intelligence as well as nil on supply** —
+so it is now a *verification* instrument, and this pass used it as one.
+
+
 ## `2026-11-19` (p928) — **`927-R1` said the 100-row page cap made every topic number a floor. Sharding removed the cap: the population is 3.7× larger, and the number of shelf-grade education agents it contains is zero.**
 
 🔵 **Summary.** `p927` closed with an instruction: *"a pass that wants the rest must paginate or

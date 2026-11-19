@@ -29,6 +29,8 @@ curriculum graph, correct for the asset and a trap for anyone who reads the repo
 `master/README.rst`.** That is `p900`'s false-absence class landing on the AGPL anchor of the
 whole LMS tier; the two-channel rule caught it. See `agents/trending.md` `901-F3`.
 
+**Latest sweep — `p929` (2026-11-19).** 🔴 **`p927`'s published leg table dropped the qualifier that produced ten of its numbers.** `p928` compared itself only against the 20 legs `p927` ran unqualified; the other fifteen included **ten carrying an undisclosed `stars:>N` floor**, published as bare `topic:X` — `topic:quiz` as **139** against a true **7,230**, `topic:educational` as **176** against **7,505**, **27.4× concealed on the mean**. The floor is the filter `926-F2` ruled out and `p904` showed deletes the **6 ★** regional tail, which is `928-F2`'s ≤2 ★ finding seen from the other side (`929-F1`, gate `929-G1`, `T71`). 🔴 **`928-F5`'s auto-solver tier is six, not three** — the two it missed attack **the detectors** (Turnitin, GPTZero) and **all four major LMS platforms at once**, so neither switching platform nor falling back to detection is a mitigation (`929-F2`, `T72`, `P57`). 🟢 **40 grants byte-read, 40 of 40 resolved, zero 404s**; 31 of 31 addresses re-verified; **18 agent rows shelved below**, none of them in `p928`'s haul. See `agents/trending.md` `929-F1`–`929-F6`.
+
 **Latest sweep — `p928` (2026-11-19).** 🟢 **`927-R1` asked for the page cap to be removed; `p928` removed it and the answer inverts four passes of expectation.** Star-band sharding (`compose/code/p928-starband-shard/`, **25 legs → 223 shards → 588 calls**) retrieved **21,238 unique repositories** — on the 20 legs `p927` ran unqualified, **7,446 of 7,965 (93.5%)** against `p927`'s **2,000 (25.1%)**. 🔴 **The 20,203 unheld rows contain 1,065 permissive, live, education-domain AI repositories, and 966 of them (90.7%) have two stars or fewer.** The largest genuine education repository in the entire haul is **`gnmyt/Quizzle` at 37 ★**; the only row above 200 ★ is a **homonym**. **Population rose 208-fold since `p925` and the ceiling did not move** — see `intel/trends.md` **`T68`**. 🟢 **13 rows shelved, 22 grants byte-read, zero 404s**; three agent rows added below, eight to `repos/foundations.md`. 🔴 **A control on `p927`'s 37 byte-read grants reported 32 divergences and every one was manufactured by the control itself** — `p927`'s grants are sound, **37 of 37 reproduce exactly** (`928-G1`, `T69`). 🔴 **`T70` is new and it bites this table's licence column: a Rust crate granting `MIT OR Apache-2.0` has no root `LICENSE`, and `search/repositories` flattens all three such repos found to plain `Apache-2.0`, always discarding the MIT half** — one published row (`RWTH-OS/eduOS-rs`) carried the flattened value and is corrected this pass.
 
 **Latest sweep — `p927` (2026-11-19).** 🔴 **`p926` wrote `926-R1` — *a discovery channel is exhausted only against the vocabulary it was asked with* — and `p927` is the measurement that confirms it.** 35 topic words neither `p925` nor `p926` asked returned **2,298 repositories this base has never named**, against the 8,432 it has ever held: **3.8× `p926`'s own record**. 🔴 **And the number is a floor, not a measurement** — fifteen of the 35 legs reported a `total_count` larger than the 100-row page this base fetches (`topic:student-management` **1,651**, `topic:ai-tutor` **986**, `topic:study-tools` **817**). **36 grants byte-read, 36 of 36 resolved, zero 404s**; 34 rows shelved; **first `0BSD` row**. Anchors re-measured: `HKUDS/DeepTutor` **60,781**, `THU-MAIC/OpenMAIC` **43,953**, `amosblomqvist/learnharness` **10,465**, `openedx/openedx-platform` **8,247**, `withmarbleapp/os-taxonomy` **7,759** `ODbL-1.0`, `CAHLR/OATutor` **283** — no renames, none archived, licence column holds. 🔴 **One published row of this table is materially qualified: `CAHLR/OATutor`'s "open problem banks" live in a separate repository with no licence file at all — see `927-F3`.**
@@ -1149,6 +1151,53 @@ site for the fourth consecutive pass** and should not be re-run as written. The 
 legs returned 0 unheld repositories but non-trivial new policy and adoption intel, written into
 `intel/market.md`. `evidence/websearch-legs.2026-11-19-p927.tsv`.
 
+
+## The paginated channel — 18 agent rows, added `p929`
+
+🔵 **Complementary to `p928`'s shelf, not a replacement for it.** `p928` reached the topic channel
+by star-band sharding; this pass reached it by paginating best-match ordering, and the two do not
+return the same set. Every row below was **unheld after `p928`'s own intake**, its grant
+**byte-read** this pass (40 probes, 40 × `200`, zero 404s —
+`evidence/grant-byte-read.2026-11-19-p929.tsv`) and its address re-verified
+(`evidence/url-verification.2026-11-19-p929.tsv`, 31 of 31).
+
+🟡 **Read the star column against `928`'s finding, not against this table.** `928-F2` measured that
+**90.7%** of the usable open education shelf sits at **two stars or fewer**; these rows are 2–23 ★
+and that is the normal condition of this market, not a defect of this cohort. They are published
+for their **design** and their **grant**, which is what a studio forks. None is an adoption
+recommendation.
+
+| Agent | Repo | Licence | ★ | Last push | What it does | Origin |
+|---|---|---|---|---|---|---|
+| **LectureDigest** | https://github.com/tridpt/LectureDigest | MIT (byte-read `1,063 B`) | 12 | 2026-11-07 | Any YouTube lecture or uploaded audio/video → summaries, quizzes, flashcards and mind maps in one pass. The most complete single-input→many-artefact pipeline in this cohort. | Global |
+| **Lectern** | https://github.com/stegra05/Lectern | MIT (byte-read `1,072 B`) | 6 | 2026-11-17 | Lecture PDFs → Anki decks, agentic Gemini generation, **per-card provenance and a visible coverage map**. Tauri desktop app. 🟢 The provenance layer is the point: it is the first row in this base that answers *"which slide did this card come from, and what did you skip"* as a product feature rather than a promise. | EMEA — Germany |
+| **faithful-lecture-notes** | https://github.com/Lintao-Lab/faithful-lecture-notes | MIT (byte-read `1,066 B`) | 2 | 2026-10-23 | Lecture notes from transcripts + slides, **engineered against hallucination**: one Architect LLM plans the structure, parallel Assemblers write each section from full source rather than from a summary. 🟢 Reference design for any generation step a client will not accept on trust. | APAC |
+| **Tango** | https://github.com/AlphaNerdFx/Tango | MIT (byte-read `1,070 B`) | 7 | 2026-11-01 | YouTube transcript → Anki deck across **24 languages**, with offline dictionaries, pronunciation audio and images on concrete nouns. 🟢 The offline dictionary bundle makes it deployable where `T62`'s connectivity constraint binds. | Global |
+| **pdfanki** | https://github.com/shbernal/pdfanki | MIT (byte-read `1,145 B`) | 4 | 2026-11-12 | Anki decks from PDF and EPUB via NLP + LLM. | Global |
+| **pdf2md-study** | https://github.com/InHyunseo/pdf2md-study | MIT (byte-read `1,067 B`) | 2 | 2026-10-07 | Papers and lecture slides (PDF) → study-ready Markdown for LLMs, **keeping equations and code as images** and stripping logos and references. 🔵 A pre-processing step the rest of this cohort assumes and none of them ships. | APAC — Korea |
+| **meta-capp** | https://github.com/cyyyp100/meta-capp | MIT (byte-read `1,069 B`) | 5 | 2026-11-18 | AI learning companion for educational PDFs, **100% offline** — a local Gemma via Ollama answers in context, quizzes, and builds flashcards. 🟢 `T62` and the student-data rules answered by architecture: nothing leaves the device. | APAC — China |
+| **study-assistant** | https://github.com/neuronection/study-assistant | Apache-2.0 (byte-read `10,173 B`) | 4 | 2026-11-19 | Local-first AI study workbench: own PDFs, scans and notes → courses, quizzes and flashcards, desktop or browser, *"your files never leave"*. | Global |
+| **Nomi** | https://github.com/Jasonsu22/Nomi | MIT (byte-read `1,065 B`) | 9 | 2026-11-16 | Native macOS app, **on-device** lecture transcription, translation and study. | Global |
+| **AnkiBase** | https://github.com/Macro002/AnkiBase | MIT (byte-read `1,065 B`) | 11 | 2026-11-13 | Self-hosted Anki in the browser, on phone and desktop: studies a real Anki collection and plays Quizlet sets in every mode. 🟢 The self-hosting story is what makes the spaced-repetition tier deployable inside an institution rather than on a vendor's cloud. | Global |
+| **MathMind** | https://github.com/AsadullahAlMunib/MathMind | Apache-2.0 (byte-read `11,351 B`) | 9 | 2026-05-24 | Gamified AI maths quiz with **offline fallback**, bilingual support, achievements and an Android APK. | APAC — Bangladesh |
+| **PDFtoAudio** | https://github.com/Codexia-afk/PDFtoAudio | MIT (byte-read `1,067 B`) | 9 | 2026-08-10 | PDFs, DOCX and eBooks → neural audiobooks, two-host AI podcasts and sentence-synchronised playback. 🟢 **Accessibility, a category this base has carried almost nothing in** and a procurement requirement in every region it covers. | Global |
+| **supertutor-skill** | https://github.com/cskwork/supertutor-skill | MIT (byte-read `1,064 B`) | 14 | 2026-10-21 | Feynman technique + Socratic method behind a **deterministic gate** — the learner does not advance until the explanation holds. `T32` agent-skill tier. | APAC — Korea |
+| **agent-tutor** | https://github.com/Mohamed-El-Sharqawy/agent-tutor | MIT (byte-read `1,076 B`) | 9 | 2026-08-31 | Agent-agnostic AI tutor skill that writes into an **Obsidian vault**; claims Claude Code, Codex, Cursor, Windsurf and 70+ agents. 🔵 `T22`'s delivery-surface differentiation: the artefact outlives the session because it lands in the learner's own notes. | EMEA — Egypt |
+| **literature-guide-read** | https://github.com/Liangzhen-Chen/literature-guide-read | MIT (byte-read `1,091 B`) | 10 | 2026-10-30 | Agent skill: a course PDF or paper → an **offline reading page** with the argument mapped and close/skim/skip marked per paragraph. | APAC — China |
+| **syllabus-reader-skill** | https://github.com/JeromeWang6066/syllabus-reader-skill | MIT (byte-read `1,068 B`) | 2 | 2026-06-17 | Parses university syllabi into structured data with **proactive risk flagging** — grade traps, workload collisions, hidden pitfalls. 🟢 This is **advising**, not tutoring, and it is the cheapest advising artefact in this base. | Global |
+| **Rexial** | https://github.com/TheCodeHeist-Coder/Rexial | MIT (byte-read `1,076 B`) | 23 | 2026-11-18 | Open-source real-time quiz platform — host a live quiz, share a code, watch the leaderboard move. 🔵 The **permissive** answer to Kahoot, which matters because two of the six tools in `928-F6` exist specifically to defeat Kahoot. | Global |
+| **ists** | https://github.com/aimerfeng/ists | MIT (byte-read `1,067 B`) | 6 | 2026-07-18 | Single-user IELTS learning OS: vocabulary, practice, mock exams, analytics and AI coaching. 🔵 High-stakes **language certification**, a segment this base had no permissive row for. | APAC — China |
+
+### 🔴 Measured and deliberately **not** shelved — the auto-solver tier, extended
+
+`928-F5` hand-verified **three** LMS auto-solvers. This pass byte-read **six**, all MIT — adding
+`im23b-busere/QuizGPT`, `Shahzaib-XVII/RMU-LMS-Auto-Quiz-Solver`, and the two that change the
+argument: **`luvswallow-creator/gptzero-bypass-2026`**, which attacks **GPTZero and Turnitin** by
+name, and **`rushilbh27/finish-my-work`**, which covers **Canvas, Moodle, Blackboard and Google
+Forms in one tool**. 🔵 Listed here by name only, with no row and no link, so a later pass does not
+rediscover them and shelve them by mistake. 🔵 **The operative fact for a client is that switching
+LMS is not a mitigation and falling back to detection is not a mitigation.** `929-F2`,
+`intel/trends.md` **`T72`**, `compose/patterns.md` **`P57`**.
 
 ## What we searched for and did not find
 

@@ -831,6 +831,27 @@ employer-verification value instead, and the LATAM row above (`gdgguadalajara/op
 AGPL-3.0, pushed 2026-08-31) remains the regionally-authored option. Full tier at
 `repos/foundations.md`.
 
+## Deployable systems from the paginated channel — added `p929`
+
+Systems an institution could stand up and a studio could customise. All grants **byte-read** this
+pass; none appears in `p928`'s haul.
+
+| Platform | Repo | Licence | What it replaces | Notes |
+|---|---|---|---|---|
+| **Rexial** | https://github.com/TheCodeHeist-Coder/Rexial | MIT (byte-read `1,076 B`) | Kahoot, in the live-quiz slot | Host a live quiz, share a code, leaderboard moves as people answer; hosts upload their own question sets. 23 ★, pushed 2026-11-18. 🔴 **Read with `929-F2`:** two of the six auto-solvers exist specifically to defeat Kahoot, and an institution cannot change the mechanics of a product it does not run. Self-hosting the quiz surface is the only route to changing them. |
+| **Quiz-LMS** | https://github.com/Gestusition/Quiz-LMS | MIT (byte-read `1,068 B`) | A small LMS with assessment built in | Role-based accounts, course and department management, question banks, timed quiz attempts, REST API. 🔵 Rare: **every major LMS in this file is AGPL or GPL.** |
+| **AnkiBase** | https://github.com/Macro002/AnkiBase | MIT (byte-read `1,065 B`) | AnkiWeb / Quizlet hosting | Self-hosted Anki in browser, phone and desktop against a real Anki collection. 🟢 Makes the spaced-repetition tier deployable **inside** an institution rather than on a vendor's cloud — the student-data argument in one decision. |
+| **Findle** | https://github.com/alexmodrono/Findle | Apache-2.0 (byte-read `11,353 B`) | The LMS web UI, for course materials | Mounts **Moodle and OpenLMS natively into macOS Finder** via the File Provider API; SQLite metadata cache, placeholder files hydrated on open. 19 ★. 🔵 A delivery surface nothing else in this base occupies: **the LMS as a filesystem**. |
+| **study-assistant** | https://github.com/neuronection/study-assistant | Apache-2.0 (byte-read `10,173 B`) | A hosted study platform | Local-first workbench: PDFs, scans and notes → courses, quizzes, flashcards; desktop or browser, files never leave. Pushed 2026-11-19. |
+| **ists** | https://github.com/aimerfeng/ists | MIT (byte-read `1,067 B`) | Commercial IELTS prep platforms | Single-user IELTS "learning operating system": vocabulary, practice, mock exams, analytics, AI coaching. 🔵 **High-stakes language certification — a segment this base had no permissive system for.** Single-user today; multi-user is the fork. |
+| **PDFtoAudio** | https://github.com/Codexia-afk/PDFtoAudio | MIT (byte-read `1,067 B`) | Commercial document-accessibility services | PDFs, DOCX and eBooks → neural audiobooks, two-host AI podcasts, sentence-synchronised playback. 🟢 **Accessibility is a statutory procurement requirement in every region this base covers**, and this is the first permissive system here that addresses it directly. |
+
+🟡 **How to use this section.** Stars run 4–23, which `928-F2` established is the normal condition
+of this market. These are **substrates to fork**, not products to recommend. 🔴 For any of them
+apply `904-G1` and `927-G1` before quoting a grant in a client document: find where the content
+actually lives, probe *that* address, and read the README for a prose grant if there is no licence
+file.
+
 ## Honest gaps
 
 - **Unlicensed content corpora are the biggest trap in this category (added p891).** The largest

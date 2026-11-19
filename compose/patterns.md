@@ -4162,3 +4162,46 @@ what is permissively available and familiar. `p928` shelved the piece that remov
 Identity, enrolment and gradebook write-back. Those are LMS concerns — take them from `P53` and the
 Canvas/Moodle seams in `verticals/solutions.md`. Nothing above touches the client's LMS, which is
 deliberate: it is what lets the pilot start without a procurement cycle (`T30`).
+
+## P57 — Assessment that survives a free, MIT-licensed, cross-platform solver — added `p929`
+
+**The situation.** `T72` measured six permissively licensed assessment-attack tools, all byte-read,
+all MIT: a solver covering **Canvas, Moodle, Blackboard and Google Forms** in one extension, a
+Moodle auto-solver with human-like interaction timing, two Kahoot auto-answerers, and a
+counter-detection tool that **names Turnitin and GPTZero in its own description**. 🔴 `928-F5`'s
+reading — *an in-browser quiz cannot be the graded artefact* — is right and insufficient: switching
+platform does not help, because one tool covers all four; and falling back to a detector does not
+help, because one tool exists to defeat detectors.
+
+**Who it is for.** Any institution whose integrity policy still has *detect the output* or *ban the
+tool* as its control point — which, per `T10`, is most of them.
+
+**What to compose.** The control point moves from the artefact to the **process** and its
+**evidence**.
+
+| Move | Build it from | Licence |
+|---|---|---|
+| Make the trace the submission | `stegra05/Lectern` — https://github.com/stegra05/Lectern — **per-card provenance and a visible coverage map** | MIT, byte-read `1,072 B` |
+| Generation the student must defend | `Lintao-Lab/faithful-lecture-notes` — https://github.com/Lintao-Lab/faithful-lecture-notes — Architect plans, Assemblers write from full source, **engineered against hallucination** | MIT, byte-read `1,066 B` |
+| Gated oral / applied check | `cskwork/supertutor-skill` — https://github.com/cskwork/supertutor-skill — Feynman + Socratic behind a **deterministic gate**: no advance without a holding explanation | MIT, byte-read `1,064 B` |
+| Own the live-quiz surface | `TheCodeHeist-Coder/Rexial` — https://github.com/TheCodeHeist-Coder/Rexial — self-hosted live quiz | MIT, byte-read `1,076 B` |
+| Invigilation where genuinely required | `P55`'s three local-first, in-browser designs (`927-F4`) | MIT |
+| Measure the measurement | `10kH/MisconceptDialogue` (`927-F8`) — evaluation criteria shape measured success | MIT |
+
+**How to wire it.** The assessment artefact carries provenance by construction — Lectern's coverage
+map is the model — so **the submission is the trace, not the answer**, and scoring weights the
+defensible steps. A short Socratic check, gated, deterministic and recorded, stands in for the
+invigilator on anything high-stakes. Where a live quiz carries grade weight, **self-host it** with
+Rexial: an institution cannot change the mechanics of a product it does not run, and two of the six
+tools in `T72` exist specifically to defeat the product most institutions do run.
+
+🔵 **What to tell the client, in one sentence.** *The tool your policy is written against is free,
+MIT-licensed, covers all four of your platforms, defeats your detector, and ships an update the week
+after you block it — so the only control you own is what you ask students to produce.* 🟡 That is an
+uncomfortable sentence and it is the honest one. `T10` is the trend, `T72` is the measurement behind
+it, and `927-F8` is the licensed, citable argument for why a benchmark number alone will not settle
+it.
+
+**Shape.** 4–6 weeks for an assessment-redesign engagement on one faculty; the provenance pipeline
+and the gated-check harness carry across faculties. 🔵 Sells naturally alongside `P55` (integrity by
+architecture) and `P53` (attaching evidence to a tutor the client already has).
