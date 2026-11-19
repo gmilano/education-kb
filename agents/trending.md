@@ -4,6 +4,178 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p914) — **Fourteen agents added, four refused for having no grant at all — including the pass's highest-starred find at 497 ★. The two API non-answers, `NONE` and `NOASSERTION`, were measured as *different signals* and behaved differently 8 times out of 8. H5P's authoring half has no licence while its runtime half is GPL-3.0, and both editors were pushed this week. D2L Brightspace finally has a tenant-agnostic MIT bridge.**
+
+**Channels and posture.** `gh api search/repositories` over **seven** education-shaped discovery
+queries bounded by `pushed:>2026-09-01`, diffed against the **419** addresses already written in
+`agents/top.md`, `repos/foundations.md`, `verticals/solutions.md`, `compose/patterns.md`,
+`intel/market.md` and `intel/trends.md`; grants adjudicated by **`ingest/p913-grant-authority.sh`**
+(byte-read on the resolved branch, 16 filenames × 3 branches), plus **8 WebSearch legs** (4 global,
+4 regional). Evidence: `evidence/p914-new-supply-grants.2026-11-19-p914.tsv`,
+`evidence/p914-new-supply-metrics.2026-11-19-p914.tsv`.
+
+🔴 **Channel failure, measured not assumed.** Every non-GitHub host probed this pass was
+unreachable under the session's network policy — `unesco.org`, `eur-lex.europa.eu`,
+`data.consilium.europa.eu`, `oecd.org`, `future-ed.org`, `digitaleducationcouncil.com`, `curl`
+returning `000` to all six. **No primary document was read this pass.** The demand-side legs below
+are WebSearch summaries, single channel, and are labelled as such wherever they produced a row.
+`914-G3` records what has to be re-run from a session that can reach them.
+
+### 🟢 `914-F1` Fourteen addresses added, and the cohort's centre of gravity is the **packaged skill**, not the application
+
+Full rows in `agents/top.md`. The shape of what was found:
+
+| | Count | Grant |
+|---|---|---|
+| Packaged teaching *skills* (distil a teacher, cram an exam, build a semester, coach a test) | 6 | 5 MIT, 1 Apache-2.0 |
+| LMS / campus / literature **bridges** | 4 | **4 MIT** |
+| Moodle **plugins** | 2 | **2 GPL-3.0** |
+| Domain tooling (STEM notation, offline vocabulary model) | 2 | 1 Apache-2.0, 1 MIT |
+
+Three worth naming individually:
+
+- 🟢 **`JuneYaooo/teacher-to-skills`** (Apache-2.0, 486 ★) distils a *named human teacher's*
+  material into a **source-backed** skill. The citation trail is an output, not a prompt
+  instruction — which is what `P23`'s hallucination gate needs and rarely gets.
+- 🟢 **`orionsheep/wordlink`** (MIT, 427 ★) ships a **fine-tuned 1.5B model (SFT + DPO) running
+  offline in the browser**. The only row in this cohort that needs no inference vendor at all,
+  which makes it the first credible answer in this base to the data-residency objection that
+  `P4` and the EMEA leg keep running into.
+- 🟢 **`munitkala/SelfSemester`** (MIT, 108 ★, **Rust**) went from creation on 2026-11-04 to 108 ★
+  in twelve days, and builds *and marks* a full scheduled course.
+
+### 🔴 `914-F2` Four addresses refused for carrying no grant — and the largest was the most sympathetic
+
+| Repo | ★ | Verdict |
+|---|---|---|
+| `aaryansamanta/AI-Ethos` | **497** | 🔴 no licence payload; 16 names × 3 branches all `404` |
+| `vincenzo-afk/KingstonConnect` | 41 | 🔴 no licence payload |
+| `jeremy-xuan/SocraticNovel` | 32 | 🔴 **CC BY-NC-SA 4.0** — NonCommercial |
+| `Piyushtanwani/DAU-buddy` | 7 | 🔴 no licence payload |
+
+🔵 `AI-Ethos` is a **501(c)(3) delivering multilingual tutoring to low-income, rural and
+neurodivergent learners** — the single most mission-aligned repository this pass surfaced, with the
+highest star count of any new find, and **none of it can be redistributed**. Recorded because the
+refusal is the finding: `T23`'s unaddressable-supply claim is not about low-quality repositories,
+and treating "no licence" as a proxy for "not serious" would have been wrong here in the most
+visible possible way. This is also what `intel/licence-requests/` exists for.
+
+### 🟢 `914-F3` `NONE` and `NOASSERTION` are different signals — 8 for 8, and it changes the work order
+
+Promoted to `intel/trends.md` **`T40`**. On the 24 addresses measured:
+
+| API SPDX | Rows | Byte-read result | Agreement |
+|---|---|---|---|
+| named licence | 16 | same family | **16/16** |
+| **`NONE`** | 5 | no payload at all | **5/5** |
+| **`NOASSERTION`** | 3 | a readable grant the classifier could not reduce — 2 split MIT, 1 CC-BY-NC | **3/3** |
+
+🔵 **Read `NOASSERTION` first.** Collapsing the two fields into "no licence data" sends the
+byte-reads to the rows where nothing is to be found and under-reads the rows where the grant is
+complicated enough to matter commercially. 🔴 Stated with its limit: 24 addresses, one pass, not a
+random sample — a priority ordering, not a base rate, and no `NONE` row gets its byte-read skipped.
+
+### 🟢 `914-F4` `p640`'s MIT size band fired correctly on both split-grant payloads — this base's first positive control for it
+
+`p640` wrote the rule that an MIT-phrased payload outside **1,000–1,250 B** is a narrowed
+derivative. Two rows tripped it this pass and **both** turned out to be split grants on reading:
+
+- `aaryansamanta/NextGen-AI` (1,327 B) — **MIT on source code only**; brand assets, photos, videos
+  and top-level PDFs reserved ©, written contact required. 🟢 Code usable.
+- `Andiii208/seu-handbook-skill` (1,497 B) — 🔴 **MIT on the code, CC BY-NC-SA 4.0 on `references/`
+  and `data/`**, which hold the Southeast University handbook corpus that *is* the product. The
+  skill's entire value is **NonCommercial**.
+
+🔵 The band has been carried in the instrument for 274 passes and this is the first time its hits
+were followed through to the payload text. **Two for two.** `914-F4` is recorded as a control, not
+as a new rule.
+
+### 🔴 `914-F5` H5P: the runtime is licensed, the authoring half is not, and both editors were pushed this week
+
+Promoted to `intel/trends.md` **`T41`** and shelved in `repos/foundations.md`.
+`h5p/h5p-php-library` and `Lumieducation/H5P-Nodejs-library` carry **byte-identical GPL-3.0**
+payloads (35,146 B, `sha256₁₂ c53a65c2fd56`). `h5p/h5p-editor-php-library` (83 ★, created
+2014-04-29, **pushed 2026-11-18**) and `Lumieducation/Lumi` (200 ★, the desktop editor most
+"how to author H5P" guidance points at, pushed 2026-11-12) carry **no payload at all** on a 16×3
+ladder. 🔴 **You can lawfully serve H5P and you cannot lawfully ship a tool that makes it.**
+This invalidates any planned H5P *authoring* feature; serving is unaffected, because GPL-3.0 has no
+network-use clause (`913-F1`).
+
+### 🟢 `914-F6` D2L Brightspace's seam is closed, and the bridge tier is generalising on two limbs
+
+Promoted to `intel/trends.md` **`T42`**; `verticals/solutions.md` row updated; `P33` written
+against it. `RohanMuppa/brightspace-mcp-server` (**MIT**, 68 ★, pushed 2026-11-18) is
+**tenant-agnostic** — stated to work with any school — where D2L's only previous bridge was
+`POLITEMALL-MCP`, bound to two Singapore national systems. Separately,
+`saylordotorg/moodle-local_ai_course_assistant` (**GPL-3.0**, 21 ★, pushed **2026-11-19**) is
+published by **Saylor Academy itself**, a named non-profit provider rather than a student or a
+vendor. 🔵 **The two limbs carry opposite grants for structural reasons** — bridges are permissive
+because they are written to be embedded, plugins are copyleft because they inherit from the platform
+they plug into. `P33` puts the closed deliverable's boundary exactly on that seam.
+
+### Demand side — two new rows, two legs explicitly nil
+
+- 🟢 **LATAM:** **Colombia `CONPES 4144`** added — COP 479,273 M ≈ **USD 116 M to 2030**,
+  **106 actions**, semiannual reporting to 2030, education a pillar, and 🔴 **no obligations or
+  sanctions on private suppliers**. Budget without a compliance gate; the most sellable regulatory
+  posture in the region. `CONPES` appeared **zero** times in this KB before this pass.
+- 🟢 **APAC:** **Australia's `National AI Plan`** (2 December 2025) added — **standalone AI Act
+  explicitly declined**, education a national priority, schools framework non-binding with no
+  funding or enforcement. Set against `T18`'s Ipsos finding that Australia and NZ show the region's
+  **strongest** support for banning AI in schools, Australia is the region's loosest regulation over
+  its most sceptical public: **deployments there fail politically, not legally.** 🔴 Do not reach
+  for `P4`'s conformity apparatus there.
+- 🔴 **North America: nil.** Eleven facts the searches returned were checked by string and all
+  eleven were already written (134 bills / 31 states, the 13 April 2026 final rule, NC Session Law
+  2026-41, NY A 9190, the K-12 AI Literacy Act, Berkeley Law).
+- 🔴 **EMEA: nil.** Annex III high-risk classification, the 2 February 2025 AI-literacy duty,
+  `Regulation (EU) 2026/1744` and the 2 Dec 2027 deferral, the 29 October 2026 Council sovereignty
+  push — all already written.
+
+🔴 **Fourth consecutive nil pass for North America and EMEA — and this pass can name a second
+cause.** Either the file is ahead of the open web on those regions, or the channel was degraded.
+**Both were true this time**, and the degraded channel is measurable: WebSearch summaries were the
+only demand-side instrument available. LATAM and APAC produced rows only because a national policy
+and a national plan are large enough to surface in a summary; a dated amendment to a state model
+policy is not. **Do not read those two legs as saturated.**
+
+### 🟢 `914-F8` Verification posture of this pass, stated so it can be checked
+
+- **Every URL written this pass resolves.** 34 distinct `github.com` addresses were added across
+  the eight pages; all 34 returned `200` on a `raw.githubusercontent.com` read of a real file on
+  the resolved branch. **Zero `404`s, zero unresolved rows.**
+- **Zero header-as-data and zero ragged tables in the added lines.** `ingest/validate-pages.py`
+  documents in its own header that its two shape heuristics must be run on a **diff**, not
+  page-wide. Run that way over this pass's **794 added lines (668 non-blank)**: 7 rows matched
+  `PLACEHOLDER_ROW` and **all 7 are genuine table headers**, each followed by a correct separator
+  of matching arity and by 2–21 real data rows. Checked, not assumed.
+- 🟢 **`p911-identifier-collision` passes with the new identifiers in place** — 33 published
+  identifiers in `compose/patterns.md` (`P1`–`P33`) and 42 in `intel/trends.md` (`T1`–`T42`), each
+  naming exactly one thing.
+- 🔵 **`make hooks` is at exact parity with `HEAD`: 53/76 gates green, and the same 23 red.** The
+  baseline was measured, not assumed — `HEAD` was checked out into a detached worktree and the
+  suite run there, returning an identical gate list. 🔴 **This pass therefore fixed none of the 23
+  and introduced none.** They are long-standing: `gate-promotion-ledger` reports 451 findings and
+  `gate-cell-reproduction` reports `zero published cells parsed — a parse fault, not a clean
+  shelf`, both of which predate this pass and neither of which this pass's rows touch.
+
+### Gaps declared this pass
+
+- **`914-G1`** — read `CONPES 4144` from `sisconpes.dnp.gov.co` and extract the **education-pillar
+  budget line**; the secondary sources do not break out education's share of the COP 479,273 M, and
+  they disagree on the approval date (14 vs 15 February 2025).
+- **`914-G2`** — read Australia's `National-AI-Plan-December-2025` and the 2023 Australian Framework
+  for Generative AI in Schools directly; extract **Action 5's funded quantum**.
+- **`914-G3`** — 🔴 **the demand side of this KB needs one pass run from a session whose network
+  policy permits `eur-lex.europa.eu`, `oecd.org` and `unesco.org`.** Re-run the North America and
+  EMEA legs there before anyone concludes they are saturated. This is now the highest-value
+  outstanding gap in the base, because it is the one that makes four passes of nil results
+  interpretable.
+- **`914-G4`** — `T41`'s mechanism (runtimes acquire grants early because they ship; editors
+  acquire them late because the team uses them first) is a **hypothesis**, and the four other
+  authoring surfaces measured this pass are all permissive, so it is already not universal. Probe
+  the authoring tier of another industry's content stack before promoting it past H5P.
+
 ## `2026-11-19` (p913) — **`912-G1` discharged, and discharging it as written would have destroyed 22 correct cells. The instrument `p912` built to fix `p880` inherited `p880`'s defect in the one licence family education runs on: every GPL-3.0 payload on this shelf read as AGPL-3.0, `moodle/moodle` included — because GPL-3.0's own §13 names Affero. The fix was committed to this base at `p640`, documented in the script header, and lost at `p880`. Four boards `p912` published as "registered and empty" are not established as registered at all. Ethiopia's demand side measured: the national AI tier is already occupied by an OEM.**
 
 **Channels and posture.** `gh api search/repositories` (363 default-branch resolutions for the shelf

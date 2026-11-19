@@ -4,6 +4,108 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p914) — **The interactive-content tier measured as a tier rather than as components: H5P's two runtimes carry byte-identical GPL-3.0, both its authoring surfaces carry nothing, and both were pushed this week. 24 new addresses graded by the corrected authority with zero family disagreements. One new permissive dev-toolkit row, one new GPL Node runtime.**
+
+**Channel.** `gh api search/repositories` for discovery and metrics (seven queries bounded by
+`pushed:>2026-09-01`, diffed against the 419 addresses already written across this base), then
+`raw.githubusercontent.com` byte-reads on the resolved branch graded by
+**`ingest/p913-grant-authority.sh`** — 16 filenames over 3 branches per address. Per-row evidence:
+`evidence/p914-new-supply-grants.2026-11-19-p914.tsv` and
+`evidence/p914-new-supply-metrics.2026-11-19-p914.tsv`.
+
+🔵 **Zero family disagreements on 16 addresses where the API named a licence.** That is not in
+tension with `p913`'s 15.4% change rate across the shelf: `p913` re-adjudicated **published cells**
+graded by a defective instrument, and this pass measured **fresh addresses** with the corrected one.
+The channels disagree about old verdicts, not about bytes.
+
+### 🔴 `914-F5` The authoring half of the interactive-content tier is ungranted, and it is not abandonment
+
+Shelved in `repos/foundations.md` under *The interactive-content authoring tier, measured — `p914`*;
+promoted to `intel/trends.md` `T41`. `p913` had flagged three `h5p/*` **components** as
+manifest-declared MIT with no payload. Measuring the *tier* shows the gap is not about components —
+it tracks the **runtime / authoring** split:
+
+| Half | Repo | Grant | ★ | Pushed |
+|---|---|---|---|---|
+| Runtime, PHP | `h5p/h5p-php-library` | 🔴 GPL-3.0 · `master/LICENSE.txt` · 35,146 B · `c53a65c2fd56` | 156 | 2026-11-10 |
+| Runtime, Node | `Lumieducation/H5P-Nodejs-library` | 🔴 GPL-3.0 · `master/LICENSE` · 35,146 B · **`c53a65c2fd56`** — byte-identical to the PHP core's | 207 | **2026-11-19** |
+| **Authoring, first-party** | `h5p/h5p-editor-php-library` | 🔴 **no payload** · 16×3 ladder all `404` · API `NONE` · created 2014-04-29 | 83 | **2026-11-18** |
+| **Authoring, desktop** | `Lumieducation/Lumi` | 🔴 **no payload** · 16×3 ladder all `404` · API `NONE` · created 2020-01-30 | 200 | 2026-11-12 |
+
+🔴 **Serving H5P is lawful; shipping a tool that authors it is not.** GPL-3.0 on a server-side
+player imposes no network-use disclosure (`913-F1`), so a hosted deployment survives. Both
+authoring implementations — one of them first-party, both maintained within the last eight days —
+cannot be redistributed at all. The three routes that survive are written up in
+`repos/foundations.md`; the short form is **author in QTI 3 (`P19`), author inside the client's
+existing Moodle, or scope authoring out.**
+
+🟢 **The rest of this file's authoring tier was byte-read as a control and is clean:**
+`learningequality/studio` MIT (1,115 B · `5715e50830cd`), `openfun/richie` MIT (1,079 B ·
+`e4b2a3148135`), `oppia/oppia` Apache-2.0 (11,358 B · `cfc7749b96f6`), and `Khan/perseus`
+🟡 **`BODY-MIT`** (1,052 B · `9a8d274a49d4`) — MIT read from the payload body rather than a title
+line, which the authority records as weaker evidence. **H5P is the outlier in this file, not the
+rule**, which is why `914-G4` keeps `T41`'s mechanism a hypothesis.
+
+### 🟢 `914-F7` Two shelf additions, and one of them is the permissive half of a copyleft job
+
+| Repo | Licence (byte-read `p914`) | ★ | Role on the shelf |
+|---|---|---|---|
+| https://github.com/Lumieducation/H5P-Nodejs-library | 🔴 **GPL-3.0** (35,146 B · `c53a65c2fd56`) | 207 | The route to H5P **outside the PHP estate** — an H5P server and player in TypeScript. New row; the tier previously had only the PHP core |
+| https://github.com/SaadRahman01/claude-moodle-dev | 🟢 **MIT** (1,068 B · `df0b3e71710c`) | 42 | Moodle **development** toolkit for coding agents: XMLDB, Hooks API, PHPUnit, Behat, AMD, privacy/GDPR, security review |
+
+🔵 **`claude-moodle-dev` is worth a note disproportionate to its 42 ★.** Moodle plugin work is
+unavoidably GPL-3.0 output, and this base has repeatedly had to tell a reader that the Moodle limb
+of a pattern sits outside the closed deliverable. The *toolkit that produces* the plugin is MIT, so
+the studio's own accelerator is permissive even when its output is not. 🔴 **Keep the two apart in
+the SBOM** — they are different artefacts with different grants, and `P33` step 4 draws exactly that
+line.
+
+### 🟢 `914-F3` The two API non-answers are different signals, measured 8 for 8
+
+Promoted to `intel/trends.md` `T40`, full table in `agents/trending.md`. For this file's purpose:
+**`NONE` means the byte-read will come back empty (5/5 this pass); `NOASSERTION` means there is a
+readable grant that is not a plain one-licence repo (3/3 — two split MIT, one CC-BY-NC).** When
+shelving, **read the `NOASSERTION` rows first**. 🔴 Twenty-four addresses, one pass, not a random
+sample: a priority ordering, not a base rate.
+
+### Trending repositories — what the discovery sweep actually ranked
+
+Seven queries, bounded `pushed:>2026-09-01`, sorted by stars. The education-shaped supply that
+appeared and was **not already in this base**, in rank order, with grants byte-read:
+
+| Repo | ★ | Grant | Created |
+|---|---|---|---|
+| `aaryansamanta/AI-Ethos` | **497** | 🔴 **none** | 2025-12-01 |
+| `aaryansamanta/NextGen-AI` | 491 | 🟡 MIT code / © assets | 2025-12-01 |
+| `JuneYaooo/teacher-to-skills` | 486 | 🟢 Apache-2.0 | 2026-06-01 |
+| `orionsheep/wordlink` | 427 | 🟢 MIT | 2026-05-04 |
+| `Berserk-hub150/moodle-ai-skill-navigator` | 279 | 🔴 GPL-3.0 | 2025-08-10 |
+| `Fazmin/AILearningGuide` | 259 | 🟢 MIT | 2026-10-05 |
+| `Lumieducation/Lumi` | 200 | 🔴 **none** | 2020-01-30 |
+| `liuliu667/cram-engine` | 181 | 🟢 MIT | 2026-06-06 |
+| `munitkala/SelfSemester` | 108 | 🟢 MIT | **2026-11-04** |
+| `RohanMuppa/brightspace-mcp-server` | 68 | 🟢 MIT | 2026-02-06 |
+| `Andiii208/seu-handbook-skill` | 55 | 🔴 MIT code / **NC corpus** | 2026-10-05 |
+| `SaadRahman01/claude-moodle-dev` | 42 | 🟢 MIT | 2026-04-25 |
+| `vincenzo-afk/KingstonConnect` | 41 | 🔴 **none** | 2026-01-12 |
+| `TovTechOrg/Tov-learn` | 36 | 🟢 MIT | 2026-05-20 |
+| `jurimaxam-dotcom/chemdraw-mcp` | 32 | 🟢 Apache-2.0 | 2026-06-09 |
+| `Jeremy-xuan/SocraticNovel` | 32 | 🔴 **CC BY-NC-SA** | 2026-03-22 |
+| `saylordotorg/moodle-local_ai_course_assistant` | 21 | 🔴 GPL-3.0 | 2026-02-28 |
+| `tong666-bit/liu-xiaoyan-skill` | 21 | 🟢 MIT | 2026-06-14 |
+| `SonAIengine/ku-portal-mcp` | 13 | 🟢 MIT | 2026-03-01 |
+| `danieltyukov/ieee-mcp` | 7 | 🟢 MIT | 2026-02-21 |
+| `Piyushtanwani/DAU-buddy` | 7 | 🔴 **none** | 2026-06-02 |
+
+🔵 **Four of the top seven by stars are unusable or encumbered** — two with no grant at all, one
+with reserved brand assets, one GPL-3.0. 🟢 Permissive share of the 21 rows: **12 (57.1%)**, against
+the shelf-wide **79.1%** `p913` measured. **Fresh supply is materially less licence-hygienic than
+the curated shelf**, which is the expected direction and the first time this base has put a number
+on the difference. 🔴 It is one sweep of 21 rows from seven queries: directional, not a rate.
+
+🔴 **`munitkala/SelfSemester` is the velocity row of the pass** — created 2026-11-04, **108 ★ in
+twelve days**, written in **Rust**, and it both builds and marks a full scheduled course.
+
 ## `2026-11-19` (p913) — **The whole shelf re-measured: 363 addresses, 56 verdicts changed (15.4%), and 22 of those changes would have been errors. 79.1% permissive, 14.0% copyleft, 8 addresses with no reachable payload. Three licence families and three licence *shapes* found that no instrument in this base could ever name — including education's own licence, ECL-2.0, sitting under a cell that read `Apache-2.0`.**
 
 **Channel.** `gh api search/repositories` for default-branch resolution across all **363** distinct

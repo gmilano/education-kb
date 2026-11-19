@@ -549,6 +549,58 @@ compression, not misunderstanding."* 🟡 At 52 ★ it does not approach the cei
 `ArnaudGuiovanna/tutor-mcp` also moved, 104 → **107 ★**. The **1,000 ★** watch condition is
 untouched — the cohort remains an order of magnitude short.
 
+## Skill-packaged teaching agents and generic LMS bridges — added `p914`
+
+Fourteen addresses added. Discovery channel: `gh api search/repositories` over seven
+education-shaped queries bounded by `pushed:>2026-09-01`; grant adjudicated by
+**`ingest/p913-grant-authority.sh`** (the corrected authority), byte-read on the resolved
+branch. Metrics and grants per row:
+`evidence/p914-new-supply-metrics.2026-11-19-p914.tsv`,
+`evidence/p914-new-supply-grants.2026-11-19-p914.tsv`.
+
+🔵 **Two channels, 24 addresses, zero family disagreements** on the 16 rows where the API named
+a licence. That is not a contradiction of `p913`'s 15.4% change rate: `p913` re-adjudicated
+*published cells* graded by a defective instrument, and this pass measured *fresh* addresses with
+the corrected one. The channels disagree about **old verdicts**, not about bytes.
+
+| Agent | Repo | Licence (byte-read `p914`) | ★ | Last push | What it does | Origin |
+|---|---|---|---|---|---|---|
+| **teacher-to-skills** | https://github.com/JuneYaooo/teacher-to-skills | **Apache-2.0** (`main/LICENSE`, 11,358 B, `sha256₁₂ cfc7749b96f6`) | 486 | 2026-11-07 | Distils a *named human teacher's* material into a source-backed agent skill that teaches until the learner is independent. Python. The retrieval contract is "source-backed", so the citation trail is a first-class output rather than a prompt instruction. | APAC — China |
+| **WordLink** | https://github.com/orionsheep/wordlink | **MIT** (`main/LICENSE`, 1,093 B, `sha256₁₂ b0f3e0f68927`) | 427 | 2026-11-05 | Vocabulary learning on a **fine-tuned 1.5B model (SFT + DPO) that runs offline in the browser**. TypeScript. 🟢 The only row in this cohort that ships its own trained weights and needs no inference vendor at all. | APAC — China |
+| **moodle-ai-skill-navigator** | https://github.com/Berserk-hub150/moodle-ai-skill-navigator | 🔴 **GPL-3.0** (`main/LICENSE`, 35,153 B, `sha256₁₂ ebdc0e5b7005`) | 279 | 2026-11-07 | Moodle plugin: tutoring, quiz generation, mind maps and RAG over course material. PHP. The most featured AI Moodle plugin measured in this base — and copyleft, which for a Moodle plugin is the *expected* posture, not a trap. | EMEA/Global — Moodle plugin estate |
+| **AILearningGuide** | https://github.com/Fazmin/AILearningGuide | **MIT** (`main/LICENSE`, 1,081 B, `sha256₁₂ e29ef713b542`) | 259 | 2026-11-15 | Desktop app, **58 labs** across ML fundamentals, transformers, RAG, agents, fine-tuning and quantisation. TypeScript. Curriculum-as-application: the labs are the product, not documentation around one. | Global |
+| **cram-engine** | https://github.com/liuliu667/cram-engine | **MIT** (`main/LICENSE`, 1,064 B, `sha256₁₂ c33ea68946e4`) | 181 | 2026-10-22 | Exam-cram skill built on **explicit learning-science stages** — four-phase interactive teaching under a hard time budget. Chinese-language. 🟢 States its pedagogy as the architecture, which is what `P23`'s acceptance test needs. | APAC — China |
+| **SelfSemester** | https://github.com/munitkala/SelfSemester | **MIT** (`main/LICENSE`, 1,081 B, `sha256₁₂ f5fe104e348d`) | 108 | 2026-11-16 | Turns any subject into a **full scheduled, graded course** — built *and marked* by the user's own agent runtime. **Rust**, Windows. Created 2026-11-04: 108 ★ in twelve days. | Global |
+| **brightspace-mcp-server** | https://github.com/RohanMuppa/brightspace-mcp-server | **MIT** (`main/LICENSE`, 1,068 B, `sha256₁₂ 047079fbd491`) | 68 | 2026-11-18 | MCP server for **D2L Brightspace**, stated to work with *any* school rather than one tenant. TypeScript. 🟢 **This closes the seam `verticals/solutions.md` recorded for D2L**, which until now had only `POLITEMALL-MCP` — a two-system Singapore-specific bridge. See `T42`. | North America — D2L's core market |
+| **claude-moodle-dev** | https://github.com/SaadRahman01/claude-moodle-dev | **MIT** (`main/LICENSE`, 1,068 B, `sha256₁₂ df0b3e71710c`) | 42 | 2026-06-22 | Moodle **development** toolkit for coding agents: skills for XMLDB, Hooks API, PHPUnit, Behat, AMD, privacy/GDPR and security review. Python. Not a learner tool — it is the tier that makes a Moodle plugin engagement go faster, and it is permissive while Moodle is not. | Global |
+| **Tov-learn** | https://github.com/TovTechOrg/Tov-learn | **MIT** (`master/LICENSE`, 1,064 B, `sha256₁₂ 092d389ac156`) | 36 | 2026-09-29 | Tutor skill with **spaced repetition**, personalised project examples and a visual progress dashboard. PowerShell. | EMEA — Israel |
+| **chemdraw-mcp** | https://github.com/jurimaxam-dotcom/chemdraw-mcp | **Apache-2.0** (`main/LICENSE`, 11,358 B, `sha256₁₂ cfc7749b96f6`) | 32 | 2026-11-18 | MCP server that draws **structures, reactions, mechanisms, peptides and proteins locally**. Python. The first STEM-notation generator in this base: chemistry teaching needs a renderer, not a chat turn, and local rendering keeps student work off a vendor. | Global |
+| **SOLA** (`moodle-local_ai_course_assistant`) | https://github.com/saylordotorg/moodle-local_ai_course_assistant | 🔴 **GPL-3.0** (`main/LICENSE`, 35,149 B, `sha256₁₂ 3972dc9744f6`) | 21 | 2026-11-19 | *Saylor Online Learning Assistant* — AI learning-coach Moodle plugin. PHP. 🟢 **Published by Saylor Academy itself**, a named non-profit provider, not by an individual. Pushed *today*. See `T42`: the institution-published limb. | North America — Saylor Academy |
+| **liu-xiaoyan-skill** | https://github.com/tong666-bit/liu-xiaoyan-skill | **MIT** (`master/LICENSE`, 1,068 B, `sha256₁₂ 8626b7112026`) | 21 | 2026-10-09 | CET-4/6 and postgraduate-entrance English coach: reading evidence, listening review, long-sentence parsing, essay marking, revision plan. Styled after a named Chinese test-prep teacher, explicitly unofficial. | APAC — China |
+| **ku-portal-mcp** | https://github.com/SonAIengine/ku-portal-mcp | **MIT** (`main/LICENSE`, 1,068 B, `sha256₁₂ aa35608133a4`) | 13 | 2026-10-03 | MCP server for **Korea University**'s KUPID portal *and* Canvas: notices, schedules, library seats, assignments, grades. Python. First Korean campus bridge in this base; the library-seat call is a reminder that the useful campus agent is mostly not academic. | APAC — South Korea |
+| **ieee-mcp** | https://github.com/danieltyukov/ieee-mcp | **MIT** (`master/LICENSE`, 1,071 B, `sha256₁₂ fc20bfdfe931`) | 7 | 2026-11-14 | MCP server for **IEEE Xplore** — search, cite and read, with no IEEE API key, full text resolved **through the user's own university subscription**. TypeScript. 🔵 Same credential posture as `T30`: entitlement stays with the learner, so procurement is not on the critical path. | Global |
+
+### 🔴 Refused this pass — four addresses that would have passed a star filter
+
+| Repo | ★ | Why it is not in the table above |
+|---|---|---|
+| https://github.com/aaryansamanta/AI-Ethos | **497** | 🔴 **No licence payload.** 16 names over 3 branches, all `404`; API SPDX `NONE`. The highest-starred find of the pass, a 501(c)(3) delivering multilingual tutoring to underserved learners — and nothing in it can be redistributed. |
+| https://github.com/jeremy-xuan/SocraticNovel | 32 | 🔴 **CC BY-NC-SA 4.0** (1,227 B, `sha256₁₂ 593122cbd00b`). **NonCommercial** — unusable in a client deliverable at any tier. An instance of `T32`. |
+| https://github.com/vincenzo-afk/KingstonConnect | 41 | 🔴 **No licence payload** (16×3 ladder, all `404`). College management platform with an embedded StudyGPT. |
+| https://github.com/Piyushtanwani/DAU-buddy | 7 | 🔴 **No licence payload** (16×3 ladder, all `404`). Campus MCP server for DA-IICT, India. |
+
+### 🟡 Admitted with the grant split named — and `p640`'s size band earned its keep
+
+Both rows below carry an **MIT title line outside the 1,000–1,250 B band**, which is exactly the
+condition `p640` wrote the band to catch. The authority flagged both as `MIT-TITLE-OUT-OF-BAND`;
+reading the payload confirmed a split grant in both. 🟢 **Two for two — a positive control for the
+band, recorded because this base has never had one.**
+
+| Repo | ★ | Payload | What the split actually is |
+|---|---|---|---|
+| https://github.com/aaryansamanta/NextGen-AI | 491 | 1,327 B · `31d2ea3bba94` | **MIT for source code only.** Brand assets, team photos, videos, logos and the top-level PDFs in `website/img`, `website/video` are reserved © NextGenAI and require written contact before reuse. 🟢 The *code* is usable; the org's identity material is not, which is the correct and unremarkable posture — it is only a trap for a scanner that reports one licence per repo. |
+| https://github.com/Andiii208/seu-handbook-skill | 55 | 1,497 B · `965a0edb5701` | 🔴 **MIT on the code, CC BY-NC-SA 4.0 on `references/` and `data/`** — the Southeast University student handbook text, which *is* the product. The skill's whole value is the clause-level handbook corpus, and that corpus is **NonCommercial**. Ship the retrieval code, re-author the corpus, or do not ship. A textbook instance of `T25`, now with the MIT band as its detector. |
+
 ## What we searched for and did not find
 
 Recording gaps because an unrecorded gap looks exactly like coverage.

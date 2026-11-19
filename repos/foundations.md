@@ -714,6 +714,45 @@ Full per-row evidence: `evidence/p913-shelf-authority.2026-11-19-p913.tsv` (p913
 `evidence/p913-shelf-p912-instrument.2026-11-19-p913.tsv` (the superseded instrument, kept so the
 diff is reproducible), `evidence/p913-shelf-published-cells.2026-11-19-p913.tsv`.
 
+## The interactive-content authoring tier, measured — `p914`
+
+`p913` flagged three `h5p/*` component repos as **manifest-declared MIT with no licence payload**.
+This pass measured the *tier* rather than the components, and the gap is not about components: it
+tracks the **runtime / authoring** split. Grants byte-read and graded by
+`ingest/p913-grant-authority.sh`; evidence
+`evidence/p914-new-supply-grants.2026-11-19-p914.tsv`.
+
+| Repo | Role in the tier | Licence (byte-read `p914`) | ★ | Last push |
+|---|---|---|---|---|
+| https://github.com/h5p/h5p-php-library | **Runtime** — the H5P core that *plays* content, inside Moodle and Open edX | 🔴 **GPL-3.0** (`master/LICENSE.txt`, 35,146 B, `sha256₁₂ c53a65c2fd56`) | 156 | 2026-11-10 |
+| https://github.com/Lumieducation/H5P-Nodejs-library | **Runtime, Node** — H5P server and player outside the PHP estate. The route to H5P without Moodle. | 🔴 **GPL-3.0** (`master/LICENSE`, 35,146 B, `sha256₁₂ c53a65c2fd56` — *byte-identical to the PHP core's*) | 207 | 2026-11-19 |
+| https://github.com/h5p/h5p-editor-php-library | **Authoring** — the editor half of the same first-party project | 🔴 **No licence payload.** 16 names over 3 branches, all `404`; API SPDX `NONE`. Repo created 2014-04-29, pushed **2026-11-18** | 83 | 2026-11-18 |
+| https://github.com/Lumieducation/Lumi | **Authoring** — the desktop H5P editor, and the tool most "how to author H5P" guidance points at | 🔴 **No licence payload** (16×3 ladder, all `404`); API SPDX `NONE`. Created 2020-01-30, pushed 2026-11-12 | 200 | 2026-11-12 |
+
+🔴 **You can lawfully *serve* H5P and you cannot lawfully *ship a tool that makes it*.** Both
+runtimes carry a readable GPL-3.0 grant — onerous but known, and for a server-side player it is
+survivable because GPL-3.0 has no network-use clause (this is exactly the distinction `913-F1`
+restored). Both authoring surfaces, one of them first-party and both maintained *this week*,
+carry **no grant at all**. The twelve-year-old editor and the six-year-old desktop app are not
+abandoned repos with a forgotten `LICENSE`; they are live and ungranted.
+
+🔵 **What this changes for a build.** Any pattern in `compose/patterns.md` that assumed "author in
+H5P, deliver interactive content" has an unlicensed link in the middle. The three routes that
+survive, in order of preference:
+
+1. **Author in QTI 3, play in H5P.** `https://github.com/Citolab/qti-components` (GPL-3.0) and the
+   `QFlowLearn/qti3` estate give a standards-native authoring path whose grant is readable, and
+   `P19` already builds on it.
+2. **Author in the LMS.** Oppia (Apache-2.0) and `learningequality/studio` (MIT) are authoring
+   surfaces with permissive grants; they are not H5P-compatible, which is a content-model decision
+   to take deliberately rather than discover at handover.
+3. **Serve H5P as a runtime only**, with the content produced by whoever already owns an H5P
+   authoring licence — typically the client's existing Moodle, where the editor arrives as part of
+   the platform and the distribution question never reaches the studio.
+
+🔴 **What does not survive:** vendoring `Lumi` or `h5p-editor-php-library` into a deliverable, and
+any statement to a client that "H5P is open source" without naming which half.
+
 ## Gaps and caveats
 
 - **`openedx/XBlock` and `openedx/xblock-sdk` exist but are not in the tables above.**

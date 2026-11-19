@@ -1773,3 +1773,114 @@ in this KB where supply and demand have been measured in the same window, and th
 **single-sourced news claim**. 🔵 **The cheap test is the second market**: any market in `p911`'s
 cohort with a comparable ungranted share — Ghana, Uganda, Tanzania — probed for an OEM national
 pilot. Registered as `913-G3`.
+
+## T40 — `NONE` and `NOASSERTION` are **not** the same signal, and the difference is a usable triage rule (measured `p914`)
+
+Every pass in this base treats a missing SPDX field as "unknown, go and byte-read it". That is
+right, and it is also leaving information on the table. GitHub's licence endpoint returns **two**
+distinct non-answers, and on the 24 addresses measured this pass they behaved differently every
+single time.
+
+| API SPDX field | Rows | What the byte-read found | Agreement |
+|---|---|---|---|
+| A named licence (MIT, Apache-2.0, GPL-3.0) | **16** | the same family, every row | **16 / 16** |
+| **`NONE`** | **5** | 🔴 **no licence payload at all** — 16 filenames over 3 branches, all `404` | **5 / 5** |
+| **`NOASSERTION`** | **3** | 🟡 a **readable grant that the classifier could not reduce to one SPDX id** — 2 split MIT-plus-reserved-assets, 1 Creative Commons NonCommercial | **3 / 3** |
+
+🟢 **The rule.** `NONE` means *there is probably nothing to read* — the byte-read is a confirmation
+and it will usually come back empty. `NOASSERTION` means *there is something to read and it is
+almost certainly not a plain one-licence repo* — a split grant, a per-directory grant, or a content
+licence. In this cohort `NOASSERTION` predicted "non-trivial grant" **3 times out of 3**, and the
+two MIT cases were additionally caught by `p640`'s 1,000–1,250 B size band.
+
+🔵 **Why this is worth writing down rather than inferring.** The two fields are usually collapsed —
+in prose, in dashboards, and in this base's own earlier passes — into "no licence data". Collapsed,
+they produce the wrong work order: a studio spends its byte-reads on the `NONE` rows, where there is
+nothing to find, and under-reads the `NOASSERTION` rows, which are exactly the rows where the grant
+is complicated enough to matter commercially. **Read `NOASSERTION` first.**
+
+🔴 **The limit of the claim, stated plainly.** 24 addresses, one pass, one industry, and the rows
+were not sampled at random — they came off seven education queries bounded by `pushed:>2026-09-01`.
+`5/5` and `3/3` on single-digit cell counts is a consistent *observation*, not an established base
+rate, and nothing here licenses skipping a byte-read on a `NONE` row. It is a priority ordering,
+not a substitute. `T19` remains the governing claim: published licence metadata is wrong often
+enough to be a procurement risk, and the errors run both ways.
+
+🔵 **Cumulative across this base, which is the number to quote.** `p910` byte-read two
+`NOASSERTION` rows in the national-examination tier and both were **CC BY-NC 4.0** (`910-G4`).
+Adding `p914`'s three: **5 `NOASSERTION` byte-reads, 3 NonCommercial, 2 split-with-usable-code,
+and 0 plain single-licence repositories.** `NOASSERTION` has not once meant "merely unlabelled" in
+this base. 🔴 **And that is why `910-G4` remains this KB's highest-value outstanding audit:** the
+curated shelf carries **29 `NOASSERTION` rows** (`p909`'s census) that have never been read, and
+at a 3-in-5 observed NonCommercial rate the expected count of NC rows hiding in the shelf is not
+zero. **NonCommercial bars the engagement, not merely the redistribution.**
+
+## T41 — The grant gap in interactive content tracks the **runtime / authoring** split, and both authoring surfaces are ungranted and alive (measured `p914`)
+
+`T24` found grants that change by directory. `T25` found the trap moving into data and content
+assets. `p914` measured a third shape, in the one content tier that almost every education build
+touches: **H5P**.
+
+| Half of the tier | Repo | Grant | ★ | Pushed |
+|---|---|---|---|---|
+| Runtime (PHP) | `h5p/h5p-php-library` | 🔴 GPL-3.0, 35,146 B | 156 | 2026-11-10 |
+| Runtime (Node) | `Lumieducation/H5P-Nodejs-library` | 🔴 GPL-3.0, byte-identical payload | 207 | **2026-11-19** |
+| **Authoring (first-party)** | `h5p/h5p-editor-php-library` | 🔴 **no payload**, 16×3 ladder all `404` | 83 | **2026-11-18** |
+| **Authoring (desktop)** | `Lumieducation/Lumi` | 🔴 **no payload**, 16×3 ladder all `404` | 200 | 2026-11-12 |
+
+🔴 **The runtimes are licensed and the editors are not** — and the split is not an artefact of
+abandonment. The first-party editor was pushed the day before this measurement; the desktop editor
+a week before. Twelve years old, 83 ★, actively maintained, no grant.
+
+🔵 **The consequence is asymmetric in a way that favours delivery and punishes productisation.**
+Serving H5P content is fine: GPL-3.0 on a server-side player imposes no network-use disclosure
+(`913-F1`), so a hosted deployment is survivable. Building a *product that authors* H5P is not
+fine, because the only two authoring implementations cannot be redistributed at all. A studio that
+reads "H5P is open source" off a comparison blog and plans an authoring feature discovers this at
+handover, which is the most expensive moment available.
+
+🔵 **Generalising past H5P, carefully.** One tier is one tier. But the mechanism is not
+H5P-specific and it is worth probing elsewhere: a runtime is *shipped to everyone* and therefore
+acquires a licence early, while an editor is often *used by the project's own team first* and
+acquires one only when someone asks. Where that is true, the grant gap will sit on the authoring
+side of every content tier, not just this one. **Declared as a hypothesis for a later pass, not a
+measurement:** the other authoring surfaces in `repos/foundations.md` — `Khan/perseus`,
+`learningequality/studio`, `openfun/richie` — all carry readable permissive grants, so the pattern
+is already not universal — **byte-read this pass to make that a measurement rather than an
+assumption**: `learningequality/studio` MIT (1,115 B, `5715e50830cd`), `openfun/richie` MIT
+(1,079 B, `e4b2a3148135`), `oppia/oppia` Apache-2.0 (11,358 B, `cfc7749b96f6`), and
+`Khan/perseus` 🟡 **`BODY-MIT`** (1,052 B, `9a8d274a49d4`) — an MIT grant read from the payload
+body rather than a title line, which the authority records as weaker evidence. Three of four
+authoring surfaces are cleanly permissive; the fourth is permissive on weaker evidence. H5P is
+the outlier in this file, not the rule.
+
+## T42 — The LMS-to-agent bridge is generalising off the single institution, on two limbs at once (measured `p914`)
+
+`T30` recorded the bridge tier as built **per institution, on the user's own credentials**, which
+removed procurement from the critical path and the licence with it. That is still the bulk of the
+supply. Two new rows show it moving, and in opposite directions:
+
+**Limb 1 — the tenant-agnostic adapter.** `RohanMuppa/brightspace-mcp-server` (MIT, 68 ★, pushed
+2026-11-18) is an MCP server for **D2L Brightspace** that states it works with *any* school. Until
+this pass, D2L's only bridge in this base was `POLITEMALL-MCP`, bound to two Singapore national
+systems. The generic adapter is a different artefact with a different economics: one read of the
+vendor API, many campuses, and the per-institution fork disappears.
+
+**Limb 2 — the institution as publisher.** `saylordotorg/moodle-local_ai_course_assistant`
+(**GPL-3.0**, 21 ★, pushed **2026-11-19**) is an AI learning-coach Moodle plugin published by
+**Saylor Academy itself** — a named non-profit education provider, not a student and not a vendor.
+`Berserk-hub150/moodle-ai-skill-navigator` (GPL-3.0, 279 ★) is the same shape from an individual.
+
+🔵 **The two limbs have opposite licence postures, and that is the whole point.** The
+tenant-agnostic adapter is **MIT** — written to be embedded, by someone who wants it embedded. The
+institution-published plugin is **GPL-3.0** — because it is a Moodle plugin and Moodle's estate is
+copyleft, so the grant is inherited from where it plugs in, not chosen. A studio reading this tier
+for reusable parts should therefore expect: *bridges permissive, plugins copyleft*, and should
+place the boundary of the closed deliverable at the bridge, never inside the plugin. `P33` builds
+exactly that boundary.
+
+🔴 **What this does not say.** Two rows is not a wave, and `T30`'s per-institution finding is not
+refuted — the LATAM university-MCP cohort this base measured in `p907`/`p908` is still the largest
+single population in the tier. The claim is that the *ceiling* has moved: a generic bridge to a
+commercial LMS now exists where it did not, and at least one institution is publishing its own
+agent tier rather than buying one.

@@ -535,6 +535,41 @@ for it to query — the SAT/ACT/AP tier is privately owned and its item banks ar
 any licence. 🔵 **That is a structural property of the market, not a gap in the search**, and it is
 why `agents/top.md` has no US exam-prep row to promote.
 
+#### `p914` — North America: searched, nothing new, and the channel failure is measured this time
+
+The leg ran (`AI education North America 2026 adoption regulation players`). **Nothing new was
+admitted and nothing was invented to fill the space.** Every fact the search surfaced was already
+written here — checked by string, not by impression:
+
+| Fact the search returned | Already in this file |
+|---|---|
+| 134 AI-in-education bills across 31 states, 2026 | 🟢 yes (`134 bills` ×4, `31 states` ×6) |
+| 35+ states with departmental AI guidance | 🟢 yes |
+| US Dept. of Education final rule, 13 April 2026 | 🟢 yes — `p908` compliance calendar |
+| North Carolina Session Law 2026-41 — model policy 31 Dec 2026, local policies 30 Jun 2027 | 🟢 yes (`2026-41` ×6) |
+| New York A 9190 — classroom AI restricted to ninth grade and above | 🟢 yes (`A 9190` ×4) |
+| `K-12 AI Literacy and Readiness Act of 2026`, advanced in committee | 🟢 yes (×5) |
+| Berkeley Law AI ban on exams and credited coursework, summer 2026 | 🟢 yes (×4) |
+| Hawaii proposed parental opt-in consent | 🟢 yes |
+
+🔴 **This is the fourth consecutive nil pass for this region** (`p905`, `p906`, `p910`, `p914`), and
+this pass can separate the two causes instead of guessing between them:
+
+1. **The file is genuinely ahead of the open web here** — demonstrated above for eight specific
+   facts, and this remains the region with the densest coverage in the base.
+2. 🔴 **The channel was degraded, measurably.** Every non-GitHub host probed this pass was
+   unreachable under the session's network policy — `curl` returned `000` to `unesco.org`,
+   `eur-lex.europa.eu`, `data.consilium.europa.eu`, `oecd.org`, `future-ed.org` and
+   `digitaleducationcouncil.com`. **WebSearch result summaries were the only demand-side instrument
+   available, and no primary document was read.**
+
+🔵 **Why cause 2 matters more than cause 1 for this particular region.** North America's demand
+signal is *state-level and incremental*: a model policy amended, a transition date moved, a grant
+priority re-weighted. A search summariser surfaces national-scale facts and compresses exactly that
+class of detail away. The two legs that **did** produce rows this pass (LATAM, APAC) did so because
+a national policy and a national plan are large enough to survive summarisation. 🔴 **Do not read
+this leg as "North America is settled."** See `914-G3`.
+
 ### EMEA
 
 🟢 **Promoted in `p902` — four facts held only in the log until now** (see `902-F1`; the
@@ -1438,6 +1473,36 @@ higher-education policy and the UNESCO framework from news reporting. **None of 
 and the Huawei pilot in particular is a single-sourced news claim** — it is the load-bearing fact of
 this leg and it should be confirmed with the Ministry before it is put in front of a client.*
 
+#### `p914` — EMEA: searched, nothing new, and `p908`/`p909`'s contested date now has a third concurring source
+
+The leg ran (`AI education EMEA Europe 2026 adoption regulation players`). **No new instrument,
+player or figure was admitted.** What the search returned, against what is already written:
+
+| Fact the search returned | Already in this file |
+|---|---|
+| EU AI Act classifies education **access and assessment** — admission, evaluation, exam scoring — as Annex III high-risk | 🟢 yes |
+| The AI-**literacy** duty has applied since **2 February 2025** to every organisation using AI systems, therefore to every school | 🟢 yes |
+| `Digital Omnibus on AI` published in the Official Journal **24 July 2026** as **`Regulation (EU) 2026/1744`**, deferring stand-alone Annex III obligations to **2 December 2027** | 🟢 yes (`2026/1744` ×8) |
+| AI Office enforces general-purpose AI obligations, enforcement beginning 2026 | 🟢 yes |
+| Council of the EU digital-sovereignty and strategic-autonomy push, **29 October 2026** (`ST-14902-2026`) | 🟢 yes |
+| Guidance layer: OECD, UNESCO, Digital Education Action Plan | 🟢 yes |
+
+🟢 **One thing did move, and it is a confidence update rather than a new fact.** `p908` recorded
+the high-risk date as *contested*, with one source saying August 2026 and a second saying 2 December
+2027; `p909` built `P28` around the deferral window. This pass the **2 December 2027** reading
+appeared again, with the OJ publication date and regulation number attached, and the August 2026
+reading appeared **only** in guidance written before the amendment. 🔵 **Three independent
+secondary sources now concur and the only dissent is stale.** That is enough to stop hedging the
+date in client-facing material — while still recording that 🔴 **no primary read of
+`Regulation (EU) 2026/1744` has ever been performed by this base**, because `eur-lex.europa.eu` has
+been unreachable in every session that tried. The deferral is the single most load-bearing date in
+`P4` and `P28`, and it rests entirely on secondary sources.
+
+🔴 **Fourth consecutive nil pass for this region**, with the same two causes as the North America
+leg: genuine saturation on the instruments, plus a demand-side channel reduced to search summaries
+with every primary host unreachable (`000` to all six probed). See `914-G3`, which this leg is the
+strongest argument for.
+
 ### APAC
 
 🟢 **Promoted in `p902` — two convening facts, plus the region's one dataset-scale supply row**
@@ -2159,6 +2224,53 @@ Evidence: `evidence/p912-ministry-legs.2026-11-19-p912.tsv`.
   licence market**, and `P10` (teacher enablement at system scale) and `P8` (per-institution
   metering and exit) are the two patterns written for it.
 
+#### `p914` — APAC: Australia is the region's **loosest regulation over its most AI-sceptical public**, and that inverts where the risk sits
+
+`p908` recorded education becoming a *named* high-risk sector in a second APAC jurisdiction
+(Vietnam, from 1 March 2026), alongside Korea's `AI Basic Act` in force 22 January 2026. Australia
+is the counter-case, and this file had no row for its instrument (`National AI Plan` appeared zero
+times before this pass).
+
+| | **National AI Plan** (Australia) |
+|---|---|
+| Released | **2 December 2025** |
+| Shape | **3 goals, each supported by 3 pillars of action.** One goal covers keeping Australians safe through legislative and regulatory frameworks |
+| 🟢 Standalone AI Act | **Explicitly declined.** The government chose not to adopt an EU-style standalone AI Act, pursuing a flexible approach over existing law and voluntary guidance |
+| Education status | Named a **national priority**; the plan references the schools framework and includes **piloting generative AI in schools** |
+| The schools instrument | **Australian Framework for Generative AI in Schools** (2023) — endorsed by Education Ministers, 🔴 **guidance, not law**, and reported as released with no dedicated funding, no implementation support and no enforcement mechanism |
+| Skills limb | Action 5, *"Support and train Australians"* — digital skills, training access, an AI-ready pipeline, led in part by education departments |
+
+🔴 **The inversion, which is the actual finding.** This base already records (from the **Ipsos
+Education Monitor 2026**, `T18`) that support for *banning* AI in schools **rose** in Japan,
+Australia and South Korea, and that Australia and New Zealand showed the region's **strongest**
+support for a ban. Put the two measurements together and Australia is the jurisdiction with the
+region's **most permissive regulation and its least permissive public**.
+
+🔵 **What that means for an engagement, concretely.** In Vietnam or Korea the binding constraint is
+a statute: it is knowable in advance, it is the same for every bidder, and `P6` and `P4` exist to
+build against it. In Australia the binding constraint is **consent** — parental, teacher-union and
+ministerial — and there is no statute to point at as evidence of diligence, because the plan
+declined to create one and the schools framework carries no enforcement. A deployment there fails
+politically, not legally, and the mitigations are different in kind: opt-in defaults, teacher
+authority over the agent's outputs, visible data residency, and an evidence tier (`P7`) sized for a
+sceptical parent rather than a regulator. 🔴 **Do not reach for `P4`'s conformity apparatus here —
+it answers a question nobody is asking and reads as deflection.** `P13`'s persona-stateless design
+is the closer fit, since the objection it answers is about the relationship between child and
+agent rather than about documentation.
+
+🔵 **The pilot limb is the opening.** The plan includes piloting generative AI *in schools* and
+Action 5 is led partly by education departments. That is a funded buyer with a mandate and no
+compliance gate — the same structural position as Colombia's `CONPES 4144` (`p914`, LATAM), and the
+two should be sold the same way.
+
+🔴 **Provenance.** As with the LATAM leg this pass: non-GitHub hosts were unreachable from this
+session (all six probed returned `000`), so this is **WebSearch summaries only, single channel**.
+The release date, the declined AI Act, the 3×3 structure and the schools framework's non-binding
+status are consistent across the sources; one source dates the higher-education framework in a way
+inconsistent with the rest and is not relied on here. **Declared gap `914-G2`: read the
+`National-AI-Plan-December-2025` PDF and the Australian Framework for Generative AI in Schools
+directly, and extract Action 5's funded quantum.**
+
 ### LATAM
 
 🟢 **Promoted in `p902` — two facts held only in the log** (method: `902-F1`):
@@ -2745,6 +2857,50 @@ assume from market size.
   channel**: a national-exam acronym is not a national boundary, and the misattribution is a *source
   of discovery* (Ethiopia was never queried) as well as an error.
 
+#### `p914` — LATAM: Colombia's instrument is **budgeted and non-binding**, which inverts the usual sequencing
+
+This base has recorded Brazil's `PL 2.338/2023`, Peru's education-specific instrument (`p909`),
+Mexico's (`p907`), El Salvador's and the regional observatory. **Colombia's national AI policy was
+missing from this file entirely** (`CONPES` appeared zero times before this pass). It is the one
+instrument in the region whose shape favours a vendor rather than gating one.
+
+| | **CONPES 4144 — Política Nacional de Inteligencia Artificial** (Colombia) |
+|---|---|
+| Instrument type | 🟢 **A `CONPES` policy document, not a law.** Approved by the Consejo Nacional de Política Económica y Social, February 2025 |
+| Money | **COP 479,273 million ≈ USD 116 million** committed to 2030, from the national general budget (`Presupuesto General de la Nación`) |
+| Scope | **106 actions** to 2030, distributed across named public entities |
+| Education limb | Education is a policy pillar; the *talent* line runs training and certification **from basic education through scientific specialisation** |
+| Oversight | **Semiannual implementation reports until 2030** |
+| 🔴 Obligations on a private supplier | **None.** The analysis in the sources is explicit: it distributes actions and budget among public entities and creates no obligations and no sanctions for private companies |
+
+🟢 **Why this is the most sellable regulatory posture in the region.** Everywhere else in this
+file, the instrument arrives as a gate: the EU AI Act classifies assessment as high-risk, Vietnam
+names education high-risk, Peru's instrument is education-specific, and `P4` exists to build
+conformity into the architecture. Colombia has done the opposite — it has put **budget, named
+owners, a six-year horizon and a public reporting cadence** behind AI capability, including
+education, **without** creating a compliance surface a supplier must clear first. For an
+engagement that means the sales motion is to the *public entity holding an action and a budget
+line*, not to a compliance officer, and the semiannual report is the artefact that makes a pilot
+legible to the buyer's own oversight.
+
+🔵 **How to use the reporting cadence.** The semiannual report is a deliverable the buyer already
+owes someone else. A pilot scoped so that its evidence tier (`P7`) produces exactly what that
+report needs — actions completed, learners reached, measured outcome — is a pilot the buyer can
+defend internally without extra work. That is the same mechanism `P28` uses against the UK
+specification, applied to a budget cycle instead of a standard.
+
+🔴 **Provenance, stated because it is weaker than this file's norm.** Every non-GitHub host was
+**unreachable from this session** — `unesco.org`, `eur-lex.europa.eu`, `data.consilium.europa.eu`,
+`oecd.org`, `future-ed.org` and `digitaleducationcouncil.com` all failed DNS resolution under the
+session's network policy (measured, not assumed: `curl` returned `000` to all six). So the figures
+above come from **WebSearch result summaries only, single channel, no primary-document read**. The
+`479,273` million COP figure and the `106` actions are consistent across three independent
+secondary sources; the **approval date is reported as both 14 and 15 February 2025**, so it is
+given here as "February 2025". The official document at `sisconpes.dnp.gov.co` is the read that
+would settle the education share of the budget, which these sources do **not** break out.
+**Declared gap `914-G1`: fetch `CONPES 4144` from `dnp.gov.co` from a session whose network policy
+allows it, and extract the education-pillar budget line.**
+
 ### Global
 
 Cross-regional plays that do not depend on one jurisdiction.
@@ -2840,6 +2996,53 @@ adds two more disagreeing figures and no new primary source.**
 
 ## Declared gaps
 
+- 🟢 **`p914` ADVANCES `910-G4` by three byte-reads, and the `NOASSERTION` tier is now 3 of 5
+  NonCommercial across this base.** `910-G4` asked what `NOASSERTION` rows actually *say*, having
+  resolved two of two to CC BY-NC. `p914` byte-read three more: `Jeremy-xuan/SocraticNovel`
+  **CC BY-NC-SA 4.0** (NonCommercial — barred), `aaryansamanta/NextGen-AI` **MIT on code with brand
+  assets reserved ©** (usable), and `Andiii208/seu-handbook-skill` **MIT on code with the handbook
+  corpus in `references/`/`data/` under CC BY-NC-SA 4.0** (🔴 the corpus *is* the product, so the
+  skill is effectively NC). **Cumulative: 5 `NOASSERTION` byte-reads, 3 NonCommercial, 2 split with
+  a usable code grant, 0 plain single-licence repos.** 🔵 The predictive content of the field is now
+  worth stating: `NOASSERTION` has never once meant "merely unlabelled" in this base — it has meant
+  a split grant or a non-software licence **5 times out of 5**. Promoted to `intel/trends.md`
+  `T40`, which also records that `NONE` behaves differently (5/5 genuinely empty) and should
+  therefore be read **second**. 🔴 **`910-G4`'s core question is still open**: the **29
+  `NOASSERTION` rows in the curated shelf** (`p909`'s census) remain unaudited, and at a 3-in-5
+  observed NC rate the expected number of NonCommercial rows sitting in the shelf is **not zero**.
+  That audit is still the highest-value one outstanding.
+- 🔴 **New gap `914-G3` — the demand side of this KB needs one pass run from a session whose network
+  policy permits the primary hosts, and until then four consecutive nil legs are uninterpretable.**
+  Measured this pass, not assumed: `curl` returned `000` to **`unesco.org`, `eur-lex.europa.eu`,
+  `data.consilium.europa.eu`, `oecd.org`, `future-ed.org` and `digitaleducationcouncil.com`** —
+  every non-GitHub host probed. GitHub hosts were fully reachable, which is why the supply side of
+  `p914` is dense and the demand side is thin. **No primary document has been read by this base in
+  this session, and the most load-bearing date in `P4` and `P28` — the 2 December 2027 Annex III
+  deferral under `Regulation (EU) 2026/1744` — rests entirely on secondary sources.** North America
+  and EMEA have now returned nil on `p905`, `p906`, `p910` and `p914`; that is consistent with
+  genuine saturation **and** with a channel that compresses away exactly the state-level, dated,
+  incremental detail those two regions signal through. Re-run both legs from a permitted session
+  before anyone records them as saturated.
+- 🔴 **New gap `914-G1` — Colombia's `CONPES 4144` education budget line is unread.** The policy's
+  headline is firm across three secondary sources (**COP 479,273 M ≈ USD 116 M to 2030, 106 actions,
+  semiannual reporting**) and the sources **do not break out education's share**, while disagreeing
+  on the approval date (14 vs 15 February 2025). The official document at `sisconpes.dnp.gov.co`
+  settles both. This is the one LATAM instrument in this file with budget and no compliance gate, so
+  the size of its education line is directly a deal size.
+- 🔴 **New gap `914-G2` — Australia's `National AI Plan` Action 5 has no quantum in this file.** The
+  plan (2 December 2025) declines a standalone AI Act, names education a national priority and
+  includes piloting generative AI in schools; Action 5 *"Support and train Australians"* is led in
+  part by education departments. **Its funded amount is unread**, as is the 2023 Australian
+  Framework for Generative AI in Schools, which secondary sources describe as carrying no funding,
+  no implementation support and no enforcement. Read both directly.
+- 🔴 **New gap `914-G4` — `T41`'s mechanism is a hypothesis and must not be promoted on one tier.**
+  `p914` measured H5P's runtime half as GPL-3.0 (readable, byte-identical across the PHP and Node
+  implementations) and **both** its authoring surfaces as carrying no licence payload at all, while
+  pushed within eight days of measurement. The proposed mechanism — a runtime ships to everyone and
+  acquires a grant early, an editor is used by the project's own team first and acquires one late —
+  is **already not universal**: `learningequality/studio`, `openfun/richie`, `oppia/oppia` and
+  `Khan/perseus` were byte-read this pass as controls and all four are permissive. Probe another
+  industry's content-authoring tier before generalising.
 - 🟢 **`p910` PARTIALLY DISCHARGED `906-G2`, the English-metadata channel this file has carried as
   "the highest-value remaining instrument" since `p906` — and the instrument needed fixing before
   it worked.** Fourteen national-examination terms with no prior occurrence anywhere in this tree

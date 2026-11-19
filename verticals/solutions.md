@@ -529,6 +529,27 @@ to evidence of institutional intent, and for four of the five it is withdrawn. T
 worse. Evidence: `evidence/p913-owner-affiliation.2026-11-19-p913.tsv`,
 `evidence/p913-owner-ethiopia.2026-11-19-p913.tsv`.
 
+## Commercial-LMS seams — re-measured `p914`, and the D2L seam is closed
+
+The table earlier in this file records, for each commercial LMS a client may already run, the open
+bridge that exists against it. One of those rows was the weakest in the file: D2L Brightspace's
+only bridge was `GuanmingQiao/POLITEMALL-MCP`, a **two-system, Singapore-specific** adapter.
+
+| Platform | Open source? | Seam as at `p914` |
+|---|---|---|
+| **D2L Brightspace** | 🔴 No — commercial | 🟢 **Closed this pass.** https://github.com/RohanMuppa/brightspace-mcp-server — **MIT** (`main/LICENSE`, 1,068 B, `sha256₁₂ 047079fbd491`), 68 ★, pushed 2026-11-18, TypeScript. States it works with **any** school rather than one tenant. `POLITEMALL-MCP` remains the better reference for a *Singapore* engagement because it already speaks to two national systems. |
+| **Canvas** | 🔴 No — commercial for the hosted product; `instructure/canvas-lms` is AGPL-3.0 | Unchanged — `vishalsachdev/canvas-mcp` (MIT, 334 ★) and `boyuchengz/canvas-mcp` (MIT, 118 ★), plus `SonAIengine/ku-portal-mcp` (MIT, 13 ★, added `p914`) which speaks Canvas **and** a Korean campus portal in one server |
+| **Blackboard (Ultra / classic)** | 🔴 No — commercial | Unchanged — `andrsnrua/universidad-pacifico-mcp` (ISC), `bolgerru/blackboard-mcp` |
+| **PowerSchool** (SIS) | 🔴 No — commercial | Unchanged — `cculb/schoolconnect` (MIT), parent-facing only |
+| **Moodle** (self-hosted, GPL-3.0 — listed here for the plugin estate, not as a commercial product) | 🟢 Yes | 🆕 `Berserk-hub150/moodle-ai-skill-navigator` (**GPL-3.0**, 279 ★) and `saylordotorg/moodle-local_ai_course_assistant` (**GPL-3.0**, 21 ★, published by Saylor Academy). Both copyleft — correct for a Moodle plugin, and both therefore outside a closed deliverable. `SaadRahman01/claude-moodle-dev` (**MIT**, 42 ★) is the permissive piece: it is the *development* toolkit, not the shipped plugin |
+
+🔵 **Why the D2L row matters more than its star count.** Brightspace is a North American and
+Canadian higher-ed incumbent, and this base's North America leg has repeatedly recorded the buyer
+as policy-driven and procurement-gated. A tenant-agnostic MIT bridge is the difference between
+"we can demo against your LMS" and "we can demo against a Singapore polytechnic's". It is 68 ★ and
+nine days from its last push — treat it as a credible starting point to be read, not as a
+dependency to pin. See `compose/patterns.md` `P33`.
+
 ## Honest gaps
 
 - **Unlicensed content corpora are the biggest trap in this category (added p891).** The largest

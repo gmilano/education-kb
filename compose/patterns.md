@@ -2802,3 +2802,97 @@ be scoped and priced separately.
 🔴 Not in the EU, UK or Saudi markets, where the buyer publishes a specification first (`P28`,
 `P4`). 🔴 Not where the "national programme" is a procurement notice rather than a running pilot —
 then you are in `P28`'s window and should bid the build.
+
+## P33 — Multi-**vendor** LMS agent tier, with the licence boundary drawn at the bridge (added `p914`)
+
+**Why this pattern exists, and why it could not be written before this pass.** `P26` builds a
+sanctioned bridge on **one** platform. `P27` builds one adapter across **many campuses on the same
+platform**. Neither answers the shape a real group or ministry buyer actually presents: *three
+faculties on Moodle, the business school on Canvas, the polytechnic arm on Brightspace, and one
+board that wants one assistant.* That pattern needed a **tenant-agnostic** bridge to a commercial
+LMS, and until `p914` this base had none — D2L's only row was `POLITEMALL-MCP`, bound to two
+Singapore national systems. `T42` records the row that closed it.
+
+🔵 **The design claim is about where the licence boundary goes, not about the agent.** `T42`
+measured the tier's two limbs having opposite grants: **bridges are permissive because they are
+written to be embedded; plugins are copyleft because they inherit from the platform they plug
+into.** That is not a nuisance to route around — it is a free, principled seam. Put the closed
+deliverable on the bridge side of it and nothing in the build ever forces disclosure.
+
+### Stack
+
+| Layer | Pick | Licence (byte-read) | Why |
+|---|---|---|---|
+| Bridge — D2L Brightspace | https://github.com/RohanMuppa/brightspace-mcp-server | **MIT** (`main/LICENSE`, 1,068 B, `sha256₁₂ 047079fbd491`, `p914`) | 🟢 **Tenant-agnostic** — states it works with any school. The row that makes this pattern possible |
+| Bridge — Canvas | https://github.com/vishalsachdev/canvas-mcp | MIT | Largest Canvas tool surface in this base (334 ★) |
+| Bridge — Canvas + campus portal in one server | https://github.com/SonAIengine/ku-portal-mcp | **MIT** (1,068 B, `aa35608133a4`, `p914`) | Read it for the *composition*: one server, two systems of record. That is this pattern's problem in miniature |
+| Bridge — Moodle, read-only then read-write | https://github.com/Faixiang/Moodle-MCP → https://github.com/G36maid/moodle-mcp | MIT | Institutional Web Service API, which is the posture `P26` requires |
+| Bridge — Blackboard | https://github.com/bolgerru/blackboard-mcp | 🔴 **no licence** | Read-only reference. **Cannot be copied from.** Blackboard work starts from the vendor REST docs |
+| Sanctioned install path | https://github.com/Cvmcosta/ltijs | Apache-2.0 | LTI 1.3 / Advantage. One tool registration per platform, four platforms, one tool |
+| Identity of record across vendors | https://github.com/StevenACoffman/roster | **MIT** | **OneRoster v1.2** with authorization enforced *in the database*. 🔴 **Non-optional here** — a multi-vendor tier is multi-tenant by construction, and application-layer scoping will leak one faculty's rows into another's |
+| Moodle-side plugin work, if any | https://github.com/SaadRahman01/claude-moodle-dev | **MIT** (1,068 B, `df0b3e71710c`, `p914`) | XMLDB, Hooks API, PHPUnit, Behat, privacy/GDPR and security-review skills. 🟢 The **toolkit** is MIT even though the plugin it produces will be GPL — keep that distinction in the SBOM |
+| Reference plugins to read, not to ship | https://github.com/saylordotorg/moodle-local_ai_course_assistant · https://github.com/Berserk-hub150/moodle-ai-skill-navigator | 🔴 **GPL-3.0** both | Saylor Academy's own learning coach, and the most featured AI Moodle plugin measured. **Read for scope decisions; do not vendor** |
+| Agent runtime | https://github.com/langchain-ai/langgraph or https://github.com/crewAIInc/crewAI | MIT | Not the differentiator. Pick for the team's familiarity |
+| Audit / efficacy | https://github.com/yetanalytics/lrsql | Apache-2.0 | One xAPI statement per tool call, across all vendors — the only place the board sees one number |
+
+### How it wires together
+
+1. **One tool registration per vendor, via LTI 1.3 (`ltijs`).** Four platforms, one tool. This is
+   the step that makes the tier sanctioned rather than a credential-sharing scheme, and it is also
+   the step procurement actually reviews — run all four registrations as one submission.
+2. **Normalise to OneRoster *before* the agent, not inside it.** Put `roster` between the bridges
+   and the runtime so "course", "section", "enrolment" and "term" mean one thing. 🔴 The failure
+   mode this prevents is the expensive one: an agent whose prompt contains per-vendor special cases
+   is a rewrite every time the client acquires another campus.
+3. **Keep each bridge a thin, replaceable adapter.** One module per vendor, one interface, no
+   vendor type leaking past `roster`. The MIT bridges above are *starting points to read and
+   re-implement against an institutional identity* (`P26` step 1), not dependencies to pin — the
+   Brightspace server is 68 ★ and one contributor.
+4. **Draw the boundary.** Everything above `roster` is the studio's closed deliverable. Anything
+   that must live *inside* Moodle — a block, an activity type, a local plugin — goes on the other
+   side of the line as a separate **GPL-3.0** repository the client owns, talking to the closed tier
+   over HTTP. 🟢 Two artefacts, two grants, no derivative-work argument, and nothing in the closed
+   tier is GPL-adjacent.
+5. **Emit xAPI into `lrsql` from the normalised layer**, so the statement stream is vendor-neutral
+   and the board's dashboard does not need to know which campus runs what.
+6. **Run gate `G1` plus `T40`'s triage order** over every address before any of it is written:
+   read the `NOASSERTION` rows first, confirm the `NONE` rows are empty, and do not let a
+   no-licence bridge (`blackboard-mcp`) enter the build as a "temporary" copy.
+
+### 🔴 The content trap this pattern must route around
+
+If the engagement includes **authoring interactive content**, `T41` applies and it is a stop:
+H5P's two runtimes are GPL-3.0 with readable grants, and **both** of its authoring surfaces —
+`h5p/h5p-editor-php-library` and `Lumieducation/Lumi` — carry **no licence payload at all** while
+being actively maintained. Author in QTI 3 (`P19`), or author inside the client's existing Moodle
+where the editor arrives as part of the platform, or scope authoring out. **Do not plan an H5P
+authoring feature.**
+
+### Licence posture
+
+**Permissive on the deliverable, end to end.** Every pick on the studio's side of the boundary is
+MIT or Apache-2.0, byte-read. The copyleft is real and it is deliberately on the client's side of
+an HTTP boundary, in a repository the client owns. 🔵 The GPL-3.0 reference plugins and the
+no-licence Blackboard bridge are *reading material*, and the distinction between reading and
+vendoring is the one thing in this pattern a security review will check.
+
+### Estimate
+
+**10–14 weeks** for three vendors, read-only, with rostering normalisation and xAPI audit:
+2 weeks LTI registrations and institutional identity across three platforms (the slow step is the
+client's, not the studio's), 3 weeks `roster` normalisation and tenancy enforcement, 1 week per
+vendor adapter, 2 weeks agent tier, 1 week audit, 2 weeks security review. 🔵 **A single-vendor
+read-only demo is `P26`'s 4–6 weeks** — do that first and let it earn the multi-vendor scope.
+🔴 Add 3–4 weeks per vendor that needs a Moodle-side plugin, and budget it as a separate repository
+with a separate grant from day one.
+
+### Where it does not apply
+
+- **One LMS.** Use `P26`. The normalisation layer is overhead the engagement has not earned.
+- **Many campuses, one platform, one language.** Use `P27` — it is the cheaper shape and already
+  has its in-language cohort measured.
+- **Blackboard-only estates.** The only Blackboard bridge in this base is unlicensed, so there is
+  no permissive starting point and the adapter is written from the vendor's REST documentation.
+- **Where grade *writes* are in scope on day one.** Read-only first (`P26`): writes put the tier
+  inside the EU AI Act's assessment scope (**2 Dec 2027**) and inside FERPA record-amendment rules
+  in the US, and a multi-vendor write path multiplies both reviews by the number of vendors.
