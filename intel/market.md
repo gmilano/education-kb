@@ -99,6 +99,22 @@ data access* rather than education agents.
 
 ### North America
 
+#### 🆕 `p928` — the two largest model vendors have made the teacher-assistant layer **free at the point of use** for US K-12, and this file had neither of them
+
+🟢 **New to this file, both on primary vendor channels, both verified this pass.**
+
+| Vendor | Offer | Dates | Channel |
+|---|---|---|---|
+| **Anthropic** | **Claude for Teachers** — free for verified US K-12 educators; then a **free *Enterprise* tier for schools and districts** with central management under one set of K-12 terms. Bundles Claude Code and Claude Cowork; integrates ASSISTments, Brisk Teaching, Canva Education, Diffit, Eedi, MagicSchool, Snorkl, TeachFX. Data not used for training; **K-12 Data Processing Addendum written to FERPA**. Evaluation planned with **Detroit Public Schools Community District**; collaboration with the **American Federation of Teachers** | individual educators **2026-07-14**, districts **2026-08-28** | `anthropic.com/news/claude-for-teachers`, `claude.com/blog`, EdWeek, EdSurge |
+| **Google** | **Gemini in Workspace for Education** — Gemini features added to the **core** Education editions (Feb 2026); **Workspace Studio** (agent builder) a core service in **all** editions; Gemini in Classroom to Fundamentals/Standard/Plus, **expanded to users of all ages from 2026-08-10**; **Gemini student hub** to all ages Oct 2026, extended to the **EEA on 2026-10-19**; `Google AI Pro for Education` is the paid upgrade | Feb / Aug / Oct **2026** | `workspaceupdates.googleblog.com`, `blog.google` Bett 2026 |
+
+🔴 **The commercial consequence, and it is the reason this belongs in a market file rather than a news log: in North America, cost is no longer an argument for open source in the teacher-assistant tier.** A district can now get a managed, FERPA-papered, centrally administered assistant from either vendor for **nothing**. Every pitch in this file that rested on licence cost has to be re-grounded on the three things the free tiers do not give: **data residency and on-device execution**, **control of the curriculum and the prompt surface**, and **the right to modify and re-licence the system**. 🔵 That is exactly the axis `agents/top.md` already shelves for: `robzilla1738/Memorwise` and `siyegs/rung` answer it architecturally, and `P52` (the offline tutoring appliance) is the pattern that sells it.
+
+🟡 **A second-order effect worth watching rather than asserting.** Anthropic's offer is a *distribution* play into named edtech ISVs (ASSISTments, MagicSchool, Brisk and six more are integration partners, not competitors). For a studio, those integrations are the realistic **attach point** in US K-12 — the assistant is given away and the margin moves to the tools around it. This pass does not have deployment numbers for any of them and does not claim any.
+
+🔵 **The rest of this pass's North America leg was a nil, and the named facts are listed so the nil is checkable.** `NY A 9190`, `NC Session Law 2026-41`, Maryland's dual state-guidance-plus-district-policy mandate, `Alabama H.B. 1227`, Florida `SB1194`, the **134 bills across 31 states** count, the **35+ states with departmental guidance**, the federal grant-priority rule of 2026-04-13, the student-drafted `STUDENTS FIRST Act`, and the Berkeley Law exam ban — **all ten were already held by this file.** The two vendor rows above are the only additions.
+
+
 #### 🆕 `p926` — two instruments this file had not recorded, and an on-device answer to the one that bites
 
 🟢 **New to this file.** The **US Department of Education published a *Framework for Responsible Use
@@ -832,6 +848,13 @@ transfers to the US with the curriculum swapped and the compliance wrapper chang
 
 
 ### EMEA
+
+#### 🆕 `p928` — the mandated EMEA leg returned **nothing this file did not hold**, and the one thing it got *wrong* is worth more than the nil
+
+🔴 **Zero new facts.** The leg named the EU AI Act's education high-risk classification, the UK DfE/Ofqual 2026 generative-AI and coursework-integrity materials, Dubai **KHDA** guidance to private schools, Saudi Arabia and Kazakhstan as national-competitiveness cases, the March 2026 European Parliament briefing alongside the Digital Education Action Plan, and OpenAI's government partnerships in **Estonia, Slovakia, Greece and Italy**. **Every one is already in this file.**
+
+🟡 **The leg disagreed with itself on the date that this file sells on, and the disagreement is instructive.** One source placed the Annex III education obligations at **August 2026**; another at **2 December 2027** under the 2026 AI Omnibus. 🔵 **This file is not in doubt and should not be softened**: `intel/trends.md` `T3` carries the instrument by number — **Regulation (EU) 2026/1744**, moving stand-alone Annex III education systems from 2 August 2026 to **2 December 2027**, with Article 50 transparency duties still from August 2026 and the emotion-recognition ban in force since February 2025. 🔴 **The reading to carry into a client conversation is that secondary EMEA coverage is still publishing the superseded date**, so a client who has read the trade press may arrive believing they are already in scope. That is a conversation to have deliberately, and `T3`'s standing risk flag — the Commission may pull the date *forward* — points the same way.
+
 
 #### 🆕 `p926` — the region supplied this pass's most reusable asset, and it did not come from Europe
 
@@ -2053,6 +2076,15 @@ which range from Vietnam-style statutory high-risk to nothing at all. Ask per co
 
 ### APAC
 
+#### 🆕 `p928` — nil on players and adoption; the regulatory spine re-confirmed, and this file should record that the leg **could not** find adoption data
+
+🔴 **Zero new facts, and one honest gap.** The leg re-named **South Korea's AI Basic Act in force 2026-01-22** with a guidance-first grace period through 2026; **Vietnam's AI law effective 2026-03-01**, whose high-risk category **explicitly includes education** and requires pre-deployment registration in the **National AI Database**; Australia's absent statute alongside **TEQSA**'s requirement that providers file institutional generative-AI action plans; China as the most comprehensive current framework (registration plus labelling); and Japan, Singapore (**AI Verify**) and New Zealand on principles-and-existing-law. **All held.**
+
+🔵 **The gap is the finding.** The leg returned **no APAC adoption figures, no school or university deployment trends, and no named regional edtech vendors** — it returned regulation and nothing else. That is the third mandated APAC leg in this base's recent history to come back regulation-only. 🔴 **An APAC engagement therefore cannot be sized from this file's demand side the way a LATAM or North America one can**, and a pass that wants to close it should go at national education ministries and the regional university associations directly rather than at English-language "APAC adoption" queries, which this base has now shown twice do not carry that data.
+
+🟡 **One cross-region mechanism re-confirmed:** the EU AI Act reaches APAC providers whose outputs are used in the EU, so APAC-built proctoring and admissions tooling is in Annex III scope regardless of local law. That is a **sales** argument in this region, not just a compliance note.
+
+
 #### 🆕 `p926` — Vietnam's registration mechanism, and the region that supplied half this pass's shelf
 
 🟢 **New to this file: Vietnam's high-risk regime has an *operating* mechanism, not just a
@@ -3140,6 +3172,13 @@ funders** — not technology — which is the same finding from the consulting s
 
 ### LATAM
 
+#### 🆕 `p928` — nil, and the nil is the strongest form of this region's standing story
+
+🔴 **Zero new facts.** The leg re-named the Digital Education Council **AI in Higher Education LATAM 2026** survey (**92% of students, 79% of faculty** actively engaging with AI), the UNESCO **IESALC** finding that **87% of institutions use AI in some capacity while only 26% have a formal AI strategy**, PISA 2025's **nine in ten 15-year-olds** across thirteen regional countries having used AI chatbots for schoolwork, Brazil's **53% of school administrators using AI against 22% of schools with guidelines**, the **716 AI-related regulatory instruments across 23 countries and territories**, Brazil's EU-style draft framework against Argentina's explicitly deregulatory bill, and the **UNESCO Observatory on AI in Education for Latin America and the Caribbean** launched April 2026 with CAF, CENIA, Cetic.br/NIC.br, ECLAC, Fundación Ceibal, Fundación Santillana, Tecnológico de Monterrey, ProFuturo, Universidad del Desarrollo and IRCAI. **Every one already held.**
+
+🟢 **That the leg is stable is itself the commercial point.** The adoption-versus-governance gap this file has sold against in LATAM for many passes — near-universal use, formal strategy in roughly a quarter of institutions — is **not** a transient measurement. It has now been returned by independent legs across multiple passes with the same shape. 🔵 **The deliverable that gap implies is the governance and evidence layer, not the tutor** — which is `P48` (the regulated-market tutor: ship the evidence layer, not the agent) and `P53` (attaching evidence to a tutor the client already has). A LATAM client overwhelmingly **already has** the AI; what they do not have is the policy, the audit trail and the outcome measurement.
+
+
 #### 🆕 `p926` — the supply gap, measured: the software exists, in the right subject, with no licence on it
 
 🔴 **This file has reported a LATAM open-source supply gap for many passes without measuring it.
@@ -4107,6 +4146,13 @@ institutional spine.** See `agents/top.md` `927-F5` and `verticals/solutions.md`
 
 
 ### Global
+
+#### 🆕 `p928` — the four mandated prose legs are a **nil for the forty-seventh consecutive pass**, and this pass measured the channel that is not nil
+
+🔴 **The four global prose legs (`top open source AI agents education 2026 github MIT`, `github trending education AI 2026`, `open source platform education ERP CRM MIT Apache`, `AI education industry trends 2026`) returned zero repositories this base does not hold.** Named and already shelved: DeepTutor, OpenMAIC, `patchy631/ai-engineering-hub`, `withmarbleapp/os-taxonomy`, PageLM, Hermes, OpenClaw, OpenHands, CrewAI, LangGraph, AutoGen, DSPy, Langflow, Agenta, OpenEduCat, `frappe/education`, Krayin, iDURAR, Huly, Apache OFBiz, Dolibarr, Axelor. **22 named, 22 held.** Evidence: `evidence/websearch-legs.2026-11-19-p928.tsv`.
+
+🔵 **This is no longer a surprising result and should stop being reported as one.** The useful statement is comparative, and this pass can finally make it with both numbers measured rather than one of them capped — see `intel/trends.md` `T68` and `agents/trending.md` `928-F1`. The prose channel's yield is **0**; the topic channel's, measured without the page cap for the first time, is in the thousands.
+
 
 #### 🆕 `p925` — the cross-regional reading, and the one number every region's sources agree on
 

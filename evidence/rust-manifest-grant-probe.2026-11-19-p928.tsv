@@ -1,0 +1,12 @@
+repo	branch	license_field
+G36maid/moodle-mcp	main	MIT
+RWTH-OS/eduOS-rs	main	MIT/Apache-2.0
+ankitects/anki	main	AGPL-3.0-or-later
+chroma-core/chroma	main	(workspace-or-absent)
+daac-tools/vibrato	main	(workspace-or-absent)
+impierce/openid4vc	main	Apache-2.0
+messense/jieba-rs	main	MIT
+ongjin/garu	main	(workspace-or-absent)
+procivis/one-core	main	Apache-2.0
+qdrant/qdrant	master	Apache-2.0
+DONE

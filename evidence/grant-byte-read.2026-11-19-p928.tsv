@@ -1,0 +1,15 @@
+repo	path	http	bytes	sha256_12	grant_read	search_channel_spdx	agree
+online-ml/river	main/LICENSE	200	1528	e87f2c8f1ba6	BSD 3-Clause License	BSD-3-Clause	yes
+mistval/kotoba	master/LICENSE	200	1064	32aad86d5c86	MIT License	MIT	yes
+cognitive-engineering-lab/mdbook-quiz	main/LICENSE-MIT	200	1035	1847e0e06981	MIT License	Apache-2.0	NO - disjunction flattened (T70)
+cognitive-engineering-lab/mdbook-quiz	main/LICENSE-APACHE	200	10172	59899c6091b5	Apache License 2.0	Apache-2.0	partial - Cargo.toml says "MIT OR Apache-2.0"
+mcgrizzz/Yomine	main/LICENSE-MIT	200	1065	116f5aa90c69	MIT License	Apache-2.0	NO - disjunction flattened (T70)
+mcgrizzz/Yomine	main/LICENSE-APACHE	200	11357	c71d239df917	Apache License 2.0	Apache-2.0	partial - Cargo.toml says "MIT OR Apache-2.0"
+heimi51168/planyourtv	main/LICENSE	200	1110	6f725ade50a7	MIT License	MIT	yes
+david-04/quiz-mate	main/LICENSE	200	779	80724804a81d	ISC License	ISC	yes
+houselearning/home	main/LICENSE	200	11357	c71d239df917	Apache License 2.0	Apache-2.0	yes
+xx-hub/craft-your-textbook	main/LICENSE	200	1089	f987e7f53e06	MIT License	MIT	yes
+14flavius/GradeShelf	main/LICENSE	200	1070	a0fab3c5090c	MIT License	MIT	yes
+cmlonder/notebooklm-chunker	main/LICENSE	200	1065	19ce1724bc9e	MIT License	MIT	yes
+Yari-tuber/math-rap-video	main/LICENSE	200	1067	3adf69adbec0	MIT License	MIT	yes
+computerlovetech/agr	main/LICENSE	200	1068	f9ddbdf63fb9	MIT License	MIT	yes - REFUSED, see below

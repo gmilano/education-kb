@@ -1,0 +1,5 @@
+repo	stars	grant	why_refused
+computerlovetech/agr	453	MIT (byte-read, 1068 B, f9ddbdf63fb9)	Its own GitHub description says "Not actively maintained." README describes a real, well-built package manager for AI agent skills - but it is DEVELOPER tooling, not education software; "Educational" in its description means a teaching exercise. Off-domain AND unmaintained. Recorded so it is not re-proposed. Same class as p926's MLShukai/pamiq-core.
+TheAlgorithms/C-Plus-Plus	34894	MIT	Homonym tail (927-F2): algorithms collection, not education software. Highest-star row in the p927 backlog and off-domain.
+raiyanyahya/how-to-train-your-gpt	4183	MIT	Programming tutorial content, not education software or an education agent.
+elixirschool/elixirschool	3675	Apache-2.0	Programming-language learning content; "school" is a homonym, not an education platform.

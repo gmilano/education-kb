@@ -3936,6 +3936,53 @@ step above, and in every case the *code* repository's licence cell was correct a
 
 ---
 
+## 928-G1 — Byte-read control gate: measure the file, never the variable — added `p928`
+
+🔴 **This gate exists because `p928` ran a control on `p927`'s 37 byte-read grants and the control
+reported `32 of 36 DIVERGE`. The control was wrong. `p927` was right — all 37 reproduce exactly,
+byte count and `sha256₁₂`** (`evidence/p927-byteread-control.2026-11-19-p928.tsv`).
+
+**The defect.** The control captured the body and the status code in one `curl -w '\n%{http_code}'`
+call, held the result in a shell variable, and stripped the status line with `sed '$d'`:
+
+```sh
+out=$(curl -sS -w '\n%{http_code}' "$url")     # <-- $( ) strips ALL trailing newlines
+body=$(printf '%s' "$out" | sed '$d')          # <-- removes the body's last line with it
+```
+
+Every real `LICENSE` file ends in a newline. Command substitution eats it, so **every byte count
+came back one low and therefore every `sha256` changed.** The corrupted run is kept at
+`evidence/p928-cmdsubst-falsedivergence.2026-11-19-p928.tsv` so the signature stays readable.
+
+🔵 **The tell, and it is the part worth memorising.** The deltas were `1073→1072`, `1129→1128`,
+`1079→1078`, `1067→1066`, `1085→1084` — **uniform, across thirty unrelated repositories.** Thirty
+independently maintained MIT files do not all lose exactly one byte overnight. 🔴 **A divergence set
+whose deltas are all identical is an instrument fault, not a supply change**, and that test costs
+nothing to apply.
+
+**The gate.**
+
+- **Step 1 — write the body to a file.** `curl -o "$f" -w '%{http_code}'`. Measure `wc -c < "$f"`
+  and `sha256sum "$f"`. The bytes must never pass through a shell variable.
+- **Step 2 — before publishing any divergence, histogram the deltas.** If one delta value covers
+  most of the set, stop and audit the harness. Publish the divergence only once the deltas are
+  heterogeneous.
+- **Step 3 — a `200` with a changed digest is a claim about *someone else's repository*.** Hold it
+  to the same two-channel standard this base applies to absence (`926-F`): confirm on the search
+  channel that the repo was actually pushed since the prior read before calling it a change.
+
+🟢 **Runnable:** `compose/code/p928-byteread-control/byteread.sh` is the corrected single-URL
+reader; `test_byteread.sh` is its acceptance test — 3 controls, no network, and control 2 asserts
+the defect still reproduces, so the test fails loudly if it ever stops protecting anything.
+
+🔵 **Why this is the symmetric twin of `926-F`.** `p926` found a channel that fails toward **false
+absence** — a batched query drops a row without saying so. This is a channel that fails toward
+**false divergence** — a harness reports change where there is none. Both are silent, both are
+produced by the measuring apparatus rather than the world, and **both would have been published as
+findings about repositories.** See `intel/trends.md` `T69`.
+
+---
+
 ## P54 — Generate the courseware, ship it as SCORM, and never touch the client's LMS — added `p927`
 
 **The problem.** Every content pattern in this file ends at the same wall: the generated
@@ -4050,3 +4097,68 @@ It reduces **prohibition and privacy exposure**, which is a different thing, and
 told so plainly. 🟡 And the three proctoring rows are **0–1 ★ and months old** — they are
 **reference designs to read**, not dependencies to pin. The studio's first offer should still be
 **integrity by assessment design**; P55 exists so that the second offer is not a refusal.
+
+## P56 — The mastery loop that updates *per answer*: permissive end to end, no retraining job — added `p928`
+
+**The problem this solves.** Every adaptive-learning pitch in this base promises that the system
+"adapts to the learner". In most delivered builds it does not: answers are logged, a batch job
+retrains nightly or weekly, and the learner in front of you today gets yesterday's model. The
+reason is almost never pedagogy — it is that the team reached for a batch ML stack, because that is
+what is permissively available and familiar. `p928` shelved the piece that removes the excuse.
+
+**The stack — four rows, four permissive grants, none copyleft.**
+
+| Role | Repo | Grant |
+|---|---|---|
+| Per-interaction mastery estimation | https://github.com/online-ml/river | **BSD-3-Clause** |
+| Asynchronous in-material retrieval practice | https://github.com/cognitive-engineering-lab/mdbook-quiz | **`MIT OR Apache-2.0`** — take it under **MIT** |
+| Live, in-room formative checks | https://github.com/david-04/quiz-mate | **ISC** |
+| Pedagogically coherent source chunking | https://github.com/cmlonder/notebooklm-chunker | **MIT** |
+| Reference BKT implementation + scaffolded hints | https://github.com/CAHLR/OATutor | **MIT** (🔴 content is a separate repo — `927-G1`) |
+
+### Wiring
+
+1. **Chunk the client's material on headings, not tokens.** `notebooklm-chunker` over the source
+   PDFs. A chunk boundary that splits a worked example in half produces a retrieval that reads as
+   incoherent to a student, and no prompt fixes it downstream.
+2. **Attach an item to each chunk.** `mdbook-quiz` questions are `.toml` files referenced from the
+   book, so authoring and assessment stay in one artefact and one review cycle. Its `Tracing`
+   question type (predict the program's output) is worth using as-is for anything code-adjacent.
+   Use `OATutor`'s scaffolded-hint shape for item design — question, then hint, then sub-step —
+   rather than inventing one.
+   🔴 **Budget for response capture: `mdbook-quiz` documents no results backend.** It renders and
+   grades in the page; getting the answer event to step 3 is a small piece of work you must plan,
+   not a feature you inherit. This is the one integration cost in this pattern and it is the one
+   teams discover late.
+3. **Model mastery incrementally with `river`.** One `learn_one(x, y)` call per submitted answer.
+   Start with a logistic model over `(skill, learner, item-difficulty)` as the permissive stand-in
+   for BKT; add `river`'s **drift detectors** on the per-skill error stream — a drift alarm on a
+   cohort is the signal that the *material* changed difficulty, not that the learner regressed.
+   🔵 **This is the step that makes the loop real: the estimate that selects the next item was
+   updated by the answer the student just gave.**
+4. **Use `quiz-mate` for the synchronous half.** Same item bank, exported; the host drives
+   questions in a live session and the responses feed the same `river` models. One mastery state,
+   two delivery surfaces.
+5. **Expose the state, do not hide it.** Mastery per skill, the evidence behind it, and the date it
+   last moved — rendered for the learner and exportable for the institution. That export is what
+   `P48` sells into a regulated market and what `P53` attaches to a tutor the client already owns.
+
+### What to tell the client, and what it costs
+
+- 🟢 **Licence position is clean**: BSD-3-Clause + MIT + ISC + MIT. Take `mdbook-quiz` **under its
+  MIT half** and the whole path stays GPL-2.0-compatible and free of patent clauses (`T70`).
+- 🟡 **`river` models the *estimate*, not the pedagogy.** It will tell you mastery moved; it will
+  not tell you which item to show next. That policy is yours to write and is the deliverable the
+  client is actually buying — budget design time for it, not just engineering.
+- 🔴 **Do not promise a learning-outcome gain.** This base's standing caveat holds: there is no
+  credible primary evidence of outcome gains from AI tutoring at scale. Sell the *loop and its
+  evidence trail*, and open with `10kH/MisconceptDialogue` — the criteria decide the measured
+  result, so agree the criteria with the client before measuring anything (`P7`).
+- **Shape:** 5–7 weeks for a single-subject pilot with a real item bank; the item bank, not the
+  code, is the long pole, and `P51`'s generation line is how you shorten it.
+
+### 🔴 What this pattern does *not* cover
+
+Identity, enrolment and gradebook write-back. Those are LMS concerns — take them from `P53` and the
+Canvas/Moodle seams in `verticals/solutions.md`. Nothing above touches the client's LMS, which is
+deliberate: it is what lets the pilot start without a procurement cycle (`T30`).

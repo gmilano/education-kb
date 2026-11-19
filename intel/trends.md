@@ -2670,3 +2670,94 @@ rendered operable: defaults configured in the LMS, an auditable record of what t
 approved it, teacher-facing guidance at the point of use, and a reporting line an administrator can
 show an inspector. 🟢 That is `compose/patterns.md` **P8** (metering, attribution, exit) plus
 **P10** (teacher capacity) sold as one engagement, and `T67` is the sentence that opens it.
+
+## T69 — This base's two most expensive error classes are both produced by the *instrument*, and both are silent (added `p928`)
+
+`p926` found the first: a batched `repo:`-qualified search **drops a missing row without reporting
+an error**, so a sweep that reported `errors: 0` had silently lost three live repositories. It
+fails toward **false absence**.
+
+`p928` found its exact twin, in the opposite direction. A control harness re-reading `p927`'s 37
+grant files reported **32 of 36 diverged** — thirty-two of this base's freshly published licence
+cells apparently wrong within a day. **Every one of those divergences was manufactured by the
+harness.** It captured the HTTP body through shell command substitution, which strips trailing
+newlines; since every real `LICENSE` file ends in one, every byte count came back one low and every
+digest changed. Measured from a file instead, **37 of 37 reproduce exactly**
+(`evidence/p927-byteread-control.2026-11-19-p928.tsv`). It fails toward **false divergence**.
+
+**The pair is the trend, not either half.**
+
+| | `926-F` | `928-G1` |
+|---|---|---|
+| Direction | false **absence** — live rows vanish | false **divergence** — stable rows appear to change |
+| Channel | batched search `repo:` qualifiers | shell byte-read harness |
+| Reported error | `errors: 0` | `HTTP 200` on every row |
+| What it would have published | three repositories deleted from the shelf | thirty-two licence cells "corrected" to wrong values |
+| Detector | reconcile returned set against requested set | **histogram the deltas** — uniform delta = instrument fault |
+
+🔴 **Both would have been published as findings about *repositories*.** Neither announces itself:
+one returns a clean zero, the other returns a clean `200`. In both cases the apparatus was the only
+thing that changed, and in both cases the base had no step that would have noticed.
+
+🔵 **The operative rule — `928-R1`: before a measurement of change is published, it must survive a
+test that the measuring apparatus did not change.** The cheap version of that test is a delta
+histogram: **real change is heterogeneous; instrument fault is uniform.** Thirty unrelated MIT
+files losing exactly one byte each is not a fact about MIT files.
+
+🟡 **Why this belongs in a trends file rather than only in a gate.** This base's published value is
+licence and liveness cells that a studio will act on commercially — vendoring a repo, pricing a
+build, telling a client a dependency is permissive. The two failure modes above are the only ones
+observed so far that corrupt those cells **while every visible indicator reads healthy**. A reader
+of this KB should know they exist, and `compose/patterns.md` `928-G1` and `926-F` are the two
+places where the countermeasures are runnable.
+
+## T70 — A *disjunctive* grant is a right the licensee holds, and every channel this base uses deletes it (measured `p928`)
+
+`T53` said the licence that decides your build is often not at the repository root. `p928` found a
+fourth shape, and unlike the first three it is an **ecosystem-wide convention** rather than one
+project's habit — which makes it both predictable and, so far, invisible.
+
+**The shape.** A Rust crate conventionally offers `MIT OR Apache-2.0`: **no root `LICENSE` file at
+all**, two files named `LICENSE-MIT` and `LICENSE-APACHE`, and the authoritative statement in
+`Cargo.toml` as `license = "MIT OR Apache-2.0"`. The `OR` is the point. It is **the licensee's
+choice**, exercised at use, and it is worth real money: take it under MIT and you get
+**GPL-2.0 compatibility** and **no patent clause**; take it under Apache-2.0 and you get an
+**express patent grant** and a **patent-retaliation term**. Those are different products.
+
+**What the channels do with it.**
+
+| Repo | Actual grant (`Cargo.toml`, byte-read `p928`) | `search/repositories` says | This base published |
+|---|---|---|---|
+| `RWTH-OS/eduOS-rs` | `MIT/Apache-2.0` | `Apache-2.0` | 🔴 `Apache-2.0` — **corrected `p928`** |
+| `cognitive-engineering-lab/mdbook-quiz` | `MIT OR Apache-2.0` | `Apache-2.0` | now shelved with the disjunction intact |
+| `mcgrizzz/Yomine` | `MIT OR Apache-2.0` | `Apache-2.0` | now shelved with the disjunction intact |
+
+🔴 **Three of three disjunctive repositories were flattened by the search channel, and in every case
+it kept Apache-2.0 and discarded MIT** — the half with the patent clause and the GPL-2.0
+incompatibility. A root-`LICENSE` byte-read cannot correct this either, because **there is no root
+`LICENSE` to read**: the two-channel rule this base relies on has both channels blind at once.
+
+**Blast radius, measured rather than asserted.** All **618** addresses published in `agents/top.md`,
+`repos/foundations.md` and `verticals/solutions.md` were probed for `Cargo.toml`
+(`evidence/rust-manifest-grant-probe.2026-11-19-p928.tsv`). **Ten are Rust crates.** One was
+disjunctive and was published flattened; six are single-value and correct; **three declare no
+`license` field at all** (`chroma-core/chroma`, `daac-tools/vibrato`, `ongjin/garu`) because the
+value is inherited from a workspace root manifest — a fifth shape, recorded and not yet chased.
+
+🔵 **`928-R2` — the detector is one line, and this base should have had it from `T53`.** For any
+repository with a `Cargo.toml` — and, with the same reasoning, a `package.json` or a `*.csproj`,
+whose `license` and `PackageLicenseExpression` fields are **SPDX expressions** and so carry `OR`
+and `AND` — **read the manifest's licence field, not the licence file**, and **preserve the
+operator**. (A `*.gemspec` takes a *list* of licences rather than an expression, which is the same
+information with the operator left implicit; `pyproject.toml` accepts an expression only under
+PEP 639, so older projects there will not show one.) A cell
+that reads `Apache-2.0` where the grant reads `MIT OR Apache-2.0` is not a rounding error: it has
+removed a right the client actually has, and it will be read as the reason a GPL-2.0 integration
+was ruled out.
+
+🟡 **Scope, honestly.** This is measured on **12 repositories** — the ten Rust rows on the shelf plus
+the two shelved this pass. The *rate* among disjunctive repos (3 of 3 flattened) is a property of
+the channel and is as solid as a three-case observation gets, because the mechanism is visible.
+The *prevalence* (10 Rust crates in 618 addresses) is specific to this base's current shelf and
+says nothing about education supply at large. The manifest families other than Cargo are **not**
+probed yet and that is this trend's open edge.
