@@ -6,7 +6,7 @@ updated: 2026-11-19
 
 # Current trends — education
 
-**Thirty-one trends** (**T30 and T31 added in `p907`** — the LMS-to-agent bridge being built per-institution on the *user's own credentials*, which needs no institutional consent; and the agent-skill marketplaces having no education tier at all, which makes `T26`'s distribution channel measurably empty. Both are the first trends in this file derived from **global code search**, an instrument this base had recorded as unusable; **T29 added in `p906`** — vernacular open education supply measured across eight languages and found to be a single-country phenomenon, with *no licence at all* the default state in the other seven; **T26 added in `p903`** — the unit of publication shifting from the
+**Thirty-nine trends, re-counted mechanically in `p913`** (🔴 this line read *"Thirty-one"* and was **eight short**: `T32`–`T38` were added in `p908`–`p912` and `T39` in `p913`. `compose/patterns.md` carries the rule — *a pass that adds one should re-count, not increment* — and this file drifted the same way and further. 🔵 The count is `grep -cE '^## T[0-9]+' intel/trends.md`; **do not hand-edit it.** `T37` is **materially corrected in `p913`** and `T38` has a second chapter added in `p913`.) (**T30 and T31 added in `p907`** — the LMS-to-agent bridge being built per-institution on the *user's own credentials*, which needs no institutional consent; and the agent-skill marketplaces having no education tier at all, which makes `T26`'s distribution channel measurably empty. Both are the first trends in this file derived from **global code search**, an instrument this base had recorded as unusable; **T29 added in `p906`** — vernacular open education supply measured across eight languages and found to be a single-country phenomenon, with *no licence at all* the default state in the other seven; **T26 added in `p903`** — the unit of publication shifting from the
 application to the agent-addressable curriculum corpus, the first trend in this file derived from a
 non-English repository channel; **T25 added in `p902`** — the licence trap moving from code to the data
 and content assets, where no index can see it; **T24 added in `p901`** — path-dependent licences, the first trend in this file derived from repositories the SPDX channel refused to resolve at all; **T23 added in `p900`** — the first trend in this file derived from a
@@ -1537,7 +1537,18 @@ directions, and only the hand count could say so. 🔴 **Three of those 45 were 
 attributed to the wrong country** (Ethiopian matric tooling on a South African leg, a Vietnamese
 university's exam clients on a Chilean one): **a national-exam acronym is not a national boundary.**
 
-## T37 — The institutions that own the examinations have **claimed their namespace and published nothing**, and "present and silent" is a different market from "absent" (measured `p912`)
+## T37 — The institutions that own the examinations publish **nothing**, and for most of them not even the namespace is claimed (measured `p912`, **materially corrected in `p913`**)
+
+> 🔴 **`p913` correction, read this before the table.** This trend was published as *"claimed their
+> namespace and published nothing."* `p913` built the committed owner classifier `912-G2` asked for
+> and re-measured all eight boards. **The "claimed the namespace" half does not hold for four of
+> the five boards it was asserted of.** `WAEC`, `NABTEB`, `KNEC` and `CENEVAL` return HTTP **422**
+> from the owner channel — byte-identical to a negative control chosen not to exist — which means
+> *absent or invisible*, **not** *registered and empty*. Only **JAMB** returns HTTP 200 with
+> `total_count` 0, which is what registered-and-empty actually looks like. The **"publishes
+> nothing"** half survives in full, and so does the commercial conclusion. Details, the three-state
+> channel table and the cross-file inconsistency that produced it: `verticals/solutions.md` →
+> *"Re-measured in `p913`"*, and `T38`.
 
 Through `p911` this KB recorded the board-grade examination tier as a gap — *no delivery or marking
 platform exists under any licence* (`911-G1`). That is a statement about supply. `p912` asked the
@@ -1545,31 +1556,40 @@ complementary question, which no pass had asked: **do the boards themselves publ
 
 Eight examination authorities, probed on two channels with a negative control:
 
-| Board | Market | Namespace | Public repositories |
+| Board | Market | Namespace — **as re-measured `p913`** | Public repositories |
 |---|---|---|---|
-| WAEC | Nigeria / Ghana / Sierra Leone / Gambia / Liberia | 🟢 exists | 🔴 **0** |
-| KNEC | Kenya | 🟢 exists | 🔴 **0** |
-| CENEVAL | Mexico | 🟢 exists | 🔴 **0** |
-| NABTEB | Nigeria | 🟢 exists | 🔴 **0** |
-| JAMB | Nigeria | 🟢 exists, indexed | 🔴 **0** |
-| NECO | Nigeria | 🔴 unrelated account (Ruby PBX shop, 2009–2010) | n/a |
-| DEMRE | Chile | 🔴 unrelated personal account | n/a |
-| UNEB | Uganda | 🟡 one `0 ★` hackathon repo, idle since 2014 | 🔴 1 |
+| WAEC | Nigeria / Ghana / Sierra Leone / Gambia / Liberia | 🔴 **not established** (HTTP 422 = absent or invisible) | — |
+| KNEC | Kenya | 🔴 **not established** (HTTP 422) | — |
+| CENEVAL | Mexico | 🔴 **not established** (HTTP 422) | — |
+| NABTEB | Nigeria | 🔴 **not established** (HTTP 422) | — |
+| JAMB | Nigeria | 🟢 **registered and empty** (HTTP 200, `total_count` 0) | 🔴 **0** |
+| NECO | Nigeria | 🔴 unrelated account (Ruby PBX shop, 2009–2010); `OCCUPIED-UNRELATED` on payload adjudication | n/a |
+| DEMRE | Chile | 🔴 unrelated personal account; `OCCUPIED-UNRELATED` on payload adjudication | n/a |
+| UNEB | Uganda | 🟡 one `0 ★` hackathon repo, idle since 2014; `OCCUPIED-UNRELATED` **on metadata alone** (0 READMEs readable) | 🔴 1 |
 
-🟢 **Five boards have registered their own name on the platform and published nothing into it.**
-That is not the same fact as absence, and it changes the conversation in three ways.
+🔴 **One board is registered and silent; three are occupied by unrelated parties; four are not
+established as registered at all.** The uniform finding is the silence, not the registration — and
+the silence is total: **not one board publishes a platform, an API client, a question schema or a
+results format.** That is still a different market from "the technology does not exist", and it
+changes the conversation in three ways.
 
-1. 🔵 **The ask is publication, not onboarding.** An institution that already holds its namespace
-   has made an institutional decision to be present. A studio engagement can propose *publishing
-   the question schema, the results format, the blueprint* as a deliverable, rather than proposing
-   that a ministry join a platform.
+1. 🔴 **The ask is publication, and for most boards it is *registration and then* publication.**
+   `p912` read this trend as *"the institution has already made a decision to be present, so the
+   ask is publication, not onboarding."* **For four of the five that reasoning is withdrawn** —
+   there is no namespace and therefore no institutional signal to build on, and an unclaimed
+   namespace for a national examination board is an **impersonation exposure** a studio should
+   raise rather than exploit. Only with **JAMB** can publication be proposed to a board that has
+   demonstrably already shown up.
 2. 🔴 **There is no board-published interface to conform to, so the first builder defines it.**
    Nigeria already has **four independent permissive CBT implementations** (`p911`) integrating
    against a target with no published schema. 🔴 **Portability between boards cannot be assumed and
    must be priced** — this is the concrete cost of the silence.
 3. 🟡 **And the silence is not evenly distributed.** Where the board name is *taken by somebody
-   else* — `NECO`, `DEMRE` — a studio cannot even propose the namespace as the publication channel,
-   and three of eight are in that state.
+   else* — `NECO`, `DEMRE`, `UNEB` — a studio cannot even propose the namespace as the publication
+   channel, and three of eight are in that state. 🔴 `p913` adds a fourth state that is worse for
+   planning than either: **four boards whose namespace status cannot be established at all** on the
+   channels available here. For those, the first deliverable is a *question to the board*, not a
+   proposal.
 
 🔴 **The inverse trend is worth stating too, because it is the one that pays.** Every artefact this
 KB holds for WAEC, JAMB, KNEC, PAES, EXANI and the EUEE was built by **students, teachers and
@@ -1621,3 +1641,135 @@ detectors run cumulatively with the specific before the generic, never a first-m
 sharpest form of the lesson: in both misses here **the published `spdx_id` field was right and this
 base's own byte-read was wrong** — the inverse of what `T19` would predict, and the reason `T19` now
 carries this trend as its counterweight rather than standing alone.
+
+
+### 🔴 `p913` — the second chapter, and it is worse: the **corrected** instrument was wrong on education's single most common platform licence
+
+`p912` built `ingest/p912-grant-family.sh` to fix `p880`, and explicitly scoped itself: *"A later
+pass retires p880 against the two controls below."* `p913` ran that retirement over the whole shelf
+— `363` addresses — and the corrected instrument failed on **17** of them, in the licence family
+this industry is built on.
+
+🔴 **GPL-3.0's own text names the Affero licence three times**, in section 13, *"Use with the GNU
+Affero General Public License"*. Both instruments grade with:
+
+```
+grep -qi "GNU AFFERO GENERAL PUBLIC LICENSE"                          -> AGPL-3.0
+grep -qi "GNU GENERAL PUBLIC LICENSE" && ! grep -qi "AFFERO|LESSER"   -> GPL
+```
+
+The first line fires on a genuine GPL-3.0 payload, and the `AFFERO` guard on the second then
+**suppresses the GPL branch**, so under either instrument *the GPL branch cannot fire on GPL-3.0 at
+all.* Measured discriminators, both byte-read this pass:
+
+| | Title line | `Affero` mentions | Bytes |
+|---|---|---|---|
+| true **GPL-3.0** | `GNU GENERAL PUBLIC LICENSE` | **3** (all in §13) | ~35,147–35,151 |
+| true **AGPL-3.0** | `GNU AFFERO GENERAL PUBLIC LICENSE` | **15** | **34,523** |
+
+**14 shelf rows** flipped `AGPL-3.0 → GPL`, among them `moodle/moodle`, `Koha-Community/Koha`,
+`chamilo/chamilo-lms`, `ILIAS-eLearning/ILIAS`, `pkp/ojs`, `h5p/h5p-php-library`,
+`LearningLocker/learninglocker` and `kiwix/kiwix-tools`; two more flipped `LGPL → GPL` and one
+`CONJUNCTIVE → GPL`.
+
+🔵 **Both directions are commercially live, which is why this is a `T19`-class risk and not a
+tidy-up.** AGPL-3.0 §13 imposes a **network-use source-disclosure** obligation that GPL-3.0 does
+not. Calling Koha, Chamilo or ILIAS *AGPL* **overstates** the obligation and wrongly kills a hosted
+design; and the opposite error was live on this shelf too — **`OpenPronounce/OpenPronounce` was
+published as `MIT` and is byte-confirmed `AGPL-3.0`** (34,523 B, title line read), which
+**understates** it, on a row in `agents/top.md` that three patterns cite.
+
+🔴 **And the defect was a REGRESSION of a fix this base had already made, documented, and
+committed.** `ingest/licence-grade-titleline-p640.sh` carries this in its own header:
+
+> *"p640 — grade on the TITLE LINE, not substring-over-payload. Both p639's grader and p640's first
+> grader failed on the GNU family because GPL-3.0 names AFFERO 3x (s.13) and AGPL-3.0 names 'GNU
+> GENERAL PUBLIC LICENSE' 5x. Title-line grading is the only sound discriminator."*
+
+`p880` replaced title-line grading with body-substring grading and reintroduced the defect. `p912`
+then audited `p880` **for precisely this collision class** — Boost prefix-collides with the MIT
+trigger phrase — and did not generalise its own rule to the GNU family. 🔵 **The transferable lesson
+is about process, not about licences: a correction pass must read the instrument history, because
+the defect it is about to find may already have a committed fix that a later instrument dropped.**
+`273` passes separate `p640`'s fix from `p913`'s restoration of it.
+
+🔴 **The sharpest consequence is a near-miss, and it is the reason this trend now has a rule
+attached.** `912-G1` specified the discharge as *"re-run the instrument over the shelf's slug list
+and diff the verdict column."* Executed literally, that would have **overwritten 22 correct shelf
+cells with wrong ones**, `moodle/moodle` among them. 🟢 **Rule, added to `G1` as gate `913-G1`: a
+re-measurement is evidence about the instrument before it is evidence about the shelf.** When a new
+instrument disagrees with a published cell, the disagreement is adjudicated **per row, from the
+payload**, and recency is not a tie-breaker.
+
+🔴 **And the structural reason this recurred three times is now identified, which makes it fixable
+rather than merely regrettable.** This base **already gates the §13 discriminator** —
+`p309-affero-rung-census`, *36 controls*, **green on every pass**, with `p150`'s correct
+`title_licence()` and a `NAIVE_AGPL` negative control behind it. Its static screen walks
+`compose/code/**/*.py`. 🔵 **The licence authority of this base is a shell script in `ingest/`** —
+not `.py`, not under `compose/code/` — so the instrument built to catch exactly this pattern cannot
+see the file that produces the cells. Measured on executable lines: the naive body-AGPL pattern is
+**present** in `ingest/p880-licence-byteread.sh` and `ingest/p912-grant-family.sh`, **absent** in
+`ingest/p913-grant-authority.sh`. 🔴 **A green gate over the wrong denominator is worse than no
+gate, because it is cited as assurance.** `p309`'s own README states the rule that closes it —
+`p308`'s *"import the canonical list, never restate it"*, **applied to classifiers and not only to
+shelf data**. Registered as `913-G8`.
+
+🟡 **`p913`'s own fix introduced a new blind spot, found and closed in the same pass.** Title-line
+grading cannot read a **translated** title: `portabilis/i-diario` is AGPL-3.0 as
+`LICENÇA PÚBLICA GERAL AFFERO GNU`, and `p913`'s first cut graded it `UNKNOWN-TEMPLATE` while the
+shelf had it right. The body-grep it replaced would have caught `AFFERO` in any language. 🔵 **Every
+fix to this instrument has traded one error class for another**, which is the honest summary of
+three passes of work on it — and the current instrument keeps the body as a *marked, weaker*
+fallback precisely so the trade is not silent.
+
+## T39 — In the markets with the weakest open supply, the national AI-in-education tier arrives as a **vendor-integrated OEM package**, and the open tier there is simultaneously the least licence-hygienic (measured `p913`)
+
+`T15` records that open source has built least where regulation has decided most. `T18` records a
+free, state-backed AI education platform being exported into emerging markets. `p913` measured the
+**supply and demand sides of the same market together** for the first time, and the two findings
+compose into a shape a studio has to plan around rather than discover.
+
+**Ethiopia is the measured instance, and it is this KB's weakest-supply market.**
+
+| Side of the market | Measured | Pass |
+|---|---|---|
+| Open supply | `43` repositories, **`81.4%` with no licence file at all**, `70%` at zero stars, ceiling **`7 ★`**, none over `100 ★` | `p912` |
+| Liveness of that supply | **`40%` pushed on or after `2026-09-01`** — live, not abandoned | `p912` |
+| National AI tier | **Ministry of Education + Huawei**, national-curriculum **AI teaching assistant for grades 9–12**, trial from **`2026-05-14`** | `p913` |
+| Policy | National AI Policy **June 2024**; Digital Education Strategy **2023–2028** in force; revision for **2026/27–2030** in preparation with *AI pilots* a named priority; higher-education AI policy in preparation **Sept 2026**; UNESCO working with the Ministry on a national AI-in-education framework | `p913` |
+| Binding constraint | **`43%` rural electrification** vs `94%` urban; **`1,500` schools connected** (1,200 SchoolNet + 300 World Bank) against a target of *at least half*; **`21.7%`** national internet penetration | `p913` |
+
+🔴 **The two tiers are competing for the same grades.** The three Ethiopian rows `p912` promoted
+address the Grade 12 examination and Grade 9–12 practice. The Huawei pilot addresses **grades 9–12
+of the national curriculum**. 🔵 **The open tier is not an alternative to the national programme in
+this market; it is an input to it or it is nothing** — and the input is `81.4%` ungranted, so it
+cannot be contributed to a government programme without a licence-remediation step first.
+
+**Why this is a trend and not one country.** The mechanism is general, and each limb is already
+measured elsewhere in this file:
+
+1. **Low open supply raises the value of a bundled package**, because a ministry buying capability
+   rather than code has nothing local to assemble. (`T15`, inverted: supply scarcity *invites* the
+   OEM.)
+2. **The OEM arrives with hardware and connectivity**, which is the actual constraint in these
+   markets — not model quality. A supplier that solves power and bandwidth is selling the binding
+   factor, and the AI tier rides in with it.
+3. **The published policy follows, not precedes, the pilot.** Ethiopia's pilot began in **May
+   2026**; the strategy naming AI pilots as a priority is the **2026/27–2030** revision still in
+   preparation. 🔵 `T1` records regulation moving from guidance to binding rules in the regulated
+   markets; this is the opposite sequence, and it means **the specification is being written by the
+   first deployment**.
+
+🟢 **What follows commercially, and it inverts the obvious play.** The studio position in an
+OEM-occupied market is **not a rival tutor**. It is: the **interoperability tier** between a vendor
+pilot and the systems a ministry already runs (Ethiopian edtech reporting this year puts
+the constraint on **fragmentation** — school systems that cannot share data — rather than on raw
+connectivity; `intel/market.md` EMEA, `p913`); the **governance and evaluation tier** the OEM has no incentive
+to build; **teacher enablement at system scale** (`T11`, `P10`); and the **licence remediation** that
+makes the live local supply contributable. `P32` scopes it.
+
+🔴 **Declared limit of this trend.** It rests on **one** measured market. Ethiopia is the only market
+in this KB where supply and demand have been measured in the same window, and the Huawei pilot is a
+**single-sourced news claim**. 🔵 **The cheap test is the second market**: any market in `p911`'s
+cohort with a comparable ungranted share — Ghana, Uganda, Tanzania — probed for an OEM national
+pilot. Registered as `913-G3`.

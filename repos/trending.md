@@ -4,6 +4,79 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p913) — **The whole shelf re-measured: 363 addresses, 56 verdicts changed (15.4%), and 22 of those changes would have been errors. 79.1% permissive, 14.0% copyleft, 8 addresses with no reachable payload. Three licence families and three licence *shapes* found that no instrument in this base could ever name — including education's own licence, ECL-2.0, sitting under a cell that read `Apache-2.0`.**
+
+**Channel.** `gh api search/repositories` for default-branch resolution across all **363** distinct
+addresses in `agents/top.md`, `repos/foundations.md` and `verticals/solutions.md`, then
+`raw.githubusercontent.com` byte-reads on the resolved branch, graded by
+**`ingest/p913-grant-authority.sh`**. 🔵 The re-adjudication pass used `--from-tsv`, which makes
+**no search-API call at all** because branch and path are facts carried in the input. Per-row
+evidence: `evidence/p913-shelf-authority.2026-11-19-p913.tsv`; the superseded instrument's run is
+kept at `evidence/p913-shelf-p912-instrument.2026-11-19-p913.tsv` so the diff is reproducible.
+
+### 🟢 The licence posture of the entire shelf, measured
+
+| | Count | Share |
+|---|---|---|
+| Plainly permissive head grant (MIT, Apache-2.0, BSD, ISC, BSL-1.0, ECL-2.0, MulanPSL-2.0, dual) | **287** | **79.1%** |
+| Copyleft (AGPL-3.0 26, GPL 19, LGPL 6) | **51** | **14.0%** |
+| Conjunctive / split / by-reference / manifest-deferred / out-of-band | **12** | 3.3% |
+| Creative Commons and data licences (CC0 2, CC-BY 2, CC-BY-SA 1, ODbL 1) | **6** | 1.7% |
+| 🔴 **No reachable licence payload** | **8** | 2.2% |
+
+🔵 **The shelf average is not the number to quote.** `79.1%` permissive is a property of the
+*shelf*, and education's **platform tier is where the copyleft is** — Moodle, Koha, Chamilo, ILIAS,
+OJS, Open edX, Canvas. Read the column for the rows a build actually touches.
+
+### 🔴 56 verdicts changed against the superseded instrument, and the dominant class is a false positive
+
+| Flip | Rows |
+|---|---|
+| `AGPL-3.0` → **`GPL`** | **14** — `moodle/moodle`, `Koha-Community/Koha`, `chamilo/chamilo-lms`, `ILIAS-eLearning/ILIAS`, `pkp/ojs`, `h5p/h5p-php-library`, `LearningLocker/learninglocker`, `kiwix/kiwix-tools`, `GibbonEdu/core`, `Citolab/qti-components`, `EduardoKrausME/moodle-local_mcp`, `davidpesce/moodle-logstore_xapi`, `pyta-uoft/pyta`, `DeanChensj/jiangshan-map` |
+| `MIT` → `BODY-MIT` (same family, weaker evidence, now marked) | 8 |
+| `NO-LICENCE-FILE-FOUND` → `NO-PAYLOAD-IN-INPUT` (a measurement state, not a licence state) | 8 |
+| `BSD` → `BODY-BSD` | 6 |
+| `UNKNOWN-TEMPLATE` → **`MulanPSL-2.0`** | 3 |
+| `UNKNOWN-TEMPLATE` → **`ECL-2.0`** | 3 |
+| `LGPL` → `GPL` | 2 |
+| `UNKNOWN-TEMPLATE`/`CC-BY` → **`SPLIT-BY-ASSET-TYPE`** | 2 |
+| `CONJUNCTIVE` → `GPL` / `LGPL` / `MIT-TITLE-OUT-OF-BAND` / `BODY-CONJUNCTIVE` | 4 |
+| `MIT` → **`DUAL-MIT-OR-Apache-2.0`** · `UNKNOWN-TEMPLATE` → **`ODbL-1.0`** · `UNKNOWN-TEMPLATE` → **`AGPL-3.0`** · `UNKNOWN-TEMPLATE` → `MANIFEST-DEFERRED` · `DECLARATION-ONLY` → `BY-REFERENCE-GPL` · `UNKNOWN-TEMPLATE` → `BY-REFERENCE-CC-BY-SA` | 6 |
+
+🔴 **17 of those 56 are the GNU false positive** (`913-F1` in `agents/trending.md`): GPL-3.0's §13
+names the Affero licence, the detector fires on it, and the `! grep AFFERO` guard suppresses the GPL
+branch. **In 22 rows the shelf was right and the instrument was wrong**, so the naïve discharge of
+`912-G1` would have corrupted them.
+
+### 🟢 Four cells corrected, three flagged — the full list, because a correction list is the only honest form of this section
+
+| Address | Was | Now | Why it matters |
+|---|---|---|---|
+| `OpenPronounce/OpenPronounce` | `MIT` | 🔴 **`AGPL-3.0`** (34,523 B, title line read) | **The dangerous direction.** §13 network-use disclosure, on a row `P1`/`P9`/`P16` cite |
+| `jupyterhub/zero-to-jupyterhub-k8s` | `Apache-2.0` | 🔴 **`BSD-3-Clause` + Apache-2.0** (13,206 B) | The **head** grant was wrong, *and* it is conjunctive |
+| `jitsi/jitsi-meet` | `Apache-2.0` | 🔴 **`Apache-2.0` + `MIT`** (12,596 B) | ~1.2 kB over a standard Apache text; the excess is a second grant |
+| `apereo/java-cas-client` | `Apache-2.0` | 🔴 **`Apache-2.0` + JA-SIG `BSD`** (2,321 B) | **`p880`'s own documented conjunctive control** — the instrument reported it correctly and the cell recorded one half for 33 passes |
+| `h5p/h5p-interactive-video`, `h5p-course-presentation`, `h5p-audio-recorder` | `MIT` | 🟡 **`MIT`, manifest-declared only** | `LICENSE`, `LICENSE.txt`, `LICENSE.md`, `license.txt`, `COPYING` all `404` on both branches — the claim is real but it is **not** payload-backed |
+
+### 🔴 What this channel could NOT reach, stated because an unrecorded absence reads as coverage
+
+**8 addresses have no reachable licence payload**, and that is a fact about the instrument's
+16-name **flat** filename list, not about the repositories. The clearest case is
+**`OS4ED/openSIS-Classic`**, whose grant is at **`master/docs/License.txt`** — a *subdirectory* —
+where the shelf's `GPL-2.0` cell (byte-read in `p897`) is **right** and this pass's authority says
+`NO-PAYLOAD`. 🔵 **A flat filename list is a recall ceiling.** Registered as `913-G4`; the named fix
+is to extend the ladder to `docs/`, `legal/` and `LICENSES/`. The other seven: three `h5p` content
+types, `summeraprx/topik-shortcut` (corroborating `p910`'s absence sweep on an independent ladder),
+`bolgerru/blackboard-mcp`, `steve-ongera/KNEC-Exam-Management-System`, `turnkeylinux-apps/canvas`.
+
+### 🔴 Supply legs — nil for new rows, 38th consecutive time
+
+Four global legs and four regional legs ran; every repository they surfaced is already shelved.
+Enumerated in `agents/top.md` → *"What `p913` searched for and did not find"*. 🔵 **No row was
+promoted into `repos/foundations.md` this pass**, and the pass's value is in the shelf it already
+had being measured correctly for the first time.
+
+
 ## `2026-11-19` (p912) — **Ethiopia's examination tier measured for the first time: 43 repositories, 81.4% with no grant at all, 0 of 43 clearing 100 ★ and a ceiling of 7. The weakest supply this KB has recorded — and 40% of it was pushed this quarter. Two licence verdicts on this cohort were produced wrong by the instrument that graded every licence cell in this base.**
 
 **Channel.** `gh api search/repositories`, 10 legs (5 Ethiopian examination terms × bare and

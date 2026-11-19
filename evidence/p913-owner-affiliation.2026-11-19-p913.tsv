@@ -1,0 +1,10 @@
+owner	domain_terms	http	repos_total	probed	readmes_read	meta_terms	readme_terms	verdict	evidence
+moodle	lms,learning,moodle,course,student	200	12	12	12	3/5	3/5	AFFILIATED-BY-PAYLOAD	metadata: lms×1,learning×1,moodle×12 | readme: learning×4,moodle×120,course×1
+waec	exam,examination,assessment,curriculum,syllabus,candidate,school,student,education,grading	422	-	0	0	-	-	ABSENT-OR-INVISIBLE	byte-identical to negative control zzqqxxnotanowner913zz — this owner is NOT established as registered
+neco	exam,examination,assessment,curriculum,syllabus,candidate,school,student,education,grading	200	5	5	2	0/10	0/10	OCCUPIED-UNRELATED	5 repositories, 2 readme(s) read, ZERO domain terms in metadata or prose — owner-level homonym (912-F4)
+NabTeb	exam,examination,assessment,curriculum,syllabus,candidate,school,student,education,grading	422	-	0	0	-	-	ABSENT-OR-INVISIBLE	byte-identical to negative control zzqqxxnotanowner913zz — this owner is NOT established as registered
+jamb	exam,examination,assessment,curriculum,syllabus,candidate,school,student,education,grading	200	0	0	0	-	-	REGISTERED-EMPTY	owner exists on the channel and publishes nothing — distinct from 422 (913-F2)
+knec	exam,examination,assessment,curriculum,syllabus,candidate,school,student,education,grading	422	-	0	0	-	-	ABSENT-OR-INVISIBLE	byte-identical to negative control zzqqxxnotanowner913zz — this owner is NOT established as registered
+ceneval	exam,examination,assessment,curriculum,syllabus,candidate,school,student,education,grading	422	-	0	0	-	-	ABSENT-OR-INVISIBLE	byte-identical to negative control zzqqxxnotanowner913zz — this owner is NOT established as registered
+demre	exam,examination,assessment,curriculum,syllabus,candidate,school,student,education,grading	200	4	4	2	0/10	0/10	OCCUPIED-UNRELATED	4 repositories, 2 readme(s) read, ZERO domain terms in metadata or prose — owner-level homonym (912-F4)
+uneb	exam,examination,assessment,curriculum,syllabus,candidate,school,student,education,grading	200	1	1	0	0/10	0/10	OCCUPIED-UNRELATED	1 repositories, 0 readme(s) read, ZERO domain terms in metadata or prose — owner-level homonym (912-F4)

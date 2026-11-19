@@ -193,7 +193,7 @@ Sorted by stars.
 | **BloomTutor** | https://github.com/Li-Evan/BloomTutor | MIT | 319 | 2026-11-17 | Tutor that structures interaction around Bloom's taxonomy levels. | APAC |
 | **OATutor** | https://github.com/CAHLR/OATutor | MIT | 282 | 2026-11-17 | Intelligent tutoring system with open problem banks and tutoring-effect instrumentation; built for A/B-testable learning research. | North America — UC Berkeley |
 | **molly554/whiteboard-ai-tutor** | https://github.com/molly554/whiteboard-ai-tutor | MIT | 262 | 2026-11-17 | Whiteboard tutor with animated lessons and interactive playback. Created after Aug 2026 — one of the fastest-growing new entrants. | Global |
-| **OpenPronounce** | https://github.com/OpenPronounce/OpenPronounce | MIT | 224 | 2026-11-09 | Open pronunciation assessment — the language-learning niche where open source is genuinely competitive with commercial APIs. 🔵 **p900: this base logged `halleck45/openpronounce` 5× in its `logged-not-shelved` ledger and nearly promoted it as a second row.** It is a **transfer alias of this repository** — byte-identical `README.md` (`sha256₁₂ a005d079f571`) — caught by the duplicate-subject gate before publication. **The rename mechanism that causes false ABSENCES in the ledger causes false DUPLICATES on the shelf**; both need the canonical name resolved first. | Global |
+| **OpenPronounce** | https://github.com/OpenPronounce/OpenPronounce | 🔴 **AGPL-3.0 — CORRECTED `p913`, was published here as `MIT`** (byte-read `main/LICENSE`, 34,523 B, `sha256₁₂ 0d96a4ff68ad`; title line `GNU AFFERO GENERAL PUBLIC LICENSE / Version 3, 19 November 2007`) | 224 | 2026-11-09 | 🔴 **READ THE LICENCE BEFORE SCOPING THIS ROW.** It was carried as `MIT` and is **AGPL-3.0**: §13 imposes a **network-use source-disclosure obligation**, so offering this as a hosted pronunciation service means offering its source to the users of that service. `P1`, `P9` and `P16` all cite pronunciation or oral assessment — none of them can use this row as a *linked* component of a closed deliverable; it runs as a separate service or not at all (`G1`). Open pronunciation assessment — the language-learning niche where open source is genuinely competitive with commercial APIs. 🔵 **p900: this base logged `halleck45/openpronounce` 5× in its `logged-not-shelved` ledger and nearly promoted it as a second row.** It is a **transfer alias of this repository** — byte-identical `README.md` (`sha256₁₂ a005d079f571`) — caught by the duplicate-subject gate before publication. **The rename mechanism that causes false ABSENCES in the ledger causes false DUPLICATES on the shelf**; both need the canonical name resolved first. | Global |
 | **OpenTutor** | https://github.com/zijinz456/OpenTutor | MIT | 181 | 2026-11-17 | Open tutoring agent. | APAC |
 | **canvas-mcp** (Cheng) | https://github.com/boyuchengz/canvas-mcp | MIT | 118 | 2026-10-27 | **Read-only** MCP server connecting Claude/ChatGPT to Canvas LMS. A second, independent `canvas-mcp` — read-only by design, which is the safer default for a student-data pilot. | North America |
 | **Open TutorAI (CE)** | https://github.com/Open-TutorAi/open-tutor-ai-CE | BSD-3-Clause | 119 | 2026-06-26 | Community edition of a self-hostable tutor platform. Licence text carries an "All rights reserved" header over a BSD-style grant; SPDX confirms BSD-3-Clause. | EMEA |
@@ -766,7 +766,64 @@ Recording gaps because an unrecorded gap looks exactly like coverage.
   found Peru is code search; it should next be pointed at `aula virtual`, `campus virtual` and
   `sistema académico` tokens rather than at `educación` or `tutor`.
 
-## Corrections made this pass
+## Corrections made in `p913`
+
+- 🔴 **`OpenPronounce/OpenPronounce` was published here as `MIT` and is `AGPL-3.0`.** Byte-read
+  `main/LICENSE`, **34,523 B**, `sha256₁₂ 0d96a4ff68ad`, title line
+  `GNU AFFERO GENERAL PUBLIC LICENSE / Version 3, 19 November 2007` — the canonical AGPL-3.0 text at
+  its canonical length. 🔴 **This is the most commercially consequential cell this base has
+  corrected**, because the error ran in the *dangerous* direction: AGPL-3.0 **§13 imposes a
+  network-use source-disclosure obligation**, so a hosted pronunciation service built on this row
+  owes its source to that service's users, and the cell said the opposite. `P1`, `P9` and `P16` all
+  cite pronunciation or oral assessment. 🔵 Run `G1` before scoping any of them against this row;
+  it is usable as a **separate service**, not as a linked component of a closed deliverable.
+- 🟢 **Three Mandarin rows re-confirmed rather than changed, and the instrument is the reason.**
+  `ECNU/EduWork` and `wenliu3/ai-smart-homework-review` already carried **MulanPSL-2.0** here from
+  `p906`'s byte-reads, and `p913` independently reproduced both from the title line with a detector
+  the previous two authority instruments did not have — `p880` and `p912` both report these payloads
+  `UNKNOWN-TEMPLATE` (see `913-F5`). 🔵 **The cells were right and the authority could not see
+  them**, which is the same asymmetry `913-F1` found in the GNU family and the reason gate
+  `913-G1` now exists.
+- 🟡 **`yinuoguan/nengdou-ai-review-helper-web` — the recorded channel conflict is resolved in favour
+  of the SPDX field.** This row reads *"Apache-2.0 byte-read — GitHub SPDX says `MulanPSL-2.0`.
+  Channels disagree."* `p913` byte-read `main/LICENSE` at **9,247 B** and the title line is the
+  **Mulan Permissive Software License v2**; the 11,356 B Apache payload the conflict was recorded
+  against is not what that path serves now. 🔵 The row is left **flagged rather than rewritten**,
+  because two passes have read two different payloads at one address and that is a *provenance*
+  question, not a licence question. Registered as `913-G5`.
+- 🔵 **`summeraprx/topik-shortcut` — the `NO GRANT` cell stands, and is now corroborated.** `p910`
+  reached it on an 8-path ladder; `p913`'s 16-name × 3-branch sweep also returns no payload. **Two
+  independent absence sweeps, same answer.**
+
+## What `p913` searched for and did not find — the 38th consecutive nil supply leg
+
+All eight prescribed legs ran (four global, four regional) plus two dedicated Ethiopian legs.
+🔴 **Not one returned a repository this shelf does not already hold**, and this is stated rather than
+left silent because an unrecorded absence reads exactly like coverage.
+
+- **Global legs** (`top open source AI agents education 2026 github MIT`,
+  `github trending education AI 2026`, `open source platform education ERP CRM MIT Apache`,
+  `AI education industry trends 2026`) surfaced `HKUDS/DeepTutor`, `LearnHarness`,
+  `geekjourneyx/interactive-learning`, `SirhanMacx/Claw-ED`, `TapXWorld/ChinaTextbook`,
+  `microsoft/ai-agents-for-beginners`, `OpenEduCat` and `eduTrac SIS`. 🔴 **Every one is already on
+  this shelf or in `verticals/solutions.md`.** `Nous Hermes` was named as an education candidate by
+  one aggregator with **no education-specific evidence**, and is not promoted on that basis.
+- **Regional legs** returned **demand-side corroboration, not supply.** The one exception paid
+  heavily: the **Ethiopian** legs produced the first demand-side measurement of that market
+  (`intel/market.md` EMEA, `T39`, `P32`).
+- 🟡 **Two LATAM facts are new and are recorded in `intel/market.md`**: an **EdTech Hub / Fundación
+  Ceibal** partnership on AI in education (September 2026), and a **second independent estimate of
+  the LATAM university governance gap** — *"roughly 30% of Latin American universities have
+  published AI-use policies"* — which **converges** with IESALC's 26%-formal-strategy figure this
+  base already carries. 🔵 Two instruments, two samples, four points apart: recorded as
+  **corroboration**, not averaged.
+- 🔴 **The channel limit, re-stated:** `aiagentsdirectory.com` claims to track *21+ open-source
+  education AI agents* and the search channel returns the claim without the list. **This base has
+  never been able to read that index**, and it is the single most likely location of supply this
+  shelf is missing. Registered as `913-G6`.
+
+
+## Corrections made in earlier passes
 
 - 🔴 **`p907` — the `ankipa` row's claim was stale, and no pass had caught it inside the row.**
   That row read *"the only LATAM-origin education agent verified in this pass"*. It was already

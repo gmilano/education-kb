@@ -468,6 +468,67 @@ Nigerian cluster is integrating against an **undocumented** target, so portabili
 cannot be assumed and should be priced. Evidence:
 `evidence/p912-board-owner-channel.2026-11-19-p912.tsv`.
 
+
+### 🔴 Re-measured in `p913` with a committed classifier — and four of the eight cells above were not supportable
+
+`912-G2` registered the instrument this section needed: an owner's affiliation must be adjudicated
+from its repositories' **payloads**, never from its name matching an acronym (`912-F4`). It is now
+committed as **`ingest/p913-owner-affiliation.sh`** and it carries a negative control
+(`zzqqxxnotanowner913zz`, a name chosen not to exist) that runs on **every** invocation; the script
+refuses to emit if the control does not behave. Running it produced a correction to the table above.
+
+🔴 **The owner channel has three states, not two, and `p912` published the wrong one for four
+boards.** `gh api search/repositories -f q="user:X"` answers:
+
+| Channel response | What it means | Reachable? |
+|---|---|---|
+| **HTTP 422** `Validation Failed` — *"the listed users and repositories cannot be searched either because the resources do not exist **or** you do not have permission to view them"* | X does **not** exist, or is invisible to this token. **Not** "registered and empty." | 🟢 yes — p913's negative control returns exactly this |
+| **HTTP 200**, `total_count` **0** | X **exists** and publishes nothing. *This* is "registered and empty." | 🟢 yes — `jamb`, `moe-ethiopia` |
+| **HTTP 200**, `total_count` **N>0** | X exists and is occupied → adjudicate the payloads | 🟢 yes — `moodle` (12), `neco` (5), `demre` (4) |
+
+| Board | `p912` published | `p913` measured | Verdict |
+|---|---|---|---|
+| **WAEC** | 🟢 exists / 0 repositories | **HTTP 422** | 🔴 `ABSENT-OR-INVISIBLE` — **not established as registered** |
+| **NABTEB** (`NabTeb`) | 🟢 exists / 0 repositories | **HTTP 422** | 🔴 `ABSENT-OR-INVISIBLE` |
+| **KNEC** | 🟢 exists / 0 repositories | **HTTP 422** | 🔴 `ABSENT-OR-INVISIBLE` |
+| **CENEVAL** | 🟢 exists / 0 repositories | **HTTP 422** | 🔴 `ABSENT-OR-INVISIBLE` |
+| **JAMB** | 🟢 exists, indexed / 0 | **HTTP 200, `total_count` 0** | 🟢 `REGISTERED-EMPTY` — **the only board whose "registered and empty" cell was supportable** |
+| **NECO** | taken by an unrelated account | **HTTP 200 / 5**, 2 READMEs read, **0 of 10** domain terms in metadata or prose | 🟢 `OCCUPIED-UNRELATED` — confirms `p912` |
+| **DEMRE** | taken by an unrelated account | **HTTP 200 / 4**, 2 READMEs read, **0 of 10** | 🟢 `OCCUPIED-UNRELATED` — confirms `p912` |
+| **UNEB** | 🟡 ambiguous, 1 idle repository | **HTTP 200 / 1**, **0 READMEs readable**, 0 of 10 | 🟡 `OCCUPIED-UNRELATED`, **on metadata alone** — the instrument reports `readmes_read=0`, so the absence claim here rests on the description and topics only |
+| `moe-ethiopia` (ministry, not a board) | 0 repositories (`intel/market.md`) | **HTTP 200 / 0** | 🟢 `REGISTERED-EMPTY` — `p912`'s cell was right |
+| `NEAEA` (Ethiopia's examinations agency) | "does not resolve as an owner at all" | **HTTP 422** | 🟢 confirms `p912` |
+
+🔴 **How this got published, and it is the part worth carrying.** `p912` **used the distinction
+correctly in one file and conflated it in another, in the same pass.** `intel/market.md` says
+*"`moe-ethiopia` resolves on the search index with `0` repositories; `NEAEA` does not resolve as an
+owner at all"* — that is exactly the 200/0-versus-422 distinction, applied correctly. The table
+above then recorded `🟢 exists / 0 public repositories` for four boards that return **422**.
+🔵 `gate-shelf-consistency` could not catch it because that gate compares **licence** cells across
+files; **owner-state cells are not gated at all**. Registered as `913-G2`.
+
+🔴 **`p912`'s named second owner channel does not work here, and it fails in the worst possible
+shape.** `p912` records *"plain HTTPS GET of the GitHub profile page"* as a second, independent
+owner channel. In this environment the session's git proxy answers **every** `github.com/<anything>`
+with an identical **403** JSON body (`"sessions are bound to their configured repositories"`), 249
+bytes — for `moodle`, for `waec`, and for the nonexistent control alike. 🔵 **A channel that returns
+one answer for every input corroborates nothing**, and because the body is well-formed JSON rather
+than a transport error it reads like a result. It must not be cited as a second channel in this base
+again.
+
+🟢 **The commercial reading changes, and in a direction that matters.** `p912` concluded that *"every
+board in the table has either claimed its namespace or had it claimed by someone else."* Measured:
+**three** are demonstrably occupied by unrelated parties, **one** (JAMB) is demonstrably registered
+and empty, and **four are not established as registered at all.** Two consequences:
+🔴 **An unregistered namespace for a national examination board is an impersonation exposure**, not a
+neutral fact — a studio building a board-facing integration should expect to advise the board to
+claim it, and should not publish under a name that implies board endorsement. 🔵 **And there is no
+intent signal to read**: "the board registered a namespace" was the closest thing this section had
+to evidence of institutional intent, and for four of the five it is withdrawn. The conclusion that
+**there is no incumbent open artefact to displace** survives intact and is now better supported, not
+worse. Evidence: `evidence/p913-owner-affiliation.2026-11-19-p913.tsv`,
+`evidence/p913-owner-ethiopia.2026-11-19-p913.tsv`.
+
 ## Honest gaps
 
 - **Unlicensed content corpora are the biggest trap in this category (added p891).** The largest

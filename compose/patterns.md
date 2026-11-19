@@ -10,7 +10,7 @@ Concrete recipes. Each names the exact repos, how they wire together, the licenc
 the result, and a realistic build estimate. Every repo referenced is verified in
 `agents/top.md`, `repos/foundations.md` or `verticals/solutions.md`.
 
-**Twenty-six patterns, counted mechanically in `p907`** (the figure here read *"twenty-three"* through the addition of `P24`, `P25` and `P26`, and is corrected in `p907` — **a pass that adds a pattern should re-count, not increment**, the same drift `agents/top.md` records for its row count), **plus the G1 licence gate added in p897 and extended with gate `904-G1` in p904, `905-G1` in p905 and `907-G1` in `p907`** (**P26 added in `p907`** — the sanctioned LMS-to-agent bridge, built from the seven per-institution user-credential bridges `intel/trends.md` **T30** measured, and the only end-to-end permissive pattern here that touches a commercial LMS) (**P22 added in `p903`** — the
+**Thirty-two patterns, re-counted mechanically in `p913`** (🔴 this line read *"Twenty-six, counted mechanically in `p907`"* and was **six short**: `P27`–`P31` were added in `p908`–`p912` and `P32` in `p913`, none of them re-counting. `p907` corrected the same line from *"twenty-three"* and wrote the rule — **a pass that adds a pattern should re-count, not increment** — and the drift resumed on the very next pass. 🔵 The count is now `grep -cE '^## P[0-9]+' compose/patterns.md`; **do not hand-edit this number**), **plus the G1 licence gate added in p897 and extended with gate `904-G1` in p904, `905-G1` in p905, `907-G1` in `p907`, `912-G1` in `p912` and `913-G1` in `p913`** (**P26 added in `p907`** — the sanctioned LMS-to-agent bridge, built from the seven per-institution user-credential bridges `intel/trends.md` **T30** measured, and the only end-to-end permissive pattern here that touches a commercial LMS) (**P22 added in `p903`** — the
 national-curriculum corpus pattern, built from the Arabic-language channel's finding that the
 curriculum exists at national scale and carries no grant; see `intel/trends.md` **T26**) (**P20 added in `p901`** — the first end-to-end permissive *synchronous* pattern in this file, unlocked by `p901`'s verification of `jitsi/jitsi-meet` at Apache-2.0) (**P19 added in `p900`** — the
 first end-to-end permissive pattern in this file that is not offline-first, built entirely from
@@ -207,6 +207,48 @@ content and say little about the software built around it. (2) **A permissive ve
 to generate the notice file**: MIT and Boost are both permissive and their notice obligations
 differ, so the **family**, not the permissiveness, is what the attribution step consumes.
 🔴 `p880` is left in place unmodified — retiring it against these two controls is a pass of its own.
+
+### The re-measurement axis, added as gate `913-G1` in `p913` — and it retires both instruments above
+
+`p913` ran `912-G1`'s prescribed retirement over all **363** shelf addresses. The instrument that
+`p912` built to fix `p880` **inherited `p880`'s defect in the one licence family education is built
+on**: `GPL-3.0`'s own §13 is titled *"Use with the GNU Affero General Public License"*, so the
+`AGPL` detector fires on a genuine GPL-3.0 payload and the `! grep AFFERO` guard then suppresses the
+`GPL` branch — which means the ordering rule written above, *`AGPL/LGPL before GPL`*, **is itself
+the bug**. Presence-in-body cannot discriminate this family at all; only the **title line** can
+(`913-F1`, `T38`).
+
+**Gate rule `913-G1`, and it has two limbs.**
+
+1. **Grade on the TITLE LINE.** The body is a *marked, weaker* fallback (`BODY-` prefix), never the
+   primary. This restores `ingest/licence-grade-titleline-p640.sh`'s rule, which this base made at
+   `p640`, documented, and then lost at `p880`.
+   ```
+   true GPL-3.0  : title `GNU GENERAL PUBLIC LICENSE`         |  3 Affero mentions  | ~35,147-35,151 B
+   true AGPL-3.0 : title `GNU AFFERO GENERAL PUBLIC LICENSE`  | 15 Affero mentions  |  34,523 B
+   ```
+2. 🔴 **A re-measurement is evidence about the INSTRUMENT before it is evidence about the shelf.**
+   `912-G1` specified the discharge as *"diff the verdict column"*; executed literally that would
+   have **overwritten 22 correct shelf cells with wrong ones, `moodle/moodle` among them.** When a
+   new instrument disagrees with a published cell, **adjudicate per row from the payload. Recency is
+   not a tie-breaker.**
+
+Run it with `ingest/p913-grant-authority.sh OUT.tsv <slug>...`, or
+`ingest/p913-grant-authority.sh OUT.tsv --from-tsv PRIOR.tsv` to re-adjudicate rows a previous
+instrument already located — which makes **no search-API call at all**, because the branch and path
+are facts in the input. It refuses empty input (`rc=2`, `Gap 245`) and carries **thirteen** controls,
+one for every grant fix this base has ever made (listed in `repos/foundations.md`). It supersedes
+`ingest/p912-grant-family.sh` and `ingest/p880-licence-byteread.sh`; both are left in place
+unmodified so the `p913` diff stays reproducible.
+
+🔵 **Four further families it detects that no prior instrument in this base could name**, each found
+on this shelf: **ECL-2.0** (education's own licence — `sakaiproject/sakai`, `opencast/opencast`),
+**MulanPSL-2.0** (the licence of Chinese education supply), **ODbL-1.0** (a *database* licence —
+`withmarbleapp/os-taxonomy`, which the shelf had as `proprietary`), and three *shapes* rather than
+families: **DUAL** (disjunctive — the licensee elects), **BY-REFERENCE** (named and linked, text not
+present) and **SPLIT-BY-ASSET-TYPE** (code MIT, data CC-BY, one repository — `T25` in a single
+payload). 🔴 **A single licence cell cannot express the last three**, so the gate's output is what
+the notice step should consume, not the cell.
 
 ## P1 — Licence-clean AI tutor on a permissive LMS
 
@@ -2700,3 +2742,63 @@ counterparty's own format.
   not all.
 - Any engagement where the client wants a tutor or an item generator. That is `P23` or `P29`; this
   pattern is infrastructure for the authority, and its buyer is a ministry.
+
+## P32 — Engagement in an **OEM-occupied** national market: be the interoperability, governance and remediation tier around someone else's pilot (added `p913`)
+
+### Why this pattern exists
+
+`T39` measures a market shape this file had no recipe for. In Ethiopia the national AI-in-education
+tier is **already occupied** — Ministry of Education and **Huawei**, national-curriculum AI teaching
+assistant for **grades 9–12**, trialling since **2026-05-14** — while the open supply addressing the
+*same grades* is `43` repositories of which **`81.4%` carry no licence file at all** (`p912`). Every
+other pattern in this file assumes the studio builds the AI tier. 🔴 **Here that bid is already lost,
+and bidding it anyway is how an engagement dies.** The work that is still open is the work the OEM
+has no incentive to do.
+
+🔵 **Apply this pattern when all three hold** — a state-run or donor-financed national AI programme
+with a named vendor; local open supply that is live but ungranted; and connectivity or power as the
+binding constraint. **Do not apply it** where the ministry is still specifying (use `P28`,
+spec-first) or where no national programme exists (use `P29`/`P31`).
+
+### Stack
+
+| Layer | Repo / artefact | Licence | Why this one |
+|---|---|---|---|
+| Interoperability spine | `repos/foundations.md` → **OneRoster / xAPI / QTI** shelf (`1EdTech` schemas, `Learning-Locker` is **GPL**, see note) | mixed — **read the column** | The deliverable is that a ministry's systems can exchange roster, result and item data with the vendor pilot. `p913` measures the Ethiopian constraint as **fragmentation**, not bandwidth. |
+| Offline / store-and-forward delivery | `P14`'s Africa-origin offline stack, plus the market's own two surfaces: an **MIT offline** Grade 9–12 practice app and an **MIT Telegram** results bot (`agents/top.md`, Ethiopia rows) | **MIT** | `21.7%` penetration and `1,500` connected schools means the delivery surface is **not a browser**. The market already chose offline and messaging; adopt its choice rather than arguing with it. |
+| Evaluation / efficacy tier | `P7` attached whole | permissive | An OEM pilot will not publish its own efficacy evidence. A ministry renewing a national programme needs one, and it is a service a studio can sell to the *buyer* rather than to the vendor. |
+| Governance tier | `P5`'s governance retrofit, re-aimed at a single national programme | permissive | `T1`/`T39`: here the policy is being written **after** the pilot. The 2026/27–2030 strategy revision is the document to be inside. |
+| Teacher enablement | `P10` at system scale | n/a (service) | The reported complaints in comparable programmes are device management, teacher training and staffing — a **services** market, not a licence market. |
+| Licence remediation | **`ingest/p913-grant-authority.sh`** over the local cohort, then `G1` | — | `81.4%` ungranted means the live local supply **cannot be contributed** into a government programme as it stands. Remediation is a cheap, concrete, highly visible first deliverable. |
+
+### The sequencing that makes it sellable
+
+1. **Run `G1` and `ingest/p913-grant-authority.sh` over the local cohort first.** You will be telling
+   a ministry which of its own country's artefacts are safe to adopt. Nobody else has done this, it
+   costs days, and it establishes standing before any build.
+2. **Then the interoperability spine**, because it is the one deliverable that is strictly
+   complementary to the vendor — it makes the vendor's pilot more valuable, so the vendor is not
+   motivated to block it.
+3. **Then evaluation and governance**, sold to the ministry, not to the vendor.
+4. **Teacher enablement last and largest** — it is the biggest line item and it needs the other
+   three to be credible.
+
+### Licence posture of the result
+
+🟢 Studio IP in the adapters, the evaluation harness and the enablement material. 🔴 **The
+interoperability shelf is where the copyleft is** — `Learning-Locker` is GNU-family (re-graded
+**GPL**, not AGPL, in `p913`; see `913-F1`), so an LRS deployed as a *separate service* is fine and
+linking it into a proprietary deliverable is not. Run `G1` before promising either.
+
+### Estimate
+
+**10–14 weeks** to the first three deliverables, assuming ministry access exists. 🔴 **If it does
+not, this pattern is not runnable** — there is no self-serve route into a national programme, and
+that is the honest gate on it. Teacher enablement is a separate multi-quarter programme and should
+be scoped and priced separately.
+
+### Where it does not apply
+
+🔴 Not in the EU, UK or Saudi markets, where the buyer publishes a specification first (`P28`,
+`P4`). 🔴 Not where the "national programme" is a procurement notice rather than a running pilot —
+then you are in `P28`'s window and should bid the build.

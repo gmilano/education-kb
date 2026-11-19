@@ -1,0 +1,5 @@
+owner	domain_terms	http	repos_total	probed	readmes_read	meta_terms	readme_terms	verdict	evidence
+moe-ethiopia	exam,examination,assessment,curriculum,syllabus,school,student,education,grading	200	0	0	0	-	-	REGISTERED-EMPTY	owner exists on the channel and publishes nothing — distinct from 422 (913-F2)
+NEAEA	exam,examination,assessment,curriculum,syllabus,school,student,education,grading	422	-	0	0	-	-	ABSENT-OR-INVISIBLE	byte-identical to negative control zzqqxxnotanowner913zz — this owner is NOT established as registered
+neaea	exam,examination,assessment,curriculum,syllabus,school,student,education,grading	422	-	0	0	-	-	ABSENT-OR-INVISIBLE	byte-identical to negative control zzqqxxnotanowner913zz — this owner is NOT established as registered
+moe	exam,examination,assessment,curriculum,syllabus,school,student,education,grading	422	-	0	0	-	-	ABSENT-OR-INVISIBLE	byte-identical to negative control zzqqxxnotanowner913zz — this owner is NOT established as registered

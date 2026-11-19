@@ -4,6 +4,275 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p913) — **`912-G1` discharged, and discharging it as written would have destroyed 22 correct cells. The instrument `p912` built to fix `p880` inherited `p880`'s defect in the one licence family education runs on: every GPL-3.0 payload on this shelf read as AGPL-3.0, `moodle/moodle` included — because GPL-3.0's own §13 names Affero. The fix was committed to this base at `p640`, documented in the script header, and lost at `p880`. Four boards `p912` published as "registered and empty" are not established as registered at all. Ethiopia's demand side measured: the national AI tier is already occupied by an OEM.**
+
+**Channels and posture.** `gh api search/repositories` (363 default-branch resolutions for the shelf
+census, plus 14 owner probes), `raw.githubusercontent.com` byte-reads on the resolved branch, and
+**10 WebSearch legs** (4 global, 4 regional, 2 Ethiopian). 🔴 **`curl` against `github.com` was
+tested as an owner channel and failed as a channel, not as a request** — see `913-F3`. Negative
+controls ran on both instruments: a nonexistent owner for the owner classifier, and thirteen
+registered licence controls for the grant authority. Evidence:
+`evidence/p913-shelf-authority.2026-11-19-p913.tsv`,
+`evidence/p913-shelf-p912-instrument.2026-11-19-p913.tsv`,
+`evidence/p913-shelf-published-cells.2026-11-19-p913.tsv`,
+`evidence/p913-grant-controls.2026-11-19-p913.tsv`,
+`evidence/p913-owner-affiliation.2026-11-19-p913.tsv`,
+`evidence/p913-owner-ethiopia.2026-11-19-p913.tsv`.
+
+### 🔴 `913-F1` Every `GPL-3.0` payload on this shelf read as `AGPL-3.0` — **14 rows, `moodle/moodle` among them** — and the "corrected" instrument inherited the defect
+
+`GPL-3.0`'s own text names the Affero licence **three times**, in **§13, "Use with the GNU Affero
+General Public License"**. Both `p880-licence-byteread.sh` and its `p912` successor grade with:
+
+```
+grep -qi "GNU AFFERO GENERAL PUBLIC LICENSE"                          -> AGPL-3.0
+grep -qi "GNU GENERAL PUBLIC LICENSE" && ! grep -qi "AFFERO|LESSER"   -> GPL
+```
+
+The first line fires on a genuine GPL-3.0 payload; the `AFFERO` guard then **suppresses** the GPL
+branch. 🔴 **Under either instrument the GPL branch cannot fire on GPL-3.0 at all.** Measured
+discriminators, both byte-read this pass:
+
+| | Title line | `Affero` mentions | Bytes |
+|---|---|---|---|
+| true **GPL-3.0** | `GNU GENERAL PUBLIC LICENSE` | **3** (all §13) | 35,147–35,151 |
+| true **AGPL-3.0** | `GNU AFFERO GENERAL PUBLIC LICENSE` | **15** | **34,523** |
+
+Flipped `AGPL-3.0 → GPL`: `moodle/moodle`, `Koha-Community/Koha`, `chamilo/chamilo-lms`,
+`ILIAS-eLearning/ILIAS`, `pkp/ojs`, `h5p/h5p-php-library`, `LearningLocker/learninglocker`,
+`kiwix/kiwix-tools`, `GibbonEdu/core`, `Citolab/qti-components`, `EduardoKrausME/moodle-local_mcp`,
+`davidpesce/moodle-logstore_xapi`, `pyta-uoft/pyta`, `DeanChensj/jiangshan-map`. Two more flipped
+`LGPL → GPL` (`iiab/iiab`, `portabilis/i-educar`) and one `CONJUNCTIVE → GPL`
+(`SalehGNUTUX/GT-MISHKATKIDS`). **17 GNU rows in total.**
+
+🔵 **Both directions are commercially live.** AGPL-3.0 §13 imposes a **network-use source-disclosure**
+obligation GPL-3.0 does not: calling Koha or Chamilo *AGPL* **overstates** it and wrongly kills a
+hosted design. The opposite error was live on this shelf too — see `913-F2`.
+
+### 🔴 `913-F2` Discharging `912-G1` as written would have **overwritten 22 correct cells with wrong ones** — and one genuinely wrong cell was the dangerous direction
+
+`912-G1` specified the discharge: *"re-run `ingest/p912-grant-family.sh` over the shelf's existing
+slug list and diff the verdict column."* Run over all **363** addresses:
+
+| | Count |
+|---|---|
+| Rows where the two instruments disagree | 🔴 **56 / 363 = `15.4%`** |
+| Rows where **the shelf was right and the instrument wrong** | 🔴 **22** |
+| Published cells that genuinely needed correcting | 🟢 **4** (+3 flagged manifest-only) |
+
+🟢 **The one correction that matters, and it ran the dangerous way:**
+**`OpenPronounce/OpenPronounce` was published in `agents/top.md` as `MIT` and is `AGPL-3.0`** —
+34,523 B, `sha256₁₂ 0d96a4ff68ad`, title line read. Three patterns (`P1`, `P9`, `P16`) cite
+pronunciation or oral assessment; none can use it as a *linked* component of a closed deliverable.
+Also corrected: `jupyterhub/zero-to-jupyterhub-k8s` (shelf `Apache-2.0`; the **title line is
+`BSD 3-Clause`** and the body adds Apache — head family wrong *and* conjunctive),
+`jitsi/jitsi-meet` (`Apache-2.0` → **`Apache-2.0 + MIT`**), and `apereo/java-cas-client`
+(`Apache-2.0` → **`Apache-2.0 + JA-SIG BSD`**). 🔴 **That last one is `p880`'s own documented
+control for conjunctive payloads** — its script header names the repository and reports
+`CONJUNCTIVE` — **and the shelf cell recorded only the Apache half for 33 passes. The instrument was
+right and the cell was not**, which is the mirror image of `913-F1` and the reason gate `913-G1` has
+two limbs rather than one.
+
+🟢 **Rule, now gate `913-G1`: a re-measurement is evidence about the INSTRUMENT before it is
+evidence about the shelf.** Adjudicate per row, from the payload. **Recency is not a tie-breaker.**
+
+### 🔴 `913-F3` The fix was made in this base at `p640`, documented in the script, and lost at `p880` — a **273-pass regression**
+
+`ingest/licence-grade-titleline-p640.sh` carries this in its own header comment:
+
+> *"p640 — grade on the TITLE LINE, not substring-over-payload. Both p639's grader and p640's first
+> grader failed on the GNU family because GPL-3.0 names AFFERO 3x (s.13) and AGPL-3.0 names 'GNU
+> GENERAL PUBLIC LICENSE' 5x. Title-line grading is the only sound discriminator."*
+
+`p880` replaced title-line grading with body-substring grading. `p912` then audited `p880` **for
+precisely this collision class** (Boost prefix-collides with MIT's trigger phrase) and did not
+generalise its own rule to the GNU family. 🔵 **The transferable lesson is about process: a
+correction pass must read the instrument history, because the defect it is about to find may already
+have a committed fix that a later instrument dropped.** `ingest/` holds five licence graders; three
+of them are superseded and none said so until now.
+
+🔴 **And `p912`'s second owner channel is unusable here, failing in the worst shape.** `p912` cites
+*"plain HTTPS GET of the GitHub profile page"* as an independent owner channel. In this environment
+the session's git proxy answers **every** `github.com/<anything>` with an identical **403** JSON
+body (`"sessions are bound to their configured repositories"`), **249 bytes** — for `moodle`, for
+`waec`, and for a nonexistent control alike. 🔵 **A channel returning one answer for every input
+corroborates nothing**, and because the body is well-formed JSON rather than a transport error it
+*reads like a result*.
+
+### 🔴 `913-F9` This base **already gates the §13 discriminator with 36 controls, and the gate is green** — because its scope excludes the file the licence authority lives in
+
+This is the explanation for `913-F3`, and it is worse than a forgotten fix.
+
+`make hooks` runs **`p309-affero-rung-census`** — *"36 controls: **the §13 discriminator**, the family
+matcher, the version-after-name rung, ladder order and its scope bug, the title window, `p471`'s
+Spanish window, declared-token grammars, and GPL-3.0-inside-AGPL-3.0"*. 🟢 **It passed on this pass,
+as it has on every pass**, and its dynamic arm proves six classifiers grade GPL-3.0 correctly
+(`p419-copyleft-identity`, `p306-licence-probe`, `p191-spec-license-sweep`,
+`p211-full-column-grant-audit`, `p153-declaration-surfaces`, `p129-transcription-audit`).
+
+🔴 **And `p309`'s own README already states the generalisation that would have prevented `p913`:**
+
+> *"🔴 **And the fix was already in this base.** `p150-gpl-affero-discrimination` (2026-10-12)
+> refuted this exact test, … shipped `title_licence()` plus a §13 cross-check, and **keeps the bad
+> pattern as its own negative control, `NAIVE_AGPL`**. … `p308` learned 'import the canonical list,
+> never restate it' for **shelf data** … **Nobody applied it to the CLASSIFIERS.** Two instruments
+> were carrying a pattern this base had already proved wrong."*
+
+🔴 **So `p913`'s defect is the THIRD recurrence of one defect** — `p150` fixed it, `p306`/`p221`
+restated it and `p309` caught them, and `p880`/`p912` restated it again where `p309` cannot look.
+**The reason is a one-line scope hole**, `rung_census.py:284`:
+
+```
+if not fn.endswith(".py") or fn.startswith("test_"):   # screens compose/code/**/*.py ONLY
+```
+
+🔵 **The licence authority of this base is a SHELL SCRIPT in `ingest/`.** It is not `.py` and it is
+not under `compose/code/`, so the instrument built to catch exactly this pattern **cannot see it**.
+Measured, on executable lines only (comments excluded, because `p150`'s convention is to *quote* the
+bad pattern as a named negative control):
+
+| Instrument | Naive body-AGPL pattern in executable code |
+|---|---|
+| `ingest/p880-licence-byteread.sh` | 🔴 **present** |
+| `ingest/p912-grant-family.sh` | 🔴 **present** |
+| `ingest/p913-grant-authority.sh` | 🟢 absent (title-line case; the body fallback grades the GNU family by Affero **count**, never by presence) |
+
+🔴 **A green gate over the wrong denominator is more dangerous than no gate**, because it is cited as
+assurance. `p309` has been reporting PASS for the §13 discriminator while the cells on this shelf
+were produced by an instrument that fails it. Registered as `913-G8`.
+
+### 🔴 `913-F4` Four boards `p912` published as "registered and empty" are **not established as registered at all**, and `p912` had the distinction right one file away
+
+`912-G2` asked for the owner-axis classifier. It is committed as
+`ingest/p913-owner-affiliation.sh`, carries a negative control on **every** invocation
+(`zzqqxxnotanowner913zz`) and refuses to emit if the control misbehaves. The owner channel has
+**three** states, not two:
+
+| Response | Meaning |
+|---|---|
+| **422** `Validation Failed` | absent **or invisible** — *not* "registered and empty" |
+| **200**, `total_count` 0 | **exists and publishes nothing** — this is "registered and empty" |
+| **200**, `total_count` N>0 | occupied → adjudicate the payloads |
+
+`WAEC`, `NABTEB`, `KNEC` and `CENEVAL` all return **422**, byte-identical to the nonexistent
+control. **Only `JAMB` returns 200/0.** `NECO`, `DEMRE` and `UNEB` return 200/N and adjudicate
+`OCCUPIED-UNRELATED` on payload evidence, confirming `p912`.
+
+🔴 **`p912` used the distinction correctly in `intel/market.md` and conflated it in
+`verticals/solutions.md`, in the same pass** — market.md says *"`moe-ethiopia` resolves with 0
+repositories; `NEAEA` does not resolve as an owner at all"*, which is exactly 200/0 versus 422.
+🔵 `gate-shelf-consistency` cannot catch this because it compares **licence** cells; **owner-state
+cells are not gated at all.** Registered as `913-G2`. `T37`'s headline is corrected and the
+commercial conclusion **survives and is better supported**: there is no incumbent open artefact to
+displace, and an unclaimed board namespace is an **impersonation exposure** to raise, not exploit.
+
+### 🔴 `913-F5` Three licence families and three licence *shapes* that no instrument in this base could ever name — all found on this shelf
+
+| Family / shape | Found on | Prior verdict |
+|---|---|---|
+| **ECL-2.0** — the **Educational Community License**, *education's own licence* | `sakaiproject/sakai`, `opencast/opencast`, `cilt-uct/sakai-skin-vula` | `UNKNOWN-TEMPLATE`; the Sakai cell read `Apache-2.0` |
+| **MulanPSL-2.0** — OSI-approved, bilingual, with an Apache-style **patent** clause MIT lacks | `ECNU/EduWork`, `wenliu3/ai-smart-homework-review`, `yinuoguan/nengdou-…` | `UNKNOWN-TEMPLATE` (zero detectors) |
+| **ODbL-1.0** — a **database** licence | `withmarbleapp/os-taxonomy` | the cell read **`proprietary`** |
+| **DUAL** (disjunctive — the licensee *elects*) | `RWTH-OS/eduOS-rs` (`LICENSE-MIT` **and** `LICENSE-APACHE`) | `MIT` (whichever filename was hit first) |
+| **BY-REFERENCE** (grant named and linked, text absent) | `parmentelat/nbautoeval`, `frappe/education` | `UNKNOWN-TEMPLATE` / `DECLARATION-ONLY` |
+| **SPLIT-BY-ASSET-TYPE** (code MIT, data CC-BY, one repo) | `bncc-dev/bncc-benchmark`, `bncc-dev/bncc-pacotes` | `UNKNOWN-TEMPLATE` / `CC-BY` |
+
+🔵 **`MulanPSL-2.0` is the aimed-at blind spot**: `T20`/`T29` record vernacular supply as a measured
+single-country phenomenon, and the authority instrument could not read **the licence that country
+publishes under**. 🔴 **The last three are *shapes*, and a single licence cell cannot express any of
+them** — `bncc-benchmark` is a benchmark whose **code is MIT and whose items, results and
+methodology are CC BY 4.0**, which is `T25` inside one payload. The notice step must consume the
+gate's output, not the cell.
+
+### 🔴 `913-F6` `p913`'s own fix introduced a new blind spot, and the first attempt to close it was a **silent no-op**
+
+Title-line grading cannot read a **translated** title. `portabilis/i-diario` is AGPL-3.0 as
+**`LICENÇA PÚBLICA GERAL AFFERO GNU`**, and `p913`'s first cut graded it `UNKNOWN-TEMPLATE` **while
+the shelf had it right** — the body-grep it replaced would have caught `AFFERO` in any language.
+🔴 **And the first fix did nothing, for a reason worth committing:** this container runs
+`LC_CTYPE=POSIX`, under which `tr '[:upper:]' '[:lower:]'` **leaves accented capitals untouched** —
+the title folds to `licenÇa pÚblica geral affero gnu`. Patterns written with lowercase accented
+characters **can never match, and fail as a no-op rather than as an error.** Every test is now keyed
+on ASCII-only tokens (`licen`, `affero`, `geral`, `menor`). 🔵 **Every fix to this instrument has
+traded one error class for another** — that is the honest summary of three passes on it, and the
+body is kept as a *marked, weaker* fallback so the trade is never silent.
+
+### 🔴 `913-F7` `p913` measured **three defects in its own owner classifier** before publishing it, and one would have fabricated an institution
+
+| Defect | What it did | Fix |
+|---|---|---|
+| **Substring collision** | scored `neco` **AFFILIATED** on `exam×3` — the matches were "**Exam**ple"×2 and "**exam**ine" in a **2009 Ruby web-server README**. It would have published Nigeria's examinations council as a real estate: **exactly the harm `912-F4` named.** | word boundaries, `\b<term>s?\b`, never substrings |
+| **`break 3`** | broke out of the *repository* loop on the first README found, then reported *"zero domain terms in any payload"* — an absence claim over **one file** dressed as one over an estate | every probed repo is read, and `readmes_read` is **reported** so the denominator is visible |
+| **200/0 collapsed into "occupied"** | `jamb` — an owner that exists with nothing in it — was verdicted `OCCUPIED-UNRELATED` | `REGISTERED-EMPTY`, a state of its own |
+
+🔵 `UNEB`'s verdict carries `readmes_read=0`, so its absence claim **rests on metadata alone** and
+the row says so. **A denominator you cannot see is not a measurement.**
+
+### 🟢 `912-G3` discharged — Ethiopia's demand side, and it inverts the engagement shape
+
+The national AI-in-education tier is **already occupied**: Ministry of Education and **Huawei**,
+national-curriculum **AI teaching assistant for grades 9–12**, trialling since **2026-05-14** — the
+*same grades* as the three Ethiopian rows `p912` promoted, whose cohort is **81.4% ungranted**.
+Policy is mid-revision (**Digital Education Strategy 2026/27–2030** in preparation with *AI pilots*
+named; higher-education AI policy in preparation **Sept 2026**; UNESCO framework in progress;
+National AI Policy **June 2024**). The binding constraint is **power and bandwidth**: **43% rural
+electrification** vs 94% urban, **1,500 schools connected** (1,200 SchoolNet + 300 World Bank)
+against a target of *at least half*, **21.7%** national penetration. 🔵 **The market already chose
+its delivery surfaces** — the two Ethiopian artefacts it produced are an **offline** app and a
+**Telegram** bot. Published as `T39` and `P32`; `intel/market.md` EMEA carries the leg.
+🔴 **Procurement and budget were not retrieved** and are re-registered, narrowed, as `913-G7`.
+
+### 🟡 The 38th consecutive nil supply leg, stated rather than left silent
+
+All eight prescribed legs ran. **Every repository they surfaced is already shelved** —
+`HKUDS/DeepTutor`, `LearnHarness`, `geekjourneyx/interactive-learning`, `SirhanMacx/Claw-ED`,
+`TapXWorld/ChinaTextbook`, `microsoft/ai-agents-for-beginners`, `OpenEduCat`, `eduTrac SIS`. Full
+record in `agents/top.md` → *"What `p913` searched for and did not find"*. 🟡 Two LATAM demand facts
+are new (EdTech Hub / **Fundación Ceibal** partnership, Sept 2026; a **second** independent estimate
+of the university governance gap at ~30%, converging with IESALC's 26%) and are recorded as
+corroboration, not averaged.
+
+### 🔴 Goals and standing gaps, with what was actually tested
+
+- 🟢 **`912-G1` DISCHARGED**, over all 363 addresses — and the discharge **refuted its own
+  prescription**. `ingest/p913-grant-authority.sh` supersedes both prior instruments; both are left
+  in place unmodified so the diff stays reproducible.
+- 🟢 **`912-G2` DISCHARGED.** `ingest/p913-owner-affiliation.sh`, with a per-run negative control.
+- 🟢 **`912-G3` DISCHARGED** on policy, connectivity and the vendor landscape. **Not** on
+  procurement or budget.
+- 🔴 **New `913-G1` — the re-measurement rule is a *gate*, not a note.** It is written into `G1` in
+  `compose/patterns.md`; it is **not mechanically enforced**. 🔵 **Cost: one pass** — a hook that
+  fails when a pass rewrites a licence cell without a per-row payload citation.
+- 🔴 **New `913-G2` — owner-state cells are not gated.** `gate-shelf-consistency` compares licence
+  cells only, which is why `913-F4` survived a 76-gate suite. 🔵 **Cost: one gate.**
+- 🔴 **New `913-G3` — `T39` rests on ONE market.** 🔵 **Cost: one leg** — probe Ghana, Uganda or
+  Tanzania (comparable ungranted share) for an OEM national pilot.
+- 🔴 **New `913-G4` — the filename list is a recall ceiling.** `OS4ED/openSIS-Classic`'s grant is at
+  **`master/docs/License.txt`**, a *subdirectory*, which a flat 16-name list cannot reach: the
+  authority reports `NO-PAYLOAD` and the shelf is right. **An absence this instrument produces is
+  about the list, never about the repository.** 🔵 **Cost: one leg** — extend the ladder to
+  `docs/`, `legal/`, `LICENSES/`.
+- 🔴 **New `913-G5` — two passes read two different payloads at one address.**
+  `yinuoguan/nengdou-ai-review-helper-web`: `p906` read 11,356 B of Apache, `p913` read 9,247 B of
+  Mulan at the same path. The row is **flagged, not rewritten** — it is a provenance question.
+- 🔴 **New `913-G6` — `aiagentsdirectory.com` claims 21+ open-source education agents and this base
+  has never read the list.** The most likely location of supply this shelf is missing.
+- 🔴 **New `913-G8`, and it is the highest-value gap this pass registers — `p309-affero-rung-census`
+  screens `compose/code/**/*.py` and the licence authority is `ingest/*.sh`.** A green 36-control
+  gate for the §13 discriminator has been coexisting with an authority instrument that fails it,
+  for 33 passes. 🔵 **Cost: one pass, and the shape is already decided by this base's own rule** —
+  `p308`'s *"import the canonical list, never restate it"*, applied to classifiers. Either extend
+  `rung_census.py`'s screen to `ingest/` **and to shell scripts**, or stop restating the pattern in
+  `ingest/` and have it call `p150-gpl-affero-discrimination`'s `title_licence()`. 🔴 **The second is
+  the real fix**; the first only reports the problem. **Do both, in that order.**
+- 🔴 **`912-G3`'s procurement half re-registered as `913-G7`** (named next step: the Public
+  Procurement and Property Disposal Service, and the federal education budget).
+- 🔴 **`911-G2` still binding** — `p912`'s Ethiopian percentages remain a top-25-per-leg sample.
+- 🔴 **`DigComp 3.0` — sixth consecutive pass unresolved, and NOT re-tested this pass.** Inherited
+  gap, explicitly not re-measured (`Gap 56`, `Gap 241`).
+- 🔴 **`ACTION TQ` and `ACTION TW` NOT RUN** — ninth pass.
+
+
 ## `2026-11-19` (p912) — **Three registered gaps discharged, and the pass's own authority instrument failed two controls. The five examination boards `911-G1` named have all registered their GitHub namespace and published nothing into it — and the channel this base uses cannot tell a real-but-empty owner from one that does not exist. Ethiopia measured: 81.4% ungranted, ceiling 7★, the weakest market in this KB. Japan's guideline revision names agentic AI and is open now.**
 
 **Channels and posture.** `gh api search/repositories` (**19 legs**: 11 owner probes, 5 Ethiopian

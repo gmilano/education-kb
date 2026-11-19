@@ -1381,6 +1381,63 @@ homonym rather than a channel. Queried directly on five terms, the market reads 
   connectivity or budget instrument was retrieved this pass, so the demand side of this market is
   **unmeasured** rather than absent. Carried as `912-G3`.
 
+
+#### `p913` — Ethiopia's demand side, discharging `912-G3`: the market is state-led, already vendor-occupied, and power-constrained before it is model-constrained
+
+`912-G3` recorded that `p912` measured Ethiopian **supply** only and that the demand side was
+*unmeasured rather than absent*. Two dedicated regional legs were run this pass. **The gap is
+discharged, and the answer reverses the engagement shape the supply finding alone would suggest.**
+
+- 🔴 **The national-curriculum AI tier is already occupied, by an OEM, at exactly the grades this
+  KB's Ethiopian rows target.** The Ministry of Education and **Huawei** began trialling a
+  **national-curriculum AI teaching assistant for grades 9–12 on 2026-05-14**. `p912` promoted three
+  Ethiopian rows into `agents/top.md`: an Apache-2.0 adaptive platform for the Grade 12 examination,
+  an MIT **offline** Grade 9–12 practice app and an MIT Telegram results bot. 🔵 **The open tier and
+  the national pilot are addressing the same grades**, and the open tier is the one with `81.4%`
+  of its repositories carrying no grant at all. **The competitor in Ethiopia is not another studio
+  — it is a bundled vendor programme with a ministry relationship.**
+- 🟡 **The policy instruments exist and are mid-revision, which is the window.** Ethiopia's
+  **National AI Policy dates from June 2024**; the **Digital Education Strategy and Implementation
+  Plan 2023–2028** is in force; and the Ministry is preparing a **revised Digital Education Strategy
+  and Implementation Plan for 2026/27–2030** whose published priorities are expanded digital content
+  and interactive textbooks, **AI pilots**, infrastructure and connectivity, and partnerships.
+  Separately, reporting from **September 2026** has the Ministry preparing a national **and
+  institutional** AI policy for **higher education**, aimed primarily at online learning, and the
+  Ministry is working with **UNESCO** on a national AI-in-education framework. 🔵 A strategy being
+  rewritten *now*, with AI pilots named as a priority, is a specification a supplier can sell
+  against — the same shape this file records for the UK and Saudi Arabia.
+- 🔴 **The binding constraint is electricity and connectivity, and it is not close.** `43%` of rural
+  residents have electricity against `94%` in cities and supply is frequently interrupted (BTI
+  2026); the World-Bank-supported **ELEAP** programme has reached about **19,000 public facilities**
+  including schools; national internet penetration was **21.7% (29.5M users) at end-2025**. The
+  Digital Education Strategy targets connecting **at least half of all schools**, and its own
+  implementation plan records **1,500 schools connected so far — 1,200 via SchoolNet and 300 with
+  World Bank support**, with bandwidth leased from telecom operators.
+  🔵 **This is the single most actionable fact in the leg.** `T22` records that open education
+  agents differentiate on **delivery surface**; in Ethiopia the delivery surface is **not a
+  browser**. The two Ethiopian artefacts the market itself produced are an **offline** app and a
+  **Telegram** bot, which is the market stating its own constraint. **Any Ethiopian engagement is
+  offline-first and store-and-forward, or it does not run** — and `P-*` patterns that assume an LMS
+  reachable over the network do not apply.
+- 🟡 **The 2026 framing has moved from connectivity to coordination.** Ethiopian edtech reporting
+  this year argues the constraint is shifting from raw connectivity toward **fragmentation** —
+  school systems that cannot share data with one another. 🔵 If that holds, the sellable work is
+  **interoperability** (`repos/foundations.md` → the standards shelf: OneRoster, xAPI, QTI) rather
+  than another front-end, which is a far better fit for what this KB actually holds.
+- 🔴 **Still not retrieved, and named so it is not mistaken for coverage: procurement and budget.**
+  No Ethiopian tender, framework agreement or federal education-budget line was returned by either
+  leg. 🔵 **The named next step is specific**: the Public Procurement and Property Disposal Service,
+  and the federal education budget for the current fiscal year. `912-G3` is therefore discharged on
+  **policy, connectivity and the vendor landscape** and **re-registered, narrowed, as `913-G7` for
+  procurement and budget alone.**
+
+*Confidence: moderate, and lower than the GitHub measurements in this KB. The Digital Education
+Strategy figures come from the strategy document and its implementation plan; the electrification
+and penetration figures from BTI 2026, World Bank and telecoms reporting; the Huawei pilot, the
+higher-education policy and the UNESCO framework from news reporting. **None of it is byte-verified
+and the Huawei pilot in particular is a single-sourced news claim** — it is the load-bearing fact of
+this leg and it should be confirmed with the Ministry before it is put in front of a client.*
+
 ### APAC
 
 🟢 **Promoted in `p902` — two convening facts, plus the region's one dataset-scale supply row**

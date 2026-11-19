@@ -250,9 +250,9 @@ version-control / sharing stack with no copyleft and no carve-outs. The two flag
 | https://github.com/learningequality/le-utils | MIT | Shared constants and format definitions for the Kolibri ecosystem. |
 | https://github.com/openfun/richie | MIT | Course-catalogue/marketing CMS for Open edX. |
 | https://github.com/openfun/marsha | MIT | Video management for LMS-embedded teaching. |
-| https://github.com/h5p/h5p-interactive-video | MIT | **Restored p896.** H5P's interactive-video content type — 267 ★, pushed 2026-11-17. 🟢 **The licence inversion worth knowing**: `h5p-php-library` above is **GPL-3.0**, but the individual H5P *content types* are **MIT**. A studio that needs a permissive interactive-content pipeline can compose the MIT component repos instead of embedding the GPL host library. (No licence file at any of 12 candidate paths; SPDX from the search channel only — treat this row's licence as the weakest-evidence one in this file.) |
-| https://github.com/h5p/h5p-course-presentation | MIT | **Restored p896.** Slide-based presentation content type, 57 ★, pushed 2026-11-11. |
-| https://github.com/h5p/h5p-audio-recorder | MIT | **Restored p896.** Learner audio capture, 36 ★, pushed 2026-11-17 — the input half of any pronunciation or oral-assessment build (pair with `OpenPronounce` in `agents/top.md`). |
+| https://github.com/h5p/h5p-interactive-video | 🟡 **MIT, manifest-declared only — flagged `p913`** (no licence payload: `LICENSE`, `LICENSE.txt`, `LICENSE.md`, `license.txt` and `COPYING` all `404` on both `master` and `main`) | **Restored p896.** H5P's interactive-video content type — 267 ★, pushed 2026-11-17. 🟢 **The licence inversion worth knowing**: `h5p-php-library` above is **GPL-3.0**, but the individual H5P *content types* are **MIT**. A studio that needs a permissive interactive-content pipeline can compose the MIT component repos instead of embedding the GPL host library. (No licence file at any of 12 candidate paths; SPDX from the search channel only — treat this row's licence as the weakest-evidence one in this file.) |
+| https://github.com/h5p/h5p-course-presentation | 🟡 **MIT, manifest-declared only — flagged `p913`** (no licence payload: `LICENSE`, `LICENSE.txt`, `LICENSE.md`, `license.txt` and `COPYING` all `404` on both `master` and `main`) | **Restored p896.** Slide-based presentation content type, 57 ★, pushed 2026-11-11. |
+| https://github.com/h5p/h5p-audio-recorder | 🟡 **MIT, manifest-declared only — flagged `p913`** (no licence payload: `LICENSE`, `LICENSE.txt`, `LICENSE.md`, `license.txt` and `COPYING` all `404` on both `master` and `main`) | **Restored p896.** Learner audio capture, 36 ★, pushed 2026-11-17 — the input half of any pronunciation or oral-assessment build (pair with `OpenPronounce` in `agents/top.md`). |
 | https://github.com/h5p/h5p-speak-the-words | MIT | **Restored p896.** Speech-answered questions, 12 ★, pushed 2026-11-17. |
 | https://github.com/h5p/h5p-cli | MIT | **Restored p896.** H5P command-line tooling — 79 ★, pushed 2026-10-31. The piece that makes content generation **scriptable**, which is what turns an authoring agent into a pipeline rather than a demo. |
 
@@ -320,7 +320,7 @@ identified.
 | Repo | Licence | Role |
 |---|---|---|
 | https://github.com/jupyterhub/jupyterhub | BSD-3-Clause | Multi-user notebook serving. The computational-teaching backbone. |
-| https://github.com/jupyterhub/zero-to-jupyterhub-k8s | Apache-2.0 | Kubernetes deployment path for JupyterHub at class scale. |
+| https://github.com/jupyterhub/zero-to-jupyterhub-k8s | 🔴 **BSD-3-Clause + Apache-2.0 (CONJUNCTIVE) — CORRECTED `p913`, was `Apache-2.0`** (byte-read `main/LICENSE`, 13,206 B; **title line is `BSD 3-Clause License`, Copyright (c) 2017 Project Jupyter Contributors**, and the body carries an Apache-2.0 grant as well) | Kubernetes deployment path for JupyterHub at class scale. 🔵 The **head** grant is BSD, not Apache — the notice obligation is two licences, not one. |
 | https://github.com/jupyterhub/nbgitpuller | BSD-3-Clause | Distributes course materials into student notebook environments. |
 | https://github.com/open-spaced-repetition/fsrs4anki | MIT | FSRS spaced-repetition scheduler. A real, evidence-backed learning algorithm to pair with an agent instead of inventing a review schedule. |
 | https://github.com/appsmithorg/appsmith | Apache-2.0 | Low-code internal tooling — teacher review queues and human-in-the-loop consoles without a bespoke front end. |
@@ -329,9 +329,9 @@ identified.
 | https://github.com/instructure/instructure-ui | MIT (`master/LICENSE.md`, byte-read 1,175 B) | **Restored p896.** Instructure's own accessible component library — 487 ★, pushed 2026-11-18. 🟡 **GitHub reports `NOASSERTION`; the licence text is MIT.** Build Canvas-adjacent interfaces that look native without touching the AGPL platform. |
 | https://github.com/openedx/paragon | Apache-2.0 | **Restored p896.** The Open edX design system — 141 ★, pushed 2026-11-17. Same role as the row above, on the other platform, and also permissive while its platform is not. |
 | https://github.com/mitodl/ol-infrastructure | BSD-3-Clause | **Restored p896.** MIT Open Learning's **production infrastructure-as-code** — 59 ★, pushed 2026-11-18. The only open artefact this KB has found that shows how a large university actually *runs* Open edX in production rather than how to install it. |
-| https://github.com/apereo/java-cas-client | Apache-2.0 (`master/LICENSE`, byte-read 2,321 B) | **Restored p896.** CAS client for JVM applications — 949 ★. 🟡 GitHub reports `NOASSERTION`; the text is Apache. Institutional SSO is the first integration question in every higher-ed engagement. |
+| https://github.com/apereo/java-cas-client | 🔴 **CONJUNCTIVE: Apache-2.0 + JA-SIG BSD — CORRECTED `p913`, was `Apache-2.0`** (byte-read `master/LICENSE`, 2,321 B) | **Restored p896.** CAS client for JVM applications — 949 ★. 🟡 GitHub reports `NOASSERTION`; the text is Apache **and a second, separate BSD grant**. 🔴 **This repository is `p880`'s own documented control for conjunctive payloads** — `ingest/p880-licence-byteread.sh` names it in its header and reports `CONJUNCTIVE` — and the cell here recorded only the Apache half for 33 passes. The instrument was right; the cell was not. Institutional SSO is the first integration question in every higher-ed engagement. |
 | https://github.com/apereo/phpCAS | Apache-2.0 | **Restored p896.** CAS client for PHP — 802 ★. The one that matters for **Moodle**, which is PHP. **Pushed 2026-06-30**, so pin it. |
-| https://github.com/jitsi/jitsi-meet | Apache-2.0 (`master/LICENSE`, byte-read 12,596 B, `sha256₁₂ eae52e200cd8`) | **Added `p901`.** Self-hostable live-classroom and conferencing platform — **30,255 ★ / 8,134 forks**, pushed 2026-11-18. **The largest permissive synchronous-delivery platform in open source**, and the only row in this file that was found by auditing against a *third-party* curated index rather than by search — it never self-describes as education, so every `{education}`-qualified leg missed it. Pairs with the LMS rows for the synchronous half of a blended deployment. See `repos/trending.md` `901-R1`. |
+| https://github.com/jitsi/jitsi-meet | 🔴 **CONJUNCTIVE: Apache-2.0 + MIT — CORRECTED `p913`, was `Apache-2.0`** (byte-read `master/LICENSE`, 12,596 B, `sha256₁₂ eae52e200cd8`; the payload is ~1.2 kB larger than a standard Apache-2.0 text and the excess is a second, MIT grant) | **Added `p901`.** Self-hostable live-classroom and conferencing platform — **30,255 ★ / 8,134 forks**, pushed 2026-11-18. **The largest permissive synchronous-delivery platform in open source**, and the only row in this file that was found by auditing against a *third-party* curated index rather than by search — it never self-describes as education, so every `{education}`-qualified leg missed it. Pairs with the LMS rows for the synchronous half of a blended deployment. See `repos/trending.md` `901-R1`. |
 
 ## In-language education corpora — added `p903`
 
@@ -633,6 +633,86 @@ here because of what their licence turned out to be rather than what their READM
 🔵 **Neither is a dependency and neither is large.** They are filed because a permissive *content*
 grant on national-examination material is rarer in this KB than a permissive code grant, and
 because these two rows are the controls that retire this base's licence instrument (`912-F2`).
+
+
+## Licence posture of the whole shelf, re-measured with a corrected authority — `p913`
+
+`912-G1` asked for `p880-licence-byteread.sh` to be retired against `p912`'s two controls, and
+estimated the cost as *"one pass, and no search step — re-run `ingest/p912-grant-family.sh` over the
+shelf's existing slug list and diff the verdict column."* **That is exactly what `p913` did, over
+all `363` distinct addresses on this shelf, and the diff is not what the gap expected.**
+
+| Measurement | Result |
+|---|---|
+| Shelf addresses re-measured | **363** (`agents/top.md`, `repos/foundations.md`, `verticals/solutions.md`) |
+| Rows where `p912`'s instrument and `p913`'s authority **disagree** | 🔴 **56 of 363 — `15.4%`** |
+| Published shelf cells that **genuinely needed correcting** | 🟢 **4** (plus 3 flagged as manifest-only) |
+| Correct published cells that a naïve discharge **would have destroyed** | 🔴 **22, including `moodle/moodle`** |
+
+🔴 **The headline, and it is a warning about the method rather than about the shelf: had this pass
+discharged `912-G1` as written — run the instrument, diff, correct the shelf to match — it would
+have overwritten `22` correct cells with wrong ones.** `moodle/moodle`, `Koha-Community/Koha`,
+`chamilo/chamilo-lms`, `ILIAS-eLearning/ILIAS`, `pkp/ojs`, `h5p/h5p-php-library`,
+`LearningLocker/learninglocker`, `kiwix/kiwix-tools` and six more are **GPL** on this shelf and
+correct; `p912`'s instrument calls every one of them **AGPL-3.0**. See `913-F1` in
+`agents/trending.md`: **GPL-3.0's own §13 names the Affero licence three times**, the detector fires
+on it, and the `! grep AFFERO` guard then suppresses the GPL branch so it can never fire. 🔵 **A
+re-measurement is evidence about the instrument before it is evidence about the shelf**, and which
+of the two is wrong has to be adjudicated per row rather than assumed by recency.
+
+### The corrected authority is `ingest/p913-grant-authority.sh`
+
+It is the **union of every grant fix this base has ever made**, and it passes all of them as
+controls in one run (`evidence/p913-grant-controls.2026-11-19-p913.tsv`):
+
+| Rule | Came from | Control that holds it in place |
+|---|---|---|
+| **Title-line adjudication** — the primary rule | `p640`, lost at `p880`, **restored `p913`** | `moodle/moodle` → `GPL`, `OpenPronounce` → `AGPL-3.0` |
+| MIT **size band** (1,000–1,250 B) | `p640` | `HyNuwa/UniMCP` → `MIT-TITLE-OUT-OF-BAND` |
+| **Cumulative / conjunctive** families | `p880` | `apereo/java-cas-client` → `Apache-2.0 + BSD` |
+| **Boost before MIT** (prefix collision) | `p912` | `Nugestudent2026/EdTech` → `BSL-1.0` |
+| **Creative Commons** family | `p912` | `hasensaramii977-cpu/Grade-12-…` → `CC0-1.0` |
+| **Mulan** family | **`p913`** (`913-F5`) | `ECNU/EduWork` → `MulanPSL-2.0` |
+| **ECL-2.0**, education's own licence | **`p913`** | `sakaiproject/sakai` → `ECL-2.0` |
+| **ODbL / Open Data Commons** (data licences) | **`p913`** (`913-F7`) | `withmarbleapp/os-taxonomy` → `ODbL-1.0` |
+| **Translated** grant titles | **`p913`** (`913-F6`) | `portabilis/i-diario` → `AGPL-3.0` from `LICENÇA PÚBLICA GERAL AFFERO GNU` |
+| **Dual** (disjunctive) grants | **`p913`** (`913-F4`) | `RWTH-OS/eduOS-rs` → `DUAL-MIT-OR-Apache-2.0` |
+| **By-reference** grants | **`p913`** (`913-F8`) | `parmentelat/nbautoeval` → `BY-REFERENCE-CC-BY-SA` |
+| **Manifest-deferred** grants | **`p913`** (`913-F8`) | `LJKelly3141/coursepack` → `MANIFEST-DEFERRED` |
+| **Split-by-asset-type** grants | **`p913`** (`913-F8`) | `bncc-dev/bncc-benchmark` → `MIT(code)+CC-BY(content)` |
+
+### Measured distribution of all 363 shelf addresses
+
+| Verdict | Count | | Verdict | Count |
+|---|---|---|---|---|
+| `MIT` (incl. 8 body-graded) | **189** | | `ECL-2.0` | 3 |
+| `Apache-2.0` | **71** | | `MulanPSL-2.0` | 3 |
+| `AGPL-3.0` | **26** | | `ISC` | 3 |
+| `GPL` | **19** | | `CC0-1.0` / `CC-BY` / `CC-BY-SA` | 2 / 2 / 1 |
+| `BSD` (incl. 6 body-graded) | **16** | | `SPLIT-BY-ASSET-TYPE` | 2 |
+| `LGPL` | 6 | | `ODbL-1.0`, `BSL-1.0`, `DUAL-…`, `MANIFEST-DEFERRED`, `MIT-OUT-OF-BAND`, `BY-REFERENCE-×2` | 1 each |
+| `CONJUNCTIVE` (incl. 1 body-graded) | 5 | | **Payload not reachable** | **8** |
+
+🟢 **`287 of 363` (`79.1%`) carry a plainly permissive head grant** (MIT, Apache-2.0, BSD, ISC,
+BSL-1.0, ECL-2.0, MulanPSL-2.0, dual). 🔵 **The one exclusion is stated so the figure is
+reproducible:** `HyNuwa/UniMCP` carries an **MIT title at a size outside the 1,000–1,250 B band**,
+which `p640`'s rule treats as a *narrowed derivative until somebody reads the modifications* — so it
+is not counted here. Count it and the figure is `288` / `79.3%`. 🔴 **`51` (`14.0%`) are copyleft** (AGPL-3.0, GPL, LGPL) and
+**that is where education's platform tier lives** — read the column, not the shelf average.
+🟡 **`8` addresses have no reachable licence payload at all**, and that is a *measurement* state,
+not a licence state: three `h5p` content types, `summeraprx/topik-shortcut`,
+`bolgerru/blackboard-mcp`, `steve-ongera/KNEC-Exam-Management-System`,
+`turnkeylinux-apps/canvas` and **`OS4ED/openSIS-Classic`**.
+
+🔴 **`OS4ED/openSIS-Classic` is the instrument's own blind spot, and the shelf is right.** Its grant
+is at **`master/docs/License.txt`** — a **subdirectory** — which `p913`'s flat 16-name filename list
+cannot reach, so the authority reports `NO-PAYLOAD` while the cell correctly reads `GPL-2.0` from
+`p897`'s byte-read. 🔵 **A flat filename list is a recall ceiling, and an "absence" it produces is
+about the list, never about the repository.** Registered as `913-G4`.
+
+Full per-row evidence: `evidence/p913-shelf-authority.2026-11-19-p913.tsv` (p913 authority),
+`evidence/p913-shelf-p912-instrument.2026-11-19-p913.tsv` (the superseded instrument, kept so the
+diff is reproducible), `evidence/p913-shelf-published-cells.2026-11-19-p913.tsv`.
 
 ## Gaps and caveats
 

@@ -1,0 +1,17 @@
+repo	branch	path	http	bytes	sha256_12	families	verdict	note
+Koha-Community/Koha	main	LICENSE	200	35151	e79e9c8a0c85	GPL	GPL	
+moodle/moodle	main	COPYING.txt	200	35147	8ceb4b9ee5ad	GPL	GPL	
+chamilo/chamilo-lms	master	LICENSE	200	35147	8ceb4b9ee5ad	GPL	GPL	
+OpenPronounce/OpenPronounce	main	LICENSE	200	34523	0d96a4ff68ad	AGPL-3.0	AGPL-3.0	
+Nugestudent2026/EdTech	main	LICENSE	200	1338	c9bff7573892	BSL-1.0	BSL-1.0	
+hasensaramii977-cpu/Grade-12-National-Exam-Training-Model	main	LICENSE	200	7048	a2010f343487	CC0-1.0	CC0-1.0	Creative Commons grant — content licence, read scope before building on it
+apereo/java-cas-client	master	LICENSE	200	2321	6c21b465e3a0	Apache-2.0+BSD	CONJUNCTIVE	title grants Apache-2.0 and the body carries 1 further family/families — notice obligation of 2
+RWTH-OS/eduOS-rs	main	LICENSE-MIT	200	1023	23f18e03dc49	MIT+Apache-2.0	DUAL-MIT-OR-Apache-2.0	both LICENSE-MIT and LICENSE-APACHE are present and readable — the licensee ELECTS one; this is a disjunctive offer, not a conjunctive obligation
+ECNU/EduWork	main	LICENSE	200	9233	eb7a1d713eb9	MulanPSL-2.0	MulanPSL-2.0	
+portabilis/i-diario	1.6	LICENSE	200	35326	fe85f94658bf	AGPL-3.0	AGPL-3.0	TRANSLATED grant title, graded on ASCII tokens (913-F6)
+withmarbleapp/os-taxonomy	main	LICENSE	200	25289	77d2692c3d64	ODbL-1.0	ODbL-1.0	
+LJKelly3141/coursepack	main	LICENSE	200	41	cfb725c7bb44	none	MANIFEST-DEFERRED	41 B carrying only a copyright holder and year — the grant is declared in the PACKAGE MANIFEST (R: DESCRIPTION `License:`), not here.  Read the manifest (905-G1); do NOT read this as ungranted
+parmentelat/nbautoeval	master	LICENSE	200	289	1bb69236081f	CC-UNSPECIFIED	CC-UNSPECIFIED	TRANSLATED grant title, graded on ASCII tokens (913-F6); Creative Commons grant — content licence, read scope before building on it
+bncc-dev/bncc-benchmark	main	LICENSE	200	911	d19733bb7540	MIT(code)+CC-BY(content)	SPLIT-BY-ASSET-TYPE	one repository, two grants divided by ASSET TYPE and declared in prose (911 B) — a single licence cell cannot express it, and the permissive half is the CODE while the data/content half is attribution- or share-alike-bound (T25, gate 904-G1)
+sakaiproject/sakai	master	LICENSE	200	11120	0688f62d04f1	ECL-2.0	ECL-2.0	
+langfuse/langfuse	main	LICENSE	200	1646	9ee6ca42e813	MIT	BODY-MIT	graded from the body, not a licence title — weaker evidence than a title verdict
