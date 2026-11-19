@@ -271,6 +271,15 @@ corroboration, not averaged.
 - 🔴 **`DigComp 3.0` — sixth consecutive pass unresolved, and NOT re-tested this pass.** Inherited
   gap, explicitly not re-measured (`Gap 56`, `Gap 241`).
 - 🔴 **`ACTION TQ` and `ACTION TW` NOT RUN** — ninth pass.
+- 🟢 **Inherited red, re-measured rather than asserted, and the two runs are byte-identical.**
+  `make hooks` was run twice — once on this pass's tree and once on a clean `git worktree` checkout
+  of the parent commit `080a74b` — and the suite's own summary line is the **same string** in both:
+  **`53/76 gates green`, with the same 23 gates red in the same order.** 🟢 **`p913` introduces no
+  new red gate and clears none.** 🔵 `gate-shelf-consistency` was diffed specifically because this
+  pass changes licence cells, and `p309-affero-rung-census` — the §13 gate — **passes in both runs**,
+  which is itself `913-F9`'s point: it passes because it cannot see `ingest/`. 🔴 The 23
+  non-`DECLARED_RED` failures remain a pass of their own, for the reason `p911` gave and `Gap 245`
+  requires.
 
 
 ## `2026-11-19` (p912) — **Three registered gaps discharged, and the pass's own authority instrument failed two controls. The five examination boards `911-G1` named have all registered their GitHub namespace and published nothing into it — and the channel this base uses cannot tell a real-but-empty owner from one that does not exist. Ethiopia measured: 81.4% ungranted, ceiling 7★, the weakest market in this KB. Japan's guideline revision names agentic AI and is open now.**
