@@ -1,0 +1,38 @@
+repo	licence_path	bytes	sha256_12_of_payload	grant_read_from_payload	spdx_from_search_api	stars	pushed
+apache/openmeetings	master/LICENSE	50907	4e52c8ddc70e	Apache License	NOASSERTION	691	2026-11-16
+HyNuwa/UniMCP	master/LICENSE	1980	727b864af003	MIT License (+ inherited ISC)	NOASSERTION	1	2026-11-14
+GarethManning/education-agent-skills	main/LICENSE	1230	f952182df4eb	Creative Commons Attribution-ShareAlike 4.0 International	NOASSERTION	1000	2026-11-03
+kaveheng/GenAi-in-education	main/LICENSE	442	5217b43fb5d4	Creative Commons Attribution 4.0 International	NOASSERTION	0	2026-09-26
+OpenOLAT/qtiworks	master/LICENSE.txt	2058	a5c692f12090	3-clause BSD	NOT-IN-INDEX	unmeasurable	unmeasurable
+falkenslab/miyagi	main/LICENSE	1078	d0a329112827	MIT License	MIT	0	2026-11-18
+LabSirius/TutorIA	main/LICENSE	1069	346d7b5d3913	MIT License	MIT	0	2026-10-27
+GuilhermeScarpini/agente-bncc-professores	main/LICENSE	1074	2121152fdef1	MIT License	MIT	0	2026-10-21
+jamestesting0/tum-mcp	main/LICENSE	1092	ce90dfa77bef	MIT License	MIT	1	2026-11-18
+kad-xyz/spbstu-mcp	main/LICENSE	1064	0dc1ec808f28	MIT License	MIT	19	2026-11-10
+nialvape/utn-mcp	main/LICENSE	748	2ad14eb14513	ISC License	ISC	13	2026-11-13
+simonseifert/merlin-mcp	main/LICENSE	1070	c458af6b099b	MIT License	MIT	1	2026-11-16
+EduardoKrausME/moodle-local_mcp	master/LICENSE	35149	3972dc9744f6	GNU GENERAL PUBLIC LICENSE	GPL-3.0	2	2026-11-16
+CogitoNTNU/TutorAI	main/LICENSE	1140	c56df8d19cd5	MIT License	MIT	39	2026-11-16
+terracotta-education/terracotta	main/LICENSE	11323	6dc0e068dcf3	Apache License	Apache-2.0	22	2026-11-18
+isakskogstad/Skolverket-MCP	master/LICENSE	1093	7935973493aa	MIT License	MIT	13	2026-04-22
+trycua/cua	main/LICENSE.md	1069	c0779290c1d4	MIT License	MIT	32616	2026-11-18
+FenixEdu/fenixedu-academic	master/LICENSE	7652	97628afebc60	GNU LESSER GENERAL PUBLIC LICENSE	LGPL-3.0	175	2023-06-14
+freeCodeCamp/freeCodeCamp	main/LICENSE.md	1513	e2a20708d0fd	BSD 3-Clause License	BSD-3-Clause	459299	2026-11-18
+classroomio/classroomio	main/LICENSE	34523	8486a10c4393	GNU AFFERO GENERAL PUBLIC LICENSE	AGPL-3.0	1748	2026-11-18
+lplnufpi/essay-br	main/LICENSE	1114	79aacbdab319	MIT License	MIT	17	2023-05-08
+Open-TutorAi/open-tutor-ai-CE	main/LICENSE	1531	57c341d09920	3-clause BSD (byte-read: 3 numbered conditions)	BSD-3-Clause	119	2026-06-26
+changazo/udesa-mcp	main/LICENSE	10173	a6cba85bc92e	Apache License	Apache-2.0	4	2026-11-17
+jpmanson/siu-guarani-mcp	main/LICENSE	1074	53d0fa710f43	MIT License	MIT	1	2026-08-10
+turnkeylinux-apps/canvas	NO-LICENCE-FILE	-	-	none on main/master; README.rst = 200	NONE	13	2026-11-16
+franc1sc0sv/udb-copilot	main/LICENSE	1066	cef6ae5e573f	MIT License	MIT	0	2026-10-25
+SebasB76/poli	main/LICENSE	1065	95bc62cf1be8	MIT License	MIT	0	2026-11-16
+Victor-Blasco/UJI-MCP	main/LICENSE	1063	ac16a13e6bc6	MIT License	MIT	1	2026-11-05
+kta41/mcp-uned	main/LICENSE	1071	03ff52d42a7c	MIT License	MIT	1	2026-10-18
+alanmagno1/tuaulavirtual-unam-mcp	main/LICENSE	1067	06cef6b039cd	MIT License	MIT	0	2026-09-09
+MarcoXMarquez/CampusUNSA	main/LICENSE	1130	c825f0d654c4	MIT License	MIT	0	2026-11-19
+Group-Active-IA/Skill-Moodle	main/LICENSE	1079	f5f8f13d04a0	MIT License	MIT	0	2026-09-24
+alexFiorenza/aulasvirtuales-toolkit	master/LICENSE	1070	4106f42e7a68	MIT License	MIT	0	2026-08-26
+Just253/autonoma-cli	main/LICENSE	1064	10764fbc7915	MIT License	MIT	1	2026-11-17
+VxGM/IAula-Virtual-Uleam	main/LICENSE	1061	8aba6b4e3f4c	MIT License	MIT	0	2026-11-17
+PabloPC05/campus-usc	main/LICENSE	1066	9e39f0f18bec	MIT License	MIT	0	2026-11-18
+EmilioGiordano/unsada-mcp	main/LICENSE	34523	0d96a4ff68ad	GNU AFFERO GENERAL PUBLIC LICENSE	AGPL-3.0	0	2026-11-01

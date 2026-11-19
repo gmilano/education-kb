@@ -4,6 +4,216 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p908) — **this base's research log and its delivery surface have come apart. Of 30 repositories the log says the words "Promoted to" about, 20 are not in the file they were promoted into — and the cause is measured: the last three full rewrites of the three delivery files retained between 5.5% and 18.9% of their repository addresses. 26 rows restored or filed. Both of `p907`'s declared LATAM gaps refuted, in Spanish.**
+
+**Channels.** `raw.githubusercontent.com` (`200` real / `404` absent, both controls run),
+`gh api search/repositories`, `gh api search/code` (8 queries, one a deliberate null control
+returning `total_count 0`), and 10 web legs — the 8 prescribed plus **2 extra run in Spanish**.
+Network posture unchanged from `p907`: `github.com` HTML `403` for every address including ones that
+do not exist, so `curl -sI` was **not** used as a verification channel (`907-F2`).
+
+Records:
+[`promotion-audit.2026-11-19-p908.tsv`](../evidence/promotion-audit.2026-11-19-p908.tsv) (187 claim
+pairs, every one resolved against the file it names),
+[`delivery-attrition.2026-11-19-p908.tsv`](../evidence/delivery-attrition.2026-11-19-p908.tsv),
+[`licence-bytes.2026-11-19-p908.tsv`](../evidence/licence-bytes.2026-11-19-p908.tsv) (36 grants,
+every one byte-read),
+[`codesearch-latam.2026-11-19-p908.tsv`](../evidence/codesearch-latam.2026-11-19-p908.tsv),
+[`codesearch-novel-measured.2026-11-19-p908.tsv`](../evidence/codesearch-novel-measured.2026-11-19-p908.tsv),
+[`url-gate.2026-11-19-p908.tsv`](../evidence/url-gate.2026-11-19-p908.tsv).
+
+🟢 **Closing gate: all 38 repository addresses this pass added to a delivery file were re-verified in one final sweep — `38 / 38` resolved on `raw.githubusercontent.com`, and the two deliberate nonexistent controls returned `404` on every path tried.** `0` broken rows added.
+
+### 🔴 `908-F1` The log claims promotions the delivery files do not contain, and the rate is 2 in 3
+
+`p907` closed by attacking *delivery gaps* — facts and rows present in the research log and absent
+from the files an engagement reads. `p908` turned that question on the log's own promotion claims:
+every line in `agents/trending.md` and `repos/trending.md` that names a delivery file was resolved
+against that file.
+
+| Claim wording | Distinct repo → file pairs | Absent from the named file |
+|---|---|---|
+| Explicit — the line says **"Promoted to"** | **30** | 🔴 **20** |
+| Looser — the line says "filed" and names the file | 157 | 133 |
+| **Total** | **187** | **153** |
+
+🔵 **The strict number is the one to carry: 20 of 30.** The looser class includes lines that merely
+*discuss* filing, so it is an upper bound, not a finding. Both are in the record with a
+`claim_strength` column so the next pass does not have to re-derive the distinction.
+
+🔴 **Six of the twenty were promoted into `agents/top.md` by `p798`**, in a line that reads
+*"Promoted to `agents/top.md` this pass: `falkenslab/miyagi`, `nialvape/utn-mcp`, `HyNuwa/UniMCP`,
+`jamestesting0/tum-mcp`, `kad-xyz/spbstu-mcp`, `simonseifert/merlin-mcp`"*. **None of the six was in
+the file when `p908` opened it.** `p798`'s own star-sweep table in the same section lists them as
+`agents` rows with 0 ★ — so they were filed, and then they were lost.
+
+### 🔴 `908-F2` The cause is the full rewrite, and the retention rate is between 5.5% and 18.9%
+
+Each delivery file has `*-pre-rewrite` snapshots in [`../archive/`](../archive/). Counting distinct
+`github.com/OWNER/REPO` addresses in the snapshot and in the file now:
+
+| Delivery file | Addresses now | `p722` snapshot `2026-11-09` | `p787` snapshot `2026-11-12` | `p871` snapshot `2026-11-17` |
+|---|---|---|---|---|
+| `agents/top.md` | **118** | 471 → retained **10.2%** | 1,073 → retained **5.5%** | 783 → retained **5.5%** |
+| `repos/foundations.md` | **159** | 428 → **12.9%** | 942 → **7.9%** | 431 → **12.1%** |
+| `verticals/solutions.md` | **89** | 185 → **18.9%** | 508 → **8.3%** | 280 → **12.9%** |
+
+🔵 **This is not, by itself, a defect — and that is the point worth being careful about.** A rewrite
+that consolidates 1,073 addresses into a readable 118 may be doing exactly the right thing; this base
+has repeatedly found that *fewer real rows beat padding*. 🔴 **What makes it a defect is that no
+rewrite recorded a decision about the rows it dropped.** The log says six named repositories were
+promoted; the file does not contain them; **nothing anywhere says they were reconsidered and
+rejected.** An intentional trim and an accidental loss look identical in this base's current records,
+which means neither can be trusted.
+
+🟢 **The cheap fix, and `p908` applies it: a rewrite must write down what it drops.** The three
+restoration sections added this pass each state the retention figure for their own file, so the next
+rewrite of them inherits the number rather than the surprise.
+
+### 🟢 `908-F3` The repair: 26 rows into delivery, every grant byte-read this pass
+
+**13 restored** (claimed-promoted and absent) and **13 newly filed** (found this pass). Full table in
+[`agents/top.md`](top.md#the-per-institution-lms-bridge-class-t30--restored-and-extended-in-p908);
+foundations and verticals rows in their own files' `p908` sections.
+
+| Destination | Restored | New | Of which unlicensed and therefore **not** filed |
+|---|---|---|---|
+| `agents/top.md` | 13 | 13 | 3 (`PedroCarassale/utn-mcp`, `A-F-V-A/unihelp-mcp-a2a`, `MoonquantCap/agentes-ia-ucema`) |
+| `repos/foundations.md` | 7 | — | — |
+| `verticals/solutions.md` | 4 | 1 (`p907`'s deferred appliance row) | — |
+
+🟢 **Region movement from the agents section alone: LATAM `+13` across seven countries (🇦🇷 🇧🇷 🇨🇴 🇪🇨
+🇲🇽 🇵🇪 🇸🇻), EMEA `+7` across six (🇩🇪 🇭🇷 🇳🇴 🇷🇺 🇸🇪 🇪🇸).** `franc1sc0sv/udb-copilot` (**MIT**,
+Universidad Don Bosco) is **this base's first Central America repository row**.
+
+### 🟢 `908-F4` `907-F3`'s exclusion rule, applied from the start, and the answer is that the productive query is **in-language**
+
+`p907` derived its wordlist-exclusion rule *after* running its queries and recommended that the next
+pass apply it first. `p908` did, and pointed the channel at the Spanish tokens `p907` named
+(`aula virtual`, `campus virtual`, `sistema académico`) plus one it did not: **`siu guaraní`**, the
+student-information system the Argentine national university system runs.
+
+| Query | `total_count` | Yield |
+|---|---|---|
+| `"aula virtual" mcp` | **389** | 🟢 **The productive one** — the per-institution bridge cohort, nine countries |
+| `"aula virtual" mcp server python` | 77 | 🟢 Overlaps the above, adds ESPOL 🇪🇨, USC 🇪🇸, UNSA 🇵🇪 |
+| `"siu guarani" api` | 56 | 🟢 Surfaced `jpmanson/siu-guarani-mcp` |
+| `guarani autogestion universidad scraping` | **3** | 🟢 **The narrowest query in this pass, and one of its best** — confirms `p427`/`p708`'s *fewer terms, named system* discriminator |
+| `"campus virtual" agente` | 754 | 🟡 Mostly coursework repositories; high count, low yield |
+| `"sistema academico" estudiantes api` | 82 | 🟡 Student-project tier, almost no AI |
+| `"sistema academico" mcp server` | 4 | 🔴 Near-empty |
+| `zzqqxx-p908-nonexistent-token-control` | **0** | 🟢 **CONTROL** — the channel returns 0 for a token that does not exist |
+
+🟢 **The exclusion rule worked, and what it revealed is that `total_count` is anti-correlated with
+usefulness here.** The 754-result query produced nothing filable; the 3-result query produced a
+row. 🔵 **`907-F3`'s wordlist class did not reappear at all** — because the Spanish tokens
+`aula virtual` and `autogestión` are **not** in English-language pentest dictionaries. **Running the
+channel in the region's language is itself a poisoning filter.**
+
+🟢 **Transferable rule, now held on two independent passes (`p708`, `p908`): a region leg in English
+finds the regulator; a region leg in the region's language finds the supply.** The prescribed leg
+text contains the token `LATAM` — analyst vocabulary the authors of this code never use.
+
+### 🟢 `908-F5` Both of `p907`'s declared LATAM gaps are refuted, and the Panamá/Guatemala gap is now *specific*
+
+`p907` declared: *"Argentina and Central America remain unrefuted."* Two extra web legs in Spanish
+settled both. Everything is placed under its region in
+[`intel/market.md`](../intel/market.md#opportunities-by-region).
+
+- 🇦🇷 **Argentina**: Educ.ar's national AI teacher-training courses (two 2026 editions); **Salta**,
+  the first province to train primary teachers in AI, around its own **CodeAI** platform; Entre
+  Ríos's generative-AI course on **Atamá**; CABA's 2025 critical-use guide; a Chamber of Deputies
+  bill; Mendoza's dropout early-warning system. 🔴 **No AI law, and a government explicitly against
+  pre-emptive regulation** — so unlike EMEA there is no compliance deadline to sell against here.
+- 🇨🇷 **Central America**: Costa Rica's **MEP teacher guide** (`GuiaDocenteIA.pdf`) under MICITT's
+  National AI Strategy 2024–2027 — **a ministry-published pedagogical artefact, the strongest
+  government signal in the subregion**; UCR's October teacher module; SINAES/TEC on AI in quality
+  assurance; the **Foro de IA en Educación 2026** with **nine national delegations**; Microsoft Q2
+  2026 generative-AI use at **29.7% (🇨🇷)** and **24.2% (🇵🇦)**.
+- 🔴 **What is still missing is now a smaller, better-aimed gap: no national AI-in-education policy
+  was found for Panamá or Guatemala**, both of which attended the forum. 🔵 **Next pass: go at
+  `meduca.gob.pa` and `mineduc.gob.gt` directly** — both web legs reached the forum coverage and
+  stopped. Guatemala's Mineduc appears in UNESCO material on open technical-training courses with
+  **no AI focus**; recorded so it is not re-found as a hit.
+
+### 🟡 `908-F6` Instrument correction, caught inside this pass: a digest pipeline that produced plausible, wrong fingerprints
+
+This pass's first licence-reading script computed `sha256` **over a pipe** that appended a newline.
+The digests it produced were **stable, plausible, and did not match this base's own records.** The
+error surfaced because two different `34,523 B` AGPL-3.0 payloads hashed differently *and* neither
+matched the digest `p708` had recorded for one of them.
+
+Rewritten to download to a file and hash the file, the pipeline **reproduced four of this base's
+previously-recorded digests exactly**:
+
+| Repo | `p908` digest | Previously recorded | |
+|---|---|---|---|
+| `HyNuwa/UniMCP` | `727b864af003` | `727b864af003` (`T427`) | 🟢 match |
+| `nialvape/utn-mcp` | `2ad14eb14513` | `2ad14eb14513` | 🟢 match |
+| `changazo/udesa-mcp` | `a6cba85bc92e` | `a6cba85bc92e` | 🟢 match |
+| `jpmanson/siu-guarani-mcp` | `53d0fa710f43` | `53d0fa710f43` | 🟢 match |
+| `EmilioGiordano/unsada-mcp` | `0d96a4ff68ad` | `0d96a4ff68ad` (`p708`) | 🟢 match |
+
+🔵 **Two lessons, and the second is the useful one.** First: **hash a file, never a pipe** — all 36
+digests in this pass's record were recomputed and the published figures are the file-based ones.
+Second: **the error was only detectable because earlier passes had written their digests down.** A
+byte size alone would not have caught it — `classroomio/classroomio` and `EmilioGiordano/unsada-mcp`
+carry AGPL-3.0 payloads of **identical length, `34,523 B`, and different content**
+(`8486a10c4393` vs `0d96a4ff68ad`). 🟢 **The digest column in this base's licence records is doing
+real work; keep paying for it.**
+
+### 🟢 `908-F7` `p900`'s unindexed-but-readable class, confirmed a third time — and zero false absence in this pass's cohort
+
+Of **32** cohort repositories measured in one batched `repo:` sweep, **32 resolved** —
+🟢 **0% false absence**, against the 44% `p900` measured and the 9 unresolved addresses `p907`
+classified. 🔴 **One address outside that cohort did reproduce the class**: `OpenOLAT/qtiworks`
+returns **nothing** from `search/repositories` and `LICENSE.txt` `200` (`2,058 B`, 3-clause BSD) from
+`raw`. It is filed in `repos/foundations.md` with **stars recorded as `unmeasurable`, not
+estimated** (`902-G3`). 🔵 **So false absence is real but not uniform — it is a property of the
+individual repository's indexing, not a rate to apply to a sample.**
+
+### 🔴 `908-F8` `T32`: the education agent-skill tier is Creative Commons, and SPDX calls it `NOASSERTION`
+
+Two `NOASSERTION` rows resolved on byte-read, and **both resolved to Creative Commons**:
+`GarethManning/education-agent-skills` (**1,000 ★**) to **CC BY-SA 4.0**, and
+`kaveheng/GenAi-in-education` to **CC BY 4.0**. The first is the sharp one: its licence text
+explicitly covers *"the educational skills, documentation, examples, and curriculum materials"* —
+**the prompt text itself** — so a studio that adapts 165 teacher skills into a proprietary assistant
+owes the adaptation under ShareAlike. Commercial use is permitted; **staying closed is not.** Full
+analysis, including why no SBOM or licence scanner can see this,
+in [`intel/trends.md` `T32`](../intel/trends.md#t32--the-education-agent-skill-tier-is-appearing-under-creative-commons-not-under-software-licences--and-sharealike-on-prompt-text-is-a-copyleft-nobody-is-scanning-for).
+
+### 🔵 What the eight prescribed legs produced, measured
+
+🟢 **13 of the 13 newly-filed repository rows came from GitHub code search in Spanish.** The four
+global web legs produced context and **one** usable platform lead; the `verticals` leg returned a
+single vendor (OpenEduCat, LGPL) and eduTrac SIS (GPL-3.0) and **explicitly found no MIT/Apache
+SIS** — which is consistent with this base's own shelf. The four English regional legs produced the
+regulation and adoption facts, which is what they are good for. Table in
+[`intel/market.md` → Global](../intel/market.md#global).
+
+### 🔵 Declared gaps from this pass
+
+- 🔴 **The repair is bounded to 26 rows; `908-F2` measured over 1,300 dropped addresses across the
+  three files.** `p908` restored only what the log explicitly claimed was promoted. **The remaining
+  attrition is unexamined, and the snapshots are in `../archive/` for whoever takes it on.** A
+  sensible next bite: run the same claim-resolution against `intel/` and `compose/`, which this pass
+  did not audit at all.
+- 🔴 **No rewrite in this base's history recorded what it dropped, so the dropped rows cannot be
+  separated into "trimmed" and "lost" retrospectively.** `p908` cannot fix that for the past. The
+  three sections it added state their file's retention figure, which only helps going forward.
+- 🟡 **The three unlicensed bridges found this pass were not approached**, and `p907` left four in the
+  same state. **That is now seven open licence requests, none of them made.** Cheap, and still not
+  done.
+- 🟡 **`T32` rests on two assets, one of them at 0 ★.** The test that would graduate it is named in
+  the trend: enumerate the education entries in the two skill marketplaces `T31` measured and read
+  each grant from the payload.
+- 🟡 **Panamá and Guatemala**: see `908-F5` for the two ministry domains to go at directly.
+- 🔵 **The `"campus virtual" agente` query returned 754 results and this pass read 70.** The high-count
+  Spanish queries were sampled, not exhausted; a pass with a tighter in-language filter (`+moodle`,
+  `+mcp`, `-tarea`) would get a cleaner ranking from the same channel.
+
+
 ## `2026-11-18` (p907) — **the instrument this base shelved is live. Global `search/code` is served in this session, and it reaches a tier repo search structurally cannot see: production-grade education *interop* engineering sitting at 0–2 ★ because its descriptions never say "AI" or "education" — its code says OneRoster, QTI 1.2 and D2L. Two declared gaps are refuted, including Peru.**
 
 **Channel.** GitHub **global code search** (`gh api -X GET search/code`), 18 queries in two batches,

@@ -1,0 +1,10 @@
+delivery_file	snapshot	addresses_in_snapshot	addresses_now	lost	retained_pct
+agents/top.md	archive/2026-11-09-p722-pre-rewrite	471	118	423	10.2
+agents/top.md	archive/2026-11-12-p787-pre-rewrite	1073	118	1014	5.5
+agents/top.md	archive/2026-11-17-p871-pre-rewrite	783	118	740	5.5
+repos/foundations.md	archive/2026-11-09-p722-pre-rewrite	428	159	373	12.9
+repos/foundations.md	archive/2026-11-12-p787-pre-rewrite	942	159	868	7.9
+repos/foundations.md	archive/2026-11-17-p871-pre-rewrite	431	159	379	12.1
+verticals/solutions.md	archive/2026-11-09-p722-pre-rewrite	185	89	150	18.9
+verticals/solutions.md	archive/2026-11-12-p787-pre-rewrite	508	89	466	8.3
+verticals/solutions.md	archive/2026-11-17-p871-pre-rewrite	280	89	244	12.9

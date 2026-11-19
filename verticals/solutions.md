@@ -333,6 +333,28 @@ full LMS, and its grant had never been read. `master/LICENSE` is **10,982 B**
   this reason, and a reviewer meeting the words *"Additional license statement"* inside a licence
   file will stop and ask.
 
+## Restored in `p908`, plus `p907`'s deferred appliance row
+
+🔴 This file carried **280 distinct repository addresses into the `2026-11-17` (`p871`) rewrite and
+89 out** ([`delivery-attrition.2026-11-19-p908.tsv`](../evidence/delivery-attrition.2026-11-19-p908.tsv)).
+Four of the rows below were named in trending-log promotion claims pointing at
+`verticals/solutions.md` and were absent from it. The fifth is the row `p907` measured and explicitly
+deferred. Grants byte-read in `p908`.
+
+| Platform | Repo | Licence (byte-read) | ★ | Last push | Where it is strong | AI layering seam |
+|---|---|---|---|---|---|---|
+| **Apache OpenMeetings** | https://github.com/apache/openmeetings | **Apache-2.0** (`50,907 B`) | 691 | 2026-11-16 | Self-hosted **live classroom**: rooms, whiteboard, polls, recording. Apache-governed, so the licence will not move | 🟢 The **recording** is the seam: transcript → per-student summary → assessment items. Permissive end to end, which no other live-classroom row in this file is. 🔵 SPDX reports `NOASSERTION`; the `50,907 B` payload opens *"Apache License"* |
+| **Open TutorAI (CE)** | https://github.com/Open-TutorAi/open-tutor-ai-CE | **BSD-3-Clause** (`1,531 B`, three numbered conditions read) | 119 | 2026-06-26 | Avatar-fronted tutoring platform, Community Edition | Pedagogy and persona are configuration, so the seam is the model backend. 🟡 Last push `2026-06-26` — **five months quiet**; verify maintenance before it anchors a build |
+| **ClassroomIO** | https://github.com/classroomio/classroomio | 🔴 **AGPL-3.0** (`34,523 B`) | 1,748 | 2026-11-18 | Customer-training / academy platform — the *corporate* academy shape, not K-12 | 🔴 **AGPL is network copyleft: hosting a derivative as a service triggers the source obligation.** Usable as a deployed platform, unusable as the base of a closed product |
+| **FenixEdu Academic** | https://github.com/FenixEdu/fenixedu-academic | 🔴 **LGPL-3.0** (`7,652 B`) | 175 | 🔴 **2023-06-14** | A full open **SIS** — degrees, enrolment, curricular plans — built and run at IST Lisbon (EMEA 🇵🇹) | 🔴 **Three and a half years without a push.** Filed as a *reference data model* for European registrarial structure, **not as a deployment target**. The honest use is reading its domain model, not running it |
+| **TurnKey Canvas** | https://github.com/turnkeylinux-apps/canvas | 🔴 **no licence file** (`README.rst` `200`; Canvas itself is AGPL-3.0) | 13 | 2026-11-16 | Pre-built **Canvas LMS appliance** — the fastest path to a running Canvas for a demo or a pilot | 🟡 The appliance *build scripts* carry no grant; the platform it installs is AGPL. Fine for a time-boxed evaluation environment, not a distribution base. **`p907` measured and deferred this row; `p908` read it and files it with the licence gap stated** |
+
+🔵 **Why `terracotta` is in [`repos/foundations.md`](../repos/foundations.md) and not here.** Its
+promotion claim named both files. It is an **LTI tool that runs randomised controlled trials inside
+someone else's LMS** — it is instrumentation for proving an intervention worked, not a platform a
+client would deploy as their learning environment. One row, in the file where an engagement would
+actually look for it.
+
 ## Honest gaps
 
 - **Unlicensed content corpora are the biggest trap in this category (added p891).** The largest

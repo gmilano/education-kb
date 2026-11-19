@@ -1283,3 +1283,51 @@ high-visibility studio marketing with no incumbent to displace.
 file — so "none found" is strong evidence of absence, not proof. Both collections are themselves
 aggregators of other people's skills, so their licence covers the collection, not necessarily each
 item. And this is two collections: the largest two this channel reached, not the market.
+
+## T32 — The education **agent-skill** tier is appearing under **Creative Commons**, not under software licences — and ShareAlike on prompt text is a copyleft nobody is scanning for
+
+**Measured in `p908`, by byte-reading grants that SPDX reports as `NOASSERTION`.**
+
+`T31` found that the agent-skill marketplaces are enormous, permissive and **empty where education
+belongs**. `p908` found what fills that shelf when someone does publish into it, and the licence
+shape is not the one the tooling assumes.
+
+| Asset | ★ | SPDX from the API | Grant **byte-read from the payload** | What it actually is |
+|---|---|---|---|---|
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | **1,000** | `NOASSERTION` | 🔴 **CC BY-SA 4.0** (`1,230 B`, `sha256₁₂ f952182df4eb`) | **165 evidence-grounded skills** for teachers, school leaders and EdTech builders — pedagogy, learning science, curriculum |
+| [`kaveheng/GenAi-in-education`](https://github.com/kaveheng/GenAi-in-education) | 0 | `NOASSERTION` | 🔴 **CC BY 4.0** (`442 B`, `sha256₁₂ 5217b43fb5d4`) | Course implementations using generative AI in teaching and assessment, by year |
+
+🔴 **Why `CC BY-SA 4.0` on a skill pack is the sharpest licence trap in this base so far.** The
+licence text in that repository is explicit that it covers *"the educational skills, documentation,
+examples, and curriculum materials"* — that is, **the prompt text itself**, which is the entire
+substance of an agent skill. ShareAlike then requires derivatives to carry the same licence. So a
+studio that forks 165 teacher skills, rewrites them for a client's curriculum and ships the result as
+part of a proprietary assistant has produced a **derivative of a ShareAlike work** and owes it under
+CC BY-SA. 🟢 **Commercial use is explicitly permitted** — the obligation is not a ban, it is that the
+adapted prompt library must stay open.
+
+🔵 **And no tool in the normal pipeline will tell you.** Three independent reasons, each measured:
+
+1. **SPDX reports `NOASSERTION` for both**, so a licence gate keyed on the API field sees "unknown",
+   not "copyleft" — and `T19` already established that this base's passes find published licence
+   metadata wrong in both directions.
+2. **SBOM and dependency scanners read manifests and code**, and a skill pack has neither. There is
+   nothing for them to resolve.
+3. **`T27` named the *mark* as the third licence axis; `T25` named *data and content*. This is the
+   fourth: the licence on the instructions.** A prompt is simultaneously the product and the
+   documentation, and the CC family is what authors reach for when they think of their work as
+   writing rather than as software.
+
+🟢 **The commercial read is not "avoid it".** A CC BY-SA skill corpus is the **cheapest credible
+starting point** for an education assistant that exists — 165 skills, 1,000 ★, grounded in learning
+science, free to use commercially. 🔵 **The discipline is architectural: keep the ShareAlike corpus as
+a loaded, attributed *input* behind a stable interface, and keep the client's own curriculum
+adaptations in a separate, independently-licensed layer.** That is the same separation `P24` built for
+reproducibility and `P25` built to keep AGPL out of a deliverable; this pass adds a third reason to
+build it.
+
+🟡 **Limits, stated.** Two assets, both found in `p908`, one of them at 0 ★. **This is a named shape
+with two instances, not a measured population** — the claim is that the shape exists and is invisible
+to tooling, not that it is yet the dominant licence of the tier. 🔵 **The test for the next pass:
+enumerate the education entries in the two marketplaces `T31` measured and read each grant from the
+payload.** If the CC share there is material, `T32` graduates from a shape to a distribution.

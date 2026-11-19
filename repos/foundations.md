@@ -482,6 +482,30 @@ named task in week one rather than discovering it at handover — priced as `com
    `requirements.txt` is 104 B of `-r` indirection; the dependencies are three levels down, across 19
    generated `requirements/modules/*.txt` files.
 
+## Restored in `p908` — rows the log records as promoted into *this file* and which were not in it
+
+🔴 The `p908` promotion audit (method and record in
+[`agents/top.md`](../agents/top.md#the-per-institution-lms-bridge-class-t30--restored-and-extended-in-p908))
+found that this file carried **431 distinct repository addresses into the `2026-11-17` (`p871`)
+rewrite and 159 out**. The rows below were each named in a trending-log promotion claim pointing at
+`repos/foundations.md`, were absent from it, and are restored here with the grant **byte-read in
+`p908`** rather than copied from the claim.
+
+| Repo | Licence (byte-read) | ★ | Last push | Role |
+|---|---|---|---|---|
+| https://github.com/OpenOLAT/qtiworks | **BSD-3-Clause** (`LICENSE.txt` `2,058 B`) | 🟡 **unmeasurable** | unmeasurable | **QTI assessment delivery engine.** 🔴 Returns nothing from `gh api search/repositories` while `raw` returns `200` — `p900`'s *unindexed-but-readable* class, confirmed a third time (`908-F5`). Stars are recorded as **unmeasurable, not estimated** (`902-G3`) |
+| https://github.com/trycua/cua | **MIT** (`LICENSE.md` `1,069 B`) | 32,616 | 2026-11-18 | Computer-use drivers and cross-OS sandboxes. **The route to an LMS that has no API** — a legacy SIS web UI driven as a desktop, sandboxed. The largest permissive repo in this file after `freeCodeCamp` |
+| https://github.com/freeCodeCamp/freeCodeCamp | **BSD-3-Clause** (`LICENSE.md` `1,513 B`) | 459,299 | 2026-11-18 | Curriculum **and** platform codebase under one permissive grant. The reference for what a self-paced certification track looks like when the content and the delivery engine ship together |
+| https://github.com/terracotta-education/terracotta | **Apache-2.0** (`11,323 B`) | 22 | 2026-11-18 | **Randomised controlled trials inside a live LMS course**, as an LTI tool. The only instrument in this base for proving an AI intervention *worked* rather than shipped — an evaluation asset, not a feature |
+| https://github.com/lplnufpi/essay-br | **MIT** (`1,114 B`) | 17 | 2023-05-08 | Corpus of Brazilian secondary-school essays, ENEM-style, with scores. **Training and evaluation data for automated essay scoring in Portuguese.** 🟡 Last push `2023-05-08` — a stable corpus, not an abandoned tool (LATAM 🇧🇷) |
+| https://github.com/EduardoKrausME/moodle-local_mcp | 🔴 **GPL-3.0** (`35,149 B`) | 2 | 2026-11-16 | Moodle **`local` plugin that serves MCP from inside the LMS** — the server-side counterpart to the client-side bridges in `agents/top.md`. 🔴 A Moodle plugin inherits GPL; this is the sanctioned route *and* the copyleft one (`T13`) |
+| https://github.com/kaveheng/GenAi-in-education | 🔴 **CC BY 4.0** (`442 B`) | 0 | 2026-09-26 | Course implementations using generative AI in teaching and assessment, organised by year. 🔴 **A content licence, not a software one** — attribution travels with the material (`T25`, `T32`) |
+
+🔵 **Two of the seven rows resolve an SPDX `NOASSERTION`, and both resolve to Creative Commons** —
+`GenAi-in-education` to CC BY 4.0 and (in `agents/top.md`) `education-agent-skills` to CC BY-SA 4.0.
+That is the evidence behind `T32`, and it is the reason this base reads the payload instead of the
+badge.
+
 ## Gaps and caveats
 
 - **`openedx/XBlock` and `openedx/xblock-sdk` exist but are not in the tables above.**

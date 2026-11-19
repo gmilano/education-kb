@@ -275,6 +275,67 @@ fitness — `edutelligence` (17 ★) and `Pyris` (12 ★) run in production at T
 several repos above them are weekend projects. Treat stars as evidence of momentum and the
 origin column as evidence of durability.
 
+## The per-institution LMS bridge (class `T30`) — restored and extended in `p908`
+
+🔴 **Read this heading as a repair notice.** `p908` audited every line in this KB's two trending
+logs that uses the words *"Promoted to"* against the file it names. **Of 30 distinct
+repo → delivery-file promotion claims, 20 name a repository that is not in the file it was
+promoted into.** Six of them were promoted into *this file* by `p798`
+(`falkenslab/miyagi`, `nialvape/utn-mcp`, `HyNuwa/UniMCP`, `jamestesting0/tum-mcp`,
+`kad-xyz/spbstu-mcp`, `simonseifert/merlin-mcp`) and were absent from it until this pass. The
+cause is measured, not guessed: the `2026-11-17` (`p871`) rewrite of this file carried
+**783 distinct repository addresses in, and 118 out**. Record:
+[`promotion-audit.2026-11-19-p908.tsv`](../evidence/promotion-audit.2026-11-19-p908.tsv),
+[`delivery-attrition.2026-11-19-p908.tsv`](../evidence/delivery-attrition.2026-11-19-p908.tsv).
+
+Every row below was verified in `p908` on the two channels this base trusts
+(`907-F2`): the grant was **byte-read from `raw.githubusercontent.com`** at the repository's
+default ref, and stars / SPDX / `pushed_at` come from `gh api search/repositories`. Licence bytes
+for all 36 addresses touched this pass:
+[`licence-bytes.2026-11-19-p908.tsv`](../evidence/licence-bytes.2026-11-19-p908.tsv).
+
+| Agent | Repo | Licence (byte-read) | ★ | Last push | Institution / system | Region | In `p908` |
+|---|---|---|---|---|---|---|---|
+| **education-agent-skills** | https://github.com/GarethManning/education-agent-skills | 🔴 **CC BY-SA 4.0** `1,230 B` | 1,000 | 2026-11-03 | 165 evidence-grounded skills for teachers and school leaders — **not software, and ShareAlike** (`T32`) | Global | restored |
+| **TutorAI** (NTNU) | https://github.com/CogitoNTNU/TutorAI | **MIT** `1,140 B` | 39 | 2026-11-16 | NTNU — RAG tutor that cites the curriculum it answers from | EMEA 🇳🇴 | restored |
+| **spbstu-mcp** | https://github.com/kad-xyz/spbstu-mcp | **MIT** `1,064 B` | 19 | 2026-11-10 | SPbPU — institutional Moodle (`dl.spbstu.ru`), university mail **and the national `openedu.ru`** | EMEA 🇷🇺 | restored |
+| **Skolverket-MCP** | https://github.com/isakskogstad/Skolverket-MCP | **MIT** `1,093 B` | 13 | 2026-04-22 | Sweden's **National Agency for Education** open data — a *national* source, not a campus | EMEA 🇸🇪 | restored |
+| **utn-mcp** | https://github.com/nialvape/utn-mcp | **ISC** `748 B` | 13 | 2026-11-13 | UTN — aula virtual (Moodle) **+ Sysacad**; the best credential hygiene in this cohort | LATAM 🇦🇷 | restored |
+| **udesa-mcp** | https://github.com/changazo/udesa-mcp | **Apache-2.0** `10,173 B` | 4 | 2026-11-17 | Universidad de San Andrés Campus Virtual (Moodle); preview-then-confirm on every write | LATAM 🇦🇷 | restored |
+| **UniMCP** | https://github.com/HyNuwa/UniMCP | 🟡 **MIT + inherited ISC, conjunctive** `1,980 B` | 1 | 2026-11-14 | Argentine universities — Moodle **+ SIU Guaraní**; Guaraní read-only | LATAM 🇦🇷 | restored |
+| **siu-guarani-mcp** | https://github.com/jpmanson/siu-guarani-mcp | **MIT** `1,074 B` | 1 | 2026-08-10 | **SIU-Guaraní** *autogestión docente* — the SIS the Argentine national university system runs | LATAM 🇦🇷 | restored |
+| **tum-mcp** | https://github.com/jamestesting0/tum-mcp | **MIT** `1,092 B` | 1 | 2026-11-18 | TU München — Moodle **+ Artemis** (autograder) + TUM Live + TUMonline | EMEA 🇩🇪 | restored |
+| **merlin-mcp** | https://github.com/simonseifert/merlin-mcp | **MIT** `1,070 B` | 1 | 2026-11-16 | **Merlin** — SRCE's *national* Moodle tenancy for Croatian universities. Read-only; phone-approved sends | EMEA 🇭🇷 | restored |
+| **TutorIA** | https://github.com/LabSirius/TutorIA | **MIT** `1,069 B` | 0 | 2026-10-27 | Universidad Tecnológica de Pereira — autonomous tutor for **rural** higher education in Risaralda | LATAM 🇨🇴 | restored |
+| **miyagi** | https://github.com/falkenslab/miyagi | **MIT** `1,078 B` | 0 | 2026-11-18 | Moodle course assistant on the **teacher's** side: grades to the teacher's own rubric, staffs the forum | Global | restored |
+| **agente-bncc-professores** | https://github.com/GuilhermeScarpini/agente-bncc-professores | **MIT** `1,074 B` | 0 | 2026-10-21 | Lesson plans and exams anchored to **BNCC** skill codes, semantic search, Gemini or DeepSeek | LATAM 🇧🇷 | restored |
+| **campus-cli** | https://github.com/alejooroncoy/campus-cli | **ISC** (API) | 13 | 2026-11-18 | UPC Aula Virtual — **Blackboard Learn**, terminal + MCP | LATAM 🇵🇪 | 🆕 filed |
+| **UJI-MCP** | https://github.com/Victor-Blasco/UJI-MCP | **MIT** `1,063 B` | 1 | 2026-11-05 | Universitat Jaume I aula virtual (Moodle) + Google Tasks; targets four different agent clients | EMEA 🇪🇸 | 🆕 filed |
+| **mcp-uned** | https://github.com/kta41/mcp-uned | **MIT** `1,071 B` | 1 | 2026-10-18 | **UNED** (`agora.uned.es`) — Europe's largest distance university by enrolment | EMEA 🇪🇸 | 🆕 filed |
+| **autonoma-cli** | https://github.com/Just253/autonoma-cli | **MIT** `1,064 B` | 1 | 2026-11-17 | Campus Virtual course listing and file download. 🟡 **Names no country** — not placed | — | 🆕 filed |
+| **DUTIC-mcp** | https://github.com/JOSETRA44/DUTIC-mcp | **MIT** `1,066 B` | 0 | 2026-11-07 | **DUTIC** aula virtual (UNSA, Arequipa) — *"for AI agents and humans"* | LATAM 🇵🇪 | 🆕 filed |
+| **udb-copilot** | https://github.com/franc1sc0sv/udb-copilot | **MIT** `1,066 B` | 0 | 2026-10-25 | **Universidad Don Bosco, El Salvador** — cited notes, the teacher's method, Moodle + mail, daily digest | LATAM 🇸🇻 | 🆕 **first Central America row in this base** |
+| **poli** | https://github.com/SebasB76/poli | **MIT** `1,065 B` | 0 | 2026-11-16 | **ESPOL** (Ecuador) — the only **Canvas**-protocol bridge in this cohort | LATAM 🇪🇨 | 🆕 filed |
+| **IAula-Virtual-Uleam** | https://github.com/VxGM/IAula-Virtual-Uleam | **MIT** `1,061 B` | 0 | 2026-11-17 | ULEAM (Ecuador) Moodle monitor — novedades, tareas, descargas, NotebookLM hand-off | LATAM 🇪🇨 | 🆕 filed |
+| **tuaulavirtual-unam-mcp** | https://github.com/alanmagno1/tuaulavirtual-unam-mcp | **MIT** `1,067 B` | 0 | 2026-09-09 | **UNAM** *Tu Aula Virtual* (Moodle) — Latin America's largest university | LATAM 🇲🇽 | 🆕 filed |
+| **CampusUNSA** | https://github.com/MarcoXMarquez/CampusUNSA | **MIT** `1,130 B` | 0 | 2026-11-19 | UNSA (Peru) — **offline-first PWA + WhatsApp/Telegram** assistant over Classroom and DUTIC Moodle, `@unsa.edu.pe` SSO | LATAM 🇵🇪 | 🆕 filed |
+| **Skill-Moodle** | https://github.com/Group-Active-IA/Skill-Moodle | **MIT** `1,079 B` | 0 | 2026-09-24 | UTN TUP campus navigator — shipped as a **Claude Code skill**, not a server (`T22`, `T31`) | LATAM 🇦🇷 | 🆕 filed |
+| **aulasvirtuales-toolkit** | https://github.com/alexFiorenza/aulasvirtuales-toolkit | **MIT** `1,070 B` | 0 | 2026-08-26 | UTN FRBA `aulasvirtuales` — tools *"to interact through agentic tools"* | LATAM 🇦🇷 | 🆕 filed |
+| **campus-usc** | https://github.com/PabloPC05/campus-usc | **MIT** `1,066 B` | 0 | 2026-11-18 | Universidade de Santiago de Compostela Campus Virtual in the terminal | EMEA 🇪🇸 | 🆕 filed |
+
+🟢 **Region movement from this section alone: LATAM `+13` institutional rows across seven countries
+(🇦🇷 🇧🇷 🇨🇴 🇪🇨 🇲🇽 🇵🇪 🇸🇻), EMEA `+7` across six (🇩🇪 🇭🇷 🇳🇴 🇷🇺 🇸🇪 🇪🇸).** An institutional agent
+names its university, so **it places itself** — no region inferred from a README, which is the
+property that makes this class the cheapest regional evidence in the base.
+
+🔴 **Three repositories from the same cohort were found, measured and *not* filed, because they
+carry no licence at all**: `PedroCarassale/utn-mcp` (UTN FRLP Moodle, 1 ★),
+`A-F-V-A/unihelp-mcp-a2a` (university service-desk triage in four agent architectures, 0 ★) and
+`MoonquantCap/agentes-ia-ucema` (UCEMA, 3 ★). All three return `README` `200` — they are real and
+unusable. 🟡 **Four of the seven bridges in `907-F4` were unlicensed too, so the unlicensed share of
+this class is now `7 / 30`.** The pattern holds: a bridge written by one student for one campus is
+not published as supply.
+
 ## Adjacent: Open edX first-party AI
 
 | Repo | Licence | ★ | Last push | Notes |

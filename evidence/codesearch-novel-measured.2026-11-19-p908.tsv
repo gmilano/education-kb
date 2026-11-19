@@ -1,0 +1,32 @@
+nialvape/utn-mcp	13	ISC	2026-11-13	2026-10-02	TypeScript	Servidor MCP no oficial de la UTN: conectá tu agente (Claude, ChatGPT, etc.) al aula virtual para consultar cursos, leer apuntes, usar los foros y entregar tareas.
+changazo/udesa-mcp	4	Apache-2.0	2026-11-17	2026-10-26	TypeScript	Permitile a tu agente de IA ver (o tocar) tu Campus Virtual (Moodle) de manera segura.
+MoonquantCap/agentes-ia-ucema	3	NONE	2026-08-28	2026-08-13	HTML	-
+HyNuwa/UniMCP	1	NOASSERTION	2026-11-14	2026-10-19	TypeScript	Servidor MCP no oficial para universidades argentinas: aula virtual (Moodle) y SIU Guaraní desde tu agente (Claude, ChatGPT, etc.).
+PedroCarassale/utn-mcp	1	NONE	2026-10-31	2026-10-20	TypeScript	Servidor MCP para el campus virtual (Moodle) de la UTN FRLP
+kta41/mcp-uned	1	MIT	2026-10-18	2026-10-18	Python	MCP server y asistente de estudio para el campus virtual de la UNED (agora.uned.es)
+jpmanson/siu-guarani-mcp	1	MIT	2026-08-10	2026-08-10	Python	CLI and MCP server for SIU Guarani Autogestion docente queries
+Victor-Blasco/UJI-MCP	1	MIT	2026-11-05	2026-11-03	Python	Integración MCP para conectar asistentes de IA (Claude Desktop, Antigravity, OpenCode, VS Code) con el Aula Virtual de la UJI (Moodle) y Google Tasks.
+A-F-V-A/unihelp-mcp-a2a	0	NONE	2026-09-27	2026-09-12	TypeScript	sistema de triaje de incidentes de servicios digitales universitarios, implementado en cuatro arquitecturas de integración de agentes (directa, MCP, multiagente en proceso y multiagente con A2A) para comparar experimentalmente efectividad
+JOSETRA44/DUTIC-mcp	0	MIT	2026-11-07	2026-07-17	TypeScript	Permite a agentes de IA y humanos interactuar con el aula virtual DUTIC
+franc1sc0sv/udb-copilot	0	MIT	2026-10-25	2026-10-20	Python	Study copilot for UDB students, built for Claude Code: cited notes, the teacher's method, Moodle and mail, daily digest
+alanmagno1/tuaulavirtual-unam-mcp	0	MIT	2026-09-09	2026-09-08	Python	Servidor MCP para Tu Aula Virtual (Moodle UNAM): cursos, tareas, entregas y materiales desde Claude
+pablomatiasgomez/utn.ba-helper	59	NONE	2026-11-01	2015-03-02	JavaScript	A Chrome extension that makes navigating and using the UTN.BA - FRBA website easier.
+alejooroncoy/campus-cli	13	ISC	2026-11-18	2026-03-30	TypeScript	CLI no oficial para UPC Aula Virtual (Blackboard Learn) — terminal + MCP para Claude
+Just253/autonoma-cli	1	MIT	2026-11-17	2026-10-25	Python	CLI en Python para consultar cursos y descargar archivos del Campus Virtual (proyecto personal)
+AlePaff/sabelo-fiuba	1	MIT	2026-09-22	2022-03-16	JavaScript	Coleccion de proyectos de la Facultad de Ingeniería de la Universidad de Buenos Aires, con links e imagenes
+filadd/agentic-engineering-famaf-extension-course	1	NONE	2026-11-16	2026-04-01	HTML	-
+PabloPC05/campus-usc	0	MIT	2026-11-18	2026-11-17	Python	El Campus Virtual de la USC en la terminal: rápido y con su aspecto
+smercadocarbone/usal-tinku	0	MIT	2026-11-06	2026-09-08	Java	-
+Group-Active-IA/Skill-Moodle	0	MIT	2026-09-24	2026-06-18	Python	TUP Campus Navigator — skill de Claude Code para tutores que operan el campus Moodle de la UTN.
+MarcoXMarquez/CampusUNSA	0	MIT	2026-11-19	2026-10-07	Python	Offline-first academic hub for UNSA students combining a Next.js 14 PWA and a FastAPI + WhatsApp/Telegram assistant. Syncs Google Classroom, DUTIC Moodle, urgency task boards, and class schedules with @unsa.edu.pe SSO.
+VxGM/IAula-Virtual-Uleam	0	MIT	2026-11-17	2026-10-02	Python	Monitor del aula virtual ULEAM (Moodle): novedades, tareas, descargas y NotebookLM, con panel Frutiger Aero y asistente OpenAI
+nicopiacentini/cursada-utn	0	NONE	2026-10-20	2025-03-23	JavaScript	-
+alexFiorenza/aulasvirtuales-toolkit	0	MIT	2026-08-26	2026-04-09	Python	A set of useful tools to interact with UTN.FRBA aulasvirtuales through agentic tools
+turnkeylinux-apps/canvas	13	NONE	2026-11-16	2013-07-14	Shell	Canvas - Learning Management System
+franjfal/didacta	1	GPL-3.0	2026-11-04	2026-09-09	Dart	Material docente en LaTeX: microlecciones que se escriben una vez y se compilan en diapositivas, apuntes, problemas y exámenes
+Eduardo-P/AS-agente	0	NONE	2026-10-22	2026-10-14	Python	-
+SandraNahara/SistemaTutorInteligente	0	NONE	2026-09-23	2026-07-06	TypeScript	sistema Web académico de tutor inteligente conversacional para apoyar el aprendizaje de Algoritmos y Estructuras de Datos I.
+Luisknt07/SILAB-CID	0	NONE	2026-11-18	2026-11-14	Python	Sistema de Laboratorios y Centros de Investigación y desarrollo
+SebasB76/poli	0	MIT	2026-11-16	2026-11-16	Python	Tu aula virtual de ESPOL (Canvas) como CLI y servidor MCP, para cualquier agente
+RolloGordo/proctoring	0	NONE	2026-11-18	2026-10-03	Python	Plataforma de proctoring para examenes remotos - Taller Integrador 1, UPAO
+IVasquezRui/SD-UNETI	0	GPL-3.0	2026-11-19	2026-06-03	PHP	-

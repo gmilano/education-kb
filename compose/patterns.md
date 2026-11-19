@@ -2181,3 +2181,111 @@ becomes the pilot.
 - **Where procurement is already solved.** If the institution will sponsor an app registration from
   day one, skip the reference implementations and build straight onto LTI 1.3 — the bridges in
   `T30` are interesting for the constraint they route around, not for their code.
+
+## P27 — One adapter, many campuses: the multi-tenant Spanish-language LMS bridge, built from the in-language cohort (added `p908`)
+
+### Why this pattern exists
+
+`P26` made the *sanctioned* bridge to one institution's LMS sellable. `p908`'s code-search leg then
+measured the thing `P26` cannot do: **there are now at least 30 of these bridges, each written for
+exactly one campus, and across them they already speak four different LMS protocols in two
+languages.** Filed in `agents/top.md` this pass: Moodle at UTN, UdeSA, UNAM, ULEAM, UNSA, UJI, UNED,
+USC, UDB and TU München; **Blackboard Learn** at UPC; **Canvas** at ESPOL; and **SIU-Guaraní**, the
+student-information system the Argentine national university system actually runs.
+
+🔴 **Every one of them re-implements the same four things** — credential capture, session handling,
+a course/assignment/grade model, and a write-confirmation policy — **and no two of them share a line
+of code.** That is the engagement: a multi-tenant client does not want eleven forks, it wants one
+adapter layer with eleven tenant profiles.
+
+🟢 **This is the only pattern in this KB whose component rows place themselves regionally.** An agent
+named after a university does not need its region inferred, so a bid for a LATAM university group can
+cite working code from the exact country it is bidding into.
+
+### Stack
+
+**Reference implementations to read before writing anything** (grants byte-read `p908`,
+[`licence-bytes.2026-11-19-p908.tsv`](../evidence/licence-bytes.2026-11-19-p908.tsv)):
+
+| Role | Repo | Licence | Why this one |
+|---|---|---|---|
+| **Credential and write-policy reference** | https://github.com/nialvape/utn-mcp | **ISC** | The best credential hygiene in the cohort: OAuth server, password never stored, preview-then-confirm on writes, and it **refuses a non-HTTPS campus** |
+| **Second write-policy reference** | https://github.com/changazo/udesa-mcp | **Apache-2.0** | Preview-then-confirm, independently arrived at. Apache-2.0 brings an explicit patent grant, which is the licence to copy structure from |
+| **Two-system (LMS + SIS) reference** | https://github.com/HyNuwa/UniMCP | **MIT + inherited ISC** | Moodle **and** SIU-Guaraní in one server, with **Guaraní read-only** — the right default for a system of record |
+| **SIS protocol reference** | https://github.com/jpmanson/siu-guarani-mcp | **MIT** | SIU-Guaraní *autogestión docente* on its own, so the SIS surface can be read without the Moodle code around it |
+| **Blackboard Learn tenant** | https://github.com/alejooroncoy/campus-cli | **ISC** | The cohort's only Blackboard implementation (UPC, Perú) |
+| **Canvas tenant** | https://github.com/SebasB76/poli | **MIT** | The cohort's only Canvas implementation (ESPOL, Ecuador) |
+| **Teacher-side, not student-side** | https://github.com/falkenslab/miyagi | **MIT** | Grades to the teacher's own rubric and staffs the forum — the persona that pays, since it saves staff hours rather than student hours |
+| **Skill-shaped delivery** | https://github.com/Group-Active-IA/Skill-Moodle | **MIT** | Ships as a Claude Code **skill**, not a server: no deployment, no hosting, no procurement (`T22`, `T31`) |
+| **Offline-first / messaging delivery** | https://github.com/MarcoXMarquez/CampusUNSA | **MIT** | PWA **plus WhatsApp/Telegram** over Classroom and Moodle with institutional SSO — the delivery surface that matters where connectivity does not hold |
+| **Server-side alternative** | https://github.com/EduardoKrausME/moodle-local_mcp | 🔴 **GPL-3.0** | MCP served from **inside** Moodle. Read it for the sanctioned-integration shape; 🔴 **do not vendor it** — a Moodle plugin inherits GPL |
+
+**Infrastructure already in this KB:** `moodle/moodle` Web Services API as the protocol of record,
+`openedx/edx-ora2` where open-response grading is in scope, and
+[`repos/foundations.md`](../repos/foundations.md)'s `trycua/cua` (**MIT**) as the **last resort for a
+tenant whose SIS has no API at all** — drive its web UI in a sandbox rather than forge a protocol.
+
+### How it wires together
+
+1. **Tenant profile, not a fork.** One declarative profile per campus: base URL, protocol
+   (`moodle-ws` | `blackboard-rest` | `canvas-api` | `siu-guarani`), auth method, HTTPS requirement,
+   and a per-surface write policy. **Adding a campus is a profile, not a release.**
+2. **Credential broker, copied from `utn-mcp`'s posture.** The agent acts **as the signed-in person**
+   on their own session — which is exactly why this class proliferates without procurement (`T30`) —
+   so the broker holds a short-lived session, never a stored password, and refuses a non-HTTPS
+   endpoint outright.
+3. **Read model normalised, write model not.** Courses, assignments, deadlines, materials and grades
+   normalise cleanly across all four protocols. **Writes do not**: submission semantics differ per
+   protocol and per institution, so writes stay per-tenant and per-surface.
+4. **Two-tier write gate.** Reads are free; writes are preview-then-confirm (both `utn-mcp` and
+   `udesa-mcp` independently chose this); **anything touching the SIS is read-only by default**, as
+   `UniMCP` does with Guaraní. A grade record is a system of record, and an agent should not be the
+   thing that edits it.
+5. **Delivery surface chosen per engagement, not per product.** MCP server for a desktop-agent
+   audience; **skill** where there is no budget to host anything (`Skill-Moodle`); **WhatsApp**
+   where the students are (`CampusUNSA`). Same adapter underneath.
+6. **Governance tier from `P26` bolted on unchanged**: consent record, action log, and the
+   institution's own sign-off on which surfaces are writable.
+
+### The design rules that make it defensible
+
+- 🔴 **Do not ship a bridge the institution has not sanctioned.** The whole cohort works because it
+  borrows the user's own session, which is also what makes it a governance problem at institutional
+  scale: at one user it is a browser; at ten thousand it is an unapproved integration. **`P26`'s
+  sanction step is a prerequisite of this pattern, not an upgrade to it.**
+- 🔴 **Exclude the AGPL member of this cohort from the deliverable.** `EmilioGiordano/unsada-mcp`
+  (Argentina, UNSAdA) is subject-matter-perfect and **AGPL-3.0, byte-read in `p908` at `34,523 B`, `sha256₁₂ 0d96a4ff68ad` — the same digest `p708` recorded** — network
+  copyleft triggers on *deployment*, which is the one shape a hosted multi-tenant bridge cannot
+  absorb. Read it; do not link it.
+- 🔴 **Do not vendor the unlicensed ones.** Seven of the 30 carry **no grant at all** — including
+  `PedroCarassale/utn-mcp`, `A-F-V-A/unihelp-mcp-a2a` and `MoonquantCap/agentes-ia-ucema`. They are
+  real, readable, and legally unusable. 🟢 **An issue asking the author for a licence is cheap and
+  has worked for this base before** — and these are students at identifiable institutions.
+- 🟡 **Treat every repository here as a protocol specification, not a dependency.** Median star count
+  in this cohort is **1**, several are 0, and they are written by individual students. The durable
+  asset is the *protocol knowledge* they encode — which campus runs which LMS behind which auth flow.
+
+### Licence posture of the result
+
+🟢 **MIT, ISC and Apache-2.0 only** — every row in the Stack table above except the two explicitly
+flagged ones, each grant **byte-read from the payload in `p908`**, not taken from a badge. The GPL
+row is read and not vendored; the AGPL row is named and excluded; the unlicensed rows are named and
+excluded. 🔵 **The CC BY-SA caution from `T32` applies if teacher-facing skill text is imported into
+this build**: keep it as an attributed input layer, separate from the client's own adaptations.
+
+### Estimate
+
+- **Adapter + two tenant profiles + read-only SIS + governance tier:** 5–7 weeks.
+- **Each additional tenant on an already-supported protocol:** 3–5 days, dominated by auth-flow
+  quirks, not by code.
+- **Each additional *protocol*:** 2–3 weeks. Moodle, Canvas and Blackboard all have reference
+  implementations in the table; a SIS that is not SIU-Guaraní has none.
+
+### Where it does not apply
+
+- **A single-institution client.** Then this is `P26` with more ceremony — build the one bridge.
+- **An institution that will grant a service account.** The user-credential model exists to route
+  around procurement; if procurement says yes, a sanctioned server-side integration
+  (`moodle-local_mcp`'s shape, GPL implications accepted) is simpler and audits better.
+- **Anywhere the SIS must be written to.** No row in this cohort does it safely, and `p908` found
+  none that claims to.

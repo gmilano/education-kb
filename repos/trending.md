@@ -4,6 +4,88 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p908) — **`repos/foundations.md` carried 431 repository addresses into its last rewrite and 159 out, and seven of the dropped ones are repositories the log says were promoted *into this file*. They are restored with their grants byte-read. `OpenOLAT/qtiworks` — a BSD-3-Clause QTI engine — is real, readable and invisible to the index everyone searches with.**
+
+Method, channels and the promotion-audit numbers are in
+[`agents/trending.md` `2026-11-19` (`p908`)](../agents/trending.md); this entry records the
+**repository** side. Evidence:
+[`delivery-attrition.2026-11-19-p908.tsv`](../evidence/delivery-attrition.2026-11-19-p908.tsv),
+[`licence-bytes.2026-11-19-p908.tsv`](../evidence/licence-bytes.2026-11-19-p908.tsv),
+[`promotion-audit.2026-11-19-p908.tsv`](../evidence/promotion-audit.2026-11-19-p908.tsv).
+
+### 🔴 `908-R1` Attrition, per file, measured against the archived pre-rewrite snapshots
+
+| Delivery file | Now | `p722` `2026-11-09` | `p787` `2026-11-12` | `p871` `2026-11-17` |
+|---|---|---|---|---|
+| `repos/foundations.md` | **159** | 428 → **12.9%** retained | 942 → **7.9%** | 431 → **12.1%** |
+| `verticals/solutions.md` | **89** | 185 → **18.9%** | 508 → **8.3%** | 280 → **12.9%** |
+| `agents/top.md` | **118** | 471 → **10.2%** | 1,073 → **5.5%** | 783 → **5.5%** |
+
+🔵 Consolidation may be correct. **The defect is that no rewrite recorded which rows it dropped or
+why**, so an intentional trim is indistinguishable from a loss. Each file's new `p908` section states
+its own retention figure.
+
+### 🟢 `908-R2` Seven repositories restored to `repos/foundations.md`, every grant byte-read in `p908`
+
+| Repo | Licence (byte-read) | Bytes | `sha256₁₂` | ★ | Pushed | Why it belongs in foundations |
+|---|---|---|---|---|---|---|
+| https://github.com/trycua/cua | **MIT** | 1,069 | `c0779290c1d4` | **32,616** | 2026-11-18 | Computer-use drivers + cross-OS sandboxes — **the route into an LMS or SIS that has no API** |
+| https://github.com/freeCodeCamp/freeCodeCamp | **BSD-3-Clause** | 1,513 | `e2a20708d0fd` | **459,299** | 2026-11-18 | Curriculum **and** delivery engine under one permissive grant |
+| https://github.com/terracotta-education/terracotta | **Apache-2.0** | 11,323 | `6dc0e068dcf3` | 22 | 2026-11-18 | **Randomised controlled trials inside a live LMS course**, as an LTI tool — the only instrument here for *proving* an intervention worked |
+| https://github.com/lplnufpi/essay-br | **MIT** | 1,114 | `79aacbdab319` | 17 | 🟡 2023-05-08 | Scored Brazilian secondary-school essay corpus — **AES training data in Portuguese** (LATAM 🇧🇷). Stable corpus, not an abandoned tool |
+| https://github.com/EduardoKrausME/moodle-local_mcp | 🔴 **GPL-3.0** | 35,149 | `3972dc9744f6` | 2 | 2026-11-16 | MCP served **from inside Moodle** — the sanctioned counterpart to the client-side bridges. 🔴 A Moodle plugin inherits GPL |
+| https://github.com/OpenOLAT/qtiworks | **BSD-3-Clause** (`LICENSE.txt`) | 2,058 | `a5c692f12090` | 🔴 **unmeasurable** | unmeasurable | QTI assessment delivery engine — see `908-R3` |
+| https://github.com/kaveheng/GenAi-in-education | 🔴 **CC BY 4.0** | 442 | `5217b43fb5d4` | 0 | 2026-09-26 | Course implementations using generative AI, by year. 🔴 **A content licence, not a software one** |
+
+### 🔴 `908-R3` `OpenOLAT/qtiworks`: real on one channel, absent from the other — `p900`'s class, third confirmation
+
+`gh api search/repositories -f q='repo:OpenOLAT/qtiworks'` returns **nothing**.
+`raw.githubusercontent.com/OpenOLAT/qtiworks/master/LICENSE.txt` returns **`200`, `2,058 B`**, opening
+*"The QTIWorks source code is distributed under the 3-clause BSD license"*.
+
+🔵 **Filed with stars recorded as `unmeasurable`, not estimated** — the appendix value `902-G3`
+introduced for exactly this case. 🟢 **Context that makes the class less alarming: of the 32 cohort
+repositories this pass measured in batched `repo:` sweeps, 32 resolved — 0% false absence.** So
+indexing failure is a property of the individual repository, **not a rate to apply to a sample**, and
+`p900`'s 44% should not be read as a population statistic.
+
+### 🟢 `908-R4` Five platform rows into `verticals/solutions.md`, including the row `p907` deferred
+
+| Platform | Licence (byte-read) | Bytes | `sha256₁₂` | ★ | Pushed | Note |
+|---|---|---|---|---|---|---|
+| https://github.com/apache/openmeetings | **Apache-2.0** | 50,907 | `4e52c8ddc70e` | 691 | 2026-11-16 | 🟢 **The only permissive live-classroom row in this base.** SPDX says `NOASSERTION`; the payload says Apache. The **recording** is the AI seam |
+| https://github.com/classroomio/classroomio | 🔴 **AGPL-3.0** | 34,523 | `8486a10c4393` | 1,748 | 2026-11-18 | Corporate-academy shape. 🔴 Network copyleft — deployable, not forkable into a closed product |
+| https://github.com/Open-TutorAi/open-tutor-ai-CE | **BSD-3-Clause** | 1,531 | `57c341d09920` | 119 | 🟡 2026-06-26 | Avatar tutoring platform CE. **Five months quiet** — verify maintenance before anchoring a build |
+| https://github.com/FenixEdu/fenixedu-academic | 🔴 **LGPL-3.0** | 7,652 | `97628afebc60` | 175 | 🔴 **2023-06-14** | A full open **SIS** from IST Lisbon (EMEA 🇵🇹). Filed as a **reference data model**, not a deployment target |
+| https://github.com/turnkeylinux-apps/canvas | 🔴 **no licence file** | — | — | 13 | 2026-11-16 | Pre-built **Canvas LMS appliance**. `README.rst` `200`, no grant on `main` or `master`; Canvas itself is AGPL. **`p907` measured and deferred this; `p908` read it and files it with the gap stated** |
+
+### 🟢 `908-R5` The in-language code-search cohort, measured in full
+
+All 32 novel addresses from the Spanish-token legs, with stars, SPDX, `pushed_at` and description:
+[`codesearch-novel-measured.2026-11-19-p908.tsv`](../evidence/codesearch-novel-measured.2026-11-19-p908.tsv).
+Query-level counts including the null control:
+[`codesearch-latam.2026-11-19-p908.tsv`](../evidence/codesearch-latam.2026-11-19-p908.tsv).
+
+🟢 **The ceiling in this cohort is 59 ★** (`pablomatiasgomez/utn.ba-helper`, a 2015 Chrome extension
+for UTN.BA, **no licence**) **and the median is 1.** 🔵 That is consistent with `p798`'s measured
+ceiling of 5 ★ for in-language education agents and with `907-F4`'s 0–4 ★ bridges: **this tier's
+value is protocol knowledge, not popularity** — which campus runs which LMS behind which auth flow.
+
+🔴 **Three in-cohort repositories were measured and refused for having no grant at all**:
+`PedroCarassale/utn-mcp` (UTN FRLP Moodle, 1 ★), `A-F-V-A/unihelp-mcp-a2a` (university service-desk
+triage implemented in four agent architectures — direct, MCP, in-process multi-agent and A2A — 0 ★)
+and `MoonquantCap/agentes-ia-ucema` (3 ★). All three return `README` `200`. **Real, readable,
+unusable.**
+
+### 🟡 `908-R6` A note on this base's own footprint in the channel it measures
+
+`gmilano/education-kb` — **this repository** — now appears in the results of three of this pass's
+eight code-search queries, because its evidence TSVs and delivery files carry the education
+vocabulary as *data*. 🔵 **That is the same mechanism as `907-F3`'s wordlist poisoning, arriving from
+inside.** It was excluded by name this pass. **Any future code-search pass on this base must exclude
+`gmilano/*` before reading a ranking**, or it will rediscover its own notes as findings.
+
+
 ## `2026-11-18` (p907) — **`OneRoster` appears nowhere in any delivery file of this KB. Neither does D2L Brightspace or Blackboard. The interoperability section is one of this base's strongest, and it is missing the rostering standard half the world's student systems speak — because the repositories that implement it sit at 0 ★ and never say "education" in their description.**
 
 **Channel.** GitHub **global code search**, an instrument a standing note in `agents/trending.md` had

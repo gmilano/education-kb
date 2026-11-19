@@ -1,0 +1,9 @@
+query	total_count	unique_repos_in_page_1	note
+"aula virtual" mcp	389	25	productive — per-institution MCP cohort, Spanish-language
+"campus virtual" agente	754	70	mostly coursework repos; low yield per hit
+"sistema academico" estudiantes api	82	67	student-project tier, almost no AI
+"siu guarani" api	56	34	Argentina-specific SIS token; surfaced siu-guarani-mcp
+guarani autogestion universidad scraping	3	3	narrowest productive query in this pass
+"sistema academico" mcp server	4	3	near-empty
+"aula virtual" mcp server python	77	43	productive — overlaps leg 1, adds ESPOL/USC/UNSA
+zzqqxx-p908-nonexistent-token-control	0	0	CONTROL — channel returns 0 for a token that does not exist
