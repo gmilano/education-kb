@@ -1,0 +1,670 @@
+file	line	slug	pub_stars	api_stars	delta	pub_lic	api_lic	pushed	archived
+agents/top.md	332	HKUDS/DeepTutor	60777	60793	16	Apache-2.0	Apache-2.0	2026-11-18	False
+agents/top.md	333	THU-MAIC/OpenMAIC	43952	43962	10	MIT	MIT	2026-11-19	False
+agents/top.md	334	amosblomqvist/learnharness	10457	10481	24	**AGPL-3.0**	AGPL-3.0	2026-11-12	False
+agents/top.md	335	sitor-ai/frametell	513	513	0	**AGPL-3.0**	AGPL-3.0	2026-11-19	False
+agents/top.md	336	ai-shifu/ai-shifu	332	332	0	Apache-2.0	Apache-2.0	2026-11-19	False
+agents/top.md	337	Faixiang/Moodle-MCP	209	209	0	MIT	MIT	2026-11-01	False
+agents/top.md	338	aieducations/edumcp	155	155	0	Apache-2.0	Apache-2.0	2025-05-05	False
+agents/top.md	339	GeminiLight/gen-mentor	137	137	0	**CC0-1.0**	CC0-1.0	2026-10-23	False
+agents/top.md	340	Selleo/mentingo	109	109	0	MIT	MIT	2026-11-19	False
+agents/top.md	341	vishalsachdev/canvas-mcp	335	335	0	MIT	MIT	2026-11-19	False
+agents/top.md	342	Li-Evan/BloomTutor	323	323	0	MIT	MIT	2026-11-17	False
+agents/top.md	343	CAHLR/OATutor	283	284	1	MIT (1,105 B, byte-read `p927`)	MIT	2026-11-17	False
+agents/top.md	344	molly554/whiteboard-ai-tutor	345	362	17	MIT	MIT	2026-11-17	False
+agents/top.md	345	OpenPronounce/OpenPronounce	234	234	0	🔴 **AGPL-3.0 — CORRECTED `p913`, was published here as `MIT`** (byte-read `main/LICENSE`, 34,523 B, `sha256₁₂ 0d96a4ff68ad`; title line `GNU AFFERO GENERAL PUBLIC LICENSE / Version 3, 19 November 2007`)	AGPL-3.0	2026-11-19	False
+agents/top.md	346	zijinz456/OpenTutor	182	183	1	MIT	MIT	2026-11-17	False
+agents/top.md	347	boyuchengz/canvas-mcp	116	116	0	MIT	MIT	2026-10-27	False
+agents/top.md	348	Open-TutorAi/open-tutor-ai-CE	119	119	0	BSD-3-Clause	BSD-3-Clause	2026-06-26	False
+agents/top.md	349	brian901106/japanese-tutor-mugi	105	105	0	MIT	MIT	2026-11-02	False
+agents/top.md	350	itsme-ganzu/belajar-ngoding-byGanzu	66	66	0	MIT	MIT	2026-10-27	False
+agents/top.md	351	ArnaudGuiovanna/tutor-mcp	107	108	1	MIT	MIT	2026-11-17	False
+agents/top.md	352	Zenglian990/AI_Tutor_Release	94	94	0	MIT	MIT	2026-11-10	False
+agents/top.md	353	liangxiao777/TeachMeCoding	85	85	0	Apache-2.0	Apache-2.0	2026-10-30	False
+agents/top.md	354	luumlabs/aula	68	68	0	AGPL-3.0	AGPL-3.0	2026-11-17	False
+agents/top.md	355	SirhanMacx/Claw-ED	65	65	0	MIT	MIT	2026-09-19	False
+agents/top.md	356	G36maid/moodle-mcp	30	30	0	MIT	MIT	2026-10-20	False
+agents/top.md	357	CaioCastro1/usp-mcp	28	28	0	MIT	MIT	2026-11-13	False
+agents/top.md	358	acheamponge/wassce-benchmark	4	4	0	MIT	MIT	2026-04-07	False
+agents/top.md	359	wenflow-org/wenflow	72	72	0	MIT	MIT	2026-11-19	False
+agents/top.md	360	moodlehq/wiki-rag	54	54	0	BSD-3-Clause	BSD-3-Clause	2026-06-15	False
+agents/top.md	361	ECNU/EduWork	381	381	0	MulanPSL-2.0	MulanPSL-2.0	2026-11-19	False
+agents/top.md	362	smashburger-dev/socratic-workshop	24	24	0	MIT	MIT	2026-10-28	False
+agents/top.md	363	ls1intum/edutelligence	17	17	0	MIT	MIT	2026-11-19	False
+agents/top.md	364	AI-for-Education/pedagogy-benchmark	13	13	0	MIT	MIT	2026-11-19	False
+agents/top.md	365	ls1intum/Pyris	12	12	0	MIT	MIT	2026-06-03	False
+agents/top.md	366	warleysr/ankipa	10	10	0	MIT	MIT	2026-11-07	False
+agents/top.md	367	virtualryder/edu-ai-agents	4	4	0	MIT (SPDX: NOASSERTION; licence text reads MIT)	NOASSERTION	2026-10-10	False
+agents/top.md	368	vulinh1704/ai-tutor-agent	0	0	0	MIT	MIT	2026-11-16	False
+agents/top.md	369	HowieWang1121/Socratic-Education-System	137	137	0	MIT	MIT	2026-05-03	False
+agents/top.md	370	flysheep-ai/education-skills	126	126	0	MIT	MIT	2026-01-30	False
+agents/top.md	371	zhangl1001/civil-ai	41	41	0	MIT	MIT	2026-11-08	False
+agents/top.md	372	virgiliojr94/book-to-skill	38474	38483	9	MIT	MIT	2026-11-19	False
+agents/top.md	373	DozenTwelve/Papermorph	1797	1798	1	MIT	MIT	2026-11-16	False
+agents/top.md	374	Miaotofu01/Study-Mate	1502	1502	0	MIT	MIT	2026-11-19	False
+agents/top.md	375	dmoshehun-prog/learn-from-materials	1457	1457	0	MIT	MIT	2026-10-19	False
+agents/top.md	376	beltromatti/get-it	1170	1170	0	Apache-2.0	Apache-2.0	2026-06-29	False
+agents/top.md	377	assafkip/claudemy	710	710	0	MIT	MIT	2026-10-29	False
+agents/top.md	378	ZeKaiNie/universal-examprep-skill	398	398	0	MIT	MIT	2026-10-27	False
+agents/top.md	379	helixnow/deep-student	324	324	0	**AGPL-3.0**	AGPL-3.0	2026-11-18	False
+agents/top.md	380	artcc/freelingo	295	296	1	**AGPL-3.0**	AGPL-3.0	2026-11-17	False
+agents/top.md	381	SenmuuuuW/universal-diagnostic-tutor-skill	280	280	0	MIT	MIT	2026-11-11	False
+agents/top.md	382	KeWang0622/kaogong-skill	251	251	0	MIT	MIT	2026-10-12	False
+agents/top.md	383	nichochar/ari	222	222	0	MIT	MIT	2026-11-12	False
+agents/top.md	384	SimonsTang/feifei-companion	117	117	0	Apache-2.0	Apache-2.0	2026-04-19	False
+agents/top.md	385	ahmedEid1/lumen	94	94	0	MIT	MIT	2026-10-30	False
+agents/top.md	386	OPTIMETA/PAIDEIA	93	93	0	MIT	MIT	2026-07-11	False
+agents/top.md	387	oaknational/oak-ai-lesson-assistant	35	35	0	**MIT** (code) — see the multi-grant note	MIT	2026-11-18	False
+agents/top.md	388	towardsai/ai-tutor-app	34	34	0	Apache-2.0	Apache-2.0	2026-10-22	False
+agents/top.md	389	Orenda-Project/rumi-platform	25	25	0	Apache-2.0	Apache-2.0	2026-11-19	False
+agents/top.md	392	anthropics/k12-teacher-skills	633	633	0	Apache-2.0	Apache-2.0	2026-10-14	False
+agents/top.md	393	ankimcp/anki-mcp-server	568	570	2	MIT	MIT	2026-11-07	False
+agents/top.md	394	satvik314/educhain	387	387	0	MIT	MIT	2026-05-29	False
+agents/top.md	395	dfdb76/bncc-mcp	14	14	0	**MIT** (byte-read `main/LICENSE`, 1,218 B)	NOASSERTION	2026-07-24	False
+agents/top.md	396	bruchris/canvas-lms-mcp	10	10	0	**MIT** (`LICENSE@HEAD`, 1,069 B, byte-read p900)	MIT	2026-11-17	False
+agents/top.md	397	matheussilvano/mooose	5	5	0	**Apache-2.0** (byte-read `main/LICENSE`, 11,358 B)	Apache-2.0	2026-11-17	False
+agents/top.md	398	CREARED-EDU-CO/GenPrompt-Pre-ICFES-11	4	4	0	**AGPL-3.0** (byte-read `main/LICENSE`, 34,523 B)	AGPL-3.0	2026-09-19	False
+agents/top.md	400	SalehGNUTUX/GT-MISHKATKIDS	3	3	0	**GPL-3.0**	GPL-3.0	2026-11-19	False
+agents/top.md	401	migueldsants/AI-Skill-Corretor-Redacao-ENEM	3	3	0	**MIT** (byte-read `main/LICENSE`, 1,082 B)	MIT	2026-09-07	False
+agents/top.md	402	suellenferraz/Projeto-GabirIA	3	3	0	**MIT** (byte-read `main/LICENSE.md`, 1,085 B)	MIT	2025-05-24	False
+agents/top.md	403	yinuoguan/nengdou-ai-review-helper-web	193	193	0	🔴 **Apache-2.0 byte-read — GitHub SPDX says `MulanPSL-2.0`. Channels disagree.** (`main/LICENSE`, 11,356 B, `sha256₁₂ 43070e2d4e53`, opening `Apache License / Version 2.0, January 2004`)	MulanPSL-2.0	2026-04-29	False
+agents/top.md	404	QwenStorm/xl-frontend	50	50	0	MIT (byte-read `master/LICENSE`, 1,060 B, `sha256₁₂ 3b0284114591`)	MIT	2026-04-07	False
+agents/top.md	405	weishao2/tizhuang-agent-skills	42	42	0	MIT (byte-read `main/LICENSE`, 1,077 B, `sha256₁₂ 881348270e41`)	MIT	2026-11-11	False
+agents/top.md	406	ai-lingnan/econai-agent-platform	41	41	0	**AGPL-3.0** (byte-read `master/LICENSE`, 34,522 B, `sha256₁₂ 4df3c306ddda`)	AGPL-3.0	2026-07-17	False
+agents/top.md	407	shellery1988/k12-smart-teacher	16	16	0	MIT (byte-read `main/LICENSE`, 1,073 B, `sha256₁₂ 4c5f6e74a09b`)	MIT	2026-06-29	False
+agents/top.md	408	wenliu3/ai-smart-homework-review	11	11	0	**MulanPSL-2.0** (byte-read `main/LICENSE`, 9,246 B, `sha256₁₂ 2a7ffa7fcf2e`, Chinese text, `license.coscl.org.cn/MulanPSL2`)	MulanPSL-2.0	2026-09-06	False
+agents/top.md	409	cculb/schoolconnect	4	4	0	**MIT** (byte-read `p907`, `LICENSE@main`, 1,071 B)	MIT	2025-12-28	False
+agents/top.md	410	andrsnrua/universidad-pacifico-mcp	1	1	0	**ISC** (byte-read `p907`, `LICENSE@main`, 748 B)	ISC	2026-10-06	False
+agents/top.md	411	andbriha/ExamGuardian	0	0	0	**MIT** (byte-read `p907`, `LICENSE@main`, 1,065 B)	MIT	2026-11-14	False
+agents/top.md	412	geekjourneyx/interactive-learning	52	52	0	"**MIT** (byte-read `p909`, `LICENSE@HEAD`, 1,069 B, `sha256₁₂ 02b7dc1969f4`, *""MIT License / Copyright (c) 2026 geekjourneyx""*)"	MIT	2026-04-10	False
+agents/top.md	413	BaijayantaRoy/bandup	2	2	0	**MIT** (byte-read `p910`, `LICENSE@main`, 1,071 B, `sha256₁₂ c4411a4cb83b`)	MIT	2026-08-22	False
+agents/top.md	414	Mocas-12/jlpt-n1-Yomitaku	31	31	0	**MIT** (byte-read `p910`, `LICENSE@main`, 1,065 B, `sha256₁₂ b17ceb82d82e`)	MIT	2026-11-13	False
+agents/top.md	415	metrovoc/immersive-memorize	29	29	0	**MIT** (byte-read `p910`, `LICENSE@main`, 1,074 B, `sha256₁₂ 51ae850d5688`)	MIT	2026-11-18	False
+agents/top.md	416	AriusKing/edubot-backend	0	0	0	**MIT** (byte-read `p910`, `LICENSE@main`, 1,065 B, `sha256₁₂ c115ae89efc8`)	MIT	2026-07-01	False
+agents/top.md	417	peleg-jpg/israeli-bagrut-psychometric	0	0	0	**MIT** (byte-read `p910`, `LICENSE@main`, 1,150 B, `sha256₁₂ 2b20dde3e647`)	MIT	2026-05-11	False
+agents/top.md	418	summeraprx/topik-shortcut	1	1	0			2026-10-20	False
+agents/top.md	419	ArushJain-697/namma-ai	1	1	0	MIT (byte-read `main/LICENSE`, 1,095 B, `sha256₁₂ 7bbee3d2e00e`)	MIT	2026-11-16	False
+agents/top.md	420	siyegs/rung	0	0	0	MIT (byte-read `main/LICENSE`, 1,081 B, `sha256₁₂ fd3995809614`)	MIT	2026-08-14	False
+agents/top.md	421	xingjunm/autoppt	57	57	0	MIT (byte-read `main/LICENSE`, 1,092 B, `sha256₁₂ db50831211a3`)	MIT	2026-11-02	False
+agents/top.md	422	proyecto26/notebooklm-ai-plugin	67	68	1	MIT (byte-read `main/LICENSE`, 1,068 B, `sha256₁₂ 775ec66aca27`)	MIT	2026-11-04	False
+agents/top.md	423	firekern/zusia	33	35	2	MIT (byte-read `main/LICENSE`, 1,072 B, `sha256₁₂ e4572f44947f`)	MIT	2026-11-19	False
+agents/top.md	424	logitsolutionsai/teachback	0	0	0	MIT (byte-read `main/LICENSE`, 1,075 B, `sha256₁₂ 4a4f80cb0d46`)	MIT	2026-11-14	False
+agents/top.md	425	d-wwei/learn-anything	9	9	0	MIT (byte-read `main/LICENSE`, 1,063 B, `sha256₁₂ 163a805ef10a`)	MIT	2026-05-15	False
+agents/top.md	426	VuongPhan-09/vuongedu	0	0	0	MIT (byte-read `main/LICENSE`, 1,072 B, `sha256₁₂ 52ac0b85ef3b`)	MIT	2026-11-19	False
+agents/top.md	427	wysking/postgrad-study-engine	1	1	0	MIT (byte-read `main/LICENSE`, 1,091 B, `sha256₁₂ 4e7a7ccdeb86`)	MIT	2026-10-29	False
+agents/top.md	428	robzilla1738/Memorwise	48	48	0	MIT (byte-read `main/LICENSE`, 1,069 B, `sha256₁₂ f141bdd69966`)	MIT	2026-06-09	False
+agents/top.md	429	MuhammadLutfiMuzakiiVY/Litera-AI-Android	16	16	0	MIT (byte-read `main/LICENSE`, 1,103 B, `sha256₁₂ f98ead38d342`)	MIT	2026-08-25	False
+agents/top.md	430	ChangjinHe2000/one-tutor	5	5	0	MIT (byte-read `main/LICENSE`, 1,071 B, `sha256₁₂ 68a1316b6627`)	MIT	2026-06-25	False
+agents/top.md	431	ubermenchh/anki-cli	63	63	0	MIT (byte-read `main/LICENSE`, 1,069 B, `sha256₁₂ e8cf0ccc5dd2`)	MIT	2026-11-11	False
+agents/top.md	490	edunelsonit/Jambora	1	1	0	Apache-2.0 (11,357 B · `c71d239df917`)	Apache-2.0	2026-03-24	False
+agents/top.md	491	ALIYUAAM10/NAIJASCHOLAR	1	1	0	MIT (1,082 B · `6fd3e72cd64d`)	MIT	2026-11-19	False
+agents/top.md	492	001kenji/KCSE-predictor	1	1	0	Apache-2.0 (11,357 B · `c71d239df917`)	Apache-2.0	2026-01-05	False
+agents/top.md	493	theteacherbot/ICFES-Exam-Engine	0	0	0	MIT (1,067 B · `95927f6f69fa`)	MIT	2026-08-01	False
+agents/top.md	494	matmiidu/paes-ensayos	0	0	0	MIT (1,065 B · `db233fe3a19a`)	MIT	2026-08-12	False
+agents/top.md	495	Reethureddy8/Study-assistant	2	2	0	MIT (1,069 B · `ff3eb0698f8a`)	MIT	2026-10-28	False
+agents/top.md	496	praj2408/RAG-Enhanced-NCERT-Tutor	6	6	0	MIT (1,072 B · `8a909947f61b`)	MIT	2024-10-20	False
+agents/top.md	497	MichealQuelazar/Ncert__RAG__Chatbot	1	1	0	MIT (1,075 B · `13908cd9b08e`)	MIT	2025-12-18	False
+agents/top.md	498	datastiltskin/Sanshodhan	1	1	0	MIT (1,073 B · `909fd4f320c0`)	MIT	2026-10-21	False
+agents/top.md	499	lindnerju/ePaeko	3	3	0	MIT (1,086 B · `5a44d126d2e6`, on `master`)	MIT	2024-01-24	False
+agents/top.md	521	DeepBlue-dot/Ethio-Adaptive-Learning	7	7	0	Apache-2.0 (11,357 B · `c71d239df917`)	Apache-2.0	2026-05-31	False
+agents/top.md	522	ElnatanAnbelu/ethioexam	0	0	0	MIT (1,072 B · `fba331165d0b`)	MIT	2026-09-20	False
+agents/top.md	523	robelasefa/eaes-bot	1	1	0	MIT (1,067 B · `cb1a9de3b176`)	MIT	2026-09-16	False
+agents/top.md	554	GarethManning/education-agent-skills	1005	1005	0	🔴 **CC BY-SA 4.0** `1,230 B`	NOASSERTION	2026-11-03	False
+agents/top.md	555	CogitoNTNU/TutorAI	39	39	0	**MIT** `1,140 B`	MIT	2026-11-16	False
+agents/top.md	556	kad-xyz/spbstu-mcp	10	10	0	**MIT** `1,064 B`	MIT	2026-11-19	False
+agents/top.md	557	isakskogstad/Skolverket-MCP	13	13	0	**MIT** `1,093 B`	MIT	2026-04-22	False
+agents/top.md	558	nialvape/utn-mcp	13	13	0	**ISC** `748 B`	ISC	2026-11-13	False
+agents/top.md	559	changazo/udesa-mcp	4	4	0	**Apache-2.0** `10,173 B`	Apache-2.0	2026-11-17	False
+agents/top.md	560	HyNuwa/UniMCP	1	1	0	🟡 **MIT + inherited ISC, conjunctive** `1,980 B`	NOASSERTION	2026-11-14	False
+agents/top.md	561	jpmanson/siu-guarani-mcp	1	1	0	**MIT** `1,074 B`	MIT	2026-08-10	False
+agents/top.md	562	jamestesting0/tum-mcp	1	1	0	**MIT** `1,092 B`	MIT	2026-11-18	False
+agents/top.md	563	simonseifert/merlin-mcp	1	1	0	**MIT** `1,070 B`	MIT	2026-11-16	False
+agents/top.md	564	LabSirius/TutorIA	0	0	0	**MIT** `1,069 B`	MIT	2026-10-27	False
+agents/top.md	565	falkenslab/miyagi	0	0	0	**MIT** `1,078 B`	MIT	2026-11-18	False
+agents/top.md	566	GuilhermeScarpini/agente-bncc-professores	0	0	0	**MIT** `1,074 B`	MIT	2026-10-21	False
+agents/top.md	567	alejooroncoy/campus-cli	13	13	0	**ISC** (API)	ISC	2026-11-19	False
+agents/top.md	568	Victor-Blasco/UJI-MCP	1	1	0	**MIT** `1,063 B`	MIT	2026-11-05	False
+agents/top.md	569	kta41/mcp-uned	1	1	0	**MIT** `1,071 B`	MIT	2026-10-18	False
+agents/top.md	570	Just253/autonoma-cli	1	1	0	**MIT** `1,064 B`	MIT	2026-11-17	False
+agents/top.md	571	JOSETRA44/DUTIC-mcp	0	0	0	**MIT** `1,066 B`	MIT	2026-11-07	False
+agents/top.md	572	franc1sc0sv/udb-copilot	0	0	0	**MIT** `1,066 B`	MIT	2026-10-25	False
+agents/top.md	573	SebasB76/poli	0	0	0	**MIT** `1,065 B`	MIT	2026-11-16	False
+agents/top.md	574	VxGM/IAula-Virtual-Uleam	0	0	0	**MIT** `1,061 B`	MIT	2026-11-17	False
+agents/top.md	575	alanmagno1/tuaulavirtual-unam-mcp	0	0	0	**MIT** `1,067 B`	MIT	2026-09-09	False
+agents/top.md	576	MarcoXMarquez/CampusUNSA	0	0	0	**MIT** `1,130 B`	MIT	2026-11-19	False
+agents/top.md	577	Group-Active-IA/Skill-Moodle	0	0	0	**MIT** `1,079 B`	MIT	2026-09-24	False
+agents/top.md	578	alexFiorenza/aulasvirtuales-toolkit	0	0	0	**MIT** `1,070 B`	MIT	2026-08-26	False
+agents/top.md	579	PabloPC05/campus-usc	0	0	0	**MIT** `1,066 B`	MIT	2026-11-18	False
+agents/top.md	598	openedx/openedx-ai-extensions	17	17	0	AGPL-3.0	AGPL-3.0	2026-10-05	False
+agents/top.md	599	openedx/edx-ora2	64	64	0	AGPL-3.0	AGPL-3.0	2026-11-18	False
+agents/top.md	600	blend-ed/openedx-mcp	3	3	0	AGPL-3.0	AGPL-3.0	2026-10-22	False
+agents/top.md	608	crewAIInc/crewAI	61103	61108	5	MIT	MIT	2026-11-19	False
+agents/top.md	609	langchain-ai/langgraph	45157	45161	4	MIT	MIT	2026-11-19	False
+agents/top.md	610	patchy631/ai-engineering-hub	42022	42023	1	MIT	MIT	2026-11-01	False
+agents/top.md	611	stanford-oval/storm	31912	31912	0	MIT	MIT	2025-09-30	False
+agents/top.md	612	assafelovic/gpt-researcher	30785	30787	2	Apache-2.0	Apache-2.0	2026-11-12	False
+agents/top.md	613	OpenHands/OpenHands	93841	93849	8	MIT	MIT	2026-11-19	False
+agents/top.md	614	LibreChat-AI/LibreChat	47349	47350	1	MIT	MIT	2026-11-19	False
+agents/top.md	730	JuneYaooo/teacher-to-skills	486	485	-1	**Apache-2.0** (`main/LICENSE`, 11,358 B, `sha256₁₂ cfc7749b96f6`)	Apache-2.0	2026-11-07	False
+agents/top.md	731	orionsheep/wordlink	429	429	0	**MIT** (`main/LICENSE`, 1,093 B, `sha256₁₂ b0f3e0f68927`)	MIT	2026-11-05	False
+agents/top.md	732	Berserk-hub150/moodle-ai-skill-navigator	279	279	0	🔴 **GPL-3.0** (`main/LICENSE`, 35,153 B, `sha256₁₂ ebdc0e5b7005`)	GPL-3.0	2026-11-07	False
+agents/top.md	733	Fazmin/AILearningGuide	259	259	0	**MIT** (`main/LICENSE`, 1,081 B, `sha256₁₂ e29ef713b542`)	MIT	2026-11-15	False
+agents/top.md	734	liuliu667/cram-engine	181	181	0	**MIT** (`main/LICENSE`, 1,064 B, `sha256₁₂ c33ea68946e4`)	MIT	2026-10-22	False
+agents/top.md	735	munitkala/SelfSemester	108	108	0	**MIT** (`main/LICENSE`, 1,081 B, `sha256₁₂ f5fe104e348d`)	MIT	2026-11-19	False
+agents/top.md	736	RohanMuppa/brightspace-mcp-server	68	68	0	**MIT** (`main/LICENSE`, 1,068 B, `sha256₁₂ 047079fbd491`)	MIT	2026-11-19	False
+agents/top.md	737	SaadRahman01/claude-moodle-dev	43	43	0	**MIT** (`main/LICENSE`, 1,068 B, `sha256₁₂ df0b3e71710c`)	MIT	2026-06-22	False
+agents/top.md	738	TovTechOrg/Tov-learn	36	36	0	**MIT** (`master/LICENSE`, 1,064 B, `sha256₁₂ 092d389ac156`)	MIT	2026-11-19	False
+agents/top.md	739	jurimaxam-dotcom/chemdraw-mcp	32	32	0	**Apache-2.0** (`main/LICENSE`, 11,358 B, `sha256₁₂ cfc7749b96f6`)	Apache-2.0	2026-11-18	False
+agents/top.md	740	saylordotorg/moodle-local_ai_course_assistant	21	21	0	🔴 **GPL-3.0** (`main/LICENSE`, 35,149 B, `sha256₁₂ 3972dc9744f6`)	GPL-3.0	2026-11-19	False
+agents/top.md	741	tong666-bit/liu-xiaoyan-skill	21	21	0	**MIT** (`master/LICENSE`, 1,068 B, `sha256₁₂ 8626b7112026`)	MIT	2026-10-09	False
+agents/top.md	742	SonAIengine/ku-portal-mcp	13	13	0	**MIT** (`main/LICENSE`, 1,068 B, `sha256₁₂ aa35608133a4`)	MIT	2026-10-03	False
+agents/top.md	743	danieltyukov/ieee-mcp	7	7	0	**MIT** (`master/LICENSE`, 1,071 B, `sha256₁₂ fc20bfdfe931`)	MIT	2026-11-14	False
+agents/top.md	749	aaryansamanta/AI-Ethos	497	497	0	🔴 **No licence payload.** 16 names over 3 branches, all `404`; API SPDX `NONE`. The highest-starred find of the pass, a 501(c)(3) delivering multilingual tutoring to underserved learners — and nothing in it can be redistributed.		2026-09-20	False
+agents/top.md	750	jeremy-xuan/SocraticNovel	32	32	0	🔴 **CC BY-NC-SA 4.0** (1,227 B, `sha256₁₂ 593122cbd00b`). **NonCommercial** — unusable in a client deliverable at any tier. An instance of `T32`.	NOASSERTION	2026-10-21	False
+agents/top.md	751	vincenzo-afk/KingstonConnect	41	41	0			2026-09-10	False
+agents/top.md	752	Piyushtanwani/DAU-buddy	7	7	0			2026-11-16	False
+agents/top.md	763	aaryansamanta/NextGen-AI	491	491	0	**MIT for source code only.** Brand assets, team photos, videos, logos and the top-level PDFs in `website/img`, `website/video` are reserved © NextGenAI and require written contact before reuse. 🟢 The *code* is usable; the org's identity material is not, which is the correct and unremarkable posture — it is only a trap for a scanner that reports one licence per repo.	NOASSERTION	2026-09-20	False
+agents/top.md	764	Andiii208/seu-handbook-skill	55	55	0	🔴 **MIT on the code, CC BY-NC-SA 4.0 on `references/` and `data/`** — the Southeast University student handbook text, which *is* the product. The skill's whole value is the clause-level handbook corpus, and that corpus is **NonCommercial**. Ship the retrieval code, re-author the corpus, or do not ship. A textbook instance of `T25`, now with the MIT band as its detector.	NOASSERTION	2026-10-09	False
+agents/top.md	781	justinhunt/moodle-mod_readaloud	6	6	0	"🔴 **GPL-3.0-or-later — and there is no licence file.** Byte-read over 16 filenames × 3 branches: `404` on every one. The grant is in the `README` (*""License: GNU GPL v3 or later""*) **and in the full GNU header block of `version.php`, `lib.php` and `mod_form.php`**. See `916-F2` — 🟢 **independently reproduced `p917`** by `ingest/p917-header-layer.sh`, which discharges `916-G2` and makes this the general rule for the ecosystem: *for a Moodle plugin, `version.php` is the grant authority, not `LICENSE`* (2 of 2 plugins measured)"		2026-10-28	False
+agents/top.md	782	OSU-slatelab/AIRFluTe	3	3	0	🟢 **Apache-2.0**	Apache-2.0	2022-12-08	False
+agents/top.md	783	JambuOverflow/lepic	7	7	0	🔴 GPL-3.0	GPL-3.0	2021-07-11	False
+agents/top.md	784	dungnotnull/ReadPulse-AI-Agent	3	3	0	🟢 **MIT**	MIT	2026-09-15	False
+agents/top.md	785	Aaryan-Kapoor/degreeworks-cli	5	5	0	🟢 **MIT**	MIT	2026-10-08	False
+agents/top.md	786	Kanjo-Elkamira-Ndi/Compass	11	12	1	🟢 **MIT**	MIT	2026-08-12	False
+agents/top.md	812	ctrlaltwill/LearnKit	185	185	0	**MIT** (`main/LICENSE.md`, 1,068 B, `sha256₁₂ 38a90d0f7738`)	MIT	2026-10-31	False
+agents/top.md	813	kirill-markin/flashcards-open-source-app	119	119	0	**MIT** (`main/LICENSE`, 1,070 B, `sha256₁₂ 0e319ca9aaa9`)	MIT	2026-11-19	False
+agents/top.md	814	ankimcp/anki-mcp-server-addon	104	105	1	🔴 **AGPL-3.0** (`main/LICENSE`, **227 B**, `sha256₁₂ 34b58d896fdb`) — a **by-reference** grant, see `T43`	NOASSERTION	2026-11-17	False
+agents/top.md	815	pieralukasz/true-recall	68	68	0	**MIT** (`main/LICENSE`, 1,070 B, `sha256₁₂ 23444362494b`)	MIT	2026-11-16	False
+agents/top.md	816	NaEs25/studiamo	27	27	0	🔴 **AGPL-3.0** (`main/LICENSE`, 33,880 B, `sha256₁₂ f0c3e444e06d`)	AGPL-3.0	2026-10-30	False
+agents/top.md	817	Vladyslav-Soldatenko/ProcrastiLearn	25	25	0	**Apache-2.0** (`master/LICENSE`, 11,351 B, `sha256₁₂ 45386cd5bf35`)	Apache-2.0	2026-11-01	False
+agents/top.md	818	RakeshBabuGajula/Exam_Intellect	19	19	0	**MIT** (byte-read on `ExamIntellect/LICENSE`, 1,075 B, `sha256₁₂ a4e58d1074c9`; the identical payload is also on `master`)	MIT	2026-10-15	False
+agents/top.md	819	Yuanpeng-Li/gradescope-mcp	8	8	0	**MIT** (`main/LICENSE`, 1,068 B, `sha256₁₂ 29d0f3f4463a`)	MIT	2026-11-12	False
+agents/top.md	820	forgemorrow/Chinese-Teaching-AI-Agent	8	8	0	**MIT** (`main/LICENSE`, 1,068 B, `sha256₁₂ 2e7ffdde3eb5`)	MIT	2026-11-14	False
+agents/top.md	840	DigitalHarborFoundation/llm-math-education	47	47	0	**MIT** (`main/LICENSE`, 1,073 B)	MIT	2026-11-14	False
+agents/top.md	869	GitHubDaily/AI-Course-Generator	36	36	0	**MIT** (`main/LICENSE`, 1,068 B, `sha256₁₂ 5297e38c125c`)	MIT	2025-11-01	False
+agents/top.md	870	kenoharada/AI-LaBuddy	22	22	0	**MIT** (1,067 B, `sha256₁₂ 807c3b4466ec`)	MIT	2023-07-02	False
+agents/top.md	871	jetyu/Dawn	14	14	0	**Apache-2.0** (11,340 B, `sha256₁₂ bef48216cd56`)	Apache-2.0	2025-07-20	False
+agents/top.md	872	hapince-code/AI-EduForge	6	6	0	**MIT** (1,072 B, `sha256₁₂ 0a83fabb2ba6`)	MIT	2026-05-11	False
+agents/top.md	873	SNOOPY-alt/heuristic-learning-system	6	6	0	**MIT** (1,067 B, `sha256₁₂ f0012497d3e1`)	MIT	2025-05-04	False
+agents/top.md	874	cxkzai/ai-admissions-platform	5	5	0	**MIT** (1,065 B, `sha256₁₂ 811e88db2038`)	MIT	2026-07-02	False
+agents/top.md	875	uczltw6/course-tutor	5	5	0	**MIT** (1,082 B, `sha256₁₂ f4f4a2cdaa54`)	MIT	2026-04-23	False
+agents/top.md	876	MathMindCanvas/MathMind	5	5	0	**MIT** (1,071 B, `sha256₁₂ 0773606d562e`)	MIT	2026-02-26	False
+agents/top.md	877	mousam100/Montessori-Agentic-AI-Tutor	2	2	0	**MIT** (1,064 B, `sha256₁₂ a1adc7ed2fc0`)	MIT	2026-05-20	False
+agents/top.md	909	anandpatikat/guru-latihan-dinamis	115	115	0			2026-11-19	False
+agents/top.md	910	JMLcommunity/Kurikulum-AI	46	46	0	🟢 MIT (1,081 B, `sha256₁₂ 879619fd1e3d`, byte-read `p919`)	MIT	2020-06-14	False
+agents/top.md	911	NgodingCik/modul-ajar-generator	2	2	0	🔴 **CC BY-NC 4.0** (17,688 B, `sha256₁₂ 2b275bb77aa6`, byte-read `p919`) — **noncommercial, and a *content* licence applied to a web application**	NOASSERTION	2026-05-17	False
+agents/top.md	912	y4zh/kurikulum-merdeka-asesmen-skills	0	0	0	🟢 MIT (1,065 B, `sha256₁₂ 1e41d9c6af01`, byte-read `p919`)	MIT	2026-11-17	False
+agents/top.md	913	dikkayulianto/ebook-generator	0	0	0	🟢 MIT (1,070 B, `sha256₁₂ ceb34bc8f5b0`, byte-read `p919`)	MIT	2026-11-19	False
+agents/top.md	930	PyThaiNLP/pythainlp	1175	1174	-1	🟢 Apache-2.0 (11,357 B, `sha256₁₂ b40930bbcf80`, byte-read `p919`)	Apache-2.0	2026-11-19	False
+agents/top.md	931	vistec-AI/thai2transformers	125	125	0	🟢 Apache-2.0 (11,357 B, `sha256₁₂ 58d1e17ffe51`, byte-read `p919`)	Apache-2.0	2023-11-06	False
+agents/top.md	932	OpenThaiGPT/openthaigpt	121	121	0	🟢 Apache-2.0 (595 B, `sha256₁₂ b2a8a8f529b3`, byte-read `p919`) — 🔴 the search channel reports `NOASSERTION` for this repo; the two channels disagree and the bytes win	NOASSERTION	2023-05-26	False
+agents/top.md	1007	microsoft/StudentSim	83	83	0	MIT (1,073 B, `a03acaea0251`)	MIT	2026-11-19	False
+agents/top.md	1008	lynote-ai/ai-tutor	124	130	6	MIT (1,062 B, `017037465041`)	MIT	2026-11-16	False
+agents/top.md	1009	chuma-beep/mathua	430	430	0	MIT (1,074 B, `6bd7c2a354d5`)	MIT	2026-11-18	False
+agents/top.md	1010	zuhairhalawa/studyai	239	239	0	MIT (1,068 B, `326f6a6b9c20`)	MIT	2026-10-24	False
+agents/top.md	1011	shigella520/MindTrain	129	129	0	MIT (1,066 B, `d69b0f7c3228`)	MIT	2026-10-15	False
+agents/top.md	1012	3yangyang9/DeepTutor-AILearning	331	331	0	Apache-2.0 (11,407 B, `596087a7f098`)	Apache-2.0	2026-10-09	False
+agents/top.md	1013	five-plus-one/AI-Marker-Suite	192	192	0	🔴 **GPL-3.0** (35,153 B, `8d13aacc9396`)	GPL-3.0	2026-11-19	False
+agents/top.md	1014	ERRRC/kaogong-shuati	257	257	0	MIT (1,061 B, `b7722af28e18`)	MIT	2026-09-24	False
+agents/top.md	1015	AkshitIreddy/AI-Powered-Video-Tutorial-Generator	322	322	0	MIT (1,069 B, `6c87c23cbf5c`)	MIT	2026-09-21	False
+agents/top.md	1016	zoonk/zoonk	157	157	0	MIT (1,061 B, `34f44fc04045`)	MIT	2026-11-19	False
+agents/top.md	1017	thm-mni-ii/feedbacksystem	24	24	0	Apache-2.0 (10,784 B, `824e945ea176`)	NOASSERTION	2026-11-19	False
+agents/top.md	1026	CaviraOSS/PageLM	2070	2072	2	`NOASSERTION`	NOASSERTION	2026-11-15	False
+agents/top.md	1027	chadyi/StudyOnTV	1712	1714	2	`NOASSERTION`	NOASSERTION	2026-11-18	False
+agents/top.md	1028	xiaoyang111222/cn-math-taxonomy	8648	8653	5	`NOASSERTION`	NOASSERTION	2026-11-19	False
+agents/top.md	1029	Nutlope/llamatutor	2054	2054	0	`NONE`		2026-10-23	False
+agents/top.md	1030	LearnPress/learnpress	275	275	0	`NONE`		2026-11-19	False
+agents/top.md	1031	learning-commons-org/knowledge-graph	169	168	-1	`NOASSERTION`	NOASSERTION	2026-11-10	False
+agents/top.md	1067	SHUBHJAIN139/Local-Exam-Proctoring-Engine	0	0	0	**MIT** (1,067 B, `91a47a93bbca`)	MIT	2026-10-12	False
+agents/top.md	1068	tanzir71/tinyproctorjs	0	0	0	**MIT** (1,085 B, `cc1b9d2387e8`)	MIT	2026-11-17	False
+agents/top.md	1069	Aryansh909/Examshield-AI	1	1	0	**MIT** (1,070 B, `75107b398587`)	MIT	2026-08-01	False
+agents/top.md	1089	alberto2005-coder/detector-ia	2	2	0	**MIT** (1,079 B, `d7766590a996`)	MIT	2026-11-19	False
+agents/top.md	1090	DerickxP/Learn-Quest-Serious-Game	1	1	0	**MIT** (1,071 B, `da1aeec572db`)	MIT	2026-10-22	False
+agents/top.md	1091	Gehiner/KodlandFaster	1	1	0	**MIT** (1,064 B, `61c63d0a04e1`)	MIT	2026-10-06	False
+agents/top.md	1092	uemanet/harpia	28	28	0	**MIT** (1,063 B, `afa9cfe1dcb6`)	MIT	2026-11-15	False
+agents/top.md	1098	xxinjie21/Smart-Quiz-Tutor	10	10	0	🟢 **0BSD** (664 B, `2cb3ff984068`)	0BSD	2026-09-22	False
+agents/top.md	1099	haison8x/geogebra-mcp	1	1	0	**MIT** (1,065 B, `32508be1d078`)	MIT	2026-10-20	False
+agents/top.md	1100	fireheartjerry/mathos-webmcp	0	0	0	**MIT** (1,075 B, `2388ed41fa64`)	MIT	2026-09-04	False
+agents/top.md	1101	devissaputra/self_regulated_learning_copilot	2	2	0	**MIT** (1,076 B, `c10726bddc58`)	MIT	2026-09-26	False
+agents/top.md	1102	siberius/learning-methodologies	4	4	0	**MIT** (1,072 B, `55b44f528c81`)	MIT	2026-11-14	False
+agents/top.md	1103	nijataliyev7/elifba	2	2	0	**MIT** (1,069 B, `c79aae99a979`)	MIT	2026-11-19	False
+agents/top.md	1104	angel-georgiev/daskal.ai	0	0	0	**MIT** (1,071 B, `394e9f40c94d`)	MIT	2026-11-13	False
+agents/top.md	1105	orangewk/MathDesk-snapshot	0	0	0	**MIT** (1,065 B, `92511e2244a8`)	MIT	2026-06-01	False
+agents/top.md	1106	WDMoonMoonBird/exam-deep-seek	1	1	0	**MIT** (1,089 B, `ebd20e036a20`)	MIT	2026-11-02	False
+agents/top.md	1107	deeding2030-boop/bestteach-public	0	0	0	**MIT** (1,159 B, `3fae65c81ef1`)	MIT	2026-05-26	False
+agents/top.md	1108	Apurba94/autograder-py	0	0	0	**MIT** (1,071 B, `2d870f5fb212`)	MIT	2026-11-04	False
+agents/top.md	1109	CarlosEkRaigoza/privacy-preserving-educational-telemetry	0	0	0	**MIT** (1,117 B, `760d2ca71ae9`)	MIT	2026-11-04	False
+agents/top.md	1110	JaneKoch/openbridge	0	0	0	**MIT** (1,080 B, `caa5e03bca02`)	MIT	2026-11-19	False
+agents/top.md	1111	willfeldman/readu	0	0	0	**MIT** (1,069 B, `8fe5f43417ff`)	MIT	2026-06-13	False
+agents/top.md	1112	uloya1234/faq-assistant	4	4	0	🟡 **MPL-2.0** (16,726 B, `3f3d9e0024b1`)	MPL-2.0	2026-07-30	False
+agents/top.md	1113	xx-hub/craft-your-textbook	41	41	0	🟢 **MIT** (`LICENSE@main`, 1,089 B, `sha256₁₂ f987e7f53e06`)	MIT	2026-11-16	False
+agents/top.md	1114	Yari-tuber/math-rap-video	21	21	0	🟢 **MIT** (`LICENSE@main`, 1,067 B, `sha256₁₂ 3adf69adbec0`)	MIT	2026-11-12	False
+agents/top.md	1115	heimi51168/planyourtv	74	74	0	🟢 **MIT** (`LICENSE@main`, 1,110 B, `sha256₁₂ 6f725ade50a7`)	MIT	2026-11-17	False
+repos/foundations.md	88	openedx/openedx-platform		8247		AGPL-3.0	AGPL-3.0	2026-11-19	False
+repos/foundations.md	89	moodle/moodle		7626		GPL-3.0 (no root `LICENSE`; verified in `COPYING.txt`)	GPL-3.0	2026-11-17	False
+repos/foundations.md	90	instructure/canvas-lms		6919		AGPL-3.0	AGPL-3.0	2026-11-10	False
+repos/foundations.md	91	ls1intum/Artemis		834		MIT	MIT	2026-11-19	False
+repos/foundations.md	92	learningequality/kolibri		1179		MIT	MIT	2026-11-19	False
+repos/foundations.md	93	elimu-ai/webapp		41		MIT (`main/LICENSE`, byte-read 1,065 B)	MIT	2026-11-17	False
+repos/foundations.md	94	oppia/oppia		6998		Apache-2.0	Apache-2.0	2026-11-19	False
+repos/foundations.md	95	sakaiproject/sakai		1240		Sakai. Higher-ed LMS; ECL-2.0 is Apache-2.0 with an education-oriented patent clause.	ECL-2.0	2026-11-19	False
+repos/foundations.md	96	chamilo/chamilo-lms		1025		GPL-3.0	GPL-3.0	2026-11-19	False
+repos/foundations.md	97	ILIAS-eLearning/ILIAS		512		GPL-3.0	GPL-3.0	2026-11-19	False
+repos/foundations.md	98	OpenOLAT/OpenOLAT		451		Apache-2.0	NOASSERTION	2026-11-19	False
+repos/foundations.md	107	Cvmcosta/ltijs		373		Apache-2.0	Apache-2.0	2026-11-11	False
+repos/foundations.md	108	tsugiproject/tsugi		377		Apache-2.0	Apache-2.0	2026-11-19	False
+repos/foundations.md	109	Ed-Fi-Alliance-OSS/Ed-Fi-ODS		28		Apache-2.0	Apache-2.0	2026-11-18	False
+repos/foundations.md	110	1EdTech/openbadges-validator-core		61		Apache-2.0	Apache-2.0	2025-11-04	False
+repos/foundations.md	111	Citolab/qti-components		18		GPL-3.0	GPL-3.0	2026-11-19	False
+repos/foundations.md	112	apereo/cas		11404		Apache-2.0	Apache-2.0	2026-11-19	False
+repos/foundations.md	113	Faixiang/Moodle-MCP		209		MIT	MIT	2026-11-01	False
+repos/foundations.md	114	G36maid/moodle-mcp		30		MIT	MIT	2026-10-20	False
+repos/foundations.md	115	blend-ed/openedx-mcp		3		AGPL-3.0	AGPL-3.0	2026-10-22	False
+repos/foundations.md	116	openedx/XBlock		471		Apache-2.0	Apache-2.0	2026-11-16	False
+repos/foundations.md	117	openedx/xblock-sdk		69		Apache-2.0	Apache-2.0	2026-11-16	False
+repos/foundations.md	118	instructure/common-cartridge-viewer		95		MIT	MIT	2026-11-04	False
+repos/foundations.md	119	QFlowLearn/qti3		6		**MIT** — re-byte-read `p912` (`LICENSE@main`, 1,072 B · `00ed05b90bf8`); `p900` read `LICENSE.md@HEAD`, 1,071 B	MIT	2026-11-19	False
+repos/foundations.md	120	Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard		47		Apache-2.0	Apache-2.0	2026-11-19	False
+repos/foundations.md	121	dmitry-viskov/pylti1.3		138		MIT	MIT	2024-08-18	False
+repos/foundations.md	122	academic-innovation/django-lti		26		**MIT** — byte-read `p917` (`LICENSE@main`, 1,098 B)	MIT	2026-11-19	False
+repos/foundations.md	123	ucfopen/cookiecutter-python-lti		6		**MIT** — byte-read `p917` (`LICENSE@main`, 1,130 B)	MIT	2026-05-12	False
+repos/foundations.md	124	GSU-CETLOE/lti1p3Library-python		0		**MIT** — byte-read `p917` (`LICENSE@main`, 1,083 B)	MIT	2026-10-28	False
+repos/foundations.md	125	blackboard/BBDN-lti-1p3-tool-example		1		**Apache-2.0** — byte-read `p917` (`LICENSE@main`, 11,357 B)	Apache-2.0	2023-11-13	False
+repos/foundations.md	126	christophse/django-lti-tool		2		**BSD** — byte-read `p917` (`LICENSE@main`, 1,525 B)	BSD-3-Clause	2024-06-20	False
+repos/foundations.md	127	lmddc-lu/microlms		0		🔴 **AGPL-3.0** — byte-read `p917` (`LICENSE@main`, **34,523 B**, the exact true-AGPL signature `913-F1` established)	AGPL-3.0	2026-11-12	False
+repos/foundations.md	128	jcputney/scorm-again		366		MIT	MIT	2026-11-19	False
+repos/foundations.md	129	ucfopen/canvasapi		681		MIT	MIT	2026-04-16	False
+repos/foundations.md	131	StevenACoffman/roster		0		**MIT** — byte-read `p907` (`LICENSE@main`, 1,070 B)	MIT	2026-10-02	False
+repos/foundations.md	132	swl10/pyslet		76		"🔴 **BSD-3-Clause** — byte-read `p907` (`LICENSE.txt@master`, 2,906 B, *""Copyright 2017 Steve Lay""*); **the API reports `NOASSERTION`**"	NOASSERTION	2020-03-31	False
+repos/foundations.md	133	LJKelly3141/coursepack		0		**MIT** — byte-read `p907` from **`LICENSE.md`** (1,070 B). 🔴 Root `LICENSE` is a **41-byte `usethis` metadata stub containing no grant**, which is the file the API reads, so SPDX says `NOASSERTION`	NOASSERTION	2026-11-17	False
+repos/foundations.md	134	GuanmingQiao/POLITEMALL-MCP		2		**MIT** — byte-read `p907` (`LICENSE@main`, 1,070 B)	MIT	2026-11-19	False
+repos/foundations.md	135	aleka07/scorm_agents		1		**MIT** — byte-read `p907` (`LICENSE@master`, 1,077 B)	MIT	2026-08-24	False
+repos/foundations.md	148	UniTime/unitime		360		Apache-2.0 (`LICENSE@master`, payload `11,357 B`)	Apache-2.0	2026-11-18	False
+repos/foundations.md	149	UniTime/cpsolver		84		**LGPL-3.0**	LGPL-3.0	2026-10-14	False
+repos/foundations.md	150	GEOSOFT-GLOBAL/timetablely		27		MIT	MIT	2026-08-17	False
+repos/foundations.md	160	CAHLR/pyBKT		293		"**MIT** (`LICENSE@master`, 1,132 B, `sha256₁₂ ad0c7a38bf01`, *""Copyright (c) 2021 Computational Approaches to Human Learning""*)"	MIT	2026-11-02	False
+repos/foundations.md	161	pykt-team/pykt-toolkit		462		MIT	MIT	2026-10-18	False
+repos/foundations.md	183	mad707/masar	1	1	0	**MIT** (`main/LICENSE`, 1,083 B, `sha256₁₂ cd63915e037f`)	MIT	2026-09-30	False
+repos/foundations.md	184	clementina-tom/Personalized-Learning-Recommendation-System	3	3	0	**MIT** (`main/LICENSE`, 1,071 B, `sha256₁₂ 2471962b29fc`)	MIT	2026-06-01	False
+repos/foundations.md	185	Jiaclv/error-driven-question-recommender	0	0	0	**MIT** (`main/LICENSE`, 1,056 B, `sha256₁₂ 06dcddbb6908`)	MIT	2026-09-26	False
+repos/foundations.md	186	farroshsy/hcie-system	0	0	0	**MIT** (`main/LICENSE`, 1,076 B, `sha256₁₂ bca6680cab90`)	MIT	2026-11-04	False
+repos/foundations.md	187	Aditya-Ranjan1234/NS-CausalKT-Agentic-Grader	1	1	0	**MIT** (`main/LICENSE`, 1,056 B, `sha256₁₂ 1126322e2cc8`)	MIT	2026-05-16	False
+repos/foundations.md	188	Rishabh-bgp/vedic-math-hybrid-kt	0	0	0	**MIT** (`main/LICENSE`, 1,074 B, `sha256₁₂ 45267e9b5775`)	MIT	2026-11-13	False
+repos/foundations.md	189	BhimPrasadAdhikari/lagnever-learning-knowledge-graph	0	0	0	"**MIT** (`main/LICENSE`, 1,094 B, `sha256₁₂ 3d54cdda6168`, *""Copyright (c) 2026 Lagnever Technologies Private Limited""*)"	MIT	2026-11-18	False
+repos/foundations.md	203	yetanalytics/lrsql		144		Apache-2.0	Apache-2.0	2026-11-14	False
+repos/foundations.md	204	davidpesce/moodle-logstore_xapi		83		**GPL-3.0**	GPL-3.0	2026-10-29	False
+repos/foundations.md	205	openedx/openedx-aspects		10		Apache-2.0	Apache-2.0	2026-11-16	False
+repos/foundations.md	206	openfun/ralph		52		MIT	MIT	2026-11-19	False
+repos/foundations.md	207	adlnet/ADL_LRS		333		Apache-2.0	Apache-2.0	2025-11-14	False
+repos/foundations.md	208	LearningLocker/learninglocker		586		GPL-3.0	GPL-3.0	2024-05-30	False
+repos/foundations.md	209	agentscope-ai/OpenJudge		1117		Apache-2.0	Apache-2.0	2026-11-18	False
+repos/foundations.md	210	adlnet/xapi-spec		954		Apache-2.0	Apache-2.0	2025-07-03	False
+repos/foundations.md	211	peblproject/PEBL		9		**Apache-2.0** — byte-read `p907` (`LICENSE@master`, 11,350 B)	Apache-2.0	2021-03-25	False
+repos/foundations.md	212	ProfeAnaEslavaEdTech/mllde-xapi		0		🟡 **CC-BY-4.0** — byte-read `p907` (17,145 B)	CC-BY-4.0	2026-11-19	False
+repos/foundations.md	218	PrairieLearn/PrairieLearn		534		🔴 **NOT MIT — multi-grant, open-core. Corrected p899.** CE is **AGPL-3.0**; `apps/prairielearn/src/ee/` **and `apps/course-agent/`** are **proprietary Enterprise Edition**; all client-side JavaScript is AGPL; only the portions copyright University of Illinois are MIT	NOASSERTION	2026-11-19	False
+repos/foundations.md	219	Submitty/Submitty		807		"**BSD-3-Clause** (`LICENSE.md@main`, 1,542 B, `sha256₁₂ c123708cb4ef`, *""Copyright (c) 2014-2026 Submitty team""*)"	BSD-3-Clause	2026-11-19	False
+repos/foundations.md	220	ucbds-infra/otter-grader		162		"**BSD-3-Clause** (`LICENSE@master`, 1,560 B, `sha256₁₂ 6af203d41a01`, *""Copyright (c) 2019, UC Berkeley Division of Data Sciences""*)"	BSD-3-Clause	2026-11-14	False
+repos/foundations.md	221	webtech-network/autograder		66		**Apache-2.0** (`LICENSE@main`, 11,357 B, `sha256₁₂ c71d239df917`)	Apache-2.0	2026-11-08	False
+repos/foundations.md	222	eecs-autograder/autograder-server		9		**LGPL-3.0** (`LICENSE.txt@master`, 7,652 B, `sha256₁₂ b96e8c21c928`)	LGPL-3.0	2026-11-19	False
+repos/foundations.md	223	pawtograder/platform		22		"🔴 **GPL-3.0-or-later — SPDX says `NOASSERTION`. Corrected p899.** Byte-read `LICENSE@main` (658 B, `sha256₁₂ 61d7698783f4`): *""This program is free software… under the terms of the GNU General Public License… either version 3 of the License, or (at your option) any later version.""*"	NOASSERTION	2026-11-19	False
+repos/foundations.md	224	jupyter/nbgrader		1370		BSD-3-Clause (1,370 ★)	BSD-3-Clause	2026-11-03	False
+repos/foundations.md	225	autolab/Autolab		808		Apache-2.0	Apache-2.0	2026-11-19	False
+repos/foundations.md	226	autolab/Tango		49		Apache-2.0	Apache-2.0	2026-10-21	False
+repos/foundations.md	227	PrairieLearn/grader-python-v2		2		MIT	MIT	2026-11-18	False
+repos/foundations.md	228	ls1intum/Ares		27		MIT	MIT	2026-11-03	False
+repos/foundations.md	229	openedx/edx-ora2		64		AGPL-3.0	AGPL-3.0	2026-11-18	False
+repos/foundations.md	230	openedx/codejail		476		Apache-2.0	Apache-2.0	2026-11-16	False
+repos/foundations.md	231	Udayraj123/OMRChecker		1194		MIT	MIT	2026-09-04	False
+repos/foundations.md	232	dodona-edu/dolos		357		MIT	MIT	2026-11-19	False
+repos/foundations.md	233	openedx/edx-proctoring		69		AGPL-3.0	AGPL-3.0	2026-11-19	False
+repos/foundations.md	253	dongbeixiaohuo/writing-agent	460	461	1	MIT (`main/LICENSE`, 1,078 B, `sha256₁₂ 185ea2efea06`)	MIT	2026-11-19	False
+repos/foundations.md	254	PGshen/thinking-map	187	187	0	Apache-2.0 (`main/LICENSE`, 11,356 B, `sha256₁₂ 43070e2d4e53`) — **patent grant included**	Apache-2.0	2026-08-23	False
+repos/foundations.md	255	yf-team/yf-exam-lite	173	174	1	MIT (`main/LICENSE`, 1,074 B, `sha256₁₂ b4cf55353a49`)	MIT	2025-05-07	False
+repos/foundations.md	256	zijian-optics/SolaireEPDA	91	91	0	**AGPL-3.0** (`master/LICENSE`, 34,522 B, `sha256₁₂ 20b067f86de3`)	AGPL-3.0	2026-06-27	False
+repos/foundations.md	257	BBkjdayup/BCTK	58	59	1	MIT (`main/LICENSE`, 1,065 B, `sha256₁₂ 7208c5cd9088`)	MIT	2026-11-07	False
+repos/foundations.md	284	HostServer001/jee_mains_pyqs_data_base		23		🟢 **MIT** (1,070 B · `ad8519669214`)	MIT	2026-05-11	False
+repos/foundations.md	285	alvaretto/r-exams_matematicas		8		🟢 **MIT** (1,078 B · `67a6e5e5a2af`)	MIT	2024-03-18	False
+repos/foundations.md	286	SettibathulaJyothi/Aritificial-Intelligence-Code-417-Skill-Education-Class-10		1		🟢 **MIT** (1,076 B · `40a516b92bfb`)	MIT	2026-10-30	False
+repos/foundations.md	287	zayn-anwar/NCERTTBDL		2		🟢 **MIT** (1,067 B · `c2cd195af659`)	MIT	2025-02-14	False
+repos/foundations.md	288	LiraJ07/Temario_Comipems_Crissbeck001		0		🟡 **Apache-2.0** (11,357 B · `c71d239df917`)	Apache-2.0	2025-04-30	False
+repos/foundations.md	295	steve-ongera/KNEC-Exam-Management-System		0				2025-11-05	False
+repos/foundations.md	308	jupyterhub/binderhub		2672		**BSD-3-Clause** (`LICENSE@main`, 1,522 B, `sha256₁₂ 611f531642d5`; SPDX agrees)	BSD-3-Clause	2026-11-14	False
+repos/foundations.md	309	nbgallery/nbgallery		150		**MIT** (`LICENSE@master`, 1,071 B, `sha256₁₂ 7900749dcb3b`, `MIT License` title line; SPDX agrees)	MIT	2026-10-22	False
+repos/foundations.md	310	computationalmodelling/nbval		452		🟡 **BSD-3-Clause — SPDX says `NOASSERTION`.** Byte-read `LICENSE@master` (1,910 B, `sha256₁₂ 1dbc744b78bb`): the file has **no title line at all**, and the grant is resolved from clause structure — redistribution + binary-reproduction + no-endorsement. Copyright **University of Southampton, UK**	NOASSERTION	2025-09-17	False
+repos/foundations.md	311	parmentelat/nbautoeval		20		"🔴 **CC-BY-SA-4.0 — a content licence on executable code.** Byte-read `LICENSE@master` (289 B, `sha256₁₂ 1bb69236081f`): *""made available through a Creative Common Licence CC BY-SA 4.0""*. SPDX says `NOASSERTION`. **`(c) 2017 — Inria — Thierry Parmentelat`**"	NOASSERTION	2024-12-11	False
+repos/foundations.md	313	pyta-uoft/pyta		109		🔴 **GPL-3.0** (`LICENSE@master`, 35,141 B, `sha256₁₂ 589ed823e9a8`, GNU GPL title line; SPDX agrees)	GPL-3.0	2026-11-19	False
+repos/foundations.md	325	h5p/h5p-php-library		156		GPL-3.0	GPL-3.0	2026-11-19	False
+repos/foundations.md	326	Khan/perseus		1600		MIT	MIT	2026-11-19	False
+repos/foundations.md	327	learningequality/studio		212		MIT	MIT	2026-11-19	False
+repos/foundations.md	328	learningequality/ricecooker		32		MIT	MIT	2026-11-18	False
+repos/foundations.md	329	learningequality/le-utils		7		MIT	MIT	2026-11-18	False
+repos/foundations.md	330	openfun/richie		318		MIT	MIT	2026-11-19	False
+repos/foundations.md	331	openfun/marsha		153		MIT	MIT	2026-11-19	False
+repos/foundations.md	332	h5p/h5p-interactive-video		267		🟡 **MIT, manifest-declared only — flagged `p913`** (no licence payload: `LICENSE`, `LICENSE.txt`, `LICENSE.md`, `license.txt` and `COPYING` all `404` on both `master` and `main`)	MIT	2026-11-17	False
+repos/foundations.md	333	h5p/h5p-course-presentation		57		🟡 **MIT, manifest-declared only — flagged `p913`** (no licence payload: `LICENSE`, `LICENSE.txt`, `LICENSE.md`, `license.txt` and `COPYING` all `404` on both `master` and `main`)	MIT	2026-11-11	False
+repos/foundations.md	334	h5p/h5p-audio-recorder		36		🟡 **MIT, manifest-declared only — flagged `p913`** (no licence payload: `LICENSE`, `LICENSE.txt`, `LICENSE.md`, `license.txt` and `COPYING` all `404` on both `master` and `main`)	MIT	2026-11-17	False
+repos/foundations.md	335	h5p/h5p-speak-the-words		12		MIT	MIT	2026-11-17	False
+repos/foundations.md	336	h5p/h5p-cli		79		MIT	MIT	2026-11-19	False
+repos/foundations.md	345	docling-project/docling		70794		MIT	MIT	2026-11-19	False
+repos/foundations.md	346	datalab-to/marker		40989		Apache-2.0	Apache-2.0	2026-11-18	False
+repos/foundations.md	347	opendatalab/MinerU		84007		Apache-2.0	NOASSERTION	2026-11-18	False
+repos/foundations.md	348	Unstructured-IO/unstructured		15766		Apache-2.0	Apache-2.0	2026-11-19	False
+repos/foundations.md	349	SYSTRAN/faster-whisper		26876		MIT	MIT	2026-11-12	False
+repos/foundations.md	350	openai/whisper		113120		MIT	MIT	2026-08-31	False
+repos/foundations.md	356	ollama/ollama		187666		MIT	MIT	2026-11-18	False
+repos/foundations.md	357	vllm-project/vllm		97221		Apache-2.0	Apache-2.0	2026-11-19	False
+repos/foundations.md	358	BerriAI/litellm		63556		**MIT, except `litellm/enterprise/`** (byte-verified p891: the root `LICENSE` grants MIT to everything *outside* `litellm/enterprise/`, which carries its own separate licence — this is why the API reports `NOASSERTION`). Use the OSS paths and do not vendor the enterprise directory.	NOASSERTION	2026-11-19	False
+repos/foundations.md	359	qdrant/qdrant		35638		Apache-2.0	Apache-2.0	2026-11-19	False
+repos/foundations.md	360	chroma-core/chroma		29714		Apache-2.0	Apache-2.0	2026-11-13	False
+repos/foundations.md	361	HKUDS/LightRAG		40777		MIT	MIT	2026-11-19	False
+repos/foundations.md	362	infiniflow/ragflow		94443		Apache-2.0	Apache-2.0	2026-11-19	False
+repos/foundations.md	363	deepset-ai/haystack		27053		Apache-2.0	Apache-2.0	2026-11-19	False
+repos/foundations.md	364	mem0ai/mem0		69248		Apache-2.0	Apache-2.0	2026-11-18	False
+repos/foundations.md	365	temporalio/temporal		24509		MIT	MIT	2026-11-19	False
+repos/foundations.md	376	traceloop/openllmetry		7543		Apache-2.0	Apache-2.0	2026-11-19	False
+repos/foundations.md	377	Helicone/helicone		6290		Apache-2.0	Apache-2.0	2026-11-17	False
+repos/foundations.md	378	openlit/openlit		3092		Apache-2.0	Apache-2.0	2026-11-19	False
+repos/foundations.md	379	langfuse/langfuse		37641		"Much the largest at 37,577 ★ (pushed 2026-11-18), and SPDX reports `NOASSERTION`, so the grant was read as text: **""MIT Expat"" for the core, with a separate enterprise licence covering `ee/`, `web/src/ee/`, `worker/src/ee/` and `packages/shared/src/server/ee/`**. The copyright line now reads **""Copyright (c) 2023-2026 ClickHouse, Inc.""** — ownership has changed hands. Usable, but it needs licence diligence before it enters a client deliverable, and the permissive grant covers less than the repository."	NOASSERTION	2026-11-19	False
+repos/foundations.md	390	EleutherAI/lm-evaluation-harness		14504		MIT	MIT	2026-11-04	False
+repos/foundations.md	391	promptfoo/promptfoo		27466		MIT	MIT	2026-11-19	False
+repos/foundations.md	392	HumanSignal/label-studio		28731		Apache-2.0	Apache-2.0	2026-11-19	False
+repos/foundations.md	393	argilla-io/argilla		5208		Apache-2.0	Apache-2.0	2026-11-16	False
+repos/foundations.md	394	AI-for-Education/pedagogy-benchmark		13		MIT	MIT	2026-11-19	False
+repos/foundations.md	395	acheamponge/wassce-benchmark		4		MIT	MIT	2026-04-07	False
+repos/foundations.md	401	jupyterhub/jupyterhub		8366		BSD-3-Clause	BSD-3-Clause	2026-11-18	False
+repos/foundations.md	402	jupyterhub/zero-to-jupyterhub-k8s		1728		🔴 **BSD-3-Clause + Apache-2.0 (CONJUNCTIVE) — CORRECTED `p913`, was `Apache-2.0`** (byte-read `main/LICENSE`, 13,206 B; **title line is `BSD 3-Clause License`, Copyright (c) 2017 Project Jupyter Contributors**, and the body carries an Apache-2.0 grant as well)	NOASSERTION	2026-11-19	False
+repos/foundations.md	403	jupyterhub/nbgitpuller		237		BSD-3-Clause	BSD-3-Clause	2026-11-02	False
+repos/foundations.md	404	open-spaced-repetition/fsrs4anki		4141		MIT	MIT	2026-08-14	False
+repos/foundations.md	405	appsmithorg/appsmith		41280		Apache-2.0	Apache-2.0	2026-11-19	False
+repos/foundations.md	406	Crosstalk-Solutions/project-nomad		44033		Apache-2.0	Apache-2.0	2026-11-18	False
+repos/foundations.md	407	learningequality/morango		15		MIT	MIT	2026-11-18	False
+repos/foundations.md	408	instructure/instructure-ui		486		MIT (`master/LICENSE.md`, byte-read 1,175 B)	NOASSERTION	2026-11-19	False
+repos/foundations.md	409	openedx/paragon		141		Apache-2.0	Apache-2.0	2026-11-19	False
+repos/foundations.md	410	mitodl/ol-infrastructure		59		BSD-3-Clause	BSD-3-Clause	2026-11-19	False
+repos/foundations.md	411	apereo/java-cas-client		948		🔴 **CONJUNCTIVE: Apache-2.0 + JA-SIG BSD — CORRECTED `p913`, was `Apache-2.0`** (byte-read `master/LICENSE`, 2,321 B)	NOASSERTION	2026-11-19	False
+repos/foundations.md	412	apereo/phpCAS		801		Apache-2.0	Apache-2.0	2026-06-30	False
+repos/foundations.md	413	jitsi/jitsi-meet		30274		🔴 **CONJUNCTIVE: Apache-2.0 + MIT — CORRECTED `p913`, was `Apache-2.0`** (byte-read `master/LICENSE`, 12,596 B, `sha256₁₂ eae52e200cd8`; the payload is ~1.2 kB larger than a standard Apache-2.0 text and the excess is a second, MIT grant)	Apache-2.0	2026-11-19	False
+repos/foundations.md	424	deeplearningturkiye/turkce-yapay-zeka-kaynaklari		2431		MIT (`master/LICENSE`, byte-read 1,079 B)	MIT	2021-11-03	False
+repos/foundations.md	425	barnamenevisi/free-resources		1298		MIT (`master/LICENSE`, byte-read 1,069 B)	MIT	2026-10-11	False
+repos/foundations.md	426	m7medVision/nakhlah.js		25		MIT (`main/LICENSE.md`, byte-read 1,064 B)	MIT	2025-08-02	False
+repos/foundations.md	470	PyThaiNLP/pythainlp		1174		🟢 Apache-2.0 — byte-read `p919`, 11,357 B, `sha256₁₂ b40930bbcf80`	Apache-2.0	2026-11-19	False
+repos/foundations.md	490	hankcs/HanLP		36538		🟢 Apache-2.0 — 11,357 B, `sha256₁₂ c71d239df917`	Apache-2.0	2026-11-07	False
+repos/foundations.md	491	messense/jieba-rs		995		🟢 MIT — 1,101 B, `sha256₁₂ 92257c8d1c7a`	MIT	2026-10-15	False
+repos/foundations.md	492	undertheseanlp/underthesea		1817		🟢 Apache-2.0 — 10,765 B, `sha256₁₂ 05e32ccfed98`	Apache-2.0	2026-11-19	False
+repos/foundations.md	493	bab2min/Kiwi		809		🟢 Apache-2.0 — 11,372 B, `sha256₁₂ 4070ef926941`	Apache-2.0	2026-11-19	False
+repos/foundations.md	494	ongjin/garu		182		🟢 Apache-2.0 — 11,358 B, `sha256₁₂ cfc7749b96f6`	Apache-2.0	2026-11-16	False
+repos/foundations.md	495	taishi-i/nagisa		424		🟢 MIT — 1,065 B, `sha256₁₂ fa2fb3121bd2`	MIT	2026-11-14	False
+repos/foundations.md	496	daac-tools/vibrato		430		🟢 **MIT *OR* Apache-2.0, disjunctive** — `LICENSE-MIT` 1,076 B, `sha256₁₂ d0104f0f2368`	Apache-2.0	2026-10-25	False
+repos/foundations.md	497	ku-nlp/jumanpp		413		🟢 Apache-2.0 — 11,357 B, `sha256₁₂ c71d239df917`	Apache-2.0	2026-10-13	False
+repos/foundations.md	498	himkt/konoha		265		🟢 MIT — 1,067 B, `sha256₁₂ 9e818940bbfa`	MIT	2026-11-13	False
+repos/foundations.md	556	ahmetaa/zemberek-nlp		1378		🟢 **Apache-2.0** — 572 B notice, `sha256₁₂ c55ac4a942b0`. 🔴 `search/repositories` reports **`NOASSERTION`**	NOASSERTION	2026-11-17	False
+repos/foundations.md	557	CAMeL-Lab/camel_tools		594		🟢 MIT — 1,087 B, `sha256₁₂ 7a3ef160e895`	MIT	2026-10-14	False
+repos/foundations.md	558	otuncelli/turkish-stemmer-python		232		🟢 Apache-2.0 — 11,344 B, `sha256₁₂ 511c590688e4`	Apache-2.0	2025-02-26	True
+repos/foundations.md	570	bretttolbert/verbecc	375	106	-269	A curated **list**, not a library. The only maintained member is https://github.com/bretttolbert/verbecc (106 ★, **LGPL-3.0** byte-read from its title block, 7,652 B, `sha256₁₂ e3a994d82e64`) — a verb conjugator for five Romance languages. `Nkluge-correa/Tucano` (86 ★, Apache-2.0) is idle 268 days	LGPL-3.0	2026-11-08	False
+repos/foundations.md	612	sagorbrur/bnlp		313		🟢 **MIT** — 1,069 B, `sha256₁₂ 643fa15c5813`	MIT	2026-10-31	False
+repos/foundations.md	613	ufal/udpipe		425		🟡 **MPL-2.0** — 16,725 B, `sha256₁₂ 1f256ecad192`. 🔴 Published as a bare `MPL` until `922-F3`	MPL-2.0	2026-06-11	False
+repos/foundations.md	614	huspacy/huspacy		194		🟢 Apache-2.0 — 11,347 B, `sha256₁₂ 04108063fd07`	Apache-2.0	2026-11-16	False
+repos/foundations.md	615	mikahama/uralicNLP		101		🟢 Apache-2.0 — 11,353 B, `sha256₁₂ 82727434fd5f`	Apache-2.0	2026-11-13	False
+repos/foundations.md	616	ljvmiranda921/calamanCy		77		🟢 MIT — 1,095 B, `sha256₁₂ 09da5a2dfb62`	MIT	2026-10-05	False
+repos/foundations.md	617	sefineh-ai/Amharic-Tokenizer		99		🟢 MIT — 1,069 B, `sha256₁₂ 83e775edbdd9`	MIT	2026-09-24	False
+repos/foundations.md	618	flammie/omorfi		108		🔴 **GPL-3.0** — 35,140 B, `sha256₁₂ 39ebd7598688`, read through a **7-byte `LICENSE` pointer stub** (`922-F5`)	NOASSERTION	2026-08-24	False
+repos/foundations.md	633	EthioNLP/Ethiopian-Language-Survey	17	17	0	🟢 **MIT** — 1,103 B, `sha256₁₂ e268928bea59` (`search` agrees)	MIT	2025-06-04	False
+repos/foundations.md	634	czcorpus/kontext	80	80	0	🔴 **GPL-2.0** — 17,989 B	GPL-2.0	2026-11-12	False
+repos/foundations.md	635	czcorpus/manatee-open	1	1	0	🔴 GPL-2.0	GPL-2.0	2026-11-03	False
+repos/foundations.md	636	czcorpus/cnc-tskit	1	1	0	🟢 Apache-2.0 — 11,357 B	Apache-2.0	2026-09-29	False
+repos/foundations.md	637	yonasab12/amharicNLP	10	10	0	🔴 **an 11-byte file reading `MIT License` — a name, not a grant**; `search` says `NOASSERTION` and is right	NOASSERTION	2026-09-15	False
+repos/foundations.md	667	inducer/relate	439	438	-1	**MIT/X Consortium** (1,144 B, `e6c20b652766`)	NOASSERTION	2026-11-19	False
+repos/foundations.md	668	tutors-sdk/tutors	125	125	0	MIT (1,087 B, `b418e808b99a`)	MIT	2026-07-23	False
+repos/foundations.md	669	haxtheweb/haxcms-php	130	130	0	Apache-2.0 (11,362 B, `b662f44e55e8`)	Apache-2.0	2026-11-19	False
+repos/foundations.md	670	pacewisdomhq/TutorLoom	98	98	0	Apache-2.0 (11,361 B, `a7f87303f2e9`)	Apache-2.0	2026-11-18	False
+repos/foundations.md	671	iblai/lms	88	88	0	MIT (1,062 B, `d9d62c94b512`)	MIT	2026-11-19	False
+repos/foundations.md	672	onemnemo/mnemo	133	133	0	Apache-2.0 (11,325 B, `9e43fad60ad0`)	Apache-2.0	2026-10-22	False
+repos/foundations.md	673	SJRiz/pytogether	262	262	0	MIT (1,072 B, `c8df073d1320`)	MIT	2026-10-21	False
+repos/foundations.md	674	langx/langx	111	111	0	**BSD-3-Clause** (1,519 B, `f90e8a082588`, **non-endorsement clause present, no advertising clause**)	BSD-3-Clause	2026-11-18	False
+repos/foundations.md	680	Azure/Moodle	186	186	0	MIT (1,090 B, `91f7258203fd`)	MIT	2026-11-02	False
+repos/foundations.md	681	microsoft/o365-moodle	216	216	0	GPL-3.0 (35,146 B, `c53a65c2fd56`)	GPL-3.0	2026-11-19	False
+repos/foundations.md	682	learning-commons-org/knowledge-graph	169	168	-1	🔵 split: **code MIT, data per-dataset** (5,788 B, `86b7ebf9b61d`)	NOASSERTION	2026-11-10	False
+repos/foundations.md	695	bncc-dev/bncc-dados	26	26	0	🔴 **MIT** (`main/LICENSE`, 1,092 B) for `pipeline/` **and CC BY 4.0** (`main/dados/LICENSE.md`, 1,583 B) for the data	MIT	2026-10-15	False
+repos/foundations.md	696	bncc-dev/bncc-pacotes	10	10	0	🔴 **MIT** code + **CC BY 4.0** embedded data + **name and visual identity not licensed** (`main/LICENSE`, 1,299 B)	NOASSERTION	2026-10-15	False
+repos/foundations.md	697	eumakerdev/bncc_api	17	17	0	**MIT** (`main/LICENSE`, 1,081 B)	MIT	2026-11-16	False
+repos/foundations.md	698	bncc-dev/bncc-benchmark	12	12	0	🔴 **MIT** (`harness/`, `test/`) + **CC BY 4.0** (items, results, methodology)	NOASSERTION	2026-09-19	False
+repos/foundations.md	699	HuemulSolutions/Enola-AI	1	1	0	**BSD-3-Clause** (`main/LICENSE`, 1,503 B)	BSD-3-Clause	2024-12-31	False
+repos/foundations.md	737	ls1intum/Apollon		106		MIT (`main/LICENSE`, byte-read 1,091 B)	MIT	2026-11-19	False
+repos/foundations.md	738	ls1intum/artemis-android		13		MIT	MIT	2026-11-18	False
+repos/foundations.md	739	ls1intum/artemis-ios		13		MIT	MIT	2026-11-19	False
+repos/foundations.md	740	ls1intum/artemis-ansible-collection		8		MIT	MIT	2026-11-19	False
+repos/foundations.md	741	ls1intum/standardized-competency-catalog		1		MIT	MIT	2026-03-01	False
+repos/foundations.md	751	UniversityOfHelsinkiCS/sis-importer		1		MIT (byte-read 1,111 B)	MIT	2026-11-16	False
+repos/foundations.md	752	UniversityOfHelsinkiCS/suoritustarkistin		1		MIT	MIT	2026-11-19	False
+repos/foundations.md	753	UniversityOfHelsinkiCS/sis-ns-manager		0		Apache-2.0	Apache-2.0	2026-11-10	False
+repos/foundations.md	754	KTH/canvas-api		10		MIT	MIT	2026-11-16	False
+repos/foundations.md	755	AaltoGIS/classroom-grader		1		BSD-3-Clause	BSD-3-Clause	2026-11-09	False
+repos/foundations.md	756	kyoto-u/comfortable-sakai		25		Apache-2.0	Apache-2.0	2023-03-15	False
+repos/foundations.md	757	cilt-uct/sakai-skin-vula		4			ECL-2.0	2026-06-03	False
+repos/foundations.md	758	cilt-uct/tsugi-migrate-to-brightspace		0		Apache-2.0	Apache-2.0	2026-10-22	False
+repos/foundations.md	759	cilt-uct/tsugi-request-gradebook-upload		0		Apache-2.0	Apache-2.0	2026-10-06	False
+repos/foundations.md	769	cmu-db/bustub		5170		MIT (byte-read 1,075 B)	MIT	2026-11-18	False
+repos/foundations.md	770	RWTH-OS/eduOS-rs		491		**`MIT/Apache-2.0` (disjunctive — licensee chooses)**	Apache-2.0	2026-10-04	False
+repos/foundations.md	791	openwallet-foundation/multipaz		301		**Apache-2.0** (`LICENSE@main`, 11,358 B)	Apache-2.0	2026-11-18	False
+repos/foundations.md	792	eu-digital-identity-wallet/eudi-lib-android-wallet-core		64		**Apache-2.0** (`LICENSE@main`, 11,357 B)	Apache-2.0	2026-11-19	False
+repos/foundations.md	793	eu-digital-identity-wallet/eudi-lib-jvm-openid4vci-kt		47		**Apache-2.0** (`LICENSE@main`, 9,425 B)	Apache-2.0	2026-11-17	False
+repos/foundations.md	794	eu-digital-identity-wallet/eudi-srv-pid-issuer		43		**Apache-2.0** (`LICENSE@main`, 9,425 B)	Apache-2.0	2026-11-06	False
+repos/foundations.md	795	procivis/one-core		163		**Apache-2.0** (`LICENSE@main`, 11,340 B)	Apache-2.0	2026-11-10	False
+repos/foundations.md	796	procivis/one-wallet		153		**Apache-2.0** (`LICENSE@main`, 11,340 B)	Apache-2.0	2026-11-10	False
+repos/foundations.md	797	Sphereon-Opensource/OID4VC		93		**Apache-2.0** (`LICENSE@develop`, 11,347 B)	Apache-2.0	2026-07-03	False
+repos/foundations.md	798	a-sit-plus/vck		77		**Apache-2.0** (`LICENSE@main`, 11,358 B)	Apache-2.0	2026-11-19	False
+repos/foundations.md	799	wwWallet/wallet-frontend		47		**BSD** (`LICENSE@master`, 1,309 B)	BSD-2-Clause	2026-11-19	False
+repos/foundations.md	800	impierce/openid4vc		42		**Apache-2.0** (`LICENSE@main`, 9,145 B)	Apache-2.0	2026-11-19	False
+repos/foundations.md	801	Lumoin/Verifiable		40		**Apache-2.0** (`LICENSE@main`, 11,345 B)	Apache-2.0	2026-10-19	False
+repos/foundations.md	869	GibbonEdu/core		640			GPL-3.0	2026-11-19	False
+repos/foundations.md	872	overhangio/tutor	28	1134	1106		AGPL-3.0	2026-11-19	False
+repos/foundations.md	873	odoo/odoo	60	55953	55893		NOASSERTION	2026-11-19	False
+repos/foundations.md	875	THU-MAIC/OpenMAIC		43962			MIT	2026-11-19	False
+repos/foundations.md	876	HKUDS/DeepTutor		60793			Apache-2.0	2026-11-18	False
+repos/foundations.md	915	trycua/cua	32616	32683	67	**MIT** (`LICENSE.md` `1,069 B`)	MIT	2026-11-19	False
+repos/foundations.md	916	freeCodeCamp/freeCodeCamp	459299	459351	52	**BSD-3-Clause** (`LICENSE.md` `1,513 B`)	BSD-3-Clause	2026-11-19	False
+repos/foundations.md	917	terracotta-education/terracotta	22	22	0	**Apache-2.0** (`11,323 B`)	Apache-2.0	2026-11-18	False
+repos/foundations.md	918	lplnufpi/essay-br	17	17	0	**MIT** (`1,114 B`)	MIT	2023-05-08	False
+repos/foundations.md	919	EduardoKrausME/moodle-local_mcp	2	2	0	🔴 **GPL-3.0** (`35,149 B`)	GPL-3.0	2026-11-19	False
+repos/foundations.md	920	kaveheng/GenAi-in-education	0	0	0	🔴 **CC BY 4.0** (`442 B`)	NOASSERTION	2026-09-26	False
+repos/foundations.md	951	tristcoil/hanabira.org	436	436	0	**MIT** — `main/LICENSE`, 1,061 B, `sha256₁₂ fb81a218ce1c`	MIT	2025-03-26	False
+repos/foundations.md	952	aiktb/furiganamaker	312	312	0	**MIT** grant text, no title line — `main/LICENSE`, 1,095 B, `sha256₁₂ a13d4cbed2ef`	MIT	2026-10-25	False
+repos/foundations.md	953	jamsinclair/open-anki-jlpt-decks	252	251	-1	**MIT** — `main/LICENSE`, 1,071 B, `sha256₁₂ dfb974763030`	MIT	2026-03-12	False
+repos/foundations.md	954	davidluzgouveia/kanji-data	244	244	0	**MIT** — `master/LICENSE`, 1,070 B, `sha256₁₂ 4c4fe92a5adf`	MIT	2026-02-27	False
+repos/foundations.md	955	AnchorI/jlpt-kanji-dictionary	44	44	0	**MIT** — `main/LICENSE`, 1,069 B, `sha256₁₂ d0ce81237400`	MIT	2025-05-02	False
+repos/foundations.md	956	StudentSuite/awesome-study-resources	39	39	0	**MIT** — `main/LICENSE`, 1,069 B, `sha256₁₂ 537c697c69a5`	MIT	2026-11-17	False
+repos/foundations.md	957	SpiderIkun/korean-study-web	39	39	0	**MIT** — `main/LICENSE`, 1,084 B, `sha256₁₂ 83bd45bc2c0c`	MIT	2026-05-18	False
+repos/foundations.md	958	JUPASCal/JUPASCal.github.io	10	10	0	**MIT** — `main/LICENSE`, 1,065 B, `sha256₁₂ bf45e6d51cdf`	MIT	2026-07-17	False
+repos/foundations.md	959	milesberry/networx	8	8	0	**MIT** — `main/LICENSE`, 1,068 B, `sha256₁₂ 9cbc8ea74b49`	MIT	2026-03-24	False
+repos/foundations.md	960	nsip/nias2	7	7	0	**Apache-2.0** — `master/LICENSE`, 11,371 B, `sha256₁₂ b0d65685ad40`	Apache-2.0	2026-10-21	False
+repos/foundations.md	961	lerlerchan/Prompt-libraries-for-Malaysia-Educators	6	6	0	**MIT** — `main/LICENSE`, 1,102 B, `sha256₁₂ 9bd543a84b9a`	MIT	2026-11-19	False
+repos/foundations.md	962	l-yohai/suneung	5	5	0	**MIT** — `main/LICENSE`, 1,066 B, `sha256₁₂ fc5a26453227`	MIT	2023-11-23	False
+repos/foundations.md	963	fattaillabs/mogo-print	1	1	0	**MIT** — `main/LICENSE`, 1,069 B, `sha256₁₂ f9479d61666b`	MIT	2026-11-19	False
+repos/foundations.md	978	hasensaramii977-cpu/Grade-12-National-Exam-Training-Model	1	1	0	**CC0-1.0** (7,048 B · `a2010f343487`)	CC0-1.0	2026-05-07	False
+repos/foundations.md	979	Nugestudent2026/EdTech	0	0	0	🔴 **This is `912-F2`'s false-positive control.** `p880` classified it **MIT**, because Boost's text contains MIT's exact trigger phrase. Boost is permissive and usable, but its **notice obligation differs from MIT's** — Boost 1.0 does not require reproducing the licence for binary-only distribution — so a studio reproducing MIT notices here is complying with the wrong grant.	BSL-1.0	2026-09-03	False
+repos/foundations.md	1076	Lumieducation/H5P-Nodejs-library	207	207	0	🔴 **GPL-3.0** (`master/LICENSE`, 35,146 B, `sha256₁₂ c53a65c2fd56` — *byte-identical to the PHP core's*)	GPL-3.0	2026-11-19	False
+repos/foundations.md	1077	h5p/h5p-editor-php-library	83	83	0	"🟢 **MIT (code) + Apache-2.0 (bundled Open Sans font) — resolved `p917` at the FOURTH layer.** No licence payload (16×3 ladder, all `404`); `package.json` says only `""SEE LICENSE IN README.md""`; the README then states *""All code is licensed under MIT License""* and *""Open Sans font is licensed under Apache license, Version 2.0""*. 🔴 A `T25` split-by-asset-type, so one licence cell cannot express it"		2026-11-19	False
+repos/foundations.md	1078	Lumieducation/Lumi	200	200	0	🔴 **AGPL-3.0 — resolved `p917` at the MANIFEST layer** (`license` field of `package.json@main`). No licence payload (16×3 ladder, all `404`). 🟡 A manifest *names* a grant without reproducing it (`905-G1`), so this is weaker than a header — but AGPL-3.0 named by the maintainer is enough to stop a closed derivative		2026-11-12	False
+repos/foundations.md	1114	adaptlearning/adapt_framework	636	635	-1	🔴 **GPL** (`master/LICENSE`, 35,129 B, `sha256₁₂ —`)	GPL-3.0	2026-11-02	False
+repos/foundations.md	1115	adaptlearning/adapt_authoring	563	562	-1	🔴 **GPL** (`master/LICENSE`, 35,140 B)	GPL-3.0	2026-08-04	False
+repos/foundations.md	1116	course-code-framework/coursecode	7	7	0	🟢 **MIT** (`main/LICENSE`, 1,069 B)	MIT	2026-11-06	False
+repos/foundations.md	1117	course-code-framework/coursecode-desktop	5	5	0	🟢 **MIT** (`main/LICENSE`, 1,069 B)	MIT	2026-10-29	False
+repos/foundations.md	1118	QFlowLearn/qflow-author	0	0	0	🔴 **AGPL-3.0** (`main/LICENSE`, 34,020 B)	AGPL-3.0	2026-11-19	False
+repos/foundations.md	1137	bcgov/SIMS	29	29	0	🟢 **Apache-2.0** (`main/LICENSE`, 11,358 B, `sha256₁₂ cfc7749b96f6`)	Apache-2.0	2026-11-19	False
+repos/foundations.md	1138	nomadicjosh/etsis	46	46	0	**MIT** (`main/LICENSE.md`, 1,114 B, `sha256₁₂ 8f8a3e4bfffc`)	MIT	2026-11-19	False
+repos/foundations.md	1139	opensacorg/learning-blocks	6	6	0	**MIT** (`master/LICENSE`, 1,076 B, `sha256₁₂ 06145c4016db`)	MIT	2026-09-16	False
+repos/foundations.md	1160	ctrlaltwill/LearnKit	185	185	0	**MIT** (1,068 B, `sha256₁₂ 38a90d0f7738`)	MIT	2026-10-31	False
+repos/foundations.md	1161	kirill-markin/flashcards-open-source-app	119	119	0	**MIT** (1,070 B, `sha256₁₂ 0e319ca9aaa9`)	MIT	2026-11-19	False
+repos/foundations.md	1162	pieralukasz/true-recall	68	68	0	**MIT** (1,070 B, `sha256₁₂ 23444362494b`)	MIT	2026-11-16	False
+repos/foundations.md	1180	Apereo-Learning-Analytics-Initiative/OpenLRW	62	62	0	🟢 **ECL-2.0** (field says `NOASSERTION`)	NOASSERTION	2025-09-12	False
+repos/foundations.md	1181	Apereo-Learning-Analytics-Initiative/OpenLRS	47	47	0		NOASSERTION	2019-01-31	True
+repos/foundations.md	1182	rwthanalytics/moodle-local_learning_analytics	26	26	0	🔴 GPL-3.0 (`LICENSE@master`, 35,148 B)	GPL-3.0	2025-05-26	False
+repos/foundations.md	1183	marceloschmitt/moodle-block_analytics_graphs	18	18	0	🟢 **GPL-3.0-or-later — resolved `p917` at the FILE-HEADER layer.** Full GNU header block in `version.php@master`. ⚠️ `LICENSE.md` exists only on branch `4.3`, and that is no longer the only evidence	GPL-3.0	2026-09-28	False
+repos/foundations.md	1184	kirstykitto/CLAtoolkit	27	27	0	🔴 GPL-3.0	GPL-3.0	2017-07-11	False
+repos/foundations.md	1185	sandboxnu/graduatenu	28	28	0	🔴 GPL-3.0	GPL-3.0	2026-09-30	False
+repos/foundations.md	1186	Longhorn-Developers/Degree-Audit-Plus	18	18	0	🟢 **MIT** (1,076 B, `sha256₁₂ 27477ecee35a`)	MIT	2026-11-19	False
+repos/foundations.md	1187	chtzvt/PyEdsby	11	11	0	🟢 **MIT**	MIT	2022-06-28	False
+repos/foundations.md	1188	sinothando/student-early-warning-system	11	11	0	🟢 **MIT**	MIT	2026-05-31	False
+repos/foundations.md	1224	parthdhanani/scorm-kit		2		**MIT** (`LICENSE@main`, 1,070 B, `sha256₁₂ 51b37fff352e`)	MIT	2026-11-07	False
+repos/foundations.md	1225	parthdhanani/storycraft		1		**MIT** (`LICENSE@main`, 1,070 B, **identical** `sha256₁₂ 51b37fff352e`)	MIT	2026-11-07	False
+repos/foundations.md	1226	wonmortech/sanad		0		**Apache-2.0** (`LICENSE@main`, 11,337 B, `sha256₁₂ 2dfd7238870e`)	Apache-2.0	2026-11-17	False
+repos/foundations.md	1227	parler-haut-interagir-librement/open-badges-bundle		0		**MIT** (`LICENSE@main`, 1,155 B, `sha256₁₂ 2da07e888147`)	MIT	2026-11-19	False
+repos/foundations.md	1228	parler-haut-interagir-librement/certificates-bundle		0		**MIT** (identical grant, `sha256₁₂ 2da07e888147`)	MIT	2026-11-19	False
+repos/foundations.md	1229	missing-elements/h5p-toolkit		10		**MIT** (`LICENSE@main`, 1,073 B, `sha256₁₂ 18f305a9c256`)	MIT	2026-11-19	False
+repos/foundations.md	1230	jonsorr/D2L_Brightspace_APIs		2		**MIT** (`LICENSE@main`, 1,074 B, `sha256₁₂ 9d02fbcfc698`)	MIT	2026-11-19	False
+repos/foundations.md	1231	openpatch/bitflow		44		**MIT** (`LICENSE.md@main`, 1,069 B, `sha256₁₂ 6c8866c27129`)	MIT	2026-10-31	False
+repos/foundations.md	1232	mrlvsb/kelvin		35		**MIT** (`LICENSE@master`, 1,063 B, `sha256₁₂ d94b8adebb28`)	MIT	2026-11-19	False
+repos/foundations.md	1233	artevelde-uas/canvas-lms-app		12		🟢 **ISC** (`LICENSE@main`, 771 B, `sha256₁₂ 4291d4cd3e71`)	ISC	2026-10-26	False
+repos/foundations.md	1234	dbosk/canvaslms		9		**MIT** (`LICENSE@master`, 1,074 B, `sha256₁₂ 37f4cab1bcf3`)	MIT	2026-11-19	False
+repos/foundations.md	1244	10kH/MisconceptDialogue		1		**MIT** (`LICENSE@main`, 1,129 B, `sha256₁₂ 1d987d9bdc2a`)	MIT	2026-11-14	False
+repos/foundations.md	1246	online-ml/river		6150		🟢 **BSD-3-Clause** (`LICENSE@main`, 1,528 B, `sha256₁₂ e87f2c8f1ba6`)	BSD-3-Clause	2026-11-17	False
+repos/foundations.md	1247	cognitive-engineering-lab/mdbook-quiz		155		"🟢 **`MIT OR Apache-2.0`** (disjunctive — **no root `LICENSE`**; `LICENSE-MIT` 1,035 B `sha256₁₂ 1847e0e06981` + `LICENSE-APACHE` 10,172 B `sha256₁₂ 59899c6091b5`; `Cargo.toml@main` declares `license = ""MIT OR Apache-2.0""`, all byte-read `p928`)"	Apache-2.0	2026-10-25	False
+repos/foundations.md	1248	david-04/quiz-mate		60		🟢 **ISC** (`LICENSE@main`, 779 B, `sha256₁₂ 80724804a81d`)	ISC	2026-07-10	False
+repos/foundations.md	1249	cmlonder/notebooklm-chunker		21		🟢 **MIT** (`LICENSE@main`, 1,065 B, `sha256₁₂ 19ce1724bc9e`)	MIT	2026-11-15	False
+repos/foundations.md	1251	mcgrizzz/Yomine		67		"🟢 **`MIT OR Apache-2.0`** (disjunctive — **no root `LICENSE`**; `LICENSE-MIT` 1,065 B `sha256₁₂ 116f5aa90c69` + `LICENSE-APACHE` 11,357 B `sha256₁₂ c71d239df917`; `Cargo.toml@main` declares `license = ""MIT OR Apache-2.0""`, byte-read `p928`)"	Apache-2.0	2026-11-10	False
+repos/foundations.md	1252	mistval/kotoba		208		🟢 **MIT** (`LICENSE@master`, 1,064 B, `sha256₁₂ 32aad86d5c86`)	MIT	2026-11-13	False
+repos/foundations.md	1253	14flavius/GradeShelf		24		🟢 **MIT** (`LICENSE@main`, 1,070 B, `sha256₁₂ a0fab3c5090c`)	MIT	2026-11-16	False
+repos/foundations.md	1254	houselearning/home		46		🟢 **Apache-2.0** (`LICENSE@main`, 11,357 B, `sha256₁₂ c71d239df917` — byte-identical to the canonical Apache text)	Apache-2.0	2026-11-12	False
+repos/foundations.md	1450	crownpku/Awesome-Chinese-NLP	7920	7920	0	🟢 **Apache-2.0** — 11,357 B, `c71d239df917`	Apache-2.0	2023-07-27	False
+repos/foundations.md	1451	wannaphong/Awesome-Lao-NLP	19	19	0	🟢 **MIT**	MIT	2025-03-07	False
+repos/foundations.md	1457	taishi-i/awesome-japanese-nlp-resources	1031	1030	-1	🟡 **CC0-1.0** — 7,048 B, `a2010f343487`	CC0-1.0	2026-11-17	False
+repos/foundations.md	1458	bilalabic/awesome-turkish-datasets	9	9	0	🟡 **CC-BY-4.0** — 18,657 B, `9ba9550ad484`	CC-BY-4.0	2026-11-01	False
+repos/foundations.md	1459	JousiaPiha/awesome-finnish-nlp	5	5	0	🟡 **CC0-1.0** — same payload as `taishi-i`	CC0-1.0	2026-07-30	False
+repos/foundations.md	1460	tuanone123/awesome-vietnamese-llm-dataset	0	0	0	🟡 **CC0-1.0** — 6,460 B, `f0f96b4f190e`	CC0-1.0	2026-09-07	False
+verticals/solutions.md	40	moodle/moodle		7626		GPL-3.0 (`COPYING.txt`)	GPL-3.0	2026-11-17	False
+verticals/solutions.md	41	openedx/openedx-platform		8247		AGPL-3.0	AGPL-3.0	2026-11-19	False
+verticals/solutions.md	42	instructure/canvas-lms		6919		AGPL-3.0	AGPL-3.0	2026-11-10	False
+verticals/solutions.md	43	ls1intum/Artemis		834		MIT	MIT	2026-11-19	False
+verticals/solutions.md	44	learningequality/kolibri		1179		MIT	MIT	2026-11-19	False
+verticals/solutions.md	45	chamilo/chamilo-lms		1025		GPL-3.0	GPL-3.0	2026-11-19	False
+verticals/solutions.md	46	ILIAS-eLearning/ILIAS		512		GPL-3.0	GPL-3.0	2026-11-19	False
+verticals/solutions.md	47	sakaiproject/sakai		1240			ECL-2.0	2026-11-19	False
+verticals/solutions.md	48	OpenOLAT/OpenOLAT		451		Apache-2.0	NOASSERTION	2026-11-19	False
+verticals/solutions.md	49	oppia/oppia		6998		Apache-2.0	Apache-2.0	2026-11-19	False
+verticals/solutions.md	50	frappe/lms		3432		AGPL-3.0	AGPL-3.0	2026-11-19	False
+verticals/solutions.md	51	Selleo/mentingo		109		**MIT** (`LICENSE@main`, `Copyright (c) 2024 Selleo`)	MIT	2026-11-19	False
+verticals/solutions.md	52	pupilfirst/pupilfirst		982		**MIT** — multi-grant, byte-read p899 (`LICENSE@master`, 1,684 B, `sha256₁₂ bda0aa6d49f2`)	NOASSERTION	2025-12-09	False
+verticals/solutions.md	53	overhangio/tutor		1134		AGPL-3.0	AGPL-3.0	2026-11-19	False
+verticals/solutions.md	54	youufis/SmartKBS		102		**AGPL-3.0** (byte-read `master/LICENSE`, 34,833 B, `sha256₁₂ c017a2e33418`)	AGPL-3.0	2026-11-19	False
+verticals/solutions.md	67	GuanmingQiao/POLITEMALL-MCP		2		**MIT** (byte-read)	MIT	2026-11-19	False
+verticals/solutions.md	68	andrsnrua/universidad-pacifico-mcp		1		**ISC** (byte-read)	ISC	2026-10-06	False
+verticals/solutions.md	69	bolgerru/blackboard-mcp		0				2026-10-15	False
+verticals/solutions.md	70	cculb/schoolconnect		4		**MIT** (byte-read)	MIT	2025-12-28	False
+verticals/solutions.md	106	academico-sis/academico		413		**MIT**	MIT	2026-11-18	False
+verticals/solutions.md	107	Gego-K12/gegok12		58		MIT	NOASSERTION	2026-09-23	False
+verticals/solutions.md	108	francoisjacquet/rosariosis		655		GPL-2.0	GPL-2.0	2026-11-19	False
+verticals/solutions.md	109	GibbonEdu/core		640		GPL-3.0	GPL-3.0	2026-11-19	False
+verticals/solutions.md	110	OS4ED/openSIS-Classic		351		"🔴 **GPL-2.0 — resolved p897.** Byte-read at **`master/docs/License.txt`** (17,286 B, `sha256₁₂ 224ac3d403e3`); the `README.md` links it. GitHub's SPDX still reports `NONE` because the file is not at the repository root, and this KB previously recorded it as *""none declared""* for the same reason. **The licence is known; it is strong copyleft.** Fine to deploy and host for a client; a proprietary derivative is not."		2026-10-26	False
+verticals/solutions.md	111	portabilis/i-educar		725		GPL-2.0	GPL-2.0	2026-11-13	False
+verticals/solutions.md	112	openeducat/openeducat_erp		913		LGPL-3.0 (byte-verified p891 from `LICENSE@master`; the GitHub API reports `NOASSERTION` because the file is a preamble plus the GPL text, not an SPDX-matchable template)	NOASSERTION	2026-11-16	False
+verticals/solutions.md	113	odoo/odoo		55953		LGPL-3.0	NOASSERTION	2026-11-19	False
+verticals/solutions.md	114	frappe/education		715		"GPL-3.0 (`license.txt`: ""License: GNU GPL V3"")"	NOASSERTION	2026-10-30	False
+verticals/solutions.md	115	UniTime/unitime		360		**Apache-2.0** (`LICENSE@master`)	Apache-2.0	2026-11-18	False
+verticals/solutions.md	116	GEOSOFT-GLOBAL/timetablely		27		MIT	MIT	2026-08-17	False
+verticals/solutions.md	117	portabilis/i-diario		117		**AGPL-3.0** — 🔴 **byte-read correction, p896**	NOASSERTION	2026-10-14	False
+verticals/solutions.md	118	Antonio-Neves/Gestao-Escolar		50		MIT	MIT	2026-10-12	False
+verticals/solutions.md	119	bcgov/SIMS		29		🟢 **Apache-2.0** (byte-read `p915`, `main/LICENSE`, 11,358 B, `sha256₁₂ cfc7749b96f6`)	Apache-2.0	2026-11-19	False
+verticals/solutions.md	120	nomadicjosh/etsis		46		**MIT** (byte-read `p915`, `main/LICENSE.md`, 1,114 B, `sha256₁₂ 8f8a3e4bfffc`)	MIT	2026-11-19	False
+verticals/solutions.md	121	opensacorg/learning-blocks		6		**MIT** (byte-read `p915`, `master/LICENSE`, 1,076 B, `sha256₁₂ 06145c4016db`)	MIT	2026-09-16	False
+verticals/solutions.md	157	AnubisLMS/Anubis		382		**MIT**	MIT	2026-09-15	False
+verticals/solutions.md	158	Submitty/Submitty		807		**BSD-3-Clause** (`LICENSE.md@main`, 1,542 B, `sha256₁₂ c123708cb4ef`)	BSD-3-Clause	2026-11-19	False
+verticals/solutions.md	159	PrairieLearn/PrairieLearn		534		🔴 **AGPL-3.0 Community Edition + proprietary Enterprise Edition. NOT MIT — corrected p899**	NOASSERTION	2026-11-19	False
+verticals/solutions.md	160	autolab/Autolab		808		Apache-2.0	Apache-2.0	2026-11-19	False
+verticals/solutions.md	161	pawtograder/platform		22		🔴 **GPL-3.0-or-later** — SPDX reports `NOASSERTION`; byte-read p899 (`LICENSE@main`, 658 B, `sha256₁₂ 61d7698783f4`)	NOASSERTION	2026-11-19	False
+verticals/solutions.md	171	DSpace/DSpace		1115		BSD-3-Clause	BSD-3-Clause	2026-11-13	False
+verticals/solutions.md	172	Koha-Community/Koha		601		GPL-3.0	GPL-3.0	2026-11-19	False
+verticals/solutions.md	173	pkp/ojs		1058		GPL-3.0	GPL-3.0	2026-11-19	False
+verticals/solutions.md	179	jitsi/jitsi-meet		30274		🔴 **CONJUNCTIVE: Apache-2.0 + MIT — cell corrected `p920`** (`master/LICENSE`, 12,596 B, `sha256₁₂ eae52e200cd8`, re-read `p920`). `p913` byte-read the conjunction and corrected it in `repos/foundations.md` only; this cell carried a bare `Apache-2.0` for seven passes. **The notice obligation is two, not one** — see `920-F3`	Apache-2.0	2026-11-19	False
+verticals/solutions.md	180	bigbluebutton/bigbluebutton		9284		LGPL	LGPL-3.0	2026-11-19	False
+verticals/solutions.md	181	opencast/opencast		512			ECL-2.0	2026-11-19	False
+verticals/solutions.md	182	OpenVidu/openvidu		2147		Apache-2.0	Apache-2.0	2026-11-19	False
+verticals/solutions.md	183	netless-io/flat		6442		MIT	MIT	2026-11-10	False
+verticals/solutions.md	184	openfun/marsha		153		MIT	MIT	2026-11-19	False
+verticals/solutions.md	194	jupyterhub/binderhub		2672		**BSD-3-Clause** (`main/LICENSE`, `1,522 B`, `sha256₁₂ 611f531642d5`)	BSD-3-Clause	2026-11-14	False
+verticals/solutions.md	195	jupyterhub/jupyterhub		8366		BSD-3-Clause	BSD-3-Clause	2026-11-18	False
+verticals/solutions.md	196	nbgallery/nbgallery		150		**MIT** (`master/LICENSE`, `1,071 B`, `sha256₁₂ 7900749dcb3b`)	MIT	2026-10-22	False
+verticals/solutions.md	210	ankitects/anki		32914		AGPL-3.0	NOASSERTION	2026-11-19	False
+verticals/solutions.md	213	CTFd/CTFd		6918		Apache-2.0	Apache-2.0	2026-11-10	False
+verticals/solutions.md	214	Udayraj123/OMRChecker		1194		MIT	MIT	2026-09-04	False
+verticals/solutions.md	215	open-scratch/teaching-open		637		Apache-2.0	Apache-2.0	2026-07-06	False
+verticals/solutions.md	216	migueldsants/OpENEM		9		**AGPL-3.0** (byte-read `main/LICENSE`, 34,523 B)	AGPL-3.0	2026-11-13	False
+verticals/solutions.md	217	UnitedOpen-Source/microHelium		4		**AGPL-3.0** (byte-read `master/LICENSE`, 34,523 B)	AGPL-3.0	2026-11-13	False
+verticals/solutions.md	226	iiab/iiab		2054		GPL-2.0	GPL-2.0	2026-11-13	False
+verticals/solutions.md	227	kiwix/kiwix-tools		1007		GPL-3.0	GPL-3.0	2026-11-09	False
+verticals/solutions.md	228	Crosstalk-Solutions/project-nomad		44033		Apache-2.0	Apache-2.0	2026-11-18	False
+verticals/solutions.md	230	elimu-ai/webapp		41		MIT (byte-read `main/LICENSE`, 1,065 B)	MIT	2026-11-17	False
+verticals/solutions.md	231	SalehGNUTUX/GT-MISHKATKIDS		3		**GPL-3.0** (byte-read `main/LICENSE`, 34,819 B)	GPL-3.0	2026-11-19	False
+verticals/solutions.md	237	apereo/cas		11404		Apache-2.0	Apache-2.0	2026-11-19	False
+verticals/solutions.md	238	apereo/phpCAS		801		Apache-2.0	Apache-2.0	2026-06-30	False
+verticals/solutions.md	239	apereo/java-cas-client		948		🔴 **CONJUNCTIVE: Apache-2.0 + JA-SIG BSD — cell corrected `p920`** (`master/LICENSE`, 2,321 B, `sha256₁₂ 6c21b465e3a0`, re-read `p920`; the search channel says `NOASSERTION`). `p913` corrected this in `repos/foundations.md` and not here. **The notice obligation is two** — see `920-F3`	NOASSERTION	2026-11-19	False
+verticals/solutions.md	240	openedx/openedx-aspects		10		Apache-2.0	Apache-2.0	2026-11-16	False
+verticals/solutions.md	241	openfun/richie		318		MIT	MIT	2026-11-19	False
+verticals/solutions.md	243	appsmithorg/appsmith		41280		Apache-2.0	Apache-2.0	2026-11-19	False
+verticals/solutions.md	255	moodlehq/moodleapp		1008		**Apache-2.0**	Apache-2.0	2026-11-19	False
+verticals/solutions.md	256	openedx/openedx-app-android		38		**Apache-2.0**	Apache-2.0	2026-11-09	False
+verticals/solutions.md	257	openedx/openedx-app-ios		31		**Apache-2.0**	Apache-2.0	2026-10-30	False
+verticals/solutions.md	258	oppia/oppia-android		421		Apache-2.0	Apache-2.0	2026-11-19	False
+verticals/solutions.md	273	kamlendras/OpenProctor		16		**AGPL-3.0**	AGPL-3.0	2025-05-28	False
+verticals/solutions.md	274	SriSatyaLokesh/pariksha		0		**AGPL-3.0**	AGPL-3.0	2026-11-07	False
+verticals/solutions.md	275	sudosylabs/proctor		0		**AGPL-3.0**	AGPL-3.0	2026-11-19	False
+verticals/solutions.md	276	amaanwarsi/Proctora		3		MIT	MIT	2026-04-07	False
+verticals/solutions.md	277	code-by-abrar/Online-Proctoring-system		0		MIT	MIT	2026-11-19	False
+verticals/solutions.md	278	ganesh-786/Proctor		0		MIT	MIT	2025-06-09	False
+verticals/solutions.md	300	tanzir71/tinyproctorjs		0		**MIT** (1,085 B, `cc1b9d2387e8`)	MIT	2026-11-17	False
+verticals/solutions.md	301	SHUBHJAIN139/Local-Exam-Proctoring-Engine		0		**MIT** (1,067 B, `91a47a93bbca`)	MIT	2026-10-12	False
+verticals/solutions.md	302	Aryansh909/Examshield-AI		1		**MIT** (1,070 B, `75107b398587`)	MIT	2026-08-01	False
+verticals/solutions.md	320	withmarbleapp/os-taxonomy		7765		**ODbL-1.0**	ODbL-1.0	2026-11-19	False
+verticals/solutions.md	321	DeanChensj/jiangshan-map		8430		GPL-3.0	GPL-3.0	2026-11-19	False
+verticals/solutions.md	374	pacewisdomhq/TutorLoom	98	98	0	**Apache-2.0** (11,361 B, `a7f87303f2e9`)	Apache-2.0	2026-11-18	False
+verticals/solutions.md	375	iblai/lms	88	88	0	MIT (1,062 B, `d9d62c94b512`)	MIT	2026-11-19	False
+verticals/solutions.md	376	tutors-sdk/tutors	125	125	0	MIT (1,087 B, `b418e808b99a`)	MIT	2026-07-23	False
+verticals/solutions.md	377	haxtheweb/haxcms-php	130	130	0	Apache-2.0 (11,362 B, `b662f44e55e8`)	Apache-2.0	2026-11-19	False
+verticals/solutions.md	378	inducer/relate	439	438	-1	**MIT/X Consortium** (1,144 B, `e6c20b652766`)	NOASSERTION	2026-11-19	False
+verticals/solutions.md	379	thm-mni-ii/feedbacksystem	24	24	0	Apache-2.0 (10,784 B, `824e945ea176`)	NOASSERTION	2026-11-19	False
+verticals/solutions.md	380	SJRiz/pytogether	262	262	0	MIT (1,072 B, `c8df073d1320`)	MIT	2026-10-21	False
+verticals/solutions.md	388	learnhouse/learnhouse	2483	2483	0	**AGPL-3.0** (34,522 B, `20b067f86de3`)	AGPL-3.0	2026-11-19	False
+verticals/solutions.md	389	codelitdev/courselit	1304	1303	-1	**AGPL-3.0** (34,142 B, `9c0cb21c26d8`)	AGPL-3.0	2026-11-19	False
+verticals/solutions.md	390	claroline/Claroline	349	349	0	**AGPL-3.0** (34,615 B, `426f3f93060d`)	NOASSERTION	2026-10-13	False
+verticals/solutions.md	391	elmsln/elmsln	253	253	0	GPL-3.0 (35,192 B, `78ccc98f3768`)	GPL-3.0	2026-08-14	False
+verticals/solutions.md	392	xiaochong0302/course-tencent-cloud	1177	1176	-1	GPL-2.0 (18,430 B, `b0f38548973d`)	GPL-2.0	2026-11-16	False
+verticals/solutions.md	393	Automattic/sensei	599	598	-1	GPL-2.0 (18,091 B, `f9c375a1be4a`)	GPL-2.0	2026-11-19	False
+verticals/solutions.md	394	gocodebox/lifterlms	211	211	0	GPL-3.0 (35,140 B, `b98fbb37db5b`)	GPL-3.0	2026-11-19	False
+verticals/solutions.md	395	ucfopen/UDOIT	119	119	0	GPL-3.0 (35,146 B, `c53a65c2fd56`)	GPL-3.0	2026-11-19	False
+verticals/solutions.md	396	microsoft/o365-moodle	216	216	0	GPL-3.0 (35,146 B, `c53a65c2fd56`)	GPL-3.0	2026-11-19	False
+verticals/solutions.md	402	CaviraOSS/PageLM	2070	2072	2		NOASSERTION	2026-11-15	False
+verticals/solutions.md	403	chadyi/StudyOnTV	1712	1714	2		NOASSERTION	2026-11-18	False
+verticals/solutions.md	404	LearnPress/learnpress	275	275	0			2026-11-19	False
+verticals/solutions.md	405	Azure/Moodle	186	186	0	Not refused on the grant (MIT, 1,090 B, `91f7258203fd`) — it is **deployment tooling for Moodle**, so it belongs beside the Moodle row above rather than as a platform of its own. Worth knowing it exists before anyone rebuilds it.	MIT	2026-11-02	False
+verticals/solutions.md	415	tep00018/LEA-platform		0		**Apache-2.0**, byte-read `main/LICENSE.txt` (11,378 B, `sha256₁₂ d17f7fd47c98`) — 🔵 note the path: `LICENSE.txt`, which an 8-path probe keyed to `LICENSE` alone will miss	Apache-2.0	2026-11-17	False
+verticals/solutions.md	416	Noggin-Labs/Noggin		10		**Apache-2.0**, byte-read `main/LICENSE` (11,357 B, `sha256₁₂ c71d239df917`)	Apache-2.0	2026-11-08	False
+verticals/solutions.md	475	uemanet/harpia		28		**MIT** (`LICENSE@main`, 1,063 B, `sha256₁₂ afa9cfe1dcb6`)	MIT	2026-11-15	False
+verticals/solutions.md	476	ahamana/canvas-lms-docker		21		**MIT** (`LICENSE@main`, 1,071 B, `sha256₁₂ 21ba971d464e`)	MIT	2026-11-19	False
+verticals/solutions.md	539	apache/openmeetings	691	690	-1	**Apache-2.0** (`50,907 B`)	NOASSERTION	2026-11-16	False
+verticals/solutions.md	540	Open-TutorAi/open-tutor-ai-CE	119	119	0	**BSD-3-Clause** (`1,531 B`, three numbered conditions read)	BSD-3-Clause	2026-06-26	False
+verticals/solutions.md	541	classroomio/classroomio	1750	1750	0	🔴 **AGPL-3.0** (`34,523 B`)	AGPL-3.0	2026-11-19	False
+verticals/solutions.md	542	FenixEdu/fenixedu-academic	175	175	0	🔴 **LGPL-3.0** (`7,652 B`)	LGPL-3.0	2023-06-14	False
+verticals/solutions.md	543	turnkeylinux-apps/canvas	13	13	0	🔴 **no licence file** (`README.rst` `200`; Canvas itself is AGPL-3.0)		2026-11-19	False
+verticals/solutions.md	603	tristcoil/hanabira.org		436		🟢 **MIT** — `main/LICENSE`, 1,061 B, `sha256₁₂ fb81a218ce1c`	MIT	2025-03-26	False
+verticals/solutions.md	604	DeJavi08/cat-snbt-skd		1		🟢 **MIT** — `main/LICENSE`, 1,077 B, `sha256₁₂ e6e7edb3e2b8`	MIT	2026-09-03	False
+verticals/solutions.md	605	SISUBEN/DSE-ICT-Master		1		🟢 **MIT** — `main/LICENSE`, 1,065 B, `sha256₁₂ c20159ff7a53`	MIT	2025-12-17	False
+verticals/solutions.md	606	Goodbilly/BillyStreet-HKDSE-Math-Mock-Platform		0		🟡 **MIT grant text, 1,059 B, `sha256₁₂ cd35957e7f35` — but the copyright holder line reads `GitHub, Inc.`** (`910-G2`)	MIT	2025-11-17	False
+verticals/solutions.md	626	Kirchhoff-dev/cbt-app-updates	1	1	0	🟢 MIT (1,071 B · `9f194f984482`)	MIT	2026-11-14	False
+verticals/solutions.md	627	idrismukthar/TTL_CBT	1	1	0	🟢 MIT (1,087 B · `30062651a966`)	MIT	2026-01-09	False
+verticals/solutions.md	628	Toochidennis/cbt-app	1	1	0	🟢 MIT (1,073 B · `093eb2efcb60`)	MIT	2026-01-10	False
+verticals/solutions.md	629	Dramoscuello/simic	2	2	0	🟢 Apache-2.0 (11,357 B · `c71d239df917`)	Apache-2.0	2026-07-23	False
+verticals/solutions.md	733	RohanMuppa/brightspace-mcp-server		68		🟢 **Closed this pass.** https://github.com/RohanMuppa/brightspace-mcp-server — **MIT** (`main/LICENSE`, 1,068 B, `sha256₁₂ 047079fbd491`), 68 ★, pushed 2026-11-18, TypeScript. States it works with **any** school rather than one tenant. `POLITEMALL-MCP` remains the better reference for a *Singapore* engagement because it already speaks to two national systems.	MIT	2026-11-19	False
+verticals/solutions.md	753	adaptlearning/adapt_authoring		562		🔴 **GPL** (byte-read, 35,140 B)	GPL-3.0	2026-08-04	False
+verticals/solutions.md	754	course-code-framework/coursecode		7		🟢 **MIT** both halves (1,069 B each)	MIT	2026-11-06	False
+verticals/solutions.md	767	QkeleQ10/Study-Tools		32		🔴 **AGPL-3.0** (byte-read `p915`, `main/LICENSE`, **34,523 B** — 🟢 exactly `p913`'s measured true-AGPL byte count, a positive control)	AGPL-3.0	2026-11-08	False
+verticals/solutions.md	790	openbadgefactory/salava	22	22	0	🟢 **Apache-2.0** (9,720 B, `sha256₁₂ e9852865aedf`)	Apache-2.0	2020-10-02	False
+verticals/solutions.md	791	gdgguadalajara/open-badges-platform	9	9	0	🔴 **AGPL-3.0**	AGPL-3.0	2026-08-31	False
+verticals/solutions.md	792	totara/openbadges	26	26	0	🔴 GPL-3.0	GPL-3.0	2016-03-14	False
+verticals/solutions.md	793	1EdTech/openbadges-specification	206	206	0			2026-11-13	False
+verticals/solutions.md	883	ahmetaa/zemberek-nlp		1378		🟢 Apache-2.0	NOASSERTION	2026-11-17	False
+verticals/solutions.md	884	CAMeL-Lab/camel_tools		594		🟢 MIT	MIT	2026-10-14	False
+verticals/solutions.md	906	wannaphong/LaoNLP		35		**Kolibri** (MIT, offline) in Cambodia or Laos	Apache-2.0	2026-09-23	False
+verticals/solutions.md	907	ufal/udpipe		425		**Moodle** or **ILIAS** (GPL-3.0) across Central Europe	MPL-2.0	2026-06-11	False
+verticals/solutions.md	908	mikahama/uralicNLP		101		https://github.com/mikahama/uralicNLP (Apache-2.0) · https://github.com/huspacy/huspacy (Apache-2.0)	Apache-2.0	2026-11-13	False
+verticals/solutions.md	909	ljvmiranda921/calamanCy		77		https://github.com/ljvmiranda921/calamanCy (MIT), drops into an existing spaCy pipeline	MIT	2026-10-05	False
+verticals/solutions.md	910	sagorbrur/bnlp		313		https://github.com/sagorbrur/bnlp (MIT), 313 ★	MIT	2026-10-31	False
+verticals/solutions.md	911	sefineh-ai/Amharic-Tokenizer		99		https://github.com/sefineh-ai/Amharic-Tokenizer (MIT)	MIT	2026-09-24	False

@@ -6,6 +6,19 @@ updated: 2026-11-19
 
 # Vertical solutions — education
 
+🟢 **`p930` (2026-11-19) — every address in this file was re-resolved, and the file is clean.** All
+**137** published GitHub addresses here are **live**; **none is archived**; **13** have not been
+pushed in six months and **7** not in twelve. 🔵 This is the **freshest of the three shelves** —
+`repos/foundations.md` carries both of the base's archived rows and 33 rows over twelve months old.
+That ordering is what you would hope for: the platforms a client actually runs are maintained, and
+the decay sits in the standards-and-substrate layer behind them (`T28`). 🔴 **One address in this
+tier moved and was corrected in `repos/foundations.md`**, not here: the DCC learner-credential
+wallet now resolves canonically at `ryjones/learner-credential-wallet` — see `T74`, and note that
+the **OpenWallet Foundation address this base previously told passes to track forward is itself now
+stale**. 🔵 `928-R1`'s verdict on this file stands and `p930` did not reopen it: **no new deployable
+platform appeared in 21,238 repositories**, so the Moodle / Open edX / Canvas / OpenEduCat / Frappe
+tier is **closed**.
+
 Deployable systems, not libraries: things a client may already be running, or can stand up
 in days, and that AI can be layered onto. All URLs and licences verified 2026-11-18 via
 `raw.githubusercontent.com`.

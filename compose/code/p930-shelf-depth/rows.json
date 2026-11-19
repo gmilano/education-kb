@@ -1,0 +1,4734 @@
+[
+{
+"file": "agents/top.md",
+"line": 332,
+"slug": "HKUDS/DeepTutor",
+"pub_stars": 60777,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "agents/top.md",
+"line": 333,
+"slug": "THU-MAIC/OpenMAIC",
+"pub_stars": 43952,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 334,
+"slug": "amosblomqvist/learnharness",
+"pub_stars": 10457,
+"pub_lic": "**AGPL-3.0**"
+},
+{
+"file": "agents/top.md",
+"line": 335,
+"slug": "sitor-ai/frametell",
+"pub_stars": 513,
+"pub_lic": "**AGPL-3.0**"
+},
+{
+"file": "agents/top.md",
+"line": 336,
+"slug": "ai-shifu/ai-shifu",
+"pub_stars": 332,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "agents/top.md",
+"line": 337,
+"slug": "Faixiang/Moodle-MCP",
+"pub_stars": 209,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 338,
+"slug": "aieducations/edumcp",
+"pub_stars": 155,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "agents/top.md",
+"line": 339,
+"slug": "GeminiLight/gen-mentor",
+"pub_stars": 137,
+"pub_lic": "**CC0-1.0**"
+},
+{
+"file": "agents/top.md",
+"line": 340,
+"slug": "Selleo/mentingo",
+"pub_stars": 109,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 341,
+"slug": "vishalsachdev/canvas-mcp",
+"pub_stars": 335,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 342,
+"slug": "Li-Evan/BloomTutor",
+"pub_stars": 323,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 343,
+"slug": "CAHLR/OATutor",
+"pub_stars": 283,
+"pub_lic": "MIT (1,105 B, byte-read `p927`)"
+},
+{
+"file": "agents/top.md",
+"line": 344,
+"slug": "molly554/whiteboard-ai-tutor",
+"pub_stars": 345,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 345,
+"slug": "OpenPronounce/OpenPronounce",
+"pub_stars": 234,
+"pub_lic": "\ud83d\udd34 **AGPL-3.0 \u2014 CORRECTED `p913`, was published here as `MIT`** (byte-read `main/LICENSE`, 34,523 B, `sha256\u2081\u2082 0d96a4ff68ad`; title line `GNU AFFERO GENERAL PUBLIC LICENSE / Version 3, 19 November 2007`)"
+},
+{
+"file": "agents/top.md",
+"line": 346,
+"slug": "zijinz456/OpenTutor",
+"pub_stars": 182,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 347,
+"slug": "boyuchengz/canvas-mcp",
+"pub_stars": 116,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 348,
+"slug": "Open-TutorAi/open-tutor-ai-CE",
+"pub_stars": 119,
+"pub_lic": "BSD-3-Clause"
+},
+{
+"file": "agents/top.md",
+"line": 349,
+"slug": "brian901106/japanese-tutor-mugi",
+"pub_stars": 105,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 350,
+"slug": "itsme-ganzu/belajar-ngoding-byGanzu",
+"pub_stars": 66,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 351,
+"slug": "ArnaudGuiovanna/tutor-mcp",
+"pub_stars": 107,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 352,
+"slug": "Zenglian990/AI_Tutor_Release",
+"pub_stars": 94,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 353,
+"slug": "liangxiao777/TeachMeCoding",
+"pub_stars": 85,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "agents/top.md",
+"line": 354,
+"slug": "luumlabs/aula",
+"pub_stars": 68,
+"pub_lic": "AGPL-3.0"
+},
+{
+"file": "agents/top.md",
+"line": 355,
+"slug": "SirhanMacx/Claw-ED",
+"pub_stars": 65,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 356,
+"slug": "G36maid/moodle-mcp",
+"pub_stars": 30,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 357,
+"slug": "CaioCastro1/usp-mcp",
+"pub_stars": 28,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 358,
+"slug": "acheamponge/wassce-benchmark",
+"pub_stars": 4,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 359,
+"slug": "wenflow-org/wenflow",
+"pub_stars": 72,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 360,
+"slug": "moodlehq/wiki-rag",
+"pub_stars": 54,
+"pub_lic": "BSD-3-Clause"
+},
+{
+"file": "agents/top.md",
+"line": 361,
+"slug": "ECNU/EduWork",
+"pub_stars": 381,
+"pub_lic": "MulanPSL-2.0"
+},
+{
+"file": "agents/top.md",
+"line": 362,
+"slug": "smashburger-dev/socratic-workshop",
+"pub_stars": 24,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 363,
+"slug": "ls1intum/edutelligence",
+"pub_stars": 17,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 364,
+"slug": "AI-for-Education/pedagogy-benchmark",
+"pub_stars": 13,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 365,
+"slug": "ls1intum/Pyris",
+"pub_stars": 12,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 366,
+"slug": "warleysr/ankipa",
+"pub_stars": 10,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 367,
+"slug": "virtualryder/edu-ai-agents",
+"pub_stars": 4,
+"pub_lic": "MIT (SPDX: NOASSERTION; licence text reads MIT)"
+},
+{
+"file": "agents/top.md",
+"line": 368,
+"slug": "vulinh1704/ai-tutor-agent",
+"pub_stars": 0,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 369,
+"slug": "HowieWang1121/Socratic-Education-System",
+"pub_stars": 137,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 370,
+"slug": "flysheep-ai/education-skills",
+"pub_stars": 126,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 371,
+"slug": "zhangl1001/civil-ai",
+"pub_stars": 41,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 372,
+"slug": "virgiliojr94/book-to-skill",
+"pub_stars": 38474,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 373,
+"slug": "DozenTwelve/Papermorph",
+"pub_stars": 1797,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 374,
+"slug": "Miaotofu01/Study-Mate",
+"pub_stars": 1502,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 375,
+"slug": "dmoshehun-prog/learn-from-materials",
+"pub_stars": 1457,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 376,
+"slug": "beltromatti/get-it",
+"pub_stars": 1170,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "agents/top.md",
+"line": 377,
+"slug": "assafkip/claudemy",
+"pub_stars": 710,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 378,
+"slug": "ZeKaiNie/universal-examprep-skill",
+"pub_stars": 398,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 379,
+"slug": "helixnow/deep-student",
+"pub_stars": 324,
+"pub_lic": "**AGPL-3.0**"
+},
+{
+"file": "agents/top.md",
+"line": 380,
+"slug": "artcc/freelingo",
+"pub_stars": 295,
+"pub_lic": "**AGPL-3.0**"
+},
+{
+"file": "agents/top.md",
+"line": 381,
+"slug": "SenmuuuuW/universal-diagnostic-tutor-skill",
+"pub_stars": 280,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 382,
+"slug": "KeWang0622/kaogong-skill",
+"pub_stars": 251,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 383,
+"slug": "nichochar/ari",
+"pub_stars": 222,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 384,
+"slug": "SimonsTang/feifei-companion",
+"pub_stars": 117,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "agents/top.md",
+"line": 385,
+"slug": "ahmedEid1/lumen",
+"pub_stars": 94,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 386,
+"slug": "OPTIMETA/PAIDEIA",
+"pub_stars": 93,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 387,
+"slug": "oaknational/oak-ai-lesson-assistant",
+"pub_stars": 35,
+"pub_lic": "**MIT** (code) \u2014 see the multi-grant note"
+},
+{
+"file": "agents/top.md",
+"line": 388,
+"slug": "towardsai/ai-tutor-app",
+"pub_stars": 34,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "agents/top.md",
+"line": 389,
+"slug": "Orenda-Project/rumi-platform",
+"pub_stars": 25,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "agents/top.md",
+"line": 390,
+"slug": "mitodl/open-learning-ai-tutor",
+"pub_stars": null,
+"pub_lic": "**MIT** (`LICENSE@HEAD`, 1,068 B, byte-read p900)"
+},
+{
+"file": "agents/top.md",
+"line": 391,
+"slug": "DaRL-GenAI/instructional_agents",
+"pub_stars": null,
+"pub_lic": "**MIT** (`LICENSE@HEAD`, 1,066 B, byte-read p900)"
+},
+{
+"file": "agents/top.md",
+"line": 392,
+"slug": "anthropics/k12-teacher-skills",
+"pub_stars": 633,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "agents/top.md",
+"line": 393,
+"slug": "ankimcp/anki-mcp-server",
+"pub_stars": 568,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 394,
+"slug": "satvik314/educhain",
+"pub_stars": 387,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 395,
+"slug": "dfdb76/bncc-mcp",
+"pub_stars": 14,
+"pub_lic": "**MIT** (byte-read `main/LICENSE`, 1,218 B)"
+},
+{
+"file": "agents/top.md",
+"line": 396,
+"slug": "bruchris/canvas-lms-mcp",
+"pub_stars": 10,
+"pub_lic": "**MIT** (`LICENSE@HEAD`, 1,069 B, byte-read p900)"
+},
+{
+"file": "agents/top.md",
+"line": 397,
+"slug": "matheussilvano/mooose",
+"pub_stars": 5,
+"pub_lic": "**Apache-2.0** (byte-read `main/LICENSE`, 11,358 B)"
+},
+{
+"file": "agents/top.md",
+"line": 398,
+"slug": "CREARED-EDU-CO/GenPrompt-Pre-ICFES-11",
+"pub_stars": 4,
+"pub_lic": "**AGPL-3.0** (byte-read `main/LICENSE`, 34,523 B)"
+},
+{
+"file": "agents/top.md",
+"line": 399,
+"slug": "tokenaii/horus-taleeq-0.2b-base",
+"pub_stars": null,
+"pub_lic": "**MIT** (`LICENSE@HEAD`, 1,079 B, byte-read p900)"
+},
+{
+"file": "agents/top.md",
+"line": 400,
+"slug": "SalehGNUTUX/GT-MISHKATKIDS",
+"pub_stars": 3,
+"pub_lic": "**GPL-3.0**"
+},
+{
+"file": "agents/top.md",
+"line": 401,
+"slug": "migueldsants/AI-Skill-Corretor-Redacao-ENEM",
+"pub_stars": 3,
+"pub_lic": "**MIT** (byte-read `main/LICENSE`, 1,082 B)"
+},
+{
+"file": "agents/top.md",
+"line": 402,
+"slug": "suellenferraz/Projeto-GabirIA",
+"pub_stars": 3,
+"pub_lic": "**MIT** (byte-read `main/LICENSE.md`, 1,085 B)"
+},
+{
+"file": "agents/top.md",
+"line": 403,
+"slug": "yinuoguan/nengdou-ai-review-helper-web",
+"pub_stars": 193,
+"pub_lic": "\ud83d\udd34 **Apache-2.0 byte-read \u2014 GitHub SPDX says `MulanPSL-2.0`. Channels disagree.** (`main/LICENSE`, 11,356 B, `sha256\u2081\u2082 43070e2d4e53`, opening `Apache License / Version 2.0, January 2004`)"
+},
+{
+"file": "agents/top.md",
+"line": 404,
+"slug": "QwenStorm/xl-frontend",
+"pub_stars": 50,
+"pub_lic": "MIT (byte-read `master/LICENSE`, 1,060 B, `sha256\u2081\u2082 3b0284114591`)"
+},
+{
+"file": "agents/top.md",
+"line": 405,
+"slug": "weishao2/tizhuang-agent-skills",
+"pub_stars": 42,
+"pub_lic": "MIT (byte-read `main/LICENSE`, 1,077 B, `sha256\u2081\u2082 881348270e41`)"
+},
+{
+"file": "agents/top.md",
+"line": 406,
+"slug": "ai-lingnan/econai-agent-platform",
+"pub_stars": 41,
+"pub_lic": "**AGPL-3.0** (byte-read `master/LICENSE`, 34,522 B, `sha256\u2081\u2082 4df3c306ddda`)"
+},
+{
+"file": "agents/top.md",
+"line": 407,
+"slug": "shellery1988/k12-smart-teacher",
+"pub_stars": 16,
+"pub_lic": "MIT (byte-read `main/LICENSE`, 1,073 B, `sha256\u2081\u2082 4c5f6e74a09b`)"
+},
+{
+"file": "agents/top.md",
+"line": 408,
+"slug": "wenliu3/ai-smart-homework-review",
+"pub_stars": 11,
+"pub_lic": "**MulanPSL-2.0** (byte-read `main/LICENSE`, 9,246 B, `sha256\u2081\u2082 2a7ffa7fcf2e`, Chinese text, `license.coscl.org.cn/MulanPSL2`)"
+},
+{
+"file": "agents/top.md",
+"line": 409,
+"slug": "cculb/schoolconnect",
+"pub_stars": 4,
+"pub_lic": "**MIT** (byte-read `p907`, `LICENSE@main`, 1,071 B)"
+},
+{
+"file": "agents/top.md",
+"line": 410,
+"slug": "andrsnrua/universidad-pacifico-mcp",
+"pub_stars": 1,
+"pub_lic": "**ISC** (byte-read `p907`, `LICENSE@main`, 748 B)"
+},
+{
+"file": "agents/top.md",
+"line": 411,
+"slug": "andbriha/ExamGuardian",
+"pub_stars": 0,
+"pub_lic": "**MIT** (byte-read `p907`, `LICENSE@main`, 1,065 B)"
+},
+{
+"file": "agents/top.md",
+"line": 412,
+"slug": "geekjourneyx/interactive-learning",
+"pub_stars": 52,
+"pub_lic": "**MIT** (byte-read `p909`, `LICENSE@HEAD`, 1,069 B, `sha256\u2081\u2082 02b7dc1969f4`, *\"MIT License / Copyright (c) 2026 geekjourneyx\"*)"
+},
+{
+"file": "agents/top.md",
+"line": 413,
+"slug": "BaijayantaRoy/bandup",
+"pub_stars": 2,
+"pub_lic": "**MIT** (byte-read `p910`, `LICENSE@main`, 1,071 B, `sha256\u2081\u2082 c4411a4cb83b`)"
+},
+{
+"file": "agents/top.md",
+"line": 414,
+"slug": "Mocas-12/jlpt-n1-Yomitaku",
+"pub_stars": 31,
+"pub_lic": "**MIT** (byte-read `p910`, `LICENSE@main`, 1,065 B, `sha256\u2081\u2082 b17ceb82d82e`)"
+},
+{
+"file": "agents/top.md",
+"line": 415,
+"slug": "metrovoc/immersive-memorize",
+"pub_stars": 29,
+"pub_lic": "**MIT** (byte-read `p910`, `LICENSE@main`, 1,074 B, `sha256\u2081\u2082 51ae850d5688`)"
+},
+{
+"file": "agents/top.md",
+"line": 416,
+"slug": "AriusKing/edubot-backend",
+"pub_stars": 0,
+"pub_lic": "**MIT** (byte-read `p910`, `LICENSE@main`, 1,065 B, `sha256\u2081\u2082 c115ae89efc8`)"
+},
+{
+"file": "agents/top.md",
+"line": 417,
+"slug": "peleg-jpg/israeli-bagrut-psychometric",
+"pub_stars": 0,
+"pub_lic": "**MIT** (byte-read `p910`, `LICENSE@main`, 1,150 B, `sha256\u2081\u2082 2b20dde3e647`)"
+},
+{
+"file": "agents/top.md",
+"line": 418,
+"slug": "summeraprx/topik-shortcut",
+"pub_stars": 1,
+"pub_lic": null
+},
+{
+"file": "agents/top.md",
+"line": 419,
+"slug": "ArushJain-697/namma-ai",
+"pub_stars": 1,
+"pub_lic": "MIT (byte-read `main/LICENSE`, 1,095 B, `sha256\u2081\u2082 7bbee3d2e00e`)"
+},
+{
+"file": "agents/top.md",
+"line": 420,
+"slug": "siyegs/rung",
+"pub_stars": 0,
+"pub_lic": "MIT (byte-read `main/LICENSE`, 1,081 B, `sha256\u2081\u2082 fd3995809614`)"
+},
+{
+"file": "agents/top.md",
+"line": 421,
+"slug": "xingjunm/autoppt",
+"pub_stars": 57,
+"pub_lic": "MIT (byte-read `main/LICENSE`, 1,092 B, `sha256\u2081\u2082 db50831211a3`)"
+},
+{
+"file": "agents/top.md",
+"line": 422,
+"slug": "proyecto26/notebooklm-ai-plugin",
+"pub_stars": 67,
+"pub_lic": "MIT (byte-read `main/LICENSE`, 1,068 B, `sha256\u2081\u2082 775ec66aca27`)"
+},
+{
+"file": "agents/top.md",
+"line": 423,
+"slug": "firekern/zusia",
+"pub_stars": 33,
+"pub_lic": "MIT (byte-read `main/LICENSE`, 1,072 B, `sha256\u2081\u2082 e4572f44947f`)"
+},
+{
+"file": "agents/top.md",
+"line": 424,
+"slug": "logitsolutionsai/teachback",
+"pub_stars": 0,
+"pub_lic": "MIT (byte-read `main/LICENSE`, 1,075 B, `sha256\u2081\u2082 4a4f80cb0d46`)"
+},
+{
+"file": "agents/top.md",
+"line": 425,
+"slug": "d-wwei/learn-anything",
+"pub_stars": 9,
+"pub_lic": "MIT (byte-read `main/LICENSE`, 1,063 B, `sha256\u2081\u2082 163a805ef10a`)"
+},
+{
+"file": "agents/top.md",
+"line": 426,
+"slug": "VuongPhan-09/vuongedu",
+"pub_stars": 0,
+"pub_lic": "MIT (byte-read `main/LICENSE`, 1,072 B, `sha256\u2081\u2082 52ac0b85ef3b`)"
+},
+{
+"file": "agents/top.md",
+"line": 427,
+"slug": "wysking/postgrad-study-engine",
+"pub_stars": 1,
+"pub_lic": "MIT (byte-read `main/LICENSE`, 1,091 B, `sha256\u2081\u2082 4e7a7ccdeb86`)"
+},
+{
+"file": "agents/top.md",
+"line": 428,
+"slug": "robzilla1738/Memorwise",
+"pub_stars": 48,
+"pub_lic": "MIT (byte-read `main/LICENSE`, 1,069 B, `sha256\u2081\u2082 f141bdd69966`)"
+},
+{
+"file": "agents/top.md",
+"line": 429,
+"slug": "MuhammadLutfiMuzakiiVY/Litera-AI-Android",
+"pub_stars": 16,
+"pub_lic": "MIT (byte-read `main/LICENSE`, 1,103 B, `sha256\u2081\u2082 f98ead38d342`)"
+},
+{
+"file": "agents/top.md",
+"line": 430,
+"slug": "ChangjinHe2000/one-tutor",
+"pub_stars": 5,
+"pub_lic": "MIT (byte-read `main/LICENSE`, 1,071 B, `sha256\u2081\u2082 68a1316b6627`)"
+},
+{
+"file": "agents/top.md",
+"line": 431,
+"slug": "ubermenchh/anki-cli",
+"pub_stars": 63,
+"pub_lic": "MIT (byte-read `main/LICENSE`, 1,069 B, `sha256\u2081\u2082 e8cf0ccc5dd2`)"
+},
+{
+"file": "agents/top.md",
+"line": 490,
+"slug": "edunelsonit/Jambora",
+"pub_stars": 1,
+"pub_lic": "Apache-2.0 (11,357 B \u00b7 `c71d239df917`)"
+},
+{
+"file": "agents/top.md",
+"line": 491,
+"slug": "ALIYUAAM10/NAIJASCHOLAR",
+"pub_stars": 1,
+"pub_lic": "MIT (1,082 B \u00b7 `6fd3e72cd64d`)"
+},
+{
+"file": "agents/top.md",
+"line": 492,
+"slug": "001kenji/KCSE-predictor",
+"pub_stars": 1,
+"pub_lic": "Apache-2.0 (11,357 B \u00b7 `c71d239df917`)"
+},
+{
+"file": "agents/top.md",
+"line": 493,
+"slug": "theteacherbot/ICFES-Exam-Engine",
+"pub_stars": 0,
+"pub_lic": "MIT (1,067 B \u00b7 `95927f6f69fa`)"
+},
+{
+"file": "agents/top.md",
+"line": 494,
+"slug": "matmiidu/paes-ensayos",
+"pub_stars": 0,
+"pub_lic": "MIT (1,065 B \u00b7 `db233fe3a19a`)"
+},
+{
+"file": "agents/top.md",
+"line": 495,
+"slug": "Reethureddy8/Study-assistant",
+"pub_stars": 2,
+"pub_lic": "MIT (1,069 B \u00b7 `ff3eb0698f8a`)"
+},
+{
+"file": "agents/top.md",
+"line": 496,
+"slug": "praj2408/RAG-Enhanced-NCERT-Tutor",
+"pub_stars": 6,
+"pub_lic": "MIT (1,072 B \u00b7 `8a909947f61b`)"
+},
+{
+"file": "agents/top.md",
+"line": 497,
+"slug": "MichealQuelazar/Ncert__RAG__Chatbot",
+"pub_stars": 1,
+"pub_lic": "MIT (1,075 B \u00b7 `13908cd9b08e`)"
+},
+{
+"file": "agents/top.md",
+"line": 498,
+"slug": "datastiltskin/Sanshodhan",
+"pub_stars": 1,
+"pub_lic": "MIT (1,073 B \u00b7 `909fd4f320c0`)"
+},
+{
+"file": "agents/top.md",
+"line": 499,
+"slug": "lindnerju/ePaeko",
+"pub_stars": 3,
+"pub_lic": "MIT (1,086 B \u00b7 `5a44d126d2e6`, on `master`)"
+},
+{
+"file": "agents/top.md",
+"line": 521,
+"slug": "DeepBlue-dot/Ethio-Adaptive-Learning",
+"pub_stars": 7,
+"pub_lic": "Apache-2.0 (11,357 B \u00b7 `c71d239df917`)"
+},
+{
+"file": "agents/top.md",
+"line": 522,
+"slug": "ElnatanAnbelu/ethioexam",
+"pub_stars": 0,
+"pub_lic": "MIT (1,072 B \u00b7 `fba331165d0b`)"
+},
+{
+"file": "agents/top.md",
+"line": 523,
+"slug": "robelasefa/eaes-bot",
+"pub_stars": 1,
+"pub_lic": "MIT (1,067 B \u00b7 `cb1a9de3b176`)"
+},
+{
+"file": "agents/top.md",
+"line": 554,
+"slug": "GarethManning/education-agent-skills",
+"pub_stars": 1005,
+"pub_lic": "\ud83d\udd34 **CC BY-SA 4.0** `1,230 B`"
+},
+{
+"file": "agents/top.md",
+"line": 555,
+"slug": "CogitoNTNU/TutorAI",
+"pub_stars": 39,
+"pub_lic": "**MIT** `1,140 B`"
+},
+{
+"file": "agents/top.md",
+"line": 556,
+"slug": "kad-xyz/spbstu-mcp",
+"pub_stars": 10,
+"pub_lic": "**MIT** `1,064 B`"
+},
+{
+"file": "agents/top.md",
+"line": 557,
+"slug": "isakskogstad/Skolverket-MCP",
+"pub_stars": 13,
+"pub_lic": "**MIT** `1,093 B`"
+},
+{
+"file": "agents/top.md",
+"line": 558,
+"slug": "nialvape/utn-mcp",
+"pub_stars": 13,
+"pub_lic": "**ISC** `748 B`"
+},
+{
+"file": "agents/top.md",
+"line": 559,
+"slug": "changazo/udesa-mcp",
+"pub_stars": 4,
+"pub_lic": "**Apache-2.0** `10,173 B`"
+},
+{
+"file": "agents/top.md",
+"line": 560,
+"slug": "HyNuwa/UniMCP",
+"pub_stars": 1,
+"pub_lic": "\ud83d\udfe1 **MIT + inherited ISC, conjunctive** `1,980 B`"
+},
+{
+"file": "agents/top.md",
+"line": 561,
+"slug": "jpmanson/siu-guarani-mcp",
+"pub_stars": 1,
+"pub_lic": "**MIT** `1,074 B`"
+},
+{
+"file": "agents/top.md",
+"line": 562,
+"slug": "jamestesting0/tum-mcp",
+"pub_stars": 1,
+"pub_lic": "**MIT** `1,092 B`"
+},
+{
+"file": "agents/top.md",
+"line": 563,
+"slug": "simonseifert/merlin-mcp",
+"pub_stars": 1,
+"pub_lic": "**MIT** `1,070 B`"
+},
+{
+"file": "agents/top.md",
+"line": 564,
+"slug": "LabSirius/TutorIA",
+"pub_stars": 0,
+"pub_lic": "**MIT** `1,069 B`"
+},
+{
+"file": "agents/top.md",
+"line": 565,
+"slug": "falkenslab/miyagi",
+"pub_stars": 0,
+"pub_lic": "**MIT** `1,078 B`"
+},
+{
+"file": "agents/top.md",
+"line": 566,
+"slug": "GuilhermeScarpini/agente-bncc-professores",
+"pub_stars": 0,
+"pub_lic": "**MIT** `1,074 B`"
+},
+{
+"file": "agents/top.md",
+"line": 567,
+"slug": "alejooroncoy/campus-cli",
+"pub_stars": 13,
+"pub_lic": "**ISC** (API)"
+},
+{
+"file": "agents/top.md",
+"line": 568,
+"slug": "Victor-Blasco/UJI-MCP",
+"pub_stars": 1,
+"pub_lic": "**MIT** `1,063 B`"
+},
+{
+"file": "agents/top.md",
+"line": 569,
+"slug": "kta41/mcp-uned",
+"pub_stars": 1,
+"pub_lic": "**MIT** `1,071 B`"
+},
+{
+"file": "agents/top.md",
+"line": 570,
+"slug": "Just253/autonoma-cli",
+"pub_stars": 1,
+"pub_lic": "**MIT** `1,064 B`"
+},
+{
+"file": "agents/top.md",
+"line": 571,
+"slug": "JOSETRA44/DUTIC-mcp",
+"pub_stars": 0,
+"pub_lic": "**MIT** `1,066 B`"
+},
+{
+"file": "agents/top.md",
+"line": 572,
+"slug": "franc1sc0sv/udb-copilot",
+"pub_stars": 0,
+"pub_lic": "**MIT** `1,066 B`"
+},
+{
+"file": "agents/top.md",
+"line": 573,
+"slug": "SebasB76/poli",
+"pub_stars": 0,
+"pub_lic": "**MIT** `1,065 B`"
+},
+{
+"file": "agents/top.md",
+"line": 574,
+"slug": "VxGM/IAula-Virtual-Uleam",
+"pub_stars": 0,
+"pub_lic": "**MIT** `1,061 B`"
+},
+{
+"file": "agents/top.md",
+"line": 575,
+"slug": "alanmagno1/tuaulavirtual-unam-mcp",
+"pub_stars": 0,
+"pub_lic": "**MIT** `1,067 B`"
+},
+{
+"file": "agents/top.md",
+"line": 576,
+"slug": "MarcoXMarquez/CampusUNSA",
+"pub_stars": 0,
+"pub_lic": "**MIT** `1,130 B`"
+},
+{
+"file": "agents/top.md",
+"line": 577,
+"slug": "Group-Active-IA/Skill-Moodle",
+"pub_stars": 0,
+"pub_lic": "**MIT** `1,079 B`"
+},
+{
+"file": "agents/top.md",
+"line": 578,
+"slug": "alexFiorenza/aulasvirtuales-toolkit",
+"pub_stars": 0,
+"pub_lic": "**MIT** `1,070 B`"
+},
+{
+"file": "agents/top.md",
+"line": 579,
+"slug": "PabloPC05/campus-usc",
+"pub_stars": 0,
+"pub_lic": "**MIT** `1,066 B`"
+},
+{
+"file": "agents/top.md",
+"line": 598,
+"slug": "openedx/openedx-ai-extensions",
+"pub_stars": 17,
+"pub_lic": "AGPL-3.0"
+},
+{
+"file": "agents/top.md",
+"line": 599,
+"slug": "openedx/edx-ora2",
+"pub_stars": 64,
+"pub_lic": "AGPL-3.0"
+},
+{
+"file": "agents/top.md",
+"line": 600,
+"slug": "blend-ed/openedx-mcp",
+"pub_stars": 3,
+"pub_lic": "AGPL-3.0"
+},
+{
+"file": "agents/top.md",
+"line": 608,
+"slug": "crewAIInc/crewAI",
+"pub_stars": 61103,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 609,
+"slug": "langchain-ai/langgraph",
+"pub_stars": 45157,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 610,
+"slug": "patchy631/ai-engineering-hub",
+"pub_stars": 42022,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 611,
+"slug": "stanford-oval/storm",
+"pub_stars": 31912,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 612,
+"slug": "assafelovic/gpt-researcher",
+"pub_stars": 30785,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "agents/top.md",
+"line": 613,
+"slug": "OpenHands/OpenHands",
+"pub_stars": 93841,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 614,
+"slug": "LibreChat-AI/LibreChat",
+"pub_stars": 47349,
+"pub_lic": "MIT"
+},
+{
+"file": "agents/top.md",
+"line": 730,
+"slug": "JuneYaooo/teacher-to-skills",
+"pub_stars": 486,
+"pub_lic": "**Apache-2.0** (`main/LICENSE`, 11,358 B, `sha256\u2081\u2082 cfc7749b96f6`)"
+},
+{
+"file": "agents/top.md",
+"line": 731,
+"slug": "orionsheep/wordlink",
+"pub_stars": 429,
+"pub_lic": "**MIT** (`main/LICENSE`, 1,093 B, `sha256\u2081\u2082 b0f3e0f68927`)"
+},
+{
+"file": "agents/top.md",
+"line": 732,
+"slug": "Berserk-hub150/moodle-ai-skill-navigator",
+"pub_stars": 279,
+"pub_lic": "\ud83d\udd34 **GPL-3.0** (`main/LICENSE`, 35,153 B, `sha256\u2081\u2082 ebdc0e5b7005`)"
+},
+{
+"file": "agents/top.md",
+"line": 733,
+"slug": "Fazmin/AILearningGuide",
+"pub_stars": 259,
+"pub_lic": "**MIT** (`main/LICENSE`, 1,081 B, `sha256\u2081\u2082 e29ef713b542`)"
+},
+{
+"file": "agents/top.md",
+"line": 734,
+"slug": "liuliu667/cram-engine",
+"pub_stars": 181,
+"pub_lic": "**MIT** (`main/LICENSE`, 1,064 B, `sha256\u2081\u2082 c33ea68946e4`)"
+},
+{
+"file": "agents/top.md",
+"line": 735,
+"slug": "munitkala/SelfSemester",
+"pub_stars": 108,
+"pub_lic": "**MIT** (`main/LICENSE`, 1,081 B, `sha256\u2081\u2082 f5fe104e348d`)"
+},
+{
+"file": "agents/top.md",
+"line": 736,
+"slug": "RohanMuppa/brightspace-mcp-server",
+"pub_stars": 68,
+"pub_lic": "**MIT** (`main/LICENSE`, 1,068 B, `sha256\u2081\u2082 047079fbd491`)"
+},
+{
+"file": "agents/top.md",
+"line": 737,
+"slug": "SaadRahman01/claude-moodle-dev",
+"pub_stars": 43,
+"pub_lic": "**MIT** (`main/LICENSE`, 1,068 B, `sha256\u2081\u2082 df0b3e71710c`)"
+},
+{
+"file": "agents/top.md",
+"line": 738,
+"slug": "TovTechOrg/Tov-learn",
+"pub_stars": 36,
+"pub_lic": "**MIT** (`master/LICENSE`, 1,064 B, `sha256\u2081\u2082 092d389ac156`)"
+},
+{
+"file": "agents/top.md",
+"line": 739,
+"slug": "jurimaxam-dotcom/chemdraw-mcp",
+"pub_stars": 32,
+"pub_lic": "**Apache-2.0** (`main/LICENSE`, 11,358 B, `sha256\u2081\u2082 cfc7749b96f6`)"
+},
+{
+"file": "agents/top.md",
+"line": 740,
+"slug": "saylordotorg/moodle-local_ai_course_assistant",
+"pub_stars": 21,
+"pub_lic": "\ud83d\udd34 **GPL-3.0** (`main/LICENSE`, 35,149 B, `sha256\u2081\u2082 3972dc9744f6`)"
+},
+{
+"file": "agents/top.md",
+"line": 741,
+"slug": "tong666-bit/liu-xiaoyan-skill",
+"pub_stars": 21,
+"pub_lic": "**MIT** (`master/LICENSE`, 1,068 B, `sha256\u2081\u2082 8626b7112026`)"
+},
+{
+"file": "agents/top.md",
+"line": 742,
+"slug": "SonAIengine/ku-portal-mcp",
+"pub_stars": 13,
+"pub_lic": "**MIT** (`main/LICENSE`, 1,068 B, `sha256\u2081\u2082 aa35608133a4`)"
+},
+{
+"file": "agents/top.md",
+"line": 743,
+"slug": "danieltyukov/ieee-mcp",
+"pub_stars": 7,
+"pub_lic": "**MIT** (`master/LICENSE`, 1,071 B, `sha256\u2081\u2082 fc20bfdfe931`)"
+},
+{
+"file": "agents/top.md",
+"line": 749,
+"slug": "aaryansamanta/AI-Ethos",
+"pub_stars": 497,
+"pub_lic": "\ud83d\udd34 **No licence payload.** 16 names over 3 branches, all `404`; API SPDX `NONE`. The highest-starred find of the pass, a 501(c)(3) delivering multilingual tutoring to underserved learners \u2014 and nothing in it can be redistributed."
+},
+{
+"file": "agents/top.md",
+"line": 750,
+"slug": "jeremy-xuan/SocraticNovel",
+"pub_stars": 32,
+"pub_lic": "\ud83d\udd34 **CC BY-NC-SA 4.0** (1,227 B, `sha256\u2081\u2082 593122cbd00b`). **NonCommercial** \u2014 unusable in a client deliverable at any tier. An instance of `T32`."
+},
+{
+"file": "agents/top.md",
+"line": 751,
+"slug": "vincenzo-afk/KingstonConnect",
+"pub_stars": 41,
+"pub_lic": null
+},
+{
+"file": "agents/top.md",
+"line": 752,
+"slug": "Piyushtanwani/DAU-buddy",
+"pub_stars": 7,
+"pub_lic": null
+},
+{
+"file": "agents/top.md",
+"line": 763,
+"slug": "aaryansamanta/NextGen-AI",
+"pub_stars": 491,
+"pub_lic": "**MIT for source code only.** Brand assets, team photos, videos, logos and the top-level PDFs in `website/img`, `website/video` are reserved \u00a9 NextGenAI and require written contact before reuse. \ud83d\udfe2 The *code* is usable; the org's identity material is not, which is the correct and unremarkable posture \u2014 it is only a trap for a scanner that reports one licence per repo."
+},
+{
+"file": "agents/top.md",
+"line": 764,
+"slug": "Andiii208/seu-handbook-skill",
+"pub_stars": 55,
+"pub_lic": "\ud83d\udd34 **MIT on the code, CC BY-NC-SA 4.0 on `references/` and `data/`** \u2014 the Southeast University student handbook text, which *is* the product. The skill's whole value is the clause-level handbook corpus, and that corpus is **NonCommercial**. Ship the retrieval code, re-author the corpus, or do not ship. A textbook instance of `T25`, now with the MIT band as its detector."
+},
+{
+"file": "agents/top.md",
+"line": 781,
+"slug": "justinhunt/moodle-mod_readaloud",
+"pub_stars": 6,
+"pub_lic": "\ud83d\udd34 **GPL-3.0-or-later \u2014 and there is no licence file.** Byte-read over 16 filenames \u00d7 3 branches: `404` on every one. The grant is in the `README` (*\"License: GNU GPL v3 or later\"*) **and in the full GNU header block of `version.php`, `lib.php` and `mod_form.php`**. See `916-F2` \u2014 \ud83d\udfe2 **independently reproduced `p917`** by `ingest/p917-header-layer.sh`, which discharges `916-G2` and makes this the general rule for the ecosystem: *for a Moodle plugin, `version.php` is the grant authority, not `LICENSE`* (2 of 2 plugins measured)"
+},
+{
+"file": "agents/top.md",
+"line": 782,
+"slug": "OSU-slatelab/AIRFluTe",
+"pub_stars": 3,
+"pub_lic": "\ud83d\udfe2 **Apache-2.0**"
+},
+{
+"file": "agents/top.md",
+"line": 783,
+"slug": "JambuOverflow/lepic",
+"pub_stars": 7,
+"pub_lic": "\ud83d\udd34 GPL-3.0"
+},
+{
+"file": "agents/top.md",
+"line": 784,
+"slug": "dungnotnull/ReadPulse-AI-Agent",
+"pub_stars": 3,
+"pub_lic": "\ud83d\udfe2 **MIT**"
+},
+{
+"file": "agents/top.md",
+"line": 785,
+"slug": "Aaryan-Kapoor/degreeworks-cli",
+"pub_stars": 5,
+"pub_lic": "\ud83d\udfe2 **MIT**"
+},
+{
+"file": "agents/top.md",
+"line": 786,
+"slug": "Kanjo-Elkamira-Ndi/Compass",
+"pub_stars": 11,
+"pub_lic": "\ud83d\udfe2 **MIT**"
+},
+{
+"file": "agents/top.md",
+"line": 812,
+"slug": "ctrlaltwill/LearnKit",
+"pub_stars": 185,
+"pub_lic": "**MIT** (`main/LICENSE.md`, 1,068 B, `sha256\u2081\u2082 38a90d0f7738`)"
+},
+{
+"file": "agents/top.md",
+"line": 813,
+"slug": "kirill-markin/flashcards-open-source-app",
+"pub_stars": 119,
+"pub_lic": "**MIT** (`main/LICENSE`, 1,070 B, `sha256\u2081\u2082 0e319ca9aaa9`)"
+},
+{
+"file": "agents/top.md",
+"line": 814,
+"slug": "ankimcp/anki-mcp-server-addon",
+"pub_stars": 104,
+"pub_lic": "\ud83d\udd34 **AGPL-3.0** (`main/LICENSE`, **227 B**, `sha256\u2081\u2082 34b58d896fdb`) \u2014 a **by-reference** grant, see `T43`"
+},
+{
+"file": "agents/top.md",
+"line": 815,
+"slug": "pieralukasz/true-recall",
+"pub_stars": 68,
+"pub_lic": "**MIT** (`main/LICENSE`, 1,070 B, `sha256\u2081\u2082 23444362494b`)"
+},
+{
+"file": "agents/top.md",
+"line": 816,
+"slug": "NaEs25/studiamo",
+"pub_stars": 27,
+"pub_lic": "\ud83d\udd34 **AGPL-3.0** (`main/LICENSE`, 33,880 B, `sha256\u2081\u2082 f0c3e444e06d`)"
+},
+{
+"file": "agents/top.md",
+"line": 817,
+"slug": "Vladyslav-Soldatenko/ProcrastiLearn",
+"pub_stars": 25,
+"pub_lic": "**Apache-2.0** (`master/LICENSE`, 11,351 B, `sha256\u2081\u2082 45386cd5bf35`)"
+},
+{
+"file": "agents/top.md",
+"line": 818,
+"slug": "RakeshBabuGajula/Exam_Intellect",
+"pub_stars": 19,
+"pub_lic": "**MIT** (byte-read on `ExamIntellect/LICENSE`, 1,075 B, `sha256\u2081\u2082 a4e58d1074c9`; the identical payload is also on `master`)"
+},
+{
+"file": "agents/top.md",
+"line": 819,
+"slug": "Yuanpeng-Li/gradescope-mcp",
+"pub_stars": 8,
+"pub_lic": "**MIT** (`main/LICENSE`, 1,068 B, `sha256\u2081\u2082 29d0f3f4463a`)"
+},
+{
+"file": "agents/top.md",
+"line": 820,
+"slug": "forgemorrow/Chinese-Teaching-AI-Agent",
+"pub_stars": 8,
+"pub_lic": "**MIT** (`main/LICENSE`, 1,068 B, `sha256\u2081\u2082 2e7ffdde3eb5`)"
+},
+{
+"file": "agents/top.md",
+"line": 840,
+"slug": "DigitalHarborFoundation/llm-math-education",
+"pub_stars": 47,
+"pub_lic": "**MIT** (`main/LICENSE`, 1,073 B)"
+},
+{
+"file": "agents/top.md",
+"line": 869,
+"slug": "GitHubDaily/AI-Course-Generator",
+"pub_stars": 36,
+"pub_lic": "**MIT** (`main/LICENSE`, 1,068 B, `sha256\u2081\u2082 5297e38c125c`)"
+},
+{
+"file": "agents/top.md",
+"line": 870,
+"slug": "kenoharada/AI-LaBuddy",
+"pub_stars": 22,
+"pub_lic": "**MIT** (1,067 B, `sha256\u2081\u2082 807c3b4466ec`)"
+},
+{
+"file": "agents/top.md",
+"line": 871,
+"slug": "jetyu/Dawn",
+"pub_stars": 14,
+"pub_lic": "**Apache-2.0** (11,340 B, `sha256\u2081\u2082 bef48216cd56`)"
+},
+{
+"file": "agents/top.md",
+"line": 872,
+"slug": "hapince-code/AI-EduForge",
+"pub_stars": 6,
+"pub_lic": "**MIT** (1,072 B, `sha256\u2081\u2082 0a83fabb2ba6`)"
+},
+{
+"file": "agents/top.md",
+"line": 873,
+"slug": "SNOOPY-alt/heuristic-learning-system",
+"pub_stars": 6,
+"pub_lic": "**MIT** (1,067 B, `sha256\u2081\u2082 f0012497d3e1`)"
+},
+{
+"file": "agents/top.md",
+"line": 874,
+"slug": "cxkzai/ai-admissions-platform",
+"pub_stars": 5,
+"pub_lic": "**MIT** (1,065 B, `sha256\u2081\u2082 811e88db2038`)"
+},
+{
+"file": "agents/top.md",
+"line": 875,
+"slug": "uczltw6/course-tutor",
+"pub_stars": 5,
+"pub_lic": "**MIT** (1,082 B, `sha256\u2081\u2082 f4f4a2cdaa54`)"
+},
+{
+"file": "agents/top.md",
+"line": 876,
+"slug": "MathMindCanvas/MathMind",
+"pub_stars": 5,
+"pub_lic": "**MIT** (1,071 B, `sha256\u2081\u2082 0773606d562e`)"
+},
+{
+"file": "agents/top.md",
+"line": 877,
+"slug": "mousam100/Montessori-Agentic-AI-Tutor",
+"pub_stars": 2,
+"pub_lic": "**MIT** (1,064 B, `sha256\u2081\u2082 a1adc7ed2fc0`)"
+},
+{
+"file": "agents/top.md",
+"line": 909,
+"slug": "anandpatikat/guru-latihan-dinamis",
+"pub_stars": 115,
+"pub_lic": null
+},
+{
+"file": "agents/top.md",
+"line": 910,
+"slug": "JMLcommunity/Kurikulum-AI",
+"pub_stars": 46,
+"pub_lic": "\ud83d\udfe2 MIT (1,081 B, `sha256\u2081\u2082 879619fd1e3d`, byte-read `p919`)"
+},
+{
+"file": "agents/top.md",
+"line": 911,
+"slug": "NgodingCik/modul-ajar-generator",
+"pub_stars": 2,
+"pub_lic": "\ud83d\udd34 **CC BY-NC 4.0** (17,688 B, `sha256\u2081\u2082 2b275bb77aa6`, byte-read `p919`) \u2014 **noncommercial, and a *content* licence applied to a web application**"
+},
+{
+"file": "agents/top.md",
+"line": 912,
+"slug": "y4zh/kurikulum-merdeka-asesmen-skills",
+"pub_stars": 0,
+"pub_lic": "\ud83d\udfe2 MIT (1,065 B, `sha256\u2081\u2082 1e41d9c6af01`, byte-read `p919`)"
+},
+{
+"file": "agents/top.md",
+"line": 913,
+"slug": "dikkayulianto/ebook-generator",
+"pub_stars": 0,
+"pub_lic": "\ud83d\udfe2 MIT (1,070 B, `sha256\u2081\u2082 ceb34bc8f5b0`, byte-read `p919`)"
+},
+{
+"file": "agents/top.md",
+"line": 930,
+"slug": "PyThaiNLP/pythainlp",
+"pub_stars": 1175,
+"pub_lic": "\ud83d\udfe2 Apache-2.0 (11,357 B, `sha256\u2081\u2082 b40930bbcf80`, byte-read `p919`)"
+},
+{
+"file": "agents/top.md",
+"line": 931,
+"slug": "vistec-AI/thai2transformers",
+"pub_stars": 125,
+"pub_lic": "\ud83d\udfe2 Apache-2.0 (11,357 B, `sha256\u2081\u2082 58d1e17ffe51`, byte-read `p919`)"
+},
+{
+"file": "agents/top.md",
+"line": 932,
+"slug": "OpenThaiGPT/openthaigpt",
+"pub_stars": 121,
+"pub_lic": "\ud83d\udfe2 Apache-2.0 (595 B, `sha256\u2081\u2082 b2a8a8f529b3`, byte-read `p919`) \u2014 \ud83d\udd34 the search channel reports `NOASSERTION` for this repo; the two channels disagree and the bytes win"
+},
+{
+"file": "agents/top.md",
+"line": 1007,
+"slug": "microsoft/StudentSim",
+"pub_stars": 83,
+"pub_lic": "MIT (1,073 B, `a03acaea0251`)"
+},
+{
+"file": "agents/top.md",
+"line": 1008,
+"slug": "lynote-ai/ai-tutor",
+"pub_stars": 124,
+"pub_lic": "MIT (1,062 B, `017037465041`)"
+},
+{
+"file": "agents/top.md",
+"line": 1009,
+"slug": "chuma-beep/mathua",
+"pub_stars": 430,
+"pub_lic": "MIT (1,074 B, `6bd7c2a354d5`)"
+},
+{
+"file": "agents/top.md",
+"line": 1010,
+"slug": "zuhairhalawa/studyai",
+"pub_stars": 239,
+"pub_lic": "MIT (1,068 B, `326f6a6b9c20`)"
+},
+{
+"file": "agents/top.md",
+"line": 1011,
+"slug": "shigella520/MindTrain",
+"pub_stars": 129,
+"pub_lic": "MIT (1,066 B, `d69b0f7c3228`)"
+},
+{
+"file": "agents/top.md",
+"line": 1012,
+"slug": "3yangyang9/DeepTutor-AILearning",
+"pub_stars": 331,
+"pub_lic": "Apache-2.0 (11,407 B, `596087a7f098`)"
+},
+{
+"file": "agents/top.md",
+"line": 1013,
+"slug": "five-plus-one/AI-Marker-Suite",
+"pub_stars": 192,
+"pub_lic": "\ud83d\udd34 **GPL-3.0** (35,153 B, `8d13aacc9396`)"
+},
+{
+"file": "agents/top.md",
+"line": 1014,
+"slug": "ERRRC/kaogong-shuati",
+"pub_stars": 257,
+"pub_lic": "MIT (1,061 B, `b7722af28e18`)"
+},
+{
+"file": "agents/top.md",
+"line": 1015,
+"slug": "AkshitIreddy/AI-Powered-Video-Tutorial-Generator",
+"pub_stars": 322,
+"pub_lic": "MIT (1,069 B, `6c87c23cbf5c`)"
+},
+{
+"file": "agents/top.md",
+"line": 1016,
+"slug": "zoonk/zoonk",
+"pub_stars": 157,
+"pub_lic": "MIT (1,061 B, `34f44fc04045`)"
+},
+{
+"file": "agents/top.md",
+"line": 1017,
+"slug": "thm-mni-ii/feedbacksystem",
+"pub_stars": 24,
+"pub_lic": "Apache-2.0 (10,784 B, `824e945ea176`)"
+},
+{
+"file": "agents/top.md",
+"line": 1026,
+"slug": "CaviraOSS/PageLM",
+"pub_stars": 2070,
+"pub_lic": "`NOASSERTION`"
+},
+{
+"file": "agents/top.md",
+"line": 1027,
+"slug": "chadyi/StudyOnTV",
+"pub_stars": 1712,
+"pub_lic": "`NOASSERTION`"
+},
+{
+"file": "agents/top.md",
+"line": 1028,
+"slug": "xiaoyang111222/cn-math-taxonomy",
+"pub_stars": 8648,
+"pub_lic": "`NOASSERTION`"
+},
+{
+"file": "agents/top.md",
+"line": 1029,
+"slug": "Nutlope/llamatutor",
+"pub_stars": 2054,
+"pub_lic": "`NONE`"
+},
+{
+"file": "agents/top.md",
+"line": 1030,
+"slug": "LearnPress/learnpress",
+"pub_stars": 275,
+"pub_lic": "`NONE`"
+},
+{
+"file": "agents/top.md",
+"line": 1031,
+"slug": "learning-commons-org/knowledge-graph",
+"pub_stars": 169,
+"pub_lic": "`NOASSERTION`"
+},
+{
+"file": "agents/top.md",
+"line": 1067,
+"slug": "SHUBHJAIN139/Local-Exam-Proctoring-Engine",
+"pub_stars": 0,
+"pub_lic": "**MIT** (1,067 B, `91a47a93bbca`)"
+},
+{
+"file": "agents/top.md",
+"line": 1068,
+"slug": "tanzir71/tinyproctorjs",
+"pub_stars": 0,
+"pub_lic": "**MIT** (1,085 B, `cc1b9d2387e8`)"
+},
+{
+"file": "agents/top.md",
+"line": 1069,
+"slug": "Aryansh909/Examshield-AI",
+"pub_stars": 1,
+"pub_lic": "**MIT** (1,070 B, `75107b398587`)"
+},
+{
+"file": "agents/top.md",
+"line": 1089,
+"slug": "alberto2005-coder/detector-ia",
+"pub_stars": 2,
+"pub_lic": "**MIT** (1,079 B, `d7766590a996`)"
+},
+{
+"file": "agents/top.md",
+"line": 1090,
+"slug": "DerickxP/Learn-Quest-Serious-Game",
+"pub_stars": 1,
+"pub_lic": "**MIT** (1,071 B, `da1aeec572db`)"
+},
+{
+"file": "agents/top.md",
+"line": 1091,
+"slug": "Gehiner/KodlandFaster",
+"pub_stars": 1,
+"pub_lic": "**MIT** (1,064 B, `61c63d0a04e1`)"
+},
+{
+"file": "agents/top.md",
+"line": 1092,
+"slug": "uemanet/harpia",
+"pub_stars": 28,
+"pub_lic": "**MIT** (1,063 B, `afa9cfe1dcb6`)"
+},
+{
+"file": "agents/top.md",
+"line": 1098,
+"slug": "xxinjie21/Smart-Quiz-Tutor",
+"pub_stars": 10,
+"pub_lic": "\ud83d\udfe2 **0BSD** (664 B, `2cb3ff984068`)"
+},
+{
+"file": "agents/top.md",
+"line": 1099,
+"slug": "haison8x/geogebra-mcp",
+"pub_stars": 1,
+"pub_lic": "**MIT** (1,065 B, `32508be1d078`)"
+},
+{
+"file": "agents/top.md",
+"line": 1100,
+"slug": "fireheartjerry/mathos-webmcp",
+"pub_stars": 0,
+"pub_lic": "**MIT** (1,075 B, `2388ed41fa64`)"
+},
+{
+"file": "agents/top.md",
+"line": 1101,
+"slug": "devissaputra/self_regulated_learning_copilot",
+"pub_stars": 2,
+"pub_lic": "**MIT** (1,076 B, `c10726bddc58`)"
+},
+{
+"file": "agents/top.md",
+"line": 1102,
+"slug": "siberius/learning-methodologies",
+"pub_stars": 4,
+"pub_lic": "**MIT** (1,072 B, `55b44f528c81`)"
+},
+{
+"file": "agents/top.md",
+"line": 1103,
+"slug": "nijataliyev7/elifba",
+"pub_stars": 2,
+"pub_lic": "**MIT** (1,069 B, `c79aae99a979`)"
+},
+{
+"file": "agents/top.md",
+"line": 1104,
+"slug": "angel-georgiev/daskal.ai",
+"pub_stars": 0,
+"pub_lic": "**MIT** (1,071 B, `394e9f40c94d`)"
+},
+{
+"file": "agents/top.md",
+"line": 1105,
+"slug": "orangewk/MathDesk-snapshot",
+"pub_stars": 0,
+"pub_lic": "**MIT** (1,065 B, `92511e2244a8`)"
+},
+{
+"file": "agents/top.md",
+"line": 1106,
+"slug": "WDMoonMoonBird/exam-deep-seek",
+"pub_stars": 1,
+"pub_lic": "**MIT** (1,089 B, `ebd20e036a20`)"
+},
+{
+"file": "agents/top.md",
+"line": 1107,
+"slug": "deeding2030-boop/bestteach-public",
+"pub_stars": 0,
+"pub_lic": "**MIT** (1,159 B, `3fae65c81ef1`)"
+},
+{
+"file": "agents/top.md",
+"line": 1108,
+"slug": "Apurba94/autograder-py",
+"pub_stars": 0,
+"pub_lic": "**MIT** (1,071 B, `2d870f5fb212`)"
+},
+{
+"file": "agents/top.md",
+"line": 1109,
+"slug": "CarlosEkRaigoza/privacy-preserving-educational-telemetry",
+"pub_stars": 0,
+"pub_lic": "**MIT** (1,117 B, `760d2ca71ae9`)"
+},
+{
+"file": "agents/top.md",
+"line": 1110,
+"slug": "JaneKoch/openbridge",
+"pub_stars": 0,
+"pub_lic": "**MIT** (1,080 B, `caa5e03bca02`)"
+},
+{
+"file": "agents/top.md",
+"line": 1111,
+"slug": "willfeldman/readu",
+"pub_stars": 0,
+"pub_lic": "**MIT** (1,069 B, `8fe5f43417ff`)"
+},
+{
+"file": "agents/top.md",
+"line": 1112,
+"slug": "uloya1234/faq-assistant",
+"pub_stars": 4,
+"pub_lic": "\ud83d\udfe1 **MPL-2.0** (16,726 B, `3f3d9e0024b1`)"
+},
+{
+"file": "agents/top.md",
+"line": 1113,
+"slug": "xx-hub/craft-your-textbook",
+"pub_stars": 41,
+"pub_lic": "\ud83d\udfe2 **MIT** (`LICENSE@main`, 1,089 B, `sha256\u2081\u2082 f987e7f53e06`)"
+},
+{
+"file": "agents/top.md",
+"line": 1114,
+"slug": "Yari-tuber/math-rap-video",
+"pub_stars": 21,
+"pub_lic": "\ud83d\udfe2 **MIT** (`LICENSE@main`, 1,067 B, `sha256\u2081\u2082 3adf69adbec0`)"
+},
+{
+"file": "agents/top.md",
+"line": 1115,
+"slug": "heimi51168/planyourtv",
+"pub_stars": 74,
+"pub_lic": "\ud83d\udfe2 **MIT** (`LICENSE@main`, 1,110 B, `sha256\u2081\u2082 6f725ade50a7`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 88,
+"slug": "openedx/openedx-platform",
+"pub_stars": null,
+"pub_lic": "AGPL-3.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 89,
+"slug": "moodle/moodle",
+"pub_stars": null,
+"pub_lic": "GPL-3.0 (no root `LICENSE`; verified in `COPYING.txt`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 90,
+"slug": "instructure/canvas-lms",
+"pub_stars": null,
+"pub_lic": "AGPL-3.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 91,
+"slug": "ls1intum/Artemis",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 92,
+"slug": "learningequality/kolibri",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 93,
+"slug": "elimu-ai/webapp",
+"pub_stars": null,
+"pub_lic": "MIT (`main/LICENSE`, byte-read 1,065 B)"
+},
+{
+"file": "repos/foundations.md",
+"line": 94,
+"slug": "oppia/oppia",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 95,
+"slug": "sakaiproject/sakai",
+"pub_stars": null,
+"pub_lic": "Sakai. Higher-ed LMS; ECL-2.0 is Apache-2.0 with an education-oriented patent clause."
+},
+{
+"file": "repos/foundations.md",
+"line": 96,
+"slug": "chamilo/chamilo-lms",
+"pub_stars": null,
+"pub_lic": "GPL-3.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 97,
+"slug": "ILIAS-eLearning/ILIAS",
+"pub_stars": null,
+"pub_lic": "GPL-3.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 98,
+"slug": "OpenOLAT/OpenOLAT",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 107,
+"slug": "Cvmcosta/ltijs",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 108,
+"slug": "tsugiproject/tsugi",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 109,
+"slug": "Ed-Fi-Alliance-OSS/Ed-Fi-ODS",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 110,
+"slug": "1EdTech/openbadges-validator-core",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 111,
+"slug": "Citolab/qti-components",
+"pub_stars": null,
+"pub_lic": "GPL-3.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 112,
+"slug": "apereo/cas",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 113,
+"slug": "Faixiang/Moodle-MCP",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 114,
+"slug": "G36maid/moodle-mcp",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 115,
+"slug": "blend-ed/openedx-mcp",
+"pub_stars": null,
+"pub_lic": "AGPL-3.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 116,
+"slug": "openedx/XBlock",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 117,
+"slug": "openedx/xblock-sdk",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 118,
+"slug": "instructure/common-cartridge-viewer",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 119,
+"slug": "QFlowLearn/qti3",
+"pub_stars": null,
+"pub_lic": "**MIT** \u2014 re-byte-read `p912` (`LICENSE@main`, 1,072 B \u00b7 `00ed05b90bf8`); `p900` read `LICENSE.md@HEAD`, 1,071 B"
+},
+{
+"file": "repos/foundations.md",
+"line": 120,
+"slug": "Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 121,
+"slug": "dmitry-viskov/pylti1.3",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 122,
+"slug": "academic-innovation/django-lti",
+"pub_stars": null,
+"pub_lic": "**MIT** \u2014 byte-read `p917` (`LICENSE@main`, 1,098 B)"
+},
+{
+"file": "repos/foundations.md",
+"line": 123,
+"slug": "ucfopen/cookiecutter-python-lti",
+"pub_stars": null,
+"pub_lic": "**MIT** \u2014 byte-read `p917` (`LICENSE@main`, 1,130 B)"
+},
+{
+"file": "repos/foundations.md",
+"line": 124,
+"slug": "GSU-CETLOE/lti1p3Library-python",
+"pub_stars": null,
+"pub_lic": "**MIT** \u2014 byte-read `p917` (`LICENSE@main`, 1,083 B)"
+},
+{
+"file": "repos/foundations.md",
+"line": 125,
+"slug": "blackboard/BBDN-lti-1p3-tool-example",
+"pub_stars": null,
+"pub_lic": "**Apache-2.0** \u2014 byte-read `p917` (`LICENSE@main`, 11,357 B)"
+},
+{
+"file": "repos/foundations.md",
+"line": 126,
+"slug": "christophse/django-lti-tool",
+"pub_stars": null,
+"pub_lic": "**BSD** \u2014 byte-read `p917` (`LICENSE@main`, 1,525 B)"
+},
+{
+"file": "repos/foundations.md",
+"line": 127,
+"slug": "lmddc-lu/microlms",
+"pub_stars": null,
+"pub_lic": "\ud83d\udd34 **AGPL-3.0** \u2014 byte-read `p917` (`LICENSE@main`, **34,523 B**, the exact true-AGPL signature `913-F1` established)"
+},
+{
+"file": "repos/foundations.md",
+"line": 128,
+"slug": "jcputney/scorm-again",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 129,
+"slug": "ucfopen/canvasapi",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 130,
+"slug": "digitalcredentials/learner-credential-wallet",
+"pub_stars": null,
+"pub_lic": "**MIT** \u2014 byte-read p900 (`LICENSE@HEAD`, 1,091 B)"
+},
+{
+"file": "repos/foundations.md",
+"line": 131,
+"slug": "StevenACoffman/roster",
+"pub_stars": null,
+"pub_lic": "**MIT** \u2014 byte-read `p907` (`LICENSE@main`, 1,070 B)"
+},
+{
+"file": "repos/foundations.md",
+"line": 132,
+"slug": "swl10/pyslet",
+"pub_stars": null,
+"pub_lic": "\ud83d\udd34 **BSD-3-Clause** \u2014 byte-read `p907` (`LICENSE.txt@master`, 2,906 B, *\"Copyright 2017 Steve Lay\"*); **the API reports `NOASSERTION`**"
+},
+{
+"file": "repos/foundations.md",
+"line": 133,
+"slug": "LJKelly3141/coursepack",
+"pub_stars": null,
+"pub_lic": "**MIT** \u2014 byte-read `p907` from **`LICENSE.md`** (1,070 B). \ud83d\udd34 Root `LICENSE` is a **41-byte `usethis` metadata stub containing no grant**, which is the file the API reads, so SPDX says `NOASSERTION`"
+},
+{
+"file": "repos/foundations.md",
+"line": 134,
+"slug": "GuanmingQiao/POLITEMALL-MCP",
+"pub_stars": null,
+"pub_lic": "**MIT** \u2014 byte-read `p907` (`LICENSE@main`, 1,070 B)"
+},
+{
+"file": "repos/foundations.md",
+"line": 135,
+"slug": "aleka07/scorm_agents",
+"pub_stars": null,
+"pub_lic": "**MIT** \u2014 byte-read `p907` (`LICENSE@master`, 1,077 B)"
+},
+{
+"file": "repos/foundations.md",
+"line": 148,
+"slug": "UniTime/unitime",
+"pub_stars": null,
+"pub_lic": "Apache-2.0 (`LICENSE@master`, payload `11,357 B`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 149,
+"slug": "UniTime/cpsolver",
+"pub_stars": null,
+"pub_lic": "**LGPL-3.0**"
+},
+{
+"file": "repos/foundations.md",
+"line": 150,
+"slug": "GEOSOFT-GLOBAL/timetablely",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 160,
+"slug": "CAHLR/pyBKT",
+"pub_stars": null,
+"pub_lic": "**MIT** (`LICENSE@master`, 1,132 B, `sha256\u2081\u2082 ad0c7a38bf01`, *\"Copyright (c) 2021 Computational Approaches to Human Learning\"*)"
+},
+{
+"file": "repos/foundations.md",
+"line": 161,
+"slug": "pykt-team/pykt-toolkit",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 183,
+"slug": "mad707/masar",
+"pub_stars": 1,
+"pub_lic": "**MIT** (`main/LICENSE`, 1,083 B, `sha256\u2081\u2082 cd63915e037f`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 184,
+"slug": "clementina-tom/Personalized-Learning-Recommendation-System",
+"pub_stars": 3,
+"pub_lic": "**MIT** (`main/LICENSE`, 1,071 B, `sha256\u2081\u2082 2471962b29fc`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 185,
+"slug": "Jiaclv/error-driven-question-recommender",
+"pub_stars": 0,
+"pub_lic": "**MIT** (`main/LICENSE`, 1,056 B, `sha256\u2081\u2082 06dcddbb6908`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 186,
+"slug": "farroshsy/hcie-system",
+"pub_stars": 0,
+"pub_lic": "**MIT** (`main/LICENSE`, 1,076 B, `sha256\u2081\u2082 bca6680cab90`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 187,
+"slug": "Aditya-Ranjan1234/NS-CausalKT-Agentic-Grader",
+"pub_stars": 1,
+"pub_lic": "**MIT** (`main/LICENSE`, 1,056 B, `sha256\u2081\u2082 1126322e2cc8`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 188,
+"slug": "Rishabh-bgp/vedic-math-hybrid-kt",
+"pub_stars": 0,
+"pub_lic": "**MIT** (`main/LICENSE`, 1,074 B, `sha256\u2081\u2082 45267e9b5775`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 189,
+"slug": "BhimPrasadAdhikari/lagnever-learning-knowledge-graph",
+"pub_stars": 0,
+"pub_lic": "**MIT** (`main/LICENSE`, 1,094 B, `sha256\u2081\u2082 3d54cdda6168`, *\"Copyright (c) 2026 Lagnever Technologies Private Limited\"*)"
+},
+{
+"file": "repos/foundations.md",
+"line": 203,
+"slug": "yetanalytics/lrsql",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 204,
+"slug": "davidpesce/moodle-logstore_xapi",
+"pub_stars": null,
+"pub_lic": "**GPL-3.0**"
+},
+{
+"file": "repos/foundations.md",
+"line": 205,
+"slug": "openedx/openedx-aspects",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 206,
+"slug": "openfun/ralph",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 207,
+"slug": "adlnet/ADL_LRS",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 208,
+"slug": "LearningLocker/learninglocker",
+"pub_stars": null,
+"pub_lic": "GPL-3.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 209,
+"slug": "agentscope-ai/OpenJudge",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 210,
+"slug": "adlnet/xapi-spec",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 211,
+"slug": "peblproject/PEBL",
+"pub_stars": null,
+"pub_lic": "**Apache-2.0** \u2014 byte-read `p907` (`LICENSE@master`, 11,350 B)"
+},
+{
+"file": "repos/foundations.md",
+"line": 212,
+"slug": "ProfeAnaEslavaEdTech/mllde-xapi",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe1 **CC-BY-4.0** \u2014 byte-read `p907` (17,145 B)"
+},
+{
+"file": "repos/foundations.md",
+"line": 218,
+"slug": "PrairieLearn/PrairieLearn",
+"pub_stars": null,
+"pub_lic": "\ud83d\udd34 **NOT MIT \u2014 multi-grant, open-core. Corrected p899.** CE is **AGPL-3.0**; `apps/prairielearn/src/ee/` **and `apps/course-agent/`** are **proprietary Enterprise Edition**; all client-side JavaScript is AGPL; only the portions copyright University of Illinois are MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 219,
+"slug": "Submitty/Submitty",
+"pub_stars": null,
+"pub_lic": "**BSD-3-Clause** (`LICENSE.md@main`, 1,542 B, `sha256\u2081\u2082 c123708cb4ef`, *\"Copyright (c) 2014-2026 Submitty team\"*)"
+},
+{
+"file": "repos/foundations.md",
+"line": 220,
+"slug": "ucbds-infra/otter-grader",
+"pub_stars": null,
+"pub_lic": "**BSD-3-Clause** (`LICENSE@master`, 1,560 B, `sha256\u2081\u2082 6af203d41a01`, *\"Copyright (c) 2019, UC Berkeley Division of Data Sciences\"*)"
+},
+{
+"file": "repos/foundations.md",
+"line": 221,
+"slug": "webtech-network/autograder",
+"pub_stars": null,
+"pub_lic": "**Apache-2.0** (`LICENSE@main`, 11,357 B, `sha256\u2081\u2082 c71d239df917`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 222,
+"slug": "eecs-autograder/autograder-server",
+"pub_stars": null,
+"pub_lic": "**LGPL-3.0** (`LICENSE.txt@master`, 7,652 B, `sha256\u2081\u2082 b96e8c21c928`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 223,
+"slug": "pawtograder/platform",
+"pub_stars": null,
+"pub_lic": "\ud83d\udd34 **GPL-3.0-or-later \u2014 SPDX says `NOASSERTION`. Corrected p899.** Byte-read `LICENSE@main` (658 B, `sha256\u2081\u2082 61d7698783f4`): *\"This program is free software\u2026 under the terms of the GNU General Public License\u2026 either version 3 of the License, or (at your option) any later version.\"*"
+},
+{
+"file": "repos/foundations.md",
+"line": 224,
+"slug": "jupyter/nbgrader",
+"pub_stars": null,
+"pub_lic": "BSD-3-Clause (1,370 \u2605)"
+},
+{
+"file": "repos/foundations.md",
+"line": 225,
+"slug": "autolab/Autolab",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 226,
+"slug": "autolab/Tango",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 227,
+"slug": "PrairieLearn/grader-python-v2",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 228,
+"slug": "ls1intum/Ares",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 229,
+"slug": "openedx/edx-ora2",
+"pub_stars": null,
+"pub_lic": "AGPL-3.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 230,
+"slug": "openedx/codejail",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 231,
+"slug": "Udayraj123/OMRChecker",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 232,
+"slug": "dodona-edu/dolos",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 233,
+"slug": "openedx/edx-proctoring",
+"pub_stars": null,
+"pub_lic": "AGPL-3.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 253,
+"slug": "dongbeixiaohuo/writing-agent",
+"pub_stars": 460,
+"pub_lic": "MIT (`main/LICENSE`, 1,078 B, `sha256\u2081\u2082 185ea2efea06`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 254,
+"slug": "PGshen/thinking-map",
+"pub_stars": 187,
+"pub_lic": "Apache-2.0 (`main/LICENSE`, 11,356 B, `sha256\u2081\u2082 43070e2d4e53`) \u2014 **patent grant included**"
+},
+{
+"file": "repos/foundations.md",
+"line": 255,
+"slug": "yf-team/yf-exam-lite",
+"pub_stars": 173,
+"pub_lic": "MIT (`main/LICENSE`, 1,074 B, `sha256\u2081\u2082 b4cf55353a49`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 256,
+"slug": "zijian-optics/SolaireEPDA",
+"pub_stars": 91,
+"pub_lic": "**AGPL-3.0** (`master/LICENSE`, 34,522 B, `sha256\u2081\u2082 20b067f86de3`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 257,
+"slug": "BBkjdayup/BCTK",
+"pub_stars": 58,
+"pub_lic": "MIT (`main/LICENSE`, 1,065 B, `sha256\u2081\u2082 7208c5cd9088`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 284,
+"slug": "HostServer001/jee_mains_pyqs_data_base",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe2 **MIT** (1,070 B \u00b7 `ad8519669214`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 285,
+"slug": "alvaretto/r-exams_matematicas",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe2 **MIT** (1,078 B \u00b7 `67a6e5e5a2af`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 286,
+"slug": "SettibathulaJyothi/Aritificial-Intelligence-Code-417-Skill-Education-Class-10",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe2 **MIT** (1,076 B \u00b7 `40a516b92bfb`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 287,
+"slug": "zayn-anwar/NCERTTBDL",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe2 **MIT** (1,067 B \u00b7 `c2cd195af659`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 288,
+"slug": "LiraJ07/Temario_Comipems_Crissbeck001",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe1 **Apache-2.0** (11,357 B \u00b7 `c71d239df917`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 295,
+"slug": "steve-ongera/KNEC-Exam-Management-System",
+"pub_stars": null,
+"pub_lic": null
+},
+{
+"file": "repos/foundations.md",
+"line": 308,
+"slug": "jupyterhub/binderhub",
+"pub_stars": null,
+"pub_lic": "**BSD-3-Clause** (`LICENSE@main`, 1,522 B, `sha256\u2081\u2082 611f531642d5`; SPDX agrees)"
+},
+{
+"file": "repos/foundations.md",
+"line": 309,
+"slug": "nbgallery/nbgallery",
+"pub_stars": null,
+"pub_lic": "**MIT** (`LICENSE@master`, 1,071 B, `sha256\u2081\u2082 7900749dcb3b`, `MIT License` title line; SPDX agrees)"
+},
+{
+"file": "repos/foundations.md",
+"line": 310,
+"slug": "computationalmodelling/nbval",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe1 **BSD-3-Clause \u2014 SPDX says `NOASSERTION`.** Byte-read `LICENSE@master` (1,910 B, `sha256\u2081\u2082 1dbc744b78bb`): the file has **no title line at all**, and the grant is resolved from clause structure \u2014 redistribution + binary-reproduction + no-endorsement. Copyright **University of Southampton, UK**"
+},
+{
+"file": "repos/foundations.md",
+"line": 311,
+"slug": "parmentelat/nbautoeval",
+"pub_stars": null,
+"pub_lic": "\ud83d\udd34 **CC-BY-SA-4.0 \u2014 a content licence on executable code.** Byte-read `LICENSE@master` (289 B, `sha256\u2081\u2082 1bb69236081f`): *\"made available through a Creative Common Licence CC BY-SA 4.0\"*. SPDX says `NOASSERTION`. **`(c) 2017 \u2014 Inria \u2014 Thierry Parmentelat`**"
+},
+{
+"file": "repos/foundations.md",
+"line": 312,
+"slug": "mwouts/jupytext",
+"pub_stars": null,
+"pub_lic": "**MIT** (`LICENSE@main`, `MIT License` title line, *\"Copyright (c) 2018-2026 Marc Wouts\"*)"
+},
+{
+"file": "repos/foundations.md",
+"line": 313,
+"slug": "pyta-uoft/pyta",
+"pub_stars": null,
+"pub_lic": "\ud83d\udd34 **GPL-3.0** (`LICENSE@master`, 35,141 B, `sha256\u2081\u2082 589ed823e9a8`, GNU GPL title line; SPDX agrees)"
+},
+{
+"file": "repos/foundations.md",
+"line": 325,
+"slug": "h5p/h5p-php-library",
+"pub_stars": null,
+"pub_lic": "GPL-3.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 326,
+"slug": "Khan/perseus",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 327,
+"slug": "learningequality/studio",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 328,
+"slug": "learningequality/ricecooker",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 329,
+"slug": "learningequality/le-utils",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 330,
+"slug": "openfun/richie",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 331,
+"slug": "openfun/marsha",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 332,
+"slug": "h5p/h5p-interactive-video",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe1 **MIT, manifest-declared only \u2014 flagged `p913`** (no licence payload: `LICENSE`, `LICENSE.txt`, `LICENSE.md`, `license.txt` and `COPYING` all `404` on both `master` and `main`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 333,
+"slug": "h5p/h5p-course-presentation",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe1 **MIT, manifest-declared only \u2014 flagged `p913`** (no licence payload: `LICENSE`, `LICENSE.txt`, `LICENSE.md`, `license.txt` and `COPYING` all `404` on both `master` and `main`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 334,
+"slug": "h5p/h5p-audio-recorder",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe1 **MIT, manifest-declared only \u2014 flagged `p913`** (no licence payload: `LICENSE`, `LICENSE.txt`, `LICENSE.md`, `license.txt` and `COPYING` all `404` on both `master` and `main`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 335,
+"slug": "h5p/h5p-speak-the-words",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 336,
+"slug": "h5p/h5p-cli",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 345,
+"slug": "docling-project/docling",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 346,
+"slug": "datalab-to/marker",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 347,
+"slug": "opendatalab/MinerU",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 348,
+"slug": "Unstructured-IO/unstructured",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 349,
+"slug": "SYSTRAN/faster-whisper",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 350,
+"slug": "openai/whisper",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 356,
+"slug": "ollama/ollama",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 357,
+"slug": "vllm-project/vllm",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 358,
+"slug": "BerriAI/litellm",
+"pub_stars": null,
+"pub_lic": "**MIT, except `litellm/enterprise/`** (byte-verified p891: the root `LICENSE` grants MIT to everything *outside* `litellm/enterprise/`, which carries its own separate licence \u2014 this is why the API reports `NOASSERTION`). Use the OSS paths and do not vendor the enterprise directory."
+},
+{
+"file": "repos/foundations.md",
+"line": 359,
+"slug": "qdrant/qdrant",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 360,
+"slug": "chroma-core/chroma",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 361,
+"slug": "HKUDS/LightRAG",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 362,
+"slug": "infiniflow/ragflow",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 363,
+"slug": "deepset-ai/haystack",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 364,
+"slug": "mem0ai/mem0",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 365,
+"slug": "temporalio/temporal",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 376,
+"slug": "traceloop/openllmetry",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 377,
+"slug": "Helicone/helicone",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 378,
+"slug": "openlit/openlit",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 379,
+"slug": "langfuse/langfuse",
+"pub_stars": null,
+"pub_lic": "Much the largest at 37,577 \u2605 (pushed 2026-11-18), and SPDX reports `NOASSERTION`, so the grant was read as text: **\"MIT Expat\" for the core, with a separate enterprise licence covering `ee/`, `web/src/ee/`, `worker/src/ee/` and `packages/shared/src/server/ee/`**. The copyright line now reads **\"Copyright (c) 2023-2026 ClickHouse, Inc.\"** \u2014 ownership has changed hands. Usable, but it needs licence diligence before it enters a client deliverable, and the permissive grant covers less than the repository."
+},
+{
+"file": "repos/foundations.md",
+"line": 390,
+"slug": "EleutherAI/lm-evaluation-harness",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 391,
+"slug": "promptfoo/promptfoo",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 392,
+"slug": "HumanSignal/label-studio",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 393,
+"slug": "argilla-io/argilla",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 394,
+"slug": "AI-for-Education/pedagogy-benchmark",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 395,
+"slug": "acheamponge/wassce-benchmark",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 401,
+"slug": "jupyterhub/jupyterhub",
+"pub_stars": null,
+"pub_lic": "BSD-3-Clause"
+},
+{
+"file": "repos/foundations.md",
+"line": 402,
+"slug": "jupyterhub/zero-to-jupyterhub-k8s",
+"pub_stars": null,
+"pub_lic": "\ud83d\udd34 **BSD-3-Clause + Apache-2.0 (CONJUNCTIVE) \u2014 CORRECTED `p913`, was `Apache-2.0`** (byte-read `main/LICENSE`, 13,206 B; **title line is `BSD 3-Clause License`, Copyright (c) 2017 Project Jupyter Contributors**, and the body carries an Apache-2.0 grant as well)"
+},
+{
+"file": "repos/foundations.md",
+"line": 403,
+"slug": "jupyterhub/nbgitpuller",
+"pub_stars": null,
+"pub_lic": "BSD-3-Clause"
+},
+{
+"file": "repos/foundations.md",
+"line": 404,
+"slug": "open-spaced-repetition/fsrs4anki",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 405,
+"slug": "appsmithorg/appsmith",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 406,
+"slug": "Crosstalk-Solutions/project-nomad",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 407,
+"slug": "learningequality/morango",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 408,
+"slug": "instructure/instructure-ui",
+"pub_stars": null,
+"pub_lic": "MIT (`master/LICENSE.md`, byte-read 1,175 B)"
+},
+{
+"file": "repos/foundations.md",
+"line": 409,
+"slug": "openedx/paragon",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 410,
+"slug": "mitodl/ol-infrastructure",
+"pub_stars": null,
+"pub_lic": "BSD-3-Clause"
+},
+{
+"file": "repos/foundations.md",
+"line": 411,
+"slug": "apereo/java-cas-client",
+"pub_stars": null,
+"pub_lic": "\ud83d\udd34 **CONJUNCTIVE: Apache-2.0 + JA-SIG BSD \u2014 CORRECTED `p913`, was `Apache-2.0`** (byte-read `master/LICENSE`, 2,321 B)"
+},
+{
+"file": "repos/foundations.md",
+"line": 412,
+"slug": "apereo/phpCAS",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 413,
+"slug": "jitsi/jitsi-meet",
+"pub_stars": null,
+"pub_lic": "\ud83d\udd34 **CONJUNCTIVE: Apache-2.0 + MIT \u2014 CORRECTED `p913`, was `Apache-2.0`** (byte-read `master/LICENSE`, 12,596 B, `sha256\u2081\u2082 eae52e200cd8`; the payload is ~1.2 kB larger than a standard Apache-2.0 text and the excess is a second, MIT grant)"
+},
+{
+"file": "repos/foundations.md",
+"line": 424,
+"slug": "deeplearningturkiye/turkce-yapay-zeka-kaynaklari",
+"pub_stars": null,
+"pub_lic": "MIT (`master/LICENSE`, byte-read 1,079 B)"
+},
+{
+"file": "repos/foundations.md",
+"line": 425,
+"slug": "barnamenevisi/free-resources",
+"pub_stars": null,
+"pub_lic": "MIT (`master/LICENSE`, byte-read 1,069 B)"
+},
+{
+"file": "repos/foundations.md",
+"line": 426,
+"slug": "m7medVision/nakhlah.js",
+"pub_stars": null,
+"pub_lic": "MIT (`main/LICENSE.md`, byte-read 1,064 B)"
+},
+{
+"file": "repos/foundations.md",
+"line": 470,
+"slug": "PyThaiNLP/pythainlp",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe2 Apache-2.0 \u2014 byte-read `p919`, 11,357 B, `sha256\u2081\u2082 b40930bbcf80`"
+},
+{
+"file": "repos/foundations.md",
+"line": 490,
+"slug": "hankcs/HanLP",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe2 Apache-2.0 \u2014 11,357 B, `sha256\u2081\u2082 c71d239df917`"
+},
+{
+"file": "repos/foundations.md",
+"line": 491,
+"slug": "messense/jieba-rs",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe2 MIT \u2014 1,101 B, `sha256\u2081\u2082 92257c8d1c7a`"
+},
+{
+"file": "repos/foundations.md",
+"line": 492,
+"slug": "undertheseanlp/underthesea",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe2 Apache-2.0 \u2014 10,765 B, `sha256\u2081\u2082 05e32ccfed98`"
+},
+{
+"file": "repos/foundations.md",
+"line": 493,
+"slug": "bab2min/Kiwi",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe2 Apache-2.0 \u2014 11,372 B, `sha256\u2081\u2082 4070ef926941`"
+},
+{
+"file": "repos/foundations.md",
+"line": 494,
+"slug": "ongjin/garu",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe2 Apache-2.0 \u2014 11,358 B, `sha256\u2081\u2082 cfc7749b96f6`"
+},
+{
+"file": "repos/foundations.md",
+"line": 495,
+"slug": "taishi-i/nagisa",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe2 MIT \u2014 1,065 B, `sha256\u2081\u2082 fa2fb3121bd2`"
+},
+{
+"file": "repos/foundations.md",
+"line": 496,
+"slug": "daac-tools/vibrato",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe2 **MIT *OR* Apache-2.0, disjunctive** \u2014 `LICENSE-MIT` 1,076 B, `sha256\u2081\u2082 d0104f0f2368`"
+},
+{
+"file": "repos/foundations.md",
+"line": 497,
+"slug": "ku-nlp/jumanpp",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe2 Apache-2.0 \u2014 11,357 B, `sha256\u2081\u2082 c71d239df917`"
+},
+{
+"file": "repos/foundations.md",
+"line": 498,
+"slug": "himkt/konoha",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe2 MIT \u2014 1,067 B, `sha256\u2081\u2082 9e818940bbfa`"
+},
+{
+"file": "repos/foundations.md",
+"line": 556,
+"slug": "ahmetaa/zemberek-nlp",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe2 **Apache-2.0** \u2014 572 B notice, `sha256\u2081\u2082 c55ac4a942b0`. \ud83d\udd34 `search/repositories` reports **`NOASSERTION`**"
+},
+{
+"file": "repos/foundations.md",
+"line": 557,
+"slug": "CAMeL-Lab/camel_tools",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe2 MIT \u2014 1,087 B, `sha256\u2081\u2082 7a3ef160e895`"
+},
+{
+"file": "repos/foundations.md",
+"line": 558,
+"slug": "otuncelli/turkish-stemmer-python",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe2 Apache-2.0 \u2014 11,344 B, `sha256\u2081\u2082 511c590688e4`"
+},
+{
+"file": "repos/foundations.md",
+"line": 570,
+"slug": "bretttolbert/verbecc",
+"pub_stars": 375,
+"pub_lic": "A curated **list**, not a library. The only maintained member is https://github.com/bretttolbert/verbecc (106 \u2605, **LGPL-3.0** byte-read from its title block, 7,652 B, `sha256\u2081\u2082 e3a994d82e64`) \u2014 a verb conjugator for five Romance languages. `Nkluge-correa/Tucano` (86 \u2605, Apache-2.0) is idle 268 days"
+},
+{
+"file": "repos/foundations.md",
+"line": 612,
+"slug": "sagorbrur/bnlp",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe2 **MIT** \u2014 1,069 B, `sha256\u2081\u2082 643fa15c5813`"
+},
+{
+"file": "repos/foundations.md",
+"line": 613,
+"slug": "ufal/udpipe",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe1 **MPL-2.0** \u2014 16,725 B, `sha256\u2081\u2082 1f256ecad192`. \ud83d\udd34 Published as a bare `MPL` until `922-F3`"
+},
+{
+"file": "repos/foundations.md",
+"line": 614,
+"slug": "huspacy/huspacy",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe2 Apache-2.0 \u2014 11,347 B, `sha256\u2081\u2082 04108063fd07`"
+},
+{
+"file": "repos/foundations.md",
+"line": 615,
+"slug": "mikahama/uralicNLP",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe2 Apache-2.0 \u2014 11,353 B, `sha256\u2081\u2082 82727434fd5f`"
+},
+{
+"file": "repos/foundations.md",
+"line": 616,
+"slug": "ljvmiranda921/calamanCy",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe2 MIT \u2014 1,095 B, `sha256\u2081\u2082 09da5a2dfb62`"
+},
+{
+"file": "repos/foundations.md",
+"line": 617,
+"slug": "sefineh-ai/Amharic-Tokenizer",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe2 MIT \u2014 1,069 B, `sha256\u2081\u2082 83e775edbdd9`"
+},
+{
+"file": "repos/foundations.md",
+"line": 618,
+"slug": "flammie/omorfi",
+"pub_stars": null,
+"pub_lic": "\ud83d\udd34 **GPL-3.0** \u2014 35,140 B, `sha256\u2081\u2082 39ebd7598688`, read through a **7-byte `LICENSE` pointer stub** (`922-F5`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 633,
+"slug": "EthioNLP/Ethiopian-Language-Survey",
+"pub_stars": 17,
+"pub_lic": "\ud83d\udfe2 **MIT** \u2014 1,103 B, `sha256\u2081\u2082 e268928bea59` (`search` agrees)"
+},
+{
+"file": "repos/foundations.md",
+"line": 634,
+"slug": "czcorpus/kontext",
+"pub_stars": 80,
+"pub_lic": "\ud83d\udd34 **GPL-2.0** \u2014 17,989 B"
+},
+{
+"file": "repos/foundations.md",
+"line": 635,
+"slug": "czcorpus/manatee-open",
+"pub_stars": 1,
+"pub_lic": "\ud83d\udd34 GPL-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 636,
+"slug": "czcorpus/cnc-tskit",
+"pub_stars": 1,
+"pub_lic": "\ud83d\udfe2 Apache-2.0 \u2014 11,357 B"
+},
+{
+"file": "repos/foundations.md",
+"line": 637,
+"slug": "yonasab12/amharicNLP",
+"pub_stars": 10,
+"pub_lic": "\ud83d\udd34 **an 11-byte file reading `MIT License` \u2014 a name, not a grant**; `search` says `NOASSERTION` and is right"
+},
+{
+"file": "repos/foundations.md",
+"line": 667,
+"slug": "inducer/relate",
+"pub_stars": 439,
+"pub_lic": "**MIT/X Consortium** (1,144 B, `e6c20b652766`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 668,
+"slug": "tutors-sdk/tutors",
+"pub_stars": 125,
+"pub_lic": "MIT (1,087 B, `b418e808b99a`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 669,
+"slug": "haxtheweb/haxcms-php",
+"pub_stars": 130,
+"pub_lic": "Apache-2.0 (11,362 B, `b662f44e55e8`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 670,
+"slug": "pacewisdomhq/TutorLoom",
+"pub_stars": 98,
+"pub_lic": "Apache-2.0 (11,361 B, `a7f87303f2e9`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 671,
+"slug": "iblai/lms",
+"pub_stars": 88,
+"pub_lic": "MIT (1,062 B, `d9d62c94b512`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 672,
+"slug": "onemnemo/mnemo",
+"pub_stars": 133,
+"pub_lic": "Apache-2.0 (11,325 B, `9e43fad60ad0`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 673,
+"slug": "SJRiz/pytogether",
+"pub_stars": 262,
+"pub_lic": "MIT (1,072 B, `c8df073d1320`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 674,
+"slug": "langx/langx",
+"pub_stars": 111,
+"pub_lic": "**BSD-3-Clause** (1,519 B, `f90e8a082588`, **non-endorsement clause present, no advertising clause**)"
+},
+{
+"file": "repos/foundations.md",
+"line": 680,
+"slug": "Azure/Moodle",
+"pub_stars": 186,
+"pub_lic": "MIT (1,090 B, `91f7258203fd`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 681,
+"slug": "microsoft/o365-moodle",
+"pub_stars": 216,
+"pub_lic": "GPL-3.0 (35,146 B, `c53a65c2fd56`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 682,
+"slug": "learning-commons-org/knowledge-graph",
+"pub_stars": 169,
+"pub_lic": "\ud83d\udd35 split: **code MIT, data per-dataset** (5,788 B, `86b7ebf9b61d`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 695,
+"slug": "bncc-dev/bncc-dados",
+"pub_stars": 26,
+"pub_lic": "\ud83d\udd34 **MIT** (`main/LICENSE`, 1,092 B) for `pipeline/` **and CC BY 4.0** (`main/dados/LICENSE.md`, 1,583 B) for the data"
+},
+{
+"file": "repos/foundations.md",
+"line": 696,
+"slug": "bncc-dev/bncc-pacotes",
+"pub_stars": 10,
+"pub_lic": "\ud83d\udd34 **MIT** code + **CC BY 4.0** embedded data + **name and visual identity not licensed** (`main/LICENSE`, 1,299 B)"
+},
+{
+"file": "repos/foundations.md",
+"line": 697,
+"slug": "eumakerdev/bncc_api",
+"pub_stars": 17,
+"pub_lic": "**MIT** (`main/LICENSE`, 1,081 B)"
+},
+{
+"file": "repos/foundations.md",
+"line": 698,
+"slug": "bncc-dev/bncc-benchmark",
+"pub_stars": 12,
+"pub_lic": "\ud83d\udd34 **MIT** (`harness/`, `test/`) + **CC BY 4.0** (items, results, methodology)"
+},
+{
+"file": "repos/foundations.md",
+"line": 699,
+"slug": "HuemulSolutions/Enola-AI",
+"pub_stars": 1,
+"pub_lic": "**BSD-3-Clause** (`main/LICENSE`, 1,503 B)"
+},
+{
+"file": "repos/foundations.md",
+"line": 737,
+"slug": "ls1intum/Apollon",
+"pub_stars": null,
+"pub_lic": "MIT (`main/LICENSE`, byte-read 1,091 B)"
+},
+{
+"file": "repos/foundations.md",
+"line": 738,
+"slug": "ls1intum/artemis-android",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 739,
+"slug": "ls1intum/artemis-ios",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 740,
+"slug": "ls1intum/artemis-ansible-collection",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 741,
+"slug": "ls1intum/standardized-competency-catalog",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 751,
+"slug": "UniversityOfHelsinkiCS/sis-importer",
+"pub_stars": null,
+"pub_lic": "MIT (byte-read 1,111 B)"
+},
+{
+"file": "repos/foundations.md",
+"line": 752,
+"slug": "UniversityOfHelsinkiCS/suoritustarkistin",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 753,
+"slug": "UniversityOfHelsinkiCS/sis-ns-manager",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 754,
+"slug": "KTH/canvas-api",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "repos/foundations.md",
+"line": 755,
+"slug": "AaltoGIS/classroom-grader",
+"pub_stars": null,
+"pub_lic": "BSD-3-Clause"
+},
+{
+"file": "repos/foundations.md",
+"line": 756,
+"slug": "kyoto-u/comfortable-sakai",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 757,
+"slug": "cilt-uct/sakai-skin-vula",
+"pub_stars": null,
+"pub_lic": null
+},
+{
+"file": "repos/foundations.md",
+"line": 758,
+"slug": "cilt-uct/tsugi-migrate-to-brightspace",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 759,
+"slug": "cilt-uct/tsugi-request-gradebook-upload",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 769,
+"slug": "cmu-db/bustub",
+"pub_stars": null,
+"pub_lic": "MIT (byte-read 1,075 B)"
+},
+{
+"file": "repos/foundations.md",
+"line": 770,
+"slug": "RWTH-OS/eduOS-rs",
+"pub_stars": null,
+"pub_lic": "**`MIT/Apache-2.0` (disjunctive \u2014 licensee chooses)**"
+},
+{
+"file": "repos/foundations.md",
+"line": 791,
+"slug": "openwallet-foundation/multipaz",
+"pub_stars": null,
+"pub_lic": "**Apache-2.0** (`LICENSE@main`, 11,358 B)"
+},
+{
+"file": "repos/foundations.md",
+"line": 792,
+"slug": "eu-digital-identity-wallet/eudi-lib-android-wallet-core",
+"pub_stars": null,
+"pub_lic": "**Apache-2.0** (`LICENSE@main`, 11,357 B)"
+},
+{
+"file": "repos/foundations.md",
+"line": 793,
+"slug": "eu-digital-identity-wallet/eudi-lib-jvm-openid4vci-kt",
+"pub_stars": null,
+"pub_lic": "**Apache-2.0** (`LICENSE@main`, 9,425 B)"
+},
+{
+"file": "repos/foundations.md",
+"line": 794,
+"slug": "eu-digital-identity-wallet/eudi-srv-pid-issuer",
+"pub_stars": null,
+"pub_lic": "**Apache-2.0** (`LICENSE@main`, 9,425 B)"
+},
+{
+"file": "repos/foundations.md",
+"line": 795,
+"slug": "procivis/one-core",
+"pub_stars": null,
+"pub_lic": "**Apache-2.0** (`LICENSE@main`, 11,340 B)"
+},
+{
+"file": "repos/foundations.md",
+"line": 796,
+"slug": "procivis/one-wallet",
+"pub_stars": null,
+"pub_lic": "**Apache-2.0** (`LICENSE@main`, 11,340 B)"
+},
+{
+"file": "repos/foundations.md",
+"line": 797,
+"slug": "Sphereon-Opensource/OID4VC",
+"pub_stars": null,
+"pub_lic": "**Apache-2.0** (`LICENSE@develop`, 11,347 B)"
+},
+{
+"file": "repos/foundations.md",
+"line": 798,
+"slug": "a-sit-plus/vck",
+"pub_stars": null,
+"pub_lic": "**Apache-2.0** (`LICENSE@main`, 11,358 B)"
+},
+{
+"file": "repos/foundations.md",
+"line": 799,
+"slug": "wwWallet/wallet-frontend",
+"pub_stars": null,
+"pub_lic": "**BSD** (`LICENSE@master`, 1,309 B)"
+},
+{
+"file": "repos/foundations.md",
+"line": 800,
+"slug": "impierce/openid4vc",
+"pub_stars": null,
+"pub_lic": "**Apache-2.0** (`LICENSE@main`, 9,145 B)"
+},
+{
+"file": "repos/foundations.md",
+"line": 801,
+"slug": "Lumoin/Verifiable",
+"pub_stars": null,
+"pub_lic": "**Apache-2.0** (`LICENSE@main`, 11,345 B)"
+},
+{
+"file": "repos/foundations.md",
+"line": 869,
+"slug": "GibbonEdu/core",
+"pub_stars": null,
+"pub_lic": null
+},
+{
+"file": "repos/foundations.md",
+"line": 872,
+"slug": "overhangio/tutor",
+"pub_stars": 28,
+"pub_lic": null
+},
+{
+"file": "repos/foundations.md",
+"line": 873,
+"slug": "odoo/odoo",
+"pub_stars": 60,
+"pub_lic": null
+},
+{
+"file": "repos/foundations.md",
+"line": 875,
+"slug": "THU-MAIC/OpenMAIC",
+"pub_stars": null,
+"pub_lic": null
+},
+{
+"file": "repos/foundations.md",
+"line": 876,
+"slug": "HKUDS/DeepTutor",
+"pub_stars": null,
+"pub_lic": null
+},
+{
+"file": "repos/foundations.md",
+"line": 914,
+"slug": "OpenOLAT/qtiworks",
+"pub_stars": null,
+"pub_lic": "**BSD-3-Clause** (`LICENSE.txt` `2,058 B`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 915,
+"slug": "trycua/cua",
+"pub_stars": 32616,
+"pub_lic": "**MIT** (`LICENSE.md` `1,069 B`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 916,
+"slug": "freeCodeCamp/freeCodeCamp",
+"pub_stars": 459299,
+"pub_lic": "**BSD-3-Clause** (`LICENSE.md` `1,513 B`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 917,
+"slug": "terracotta-education/terracotta",
+"pub_stars": 22,
+"pub_lic": "**Apache-2.0** (`11,323 B`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 918,
+"slug": "lplnufpi/essay-br",
+"pub_stars": 17,
+"pub_lic": "**MIT** (`1,114 B`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 919,
+"slug": "EduardoKrausME/moodle-local_mcp",
+"pub_stars": 2,
+"pub_lic": "\ud83d\udd34 **GPL-3.0** (`35,149 B`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 920,
+"slug": "kaveheng/GenAi-in-education",
+"pub_stars": 0,
+"pub_lic": "\ud83d\udd34 **CC BY 4.0** (`442 B`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 951,
+"slug": "tristcoil/hanabira.org",
+"pub_stars": 436,
+"pub_lic": "**MIT** \u2014 `main/LICENSE`, 1,061 B, `sha256\u2081\u2082 fb81a218ce1c`"
+},
+{
+"file": "repos/foundations.md",
+"line": 952,
+"slug": "aiktb/furiganamaker",
+"pub_stars": 312,
+"pub_lic": "**MIT** grant text, no title line \u2014 `main/LICENSE`, 1,095 B, `sha256\u2081\u2082 a13d4cbed2ef`"
+},
+{
+"file": "repos/foundations.md",
+"line": 953,
+"slug": "jamsinclair/open-anki-jlpt-decks",
+"pub_stars": 252,
+"pub_lic": "**MIT** \u2014 `main/LICENSE`, 1,071 B, `sha256\u2081\u2082 dfb974763030`"
+},
+{
+"file": "repos/foundations.md",
+"line": 954,
+"slug": "davidluzgouveia/kanji-data",
+"pub_stars": 244,
+"pub_lic": "**MIT** \u2014 `master/LICENSE`, 1,070 B, `sha256\u2081\u2082 4c4fe92a5adf`"
+},
+{
+"file": "repos/foundations.md",
+"line": 955,
+"slug": "AnchorI/jlpt-kanji-dictionary",
+"pub_stars": 44,
+"pub_lic": "**MIT** \u2014 `main/LICENSE`, 1,069 B, `sha256\u2081\u2082 d0ce81237400`"
+},
+{
+"file": "repos/foundations.md",
+"line": 956,
+"slug": "StudentSuite/awesome-study-resources",
+"pub_stars": 39,
+"pub_lic": "**MIT** \u2014 `main/LICENSE`, 1,069 B, `sha256\u2081\u2082 537c697c69a5`"
+},
+{
+"file": "repos/foundations.md",
+"line": 957,
+"slug": "SpiderIkun/korean-study-web",
+"pub_stars": 39,
+"pub_lic": "**MIT** \u2014 `main/LICENSE`, 1,084 B, `sha256\u2081\u2082 83bd45bc2c0c`"
+},
+{
+"file": "repos/foundations.md",
+"line": 958,
+"slug": "JUPASCal/JUPASCal.github.io",
+"pub_stars": 10,
+"pub_lic": "**MIT** \u2014 `main/LICENSE`, 1,065 B, `sha256\u2081\u2082 bf45e6d51cdf`"
+},
+{
+"file": "repos/foundations.md",
+"line": 959,
+"slug": "milesberry/networx",
+"pub_stars": 8,
+"pub_lic": "**MIT** \u2014 `main/LICENSE`, 1,068 B, `sha256\u2081\u2082 9cbc8ea74b49`"
+},
+{
+"file": "repos/foundations.md",
+"line": 960,
+"slug": "nsip/nias2",
+"pub_stars": 7,
+"pub_lic": "**Apache-2.0** \u2014 `master/LICENSE`, 11,371 B, `sha256\u2081\u2082 b0d65685ad40`"
+},
+{
+"file": "repos/foundations.md",
+"line": 961,
+"slug": "lerlerchan/Prompt-libraries-for-Malaysia-Educators",
+"pub_stars": 6,
+"pub_lic": "**MIT** \u2014 `main/LICENSE`, 1,102 B, `sha256\u2081\u2082 9bd543a84b9a`"
+},
+{
+"file": "repos/foundations.md",
+"line": 962,
+"slug": "l-yohai/suneung",
+"pub_stars": 5,
+"pub_lic": "**MIT** \u2014 `main/LICENSE`, 1,066 B, `sha256\u2081\u2082 fc5a26453227`"
+},
+{
+"file": "repos/foundations.md",
+"line": 963,
+"slug": "fattaillabs/mogo-print",
+"pub_stars": 1,
+"pub_lic": "**MIT** \u2014 `main/LICENSE`, 1,069 B, `sha256\u2081\u2082 f9479d61666b`"
+},
+{
+"file": "repos/foundations.md",
+"line": 978,
+"slug": "hasensaramii977-cpu/Grade-12-National-Exam-Training-Model",
+"pub_stars": 1,
+"pub_lic": "**CC0-1.0** (7,048 B \u00b7 `a2010f343487`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 979,
+"slug": "Nugestudent2026/EdTech",
+"pub_stars": 0,
+"pub_lic": "\ud83d\udd34 **This is `912-F2`'s false-positive control.** `p880` classified it **MIT**, because Boost's text contains MIT's exact trigger phrase. Boost is permissive and usable, but its **notice obligation differs from MIT's** \u2014 Boost 1.0 does not require reproducing the licence for binary-only distribution \u2014 so a studio reproducing MIT notices here is complying with the wrong grant."
+},
+{
+"file": "repos/foundations.md",
+"line": 1076,
+"slug": "Lumieducation/H5P-Nodejs-library",
+"pub_stars": 207,
+"pub_lic": "\ud83d\udd34 **GPL-3.0** (`master/LICENSE`, 35,146 B, `sha256\u2081\u2082 c53a65c2fd56` \u2014 *byte-identical to the PHP core's*)"
+},
+{
+"file": "repos/foundations.md",
+"line": 1077,
+"slug": "h5p/h5p-editor-php-library",
+"pub_stars": 83,
+"pub_lic": "\ud83d\udfe2 **MIT (code) + Apache-2.0 (bundled Open Sans font) \u2014 resolved `p917` at the FOURTH layer.** No licence payload (16\u00d73 ladder, all `404`); `package.json` says only `\"SEE LICENSE IN README.md\"`; the README then states *\"All code is licensed under MIT License\"* and *\"Open Sans font is licensed under Apache license, Version 2.0\"*. \ud83d\udd34 A `T25` split-by-asset-type, so one licence cell cannot express it"
+},
+{
+"file": "repos/foundations.md",
+"line": 1078,
+"slug": "Lumieducation/Lumi",
+"pub_stars": 200,
+"pub_lic": "\ud83d\udd34 **AGPL-3.0 \u2014 resolved `p917` at the MANIFEST layer** (`license` field of `package.json@main`). No licence payload (16\u00d73 ladder, all `404`). \ud83d\udfe1 A manifest *names* a grant without reproducing it (`905-G1`), so this is weaker than a header \u2014 but AGPL-3.0 named by the maintainer is enough to stop a closed derivative"
+},
+{
+"file": "repos/foundations.md",
+"line": 1114,
+"slug": "adaptlearning/adapt_framework",
+"pub_stars": 636,
+"pub_lic": "\ud83d\udd34 **GPL** (`master/LICENSE`, 35,129 B, `sha256\u2081\u2082 \u2014`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 1115,
+"slug": "adaptlearning/adapt_authoring",
+"pub_stars": 563,
+"pub_lic": "\ud83d\udd34 **GPL** (`master/LICENSE`, 35,140 B)"
+},
+{
+"file": "repos/foundations.md",
+"line": 1116,
+"slug": "course-code-framework/coursecode",
+"pub_stars": 7,
+"pub_lic": "\ud83d\udfe2 **MIT** (`main/LICENSE`, 1,069 B)"
+},
+{
+"file": "repos/foundations.md",
+"line": 1117,
+"slug": "course-code-framework/coursecode-desktop",
+"pub_stars": 5,
+"pub_lic": "\ud83d\udfe2 **MIT** (`main/LICENSE`, 1,069 B)"
+},
+{
+"file": "repos/foundations.md",
+"line": 1118,
+"slug": "QFlowLearn/qflow-author",
+"pub_stars": 0,
+"pub_lic": "\ud83d\udd34 **AGPL-3.0** (`main/LICENSE`, 34,020 B)"
+},
+{
+"file": "repos/foundations.md",
+"line": 1137,
+"slug": "bcgov/SIMS",
+"pub_stars": 29,
+"pub_lic": "\ud83d\udfe2 **Apache-2.0** (`main/LICENSE`, 11,358 B, `sha256\u2081\u2082 cfc7749b96f6`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 1138,
+"slug": "nomadicjosh/etsis",
+"pub_stars": 46,
+"pub_lic": "**MIT** (`main/LICENSE.md`, 1,114 B, `sha256\u2081\u2082 8f8a3e4bfffc`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 1139,
+"slug": "opensacorg/learning-blocks",
+"pub_stars": 6,
+"pub_lic": "**MIT** (`master/LICENSE`, 1,076 B, `sha256\u2081\u2082 06145c4016db`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 1160,
+"slug": "ctrlaltwill/LearnKit",
+"pub_stars": 185,
+"pub_lic": "**MIT** (1,068 B, `sha256\u2081\u2082 38a90d0f7738`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 1161,
+"slug": "kirill-markin/flashcards-open-source-app",
+"pub_stars": 119,
+"pub_lic": "**MIT** (1,070 B, `sha256\u2081\u2082 0e319ca9aaa9`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 1162,
+"slug": "pieralukasz/true-recall",
+"pub_stars": 68,
+"pub_lic": "**MIT** (1,070 B, `sha256\u2081\u2082 23444362494b`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 1180,
+"slug": "Apereo-Learning-Analytics-Initiative/OpenLRW",
+"pub_stars": 62,
+"pub_lic": "\ud83d\udfe2 **ECL-2.0** (field says `NOASSERTION`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 1181,
+"slug": "Apereo-Learning-Analytics-Initiative/OpenLRS",
+"pub_stars": 47,
+"pub_lic": null
+},
+{
+"file": "repos/foundations.md",
+"line": 1182,
+"slug": "rwthanalytics/moodle-local_learning_analytics",
+"pub_stars": 26,
+"pub_lic": "\ud83d\udd34 GPL-3.0 (`LICENSE@master`, 35,148 B)"
+},
+{
+"file": "repos/foundations.md",
+"line": 1183,
+"slug": "marceloschmitt/moodle-block_analytics_graphs",
+"pub_stars": 18,
+"pub_lic": "\ud83d\udfe2 **GPL-3.0-or-later \u2014 resolved `p917` at the FILE-HEADER layer.** Full GNU header block in `version.php@master`. \u26a0\ufe0f `LICENSE.md` exists only on branch `4.3`, and that is no longer the only evidence"
+},
+{
+"file": "repos/foundations.md",
+"line": 1184,
+"slug": "kirstykitto/CLAtoolkit",
+"pub_stars": 27,
+"pub_lic": "\ud83d\udd34 GPL-3.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 1185,
+"slug": "sandboxnu/graduatenu",
+"pub_stars": 28,
+"pub_lic": "\ud83d\udd34 GPL-3.0"
+},
+{
+"file": "repos/foundations.md",
+"line": 1186,
+"slug": "Longhorn-Developers/Degree-Audit-Plus",
+"pub_stars": 18,
+"pub_lic": "\ud83d\udfe2 **MIT** (1,076 B, `sha256\u2081\u2082 27477ecee35a`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 1187,
+"slug": "chtzvt/PyEdsby",
+"pub_stars": 11,
+"pub_lic": "\ud83d\udfe2 **MIT**"
+},
+{
+"file": "repos/foundations.md",
+"line": 1188,
+"slug": "sinothando/student-early-warning-system",
+"pub_stars": 11,
+"pub_lic": "\ud83d\udfe2 **MIT**"
+},
+{
+"file": "repos/foundations.md",
+"line": 1224,
+"slug": "parthdhanani/scorm-kit",
+"pub_stars": null,
+"pub_lic": "**MIT** (`LICENSE@main`, 1,070 B, `sha256\u2081\u2082 51b37fff352e`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 1225,
+"slug": "parthdhanani/storycraft",
+"pub_stars": null,
+"pub_lic": "**MIT** (`LICENSE@main`, 1,070 B, **identical** `sha256\u2081\u2082 51b37fff352e`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 1226,
+"slug": "wonmortech/sanad",
+"pub_stars": null,
+"pub_lic": "**Apache-2.0** (`LICENSE@main`, 11,337 B, `sha256\u2081\u2082 2dfd7238870e`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 1227,
+"slug": "parler-haut-interagir-librement/open-badges-bundle",
+"pub_stars": null,
+"pub_lic": "**MIT** (`LICENSE@main`, 1,155 B, `sha256\u2081\u2082 2da07e888147`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 1228,
+"slug": "parler-haut-interagir-librement/certificates-bundle",
+"pub_stars": null,
+"pub_lic": "**MIT** (identical grant, `sha256\u2081\u2082 2da07e888147`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 1229,
+"slug": "missing-elements/h5p-toolkit",
+"pub_stars": null,
+"pub_lic": "**MIT** (`LICENSE@main`, 1,073 B, `sha256\u2081\u2082 18f305a9c256`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 1230,
+"slug": "jonsorr/D2L_Brightspace_APIs",
+"pub_stars": null,
+"pub_lic": "**MIT** (`LICENSE@main`, 1,074 B, `sha256\u2081\u2082 9d02fbcfc698`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 1231,
+"slug": "openpatch/bitflow",
+"pub_stars": null,
+"pub_lic": "**MIT** (`LICENSE.md@main`, 1,069 B, `sha256\u2081\u2082 6c8866c27129`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 1232,
+"slug": "mrlvsb/kelvin",
+"pub_stars": null,
+"pub_lic": "**MIT** (`LICENSE@master`, 1,063 B, `sha256\u2081\u2082 d94b8adebb28`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 1233,
+"slug": "artevelde-uas/canvas-lms-app",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe2 **ISC** (`LICENSE@main`, 771 B, `sha256\u2081\u2082 4291d4cd3e71`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 1234,
+"slug": "dbosk/canvaslms",
+"pub_stars": null,
+"pub_lic": "**MIT** (`LICENSE@master`, 1,074 B, `sha256\u2081\u2082 37f4cab1bcf3`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 1244,
+"slug": "10kH/MisconceptDialogue",
+"pub_stars": null,
+"pub_lic": "**MIT** (`LICENSE@main`, 1,129 B, `sha256\u2081\u2082 1d987d9bdc2a`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 1246,
+"slug": "online-ml/river",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe2 **BSD-3-Clause** (`LICENSE@main`, 1,528 B, `sha256\u2081\u2082 e87f2c8f1ba6`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 1247,
+"slug": "cognitive-engineering-lab/mdbook-quiz",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe2 **`MIT OR Apache-2.0`** (disjunctive \u2014 **no root `LICENSE`**; `LICENSE-MIT` 1,035 B `sha256\u2081\u2082 1847e0e06981` + `LICENSE-APACHE` 10,172 B `sha256\u2081\u2082 59899c6091b5`; `Cargo.toml@main` declares `license = \"MIT OR Apache-2.0\"`, all byte-read `p928`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 1248,
+"slug": "david-04/quiz-mate",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe2 **ISC** (`LICENSE@main`, 779 B, `sha256\u2081\u2082 80724804a81d`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 1249,
+"slug": "cmlonder/notebooklm-chunker",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe2 **MIT** (`LICENSE@main`, 1,065 B, `sha256\u2081\u2082 19ce1724bc9e`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 1251,
+"slug": "mcgrizzz/Yomine",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe2 **`MIT OR Apache-2.0`** (disjunctive \u2014 **no root `LICENSE`**; `LICENSE-MIT` 1,065 B `sha256\u2081\u2082 116f5aa90c69` + `LICENSE-APACHE` 11,357 B `sha256\u2081\u2082 c71d239df917`; `Cargo.toml@main` declares `license = \"MIT OR Apache-2.0\"`, byte-read `p928`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 1252,
+"slug": "mistval/kotoba",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe2 **MIT** (`LICENSE@master`, 1,064 B, `sha256\u2081\u2082 32aad86d5c86`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 1253,
+"slug": "14flavius/GradeShelf",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe2 **MIT** (`LICENSE@main`, 1,070 B, `sha256\u2081\u2082 a0fab3c5090c`)"
+},
+{
+"file": "repos/foundations.md",
+"line": 1254,
+"slug": "houselearning/home",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe2 **Apache-2.0** (`LICENSE@main`, 11,357 B, `sha256\u2081\u2082 c71d239df917` \u2014 byte-identical to the canonical Apache text)"
+},
+{
+"file": "repos/foundations.md",
+"line": 1450,
+"slug": "crownpku/Awesome-Chinese-NLP",
+"pub_stars": 7920,
+"pub_lic": "\ud83d\udfe2 **Apache-2.0** \u2014 11,357 B, `c71d239df917`"
+},
+{
+"file": "repos/foundations.md",
+"line": 1451,
+"slug": "wannaphong/Awesome-Lao-NLP",
+"pub_stars": 19,
+"pub_lic": "\ud83d\udfe2 **MIT**"
+},
+{
+"file": "repos/foundations.md",
+"line": 1457,
+"slug": "taishi-i/awesome-japanese-nlp-resources",
+"pub_stars": 1031,
+"pub_lic": "\ud83d\udfe1 **CC0-1.0** \u2014 7,048 B, `a2010f343487`"
+},
+{
+"file": "repos/foundations.md",
+"line": 1458,
+"slug": "bilalabic/awesome-turkish-datasets",
+"pub_stars": 9,
+"pub_lic": "\ud83d\udfe1 **CC-BY-4.0** \u2014 18,657 B, `9ba9550ad484`"
+},
+{
+"file": "repos/foundations.md",
+"line": 1459,
+"slug": "JousiaPiha/awesome-finnish-nlp",
+"pub_stars": 5,
+"pub_lic": "\ud83d\udfe1 **CC0-1.0** \u2014 same payload as `taishi-i`"
+},
+{
+"file": "repos/foundations.md",
+"line": 1460,
+"slug": "tuanone123/awesome-vietnamese-llm-dataset",
+"pub_stars": 0,
+"pub_lic": "\ud83d\udfe1 **CC0-1.0** \u2014 6,460 B, `f0f96b4f190e`"
+},
+{
+"file": "repos/foundations.md",
+"line": 1461,
+"slug": "jnehring/awesome-low-resource-languages",
+"pub_stars": null,
+"pub_lic": "\ud83d\udd34 **CC-BY-SA-4.0 \u2014 IN PROSE ONLY, no `LICENSE` file**"
+},
+{
+"file": "verticals/solutions.md",
+"line": 40,
+"slug": "moodle/moodle",
+"pub_stars": null,
+"pub_lic": "GPL-3.0 (`COPYING.txt`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 41,
+"slug": "openedx/openedx-platform",
+"pub_stars": null,
+"pub_lic": "AGPL-3.0"
+},
+{
+"file": "verticals/solutions.md",
+"line": 42,
+"slug": "instructure/canvas-lms",
+"pub_stars": null,
+"pub_lic": "AGPL-3.0"
+},
+{
+"file": "verticals/solutions.md",
+"line": 43,
+"slug": "ls1intum/Artemis",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "verticals/solutions.md",
+"line": 44,
+"slug": "learningequality/kolibri",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "verticals/solutions.md",
+"line": 45,
+"slug": "chamilo/chamilo-lms",
+"pub_stars": null,
+"pub_lic": "GPL-3.0"
+},
+{
+"file": "verticals/solutions.md",
+"line": 46,
+"slug": "ILIAS-eLearning/ILIAS",
+"pub_stars": null,
+"pub_lic": "GPL-3.0"
+},
+{
+"file": "verticals/solutions.md",
+"line": 47,
+"slug": "sakaiproject/sakai",
+"pub_stars": null,
+"pub_lic": null
+},
+{
+"file": "verticals/solutions.md",
+"line": 48,
+"slug": "OpenOLAT/OpenOLAT",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "verticals/solutions.md",
+"line": 49,
+"slug": "oppia/oppia",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "verticals/solutions.md",
+"line": 50,
+"slug": "frappe/lms",
+"pub_stars": null,
+"pub_lic": "AGPL-3.0"
+},
+{
+"file": "verticals/solutions.md",
+"line": 51,
+"slug": "Selleo/mentingo",
+"pub_stars": null,
+"pub_lic": "**MIT** (`LICENSE@main`, `Copyright (c) 2024 Selleo`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 52,
+"slug": "pupilfirst/pupilfirst",
+"pub_stars": null,
+"pub_lic": "**MIT** \u2014 multi-grant, byte-read p899 (`LICENSE@master`, 1,684 B, `sha256\u2081\u2082 bda0aa6d49f2`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 53,
+"slug": "overhangio/tutor",
+"pub_stars": null,
+"pub_lic": "AGPL-3.0"
+},
+{
+"file": "verticals/solutions.md",
+"line": 54,
+"slug": "youufis/SmartKBS",
+"pub_stars": null,
+"pub_lic": "**AGPL-3.0** (byte-read `master/LICENSE`, 34,833 B, `sha256\u2081\u2082 c017a2e33418`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 67,
+"slug": "GuanmingQiao/POLITEMALL-MCP",
+"pub_stars": null,
+"pub_lic": "**MIT** (byte-read)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 68,
+"slug": "andrsnrua/universidad-pacifico-mcp",
+"pub_stars": null,
+"pub_lic": "**ISC** (byte-read)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 69,
+"slug": "bolgerru/blackboard-mcp",
+"pub_stars": null,
+"pub_lic": null
+},
+{
+"file": "verticals/solutions.md",
+"line": 70,
+"slug": "cculb/schoolconnect",
+"pub_stars": null,
+"pub_lic": "**MIT** (byte-read)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 106,
+"slug": "academico-sis/academico",
+"pub_stars": null,
+"pub_lic": "**MIT**"
+},
+{
+"file": "verticals/solutions.md",
+"line": 107,
+"slug": "Gego-K12/gegok12",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "verticals/solutions.md",
+"line": 108,
+"slug": "francoisjacquet/rosariosis",
+"pub_stars": null,
+"pub_lic": "GPL-2.0"
+},
+{
+"file": "verticals/solutions.md",
+"line": 109,
+"slug": "GibbonEdu/core",
+"pub_stars": null,
+"pub_lic": "GPL-3.0"
+},
+{
+"file": "verticals/solutions.md",
+"line": 110,
+"slug": "OS4ED/openSIS-Classic",
+"pub_stars": null,
+"pub_lic": "\ud83d\udd34 **GPL-2.0 \u2014 resolved p897.** Byte-read at **`master/docs/License.txt`** (17,286 B, `sha256\u2081\u2082 224ac3d403e3`); the `README.md` links it. GitHub's SPDX still reports `NONE` because the file is not at the repository root, and this KB previously recorded it as *\"none declared\"* for the same reason. **The licence is known; it is strong copyleft.** Fine to deploy and host for a client; a proprietary derivative is not."
+},
+{
+"file": "verticals/solutions.md",
+"line": 111,
+"slug": "portabilis/i-educar",
+"pub_stars": null,
+"pub_lic": "GPL-2.0"
+},
+{
+"file": "verticals/solutions.md",
+"line": 112,
+"slug": "openeducat/openeducat_erp",
+"pub_stars": null,
+"pub_lic": "LGPL-3.0 (byte-verified p891 from `LICENSE@master`; the GitHub API reports `NOASSERTION` because the file is a preamble plus the GPL text, not an SPDX-matchable template)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 113,
+"slug": "odoo/odoo",
+"pub_stars": null,
+"pub_lic": "LGPL-3.0"
+},
+{
+"file": "verticals/solutions.md",
+"line": 114,
+"slug": "frappe/education",
+"pub_stars": null,
+"pub_lic": "GPL-3.0 (`license.txt`: \"License: GNU GPL V3\")"
+},
+{
+"file": "verticals/solutions.md",
+"line": 115,
+"slug": "UniTime/unitime",
+"pub_stars": null,
+"pub_lic": "**Apache-2.0** (`LICENSE@master`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 116,
+"slug": "GEOSOFT-GLOBAL/timetablely",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "verticals/solutions.md",
+"line": 117,
+"slug": "portabilis/i-diario",
+"pub_stars": null,
+"pub_lic": "**AGPL-3.0** \u2014 \ud83d\udd34 **byte-read correction, p896**"
+},
+{
+"file": "verticals/solutions.md",
+"line": 118,
+"slug": "Antonio-Neves/Gestao-Escolar",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "verticals/solutions.md",
+"line": 119,
+"slug": "bcgov/SIMS",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe2 **Apache-2.0** (byte-read `p915`, `main/LICENSE`, 11,358 B, `sha256\u2081\u2082 cfc7749b96f6`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 120,
+"slug": "nomadicjosh/etsis",
+"pub_stars": null,
+"pub_lic": "**MIT** (byte-read `p915`, `main/LICENSE.md`, 1,114 B, `sha256\u2081\u2082 8f8a3e4bfffc`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 121,
+"slug": "opensacorg/learning-blocks",
+"pub_stars": null,
+"pub_lic": "**MIT** (byte-read `p915`, `master/LICENSE`, 1,076 B, `sha256\u2081\u2082 06145c4016db`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 157,
+"slug": "AnubisLMS/Anubis",
+"pub_stars": null,
+"pub_lic": "**MIT**"
+},
+{
+"file": "verticals/solutions.md",
+"line": 158,
+"slug": "Submitty/Submitty",
+"pub_stars": null,
+"pub_lic": "**BSD-3-Clause** (`LICENSE.md@main`, 1,542 B, `sha256\u2081\u2082 c123708cb4ef`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 159,
+"slug": "PrairieLearn/PrairieLearn",
+"pub_stars": null,
+"pub_lic": "\ud83d\udd34 **AGPL-3.0 Community Edition + proprietary Enterprise Edition. NOT MIT \u2014 corrected p899**"
+},
+{
+"file": "verticals/solutions.md",
+"line": 160,
+"slug": "autolab/Autolab",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "verticals/solutions.md",
+"line": 161,
+"slug": "pawtograder/platform",
+"pub_stars": null,
+"pub_lic": "\ud83d\udd34 **GPL-3.0-or-later** \u2014 SPDX reports `NOASSERTION`; byte-read p899 (`LICENSE@main`, 658 B, `sha256\u2081\u2082 61d7698783f4`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 171,
+"slug": "DSpace/DSpace",
+"pub_stars": null,
+"pub_lic": "BSD-3-Clause"
+},
+{
+"file": "verticals/solutions.md",
+"line": 172,
+"slug": "Koha-Community/Koha",
+"pub_stars": null,
+"pub_lic": "GPL-3.0"
+},
+{
+"file": "verticals/solutions.md",
+"line": 173,
+"slug": "pkp/ojs",
+"pub_stars": null,
+"pub_lic": "GPL-3.0"
+},
+{
+"file": "verticals/solutions.md",
+"line": 179,
+"slug": "jitsi/jitsi-meet",
+"pub_stars": null,
+"pub_lic": "\ud83d\udd34 **CONJUNCTIVE: Apache-2.0 + MIT \u2014 cell corrected `p920`** (`master/LICENSE`, 12,596 B, `sha256\u2081\u2082 eae52e200cd8`, re-read `p920`). `p913` byte-read the conjunction and corrected it in `repos/foundations.md` only; this cell carried a bare `Apache-2.0` for seven passes. **The notice obligation is two, not one** \u2014 see `920-F3`"
+},
+{
+"file": "verticals/solutions.md",
+"line": 180,
+"slug": "bigbluebutton/bigbluebutton",
+"pub_stars": null,
+"pub_lic": "LGPL"
+},
+{
+"file": "verticals/solutions.md",
+"line": 181,
+"slug": "opencast/opencast",
+"pub_stars": null,
+"pub_lic": null
+},
+{
+"file": "verticals/solutions.md",
+"line": 182,
+"slug": "OpenVidu/openvidu",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "verticals/solutions.md",
+"line": 183,
+"slug": "netless-io/flat",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "verticals/solutions.md",
+"line": 184,
+"slug": "openfun/marsha",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "verticals/solutions.md",
+"line": 194,
+"slug": "jupyterhub/binderhub",
+"pub_stars": null,
+"pub_lic": "**BSD-3-Clause** (`main/LICENSE`, `1,522 B`, `sha256\u2081\u2082 611f531642d5`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 195,
+"slug": "jupyterhub/jupyterhub",
+"pub_stars": null,
+"pub_lic": "BSD-3-Clause"
+},
+{
+"file": "verticals/solutions.md",
+"line": 196,
+"slug": "nbgallery/nbgallery",
+"pub_stars": null,
+"pub_lic": "**MIT** (`master/LICENSE`, `1,071 B`, `sha256\u2081\u2082 7900749dcb3b`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 210,
+"slug": "ankitects/anki",
+"pub_stars": null,
+"pub_lic": "AGPL-3.0"
+},
+{
+"file": "verticals/solutions.md",
+"line": 213,
+"slug": "CTFd/CTFd",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "verticals/solutions.md",
+"line": 214,
+"slug": "Udayraj123/OMRChecker",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "verticals/solutions.md",
+"line": 215,
+"slug": "open-scratch/teaching-open",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "verticals/solutions.md",
+"line": 216,
+"slug": "migueldsants/OpENEM",
+"pub_stars": null,
+"pub_lic": "**AGPL-3.0** (byte-read `main/LICENSE`, 34,523 B)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 217,
+"slug": "UnitedOpen-Source/microHelium",
+"pub_stars": null,
+"pub_lic": "**AGPL-3.0** (byte-read `master/LICENSE`, 34,523 B)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 226,
+"slug": "iiab/iiab",
+"pub_stars": null,
+"pub_lic": "GPL-2.0"
+},
+{
+"file": "verticals/solutions.md",
+"line": 227,
+"slug": "kiwix/kiwix-tools",
+"pub_stars": null,
+"pub_lic": "GPL-3.0"
+},
+{
+"file": "verticals/solutions.md",
+"line": 228,
+"slug": "Crosstalk-Solutions/project-nomad",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "verticals/solutions.md",
+"line": 230,
+"slug": "elimu-ai/webapp",
+"pub_stars": null,
+"pub_lic": "MIT (byte-read `main/LICENSE`, 1,065 B)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 231,
+"slug": "SalehGNUTUX/GT-MISHKATKIDS",
+"pub_stars": null,
+"pub_lic": "**GPL-3.0** (byte-read `main/LICENSE`, 34,819 B)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 237,
+"slug": "apereo/cas",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "verticals/solutions.md",
+"line": 238,
+"slug": "apereo/phpCAS",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "verticals/solutions.md",
+"line": 239,
+"slug": "apereo/java-cas-client",
+"pub_stars": null,
+"pub_lic": "\ud83d\udd34 **CONJUNCTIVE: Apache-2.0 + JA-SIG BSD \u2014 cell corrected `p920`** (`master/LICENSE`, 2,321 B, `sha256\u2081\u2082 6c21b465e3a0`, re-read `p920`; the search channel says `NOASSERTION`). `p913` corrected this in `repos/foundations.md` and not here. **The notice obligation is two** \u2014 see `920-F3`"
+},
+{
+"file": "verticals/solutions.md",
+"line": 240,
+"slug": "openedx/openedx-aspects",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "verticals/solutions.md",
+"line": 241,
+"slug": "openfun/richie",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "verticals/solutions.md",
+"line": 243,
+"slug": "appsmithorg/appsmith",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "verticals/solutions.md",
+"line": 255,
+"slug": "moodlehq/moodleapp",
+"pub_stars": null,
+"pub_lic": "**Apache-2.0**"
+},
+{
+"file": "verticals/solutions.md",
+"line": 256,
+"slug": "openedx/openedx-app-android",
+"pub_stars": null,
+"pub_lic": "**Apache-2.0**"
+},
+{
+"file": "verticals/solutions.md",
+"line": 257,
+"slug": "openedx/openedx-app-ios",
+"pub_stars": null,
+"pub_lic": "**Apache-2.0**"
+},
+{
+"file": "verticals/solutions.md",
+"line": 258,
+"slug": "oppia/oppia-android",
+"pub_stars": null,
+"pub_lic": "Apache-2.0"
+},
+{
+"file": "verticals/solutions.md",
+"line": 273,
+"slug": "kamlendras/OpenProctor",
+"pub_stars": null,
+"pub_lic": "**AGPL-3.0**"
+},
+{
+"file": "verticals/solutions.md",
+"line": 274,
+"slug": "SriSatyaLokesh/pariksha",
+"pub_stars": null,
+"pub_lic": "**AGPL-3.0**"
+},
+{
+"file": "verticals/solutions.md",
+"line": 275,
+"slug": "sudosylabs/proctor",
+"pub_stars": null,
+"pub_lic": "**AGPL-3.0**"
+},
+{
+"file": "verticals/solutions.md",
+"line": 276,
+"slug": "amaanwarsi/Proctora",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "verticals/solutions.md",
+"line": 277,
+"slug": "code-by-abrar/Online-Proctoring-system",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "verticals/solutions.md",
+"line": 278,
+"slug": "ganesh-786/Proctor",
+"pub_stars": null,
+"pub_lic": "MIT"
+},
+{
+"file": "verticals/solutions.md",
+"line": 300,
+"slug": "tanzir71/tinyproctorjs",
+"pub_stars": null,
+"pub_lic": "**MIT** (1,085 B, `cc1b9d2387e8`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 301,
+"slug": "SHUBHJAIN139/Local-Exam-Proctoring-Engine",
+"pub_stars": null,
+"pub_lic": "**MIT** (1,067 B, `91a47a93bbca`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 302,
+"slug": "Aryansh909/Examshield-AI",
+"pub_stars": null,
+"pub_lic": "**MIT** (1,070 B, `75107b398587`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 320,
+"slug": "withmarbleapp/os-taxonomy",
+"pub_stars": null,
+"pub_lic": "**ODbL-1.0**"
+},
+{
+"file": "verticals/solutions.md",
+"line": 321,
+"slug": "DeanChensj/jiangshan-map",
+"pub_stars": null,
+"pub_lic": "GPL-3.0"
+},
+{
+"file": "verticals/solutions.md",
+"line": 374,
+"slug": "pacewisdomhq/TutorLoom",
+"pub_stars": 98,
+"pub_lic": "**Apache-2.0** (11,361 B, `a7f87303f2e9`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 375,
+"slug": "iblai/lms",
+"pub_stars": 88,
+"pub_lic": "MIT (1,062 B, `d9d62c94b512`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 376,
+"slug": "tutors-sdk/tutors",
+"pub_stars": 125,
+"pub_lic": "MIT (1,087 B, `b418e808b99a`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 377,
+"slug": "haxtheweb/haxcms-php",
+"pub_stars": 130,
+"pub_lic": "Apache-2.0 (11,362 B, `b662f44e55e8`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 378,
+"slug": "inducer/relate",
+"pub_stars": 439,
+"pub_lic": "**MIT/X Consortium** (1,144 B, `e6c20b652766`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 379,
+"slug": "thm-mni-ii/feedbacksystem",
+"pub_stars": 24,
+"pub_lic": "Apache-2.0 (10,784 B, `824e945ea176`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 380,
+"slug": "SJRiz/pytogether",
+"pub_stars": 262,
+"pub_lic": "MIT (1,072 B, `c8df073d1320`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 388,
+"slug": "learnhouse/learnhouse",
+"pub_stars": 2483,
+"pub_lic": "**AGPL-3.0** (34,522 B, `20b067f86de3`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 389,
+"slug": "codelitdev/courselit",
+"pub_stars": 1304,
+"pub_lic": "**AGPL-3.0** (34,142 B, `9c0cb21c26d8`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 390,
+"slug": "claroline/Claroline",
+"pub_stars": 349,
+"pub_lic": "**AGPL-3.0** (34,615 B, `426f3f93060d`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 391,
+"slug": "elmsln/elmsln",
+"pub_stars": 253,
+"pub_lic": "GPL-3.0 (35,192 B, `78ccc98f3768`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 392,
+"slug": "xiaochong0302/course-tencent-cloud",
+"pub_stars": 1177,
+"pub_lic": "GPL-2.0 (18,430 B, `b0f38548973d`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 393,
+"slug": "Automattic/sensei",
+"pub_stars": 599,
+"pub_lic": "GPL-2.0 (18,091 B, `f9c375a1be4a`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 394,
+"slug": "gocodebox/lifterlms",
+"pub_stars": 211,
+"pub_lic": "GPL-3.0 (35,140 B, `b98fbb37db5b`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 395,
+"slug": "ucfopen/UDOIT",
+"pub_stars": 119,
+"pub_lic": "GPL-3.0 (35,146 B, `c53a65c2fd56`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 396,
+"slug": "microsoft/o365-moodle",
+"pub_stars": 216,
+"pub_lic": "GPL-3.0 (35,146 B, `c53a65c2fd56`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 402,
+"slug": "CaviraOSS/PageLM",
+"pub_stars": 2070,
+"pub_lic": null
+},
+{
+"file": "verticals/solutions.md",
+"line": 403,
+"slug": "chadyi/StudyOnTV",
+"pub_stars": 1712,
+"pub_lic": null
+},
+{
+"file": "verticals/solutions.md",
+"line": 404,
+"slug": "LearnPress/learnpress",
+"pub_stars": 275,
+"pub_lic": null
+},
+{
+"file": "verticals/solutions.md",
+"line": 405,
+"slug": "Azure/Moodle",
+"pub_stars": 186,
+"pub_lic": "Not refused on the grant (MIT, 1,090 B, `91f7258203fd`) \u2014 it is **deployment tooling for Moodle**, so it belongs beside the Moodle row above rather than as a platform of its own. Worth knowing it exists before anyone rebuilds it."
+},
+{
+"file": "verticals/solutions.md",
+"line": 415,
+"slug": "tep00018/LEA-platform",
+"pub_stars": null,
+"pub_lic": "**Apache-2.0**, byte-read `main/LICENSE.txt` (11,378 B, `sha256\u2081\u2082 d17f7fd47c98`) \u2014 \ud83d\udd35 note the path: `LICENSE.txt`, which an 8-path probe keyed to `LICENSE` alone will miss"
+},
+{
+"file": "verticals/solutions.md",
+"line": 416,
+"slug": "Noggin-Labs/Noggin",
+"pub_stars": null,
+"pub_lic": "**Apache-2.0**, byte-read `main/LICENSE` (11,357 B, `sha256\u2081\u2082 c71d239df917`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 475,
+"slug": "uemanet/harpia",
+"pub_stars": null,
+"pub_lic": "**MIT** (`LICENSE@main`, 1,063 B, `sha256\u2081\u2082 afa9cfe1dcb6`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 476,
+"slug": "ahamana/canvas-lms-docker",
+"pub_stars": null,
+"pub_lic": "**MIT** (`LICENSE@main`, 1,071 B, `sha256\u2081\u2082 21ba971d464e`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 539,
+"slug": "apache/openmeetings",
+"pub_stars": 691,
+"pub_lic": "**Apache-2.0** (`50,907 B`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 540,
+"slug": "Open-TutorAi/open-tutor-ai-CE",
+"pub_stars": 119,
+"pub_lic": "**BSD-3-Clause** (`1,531 B`, three numbered conditions read)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 541,
+"slug": "classroomio/classroomio",
+"pub_stars": 1750,
+"pub_lic": "\ud83d\udd34 **AGPL-3.0** (`34,523 B`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 542,
+"slug": "FenixEdu/fenixedu-academic",
+"pub_stars": 175,
+"pub_lic": "\ud83d\udd34 **LGPL-3.0** (`7,652 B`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 543,
+"slug": "turnkeylinux-apps/canvas",
+"pub_stars": 13,
+"pub_lic": "\ud83d\udd34 **no licence file** (`README.rst` `200`; Canvas itself is AGPL-3.0)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 603,
+"slug": "tristcoil/hanabira.org",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe2 **MIT** \u2014 `main/LICENSE`, 1,061 B, `sha256\u2081\u2082 fb81a218ce1c`"
+},
+{
+"file": "verticals/solutions.md",
+"line": 604,
+"slug": "DeJavi08/cat-snbt-skd",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe2 **MIT** \u2014 `main/LICENSE`, 1,077 B, `sha256\u2081\u2082 e6e7edb3e2b8`"
+},
+{
+"file": "verticals/solutions.md",
+"line": 605,
+"slug": "SISUBEN/DSE-ICT-Master",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe2 **MIT** \u2014 `main/LICENSE`, 1,065 B, `sha256\u2081\u2082 c20159ff7a53`"
+},
+{
+"file": "verticals/solutions.md",
+"line": 606,
+"slug": "Goodbilly/BillyStreet-HKDSE-Math-Mock-Platform",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe1 **MIT grant text, 1,059 B, `sha256\u2081\u2082 cd35957e7f35` \u2014 but the copyright holder line reads `GitHub, Inc.`** (`910-G2`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 626,
+"slug": "Kirchhoff-dev/cbt-app-updates",
+"pub_stars": 1,
+"pub_lic": "\ud83d\udfe2 MIT (1,071 B \u00b7 `9f194f984482`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 627,
+"slug": "idrismukthar/TTL_CBT",
+"pub_stars": 1,
+"pub_lic": "\ud83d\udfe2 MIT (1,087 B \u00b7 `30062651a966`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 628,
+"slug": "Toochidennis/cbt-app",
+"pub_stars": 1,
+"pub_lic": "\ud83d\udfe2 MIT (1,073 B \u00b7 `093eb2efcb60`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 629,
+"slug": "Dramoscuello/simic",
+"pub_stars": 2,
+"pub_lic": "\ud83d\udfe2 Apache-2.0 (11,357 B \u00b7 `c71d239df917`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 733,
+"slug": "RohanMuppa/brightspace-mcp-server",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe2 **Closed this pass.** https://github.com/RohanMuppa/brightspace-mcp-server \u2014 **MIT** (`main/LICENSE`, 1,068 B, `sha256\u2081\u2082 047079fbd491`), 68 \u2605, pushed 2026-11-18, TypeScript. States it works with **any** school rather than one tenant. `POLITEMALL-MCP` remains the better reference for a *Singapore* engagement because it already speaks to two national systems."
+},
+{
+"file": "verticals/solutions.md",
+"line": 753,
+"slug": "adaptlearning/adapt_authoring",
+"pub_stars": null,
+"pub_lic": "\ud83d\udd34 **GPL** (byte-read, 35,140 B)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 754,
+"slug": "course-code-framework/coursecode",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe2 **MIT** both halves (1,069 B each)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 767,
+"slug": "QkeleQ10/Study-Tools",
+"pub_stars": null,
+"pub_lic": "\ud83d\udd34 **AGPL-3.0** (byte-read `p915`, `main/LICENSE`, **34,523 B** \u2014 \ud83d\udfe2 exactly `p913`'s measured true-AGPL byte count, a positive control)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 790,
+"slug": "openbadgefactory/salava",
+"pub_stars": 22,
+"pub_lic": "\ud83d\udfe2 **Apache-2.0** (9,720 B, `sha256\u2081\u2082 e9852865aedf`)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 791,
+"slug": "gdgguadalajara/open-badges-platform",
+"pub_stars": 9,
+"pub_lic": "\ud83d\udd34 **AGPL-3.0**"
+},
+{
+"file": "verticals/solutions.md",
+"line": 792,
+"slug": "totara/openbadges",
+"pub_stars": 26,
+"pub_lic": "\ud83d\udd34 GPL-3.0"
+},
+{
+"file": "verticals/solutions.md",
+"line": 793,
+"slug": "1EdTech/openbadges-specification",
+"pub_stars": 206,
+"pub_lic": null
+},
+{
+"file": "verticals/solutions.md",
+"line": 883,
+"slug": "ahmetaa/zemberek-nlp",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe2 Apache-2.0"
+},
+{
+"file": "verticals/solutions.md",
+"line": 884,
+"slug": "CAMeL-Lab/camel_tools",
+"pub_stars": null,
+"pub_lic": "\ud83d\udfe2 MIT"
+},
+{
+"file": "verticals/solutions.md",
+"line": 906,
+"slug": "wannaphong/LaoNLP",
+"pub_stars": null,
+"pub_lic": "**Kolibri** (MIT, offline) in Cambodia or Laos"
+},
+{
+"file": "verticals/solutions.md",
+"line": 907,
+"slug": "ufal/udpipe",
+"pub_stars": null,
+"pub_lic": "**Moodle** or **ILIAS** (GPL-3.0) across Central Europe"
+},
+{
+"file": "verticals/solutions.md",
+"line": 908,
+"slug": "mikahama/uralicNLP",
+"pub_stars": null,
+"pub_lic": "https://github.com/mikahama/uralicNLP (Apache-2.0) \u00b7 https://github.com/huspacy/huspacy (Apache-2.0)"
+},
+{
+"file": "verticals/solutions.md",
+"line": 909,
+"slug": "ljvmiranda921/calamanCy",
+"pub_stars": null,
+"pub_lic": "https://github.com/ljvmiranda921/calamanCy (MIT), drops into an existing spaCy pipeline"
+},
+{
+"file": "verticals/solutions.md",
+"line": 910,
+"slug": "sagorbrur/bnlp",
+"pub_stars": null,
+"pub_lic": "https://github.com/sagorbrur/bnlp (MIT), 313 \u2605"
+},
+{
+"file": "verticals/solutions.md",
+"line": 911,
+"slug": "sefineh-ai/Amharic-Tokenizer",
+"pub_stars": null,
+"pub_lic": "https://github.com/sefineh-ai/Amharic-Tokenizer (MIT)"
+}
+]

@@ -1,0 +1,8 @@
+published_address	git_ls_remote_HEAD	search_at_published	canonical_address	canonical_HEAD	fork	stars	licence	pushed	verdict
+mwouts/jupytext	6ce576ffe84e	422 / absent	jupytext/jupytext	6ce576ffe84e	False	7281	MIT	2026-11-18	RENAMED - identical HEAD, not a fork
+digitalcredentials/learner-credential-wallet	1c46a82ba384	422 / absent	ryjones/learner-credential-wallet	1c46a82ba384	False	91	MIT	2026-10-15	RENAMED - identical HEAD, not a fork
+jnehring/awesome-low-resource-languages	deb7535fd8a0	422 / absent	commoncrawl/awesome-low-resource-languages	deb7535fd8a0	False	2	NONE	2026-03-16	RENAMED - identical HEAD, not a fork
+tokenaii/horus-taleeq-0.2b-base	f7a770028979	422 / absent	tokenaillc/Horus-Taleeq-0.2B-Base	f7a770028979	False	1	MIT	2026-09-22	RENAMED - identical HEAD, not a fork
+DaRL-GenAI/instructional_agents	49f6bcf07119	422 / absent	(none found)	-	-	-	-	-	LIVE BUT UNINDEXED - owner namespace indexed (15 repos)
+OpenOLAT/qtiworks	57cdf4affa26	422 / absent	(none found)	-	-	-	-	-	LIVE BUT UNINDEXED - owner namespace indexed (7 repos)
+mitodl/open-learning-ai-tutor	95558e47e966	422 / absent	(none found)	-	-	-	-	-	LIVE BUT UNINDEXED - owner namespace indexed (186 repos)

@@ -4,6 +4,115 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p930) — **`928-R1` said stop widening and start auditing. The published shelf is 99.6% sound, 9.0% of it has not been touched in a year, and four rows this file calls unindexed are simply at the wrong address.**
+
+### 🟢 What `928-R1` asked for, and what it cost
+
+`928-R1`: *"The next pass should spend its budget on **depth** against known rows — dependency
+reproducibility, grant drift, payload addresses — not on another vocabulary."* **This pass opened no
+new vocabulary at all.** It took the **676 table rows / 594 unique GitHub addresses** already
+published across `agents/top.md`, `repos/foundations.md` and `verticals/solutions.md`, and
+re-measured every one: **30 batched search calls**, **594 `git ls-remote` probes**, and **255
+`LICENSE` payloads byte-read and classified from their own bytes**
+(`compose/code/p930-shelf-depth/`).
+
+| Measure | Result |
+|---|---|
+| Unique published addresses | **594** |
+| 🟢 Live (reachable by `git` at the published address) | **594 — 100%** |
+| Resolved on the search channel | 587 |
+| 🔴 Absent from the search channel | **7** → `930-F1` |
+| Licence payloads byte-read | **255** |
+| 🟢 Published grants that reproduce exactly | **243 of 249 — 97.6%** |
+| 🔴 Genuine grant drift | **1** |
+| 🟡 Divergences manufactured by the classifier | **5** |
+| 🔴 Archived repositories still on the shelf | **2** |
+| 🔴 No push in twelve months | **53 (9.0%)** |
+
+🟢 **There are no dead links in this knowledge base.** Every one of the 594 addresses a client could
+be sent to still resolves. That is the single most useful sentence this pass can offer, and it had
+never been established.
+
+### 🔴 Four rows are at a superseded address — and this file can now put stars on them
+
+The full instrument and the per-row evidence are in `agents/trending.md` `930-F1` and
+`evidence/address-moves.2026-11-19-p930.tsv`. The short version: a `422` from `repo:owner/name` was
+read by earlier passes as *"not in the search index"*; for four of the seven rows it meant
+*"no repository at that address"*, because the repository had been **renamed**. Proof is an
+**identical `HEAD` commit SHA** at the new address with `fork=False`.
+
+| Carried as | Now | ★ | Grant | Last push |
+|---|---|---|---|---|
+| `mwouts/jupytext` | 🟢 **`jupytext/jupytext`** | **7,281** | MIT | 2026-11-18 |
+| `digitalcredentials/learner-credential-wallet` | 🟢 **`ryjones/learner-credential-wallet`** | **91** | MIT | 2026-10-15 |
+| `jnehring/awesome-low-resource-languages` | 🟢 **`commoncrawl/awesome-low-resource-languages`** | **2** | 🔴 none | 2026-03-16 |
+| `tokenaii/horus-taleeq-0.2b-base` | 🟢 **`tokenaillc/Horus-Taleeq-0.2B-Base`** | **1** | MIT | 2026-09-22 |
+
+🔵 **Two of these are good news and two are not.** `jupytext` moving from a personal account to its
+own organisation at 7,281 ★ is a project *maturing* — it is a stronger dependency today than the
+row implied. **`commoncrawl/awesome-low-resource-languages` at 2 ★ and
+`tokenaillc/Horus-Taleeq-0.2B-Base` at 1 ★ are the opposite**: `agents/top.md` carries the Horus
+Taleeq row as the answer to a declared Middle East supply gap, and its star count was unknown rather
+than small. 🔴 **It is one star.** The row stays — an Arabic base model with a published
+reproducibility record is still the only thing of its kind this base holds — but it is now labelled
+as what it is: **a single-maintainer research artefact, not a supported dependency.** An engagement
+that needs Arabic language support should budget to carry it, not to consume it.
+
+### 🔴 The decay profile of `repos/foundations.md`, measured for the first time
+
+`repos/foundations.md` is the **least fresh** of the three shelves, and by some distance:
+
+| | rows | archived | >6 mo | >12 mo | >24 mo |
+|---|---|---|---|---|---|
+| `agents/top.md` | 241 | 0 | 32 | 14 | 8 |
+| 🔴 `repos/foundations.md` | 291 | **2** | **44** | **33** | **15** |
+| `verticals/solutions.md` | 137 | 0 | 13 | 7 | 3 |
+
+🟢 **Both archived rows are in this file — and both were already caught.**
+`Apereo-Learning-Analytics-Initiative/OpenLRS` is published as *"🔴 **archived 2019-01-31** … The
+Learning Record Store itself. **Reference architecture, not an upstream**"*, and
+`otuncelli/turkish-stemmer-python` as *"🟡 **Fails `918-R1` on recency (631 d)** … this is the
+fallback and it is a **frozen** one"*. 🔵 **This pass went looking for rot and found labels already
+on it** — the third time in one audit that the shelf was ahead of the instrument checking it. **No
+edit was needed on either row.**
+
+🔵 **Why foundations decays faster than agents, and why that is fine:** this file holds **standards
+implementations and language substrate** — `pyslet` (IMS/QTI, last push 2020), `CLAtoolkit` (2017),
+`totara/openbadges` (2016). A stable standard does not need commits. 🔴 **But `T28` warned that this
+layer is "undocumented and, at the top of the shelf, unpinnable", and a 2016 last-push is the same
+risk wearing different clothes.** The operative rule for an engagement: **a foundations row older
+than 24 months is a specification you may read and a dependency you must vendor**, never a package
+you take a floating version of.
+
+### 🟢 The one row whose grant actually changed
+
+**`yinuoguan/nengdou-ai-review-helper-web`** — carried as *Apache-2.0 byte-read, channels disagree*
+— **has replaced its licence payload**. It is **MulanPSL-2.0** on both channels now
+(**9,247 B**, `sha256₁₂ f0dade5c9337`, opening `木兰宽松许可证，第2版`), where `p906` byte-read
+**11,356 B** of `Apache License / Version 2.0` at `sha256₁₂ 43070e2d4e53`. Still permissive, still
+usable; the review conversation changes, because the authoritative text is Chinese. **One drift in
+249 grants is the number, and it is the kind of change no star count or push date would have
+surfaced.**
+
+### 🔵 `930-R4` — what the next pass should do with this
+
+**Do not re-run this audit next pass.** It cost 30 search calls, 594 `ls-remote` probes and 255
+byte-reads to move one row's licence and four rows' addresses; at that yield its natural cadence is
+**monthly, not hourly**. The three things worth doing *instead*, in order:
+
+1. 🔴 **Clear the ungranted fraction.** **61 of 587 shelf repositories (10.4%)** are `NOASSERTION`
+   (46) or carry no licence at all (15). That is the fraction a client's legal review stops on, and
+   it is a bounded, enumerable list — `evidence/shelf-depth-audit.2026-11-19-p930.tsv` has every
+   one. `930-F4` shows at least some `NOASSERTION` rows are **concatenated multi-grant files** that
+   resolve cleanly on a hand-read.
+2. 🟡 **Re-probe the three genuinely unindexed rows** (`DaRL-GenAI/instructional_agents`,
+   `OpenOLAT/qtiworks`, `mitodl/open-learning-ai-tutor`) — individually, never batched, per
+   `930-R1` — and establish whether repository-level search exclusion is permanent or lags.
+3. 🔴 **Stop asking this base for primary sources.** `930-R3` measured that **only GitHub hosts
+   resolve** from this environment. The demand side is snippet-only by construction.
+
+---
+
 ## `2026-11-19` (p928) — **The backlog this file has been recording for four passes is now measured to the bottom, and the right conclusion is to stop recording it.**
 
 ### 🟢 What `p927` asked for, and what it cost
@@ -15541,7 +15650,7 @@ Learning Equality also archived `kolibri-installer-windows` (`6★`), `kolibri-i
 |---|---|--:|---|
 | [`scratchfoundation/scratch-editor`](https://github.com/scratchfoundation/scratch-editor) | 🔴 **AGPL-3.0** `34,523 B` sha256₁₂ `8486a10c4393`, ref **`develop`** | 310 | The live Scratch tree. README title: *“The Scratch Editor Monorepo”*. Licence unchanged from `scratch-gui`, so the network-copyleft planning fact holds — **what changed is which address you fork** |
 | [`SiriusFzh/NovaForge`](https://github.com/SiriusFzh/NovaForge) | 🟢 **MIT** `1,066 B` sha256₁₂ `2f50a18b8856` | 723 | The **only** real education asset in `172` repositories under `topic:study-notes`. LaTeX + Typst + Markdown note-system templates for 考研 / 考公 — the document substrate an authoring agent writes into. APAC on **named examination systems of one jurisdiction**, not on language |
-| [`kael-odin/awesome-academic-research-skills`](https://github.com/kael-odin/awesome-academic-research-skills) | 🟢 **MIT** `1,066 B` sha256₁₂ `a5ba667c70f8` | 198 | Filed as a **channel**, not just a repository: an auto-updated **daily ranking** of research agent-skill repos. `692` passes of this base discovered skills by sweeping topic heads and watching them saturate (`T72`); this is a third party running that sweep continuously — **a channel to read rather than a shelf to rebuild** |
+| [`kael-odin/awesome-academic-research-skills`](https://github.com/kael-odin/awesome-academic-research-skills) | 🟢 **MIT** `1,066 B` sha256₁₂ `a5ba667c70f8` | 198 | Filed as a **channel**, not just a repository: an auto-updated **daily ranking** of research agent-skill repos. `692` passes of this base discovered skills by sweeping topic heads and watching them saturate (`T74`); this is a third party running that sweep continuously — **a channel to read rather than a shelf to rebuild** |
 | [`ShaishavMaisuria/research-paper-lifecycle-skills`](https://github.com/ShaishavMaisuria/research-paper-lifecycle-skills) | 🟢 **Apache-2.0** `10,278 B` sha256₁₂ `b86e218eca4d`, body **verbatim** | 60 | `42` skills across the research lifecycle. **And the cleanest demonstration of `676-A`'s rule this base has:** residual **−`1,080 B`** against canonical, normalised operative body **`9,130` vs `9,130`, §1–§9 all present** |
 
 ### 🔴 692-S — the byte-count collision, and both instruments failing on one pair
@@ -15955,7 +16064,7 @@ The census cost `104` search-API calls at the `30/min` limit and took roughly se
 
 - `topic:open-badges` — `3` candidates in total. 🔴 **The head is empty, not unexplored**, which also answers the 1EdTech digital-credentials trend from the demand side: the standard has institutional momentum and **no permissive open-source implementation shelf behind it**. Declared gap, not silence.
 - `education verifiable credentials wallet diploma stars:>10` — `0` rows returned.
-- `topic:lti` (`39`) and `topic:knowledge-tracing` (`25`) behaved as controls should: already swept, nothing adoptable, consistent with `T72`.
+- `topic:lti` (`39`) and `topic:knowledge-tracing` (`25`) behaved as controls should: already swept, nothing adoptable, consistent with `T74`.
 - `topic:accessibility education` returned `12`, all of them general-purpose (a p5.js website, a keyboard utility, two teaching programming languages). 🔴 **No accessibility-remediation asset surfaced for the April 2026 US obligation** — `T29` stands unimproved.
 
 ---
@@ -16071,7 +16180,7 @@ Line numbers are **pre-p682**.
 
 ---
 
-## 🆕 2026-11-06 (p681) — 🔴 **A `123,056★` MIT REPOSITORY WAS IN THIS BASE'S OWN LEDGER SINCE `p367` CARRYING `licence = unstated`, AND THE PASS THAT DIAGNOSED "A DECLARED FILING IS NOT A FILED ROW" FAILED TO FILE IT. 🟢 THE OER CORPUS IS REACHABLE UNDER MIT EVEN THOUGH ITS PLATFORM IS COPYLEFT. 🔴 `T71`'s CLASSROOM REGIME DOES NOT BELONG TO CURRICULA — 12 POINTS, FIVE REFUTATIONS. 🔴 A NEW GRANT-DEFECT CLASS: TERMS NAMED CORRECTLY, BYTES NOT SHIPPED.**
+## 🆕 2026-11-06 (p681) — 🔴 **A `123,056★` MIT REPOSITORY WAS IN THIS BASE'S OWN LEDGER SINCE `p367` CARRYING `licence = unstated`, AND THE PASS THAT DIAGNOSED "A DECLARED FILING IS NOT A FILED ROW" FAILED TO FILE IT. 🟢 THE OER CORPUS IS REACHABLE UNDER MIT EVEN THOUGH ITS PLATFORM IS COPYLEFT. 🔴 `T73`'s CLASSROOM REGIME DOES NOT BELONG TO CURRICULA — 12 POINTS, FIVE REFUTATIONS. 🔴 A NEW GRANT-DEFECT CLASS: TERMS NAMED CORRECTLY, BYTES NOT SHIPPED.**
 
 **Four rows filed on `repos/foundations.md` (`139` → `143`), re-derived by counting the table.**
 
@@ -16101,9 +16210,9 @@ Line numbers are **pre-p682**.
 
 **No MCP server or agent bridge exists for LibreTexts, OpenStax, the Open Textbook Library, or OER Commons.** All four probed; all four nil. `pressbooks-cli` is the only permissive access layer over any major OER corpus, and it is a CLI with agent-shaped JSON output rather than an MCP server. 🔵 **A gap with a permissive floor already poured** — the hard part (the undocumented, rate-capped, `User-Agent`-filtering shape of a real Pressbooks network) is solved under MIT and documented in that project's README. See `compose/patterns.md` **P56**.
 
-### 🔴 `681-G` — `T71` re-tested on 12 points: the platform/library boundary holds, the *Classroom* regime does not
+### 🔴 `681-G` — `T73` re-tested on 12 points: the platform/library boundary holds, the *Classroom* regime does not
 
-Full table in [`evidence/forks-per-star-t71-retest.2026-11-06-p681.tsv`](../evidence/forks-per-star-t71-retest.2026-11-06-p681.tsv) and in `repos/foundations.md` `681-G`. In one line: **five permissive curricula span `f/★` `0.104`–`0.536` and not one approaches `T71`'s `~10`**, with the largest of them (`generative-ai-for-beginners`, `0.536`) landing in the *Deployment* band beside `moodle/moodle` (`1.015`) and `openedx/openedx-platform` (`0.533`). 🟢 `T65`'s `0.5` platform/library boundary held without exception. 🔵 **What `jsboige/CoursIA`'s `9.563` marks is a curriculum with no hosted reading surface** — notebooks must be copied to be used, websites do not. **The regime is a property of the delivery format, not the pedagogy**, which narrows where `T71`'s "read the fork count before dropping it" rule should fire: notebook and template repositories, not curricula generally.
+Full table in [`evidence/forks-per-star-t71-retest.2026-11-06-p681.tsv`](../evidence/forks-per-star-t71-retest.2026-11-06-p681.tsv) and in `repos/foundations.md` `681-G`. In one line: **five permissive curricula span `f/★` `0.104`–`0.536` and not one approaches `T73`'s `~10`**, with the largest of them (`generative-ai-for-beginners`, `0.536`) landing in the *Deployment* band beside `moodle/moodle` (`1.015`) and `openedx/openedx-platform` (`0.533`). 🟢 `T65`'s `0.5` platform/library boundary held without exception. 🔵 **What `jsboige/CoursIA`'s `9.563` marks is a curriculum with no hosted reading surface** — notebooks must be copied to be used, websites do not. **The regime is a property of the delivery format, not the pedagogy**, which narrows where `T73`'s "read the fork count before dropping it" rule should fire: notebook and template repositories, not curricula generally.
 
 ### 🆕 `681-I` — an eighth grant-defect class: the terms are named correctly and the bytes are not shipped
 

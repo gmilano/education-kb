@@ -1,0 +1,7 @@
+slug	published	byte_read_classifier	api_spdx	bytes	sha256_12	adjudication	verdict
+yinuoguan/nengdou-ai-review-helper-web	Apache-2.0 (11356 B, 43070e2d4e53)	MulanPSL-2.0	MulanPSL-2.0	9247	f0dade5c9337	payload replaced since p906; opens with the Mulan PSL v2 Chinese title block	REAL GRANT DRIFT - row corrected
+uloya1234/faq-assistant	MPL-2.0	AGPL-3.0	MPL-2.0	16726	3f3d9e0024b1	text opens "Mozilla Public License Version 2.0"; MPL names the AGPL in its own Exhibit B	CLASSIFIER ARTEFACT - base correct
+Automattic/sensei	GPL-2.0	LGPL	GPL-2.0	18092	8177f9751321	text opens "GNU GENERAL PUBLIC LICENSE Version 2"; GPL-2.0 names the LGPL in its closing paragraph	CLASSIFIER ARTEFACT - base correct
+xiaochong0302/course-tencent-cloud	GPL-2.0	LGPL	GPL-2.0	18092	8177f9751321	byte-identical to the sensei payload; same mechanism	CLASSIFIER ARTEFACT - base correct
+xxinjie21/Smart-Quiz-Tutor	0BSD	ISC	0BSD	664	2cb3ff984068	text opens "BSD Zero Clause License"; 0BSD is ISC minus the notice-retention clause	CLASSIFIER ARTEFACT - base correct
+HyNuwa/UniMCP	MIT	ISC	NOASSERTION	1980	727b864af003	ONE file, TWO grants: MIT for the work + ISC for portions derived from utn-mcp; agents/top.md already publishes this as 'MIT + inherited ISC, conjunctive'	CLASSIFIER ARTEFACT - base correct

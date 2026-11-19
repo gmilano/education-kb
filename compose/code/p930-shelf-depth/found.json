@@ -1,0 +1,4698 @@
+{
+"anubislms/anubis": {
+"full_name": "AnubisLMS/Anubis",
+"stars": 382,
+"lic": "MIT",
+"pushed": "2026-09-15",
+"archived": false,
+"fork": false
+},
+"3yangyang9/deeptutor-ailearning": {
+"full_name": "3yangyang9/DeepTutor-AILearning",
+"stars": 331,
+"lic": "Apache-2.0",
+"pushed": "2026-10-09",
+"archived": false,
+"fork": false
+},
+"akshitireddy/ai-powered-video-tutorial-generator": {
+"full_name": "AkshitIreddy/AI-Powered-Video-Tutorial-Generator",
+"stars": 322,
+"lic": "MIT",
+"pushed": "2026-09-21",
+"archived": false,
+"fork": false
+},
+"1edtech/openbadges-specification": {
+"full_name": "1EdTech/openbadges-specification",
+"stars": 206,
+"lic": null,
+"pushed": "2026-11-13",
+"archived": false,
+"fork": false
+},
+"apereo-learning-analytics-initiative/openlrw": {
+"full_name": "Apereo-Learning-Analytics-Initiative/OpenLRW",
+"stars": 62,
+"lic": "NOASSERTION",
+"pushed": "2025-09-12",
+"archived": false,
+"fork": false
+},
+"1edtech/openbadges-validator-core": {
+"full_name": "1EdTech/openbadges-validator-core",
+"stars": 61,
+"lic": "Apache-2.0",
+"pushed": "2025-11-04",
+"archived": false,
+"fork": false
+},
+"andiii208/seu-handbook-skill": {
+"full_name": "Andiii208/seu-handbook-skill",
+"stars": 55,
+"lic": "NOASSERTION",
+"pushed": "2026-10-09",
+"archived": false,
+"fork": false
+},
+"antonio-neves/gestao-escolar": {
+"full_name": "Antonio-Neves/Gestao-Escolar",
+"stars": 50,
+"lic": "MIT",
+"pushed": "2026-10-12",
+"archived": false,
+"fork": false
+},
+"apereo-learning-analytics-initiative/openlrs": {
+"full_name": "Apereo-Learning-Analytics-Initiative/OpenLRS",
+"stars": 47,
+"lic": "NOASSERTION",
+"pushed": "2019-01-31",
+"archived": true,
+"fork": false
+},
+"anchori/jlpt-kanji-dictionary": {
+"full_name": "AnchorI/jlpt-kanji-dictionary",
+"stars": 44,
+"lic": "MIT",
+"pushed": "2025-05-02",
+"archived": false,
+"fork": false
+},
+"14flavius/gradeshelf": {
+"full_name": "14flavius/GradeShelf",
+"stars": 24,
+"lic": "MIT",
+"pushed": "2026-11-16",
+"archived": false,
+"fork": false
+},
+"ai-for-education/pedagogy-benchmark": {
+"full_name": "AI-for-Education/pedagogy-benchmark",
+"stars": 13,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"aaryan-kapoor/degreeworks-cli": {
+"full_name": "Aaryan-Kapoor/degreeworks-cli",
+"stars": 5,
+"lic": "MIT",
+"pushed": "2026-10-08",
+"archived": false,
+"fork": false
+},
+"aditya-ranjan1234/ns-causalkt-agentic-grader": {
+"full_name": "Aditya-Ranjan1234/NS-CausalKT-Agentic-Grader",
+"stars": 1,
+"lic": "MIT",
+"pushed": "2026-05-16",
+"archived": false,
+"fork": false
+},
+"aaltogis/classroom-grader": {
+"full_name": "AaltoGIS/classroom-grader",
+"stars": 1,
+"lic": "BSD-3-Clause",
+"pushed": "2026-11-09",
+"archived": false,
+"fork": false
+},
+"001kenji/kcse-predictor": {
+"full_name": "001kenji/KCSE-predictor",
+"stars": 1,
+"lic": "Apache-2.0",
+"pushed": "2026-01-05",
+"archived": false,
+"fork": false
+},
+"aliyuaam10/naijascholar": {
+"full_name": "ALIYUAAM10/NAIJASCHOLAR",
+"stars": 1,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"10kh/misconceptdialogue": {
+"full_name": "10kH/MisconceptDialogue",
+"stars": 1,
+"lic": "MIT",
+"pushed": "2026-11-14",
+"archived": false,
+"fork": false
+},
+"apurba94/autograder-py": {
+"full_name": "Apurba94/autograder-py",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-11-04",
+"archived": false,
+"fork": false
+},
+"ariusking/edubot-backend": {
+"full_name": "AriusKing/edubot-backend",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-07-01",
+"archived": false,
+"fork": false
+},
+"berriai/litellm": {
+"full_name": "BerriAI/litellm",
+"stars": 63556,
+"lic": "NOASSERTION",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"ctfd/ctfd": {
+"full_name": "CTFd/CTFd",
+"stars": 6918,
+"lic": "Apache-2.0",
+"pushed": "2026-11-10",
+"archived": false,
+"fork": false
+},
+"caviraoss/pagelm": {
+"full_name": "CaviraOSS/PageLM",
+"stars": 2072,
+"lic": "NOASSERTION",
+"pushed": "2026-11-15",
+"archived": false,
+"fork": false
+},
+"automattic/sensei": {
+"full_name": "Automattic/sensei",
+"stars": 598,
+"lic": "GPL-2.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"camel-lab/camel_tools": {
+"full_name": "CAMeL-Lab/camel_tools",
+"stars": 594,
+"lic": "MIT",
+"pushed": "2026-10-14",
+"archived": false,
+"fork": false
+},
+"cahlr/pybkt": {
+"full_name": "CAHLR/pyBKT",
+"stars": 293,
+"lic": "MIT",
+"pushed": "2026-11-02",
+"archived": false,
+"fork": false
+},
+"cahlr/oatutor": {
+"full_name": "CAHLR/OATutor",
+"stars": 284,
+"lic": "MIT",
+"pushed": "2026-11-17",
+"archived": false,
+"fork": false
+},
+"berserk-hub150/moodle-ai-skill-navigator": {
+"full_name": "Berserk-hub150/moodle-ai-skill-navigator",
+"stars": 279,
+"lic": "GPL-3.0",
+"pushed": "2026-11-07",
+"archived": false,
+"fork": false
+},
+"azure/moodle": {
+"full_name": "Azure/Moodle",
+"stars": 186,
+"lic": "MIT",
+"pushed": "2026-11-02",
+"archived": false,
+"fork": false
+},
+"arnaudguiovanna/tutor-mcp": {
+"full_name": "ArnaudGuiovanna/tutor-mcp",
+"stars": 108,
+"lic": "MIT",
+"pushed": "2026-11-17",
+"archived": false,
+"fork": false
+},
+"bbkjdayup/bctk": {
+"full_name": "BBkjdayup/BCTK",
+"stars": 59,
+"lic": "MIT",
+"pushed": "2026-11-07",
+"archived": false,
+"fork": false
+},
+"caiocastro1/usp-mcp": {
+"full_name": "CaioCastro1/usp-mcp",
+"stars": 28,
+"lic": "MIT",
+"pushed": "2026-11-13",
+"archived": false,
+"fork": false
+},
+"citolab/qti-components": {
+"full_name": "Citolab/qti-components",
+"stars": 18,
+"lic": "GPL-3.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"changjinhe2000/one-tutor": {
+"full_name": "ChangjinHe2000/one-tutor",
+"stars": 5,
+"lic": "MIT",
+"pushed": "2026-06-25",
+"archived": false,
+"fork": false
+},
+"creared-edu-co/genprompt-pre-icfes-11": {
+"full_name": "CREARED-EDU-CO/GenPrompt-Pre-ICFES-11",
+"stars": 4,
+"lic": "AGPL-3.0",
+"pushed": "2026-09-19",
+"archived": false,
+"fork": false
+},
+"baijayantaroy/bandup": {
+"full_name": "BaijayantaRoy/bandup",
+"stars": 2,
+"lic": "MIT",
+"pushed": "2026-08-22",
+"archived": false,
+"fork": false
+},
+"arushjain-697/namma-ai": {
+"full_name": "ArushJain-697/namma-ai",
+"stars": 1,
+"lic": "MIT",
+"pushed": "2026-11-16",
+"archived": false,
+"fork": false
+},
+"aryansh909/examshield-ai": {
+"full_name": "Aryansh909/Examshield-AI",
+"stars": 1,
+"lic": "MIT",
+"pushed": "2026-08-01",
+"archived": false,
+"fork": false
+},
+"bhimprasadadhikari/lagnever-learning-knowledge-graph": {
+"full_name": "BhimPrasadAdhikari/lagnever-learning-knowledge-graph",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-11-18",
+"archived": false,
+"fork": false
+},
+"carlosekraigoza/privacy-preserving-educational-telemetry": {
+"full_name": "CarlosEkRaigoza/privacy-preserving-educational-telemetry",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-11-04",
+"archived": false,
+"fork": false
+},
+"crosstalk-solutions/project-nomad": {
+"full_name": "Crosstalk-Solutions/project-nomad",
+"stars": 44033,
+"lic": "Apache-2.0",
+"pushed": "2026-11-18",
+"archived": false,
+"fork": false
+},
+"eleutherai/lm-evaluation-harness": {
+"full_name": "EleutherAI/lm-evaluation-harness",
+"stars": 14504,
+"lic": "MIT",
+"pushed": "2026-11-04",
+"archived": false,
+"fork": false
+},
+"deanchensj/jiangshan-map": {
+"full_name": "DeanChensj/jiangshan-map",
+"stars": 8430,
+"lic": "GPL-3.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"dozentwelve/papermorph": {
+"full_name": "DozenTwelve/Papermorph",
+"stars": 1798,
+"lic": "MIT",
+"pushed": "2026-11-16",
+"archived": false,
+"fork": false
+},
+"dspace/dspace": {
+"full_name": "DSpace/DSpace",
+"stars": 1115,
+"lic": "BSD-3-Clause",
+"pushed": "2026-11-13",
+"archived": false,
+"fork": false
+},
+"ecnu/eduwork": {
+"full_name": "ECNU/EduWork",
+"stars": 381,
+"lic": "MulanPSL-2.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"cvmcosta/ltijs": {
+"full_name": "Cvmcosta/ltijs",
+"stars": 373,
+"lic": "Apache-2.0",
+"pushed": "2026-11-11",
+"archived": false,
+"fork": false
+},
+"errrc/kaogong-shuati": {
+"full_name": "ERRRC/kaogong-shuati",
+"stars": 257,
+"lic": "MIT",
+"pushed": "2026-09-24",
+"archived": false,
+"fork": false
+},
+"digitalharborfoundation/llm-math-education": {
+"full_name": "DigitalHarborFoundation/llm-math-education",
+"stars": 47,
+"lic": "MIT",
+"pushed": "2026-11-14",
+"archived": false,
+"fork": false
+},
+"ed-fi-alliance-oss/ed-fi-data-standard": {
+"full_name": "Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard",
+"stars": 47,
+"lic": "Apache-2.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"cogitontnu/tutorai": {
+"full_name": "CogitoNTNU/TutorAI",
+"stars": 39,
+"lic": "MIT",
+"pushed": "2026-11-16",
+"archived": false,
+"fork": false
+},
+"ed-fi-alliance-oss/ed-fi-ods": {
+"full_name": "Ed-Fi-Alliance-OSS/Ed-Fi-ODS",
+"stars": 28,
+"lic": "Apache-2.0",
+"pushed": "2026-11-18",
+"archived": false,
+"fork": false
+},
+"ethionlp/ethiopian-language-survey": {
+"full_name": "EthioNLP/Ethiopian-Language-Survey",
+"stars": 17,
+"lic": "MIT",
+"pushed": "2025-06-04",
+"archived": false,
+"fork": false
+},
+"deepblue-dot/ethio-adaptive-learning": {
+"full_name": "DeepBlue-dot/Ethio-Adaptive-Learning",
+"stars": 7,
+"lic": "Apache-2.0",
+"pushed": "2026-05-31",
+"archived": false,
+"fork": false
+},
+"dramoscuello/simic": {
+"full_name": "Dramoscuello/simic",
+"stars": 2,
+"lic": "Apache-2.0",
+"pushed": "2026-07-23",
+"archived": false,
+"fork": false
+},
+"eduardokrausme/moodle-local_mcp": {
+"full_name": "EduardoKrausME/moodle-local_mcp",
+"stars": 2,
+"lic": "GPL-3.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"derickxp/learn-quest-serious-game": {
+"full_name": "DerickxP/Learn-Quest-Serious-Game",
+"stars": 1,
+"lic": "MIT",
+"pushed": "2026-10-22",
+"archived": false,
+"fork": false
+},
+"dejavi08/cat-snbt-skd": {
+"full_name": "DeJavi08/cat-snbt-skd",
+"stars": 1,
+"lic": "MIT",
+"pushed": "2026-09-03",
+"archived": false,
+"fork": false
+},
+"elnatananbelu/ethioexam": {
+"full_name": "ElnatanAnbelu/ethioexam",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-09-20",
+"archived": false,
+"fork": false
+},
+"hkuds/deeptutor": {
+"full_name": "HKUDS/DeepTutor",
+"stars": 60793,
+"lic": "Apache-2.0",
+"pushed": "2026-11-18",
+"archived": false,
+"fork": false
+},
+"hkuds/lightrag": {
+"full_name": "HKUDS/LightRAG",
+"stars": 40777,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"helicone/helicone": {
+"full_name": "Helicone/helicone",
+"stars": 6290,
+"lic": "Apache-2.0",
+"pushed": "2026-11-17",
+"archived": false,
+"fork": false
+},
+"garethmanning/education-agent-skills": {
+"full_name": "GarethManning/education-agent-skills",
+"stars": 1005,
+"lic": "NOASSERTION",
+"pushed": "2026-11-03",
+"archived": false,
+"fork": false
+},
+"gibbonedu/core": {
+"full_name": "GibbonEdu/core",
+"stars": 640,
+"lic": "GPL-3.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"fazmin/ailearningguide": {
+"full_name": "Fazmin/AILearningGuide",
+"stars": 259,
+"lic": "MIT",
+"pushed": "2026-11-15",
+"archived": false,
+"fork": false
+},
+"faixiang/moodle-mcp": {
+"full_name": "Faixiang/Moodle-MCP",
+"stars": 209,
+"lic": "MIT",
+"pushed": "2026-11-01",
+"archived": false,
+"fork": false
+},
+"fenixedu/fenixedu-academic": {
+"full_name": "FenixEdu/fenixedu-academic",
+"stars": 175,
+"lic": "LGPL-3.0",
+"pushed": "2023-06-14",
+"archived": false,
+"fork": false
+},
+"geminilight/gen-mentor": {
+"full_name": "GeminiLight/gen-mentor",
+"stars": 137,
+"lic": "CC0-1.0",
+"pushed": "2026-10-23",
+"archived": false,
+"fork": false
+},
+"gego-k12/gegok12": {
+"full_name": "Gego-K12/gegok12",
+"stars": 58,
+"lic": "NOASSERTION",
+"pushed": "2026-09-23",
+"archived": false,
+"fork": false
+},
+"githubdaily/ai-course-generator": {
+"full_name": "GitHubDaily/AI-Course-Generator",
+"stars": 36,
+"lic": "MIT",
+"pushed": "2025-11-01",
+"archived": false,
+"fork": false
+},
+"g36maid/moodle-mcp": {
+"full_name": "G36maid/moodle-mcp",
+"stars": 30,
+"lic": "MIT",
+"pushed": "2026-10-20",
+"archived": false,
+"fork": false
+},
+"geosoft-global/timetablely": {
+"full_name": "GEOSOFT-GLOBAL/timetablely",
+"stars": 27,
+"lic": "MIT",
+"pushed": "2026-08-17",
+"archived": false,
+"fork": false
+},
+"hostserver001/jee_mains_pyqs_data_base": {
+"full_name": "HostServer001/jee_mains_pyqs_data_base",
+"stars": 23,
+"lic": "MIT",
+"pushed": "2026-05-11",
+"archived": false,
+"fork": false
+},
+"guanmingqiao/politemall-mcp": {
+"full_name": "GuanmingQiao/POLITEMALL-MCP",
+"stars": 2,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"gehiner/kodlandfaster": {
+"full_name": "Gehiner/KodlandFaster",
+"stars": 1,
+"lic": "MIT",
+"pushed": "2026-10-06",
+"archived": false,
+"fork": false
+},
+"gsu-cetloe/lti1p3library-python": {
+"full_name": "GSU-CETLOE/lti1p3Library-python",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-10-28",
+"archived": false,
+"fork": false
+},
+"group-active-ia/skill-moodle": {
+"full_name": "Group-Active-IA/Skill-Moodle",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-09-24",
+"archived": false,
+"fork": false
+},
+"goodbilly/billystreet-hkdse-math-mock-platform": {
+"full_name": "Goodbilly/BillyStreet-HKDSE-Math-Mock-Platform",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2025-11-17",
+"archived": false,
+"fork": false
+},
+"guilhermescarpini/agente-bncc-professores": {
+"full_name": "GuilhermeScarpini/agente-bncc-professores",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-10-21",
+"archived": false,
+"fork": false
+},
+"humansignal/label-studio": {
+"full_name": "HumanSignal/label-studio",
+"stars": 28731,
+"lic": "Apache-2.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"khan/perseus": {
+"full_name": "Khan/perseus",
+"stars": 1600,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"koha-community/koha": {
+"full_name": "Koha-Community/Koha",
+"stars": 601,
+"lic": "GPL-3.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"ilias-elearning/ilias": {
+"full_name": "ILIAS-eLearning/ILIAS",
+"stars": 512,
+"lic": "GPL-3.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"juneyaooo/teacher-to-skills": {
+"full_name": "JuneYaooo/teacher-to-skills",
+"stars": 485,
+"lic": "Apache-2.0",
+"pushed": "2026-11-07",
+"archived": false,
+"fork": false
+},
+"kewang0622/kaogong-skill": {
+"full_name": "KeWang0622/kaogong-skill",
+"stars": 251,
+"lic": "MIT",
+"pushed": "2026-10-12",
+"archived": false,
+"fork": false
+},
+"howiewang1121/socratic-education-system": {
+"full_name": "HowieWang1121/Socratic-Education-System",
+"stars": 137,
+"lic": "MIT",
+"pushed": "2026-05-03",
+"archived": false,
+"fork": false
+},
+"jmlcommunity/kurikulum-ai": {
+"full_name": "JMLcommunity/Kurikulum-AI",
+"stars": 46,
+"lic": "MIT",
+"pushed": "2020-06-14",
+"archived": false,
+"fork": false
+},
+"kanjo-elkamira-ndi/compass": {
+"full_name": "Kanjo-Elkamira-Ndi/Compass",
+"stars": 12,
+"lic": "MIT",
+"pushed": "2026-08-12",
+"archived": false,
+"fork": false
+},
+"jupascal/jupascal.github.io": {
+"full_name": "JUPASCal/JUPASCal.github.io",
+"stars": 10,
+"lic": "MIT",
+"pushed": "2026-07-17",
+"archived": false,
+"fork": false
+},
+"kth/canvas-api": {
+"full_name": "KTH/canvas-api",
+"stars": 10,
+"lic": "MIT",
+"pushed": "2026-11-16",
+"archived": false,
+"fork": false
+},
+"jambuoverflow/lepic": {
+"full_name": "JambuOverflow/lepic",
+"stars": 7,
+"lic": "GPL-3.0",
+"pushed": "2021-07-11",
+"archived": false,
+"fork": false
+},
+"jousiapiha/awesome-finnish-nlp": {
+"full_name": "JousiaPiha/awesome-finnish-nlp",
+"stars": 5,
+"lic": "CC0-1.0",
+"pushed": "2026-07-30",
+"archived": false,
+"fork": false
+},
+"just253/autonoma-cli": {
+"full_name": "Just253/autonoma-cli",
+"stars": 1,
+"lic": "MIT",
+"pushed": "2026-11-17",
+"archived": false,
+"fork": false
+},
+"hynuwa/unimcp": {
+"full_name": "HyNuwa/UniMCP",
+"stars": 1,
+"lic": "NOASSERTION",
+"pushed": "2026-11-14",
+"archived": false,
+"fork": false
+},
+"huemulsolutions/enola-ai": {
+"full_name": "HuemulSolutions/Enola-AI",
+"stars": 1,
+"lic": "BSD-3-Clause",
+"pushed": "2024-12-31",
+"archived": false,
+"fork": false
+},
+"kirchhoff-dev/cbt-app-updates": {
+"full_name": "Kirchhoff-dev/cbt-app-updates",
+"stars": 1,
+"lic": "MIT",
+"pushed": "2026-11-14",
+"archived": false,
+"fork": false
+},
+"jiaclv/error-driven-question-recommender": {
+"full_name": "Jiaclv/error-driven-question-recommender",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-09-26",
+"archived": false,
+"fork": false
+},
+"josetra44/dutic-mcp": {
+"full_name": "JOSETRA44/DUTIC-mcp",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-11-07",
+"archived": false,
+"fork": false
+},
+"janekoch/openbridge": {
+"full_name": "JaneKoch/openbridge",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"librechat-ai/librechat": {
+"full_name": "LibreChat-AI/LibreChat",
+"stars": 47350,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"miaotofu01/study-mate": {
+"full_name": "Miaotofu01/Study-Mate",
+"stars": 1502,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"learninglocker/learninglocker": {
+"full_name": "LearningLocker/learninglocker",
+"stars": 586,
+"lic": "GPL-3.0",
+"pushed": "2024-05-30",
+"archived": false,
+"fork": false
+},
+"li-evan/bloomtutor": {
+"full_name": "Li-Evan/BloomTutor",
+"stars": 323,
+"lic": "MIT",
+"pushed": "2026-11-17",
+"archived": false,
+"fork": false
+},
+"learnpress/learnpress": {
+"full_name": "LearnPress/learnpress",
+"stars": 275,
+"lic": null,
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"lumieducation/h5p-nodejs-library": {
+"full_name": "Lumieducation/H5P-Nodejs-library",
+"stars": 207,
+"lic": "GPL-3.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"lumieducation/lumi": {
+"full_name": "Lumieducation/Lumi",
+"stars": 200,
+"lic": null,
+"pushed": "2026-11-12",
+"archived": false,
+"fork": false
+},
+"lumoin/verifiable": {
+"full_name": "Lumoin/Verifiable",
+"stars": 40,
+"lic": "Apache-2.0",
+"pushed": "2026-10-19",
+"archived": false,
+"fork": false
+},
+"mocas-12/jlpt-n1-yomitaku": {
+"full_name": "Mocas-12/jlpt-n1-Yomitaku",
+"stars": 31,
+"lic": "MIT",
+"pushed": "2026-11-13",
+"archived": false,
+"fork": false
+},
+"naes25/studiamo": {
+"full_name": "NaEs25/studiamo",
+"stars": 27,
+"lic": "AGPL-3.0",
+"pushed": "2026-10-30",
+"archived": false,
+"fork": false
+},
+"longhorn-developers/degree-audit-plus": {
+"full_name": "Longhorn-Developers/Degree-Audit-Plus",
+"stars": 18,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"muhammadlutfimuzakiivy/litera-ai-android": {
+"full_name": "MuhammadLutfiMuzakiiVY/Litera-AI-Android",
+"stars": 16,
+"lic": "MIT",
+"pushed": "2026-08-25",
+"archived": false,
+"fork": false
+},
+"noggin-labs/noggin": {
+"full_name": "Noggin-Labs/Noggin",
+"stars": 10,
+"lic": "Apache-2.0",
+"pushed": "2026-11-08",
+"archived": false,
+"fork": false
+},
+"mathmindcanvas/mathmind": {
+"full_name": "MathMindCanvas/MathMind",
+"stars": 5,
+"lic": "MIT",
+"pushed": "2026-02-26",
+"archived": false,
+"fork": false
+},
+"ngodingcik/modul-ajar-generator": {
+"full_name": "NgodingCik/modul-ajar-generator",
+"stars": 2,
+"lic": "NOASSERTION",
+"pushed": "2026-05-17",
+"archived": false,
+"fork": false
+},
+"michealquelazar/ncert__rag__chatbot": {
+"full_name": "MichealQuelazar/Ncert__RAG__Chatbot",
+"stars": 1,
+"lic": "MIT",
+"pushed": "2025-12-18",
+"archived": false,
+"fork": false
+},
+"ljkelly3141/coursepack": {
+"full_name": "LJKelly3141/coursepack",
+"stars": 0,
+"lic": "NOASSERTION",
+"pushed": "2026-11-17",
+"archived": false,
+"fork": false
+},
+"liraj07/temario_comipems_crissbeck001": {
+"full_name": "LiraJ07/Temario_Comipems_Crissbeck001",
+"stars": 0,
+"lic": "Apache-2.0",
+"pushed": "2025-04-30",
+"archived": false,
+"fork": false
+},
+"labsirius/tutoria": {
+"full_name": "LabSirius/TutorIA",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-10-27",
+"archived": false,
+"fork": false
+},
+"marcoxmarquez/campusunsa": {
+"full_name": "MarcoXMarquez/CampusUNSA",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"openhands/openhands": {
+"full_name": "OpenHands/OpenHands",
+"stars": 93849,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"openvidu/openvidu": {
+"full_name": "OpenVidu/openvidu",
+"stars": 2147,
+"lic": "Apache-2.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"nutlope/llamatutor": {
+"full_name": "Nutlope/llamatutor",
+"stars": 2054,
+"lic": null,
+"pushed": "2026-10-23",
+"archived": false,
+"fork": false
+},
+"pythainlp/pythainlp": {
+"full_name": "PyThaiNLP/pythainlp",
+"stars": 1174,
+"lic": "Apache-2.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"prairielearn/prairielearn": {
+"full_name": "PrairieLearn/PrairieLearn",
+"stars": 534,
+"lic": "NOASSERTION",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"openolat/openolat": {
+"full_name": "OpenOLAT/OpenOLAT",
+"stars": 451,
+"lic": "NOASSERTION",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"os4ed/opensis-classic": {
+"full_name": "OS4ED/openSIS-Classic",
+"stars": 351,
+"lic": null,
+"pushed": "2026-10-26",
+"archived": false,
+"fork": false
+},
+"openpronounce/openpronounce": {
+"full_name": "OpenPronounce/OpenPronounce",
+"stars": 234,
+"lic": "AGPL-3.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"pgshen/thinking-map": {
+"full_name": "PGshen/thinking-map",
+"stars": 187,
+"lic": "Apache-2.0",
+"pushed": "2026-08-23",
+"archived": false,
+"fork": false
+},
+"openthaigpt/openthaigpt": {
+"full_name": "OpenThaiGPT/openthaigpt",
+"stars": 121,
+"lic": "NOASSERTION",
+"pushed": "2023-05-26",
+"archived": false,
+"fork": false
+},
+"open-tutorai/open-tutor-ai-ce": {
+"full_name": "Open-TutorAi/open-tutor-ai-CE",
+"stars": 119,
+"lic": "BSD-3-Clause",
+"pushed": "2026-06-26",
+"archived": false,
+"fork": false
+},
+"optimeta/paideia": {
+"full_name": "OPTIMETA/PAIDEIA",
+"stars": 93,
+"lic": "MIT",
+"pushed": "2026-07-11",
+"archived": false,
+"fork": false
+},
+"orenda-project/rumi-platform": {
+"full_name": "Orenda-Project/rumi-platform",
+"stars": 25,
+"lic": "Apache-2.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"piyushtanwani/dau-buddy": {
+"full_name": "Piyushtanwani/DAU-buddy",
+"stars": 7,
+"lic": null,
+"pushed": "2026-11-16",
+"archived": false,
+"fork": false
+},
+"osu-slatelab/airflute": {
+"full_name": "OSU-slatelab/AIRFluTe",
+"stars": 3,
+"lic": "Apache-2.0",
+"pushed": "2022-12-08",
+"archived": false,
+"fork": false
+},
+"prairielearn/grader-python-v2": {
+"full_name": "PrairieLearn/grader-python-v2",
+"stars": 2,
+"lic": "MIT",
+"pushed": "2026-11-18",
+"archived": false,
+"fork": false
+},
+"pablopc05/campus-usc": {
+"full_name": "PabloPC05/campus-usc",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-11-18",
+"archived": false,
+"fork": false
+},
+"nugestudent2026/edtech": {
+"full_name": "Nugestudent2026/EdTech",
+"stars": 0,
+"lic": "BSL-1.0",
+"pushed": "2026-09-03",
+"archived": false,
+"fork": false
+},
+"profeanaeslavaedtech/mllde-xapi": {
+"full_name": "ProfeAnaEslavaEdTech/mllde-xapi",
+"stars": 0,
+"lic": "CC-BY-4.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"systran/faster-whisper": {
+"full_name": "SYSTRAN/faster-whisper",
+"stars": 26876,
+"lic": "MIT",
+"pushed": "2026-11-12",
+"archived": false,
+"fork": false
+},
+"rwth-os/eduos-rs": {
+"full_name": "RWTH-OS/eduOS-rs",
+"stars": 491,
+"lic": "Apache-2.0",
+"pushed": "2026-10-04",
+"archived": false,
+"fork": false
+},
+"senmuuuuw/universal-diagnostic-tutor-skill": {
+"full_name": "SenmuuuuW/universal-diagnostic-tutor-skill",
+"stars": 280,
+"lic": "MIT",
+"pushed": "2026-11-11",
+"archived": false,
+"fork": false
+},
+"sjriz/pytogether": {
+"full_name": "SJRiz/pytogether",
+"stars": 262,
+"lic": "MIT",
+"pushed": "2026-10-21",
+"archived": false,
+"fork": false
+},
+"selleo/mentingo": {
+"full_name": "Selleo/mentingo",
+"stars": 109,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"rohanmuppa/brightspace-mcp-server": {
+"full_name": "RohanMuppa/brightspace-mcp-server",
+"stars": 68,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"qwenstorm/xl-frontend": {
+"full_name": "QwenStorm/xl-frontend",
+"stars": 50,
+"lic": "MIT",
+"pushed": "2026-04-07",
+"archived": false,
+"fork": false
+},
+"saadrahman01/claude-moodle-dev": {
+"full_name": "SaadRahman01/claude-moodle-dev",
+"stars": 43,
+"lic": "MIT",
+"pushed": "2026-06-22",
+"archived": false,
+"fork": false
+},
+"qkeleq10/study-tools": {
+"full_name": "QkeleQ10/Study-Tools",
+"stars": 32,
+"lic": "AGPL-3.0",
+"pushed": "2026-11-08",
+"archived": false,
+"fork": false
+},
+"rakeshbabugajula/exam_intellect": {
+"full_name": "RakeshBabuGajula/Exam_Intellect",
+"stars": 19,
+"lic": "MIT",
+"pushed": "2026-10-15",
+"archived": false,
+"fork": false
+},
+"snoopy-alt/heuristic-learning-system": {
+"full_name": "SNOOPY-alt/heuristic-learning-system",
+"stars": 6,
+"lic": "MIT",
+"pushed": "2025-05-04",
+"archived": false,
+"fork": false
+},
+"qflowlearn/qti3": {
+"full_name": "QFlowLearn/qti3",
+"stars": 6,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"salehgnutux/gt-mishkatkids": {
+"full_name": "SalehGNUTUX/GT-MISHKATKIDS",
+"stars": 3,
+"lic": "GPL-3.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"reethureddy8/study-assistant": {
+"full_name": "Reethureddy8/Study-assistant",
+"stars": 2,
+"lic": "MIT",
+"pushed": "2026-10-28",
+"archived": false,
+"fork": false
+},
+"sisuben/dse-ict-master": {
+"full_name": "SISUBEN/DSE-ICT-Master",
+"stars": 1,
+"lic": "MIT",
+"pushed": "2025-12-17",
+"archived": false,
+"fork": false
+},
+"settibathulajyothi/aritificial-intelligence-code-417-skill-education-class-10": {
+"full_name": "SettibathulaJyothi/Aritificial-Intelligence-Code-417-Skill-Education-Class-10",
+"stars": 1,
+"lic": "MIT",
+"pushed": "2026-10-30",
+"archived": false,
+"fork": false
+},
+"qflowlearn/qflow-author": {
+"full_name": "QFlowLearn/qflow-author",
+"stars": 0,
+"lic": "AGPL-3.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"shubhjain139/local-exam-proctoring-engine": {
+"full_name": "SHUBHJAIN139/Local-Exam-Proctoring-Engine",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-10-12",
+"archived": false,
+"fork": false
+},
+"rishabh-bgp/vedic-math-hybrid-kt": {
+"full_name": "Rishabh-bgp/vedic-math-hybrid-kt",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-11-13",
+"archived": false,
+"fork": false
+},
+"sebasb76/poli": {
+"full_name": "SebasB76/poli",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-11-16",
+"archived": false,
+"fork": false
+},
+"thu-maic/openmaic": {
+"full_name": "THU-MAIC/OpenMAIC",
+"stars": 43962,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"unstructured-io/unstructured": {
+"full_name": "Unstructured-IO/unstructured",
+"stars": 15766,
+"lic": "Apache-2.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"udayraj123/omrchecker": {
+"full_name": "Udayraj123/OMRChecker",
+"stars": 1194,
+"lic": "MIT",
+"pushed": "2026-09-04",
+"archived": false,
+"fork": false
+},
+"submitty/submitty": {
+"full_name": "Submitty/Submitty",
+"stars": 807,
+"lic": "BSD-3-Clause",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"unitime/unitime": {
+"full_name": "UniTime/unitime",
+"stars": 360,
+"lic": "Apache-2.0",
+"pushed": "2026-11-18",
+"archived": false,
+"fork": false
+},
+"simonstang/feifei-companion": {
+"full_name": "SimonsTang/feifei-companion",
+"stars": 117,
+"lic": "Apache-2.0",
+"pushed": "2026-04-19",
+"archived": false,
+"fork": false
+},
+"sphereon-opensource/oid4vc": {
+"full_name": "Sphereon-Opensource/OID4VC",
+"stars": 93,
+"lic": "Apache-2.0",
+"pushed": "2026-07-03",
+"archived": false,
+"fork": false
+},
+"unitime/cpsolver": {
+"full_name": "UniTime/cpsolver",
+"stars": 84,
+"lic": "LGPL-3.0",
+"pushed": "2026-10-14",
+"archived": false,
+"fork": false
+},
+"sirhanmacx/claw-ed": {
+"full_name": "SirhanMacx/Claw-ED",
+"stars": 65,
+"lic": "MIT",
+"pushed": "2026-09-19",
+"archived": false,
+"fork": false
+},
+"studentsuite/awesome-study-resources": {
+"full_name": "StudentSuite/awesome-study-resources",
+"stars": 39,
+"lic": "MIT",
+"pushed": "2026-11-17",
+"archived": false,
+"fork": false
+},
+"spiderikun/korean-study-web": {
+"full_name": "SpiderIkun/korean-study-web",
+"stars": 39,
+"lic": "MIT",
+"pushed": "2026-05-18",
+"archived": false,
+"fork": false
+},
+"tovtechorg/tov-learn": {
+"full_name": "TovTechOrg/Tov-learn",
+"stars": 36,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"sonaiengine/ku-portal-mcp": {
+"full_name": "SonAIengine/ku-portal-mcp",
+"stars": 13,
+"lic": "MIT",
+"pushed": "2026-10-03",
+"archived": false,
+"fork": false
+},
+"unitedopen-source/microhelium": {
+"full_name": "UnitedOpen-Source/microHelium",
+"stars": 4,
+"lic": "AGPL-3.0",
+"pushed": "2026-11-13",
+"archived": false,
+"fork": false
+},
+"toochidennis/cbt-app": {
+"full_name": "Toochidennis/cbt-app",
+"stars": 1,
+"lic": "MIT",
+"pushed": "2026-01-10",
+"archived": false,
+"fork": false
+},
+"universityofhelsinkics/suoritustarkistin": {
+"full_name": "UniversityOfHelsinkiCS/suoritustarkistin",
+"stars": 1,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"universityofhelsinkics/sis-importer": {
+"full_name": "UniversityOfHelsinkiCS/sis-importer",
+"stars": 1,
+"lic": "MIT",
+"pushed": "2026-11-16",
+"archived": false,
+"fork": false
+},
+"srisatyalokesh/pariksha": {
+"full_name": "SriSatyaLokesh/pariksha",
+"stars": 0,
+"lic": "AGPL-3.0",
+"pushed": "2026-11-07",
+"archived": false,
+"fork": false
+},
+"universityofhelsinkics/sis-ns-manager": {
+"full_name": "UniversityOfHelsinkiCS/sis-ns-manager",
+"stars": 0,
+"lic": "Apache-2.0",
+"pushed": "2026-11-10",
+"archived": false,
+"fork": false
+},
+"stevenacoffman/roster": {
+"full_name": "StevenACoffman/roster",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-10-02",
+"archived": false,
+"fork": false
+},
+"agentscope-ai/openjudge": {
+"full_name": "agentscope-ai/OpenJudge",
+"stars": 1117,
+"lic": "Apache-2.0",
+"pushed": "2026-11-18",
+"archived": false,
+"fork": false
+},
+"adlnet/xapi-spec": {
+"full_name": "adlnet/xAPI-Spec",
+"stars": 954,
+"lic": "Apache-2.0",
+"pushed": "2025-07-03",
+"archived": false,
+"fork": false
+},
+"adaptlearning/adapt_framework": {
+"full_name": "adaptlearning/adapt_framework",
+"stars": 635,
+"lic": "GPL-3.0",
+"pushed": "2026-11-02",
+"archived": false,
+"fork": false
+},
+"adaptlearning/adapt_authoring": {
+"full_name": "adaptlearning/adapt_authoring",
+"stars": 562,
+"lic": "GPL-3.0",
+"pushed": "2026-08-04",
+"archived": false,
+"fork": false
+},
+"aaryansamanta/ai-ethos": {
+"full_name": "aaryansamanta/ai-ethos",
+"stars": 497,
+"lic": null,
+"pushed": "2026-09-20",
+"archived": false,
+"fork": false
+},
+"aaryansamanta/nextgen-ai": {
+"full_name": "aaryansamanta/nextgen-ai",
+"stars": 491,
+"lic": "NOASSERTION",
+"pushed": "2026-09-20",
+"archived": false,
+"fork": false
+},
+"academico-sis/academico": {
+"full_name": "academico-sis/academico",
+"stars": 413,
+"lic": "MIT",
+"pushed": "2026-11-18",
+"archived": false,
+"fork": false
+},
+"zekainie/universal-examprep-skill": {
+"full_name": "ZeKaiNie/universal-examprep-skill",
+"stars": 398,
+"lic": "MIT",
+"pushed": "2026-10-27",
+"archived": false,
+"fork": false
+},
+"adlnet/adl_lrs": {
+"full_name": "adlnet/ADL_LRS",
+"stars": 333,
+"lic": "Apache-2.0",
+"pushed": "2025-11-14",
+"archived": false,
+"fork": false
+},
+"zenglian990/ai_tutor_release": {
+"full_name": "Zenglian990/AI_Tutor_Release",
+"stars": 94,
+"lic": "MIT",
+"pushed": "2026-11-10",
+"archived": false,
+"fork": false
+},
+"a-sit-plus/vck": {
+"full_name": "a-sit-plus/vck",
+"stars": 77,
+"lic": "Apache-2.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"academic-innovation/django-lti": {
+"full_name": "academic-innovation/django-lti",
+"stars": 26,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"vladyslav-soldatenko/procrastilearn": {
+"full_name": "Vladyslav-Soldatenko/ProcrastiLearn",
+"stars": 25,
+"lic": "Apache-2.0",
+"pushed": "2026-11-01",
+"archived": false,
+"fork": false
+},
+"yari-tuber/math-rap-video": {
+"full_name": "Yari-tuber/math-rap-video",
+"stars": 21,
+"lic": "MIT",
+"pushed": "2026-11-12",
+"archived": false,
+"fork": false
+},
+"yuanpeng-li/gradescope-mcp": {
+"full_name": "Yuanpeng-Li/gradescope-mcp",
+"stars": 8,
+"lic": "MIT",
+"pushed": "2026-11-12",
+"archived": false,
+"fork": false
+},
+"acheamponge/wassce-benchmark": {
+"full_name": "acheamponge/wassce-benchmark",
+"stars": 4,
+"lic": "MIT",
+"pushed": "2026-04-07",
+"archived": false,
+"fork": false
+},
+"victor-blasco/uji-mcp": {
+"full_name": "Victor-Blasco/UJI-MCP",
+"stars": 1,
+"lic": "MIT",
+"pushed": "2026-11-05",
+"archived": false,
+"fork": false
+},
+"wdmoonmoonbird/exam-deep-seek": {
+"full_name": "WDMoonMoonBird/exam-deep-seek",
+"stars": 1,
+"lic": "MIT",
+"pushed": "2026-11-02",
+"archived": false,
+"fork": false
+},
+"vxgm/iaula-virtual-uleam": {
+"full_name": "VxGM/IAula-Virtual-Uleam",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-11-17",
+"archived": false,
+"fork": false
+},
+"vuongphan-09/vuongedu": {
+"full_name": "VuongPhan-09/vuongedu",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"amosblomqvist/learnharness": {
+"full_name": "amosblomqvist/learnharness",
+"stars": 10481,
+"lic": "AGPL-3.0",
+"pushed": "2026-11-12",
+"archived": false,
+"fork": false
+},
+"ahmetaa/zemberek-nlp": {
+"full_name": "ahmetaa/zemberek-nlp",
+"stars": 1378,
+"lic": "NOASSERTION",
+"pushed": "2026-11-17",
+"archived": false,
+"fork": false
+},
+"ankimcp/anki-mcp-server": {
+"full_name": "ankimcp/anki-mcp-server",
+"stars": 570,
+"lic": "MIT",
+"pushed": "2026-11-07",
+"archived": false,
+"fork": false
+},
+"ai-shifu/ai-shifu": {
+"full_name": "ai-shifu/ai-shifu",
+"stars": 332,
+"lic": "Apache-2.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"aiktb/furiganamaker": {
+"full_name": "aiktb/furiganamaker",
+"stars": 312,
+"lic": "MIT",
+"pushed": "2026-10-25",
+"archived": false,
+"fork": false
+},
+"aieducations/edumcp": {
+"full_name": "aieducations/edumcp",
+"stars": 155,
+"lic": "Apache-2.0",
+"pushed": "2025-05-05",
+"archived": false,
+"fork": false
+},
+"anandpatikat/guru-latihan-dinamis": {
+"full_name": "anandpatikat/guru-latihan-dinamis",
+"stars": 115,
+"lic": null,
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"ahmedeid1/lumen": {
+"full_name": "ahmedEid1/lumen",
+"stars": 94,
+"lic": "MIT",
+"pushed": "2026-10-30",
+"archived": false,
+"fork": false
+},
+"ai-lingnan/econai-agent-platform": {
+"full_name": "ai-lingnan/econai-agent-platform",
+"stars": 41,
+"lic": "AGPL-3.0",
+"pushed": "2026-07-17",
+"archived": false,
+"fork": false
+},
+"ahamana/canvas-lms-docker": {
+"full_name": "ahamana/canvas-lms-docker",
+"stars": 21,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"alejooroncoy/campus-cli": {
+"full_name": "alejooroncoy/campus-cli",
+"stars": 13,
+"lic": "ISC",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"alvaretto/r-exams_matematicas": {
+"full_name": "alvaretto/r-exams_matematicas",
+"stars": 8,
+"lic": "MIT",
+"pushed": "2024-03-18",
+"archived": false,
+"fork": false
+},
+"amaanwarsi/proctora": {
+"full_name": "amaanwarsi/Proctora",
+"stars": 3,
+"lic": "MIT",
+"pushed": "2026-04-07",
+"archived": false,
+"fork": false
+},
+"alberto2005-coder/detector-ia": {
+"full_name": "alberto2005-coder/detector-ia",
+"stars": 2,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"aleka07/scorm_agents": {
+"full_name": "aleka07/scorm_agents",
+"stars": 1,
+"lic": "MIT",
+"pushed": "2026-08-24",
+"archived": false,
+"fork": false
+},
+"andrsnrua/universidad-pacifico-mcp": {
+"full_name": "andrsnrua/universidad-pacifico-mcp",
+"stars": 1,
+"lic": "ISC",
+"pushed": "2026-10-06",
+"archived": false,
+"fork": false
+},
+"andbriha/examguardian": {
+"full_name": "andbriha/ExamGuardian",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-11-14",
+"archived": false,
+"fork": false
+},
+"angel-georgiev/daskal.ai": {
+"full_name": "angel-georgiev/daskal.ai",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-11-13",
+"archived": false,
+"fork": false
+},
+"alexfiorenza/aulasvirtuales-toolkit": {
+"full_name": "alexFiorenza/aulasvirtuales-toolkit",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-08-26",
+"archived": false,
+"fork": false
+},
+"alanmagno1/tuaulavirtual-unam-mcp": {
+"full_name": "alanmagno1/tuaulavirtual-unam-mcp",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-09-09",
+"archived": false,
+"fork": false
+},
+"appsmithorg/appsmith": {
+"full_name": "appsmithorg/appsmith",
+"stars": 41280,
+"lic": "Apache-2.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"ankitects/anki": {
+"full_name": "ankitects/anki",
+"stars": 32914,
+"lic": "NOASSERTION",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"assafelovic/gpt-researcher": {
+"full_name": "assafelovic/gpt-researcher",
+"stars": 30787,
+"lic": "Apache-2.0",
+"pushed": "2026-11-12",
+"archived": false,
+"fork": false
+},
+"apereo/cas": {
+"full_name": "apereo/cas",
+"stars": 11404,
+"lic": "Apache-2.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"bigbluebutton/bigbluebutton": {
+"full_name": "bigbluebutton/bigbluebutton",
+"stars": 9284,
+"lic": "LGPL-3.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"argilla-io/argilla": {
+"full_name": "argilla-io/argilla",
+"stars": 5208,
+"lic": "Apache-2.0",
+"pushed": "2026-11-16",
+"archived": false,
+"fork": false
+},
+"barnamenevisi/free-resources": {
+"full_name": "barnamenevisi/free-resources",
+"stars": 1298,
+"lic": "MIT",
+"pushed": "2026-10-11",
+"archived": false,
+"fork": false
+},
+"beltromatti/get-it": {
+"full_name": "beltromatti/get-it",
+"stars": 1170,
+"lic": "Apache-2.0",
+"pushed": "2026-06-29",
+"archived": false,
+"fork": false
+},
+"apereo/java-cas-client": {
+"full_name": "apereo/java-cas-client",
+"stars": 948,
+"lic": "NOASSERTION",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"bab2min/kiwi": {
+"full_name": "bab2min/Kiwi",
+"stars": 809,
+"lic": "Apache-2.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"autolab/autolab": {
+"full_name": "autolab/Autolab",
+"stars": 808,
+"lic": "Apache-2.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"apereo/phpcas": {
+"full_name": "apereo/phpCAS",
+"stars": 801,
+"lic": "Apache-2.0",
+"pushed": "2026-06-30",
+"archived": false,
+"fork": false
+},
+"assafkip/claudemy": {
+"full_name": "assafkip/claudemy",
+"stars": 710,
+"lic": "MIT",
+"pushed": "2026-10-29",
+"archived": false,
+"fork": false
+},
+"apache/openmeetings": {
+"full_name": "apache/openmeetings",
+"stars": 690,
+"lic": "NOASSERTION",
+"pushed": "2026-11-16",
+"archived": false,
+"fork": false
+},
+"anthropics/k12-teacher-skills": {
+"full_name": "anthropics/k12-teacher-skills",
+"stars": 633,
+"lic": "Apache-2.0",
+"pushed": "2026-10-14",
+"archived": false,
+"fork": false
+},
+"artcc/freelingo": {
+"full_name": "artcc/freelingo",
+"stars": 296,
+"lic": "AGPL-3.0",
+"pushed": "2026-11-17",
+"archived": false,
+"fork": false
+},
+"ankimcp/anki-mcp-server-addon": {
+"full_name": "ankimcp/anki-mcp-server-addon",
+"stars": 105,
+"lic": "NOASSERTION",
+"pushed": "2026-11-17",
+"archived": false,
+"fork": false
+},
+"autolab/tango": {
+"full_name": "autolab/Tango",
+"stars": 49,
+"lic": "Apache-2.0",
+"pushed": "2026-10-21",
+"archived": false,
+"fork": false
+},
+"bcgov/sims": {
+"full_name": "bcgov/SIMS",
+"stars": 29,
+"lic": "Apache-2.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"artevelde-uas/canvas-lms-app": {
+"full_name": "artevelde-uas/canvas-lms-app",
+"stars": 12,
+"lic": "ISC",
+"pushed": "2026-10-26",
+"archived": false,
+"fork": false
+},
+"chroma-core/chroma": {
+"full_name": "chroma-core/chroma",
+"stars": 29714,
+"lic": "Apache-2.0",
+"pushed": "2026-11-13",
+"archived": false,
+"fork": false
+},
+"chadyi/studyontv": {
+"full_name": "chadyi/StudyOnTV",
+"stars": 1714,
+"lic": "NOASSERTION",
+"pushed": "2026-11-18",
+"archived": false,
+"fork": false
+},
+"chamilo/chamilo-lms": {
+"full_name": "chamilo/chamilo-lms",
+"stars": 1025,
+"lic": "GPL-3.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"chuma-beep/mathua": {
+"full_name": "chuma-beep/mathua",
+"stars": 430,
+"lic": "MIT",
+"pushed": "2026-11-18",
+"archived": false,
+"fork": false
+},
+"boyuchengz/canvas-mcp": {
+"full_name": "boyuchengz/canvas-mcp",
+"stars": 116,
+"lic": "MIT",
+"pushed": "2026-10-27",
+"archived": false,
+"fork": false
+},
+"bretttolbert/verbecc": {
+"full_name": "bretttolbert/verbecc",
+"stars": 106,
+"lic": "LGPL-3.0",
+"pushed": "2026-11-08",
+"archived": false,
+"fork": false
+},
+"brian901106/japanese-tutor-mugi": {
+"full_name": "brian901106/japanese-tutor-mugi",
+"stars": 105,
+"lic": "MIT",
+"pushed": "2026-11-02",
+"archived": false,
+"fork": false
+},
+"bncc-dev/bncc-dados": {
+"full_name": "bncc-dev/bncc-dados",
+"stars": 26,
+"lic": "MIT",
+"pushed": "2026-10-15",
+"archived": false,
+"fork": false
+},
+"bncc-dev/bncc-benchmark": {
+"full_name": "bncc-dev/bncc-benchmark",
+"stars": 12,
+"lic": "NOASSERTION",
+"pushed": "2026-09-19",
+"archived": false,
+"fork": false
+},
+"chtzvt/pyedsby": {
+"full_name": "chtzvt/PyEdsby",
+"stars": 11,
+"lic": "MIT",
+"pushed": "2022-06-28",
+"archived": false,
+"fork": false
+},
+"bncc-dev/bncc-pacotes": {
+"full_name": "bncc-dev/bncc-pacotes",
+"stars": 10,
+"lic": "NOASSERTION",
+"pushed": "2026-10-15",
+"archived": false,
+"fork": false
+},
+"bruchris/canvas-lms-mcp": {
+"full_name": "bruchris/canvas-lms-mcp",
+"stars": 10,
+"lic": "MIT",
+"pushed": "2026-11-17",
+"archived": false,
+"fork": false
+},
+"bilalabic/awesome-turkish-datasets": {
+"full_name": "bilalabic/awesome-turkish-datasets",
+"stars": 9,
+"lic": "CC-BY-4.0",
+"pushed": "2026-11-01",
+"archived": false,
+"fork": false
+},
+"cculb/schoolconnect": {
+"full_name": "cculb/schoolconnect",
+"stars": 4,
+"lic": "MIT",
+"pushed": "2025-12-28",
+"archived": false,
+"fork": false
+},
+"changazo/udesa-mcp": {
+"full_name": "changazo/udesa-mcp",
+"stars": 4,
+"lic": "Apache-2.0",
+"pushed": "2026-11-17",
+"archived": false,
+"fork": false
+},
+"cilt-uct/sakai-skin-vula": {
+"full_name": "cilt-uct/sakai-skin-vula",
+"stars": 4,
+"lic": "ECL-2.0",
+"pushed": "2026-06-03",
+"archived": false,
+"fork": false
+},
+"blend-ed/openedx-mcp": {
+"full_name": "blend-ed/openedx-mcp",
+"stars": 3,
+"lic": "AGPL-3.0",
+"pushed": "2026-10-22",
+"archived": false,
+"fork": false
+},
+"christophse/django-lti-tool": {
+"full_name": "christophse/django-lti-tool",
+"stars": 2,
+"lic": "BSD-3-Clause",
+"pushed": "2024-06-20",
+"archived": false,
+"fork": false
+},
+"blackboard/bbdn-lti-1p3-tool-example": {
+"full_name": "blackboard/BBDN-lti-1p3-tool-example",
+"stars": 1,
+"lic": "Apache-2.0",
+"pushed": "2023-11-13",
+"archived": false,
+"fork": false
+},
+"bolgerru/blackboard-mcp": {
+"full_name": "bolgerru/blackboard-mcp",
+"stars": 0,
+"lic": null,
+"pushed": "2026-10-15",
+"archived": false,
+"fork": false
+},
+"crewaiinc/crewai": {
+"full_name": "crewAIInc/crewAI",
+"stars": 61108,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"crownpku/awesome-chinese-nlp": {
+"full_name": "crownpku/Awesome-Chinese-NLP",
+"stars": 7920,
+"lic": "Apache-2.0",
+"pushed": "2023-07-27",
+"archived": false,
+"fork": false
+},
+"cmu-db/bustub": {
+"full_name": "cmu-db/bustub",
+"stars": 5170,
+"lic": "MIT",
+"pushed": "2026-11-18",
+"archived": false,
+"fork": false
+},
+"classroomio/classroomio": {
+"full_name": "classroomio/classroomio",
+"stars": 1750,
+"lic": "AGPL-3.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"codelitdev/courselit": {
+"full_name": "codelitdev/courselit",
+"stars": 1303,
+"lic": "AGPL-3.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"computationalmodelling/nbval": {
+"full_name": "computationalmodelling/nbval",
+"stars": 452,
+"lic": "NOASSERTION",
+"pushed": "2025-09-17",
+"archived": false,
+"fork": false
+},
+"claroline/claroline": {
+"full_name": "claroline/Claroline",
+"stars": 349,
+"lic": "NOASSERTION",
+"pushed": "2026-10-13",
+"archived": false,
+"fork": false
+},
+"ctrlaltwill/learnkit": {
+"full_name": "ctrlaltwill/LearnKit",
+"stars": 185,
+"lic": "MIT",
+"pushed": "2026-10-31",
+"archived": false,
+"fork": false
+},
+"cognitive-engineering-lab/mdbook-quiz": {
+"full_name": "cognitive-engineering-lab/mdbook-quiz",
+"stars": 155,
+"lic": "Apache-2.0",
+"pushed": "2026-10-25",
+"archived": false,
+"fork": false
+},
+"czcorpus/kontext": {
+"full_name": "czcorpus/kontext",
+"stars": 80,
+"lic": "GPL-2.0",
+"pushed": "2026-11-12",
+"archived": false,
+"fork": false
+},
+"cmlonder/notebooklm-chunker": {
+"full_name": "cmlonder/notebooklm-chunker",
+"stars": 21,
+"lic": "MIT",
+"pushed": "2026-11-15",
+"archived": false,
+"fork": false
+},
+"course-code-framework/coursecode": {
+"full_name": "course-code-framework/coursecode",
+"stars": 7,
+"lic": "MIT",
+"pushed": "2026-11-06",
+"archived": false,
+"fork": false
+},
+"course-code-framework/coursecode-desktop": {
+"full_name": "course-code-framework/coursecode-desktop",
+"stars": 5,
+"lic": "MIT",
+"pushed": "2026-10-29",
+"archived": false,
+"fork": false
+},
+"cxkzai/ai-admissions-platform": {
+"full_name": "cxkzai/ai-admissions-platform",
+"stars": 5,
+"lic": "MIT",
+"pushed": "2026-07-02",
+"archived": false,
+"fork": false
+},
+"clementina-tom/personalized-learning-recommendation-system": {
+"full_name": "clementina-tom/Personalized-Learning-Recommendation-System",
+"stars": 3,
+"lic": "MIT",
+"pushed": "2026-06-01",
+"archived": false,
+"fork": false
+},
+"czcorpus/cnc-tskit": {
+"full_name": "czcorpus/cnc-tskit",
+"stars": 1,
+"lic": "Apache-2.0",
+"pushed": "2026-09-29",
+"archived": false,
+"fork": false
+},
+"czcorpus/manatee-open": {
+"full_name": "czcorpus/manatee-open",
+"stars": 1,
+"lic": "GPL-2.0",
+"pushed": "2026-11-03",
+"archived": false,
+"fork": false
+},
+"code-by-abrar/online-proctoring-system": {
+"full_name": "code-by-abrar/Online-Proctoring-system",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"cilt-uct/tsugi-migrate-to-brightspace": {
+"full_name": "cilt-uct/tsugi-migrate-to-brightspace",
+"stars": 0,
+"lic": "Apache-2.0",
+"pushed": "2026-10-22",
+"archived": false,
+"fork": false
+},
+"cilt-uct/tsugi-request-gradebook-upload": {
+"full_name": "cilt-uct/tsugi-request-gradebook-upload",
+"stars": 0,
+"lic": "Apache-2.0",
+"pushed": "2026-10-06",
+"archived": false,
+"fork": false
+},
+"docling-project/docling": {
+"full_name": "docling-project/docling",
+"stars": 70794,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"datalab-to/marker": {
+"full_name": "datalab-to/marker",
+"stars": 40989,
+"lic": "Apache-2.0",
+"pushed": "2026-11-18",
+"archived": false,
+"fork": false
+},
+"deepset-ai/haystack": {
+"full_name": "deepset-ai/haystack",
+"stars": 27053,
+"lic": "Apache-2.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"deeplearningturkiye/turkce-yapay-zeka-kaynaklari": {
+"full_name": "deeplearningturkiye/turkce-yapay-zeka-kaynaklari",
+"stars": 2431,
+"lic": "MIT",
+"pushed": "2021-11-03",
+"archived": false,
+"fork": false
+},
+"dmoshehun-prog/learn-from-materials": {
+"full_name": "dmoshehun-prog/learn-from-materials",
+"stars": 1457,
+"lic": "MIT",
+"pushed": "2026-10-19",
+"archived": false,
+"fork": false
+},
+"daac-tools/vibrato": {
+"full_name": "daac-tools/vibrato",
+"stars": 430,
+"lic": "Apache-2.0",
+"pushed": "2026-10-25",
+"archived": false,
+"fork": false
+},
+"dodona-edu/dolos": {
+"full_name": "dodona-edu/dolos",
+"stars": 357,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"davidluzgouveia/kanji-data": {
+"full_name": "davidluzgouveia/kanji-data",
+"stars": 244,
+"lic": "MIT",
+"pushed": "2026-02-27",
+"archived": false,
+"fork": false
+},
+"dmitry-viskov/pylti1.3": {
+"full_name": "dmitry-viskov/pylti1.3",
+"stars": 138,
+"lic": "MIT",
+"pushed": "2024-08-18",
+"archived": false,
+"fork": false
+},
+"davidpesce/moodle-logstore_xapi": {
+"full_name": "davidpesce/moodle-logstore_xapi",
+"stars": 83,
+"lic": "GPL-3.0",
+"pushed": "2026-10-29",
+"archived": false,
+"fork": false
+},
+"david-04/quiz-mate": {
+"full_name": "david-04/quiz-mate",
+"stars": 60,
+"lic": "ISC",
+"pushed": "2026-07-10",
+"archived": false,
+"fork": false
+},
+"dfdb76/bncc-mcp": {
+"full_name": "dfdb76/bncc-mcp",
+"stars": 14,
+"lic": "NOASSERTION",
+"pushed": "2026-07-24",
+"archived": false,
+"fork": false
+},
+"dbosk/canvaslms": {
+"full_name": "dbosk/canvaslms",
+"stars": 9,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"d-wwei/learn-anything": {
+"full_name": "d-wwei/learn-anything",
+"stars": 9,
+"lic": "MIT",
+"pushed": "2026-05-15",
+"archived": false,
+"fork": false
+},
+"danieltyukov/ieee-mcp": {
+"full_name": "danieltyukov/ieee-mcp",
+"stars": 7,
+"lic": "MIT",
+"pushed": "2026-11-14",
+"archived": false,
+"fork": false
+},
+"devissaputra/self_regulated_learning_copilot": {
+"full_name": "devissaputra/self_regulated_learning_copilot",
+"stars": 2,
+"lic": "MIT",
+"pushed": "2026-09-26",
+"archived": false,
+"fork": false
+},
+"datastiltskin/sanshodhan": {
+"full_name": "datastiltskin/Sanshodhan",
+"stars": 1,
+"lic": "MIT",
+"pushed": "2026-10-21",
+"archived": false,
+"fork": false
+},
+"dikkayulianto/ebook-generator": {
+"full_name": "dikkayulianto/ebook-generator",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"deeding2030-boop/bestteach-public": {
+"full_name": "deeding2030-boop/bestteach-public",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-05-26",
+"archived": false,
+"fork": false
+},
+"dongbeixiaohuo/writing-agent": {
+"full_name": "dongbeixiaohuo/writing-agent",
+"stars": 461,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"elmsln/elmsln": {
+"full_name": "elmsln/elmsln",
+"stars": 253,
+"lic": "GPL-3.0",
+"pushed": "2026-08-14",
+"archived": false,
+"fork": false
+},
+"five-plus-one/ai-marker-suite": {
+"full_name": "five-plus-one/AI-Marker-Suite",
+"stars": 192,
+"lic": "GPL-3.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"flysheep-ai/education-skills": {
+"full_name": "flysheep-ai/education-skills",
+"stars": 126,
+"lic": "MIT",
+"pushed": "2026-01-30",
+"archived": false,
+"fork": false
+},
+"flammie/omorfi": {
+"full_name": "flammie/omorfi",
+"stars": 108,
+"lic": "NOASSERTION",
+"pushed": "2026-08-24",
+"archived": false,
+"fork": false
+},
+"eu-digital-identity-wallet/eudi-lib-android-wallet-core": {
+"full_name": "eu-digital-identity-wallet/eudi-lib-android-wallet-core",
+"stars": 64,
+"lic": "Apache-2.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"eu-digital-identity-wallet/eudi-lib-jvm-openid4vci-kt": {
+"full_name": "eu-digital-identity-wallet/eudi-lib-jvm-openid4vci-kt",
+"stars": 47,
+"lic": "Apache-2.0",
+"pushed": "2026-11-17",
+"archived": false,
+"fork": false
+},
+"eu-digital-identity-wallet/eudi-srv-pid-issuer": {
+"full_name": "eu-digital-identity-wallet/eudi-srv-pid-issuer",
+"stars": 43,
+"lic": "Apache-2.0",
+"pushed": "2026-11-06",
+"archived": false,
+"fork": false
+},
+"elimu-ai/webapp": {
+"full_name": "elimu-ai/webapp",
+"stars": 41,
+"lic": "MIT",
+"pushed": "2026-11-17",
+"archived": false,
+"fork": false
+},
+"firekern/zusia": {
+"full_name": "firekern/zusia",
+"stars": 35,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"eumakerdev/bncc_api": {
+"full_name": "eumakerdev/bncc_api",
+"stars": 17,
+"lic": "MIT",
+"pushed": "2026-11-16",
+"archived": false,
+"fork": false
+},
+"eecs-autograder/autograder-server": {
+"full_name": "eecs-autograder/autograder-server",
+"stars": 9,
+"lic": "LGPL-3.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"forgemorrow/chinese-teaching-ai-agent": {
+"full_name": "forgemorrow/Chinese-Teaching-AI-Agent",
+"stars": 8,
+"lic": "MIT",
+"pushed": "2026-11-14",
+"archived": false,
+"fork": false
+},
+"dungnotnull/readpulse-ai-agent": {
+"full_name": "dungnotnull/ReadPulse-AI-Agent",
+"stars": 3,
+"lic": "MIT",
+"pushed": "2026-09-15",
+"archived": false,
+"fork": false
+},
+"fattaillabs/mogo-print": {
+"full_name": "fattaillabs/mogo-print",
+"stars": 1,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"edunelsonit/jambora": {
+"full_name": "edunelsonit/Jambora",
+"stars": 1,
+"lic": "Apache-2.0",
+"pushed": "2026-03-24",
+"archived": false,
+"fork": false
+},
+"farroshsy/hcie-system": {
+"full_name": "farroshsy/hcie-system",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-11-04",
+"archived": false,
+"fork": false
+},
+"falkenslab/miyagi": {
+"full_name": "falkenslab/miyagi",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-11-18",
+"archived": false,
+"fork": false
+},
+"fireheartjerry/mathos-webmcp": {
+"full_name": "fireheartjerry/mathos-webmcp",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-09-04",
+"archived": false,
+"fork": false
+},
+"franc1sc0sv/udb-copilot": {
+"full_name": "franc1sc0sv/udb-copilot",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-10-25",
+"archived": false,
+"fork": false
+},
+"freecodecamp/freecodecamp": {
+"full_name": "freeCodeCamp/freeCodeCamp",
+"stars": 459351,
+"lic": "BSD-3-Clause",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"hankcs/hanlp": {
+"full_name": "hankcs/HanLP",
+"stars": 36538,
+"lic": "Apache-2.0",
+"pushed": "2026-11-07",
+"archived": false,
+"fork": false
+},
+"frappe/lms": {
+"full_name": "frappe/lms",
+"stars": 3432,
+"lic": "AGPL-3.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"frappe/education": {
+"full_name": "frappe/education",
+"stars": 715,
+"lic": "NOASSERTION",
+"pushed": "2026-10-30",
+"archived": false,
+"fork": false
+},
+"francoisjacquet/rosariosis": {
+"full_name": "francoisjacquet/rosariosis",
+"stars": 655,
+"lic": "GPL-2.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"h5p/h5p-interactive-video": {
+"full_name": "h5p/h5p-interactive-video",
+"stars": 267,
+"lic": "MIT",
+"pushed": "2026-11-17",
+"archived": false,
+"fork": false
+},
+"gocodebox/lifterlms": {
+"full_name": "gocodebox/lifterlms",
+"stars": 211,
+"lic": "GPL-3.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"h5p/h5p-php-library": {
+"full_name": "h5p/h5p-php-library",
+"stars": 156,
+"lic": "GPL-3.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"haxtheweb/haxcms-php": {
+"full_name": "haxtheweb/haxcms-php",
+"stars": 130,
+"lic": "Apache-2.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"h5p/h5p-editor-php-library": {
+"full_name": "h5p/h5p-editor-php-library",
+"stars": 83,
+"lic": null,
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"h5p/h5p-cli": {
+"full_name": "h5p/h5p-cli",
+"stars": 79,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"h5p/h5p-course-presentation": {
+"full_name": "h5p/h5p-course-presentation",
+"stars": 57,
+"lic": "MIT",
+"pushed": "2026-11-11",
+"archived": false,
+"fork": false
+},
+"geekjourneyx/interactive-learning": {
+"full_name": "geekjourneyx/interactive-learning",
+"stars": 52,
+"lic": "MIT",
+"pushed": "2026-04-10",
+"archived": false,
+"fork": false
+},
+"h5p/h5p-audio-recorder": {
+"full_name": "h5p/h5p-audio-recorder",
+"stars": 36,
+"lic": "MIT",
+"pushed": "2026-11-17",
+"archived": false,
+"fork": false
+},
+"h5p/h5p-speak-the-words": {
+"full_name": "h5p/h5p-speak-the-words",
+"stars": 12,
+"lic": "MIT",
+"pushed": "2026-11-17",
+"archived": false,
+"fork": false
+},
+"gdgguadalajara/open-badges-platform": {
+"full_name": "gdgguadalajara/open-badges-platform",
+"stars": 9,
+"lic": "AGPL-3.0",
+"pushed": "2026-08-31",
+"archived": false,
+"fork": false
+},
+"hapince-code/ai-eduforge": {
+"full_name": "hapince-code/AI-EduForge",
+"stars": 6,
+"lic": "MIT",
+"pushed": "2026-05-11",
+"archived": false,
+"fork": false
+},
+"hasensaramii977-cpu/grade-12-national-exam-training-model": {
+"full_name": "hasensaramii977-cpu/Grade-12-National-Exam-Training-Model",
+"stars": 1,
+"lic": "CC0-1.0",
+"pushed": "2026-05-07",
+"archived": false,
+"fork": false
+},
+"haison8x/geogebra-mcp": {
+"full_name": "haison8x/geogebra-mcp",
+"stars": 1,
+"lic": "MIT",
+"pushed": "2026-10-20",
+"archived": false,
+"fork": false
+},
+"ganesh-786/proctor": {
+"full_name": "ganesh-786/Proctor",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2025-06-09",
+"archived": false,
+"fork": false
+},
+"infiniflow/ragflow": {
+"full_name": "infiniflow/ragflow",
+"stars": 94443,
+"lic": "Apache-2.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"instructure/canvas-lms": {
+"full_name": "instructure/canvas-lms",
+"stars": 6919,
+"lic": "AGPL-3.0",
+"pushed": "2026-11-10",
+"archived": false,
+"fork": false
+},
+"iiab/iiab": {
+"full_name": "iiab/iiab",
+"stars": 2054,
+"lic": "GPL-2.0",
+"pushed": "2026-11-13",
+"archived": false,
+"fork": false
+},
+"instructure/instructure-ui": {
+"full_name": "instructure/instructure-ui",
+"stars": 486,
+"lic": "NOASSERTION",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"inducer/relate": {
+"full_name": "inducer/relate",
+"stars": 438,
+"lic": "NOASSERTION",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"jcputney/scorm-again": {
+"full_name": "jcputney/scorm-again",
+"stars": 366,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"helixnow/deep-student": {
+"full_name": "helixnow/deep-student",
+"stars": 324,
+"lic": "AGPL-3.0",
+"pushed": "2026-11-18",
+"archived": false,
+"fork": false
+},
+"himkt/konoha": {
+"full_name": "himkt/konoha",
+"stars": 265,
+"lic": "MIT",
+"pushed": "2026-11-13",
+"archived": false,
+"fork": false
+},
+"jamsinclair/open-anki-jlpt-decks": {
+"full_name": "jamsinclair/open-anki-jlpt-decks",
+"stars": 251,
+"lic": "MIT",
+"pushed": "2026-03-12",
+"archived": false,
+"fork": false
+},
+"huspacy/huspacy": {
+"full_name": "huspacy/huspacy",
+"stars": 194,
+"lic": "Apache-2.0",
+"pushed": "2026-11-16",
+"archived": false,
+"fork": false
+},
+"instructure/common-cartridge-viewer": {
+"full_name": "instructure/common-cartridge-viewer",
+"stars": 95,
+"lic": "MIT",
+"pushed": "2026-11-04",
+"archived": false,
+"fork": false
+},
+"iblai/lms": {
+"full_name": "iblai/lms",
+"stars": 88,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"heimi51168/planyourtv": {
+"full_name": "heimi51168/planyourtv",
+"stars": 74,
+"lic": "MIT",
+"pushed": "2026-11-17",
+"archived": false,
+"fork": false
+},
+"itsme-ganzu/belajar-ngoding-byganzu": {
+"full_name": "itsme-ganzu/belajar-ngoding-byGanzu",
+"stars": 66,
+"lic": "MIT",
+"pushed": "2026-10-27",
+"archived": false,
+"fork": false
+},
+"houselearning/home": {
+"full_name": "houselearning/home",
+"stars": 46,
+"lic": "Apache-2.0",
+"pushed": "2026-11-12",
+"archived": false,
+"fork": false
+},
+"impierce/openid4vc": {
+"full_name": "impierce/openid4vc",
+"stars": 42,
+"lic": "Apache-2.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"jeremy-xuan/socraticnovel": {
+"full_name": "Jeremy-xuan/SocraticNovel",
+"stars": 32,
+"lic": "NOASSERTION",
+"pushed": "2026-10-21",
+"archived": false,
+"fork": false
+},
+"isakskogstad/skolverket-mcp": {
+"full_name": "isakskogstad/Skolverket-MCP",
+"stars": 13,
+"lic": "MIT",
+"pushed": "2026-04-22",
+"archived": false,
+"fork": false
+},
+"jamestesting0/tum-mcp": {
+"full_name": "jamestesting0/tum-mcp",
+"stars": 1,
+"lic": "MIT",
+"pushed": "2026-11-18",
+"archived": false,
+"fork": false
+},
+"idrismukthar/ttl_cbt": {
+"full_name": "idrismukthar/TTL_CBT",
+"stars": 1,
+"lic": "MIT",
+"pushed": "2026-01-09",
+"archived": false,
+"fork": false
+},
+"jitsi/jitsi-meet": {
+"full_name": "jitsi/jitsi-meet",
+"stars": 30274,
+"lic": "Apache-2.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"jupyterhub/jupyterhub": {
+"full_name": "jupyterhub/jupyterhub",
+"stars": 8366,
+"lic": "BSD-3-Clause",
+"pushed": "2026-11-18",
+"archived": false,
+"fork": false
+},
+"jupyterhub/binderhub": {
+"full_name": "jupyterhub/binderhub",
+"stars": 2672,
+"lic": "BSD-3-Clause",
+"pushed": "2026-11-14",
+"archived": false,
+"fork": false
+},
+"jupyterhub/zero-to-jupyterhub-k8s": {
+"full_name": "jupyterhub/zero-to-jupyterhub-k8s",
+"stars": 1728,
+"lic": "NOASSERTION",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"jupyter/nbgrader": {
+"full_name": "jupyter/nbgrader",
+"stars": 1370,
+"lic": "BSD-3-Clause",
+"pushed": "2026-11-03",
+"archived": false,
+"fork": false
+},
+"kiwix/kiwix-tools": {
+"full_name": "kiwix/kiwix-tools",
+"stars": 1007,
+"lic": "GPL-3.0",
+"pushed": "2026-11-09",
+"archived": false,
+"fork": false
+},
+"jupyterhub/nbgitpuller": {
+"full_name": "jupyterhub/nbgitpuller",
+"stars": 237,
+"lic": "BSD-3-Clause",
+"pushed": "2026-11-02",
+"archived": false,
+"fork": false
+},
+"kirill-markin/flashcards-open-source-app": {
+"full_name": "kirill-markin/flashcards-open-source-app",
+"stars": 119,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"jurimaxam-dotcom/chemdraw-mcp": {
+"full_name": "jurimaxam-dotcom/chemdraw-mcp",
+"stars": 32,
+"lic": "Apache-2.0",
+"pushed": "2026-11-18",
+"archived": false,
+"fork": false
+},
+"kirstykitto/clatoolkit": {
+"full_name": "kirstykitto/CLAtoolkit",
+"stars": 27,
+"lic": "GPL-3.0",
+"pushed": "2017-07-11",
+"archived": false,
+"fork": false
+},
+"kenoharada/ai-labuddy": {
+"full_name": "kenoharada/AI-LaBuddy",
+"stars": 22,
+"lic": "MIT",
+"pushed": "2023-07-02",
+"archived": false,
+"fork": false
+},
+"kamlendras/openproctor": {
+"full_name": "kamlendras/OpenProctor",
+"stars": 16,
+"lic": "AGPL-3.0",
+"pushed": "2025-05-28",
+"archived": false,
+"fork": false
+},
+"jetyu/dawn": {
+"full_name": "jetyu/Dawn",
+"stars": 14,
+"lic": "Apache-2.0",
+"pushed": "2025-07-20",
+"archived": false,
+"fork": false
+},
+"kad-xyz/spbstu-mcp": {
+"full_name": "kad-xyz/spbstu-mcp",
+"stars": 10,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"justinhunt/moodle-mod_readaloud": {
+"full_name": "justinhunt/moodle-mod_readaloud",
+"stars": 6,
+"lic": null,
+"pushed": "2026-10-28",
+"archived": false,
+"fork": false
+},
+"jonsorr/d2l_brightspace_apis": {
+"full_name": "jonsorr/D2L_Brightspace_APIs",
+"stars": 2,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"kta41/mcp-uned": {
+"full_name": "kta41/mcp-uned",
+"stars": 1,
+"lic": "MIT",
+"pushed": "2026-10-18",
+"archived": false,
+"fork": false
+},
+"jpmanson/siu-guarani-mcp": {
+"full_name": "jpmanson/siu-guarani-mcp",
+"stars": 1,
+"lic": "MIT",
+"pushed": "2026-08-10",
+"archived": false,
+"fork": false
+},
+"kaveheng/genai-in-education": {
+"full_name": "kaveheng/GenAi-in-education",
+"stars": 0,
+"lic": "NOASSERTION",
+"pushed": "2026-09-26",
+"archived": false,
+"fork": false
+},
+"langchain-ai/langgraph": {
+"full_name": "langchain-ai/langgraph",
+"stars": 45161,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"langfuse/langfuse": {
+"full_name": "langfuse/langfuse",
+"stars": 37641,
+"lic": "NOASSERTION",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"learnhouse/learnhouse": {
+"full_name": "learnhouse/learnhouse",
+"stars": 2483,
+"lic": "AGPL-3.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"learningequality/kolibri": {
+"full_name": "learningequality/kolibri",
+"stars": 1179,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"ku-nlp/jumanpp": {
+"full_name": "ku-nlp/jumanpp",
+"stars": 413,
+"lic": "Apache-2.0",
+"pushed": "2026-10-13",
+"archived": false,
+"fork": false
+},
+"learningequality/studio": {
+"full_name": "learningequality/studio",
+"stars": 212,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"liuliu667/cram-engine": {
+"full_name": "liuliu667/cram-engine",
+"stars": 181,
+"lic": "MIT",
+"pushed": "2026-10-22",
+"archived": false,
+"fork": false
+},
+"learning-commons-org/knowledge-graph": {
+"full_name": "learning-commons-org/knowledge-graph",
+"stars": 168,
+"lic": "NOASSERTION",
+"pushed": "2026-11-10",
+"archived": false,
+"fork": false
+},
+"langx/langx": {
+"full_name": "langx/langx",
+"stars": 111,
+"lic": "BSD-3-Clause",
+"pushed": "2026-11-18",
+"archived": false,
+"fork": false
+},
+"liangxiao777/teachmecoding": {
+"full_name": "liangxiao777/TeachMeCoding",
+"stars": 85,
+"lic": "Apache-2.0",
+"pushed": "2026-10-30",
+"archived": false,
+"fork": false
+},
+"ljvmiranda921/calamancy": {
+"full_name": "ljvmiranda921/calamanCy",
+"stars": 77,
+"lic": "MIT",
+"pushed": "2026-10-05",
+"archived": false,
+"fork": false
+},
+"learningequality/ricecooker": {
+"full_name": "learningequality/ricecooker",
+"stars": 32,
+"lic": "MIT",
+"pushed": "2026-11-18",
+"archived": false,
+"fork": false
+},
+"kyoto-u/comfortable-sakai": {
+"full_name": "kyoto-u/comfortable-sakai",
+"stars": 25,
+"lic": "Apache-2.0",
+"pushed": "2023-03-15",
+"archived": false,
+"fork": false
+},
+"learningequality/morango": {
+"full_name": "learningequality/morango",
+"stars": 15,
+"lic": "MIT",
+"pushed": "2026-11-18",
+"archived": false,
+"fork": false
+},
+"learningequality/le-utils": {
+"full_name": "learningequality/le-utils",
+"stars": 7,
+"lic": "MIT",
+"pushed": "2026-11-18",
+"archived": false,
+"fork": false
+},
+"lerlerchan/prompt-libraries-for-malaysia-educators": {
+"full_name": "lerlerchan/Prompt-libraries-for-Malaysia-Educators",
+"stars": 6,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"l-yohai/suneung": {
+"full_name": "l-yohai/suneung",
+"stars": 5,
+"lic": "MIT",
+"pushed": "2023-11-23",
+"archived": false,
+"fork": false
+},
+"lindnerju/epaeko": {
+"full_name": "lindnerju/ePaeko",
+"stars": 3,
+"lic": "MIT",
+"pushed": "2024-01-24",
+"archived": false,
+"fork": false
+},
+"lmddc-lu/microlms": {
+"full_name": "lmddc-lu/microlms",
+"stars": 0,
+"lic": "AGPL-3.0",
+"pushed": "2026-11-12",
+"archived": false,
+"fork": false
+},
+"logitsolutionsai/teachback": {
+"full_name": "logitsolutionsai/teachback",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-11-14",
+"archived": false,
+"fork": false
+},
+"mem0ai/mem0": {
+"full_name": "mem0ai/mem0",
+"stars": 69248,
+"lic": "Apache-2.0",
+"pushed": "2026-11-18",
+"archived": false,
+"fork": false
+},
+"messense/jieba-rs": {
+"full_name": "messense/jieba-rs",
+"stars": 995,
+"lic": "MIT",
+"pushed": "2026-10-15",
+"archived": false,
+"fork": false
+},
+"ls1intum/artemis": {
+"full_name": "ls1intum/Artemis",
+"stars": 834,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"lynote-ai/ai-tutor": {
+"full_name": "lynote-ai/ai-tutor",
+"stars": 130,
+"lic": "MIT",
+"pushed": "2026-11-16",
+"archived": false,
+"fork": false
+},
+"ls1intum/apollon": {
+"full_name": "ls1intum/Apollon",
+"stars": 106,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"luumlabs/aula": {
+"full_name": "luumlabs/aula",
+"stars": 68,
+"lic": "AGPL-3.0",
+"pushed": "2026-11-17",
+"archived": false,
+"fork": false
+},
+"mcgrizzz/yomine": {
+"full_name": "mcgrizzz/Yomine",
+"stars": 67,
+"lic": "Apache-2.0",
+"pushed": "2026-11-10",
+"archived": false,
+"fork": false
+},
+"ls1intum/ares": {
+"full_name": "ls1intum/Ares",
+"stars": 27,
+"lic": "MIT",
+"pushed": "2026-11-03",
+"archived": false,
+"fork": false
+},
+"m7medvision/nakhlah.js": {
+"full_name": "m7medVision/nakhlah.js",
+"stars": 25,
+"lic": "MIT",
+"pushed": "2025-08-02",
+"archived": false,
+"fork": false
+},
+"marceloschmitt/moodle-block_analytics_graphs": {
+"full_name": "marceloschmitt/moodle-block_analytics_graphs",
+"stars": 18,
+"lic": "GPL-3.0",
+"pushed": "2026-09-28",
+"archived": false,
+"fork": false
+},
+"ls1intum/edutelligence": {
+"full_name": "ls1intum/edutelligence",
+"stars": 17,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"lplnufpi/essay-br": {
+"full_name": "lplnufpi/essay-br",
+"stars": 17,
+"lic": "MIT",
+"pushed": "2023-05-08",
+"archived": false,
+"fork": false
+},
+"ls1intum/artemis-ios": {
+"full_name": "ls1intum/artemis-ios",
+"stars": 13,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"ls1intum/artemis-android": {
+"full_name": "ls1intum/artemis-android",
+"stars": 13,
+"lic": "MIT",
+"pushed": "2026-11-18",
+"archived": false,
+"fork": false
+},
+"ls1intum/pyris": {
+"full_name": "ls1intum/Pyris",
+"stars": 12,
+"lic": "MIT",
+"pushed": "2026-06-03",
+"archived": false,
+"fork": false
+},
+"ls1intum/artemis-ansible-collection": {
+"full_name": "ls1intum/artemis-ansible-collection",
+"stars": 8,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"matheussilvano/mooose": {
+"full_name": "matheussilvano/mooose",
+"stars": 5,
+"lic": "Apache-2.0",
+"pushed": "2026-11-17",
+"archived": false,
+"fork": false
+},
+"ls1intum/standardized-competency-catalog": {
+"full_name": "ls1intum/standardized-competency-catalog",
+"stars": 1,
+"lic": "MIT",
+"pushed": "2026-03-01",
+"archived": false,
+"fork": false
+},
+"mad707/masar": {
+"full_name": "mad707/masar",
+"stars": 1,
+"lic": "MIT",
+"pushed": "2026-09-30",
+"archived": false,
+"fork": false
+},
+"matmiidu/paes-ensayos": {
+"full_name": "matmiidu/paes-ensayos",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-08-12",
+"archived": false,
+"fork": false
+},
+"moodle/moodle": {
+"full_name": "moodle/moodle",
+"stars": 7626,
+"lic": "GPL-3.0",
+"pushed": "2026-11-17",
+"archived": false,
+"fork": false
+},
+"moodlehq/moodleapp": {
+"full_name": "moodlehq/moodleapp",
+"stars": 1008,
+"lic": "Apache-2.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"molly554/whiteboard-ai-tutor": {
+"full_name": "molly554/whiteboard-ai-tutor",
+"stars": 362,
+"lic": "MIT",
+"pushed": "2026-11-17",
+"archived": false,
+"fork": false
+},
+"microsoft/o365-moodle": {
+"full_name": "microsoft/o365-moodle",
+"stars": 216,
+"lic": "GPL-3.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"mistval/kotoba": {
+"full_name": "mistval/kotoba",
+"stars": 208,
+"lic": "MIT",
+"pushed": "2026-11-13",
+"archived": false,
+"fork": false
+},
+"nbgallery/nbgallery": {
+"full_name": "nbgallery/nbgallery",
+"stars": 150,
+"lic": "MIT",
+"pushed": "2026-10-22",
+"archived": false,
+"fork": false
+},
+"munitkala/selfsemester": {
+"full_name": "munitkala/selfsemester",
+"stars": 108,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"mikahama/uralicnlp": {
+"full_name": "mikahama/uralicNLP",
+"stars": 101,
+"lic": "Apache-2.0",
+"pushed": "2026-11-13",
+"archived": false,
+"fork": false
+},
+"microsoft/studentsim": {
+"full_name": "microsoft/StudentSim",
+"stars": 83,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"mitodl/ol-infrastructure": {
+"full_name": "mitodl/ol-infrastructure",
+"stars": 59,
+"lic": "BSD-3-Clause",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"moodlehq/wiki-rag": {
+"full_name": "moodlehq/wiki-rag",
+"stars": 54,
+"lic": "BSD-3-Clause",
+"pushed": "2026-06-15",
+"archived": false,
+"fork": false
+},
+"mrlvsb/kelvin": {
+"full_name": "mrlvsb/kelvin",
+"stars": 35,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"metrovoc/immersive-memorize": {
+"full_name": "metrovoc/immersive-memorize",
+"stars": 29,
+"lic": "MIT",
+"pushed": "2026-11-18",
+"archived": false,
+"fork": false
+},
+"missing-elements/h5p-toolkit": {
+"full_name": "missing-elements/h5p-toolkit",
+"stars": 10,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"migueldsants/openem": {
+"full_name": "migueldsants/OpENEM",
+"stars": 9,
+"lic": "AGPL-3.0",
+"pushed": "2026-11-13",
+"archived": false,
+"fork": false
+},
+"milesberry/networx": {
+"full_name": "milesberry/networx",
+"stars": 8,
+"lic": "MIT",
+"pushed": "2026-03-24",
+"archived": false,
+"fork": false
+},
+"migueldsants/ai-skill-corretor-redacao-enem": {
+"full_name": "migueldsants/AI-Skill-Corretor-Redacao-ENEM",
+"stars": 3,
+"lic": "MIT",
+"pushed": "2026-09-07",
+"archived": false,
+"fork": false
+},
+"mousam100/montessori-agentic-ai-tutor": {
+"full_name": "mousam100/Montessori-Agentic-AI-Tutor",
+"stars": 2,
+"lic": "MIT",
+"pushed": "2026-05-20",
+"archived": false,
+"fork": false
+},
+"ollama/ollama": {
+"full_name": "ollama/ollama",
+"stars": 187666,
+"lic": "MIT",
+"pushed": "2026-11-18",
+"archived": false,
+"fork": false
+},
+"openai/whisper": {
+"full_name": "openai/whisper",
+"stars": 113120,
+"lic": "MIT",
+"pushed": "2026-08-31",
+"archived": false,
+"fork": false
+},
+"opendatalab/mineru": {
+"full_name": "opendatalab/MinerU",
+"stars": 84007,
+"lic": "NOASSERTION",
+"pushed": "2026-11-18",
+"archived": false,
+"fork": false
+},
+"odoo/odoo": {
+"full_name": "odoo/odoo",
+"stars": 55953,
+"lic": "NOASSERTION",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"netless-io/flat": {
+"full_name": "netless-io/flat",
+"stars": 6442,
+"lic": "MIT",
+"pushed": "2026-11-10",
+"archived": false,
+"fork": false
+},
+"online-ml/river": {
+"full_name": "online-ml/river",
+"stars": 6150,
+"lic": "BSD-3-Clause",
+"pushed": "2026-11-17",
+"archived": false,
+"fork": false
+},
+"open-spaced-repetition/fsrs4anki": {
+"full_name": "open-spaced-repetition/fsrs4anki",
+"stars": 4141,
+"lic": "MIT",
+"pushed": "2026-08-14",
+"archived": false,
+"fork": false
+},
+"openeducat/openeducat_erp": {
+"full_name": "openeducat/openeducat_erp",
+"stars": 913,
+"lic": "NOASSERTION",
+"pushed": "2026-11-16",
+"archived": false,
+"fork": false
+},
+"open-scratch/teaching-open": {
+"full_name": "open-scratch/teaching-open",
+"stars": 637,
+"lic": "Apache-2.0",
+"pushed": "2026-07-06",
+"archived": false,
+"fork": false
+},
+"opencast/opencast": {
+"full_name": "opencast/opencast",
+"stars": 512,
+"lic": "ECL-2.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"openedx/xblock": {
+"full_name": "openedx/XBlock",
+"stars": 471,
+"lic": "Apache-2.0",
+"pushed": "2026-11-16",
+"archived": false,
+"fork": false
+},
+"nichochar/ari": {
+"full_name": "nichochar/ari",
+"stars": 222,
+"lic": "MIT",
+"pushed": "2026-11-12",
+"archived": false,
+"fork": false
+},
+"ongjin/garu": {
+"full_name": "ongjin/garu",
+"stars": 182,
+"lic": "Apache-2.0",
+"pushed": "2026-11-16",
+"archived": false,
+"fork": false
+},
+"onemnemo/mnemo": {
+"full_name": "onemnemo/mnemo",
+"stars": 133,
+"lic": "Apache-2.0",
+"pushed": "2026-10-22",
+"archived": false,
+"fork": false
+},
+"nomadicjosh/etsis": {
+"full_name": "nomadicjosh/etsis",
+"stars": 46,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"oaknational/oak-ai-lesson-assistant": {
+"full_name": "oaknational/oak-ai-lesson-assistant",
+"stars": 35,
+"lic": "MIT",
+"pushed": "2026-11-18",
+"archived": false,
+"fork": false
+},
+"openbadgefactory/salava": {
+"full_name": "openbadgefactory/salava",
+"stars": 22,
+"lic": "Apache-2.0",
+"pushed": "2020-10-02",
+"archived": false,
+"fork": false
+},
+"nialvape/utn-mcp": {
+"full_name": "nialvape/utn-mcp",
+"stars": 13,
+"lic": "ISC",
+"pushed": "2026-11-13",
+"archived": false,
+"fork": false
+},
+"nsip/nias2": {
+"full_name": "nsip/nias2",
+"stars": 7,
+"lic": "Apache-2.0",
+"pushed": "2026-10-21",
+"archived": false,
+"fork": false
+},
+"nijataliyev7/elifba": {
+"full_name": "nijataliyev7/elifba",
+"stars": 2,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"openedx/openedx-platform": {
+"full_name": "openedx/openedx-platform",
+"stars": 8247,
+"lic": "AGPL-3.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"oppia/oppia": {
+"full_name": "oppia/oppia",
+"stars": 6998,
+"lic": "Apache-2.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"openlit/openlit": {
+"full_name": "openlit/openlit",
+"stars": 3092,
+"lic": "Apache-2.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"openedx/codejail": {
+"full_name": "openedx/codejail",
+"stars": 476,
+"lic": "Apache-2.0",
+"pushed": "2026-11-16",
+"archived": false,
+"fork": false
+},
+"oppia/oppia-android": {
+"full_name": "oppia/oppia-android",
+"stars": 421,
+"lic": "Apache-2.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"openfun/richie": {
+"full_name": "openfun/richie",
+"stars": 318,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"openwallet-foundation/multipaz": {
+"full_name": "openwallet-foundation/multipaz",
+"stars": 301,
+"lic": "Apache-2.0",
+"pushed": "2026-11-18",
+"archived": false,
+"fork": false
+},
+"openfun/marsha": {
+"full_name": "openfun/marsha",
+"stars": 153,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"openedx/paragon": {
+"full_name": "openedx/paragon",
+"stars": 141,
+"lic": "Apache-2.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"openedx/edx-proctoring": {
+"full_name": "openedx/edx-proctoring",
+"stars": 69,
+"lic": "AGPL-3.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"openedx/xblock-sdk": {
+"full_name": "openedx/xblock-sdk",
+"stars": 69,
+"lic": "Apache-2.0",
+"pushed": "2026-11-16",
+"archived": false,
+"fork": false
+},
+"openedx/edx-ora2": {
+"full_name": "openedx/edx-ora2",
+"stars": 64,
+"lic": "AGPL-3.0",
+"pushed": "2026-11-18",
+"archived": false,
+"fork": false
+},
+"openfun/ralph": {
+"full_name": "openfun/ralph",
+"stars": 52,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"openpatch/bitflow": {
+"full_name": "openpatch/bitflow",
+"stars": 44,
+"lic": "MIT",
+"pushed": "2026-10-31",
+"archived": false,
+"fork": false
+},
+"openedx/openedx-app-android": {
+"full_name": "openedx/openedx-app-android",
+"stars": 38,
+"lic": "Apache-2.0",
+"pushed": "2026-11-09",
+"archived": false,
+"fork": false
+},
+"openedx/openedx-app-ios": {
+"full_name": "openedx/openedx-app-ios",
+"stars": 31,
+"lic": "Apache-2.0",
+"pushed": "2026-10-30",
+"archived": false,
+"fork": false
+},
+"openedx/openedx-ai-extensions": {
+"full_name": "openedx/openedx-ai-extensions",
+"stars": 17,
+"lic": "AGPL-3.0",
+"pushed": "2026-10-05",
+"archived": false,
+"fork": false
+},
+"openedx/openedx-aspects": {
+"full_name": "openedx/openedx-aspects",
+"stars": 10,
+"lic": "Apache-2.0",
+"pushed": "2026-11-16",
+"archived": false,
+"fork": false
+},
+"opensacorg/learning-blocks": {
+"full_name": "opensacorg/learning-blocks",
+"stars": 6,
+"lic": "MIT",
+"pushed": "2026-09-16",
+"archived": false,
+"fork": false
+},
+"orangewk/mathdesk-snapshot": {
+"full_name": "orangewk/MathDesk-snapshot",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-06-01",
+"archived": false,
+"fork": false
+},
+"patchy631/ai-engineering-hub": {
+"full_name": "patchy631/ai-engineering-hub",
+"stars": 42023,
+"lic": "MIT",
+"pushed": "2026-11-01",
+"archived": false,
+"fork": false
+},
+"overhangio/tutor": {
+"full_name": "overhangio/tutor",
+"stars": 1134,
+"lic": "AGPL-3.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"pkp/ojs": {
+"full_name": "pkp/ojs",
+"stars": 1058,
+"lic": "GPL-3.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"portabilis/i-educar": {
+"full_name": "portabilis/i-educar",
+"stars": 725,
+"lic": "GPL-2.0",
+"pushed": "2026-11-13",
+"archived": false,
+"fork": false
+},
+"orionsheep/wordlink": {
+"full_name": "orionsheep/wordlink",
+"stars": 429,
+"lic": "MIT",
+"pushed": "2026-11-05",
+"archived": false,
+"fork": false
+},
+"otuncelli/turkish-stemmer-python": {
+"full_name": "otuncelli/turkish-stemmer-python",
+"stars": 232,
+"lic": "Apache-2.0",
+"pushed": "2025-02-26",
+"archived": true,
+"fork": false
+},
+"procivis/one-core": {
+"full_name": "procivis/one-core",
+"stars": 163,
+"lic": "Apache-2.0",
+"pushed": "2026-11-10",
+"archived": false,
+"fork": false
+},
+"procivis/one-wallet": {
+"full_name": "procivis/one-wallet",
+"stars": 153,
+"lic": "Apache-2.0",
+"pushed": "2026-11-10",
+"archived": false,
+"fork": false
+},
+"portabilis/i-diario": {
+"full_name": "portabilis/i-diario",
+"stars": 117,
+"lic": "NOASSERTION",
+"pushed": "2026-10-14",
+"archived": false,
+"fork": false
+},
+"pacewisdomhq/tutorloom": {
+"full_name": "pacewisdomhq/TutorLoom",
+"stars": 98,
+"lic": "Apache-2.0",
+"pushed": "2026-11-18",
+"archived": false,
+"fork": false
+},
+"pieralukasz/true-recall": {
+"full_name": "pieralukasz/true-recall",
+"stars": 68,
+"lic": "MIT",
+"pushed": "2026-11-16",
+"archived": false,
+"fork": false
+},
+"pawtograder/platform": {
+"full_name": "pawtograder/platform",
+"stars": 22,
+"lic": "NOASSERTION",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"parmentelat/nbautoeval": {
+"full_name": "parmentelat/nbautoeval",
+"stars": 20,
+"lic": "NOASSERTION",
+"pushed": "2024-12-11",
+"archived": false,
+"fork": false
+},
+"peblproject/pebl": {
+"full_name": "peblproject/PEBL",
+"stars": 9,
+"lic": "Apache-2.0",
+"pushed": "2021-03-25",
+"archived": false,
+"fork": false
+},
+"praj2408/rag-enhanced-ncert-tutor": {
+"full_name": "praj2408/RAG-Enhanced-NCERT-Tutor",
+"stars": 6,
+"lic": "MIT",
+"pushed": "2024-10-20",
+"archived": false,
+"fork": false
+},
+"parthdhanani/scorm-kit": {
+"full_name": "parthdhanani/scorm-kit",
+"stars": 2,
+"lic": "MIT",
+"pushed": "2026-11-07",
+"archived": false,
+"fork": false
+},
+"parthdhanani/storycraft": {
+"full_name": "parthdhanani/storycraft",
+"stars": 1,
+"lic": "MIT",
+"pushed": "2026-11-07",
+"archived": false,
+"fork": false
+},
+"parler-haut-interagir-librement/open-badges-bundle": {
+"full_name": "parler-haut-interagir-librement/open-badges-bundle",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"peleg-jpg/israeli-bagrut-psychometric": {
+"full_name": "peleg-jpg/israeli-bagrut-psychometric",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-05-11",
+"archived": false,
+"fork": false
+},
+"parler-haut-interagir-librement/certificates-bundle": {
+"full_name": "parler-haut-interagir-librement/certificates-bundle",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"qdrant/qdrant": {
+"full_name": "qdrant/qdrant",
+"stars": 35638,
+"lic": "Apache-2.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"promptfoo/promptfoo": {
+"full_name": "promptfoo/promptfoo",
+"stars": 27466,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"sakaiproject/sakai": {
+"full_name": "sakaiproject/sakai",
+"stars": 1240,
+"lic": "ECL-2.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"pupilfirst/pupilfirst": {
+"full_name": "pupilfirst/pupilfirst",
+"stars": 982,
+"lic": "NOASSERTION",
+"pushed": "2025-12-09",
+"archived": false,
+"fork": false
+},
+"pykt-team/pykt-toolkit": {
+"full_name": "pykt-team/pykt-toolkit",
+"stars": 462,
+"lic": "MIT",
+"pushed": "2026-10-18",
+"archived": false,
+"fork": false
+},
+"satvik314/educhain": {
+"full_name": "satvik314/educhain",
+"stars": 387,
+"lic": "MIT",
+"pushed": "2026-05-29",
+"archived": false,
+"fork": false
+},
+"sagorbrur/bnlp": {
+"full_name": "sagorbrur/bnlp",
+"stars": 313,
+"lic": "MIT",
+"pushed": "2026-10-31",
+"archived": false,
+"fork": false
+},
+"shigella520/mindtrain": {
+"full_name": "shigella520/MindTrain",
+"stars": 129,
+"lic": "MIT",
+"pushed": "2026-10-15",
+"archived": false,
+"fork": false
+},
+"pyta-uoft/pyta": {
+"full_name": "pyta-uoft/pyta",
+"stars": 109,
+"lic": "GPL-3.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"sefineh-ai/amharic-tokenizer": {
+"full_name": "sefineh-ai/Amharic-Tokenizer",
+"stars": 99,
+"lic": "MIT",
+"pushed": "2026-09-24",
+"archived": false,
+"fork": false
+},
+"proyecto26/notebooklm-ai-plugin": {
+"full_name": "proyecto26/notebooklm-ai-plugin",
+"stars": 68,
+"lic": "MIT",
+"pushed": "2026-11-04",
+"archived": false,
+"fork": false
+},
+"robzilla1738/memorwise": {
+"full_name": "robzilla1738/Memorwise",
+"stars": 48,
+"lic": "MIT",
+"pushed": "2026-06-09",
+"archived": false,
+"fork": false
+},
+"sandboxnu/graduatenu": {
+"full_name": "sandboxnu/graduatenu",
+"stars": 28,
+"lic": "GPL-3.0",
+"pushed": "2026-09-30",
+"archived": false,
+"fork": false
+},
+"rwthanalytics/moodle-local_learning_analytics": {
+"full_name": "rwthanalytics/moodle-local_learning_analytics",
+"stars": 26,
+"lic": "GPL-3.0",
+"pushed": "2025-05-26",
+"archived": false,
+"fork": false
+},
+"saylordotorg/moodle-local_ai_course_assistant": {
+"full_name": "saylordotorg/moodle-local_ai_course_assistant",
+"stars": 21,
+"lic": "GPL-3.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"shellery1988/k12-smart-teacher": {
+"full_name": "shellery1988/k12-smart-teacher",
+"stars": 16,
+"lic": "MIT",
+"pushed": "2026-06-29",
+"archived": false,
+"fork": false
+},
+"sinothando/student-early-warning-system": {
+"full_name": "sinothando/student-early-warning-system",
+"stars": 11,
+"lic": "MIT",
+"pushed": "2026-05-31",
+"archived": false,
+"fork": false
+},
+"siberius/learning-methodologies": {
+"full_name": "siberius/learning-methodologies",
+"stars": 4,
+"lic": "MIT",
+"pushed": "2026-11-14",
+"archived": false,
+"fork": false
+},
+"simonseifert/merlin-mcp": {
+"full_name": "simonseifert/merlin-mcp",
+"stars": 1,
+"lic": "MIT",
+"pushed": "2026-11-16",
+"archived": false,
+"fork": false
+},
+"robelasefa/eaes-bot": {
+"full_name": "robelasefa/eaes-bot",
+"stars": 1,
+"lic": "MIT",
+"pushed": "2026-09-16",
+"archived": false,
+"fork": false
+},
+"stanford-oval/storm": {
+"full_name": "stanford-oval/storm",
+"stars": 31912,
+"lic": "MIT",
+"pushed": "2025-09-30",
+"archived": false,
+"fork": false
+},
+"temporalio/temporal": {
+"full_name": "temporalio/temporal",
+"stars": 24509,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"taishi-i/awesome-japanese-nlp-resources": {
+"full_name": "taishi-i/awesome-japanese-nlp-resources",
+"stars": 1030,
+"lic": "CC0-1.0",
+"pushed": "2026-11-17",
+"archived": false,
+"fork": false
+},
+"sitor-ai/frametell": {
+"full_name": "sitor-ai/frametell",
+"stars": 513,
+"lic": "AGPL-3.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"taishi-i/nagisa": {
+"full_name": "taishi-i/nagisa",
+"stars": 424,
+"lic": "MIT",
+"pushed": "2026-11-14",
+"archived": false,
+"fork": false
+},
+"swl10/pyslet": {
+"full_name": "swl10/pyslet",
+"stars": 76,
+"lic": "NOASSERTION",
+"pushed": "2020-03-31",
+"archived": false,
+"fork": false
+},
+"totara/openbadges": {
+"full_name": "totara/openbadges",
+"stars": 26,
+"lic": "GPL-3.0",
+"pushed": "2016-03-14",
+"archived": false,
+"fork": false
+},
+"thm-mni-ii/feedbacksystem": {
+"full_name": "thm-mni-ii/feedbacksystem",
+"stars": 24,
+"lic": "NOASSERTION",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"smashburger-dev/socratic-workshop": {
+"full_name": "smashburger-dev/socratic-workshop",
+"stars": 24,
+"lic": "MIT",
+"pushed": "2026-10-28",
+"archived": false,
+"fork": false
+},
+"terracotta-education/terracotta": {
+"full_name": "terracotta-education/terracotta",
+"stars": 22,
+"lic": "Apache-2.0",
+"pushed": "2026-11-18",
+"archived": false,
+"fork": false
+},
+"tong666-bit/liu-xiaoyan-skill": {
+"full_name": "tong666-bit/liu-xiaoyan-skill",
+"stars": 21,
+"lic": "MIT",
+"pushed": "2026-10-09",
+"archived": false,
+"fork": false
+},
+"suellenferraz/projeto-gabiria": {
+"full_name": "suellenferraz/Projeto-GabirIA",
+"stars": 3,
+"lic": "MIT",
+"pushed": "2025-05-24",
+"archived": false,
+"fork": false
+},
+"summeraprx/topik-shortcut": {
+"full_name": "summeraprx/topik-shortcut",
+"stars": 1,
+"lic": null,
+"pushed": "2026-10-20",
+"archived": false,
+"fork": false
+},
+"sudosylabs/proctor": {
+"full_name": "sudosylabs/proctor",
+"stars": 0,
+"lic": "AGPL-3.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"theteacherbot/icfes-exam-engine": {
+"full_name": "theteacherbot/ICFES-Exam-Engine",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-08-01",
+"archived": false,
+"fork": false
+},
+"tanzir71/tinyproctorjs": {
+"full_name": "tanzir71/tinyproctorjs",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-11-17",
+"archived": false,
+"fork": false
+},
+"steve-ongera/knec-exam-management-system": {
+"full_name": "steve-ongera/KNEC-Exam-Management-System",
+"stars": 0,
+"lic": null,
+"pushed": "2025-11-05",
+"archived": false,
+"fork": false
+},
+"tep00018/lea-platform": {
+"full_name": "tep00018/LEA-platform",
+"stars": 0,
+"lic": "Apache-2.0",
+"pushed": "2026-11-17",
+"archived": false,
+"fork": false
+},
+"siyegs/rung": {
+"full_name": "siyegs/rung",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-08-14",
+"archived": false,
+"fork": false
+},
+"virgiliojr94/book-to-skill": {
+"full_name": "virgiliojr94/book-to-skill",
+"stars": 38483,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"trycua/cua": {
+"full_name": "trycua/cua",
+"stars": 32683,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"traceloop/openllmetry": {
+"full_name": "traceloop/openllmetry",
+"stars": 7543,
+"lic": "Apache-2.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"undertheseanlp/underthesea": {
+"full_name": "undertheseanlp/underthesea",
+"stars": 1817,
+"lic": "Apache-2.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"ucfopen/canvasapi": {
+"full_name": "ucfopen/canvasapi",
+"stars": 681,
+"lic": "MIT",
+"pushed": "2026-04-16",
+"archived": false,
+"fork": false
+},
+"tristcoil/hanabira.org": {
+"full_name": "tristcoil/hanabira.org",
+"stars": 436,
+"lic": "MIT",
+"pushed": "2025-03-26",
+"archived": false,
+"fork": false
+},
+"ufal/udpipe": {
+"full_name": "ufal/udpipe",
+"stars": 425,
+"lic": "MPL-2.0",
+"pushed": "2026-06-11",
+"archived": false,
+"fork": false
+},
+"tsugiproject/tsugi": {
+"full_name": "tsugiproject/tsugi",
+"stars": 377,
+"lic": "Apache-2.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"ucbds-infra/otter-grader": {
+"full_name": "ucbds-infra/otter-grader",
+"stars": 162,
+"lic": "BSD-3-Clause",
+"pushed": "2026-11-14",
+"archived": false,
+"fork": false
+},
+"tutors-sdk/tutors": {
+"full_name": "tutors-sdk/tutors",
+"stars": 125,
+"lic": "MIT",
+"pushed": "2026-07-23",
+"archived": false,
+"fork": false
+},
+"ucfopen/udoit": {
+"full_name": "ucfopen/UDOIT",
+"stars": 119,
+"lic": "GPL-3.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"ubermenchh/anki-cli": {
+"full_name": "ubermenchh/anki-cli",
+"stars": 63,
+"lic": "MIT",
+"pushed": "2026-11-11",
+"archived": false,
+"fork": false
+},
+"vincenzo-afk/kingstonconnect": {
+"full_name": "vincenzo-afk/KingstonConnect",
+"stars": 41,
+"lic": null,
+"pushed": "2026-09-10",
+"archived": false,
+"fork": false
+},
+"towardsai/ai-tutor-app": {
+"full_name": "towardsai/ai-tutor-app",
+"stars": 34,
+"lic": "Apache-2.0",
+"pushed": "2026-10-22",
+"archived": false,
+"fork": false
+},
+"uemanet/harpia": {
+"full_name": "uemanet/harpia",
+"stars": 28,
+"lic": "MIT",
+"pushed": "2026-11-15",
+"archived": false,
+"fork": false
+},
+"turnkeylinux-apps/canvas": {
+"full_name": "turnkeylinux-apps/canvas",
+"stars": 13,
+"lic": null,
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"ucfopen/cookiecutter-python-lti": {
+"full_name": "ucfopen/cookiecutter-python-lti",
+"stars": 6,
+"lic": "MIT",
+"pushed": "2026-05-12",
+"archived": false,
+"fork": false
+},
+"uczltw6/course-tutor": {
+"full_name": "uczltw6/course-tutor",
+"stars": 5,
+"lic": "MIT",
+"pushed": "2026-04-23",
+"archived": false,
+"fork": false
+},
+"uloya1234/faq-assistant": {
+"full_name": "uloya1234/faq-assistant",
+"stars": 4,
+"lic": "MPL-2.0",
+"pushed": "2026-07-30",
+"archived": false,
+"fork": false
+},
+"tuanone123/awesome-vietnamese-llm-dataset": {
+"full_name": "tuanone123/awesome-vietnamese-llm-dataset",
+"stars": 0,
+"lic": "CC0-1.0",
+"pushed": "2026-09-07",
+"archived": false,
+"fork": false
+},
+"vllm-project/vllm": {
+"full_name": "vllm-project/vllm",
+"stars": 97221,
+"lic": "Apache-2.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"xiaoyang111222/cn-math-taxonomy": {
+"full_name": "xiaoyang111222/cn-math-taxonomy",
+"stars": 8653,
+"lic": "NOASSERTION",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"withmarbleapp/os-taxonomy": {
+"full_name": "withmarbleapp/os-taxonomy",
+"stars": 7765,
+"lic": "ODbL-1.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"xiaochong0302/course-tencent-cloud": {
+"full_name": "xiaochong0302/course-tencent-cloud",
+"stars": 1176,
+"lic": "GPL-2.0",
+"pushed": "2026-11-16",
+"archived": false,
+"fork": false
+},
+"vishalsachdev/canvas-mcp": {
+"full_name": "vishalsachdev/canvas-mcp",
+"stars": 335,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"vistec-ai/thai2transformers": {
+"full_name": "vistec-AI/thai2transformers",
+"stars": 125,
+"lic": "Apache-2.0",
+"pushed": "2023-11-06",
+"archived": false,
+"fork": false
+},
+"wenflow-org/wenflow": {
+"full_name": "wenflow-org/wenflow",
+"stars": 72,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"webtech-network/autograder": {
+"full_name": "webtech-network/autograder",
+"stars": 66,
+"lic": "Apache-2.0",
+"pushed": "2026-11-08",
+"archived": false,
+"fork": false
+},
+"xingjunm/autoppt": {
+"full_name": "xingjunm/autoppt",
+"stars": 57,
+"lic": "MIT",
+"pushed": "2026-11-02",
+"archived": false,
+"fork": false
+},
+"wwwallet/wallet-frontend": {
+"full_name": "wwWallet/wallet-frontend",
+"stars": 47,
+"lic": "BSD-2-Clause",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"weishao2/tizhuang-agent-skills": {
+"full_name": "weishao2/tizhuang-agent-skills",
+"stars": 42,
+"lic": "MIT",
+"pushed": "2026-11-11",
+"archived": false,
+"fork": false
+},
+"wannaphong/laonlp": {
+"full_name": "wannaphong/LaoNLP",
+"stars": 35,
+"lic": "Apache-2.0",
+"pushed": "2026-09-23",
+"archived": false,
+"fork": false
+},
+"wannaphong/awesome-lao-nlp": {
+"full_name": "wannaphong/Awesome-Lao-NLP",
+"stars": 19,
+"lic": "MIT",
+"pushed": "2025-03-07",
+"archived": false,
+"fork": false
+},
+"wenliu3/ai-smart-homework-review": {
+"full_name": "wenliu3/ai-smart-homework-review",
+"stars": 11,
+"lic": "MulanPSL-2.0",
+"pushed": "2026-09-06",
+"archived": false,
+"fork": false
+},
+"warleysr/ankipa": {
+"full_name": "warleysr/ankipa",
+"stars": 10,
+"lic": "MIT",
+"pushed": "2026-11-07",
+"archived": false,
+"fork": false
+},
+"virtualryder/edu-ai-agents": {
+"full_name": "virtualryder/edu-ai-agents",
+"stars": 4,
+"lic": "NOASSERTION",
+"pushed": "2026-10-10",
+"archived": false,
+"fork": false
+},
+"wysking/postgrad-study-engine": {
+"full_name": "wysking/postgrad-study-engine",
+"stars": 1,
+"lic": "MIT",
+"pushed": "2026-10-29",
+"archived": false,
+"fork": false
+},
+"vulinh1704/ai-tutor-agent": {
+"full_name": "vulinh1704/ai-tutor-agent",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-11-16",
+"archived": false,
+"fork": false
+},
+"wonmortech/sanad": {
+"full_name": "wonmortech/sanad",
+"stars": 0,
+"lic": "Apache-2.0",
+"pushed": "2026-11-17",
+"archived": false,
+"fork": false
+},
+"willfeldman/readu": {
+"full_name": "willfeldman/readu",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-06-13",
+"archived": false,
+"fork": false
+},
+"zuhairhalawa/studyai": {
+"full_name": "zuhairhalawa/studyai",
+"stars": 239,
+"lic": "MIT",
+"pushed": "2026-10-24",
+"archived": false,
+"fork": false
+},
+"yinuoguan/nengdou-ai-review-helper-web": {
+"full_name": "yinuoguan/nengdou-ai-review-helper-web",
+"stars": 193,
+"lic": "MulanPSL-2.0",
+"pushed": "2026-04-29",
+"archived": false,
+"fork": false
+},
+"zijinz456/opentutor": {
+"full_name": "zijinz456/OpenTutor",
+"stars": 183,
+"lic": "MIT",
+"pushed": "2026-11-17",
+"archived": false,
+"fork": false
+},
+"yf-team/yf-exam-lite": {
+"full_name": "yf-team/yf-exam-lite",
+"stars": 174,
+"lic": "MIT",
+"pushed": "2025-05-07",
+"archived": false,
+"fork": false
+},
+"zoonk/zoonk": {
+"full_name": "zoonk/zoonk",
+"stars": 157,
+"lic": "MIT",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"yetanalytics/lrsql": {
+"full_name": "yetanalytics/lrsql",
+"stars": 144,
+"lic": "Apache-2.0",
+"pushed": "2026-11-14",
+"archived": false,
+"fork": false
+},
+"youufis/smartkbs": {
+"full_name": "youufis/SmartKBS",
+"stars": 102,
+"lic": "AGPL-3.0",
+"pushed": "2026-11-19",
+"archived": false,
+"fork": false
+},
+"zijian-optics/solaireepda": {
+"full_name": "zijian-optics/SolaireEPDA",
+"stars": 91,
+"lic": "AGPL-3.0",
+"pushed": "2026-06-27",
+"archived": false,
+"fork": false
+},
+"zhangl1001/civil-ai": {
+"full_name": "zhangl1001/civil-ai",
+"stars": 41,
+"lic": "MIT",
+"pushed": "2026-11-08",
+"archived": false,
+"fork": false
+},
+"xx-hub/craft-your-textbook": {
+"full_name": "xx-hub/craft-your-textbook",
+"stars": 41,
+"lic": "MIT",
+"pushed": "2026-11-16",
+"archived": false,
+"fork": false
+},
+"xxinjie21/smart-quiz-tutor": {
+"full_name": "xxinjie21/Smart-Quiz-Tutor",
+"stars": 10,
+"lic": "0BSD",
+"pushed": "2026-09-22",
+"archived": false,
+"fork": false
+},
+"yonasab12/amharicnlp": {
+"full_name": "yonasab12/amharicNLP",
+"stars": 10,
+"lic": "NOASSERTION",
+"pushed": "2026-09-15",
+"archived": false,
+"fork": false
+},
+"zayn-anwar/ncerttbdl": {
+"full_name": "zayn-anwar/NCERTTBDL",
+"stars": 2,
+"lic": "MIT",
+"pushed": "2025-02-14",
+"archived": false,
+"fork": false
+},
+"y4zh/kurikulum-merdeka-asesmen-skills": {
+"full_name": "y4zh/kurikulum-merdeka-asesmen-skills",
+"stars": 0,
+"lic": "MIT",
+"pushed": "2026-11-17",
+"archived": false,
+"fork": false
+}
+}

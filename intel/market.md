@@ -59,6 +59,19 @@ outcome statistics such as "42% improvement in learning outcomes" and "54% highe
 scores" with no traceable primary study. They are excluded here. A claim about learning
 gains needs a primary citation or it does not go in a client deck.
 
+🔴 **`p930` (2026-11-19) — read this before quoting any number below.** `p930` tested **thirteen**
+demand-side hosts from the session container. **Only GitHub resolves.** `eur-lex.europa.eu`,
+`oecd.org`, `unesco.org`, `iesalc.unesco.org`, `education.ec.europa.eu`,
+`eurydice.eacea.ec.europa.eu`, `ecs.org`, `iadb.org`, `timeshighereducation.com`,
+`futuresource-consulting.com`, `press.epson.eu`, `digitaleducationcouncil.com` and
+`edtechinnovationhub.com` **all fail at DNS**. 🔵 **This restates `915-G1`/`917-G1` correctly: the
+gap is not three hosts, it is the entire demand-side web.** The only non-GitHub channel available
+to this base is the **WebSearch tool's snippets**, which run outside the container. **No primary
+document — legal text, ministry circular, analyst PDF or press release — can be byte-read from this
+environment at all**, so *every* figure in this file is snippet-sourced **by construction** and
+cannot be upgraded here by any number of further passes. Figures added by `p930` are marked
+🟡 **`SNIPPET-ONLY`** where the source host was unreachable for verification.
+
 ## Key players
 
 **Proprietary / commercial.** Microsoft launched **Microsoft Elevate for Educators**
@@ -98,6 +111,20 @@ data access* rather than education agents.
 
 
 ### North America
+
+🔵 **`p930` regional leg (2026-11-19).** Policy is still being made at **state** level and the
+volume is the story: the PIE Network tracked **close to 100 state bills this year** touching
+students' use of AI in K-12, and the Education Commission of the States attributes the national
+frame to **federal executive orders issued 2025 → early 2026** (agency action plans plus a K-12 AI
+instruction task force) rather than to statute. Dated commitments worth selling against:
+**Illinois** must publish district guidance by **1 July 2026**; **Virginia S.B. 394** directs
+guidance that includes teacher training. 🟡 `SNIPPET-ONLY`: Technavio puts **institution-wide**
+AI implementation at **66%** (a shift off pilots); Ken Research sizes the **US** market at
+**$3.28B (2025) → $15.25B (2031)**. 🔴 **The buy-side signal matters more than either number:**
+reporting this August described districts **spending billions while unable to judge what is worth
+buying**, and **Chegg cut 45% of staff (388 roles)** as AI answers took homework-help traffic.
+**That is a market with budget, no evaluation capability, and a visible incumbent casualty** — the
+opening is procurement-grade evaluation evidence, not another tutor.
 
 #### 🆕 `p928` — the two largest model vendors have made the teacher-assistant layer **free at the point of use** for US K-12, and this file had neither of them
 
@@ -848,6 +875,22 @@ transfers to the US with the curriculum swapped and the compliance wrapper chang
 
 
 ### EMEA
+
+🔵 **`p930` regional leg (2026-11-19).** The **AI Act** remains the forcing function and the
+obligation lands on **schools as deployers** — auditing their own AI use for safety, fairness and
+transparency — which is a services engagement, not a product sale. The **Council of Europe**'s
+March 2026 working-conference report proposes education-specific guidance layered on the AI Act and
+GDPR, asking for **co-regulation** and practical tooling. 🔴 **National implementation is still
+absent in places**: Spain has **no specific national rule** on classroom AI. 🟡 `SNIPPET-ONLY` and
+**not recorded as fact — both hosts fail DNS**: Futuresource reports **67% of teachers** now using
+AI tools; an Epson six-country survey (UK, France, Italy, Germany, Spain, Poland) reports
+**76% of students** expecting to use AI in learning. 🔴 **The EMEA adoption-percentage gap therefore
+stays open** — the figures exist and this environment cannot reach them. 🟢 **One supply-side
+number did come through usably:** Fosway puts vendor-delivered AI features at **11% of features in
+2025 → 26% in 2026**, and BCG names the bottleneck as **institutional misalignment across
+ministries, providers, employers and funders — not technology.** 🔵 **UAE is placed here, not in
+APAC**: its Ministry of Education issued **25 generative-AI prohibitions for schools (February
+2026)** covering age suitability, privacy, academic integrity and exams.
 
 #### 🆕 `p928` — the mandated EMEA leg returned **nothing this file did not hold**, and the one thing it got *wrong* is worth more than the nil
 
@@ -2076,6 +2119,21 @@ which range from Vietnam-style statutory high-risk to nothing at all. Ask per co
 
 ### APAC
 
+🔵 **`p930` regional leg (2026-11-19).** 🟡 `SNIPPET-ONLY`: APAC is reported as **over 45% of the
+global EdTech market**, with AI-focused **micro-credentials** and short modular programmes the
+fastest-growing segments; MarketsandMarkets sizes APAC **AI-in-education** at **$591.6M (2024) →
+$1,848.1M (2029), 20.9% CAGR** — a reminder that the *EdTech* share and the *AI* share are an order
+of magnitude apart and should never be quoted in the same breath. 🟢 **The buyer is the ministry:**
+analysis this pass is explicit that providers selling to **ministries and institutions** will
+outperform those selling to individual learners, and the convening calendar matches — Cambridge
+English gathered **200+ senior leaders including Ministries of Education (May 2026)**, and the
+**World Bank's Global EdTech Policy Academy on AI** ran in **Seoul, 31 Aug – 4 Sep 2026**.
+🔵 **Public opinion is a tailwind here and nowhere else:** Ipsos' 2026 Education Monitor finds
+**lower support for banning AI in schools** across the Asian markets surveyed — the mirror image of
+`T18`'s finding that support for bans is *rising* elsewhere. 🔴 **Declared gap, unchanged:** this
+leg returned **no country-level regulatory detail** for China, India, Japan, Singapore or
+Australia, which is where an APAC engagement's constraints actually live.
+
 #### 🆕 `p928` — nil on players and adoption; the regulatory spine re-confirmed, and this file should record that the leg **could not** find adoption data
 
 🔴 **Zero new facts, and one honest gap.** The leg re-named **South Korea's AI Basic Act in force 2026-01-22** with a guidance-first grace period through 2026; **Vietnam's AI law effective 2026-03-01**, whose high-risk category **explicitly includes education** and requires pre-deployment registration in the **National AI Database**; Australia's absent statute alongside **TEQSA**'s requirement that providers file institutional generative-AI action plans; China as the most comprehensive current framework (registration plus labelling); and Japan, Singapore (**AI Verify**) and New Zealand on principles-and-existing-law. **All held.**
@@ -3171,6 +3229,22 @@ funders** — not technology — which is the same finding from the consulting s
 
 
 ### LATAM
+
+🔵 **`p930` regional leg (2026-11-19).** 🔴 **The adoption/governance gap is now quantified on both
+sides and it is the widest of any region.** 🟡 `SNIPPET-ONLY`: the Digital Education Council's 2026
+LATAM survey (co-produced with **Tec de Monterrey**'s Institute for the Future of Education, 29
+LATAM universities) reports **92% of students using AI regularly and 67% weekly**, against
+**only 30% of Latin American universities having published any AI policy**. A **UNESCO IESALC**
+working paper (September 2026) maps university AI use across teaching, research, community
+engagement, administration and governance over **200 institutions in 19 countries** and finds
+adoption *"neither uniform nor evenly distributed"*. 🟢 **This is `T4` holding on a third
+independent instrument** — adoption has outrun governance, most measurably in LATAM. 🔵 **The
+practical opening is unusually concrete:** the **IDB** has published a snapshot of **193 real AI
+initiatives** across teaching, inclusion and school management — a ready-made reference set for a
+regional proposal — and **EdTech Hub + Fundación Ceibal** launched a regional AI-response
+partnership in **September 2026**, with **CEPAL**'s ILIA carrying a regulation subdimension.
+🔴 **Sell policy capacity, not models**: 70% of institutions have no published AI policy, and that
+is the deliverable they can actually buy first.
 
 #### 🆕 `p928` — nil, and the nil is the strongest form of this region's standing story
 
@@ -4333,6 +4407,31 @@ Both are vendor-blog citations of unnamed primary reports. **See
 adds two more disagreeing figures and no new primary source.**
 
 ## Declared gaps
+
+### Declared in `p930`
+
+- 🔴 **`930-G1` — `917-G1` and `915-G1` are superseded by a larger measurement, and their proposed
+  remedy was too small.** Those gaps asked for a session that resolves `eur-lex.europa.eu`,
+  `oecd.org` and `unesco.org`. `p930` tested **thirteen** demand-side hosts and **all thirteen fail
+  at DNS**, while `api.github.com` and `raw.githubusercontent.com` resolve normally. **The
+  restriction is not a three-host allowlist gap; it is that the session container can reach GitHub
+  and essentially nothing else.** Remedy: a pass from a session with **general outbound HTTPS**.
+  Until then, treat the supply side as byte-verifiable and the demand side as **snippet-only by
+  construction** — and stop spending legs trying to verify it.
+- 🔴 **`930-G2` — the EMEA adoption percentage is a fifth consecutive nil, and now for a stated
+  reason.** The figures exist: Futuresource (**67% of teachers**) and an Epson six-country survey
+  (**76% of students**). Both source hosts fail DNS, so neither is recorded as fact. **This is an
+  informed gap, not an absence of supply** — the remedy is `930-G1`, not another query.
+- 🟡 **`930-G3` — APAC country-level regulation is still unplaced.** The `p930` regional leg
+  returned convenings, market sizes and opinion polling but **no country-level rule** for China,
+  India, Japan, Singapore or Australia — which is where an APAC engagement's actual constraints
+  live. `T7` and `T14` cover China's labelling and affective-design rules; the other four markets
+  have no regulatory row in this file.
+- 🟢 **`930-G4` — a bounded, enumerable backlog worth more than any new query.** **61 of 587**
+  shelf repositories (**10.4%**) are `NOASSERTION` (46) or carry no licence at all (15). That is
+  the fraction a client's legal review stops on, every row is listed in
+  `evidence/shelf-depth-audit.2026-11-19-p930.tsv`, and `930-F4` shows at least some `NOASSERTION`
+  rows are **concatenated multi-grant files** that resolve cleanly on a hand-read.
 
 ### Declared in `p917`
 

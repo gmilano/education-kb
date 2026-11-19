@@ -2807,3 +2807,96 @@ the channel and is as solid as a three-case observation gets, because the mechan
 The *prevalence* (10 Rust crates in 618 addresses) is specific to this base's current shelf and
 says nothing about education supply at large. The manifest families other than Cargo are **not**
 probed yet and that is this trend's open edge.
+
+## T73 — A licence classifier that matches licence **names** inside licence **text** fails toward false divergence, and the two biggest copyleft families are exactly where it fails (measured `p930`)
+
+🔵 **The observation.** `p930` byte-read **255** `LICENSE` payloads from the published shelf and
+classified each from its own bytes. It reported **6 divergences against the published grant**.
+**Five were the classifier's.** The mechanism is the same in each case and it is embarrassing once
+seen: **licence texts name other licences inside themselves.**
+
+| Repository | Published | Classifier said | Bytes say | What it matched on |
+|---|---|---|---|---|
+| `uloya1234/faq-assistant` | MPL-2.0 | 🔴 AGPL-3.0 | 🟢 **MPL-2.0** | MPL-2.0's **Exhibit B** names the *GNU Affero General Public License* |
+| `Automattic/sensei` | GPL-2.0 | 🔴 LGPL | 🟢 **GPL-2.0** | GPL-2.0's closing paragraph **recommends the LGPL** for libraries |
+| `xiaochong0302/course-tencent-cloud` | GPL-2.0 | 🔴 LGPL | 🟢 **GPL-2.0** | byte-identical payload to `sensei` (`18,092 B`, `8177f9751321`) |
+| `xxinjie21/Smart-Quiz-Tutor` | 0BSD | 🔴 ISC | 🟢 **0BSD** | 0BSD **is** ISC minus the notice-retention clause |
+| `HyNuwa/UniMCP` | MIT + inherited ISC | 🔴 ISC | 🟢 **MIT + ISC** | read through to the **second** grant in a two-grant file |
+
+🟢 **The rule, and it is one line of code: classify on the first non-empty line, not on the body.**
+Every payload above announces itself correctly in its title — `Mozilla Public License Version 2.0`,
+`GNU GENERAL PUBLIC LICENSE / Version 2`, `BSD Zero Clause License`, `MIT License`. A scanner that
+anchors on the title line gets all five right; one that greps the body for `"GNU Affero"` or
+`"GNU Lesser"` gets all five wrong, **and always in the direction of reporting a stricter copyleft
+than the project granted**.
+
+🔴 **Why this is a procurement risk and not a tidiness note.** The failure direction is consistent:
+MPL-2.0 (file-level copyleft, composable with almost anything) is reported as **AGPL-3.0**, the one
+licence a SaaS-delivering studio will refuse outright. A single mis-ordered regex in an SBOM tool
+therefore **kills an adoptable dependency at the review gate** and nobody re-reads the file, because
+the tool is the thing that is supposed to have read it. 🔵 `T19` recorded that published licence
+metadata is wrong often enough to be a risk and that the errors run both ways; **`T73` names a
+mechanism that runs one way only, and it is the expensive way.**
+
+🟡 **Scope.** Measured on 255 byte-reads of this base's own shelf. The three mechanisms
+(name-mention in body; `0BSD`/`ISC` sharing a permission sentence; multi-grant files) are properties
+of the licence *texts*, not of education supply, so they generalise to any scanner — but the
+**rates** here are specific to this shelf's licence mix.
+
+🔵 **The wider pattern this is the third instance of.** `928-G1` ran a control over `p927`'s 37
+byte-read grants, reported **32 divergences, and all 32 were manufactured by the control**.
+`p930`'s **table parser** reported 7 licence-drift candidates against the same shelf and **7 of 7**
+were column misalignment on prose-rich rows — it read `MIT` out of *"was published here as `MIT`"*
+and `Apache-2.0` out of *"ECL-2.0 is Apache-2.0 with an education-oriented patent clause"*.
+**Three consecutive automated audits, three sets of manufactured divergences, zero shelf errors
+among them.** 🟢 **Operative rule for this base: no automated re-audit of these files may be
+published without row-by-row adjudication, and a control that disagrees with the shelf is the
+first thing to suspect, not the second.**
+
+## T74 — Published addresses decay by **rename**, redirects **chain**, and the search index is the only channel that marks which link is live (measured `p930`)
+
+🔵 **The observation.** Of **594** unique GitHub addresses published across this base's three
+shelves, **all 594 are live** — but **7 return `422` from `repo:owner/name`**, and earlier passes
+read that as an index defect (*"the star-unmeasurable class … none gets an estimate"*).
+**For four of the seven it was a rename.**
+
+🟢 **The instrument, which is cheap and proves identity rather than inferring it.** `git ls-remote`
+follows GitHub's rename redirect and returns the live `HEAD` at the **published** address; the
+search channel returns `HEAD`, `fork` and stars at a **candidate** address. **Identical `HEAD` with
+`fork=False` is a rename** — a fork reports `fork=True`, and two unrelated repositories do not share
+a commit SHA.
+
+| Published | Canonical now | ★ |
+|---|---|---|
+| `mwouts/jupytext` | `jupytext/jupytext` | 7,281 |
+| `digitalcredentials/learner-credential-wallet` | `ryjones/learner-credential-wallet` | 91 |
+| `jnehring/awesome-low-resource-languages` | `commoncrawl/awesome-low-resource-languages` | 2 |
+| `tokenaii/horus-taleeq-0.2b-base` | `tokenaillc/Horus-Taleeq-0.2B-Base` | 1 |
+
+🔴 **Redirects chain, and that is what makes this a trend rather than four corrections.** The
+learner-credential wallet has **three** known addresses, **all serving `HEAD` `1c46a82ba384`**, and
+**only one is indexed**. `repos/foundations.md` had already noticed the move once and instructed
+future passes to *"track `openwallet-foundation-labs/…` for governance"* — **that address is now a
+`422` as well.** The project moved again. 🔵 **So a byte-identical payload at two addresses proves a
+redirect, not a second home**, and **only the current canonical address is ever in the index** —
+which makes the search channel a positive test for *which link in a chain is live*, rather than
+merely a flaky star source.
+
+🔴 **The commercial edge, which is where this costs money.** A rename never breaks a link — GitHub
+redirects forever — so a stale address **fails silently**: `git clone` works, the README renders,
+and nothing announces that the project has changed hands. Three of the four moves above are
+ownership changes (personal → organisation, consortium → foundation → personal account), and
+**ownership is exactly what a dependency review is assessing.** `tokenaii/horus-taleeq-0.2b-base`
+was carried here as the answer to a declared Middle East supply gap with its star count *unknown*;
+at its live address it has **one star**. 🟢 **Re-resolve every published address before an
+engagement cites it, and read the move itself as signal** — `jupytext` incorporating into its own
+organisation at 7,281 ★ and a Linux-Foundation wallet sliding into a personal namespace are
+opposite findings, and neither is visible from the licence or the star count.
+
+🟡 **Scope and the residual.** Three of the seven — `DaRL-GenAI/instructional_agents`,
+`OpenOLAT/qtiworks`, `mitodl/open-learning-ai-tutor` — are live *and* genuinely absent from the
+index, with each **owner** indexed (15, 7 and 186 repositories), so the exclusion is
+per-repository and real. 🔴 **One instrument caveat that must travel with this trend:** batching
+`repo:` qualifiers (20 per call, which is how 594 addresses were covered in 30 calls) converts a
+loud per-row `422` into a **silent omission**. Absence under batching means *unresolved*; re-query
+individually before calling anything unindexed.

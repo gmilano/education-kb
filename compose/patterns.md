@@ -4162,3 +4162,79 @@ what is permissively available and familiar. `p928` shelved the piece that remov
 Identity, enrolment and gradebook write-back. Those are LMS concerns — take them from `P53` and the
 Canvas/Moodle seams in `verticals/solutions.md`. Nothing above touches the client's LMS, which is
 deliberate: it is what lets the pilot start without a procurement cycle (`T30`).
+
+---
+
+## P58 — Dependency intake gate: resolve the address, then the grant, before anything is costed
+
+🔵 **The problem this solves.** Every other pattern in this file names repositories, and a studio
+will clone them months after they were shelved. `p930` re-measured all **594** addresses this base
+publishes and found **4 renamed**, **1 grant replaced outright**, **2 archived** and **53 (9.0%)
+untouched for a year** — none of which announces itself. A rename never breaks a link (GitHub
+redirects forever), so **a stale dependency fails silently**: the clone works, the README renders,
+and the project has quietly changed hands. Run this gate at the **start** of an engagement, on
+every repo the proposal names. It is about **twenty minutes** for a hundred repositories.
+
+### The four checks, in order
+
+**1 — Is the address still canonical?** The cheap, decisive test, because it proves identity by
+commit SHA rather than inferring it from content:
+
+```bash
+# HEAD at the address you hold (git follows GitHub's rename redirect silently)
+git ls-remote https://github.com/<owner>/<repo> HEAD
+# does the search index know that address? 422 = no repository there NOW
+curl -sG -H "Authorization: Bearer $GITHUB_TOKEN" \
+  https://api.github.com/search/repositories --data-urlencode "q=repo:<owner>/<repo>"
+```
+
+🔴 **A `422` with a live `ls-remote` means renamed, not unindexed.** Find the new address
+(`<repo> in:name`), and confirm with **identical `HEAD` + `fork=False`** — a fork reports
+`fork=True`, and two unrelated repositories do not share a commit SHA. 🔴 **Never batch `repo:`
+qualifiers for this check**: `repo:a/b repo:c/d …` turns a loud per-row `422` into a **silent
+omission** (`930-R1`). Batch to *survey*, re-query individually to *conclude*.
+🟡 Redirects **chain**, so the address you were told to track forward may itself be stale — the
+indexed one is the live one.
+
+**2 — Read the grant from the bytes, and classify on the title line.**
+
+```bash
+curl -s https://raw.githubusercontent.com/<owner>/<repo>/HEAD/LICENSE | head -1
+```
+
+🔴 **Do not grep the body.** MPL-2.0 names the **AGPL** in its own Exhibit B and GPL-2.0 recommends
+the **LGPL** in its closing paragraph, so a body-matching scanner reports `uloya1234/faq-assistant`
+as AGPL-3.0 and `Automattic/sensei` as LGPL — **both wrong, and both in the direction that kills an
+adoptable dependency at the review gate** (`T73`). The title line is unambiguous in every case.
+🟡 `0BSD` and `ISC` share their permission sentence; only the title separates them.
+
+**3 — Treat `NOASSERTION` as a *question*, not a verdict.** It means GitHub matched no single SPDX
+id. If the payload byte-reads as a recognisable permissive licence, the usual cause is a
+**concatenated multi-grant file** — `HyNuwa/UniMCP` ships MIT for its own code plus **ISC for
+portions derived from `utn-mcp`** in one `LICENSE`. **The second grant governs the vendored
+subtree**, which is the one a lawyer will ask about (`T40`, `930-F4`). Contrast `NONE`, which means
+there is no grant and the row is refused.
+
+**4 — Age the row against what it is.** `pushed_at` plus `archived` from the same search call.
+🔵 **Apply different thresholds by layer, because they decay differently:** an *agent* untouched for
+a year is abandoned; a *standards implementation* may be finished. `swl10/pyslet` (IMS/QTI, last
+push 2020) and `Apereo-Learning-Analytics-Initiative/OpenLRS` (archived 2019) are still the right
+**specifications to read** — and are **never** dependencies to take a floating version of.
+**A foundations row older than 24 months is a spec you read and a library you vendor at a SHA.**
+
+### Wiring it
+
+The harness `p930` used is in **`compose/code/p930-shelf-depth/`** — `extract-rows.py` pulls
+addresses out of markdown tables, `audit2.py` batches the search channel, `grant.py` byte-reads and
+classifies licence payloads. Point it at the repo list in your proposal instead of at this base's
+shelves. Full per-row output for the current shelf is in
+`evidence/shelf-depth-audit.2026-11-19-p930.tsv`.
+
+### 🔴 What this pattern does *not* do
+
+**It does not replace reading the row.** `p930` ran three automated controls over a sound shelf and
+every one manufactured divergences — a table parser produced **7 licence-drift candidates, 7 of 7
+false**; a byte-read classifier produced **6, of which 5 were false**; `928-G1` produced **32, all
+32 false**. 🟢 **One real finding survived all of it** (`nengdou-ai-review-helper-web`, Apache-2.0 →
+MulanPSL-2.0, payload replaced). **Use the gate to produce a shortlist of rows to read by hand, and
+never to publish a correction unread.**

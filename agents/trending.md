@@ -4,6 +4,203 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p930) — **`928-R1` sent this pass at the published shelf instead of at another vocabulary. 594 addresses, 255 byte-read grants: the shelf is 99.6% sound — and the seven rows this base calls "star-unmeasurable" are not unindexed. Four of them have simply **moved**, and they are measurable at the new address.**
+
+🔵 **Summary.** `928-R1` closed with an instruction: *"The next pass should spend its budget on
+**depth** against known rows — dependency reproducibility, grant drift, payload addresses — not on
+another vocabulary."* `p930` did exactly that and nothing else. **594 unique published addresses**
+across `agents/top.md`, `repos/foundations.md` and `verticals/solutions.md` were re-measured on two
+channels, and **255 licence payloads were byte-read** and classified from their own bytes.
+🟢 **The shelf holds: 243 of 249 comparable grants reproduce exactly, and every one of the 594
+published addresses is live.** 🔴 **One grant has genuinely drifted** — `nengdou-ai-review-helper-web`
+is no longer Apache-2.0. 🟢 **And the headline correction: `agents/top.md`'s seven-row
+"star-unmeasurable" class is wrong about four of its members.** They are not invisible to the index;
+they were **renamed**, and the index has them under a different address all along. The four are now
+measurable, and one of them costs this base a regional claim. The mandated prose legs were nil for
+the **48th** consecutive pass.
+
+### 🔴 `930-F1` The "star-unmeasurable" cohort is four renames and three genuine absences
+
+`agents/top.md` (lines 208–210) records: *"The star-unmeasurable class `p902` opened with one
+repository is seven … every one `raw` `200`, every one `422` from the only star channel when
+queried individually. They keep their rows and **none gets an estimate**."* 🔵 The observation was
+right; the **interpretation** was not. A `422` from `repo:owner/name` does not mean *unindexed* — it
+means *no repository at that address*, which a rename produces just as reliably as an index gap.
+
+**The instrument that separates them** (`compose/code/p930-shelf-depth/`): `git ls-remote` follows
+GitHub's rename redirect and yields the live `HEAD` at the **published** address; the search channel
+yields `HEAD`, `fork` and stars at a **candidate** address. **Identical `HEAD` + `fork=False` is a
+rename; a fork would be `fork=True`, and two unrelated repositories do not share a commit SHA.**
+
+| Published address | `HEAD` | Canonical address | `HEAD` | ★ | Grant | Verdict |
+|---|---|---|---|---|---|---|
+| `mwouts/jupytext` | `6ce576ffe84e` | 🟢 **`jupytext/jupytext`** | `6ce576ffe84e` | **7,281** | MIT | **RENAMED** |
+| `digitalcredentials/learner-credential-wallet` | `1c46a82ba384` | 🟢 **`ryjones/learner-credential-wallet`** | `1c46a82ba384` | **91** | MIT | **RENAMED** |
+| `jnehring/awesome-low-resource-languages` | `deb7535fd8a0` | 🟢 **`commoncrawl/awesome-low-resource-languages`** | `deb7535fd8a0` | **2** | none | **RENAMED** |
+| `tokenaii/horus-taleeq-0.2b-base` | `f7a770028979` | 🟢 **`tokenaillc/Horus-Taleeq-0.2B-Base`** | `f7a770028979` | **1** | MIT | **RENAMED** |
+| `DaRL-GenAI/instructional_agents` | `49f6bcf07119` | — | — | — | — | 🔴 live, **genuinely unindexed** |
+| `OpenOLAT/qtiworks` | `57cdf4affa26` | — | — | — | — | 🔴 live, **genuinely unindexed** |
+| `mitodl/open-learning-ai-tutor` | `95558e47e966` | — | — | — | — | 🔴 live, **genuinely unindexed** |
+
+🟢 **The control that makes the bottom three a finding rather than a shrug:** each of those three
+owners **is** indexed — `DaRL-GenAI` returns **15** repositories including `instructional_agents-skills`
+and `instructional_agents_studio`, `OpenOLAT` returns **7**, `mitodl` returns **186**. The exclusion
+is at the **repository** level, not the namespace, so it is not an owner-level block.
+
+🔴 **`930-F1b` — redirects *chain*, so a superseded address can be one this base chose deliberately.**
+`repos/foundations.md` told future passes to *"track `openwallet-foundation-labs/learner-credential-wallet`
+for governance"* when the project moved under the Linux Foundation. **That address is now a `422`
+too.** All three known addresses serve the identical `HEAD` `1c46a82ba384`, and exactly one is
+indexed: 🟢 **`ryjones/learner-credential-wallet`**, `fork=False`, **91 ★**, pushed 2026-10-15.
+🔵 **Two consequences.** First, *byte-identical payloads at two addresses prove a redirect, not a
+second home* — the earlier reading of this row as "also published at" was the wrong shape. Second,
+**only the current canonical address is ever indexed**, which makes the search channel a reliable
+test for *which* link in a redirect chain is live. 🟡 A Linux-Foundation-convened credential wallet
+currently resolving into a **personal namespace** is a governance question worth asking before
+depending on it, and the row now says so.
+
+🔵 **This base had already seen the mechanism once and did not generalise it.** `p900`-era notes
+record `longsightgroup/qti3` as *"renamed to `QFlowLearn/qti3`"*, found through a *profile* channel
+and corrected in place. That was treated as one repository's quirk. It is a **class**, and
+`git ls-remote` is a cheaper and stronger instrument for it than the profile channel: it proves
+identity by commit SHA rather than by inference.
+
+🔴 **`930-R1` — a `422` on `repo:` is not a measurement of the index, and batching hides it.**
+Querying `repo:a/b repo:c/d …` twenty at a time (which is how this pass covered 594 addresses in 30
+calls) converts a loud per-row `422` into a **silent omission**. Any pass that batches `repo:`
+qualifiers must treat absence as *unresolved*, re-query the absentees individually, and only then
+call them unindexed.
+
+### 🔴 `930-F2` One real grant drift in 249 — and it resolves a disagreement this base recorded a year of passes ago
+
+`agents/top.md` carries **`yinuoguan/nengdou-ai-review-helper-web`** as *"Apache-2.0 byte-read —
+GitHub SPDX says `MulanPSL-2.0`. **Channels disagree.**"* (`main/LICENSE`, **11,356 B**,
+`sha256₁₂ 43070e2d4e53`, opening `Apache License / Version 2.0`).
+
+🔴 **It is now MulanPSL-2.0 on both channels.** The payload has been **replaced**: **9,247 B**,
+`sha256₁₂ f0dade5c9337`, opening `木兰宽松许可证，第2版` (Mulan Permissive Software Licence v2).
+**The disagreement did not need adjudicating — it needed re-reading.** The row is corrected.
+
+🔵 **Commercially this is close to neutral and worth one sentence to a client:** MulanPSL-2.0 is
+OSI-approved and permissive, so the build is unaffected — but its **authoritative text is Chinese**
+and it is drafted against Chinese law, which is a different review conversation from Apache-2.0 in a
+European or North American procurement.
+
+### 🟢 `930-F3` 243 of 249 grants reproduce — and **five of the six divergences were manufactured by the classifier**, by three distinct mechanisms
+
+| Row | Published | Classifier said | Bytes say | Mechanism |
+|---|---|---|---|---|
+| `uloya1234/faq-assistant` | MPL-2.0 | 🔴 AGPL-3.0 | 🟢 **MPL-2.0** | MPL-2.0 **names the AGPL inside its own Exhibit B** |
+| `Automattic/sensei` | GPL-2.0 | 🔴 LGPL | 🟢 **GPL-2.0** | GPL-2.0 **recommends the LGPL in its closing paragraph** |
+| `xiaochong0302/course-tencent-cloud` | GPL-2.0 | 🔴 LGPL | 🟢 **GPL-2.0** | byte-identical payload to `sensei` — `18,092 B`, `8177f9751321` |
+| `xxinjie21/Smart-Quiz-Tutor` | 0BSD | 🔴 ISC | 🟢 **0BSD** | 0BSD **is** ISC minus the notice-retention clause |
+| `HyNuwa/UniMCP` | MIT | 🔴 ISC | 🟡 **MIT + ISC** | see `930-F4` |
+
+🔴 **`930-R2` — a licence classifier that matches licence *names* in licence *text* fails toward
+false divergence, and the two biggest copyleft families are exactly where it fails.** MPL-2.0 and
+GPL-2.0 both **name other licences inside themselves**; any scanner that greps for
+`"GNU Affero"` or `"GNU Lesser"` before anchoring on the **title line** will report an MPL-2.0 project
+as AGPL and a GPL-2.0 project as LGPL. The fix is a one-line ordering rule: **classify on the first
+non-empty line, not on the body.**
+
+🔵 **This is the third consecutive pass in which an automated control manufactured divergences
+against a sound shelf.** `928-G1` reported 32 and all 32 were the control's. This pass's **table
+parser** reported 7 licence-drift candidates and **7 of 7** were column misalignment on prose-rich
+rows — it read `MIT` out of *"was published here as `MIT`"*, and `Apache-2.0` out of
+*"ECL-2.0 is Apache-2.0 with an education-oriented patent clause"*. **The shelf keeps winning these
+arguments, and the right conclusion is about the instruments, not the shelf:** no automated
+re-audit of these files may be published without row-by-row adjudication.
+
+### 🟢 `930-F4` The shelf beat the audit again: the **concatenated multi-grant `LICENSE`** is already recorded correctly
+
+`HyNuwa/UniMCP`'s `LICENSE` is **1,980 B** — too large for MIT alone. It is MIT for the work,
+followed by a rule and this:
+
+> *"Portions of this software are derived from `utn-mcp` and remain under its original license:
+> **ISC License**, Copyright (c) 2026 Joaquín Peñalva…"*
+
+🟢 **And `agents/top.md` already says so**, in the cell this pass flagged: *"**MIT + inherited ISC,
+conjunctive** `1,980 B`"*. 🔴 **The divergence was the classifier's, not the shelf's** — it read to
+the *second* grant and reported `ISC`. **Six of six divergences are now artefacts of the instrument
+plus one genuine drift, and the shelf is clean on all six.**
+
+🟢 **What is worth keeping is the diagnostic, which `T40` has been missing.** GitHub reports
+`NOASSERTION` here precisely *because* the file matches no single SPDX identifier — it **is** no
+single licence. So: **`NOASSERTION` on a root `LICENSE` that byte-reads as a recognisable permissive
+licence is the signature of a concatenated multi-grant file, not of an unreadable grant** — and the
+*second* grant is the one that governs the vendored subtree. 🔵 That turns a chunk of the shelf's
+**46 `NOASSERTION` rows** from a backlog of unknowns into a backlog of **hand-readable** ones, which
+is the cheapest lead `930-R4` has to offer.
+
+### 🟢 `930-F5` The first whole-shelf decay and licence census this base has taken
+
+587 of 594 addresses resolved on the search channel (the other 7 are `930-F1`). Measured on
+`pushed_at` and `archived`, which need no parsing and cannot be misaligned:
+
+| | `agents/top.md` | `repos/foundations.md` | `verticals/solutions.md` | **Shelf** |
+|---|---|---|---|---|
+| Rows resolved | 241 | 291 | 137 | **669** |
+| 🔴 Archived | 0 | **2** | 0 | **2** |
+| No push in 6 months | 32 | 44 | 13 | **89** |
+| No push in 12 months | 14 | 33 | 7 | **54** |
+| No push in 24 months | 8 | 15 | 3 | **26** |
+
+**On the 587 unique repositories: 2 archived, and 53 (9.0%) have not been pushed in twelve months.**
+The two archived rows are `otuncelli/turkish-stemmer-python` (last push **2025-02-26**) and
+`Apereo-Learning-Analytics-Initiative/OpenLRS` (**2019-01-31**). The oldest live rows are
+`totara/openbadges` (**2016-03-14**), `kirstykitto/CLAtoolkit` (**2017-07-11**) and
+`swl10/pyslet` (**2020-03-31**).
+
+🟢 **The licence census — the first time this base can state its own composition rather than its
+intake policy:**
+
+| Grant | Repos | Share |
+|---|---|---|
+| **MIT** | 300 | 51.1% |
+| **Apache-2.0** | 112 | 19.1% |
+| 🔴 `NOASSERTION` | 46 | 7.8% |
+| AGPL-3.0 | 31 | 5.3% |
+| GPL-3.0 | 31 | 5.3% |
+| BSD-3-Clause | 16 | 2.7% |
+| 🔴 no licence at all | 15 | 2.6% |
+| GPL-2.0 · LGPL-3.0 · CC0-1.0 · ISC · MulanPSL-2.0 | 7 · 5 · 5 · 5 · 3 | 4.3% |
+
+🔵 **70.2% of the shelf is MIT or Apache-2.0** — against the **35.5%** permissive share `928-F2`
+measured in the raw unheld population, and against `T23`'s **49.0% `NOLICENSE`** out there versus
+**2.6%** in here. **The curation is doing real work, and this is the number that says so.**
+🔴 But **10.4% of the shelf is `NOASSERTION` or ungranted**, which is the fraction a client's legal
+review will stop on. Those 61 rows are the backlog worth clearing — not another topic vocabulary.
+
+### 🔴 `930-F6` The prose legs, the 48th nil — and the network finding that says why they will stay that way
+
+All **four mandated prose legs** and all **four regional legs** ran (`AI education {North America |
+EMEA | APAC | LATAM} 2026 adoption regulation players`). **Zero unheld repositories — the 48th
+consecutive nil.** Every repository they named was already held and already correct:
+`HKUDS/DeepTutor` (**60,793 ★**, `Apache-2.0`, +16 on `p928`) and
+`GarethManning/education-agent-skills` (**1,005 ★**, CC BY-SA 4.0 — still a content licence).
+
+🔴 **The regional legs returned demand-side material that this base cannot verify, and the reason is
+now measured rather than suspected.** `915-G1` and `917-G1` have asked for seven passes for a
+session whose network policy resolves `eur-lex.europa.eu`, `oecd.org` and `unesco.org`. This pass
+tested **thirteen** demand-side hosts:
+
+| Resolves | Does not resolve |
+|---|---|
+| 🟢 `api.github.com`, `raw.githubusercontent.com` | 🔴 `eur-lex.europa.eu`, `oecd.org`, `unesco.org`, `iesalc.unesco.org`, `education.ec.europa.eu`, `eurydice.eacea.ec.europa.eu`, `ecs.org`, `iadb.org`, `timeshighereducation.com`, `futuresource-consulting.com`, `press.epson.eu`, `digitaleducationcouncil.com`, `edtechinnovationhub.com` |
+
+🔵 **`930-R3` — restate the gap correctly: it is not three hosts, it is the demand-side web.** The
+only non-GitHub channel available to this base is the **WebSearch tool's own snippets**, which run
+outside the session container. **No primary document — legal text, ministry circular, analyst PDF or
+press release — can be byte-read from this environment at all.** Every figure in `intel/market.md`
+is therefore snippet-sourced *by construction* and cannot be upgraded here, no matter how many
+passes try. 🔴 **Concretely, this pass could not close the EMEA adoption gap**, declared nil since
+`p9xx`: the search channel returned a Futuresource *"67% of teachers now using AI tools"* and an
+Epson six-country figure of *"76% of students"*, and **both hosts fail DNS**, so neither number is
+recorded as a fact. **The gap stands, now with its mechanism named — and the remedy is a session
+with general outbound HTTPS, not another leg.**
+
+---
+
 ## `2026-11-19` (p928) — **`927-R1` said the 100-row page cap made every topic number a floor. Sharding removed the cap: the population is 3.7× larger, and the number of shelf-grade education agents it contains is zero.**
 
 🔵 **Summary.** `p927` closed with an instruction: *"a pass that wants the rest must paginate or
@@ -12696,7 +12893,7 @@ and CC BY 4.0 for content, each with its directories named), and a **carved-out*
 🔴 **All three report `NOASSERTION`, and two of the three are the best-documented grants in the
 sample.** 🔴 **In the other direction, `OpenRaiser/EduGraph` reports a clean `Apache-2.0` while its
 `LICENSE-DATA` is CC BY-SA 4.0 over the `7,062`-concept graph that IS the product.**
-🟢 **`P57`'s gate is extended accordingly.**
+🟢 **`P58`'s gate is extended accordingly.**
 
 ### `T83` — the proctoring layer, and the row nobody would have predicted
 
@@ -12762,7 +12959,7 @@ instrument, `20`/`20`). 🔴 **`oecd.org` refused at the proxy**; every market i
 ## `2026-11-15` (twenty-eighth pass, `p823`) — **the largest discovery pass in this base's history: `21` build-safe rows, and the institution-integration tier revealed as a POPULATION**
 
 🟢 **`21` build-safe agent rows added (`187` → `208`), `1` copyleft row, `5` rejections, `2`
-foundation rows (`132` → `134`), `4` trends (`T77`–`T80`), `3` recipes (`P55`–`P57`).**
+foundation rows (`132` → `134`), `4` trends (`T77`–`T80`), `3` recipes (`P55`–`P58`).**
 🔴 **`0` platform rows (`116` unchanged) — a MEASUREMENT, with its denominator published in
 `verticals/solutions.md`.** 🟢 **Every count gate-confirmed: `ingest/derive-counts.py` ran in this
 environment and returns GREEN on all five shelves.**
@@ -12816,7 +13013,7 @@ classes** — the deliverable. 🔵 **Both grants correctly declared; the reposi
 only the one that does not govern the asset.** 🔴 **Mirror case, same pass:**
 [`birkanyavuz/educational-tools`](https://github.com/birkanyavuz/educational-tools) applies
 **CC BY-4.0 to software**. 🟢 **Rule: in an education repository, read the CONTENT licence, because
-the content IS the product. Gate published as `P57` — four `curl`s.**
+the content IS the product. Gate published as `P58` — four `curl`s.**
 
 ### `T80` — `83` tools at the institution tier
 
@@ -13008,7 +13205,7 @@ setting this base had never used in twenty-five passes.
 ### 🟡 Non-repository items seen this pass — named here so the next pass does not re-pay for them
 
 - 🇺🇸 **US Senate demand that Google reverse the K-12 Search/AI default-off change, response
-  requested by `2026-11-30`** (new; the change itself was already held). → `T72`, NA block.
+  requested by `2026-11-30`** (new; the change itself was already held). → `T74`, NA block.
 - 🇺🇸 **Kansas State Board of Education**: every district and accredited non-public school must
   adopt an instructional-technology policy and implementation plan covering AI use. → NA block.
   🔵 **A board instrument, outside the legislative tracker this base counts.**
@@ -22660,7 +22857,7 @@ Licence split of the `337`: `162` `NONE`, `114` MIT, `27` `NOASSERTION`, `16` Ap
 
 [`Ganesh-403/semantic-plagiarism-detector`](https://github.com/Ganesh-403/semantic-plagiarism-detector) — MIT (`1,069 B`, sha256₁₂ `ee11607e79e6`, © *Ganesh Kambli*), paraphrase and **cross-lingual** plagiarism over SentenceTransformers + FAISS, pushed `2026-11-04`. `16★` and **`109` forks**: a ratio of **`6.8` forks per star**.
 
-🔴 **Not shelved, and the ratio is why.** `T65`/`T71` read a high fork count as deployment. This is the third regime neither trend covers: **`109` forks on `16` stars, on a repository created `2026-03-16`, reads as coursework cloning, not deployment** — people taking a copy to submit, not to run. `T71`'s two regimes separate *deployed platforms* from *imported libraries*; this is a **template being harvested**, and the signature is the ratio inverting while the absolute star count stays near zero. **`P684-D` adopted: forks per star is only an adoption signal above a star floor; below it, it is a cloning signal.**
+🔴 **Not shelved, and the ratio is why.** `T65`/`T73` read a high fork count as deployment. This is the third regime neither trend covers: **`109` forks on `16` stars, on a repository created `2026-03-16`, reads as coursework cloning, not deployment** — people taking a copy to submit, not to run. `T73`'s two regimes separate *deployed platforms* from *imported libraries*; this is a **template being harvested**, and the signature is the ratio inverting while the absolute star count stays near zero. **`P684-D` adopted: forks per star is only an adoption signal above a star floor; below it, it is a cloning signal.**
 
 ### 🔧 `684-E` — the cell-arity gate itself had an `8.5×` false-positive rate, and `P50` check `3` is where it is specified
 
@@ -65209,7 +65406,7 @@ WEAKENING direction**, demoting a declared manifest licence to a prose mention.
 in the pass that measured it.**
 
 🔴 **`ACTION FC` is REFUTED**: adding eighteen common-title licence forms (`Apache License
-2.0`, `GPLv2`, `BSD 3-Clause`, …) changes **0 of 58** rows. 🟢 **So `T72` is confirmed a
+2.0`, `GPLv2`, `BSD 3-Clause`, …) changes **0 of 58** rows. 🟢 **So `T74` is confirmed a
 Fedena-specific artefact outside this shelf's population**, and 🟢 **strict-unlicensed
 reproduces at 8**, named. 🔴 **Denominator correction: 58, not 57.**
 
@@ -65264,7 +65461,7 @@ the pattern requires.** 🟢 **`UNIDENTIFIED` is the honest output and the censu
 return it**, which is exactly the register's load-bearing line working as intended: the
 instrument distinguished *"I could not name this"* from *"there is nothing here."* 🔴 **But
 it is the third independent reason this shelf cannot name a grant that is in front of it** —
-after the language gap (`T63`) and the shipped-file gap (`T21`). 🆕 **`T72`.**
+after the language gap (`T63`) and the shipped-file gap (`T21`). 🆕 **`T74`.**
 
 ### 🔵 Channel state, recorded for the next pass
 
@@ -89937,7 +90134,7 @@ consume cuota.**
    `instructure/qti`, `yetanalytics/datasim`, `oat-sa/tao-core`, la pila `qti3-*`, Ralph, `lrsql`, los tres LRS y las
    plataformas (Moodle, Open edX, ILIAS, Chamilo, OpenEduCat, Frappe). **Este pase midió 49 filas; la base cita bastante
    más de 49 repos.** La acción concreta: correr el mismo barrido sobre los slugs de esos dos archivos y **publicar las
-   frías**, porque son las que sostienen `P15`, `P50`, `P57`, `P60`, `P66`, `P70` y `P71`.
+   frías**, porque son las que sostienen `P15`, `P50`, `P58`, `P60`, `P66`, `P70` y `P71`.
 2. 🔵 **Ejecutar `P78` sobre la pieza más chica para convertir la estimación en un número medido: `learnmcp-xapi`, 3 tools.**
    Clonar, correr su suite si tiene, escribir el test de contrato de las 3 tools contra un `lrsql` local —que está vivo,
    `v0.9.9` del 2026-10-01— y **cronometrar**. Esta KB estima **1-2 semanas** para ese fork; **es la única estimación de
