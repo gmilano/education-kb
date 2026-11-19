@@ -424,6 +424,48 @@ date.** They are told apart by one step — **reading what the repository says i
 platform that publishes an Implemented/Planned table is doing that work for you. **`926-R2`: before
 a platform row is written, quote the repository's own claim about its implementation state.**
 
+## 🆕 `p928` — the vertical tier is **closed**, and that is now a measurement rather than an impression
+
+🔴 **No new deployable platform exists in 21,238 repositories.** `p928` sharded the topic channel
+on the star axis to remove the 100-row page cap (`928-F1`), including the two legs where school
+platforms actually live — **`topic:student-management` (1,651)** and **`topic:moodle` (2,390)**.
+Filtering the 20,203 unheld rows for platform-grade descriptions (school management, student
+information system, LMS, enrolment, admissions, attendance, timetabling, campus) returned **212
+candidates**. 🔴 **The largest was 37 ★; below it the list is coursework, prototypes and personal
+tools** — `teststudio` (8 ★, "prototype"), `EduTrack` (5 ★), `sam-lms` (4 ★),
+`Student-Management-System` (3 ★), `campuscore-API` (2 ★).
+
+🟢 **So the platforms already in this file — Moodle, Open edX, Canvas, OpenEduCat, Frappe Education,
+Sakai, Kolibri, BigBlueButton, H5P — remain the complete deployable set**, and a nine-fold
+widening of discovery did not add one. For an engagement this is good news stated plainly: **the
+build-versus-adopt question at the platform layer has a settled answer**, and the work is the AI
+layer on top, which is what every pattern in `compose/patterns.md` assumes.
+
+### 🔵 What the channel *did* contain: 136 personal LMS clients, 127 of them under three stars
+
+The sweep surfaced a dense stratum of **Canvas and Moodle client-side tools** — `canvas_syncer`
+(Rust, async file sync), `canvas-pull`, `CanvasBar` (macOS menu bar), `canvas-today` (Linux/Windows
+desktop widget), `Moodle-Offline`, `gulms` (terminal LMS client), `uab-campus-mcp` and
+`MUSTer_MCP` (MCP servers onto campus systems), `sjtu-qq-bot`. **136 unheld, permissive, live
+repositories match; 127 have two stars or fewer.**
+
+🔵 **This is `intel/trends.md` `T30` measured instead of inferred.** The LMS-to-agent bridge really
+is being built per-institution on the user's own credentials, by one person, at a scale this base
+had only sampled. **Its commercial reading is unchanged and now better supported:** these tools
+prove the *seam* is reachable without procurement, and their uniform tininess proves **none of them
+is a dependency you can adopt**. Build the bridge as part of the engagement, using these as design
+references — `P53` is the pattern, and `artevelde-uas/canvas-lms-app` and `dbosk/canvaslms` remain
+the two rows in this base solid enough to actually build on.
+
+🔴 **One category warning for anyone designing assessment on these platforms.** The same sweep
+returned three permissively licensed **LMS auto-solvers**: `Gavri-dev/kAIhoot` (MIT, 14 ★, Kahoot
+auto-answer extension), `QuercusAlba15924/moodle-tampermonkey-auto-solver` (MIT, 8 ★, Gemini-driven
+Moodle solver) and `bsuryaprakash06/Moodle-Quiz-Automation` (MIT, 3 ★, Playwright). They install in
+minutes and target exactly the quiz surfaces these platforms ship. **An in-browser quiz on any
+platform in this file cannot be the graded artefact** — that is `P55` (integrity by architecture),
+and these three URLs are the reason.
+
+
 ## 🆕 `p927` — a Brazilian state university's own academic system, and Canvas you can actually stand up
 
 Two rows from the 35-leg topic sweep (`agents/trending.md` `927-F1`), grants byte-read 2026-11-19.

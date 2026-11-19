@@ -4,6 +4,152 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p928) — **`927-R1` said the 100-row page cap made every topic number a floor. Sharding removed the cap: the population is 3.7× larger, and the number of shelf-grade education agents it contains is zero.**
+
+🔵 **Summary.** `p927` closed with an instruction: *"a pass that wants the rest must paginate or
+shard by star band, and until one does, no statement in this base about what the topic channel
+contains is a statement about supply."* `p928` built that instrument
+(`compose/code/p928-starband-shard/`), ran **25 legs → 223 shards → 588 API calls**, and retrieved
+**21,238 unique repositories**. On the **20 legs `p927` ran unqualified**, the comparison is exact:
+`p927` could see **2,000 of 7,965** rows (**25.1%**); `p928` captured **7,446** (**93.5%**) —
+**3.7×**. 🔴 **And the finding that matters is not the multiplier.** After the same funnel `p927`
+used, the 9× larger haul yields **1,065** unheld, permissive, live, education-domain, AI-signal
+repositories — of which **966 (90.7%) have two stars or fewer**, and the single row above 200 ★ is
+a **homonym** (`bkerler/exploit_me`, a CTF exploitation tutorial). **The page cap was never hiding
+a shelf.** The mandated prose legs were nil for the **47th** consecutive pass. 🔴 A control on
+`p927`'s 37 byte-read grants reported 32 divergences; **all 32 were manufactured by the control**
+(`928-G1`, `T69`). `p927`'s grants are sound: **37 of 37 reproduce exactly.**
+
+### 🟢 `928-F1` The cap is gone, and the residual floor is **named** rather than implied
+
+| | `p927` | `p928` |
+|---|---|---|
+| Legs | 35 | 25 |
+| Shards fetched | 35 (one page each) | **223** |
+| API calls | 35 | **588** |
+| Unique repositories returned | 3,000 | 🟢 **21,238** |
+| Unheld against the base | 2,298 (a **floor**) | 🟢 **20,203** |
+| Coverage of the 20 comparable legs | 25.1% | 🟢 **93.5%** |
+
+🟢 **A control worth stating: the re-measured population of those 20 legs is `7,965` — identical,
+to the repository, to the `total_count` `p927` reported.** `p927`'s *counting* was exactly right;
+only its *retrieval* was capped. That is the cleanest possible confirmation that `927-R1` named the
+real defect.
+
+🔴 **The residual floor, stated in full.** Nine shards remain truncated because a **single star
+value cannot be split further** and the search API stops at 1,000 rows per query:
+
+| Leg | Band | `total_count` | Retrieved | Unreachable |
+|---|---|---|---|---|
+| `topic:quiz` | `stars:0` | 4,477 | 999 | **3,478** |
+| `topic:educational` | `stars:0` | 3,899 | 1,000 | **2,899** |
+| `topic:homework` | `stars:0` | 2,111 | 999 | **1,112** |
+| `topic:flashcards` | `stars:0` | 1,995 | 1,000 | 995 |
+| `topic:educational` | `stars:1` | 1,445 | 1,000 | 445 |
+| `topic:quiz` | `stars:1` | 1,290 | 1,000 | 290 |
+| `topic:moodle` | `stars:0` | 1,280 | 1,000 | 280 |
+| `topic:student-management` | `stars:0` | 1,068 | 1,000 | 68 |
+| `topic:study-tools` | `stars:0` | 473 | 472 | 1 |
+| **Total still beyond reach** | | | | 🔴 **9,568** |
+
+🔵 **`928-R1` — a residual floor that is entirely zero- and one-star is not a gap worth closing.**
+Every truncated shard is at `stars:0` or `stars:1`. Given `928-F2` below, the 9,568 rows this pass
+still cannot see are drawn from precisely the band that has produced **nothing shelf-grade**. This
+base should **stop treating the topic backlog as an asset** and say so plainly, which is the
+opposite of what `p927` and `p926` each concluded about their own channels.
+
+### 🔴 `928-F2` The supply is real, permissive, live — and **atomised**. This is the pass's actual finding.
+
+The funnel, run exactly as `927-F2` ran it, on 20,203 unheld rows:
+
+| Filter | Rows |
+|---|---|
+| unheld, from 25 sharded topic legs | **20,203** |
+| permissive grant | 7,166 |
+| **and** pushed since 2026-05-01, not archived | 3,978 |
+| **and** AI / agent / LLM / tutor / grading signal | 1,737 |
+| **and** education-domain (student, classroom, curriculum, LMS, exam…) | 🟢 **1,065** |
+
+**Star distribution of those 1,065 — the number this pass exists to produce:**
+
+| Stars | Repositories | Share |
+|---|---|---|
+| **0** | 626 | 58.8% |
+| **1–2** | 340 | 31.9% |
+| 3–9 | 80 | 7.5% |
+| 10–49 | 15 | 1.4% |
+| 50–199 | 3 | 0.3% |
+| **200+** | **1** | 0.1% — and it is a **homonym** |
+
+🔴 **966 of 1,065 (90.7%) have two stars or fewer.** The largest genuine education row in the entire
+21,238-repository haul is **`gnmyt/Quizzle` at 37 ★**. 🔵 **So the honest reading of `p925`→`p928`
+is not "the vocabulary was the constraint" — it is that *every* widening of this channel returns
+the same thing: a very large number of very small projects.** `p925` found 97 unheld and called the
+shelf not-exhausted; `p926` found 601 and generalised it; `p927` found 2,298 and wrote `926-R1`
+forward; `p928` has found 20,203 and the top of the distribution has not moved. **The curve is
+flat at the top and the base should plan against that, not against the backlog size.**
+
+🟡 **`T23` is confirmed at nine times the scale and it got worse, not better: 49.0% of the unheld
+rows carry `NOLICENSE`** (9,890 of 20,203) and **43.8% have zero stars**.
+
+### 🟢 `928-F3` Thirteen rows shelved — and the ceiling on them is 37 ★
+
+Every grant below was byte-read from `raw.githubusercontent.com` with the corrected harness
+(`928-G1`) and reconciled against `search/repositories` as a second channel; **11 of 11 requested
+rows returned, no false absence** (`evidence/grant-byte-read.2026-11-19-p928.tsv`).
+
+To `agents/top.md`: **`craft-your-textbook`** (MIT, 41 ★), **`math-rap-video`** (MIT, 21 ★),
+**`PlanYourTV`** (MIT, 74 ★) — all three APAC, all three *agent skills or agent-driven appliances*
+rather than applications. To `repos/foundations.md`: **`online-ml/river`** (BSD-3-Clause, 6,151 ★ —
+the one genuinely large row, and it is **infrastructure, not education**, exactly as `T48`
+predicts), **`mdbook-quiz`**, **`quiz-mate`**, **`notebooklm-chunker`**, **`Yomine`**, **`kotoba`**,
+**`GradeShelf`**, **`houselearning/home`**.
+
+🔴 **Four rows measured and refused, with reasons** (`evidence/p928-refusals.2026-11-19-p928.tsv`):
+`computerlovetech/agr` (453 ★, MIT) — well-built, but its own description says **"Not actively
+maintained"** and it is *developer* tooling; "Educational" there means a teaching exercise.
+`TheAlgorithms/C-Plus-Plus` (34,894 ★), `raiyanyahya/how-to-train-your-gpt` (4,183 ★) and
+`elixirschool/elixirschool` (3,675 ★) are the **homonym tail** — programming tutorials, not
+education software. 🔵 **Those four are the entire top of the star distribution for this channel.
+Refusing them is the finding.**
+
+### 🔵 `928-F4` The education **agent-skill** tier is now MIT, and it is a category rather than a curiosity
+
+`T32` recorded education agent *skills* appearing under **Creative Commons**, and flagged ShareAlike
+on prompt text as a copyleft nobody scans for. This pass's haul says the tier has grown and
+**moved licence family**: `xx-hub/craft-your-textbook` (MIT, 41 ★), `Yari-tuber/math-rap-video`
+(MIT, 21 ★), `cskwork/supertutor-skill` (MIT, 14 ★, Feynman + Socratic), `Liangzhen-Chen/literature-guide-read`
+(MIT, 10 ★), `Mohamed-El-Sharqawy/agent-tutor` (MIT, 9 ★, writes into an Obsidian vault),
+`yejianqin61-cell/easy-college` (MIT, 8 ★), `JeromeWang6066/syllabus-reader-skill` (MIT, 2 ★) — all
+byte-read MIT this pass. 🔵 **These are procedures, not programs**: they ship prompts and a
+workflow and run on whatever file-and-shell agent the user already has. For a studio that is a
+**delivery format**, and an unusually cheap one — but it is also the format with the least
+engineering substance, which is why the whole tier sits under 50 ★.
+
+### 🔴 `928-F5` Three LMS **auto-solvers**, and they are the integrity story this base keeps selling around
+
+Hand-verified, not regex-counted: **`Gavri-dev/kAIhoot`** (MIT, 14 ★, "AI-Powered Kahoot Bot
+Auto-Answer Chrome Extension"), **`QuercusAlba15924/moodle-tampermonkey-auto-solver`** (MIT, 8 ★,
+"Advanced Moodle auto-solver using Gemini AI"), **`bsuryaprakash06/Moodle-Quiz-Automation`** (MIT,
+3 ★, Playwright-driven LMS solver). 🟡 **A first regex count of this tier returned 38 and was
+wrong** — it had swept in CTF walkthroughs, a Sudoku workspace and a hash-cracking toolkit. The
+three above are the hand-checked set, and three is the number this base publishes. 🔵 **Why it
+matters commercially:** `T10` says detection is being abandoned and assessment redesign replaces
+it. These tools are permissively licensed, trivially installed, and target the exact quiz surfaces
+`P56` and `P51` deliver on. **They are the argument for `P55` (integrity by architecture) in three
+concrete URLs** — and the reason an in-browser quiz must never be the graded artefact.
+
+### 🟡 `928-F6` Data-quality note on this pass's own artefact
+
+`evidence/p928-shard-alltopic.tsv` holds **21,454** written rows; a strict TSV reader parses
+**21,238**. The 216-row difference is descriptions containing a stray carriage return, which splits
+a record across lines. Every number in this section is computed on the **CR-sanitised** parse.
+🔵 The harness strips `\t` and `\n` from descriptions and **did not strip `\r`** — recorded here
+rather than silently fixed, because an unexplained 1% shortfall in a future re-read of this file
+would otherwise look like deletion.
+
+---
+
 ## `2026-11-19` (p927) — **`p926` asked thirty topic words and found 601 unheld repositories. Thirty-five more words it never asked returned 2,298. The instrument's vocabulary is still the binding constraint, and `926-R1` predicted exactly this.**
 
 🔵 **Summary.** The four mandated prose legs ran and filed as one line (`920-G3`), **nil for the

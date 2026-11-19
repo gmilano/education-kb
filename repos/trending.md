@@ -4,6 +4,86 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p928) — **The backlog this file has been recording for four passes is now measured to the bottom, and the right conclusion is to stop recording it.**
+
+### 🟢 What `p927` asked for, and what it cost
+
+`927-R1`: *"Until a pass shards these legs by star band or paginates them, no number in this file is
+a supply measurement — including 2,298."* `p928` sharded them. **25 legs → 223 shards → 588 API
+calls → 21,238 unique repositories**, against `p927`'s 35 single-page legs → 3,000. On the **20
+legs both passes ran unqualified**, `p927` retrieved **2,000 of 7,965** (**25.1%**) and `p928`
+retrieved **7,446** (**93.5%**).
+
+🟢 **The control that validates `p927`:** the re-measured population of those 20 legs is **7,965** —
+**identical to the `total_count` `p927` published**. Its counting was right; only its reach was
+capped.
+
+🔴 **Five legs are not comparable and are reported separately**, because `p927` ran them with a star
+floor and `p928` ran them bare: `topic:educational` (**7,504**), `topic:quiz` (**7,229**),
+`topic:flashcards` (**3,600**), `topic:homework` (**3,173**), `topic:moodle` (**2,390**). Mixing
+these into a like-for-like total would have inflated the multiplier, and this file says so rather
+than quoting the bigger number.
+
+### 🔴 The number that changes what this file is for
+
+| Filter | Rows |
+|---|---|
+| unheld against the base's **8,329** ever-named slugs | **20,203** |
+| permissive grant | 7,166 |
+| **and** live (pushed ≥ 2026-05-01, not archived) | 3,978 |
+| **and** AI signal | 1,737 |
+| **and** genuinely education-domain | **1,065** |
+| **of which 0–2 ★** | 🔴 **966 (90.7%)** |
+| **of which above 200 ★** | 🔴 **1 — and it is a homonym** |
+
+**The largest real education repository in 21,238 is `gnmyt/Quizzle` at 37 ★.**
+
+🔵 **`928-R1` — a trending file should record what is *rising*, and nothing in this channel is.**
+Four consecutive passes widened this channel — 97 unheld, then 601, then 2,298, then 20,203 — and
+across a **208-fold** increase in population the top of the star distribution **did not move**.
+That is not an under-explored backlog; it is the shape of the supply. **49.0% of the unheld rows
+carry no licence at all and 43.8% have zero stars.** The next pass should spend its budget on
+*depth* against known rows — dependency reproducibility, grant drift, payload addresses — not on
+another vocabulary.
+
+### 🔴 The residual floor, named in full
+
+Nine shards are still truncated, because a single star value cannot be split further and the API
+stops at 1,000 rows: `topic:quiz stars:0` (4,477 → 999), `topic:educational stars:0` (3,899 →
+1,000), `topic:homework stars:0` (2,111 → 999), `topic:flashcards stars:0` (1,995 → 1,000),
+`topic:educational stars:1` (1,445 → 1,000), `topic:quiz stars:1` (1,290 → 1,000),
+`topic:moodle stars:0` (1,280 → 1,000), `topic:student-management stars:0` (1,068 → 1,000),
+`topic:study-tools stars:0` (473 → 472). 🔴 **9,568 rows remain beyond reach — and every one of
+them is at zero or one star**, which is the band that has produced nothing shelf-grade. The floor
+is named and deliberately not chased.
+
+### 🟢 Repositories added to `repos/foundations.md` this pass
+
+| Repo | Grant (byte-read `p928`) | ★ | Why |
+|---|---|---|---|
+| https://github.com/online-ml/river | **BSD-3-Clause** | 6,151 | Per-interaction mastery estimation; the substrate `P56` is built on. **`T48` in its clearest form — infrastructure with no education word in its name.** |
+| https://github.com/cognitive-engineering-lab/mdbook-quiz | **`MIT OR Apache-2.0`** | 155 | In-material retrieval practice; `Tracing` question type. 🔴 Search channel flattens the disjunction — `T70`. |
+| https://github.com/mcgrizzz/Yomine | **`MIT OR Apache-2.0`** | 67 | Vocabulary mining that reads the learner's Anki collection to suppress known words. 🔴 Also flattened — `T70`. |
+| https://github.com/mistval/kotoba | **MIT** | 208 | Eight years of a learning tool living entirely on a chat surface (`T22`). |
+| https://github.com/david-04/quiz-mate | **ISC** | 60 | Self-hosted live quiz engine, no database. |
+| https://github.com/cmlonder/notebooklm-chunker | **MIT** | 21 | Heading-aware chunking — the step that decides whether a document-grounded tutor is coherent. |
+| https://github.com/14flavius/GradeShelf | **MIT** | 24 | Learner-owned gradebook for `P56` step 5. |
+| https://github.com/houselearning/home | **Apache-2.0** | 46 | Permissive game-shaped activities with a stated data model. 🔴 Firestore-bound backend. |
+
+### 🔵 A stratum this file can now put a number on
+
+**136** unheld, permissive, live repositories are **personal LMS client tools** — Canvas/Moodle
+syncers, CLIs, menu-bar companions, offline downloaders, MCP servers, course bots — and **127 of
+them have two stars or fewer**. That is `intel/trends.md` **`T30`** ("the LMS-to-agent bridge is
+built per institution, on the user's own credentials") measured rather than inferred: it is not a
+handful of examples, it is a whole stratum, and its uniform tininess is the point. 🔴 **No new
+*deployable* platform appeared anywhere in 21,238 repositories.** 212 rows matched a
+platform-grade description filter; the largest was **37 ★** and the rest were coursework. The
+vertical tier in `verticals/solutions.md` — Moodle, Open edX, Canvas, OpenEduCat, Frappe — is
+**closed**, and widening the channel nine-fold did not open it.
+
+---
+
 ## `2026-11-19` (p927) — **The topic index's floor moved from 601 to 2,298, and fifteen legs reported more than the page cap can return. This file has been recording a backlog it has never once measured to the bottom.**
 
 ### 🟢 What changed since `p926`

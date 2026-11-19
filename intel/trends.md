@@ -2671,6 +2671,52 @@ approved it, teacher-facing guidance at the point of use, and a reporting line a
 show an inspector. 🟢 That is `compose/patterns.md` **P8** (metering, attribution, exit) plus
 **P10** (teacher capacity) sold as one engagement, and `T67` is the sentence that opens it.
 
+## T68 — Open education supply is **large, permissive, live and atomised**: widening discovery 208-fold did not raise the ceiling (measured `p928`)
+
+Four consecutive passes widened the same discovery channel and each concluded the channel was
+under-explored. `p928` removed the last constraint — the 100-row page cap — by sharding every leg
+on the star axis until each shard fit in one page: **25 legs, 223 shards, 588 API calls, 21,238
+unique repositories**.
+
+| Pass | Unheld repositories returned | Largest *genuine education* repository found |
+|---|---|---|
+| `p925` | 97 | — |
+| `p926` | 601 | — |
+| `p927` | 2,298 (a declared floor) | — |
+| **`p928`** | 🟢 **20,203** | 🔴 **`gnmyt/Quizzle`, 37 ★** |
+
+**Population rose 208-fold. The ceiling did not move.** Of the 20,203 unheld rows, **1,065** are
+permissive, live, AI-signalled and genuinely education-domain — and **966 of them (90.7%) have two
+stars or fewer.** Exactly one exceeds 200 ★ and it is a **homonym** (a CTF exploitation tutorial).
+
+**What this means, and it is not what the preceding three passes implied.** The open education
+ecosystem is not a thin shelf with a large undiscovered reserve behind it. It is a **genuinely
+enormous, genuinely permissive, genuinely alive population of very small projects**, with a handful
+of large anchors (`DeepTutor`, `OpenMAIC`, `LearnHarness`) that this base found long ago through
+ordinary channels and that any search returns. 🔵 **The anchors are easy to find and the tail is
+not worth finding.** Discovery is a solved problem here; it stopped being the bottleneck somewhere
+around `p925` and four passes of instrument-building were needed to prove it.
+
+🔴 **Two measurements make the tail unusable as *supply*, as opposed to evidence.** **49.0%** of the
+unheld rows carry **no licence at all**, and **43.8%** have **zero stars** — no users, no issues, no
+second contributor. `T23` said education's permissive supply is real but unaddressable; at nine
+times the scale that is now the dominant property of the population rather than a caveat on it.
+
+**What it implies for a studio.** 🟢 **Do not budget discovery time on an education engagement.**
+The deployable open tier is small, known, and listed in `repos/foundations.md` and
+`verticals/solutions.md`; it is reachable with four or five ordinary queries. Budget instead for
+the three things this base has repeatedly measured as the real costs: **licence adjudication**
+(`T19`, `T24`, `T27`, `T53`, `T70`), **dependency reproducibility** (`T28` — the top of the shelf is
+unpinnable), and **the content/curriculum assets**, whose grants live somewhere other than the code
+repository (`T25`, `T26`, `927-G1`). 🔵 A 0-star MIT repository with a working idea is **a design
+reference you read in an afternoon**, not a dependency you adopt — and pricing it as the latter is
+the mistake this trend exists to prevent.
+
+🟡 **The honest residual.** Nine shards remain truncated at the 1,000-row API ceiling — **9,568
+rows** — because a single star value cannot be subdivided. Every one of them sits at **zero or one
+star**. The floor is named, and on the evidence above it is deliberately not chased.
+
+
 ## T69 — This base's two most expensive error classes are both produced by the *instrument*, and both are silent (added `p928`)
 
 `p926` found the first: a batched `repo:`-qualified search **drops a missing row without reporting
