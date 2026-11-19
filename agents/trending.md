@@ -4,6 +4,136 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p921) — **This base published *"at the agent tier in Arabic, Persian, Hebrew and Turkish there is nothing to adopt"* and left it there. At the substrate tier Turkish has a 1,379 ★ Apache-2.0 stack pushed two days ago, and the search channel reports its licence as `NOASSERTION`. 🔴 Indonesian and Indic, measured for the first time at this layer, are dead — and the ten tiers now measured fall into a rule that is not about market size.**
+
+🔵 **Summary.** The 8 mandated WebSearch legs (filed as one line below, per `920-G3`), 4
+language-substrate discovery legs, **16 repositories byte-read** for their grant with the two
+instrument fixes `p920` declared, **three gaps discharged** (`920-G1`, `920-G2`, `920-G4`), one
+further instrument defect found *by running this pass's own fix at scale*, one published
+generalisation corrected, and one channel recorded as lost.
+
+### 🔴 `921-F3` — the correction that matters most this pass, and it is to a sentence this base wrote itself
+
+`repos/foundations.md` has carried, since `p903`: *"at the agent tier in Arabic, Persian, Hebrew and
+Turkish **there is nothing to adopt**."* The clause is true **and the file reasons from it as though
+it were the whole verdict** — the paragraph's advice is *adopt the corpus, build everything else.*
+
+At the **substrate** layer that is wrong, and wrong in the direction that loses billable scope:
+
+| Repo | Lang | ★ | Grant — **byte-read `p921`** | Search channel says | Pushed |
+|---|---|---|---|---|---|
+| [`ahmetaa/zemberek-nlp`](https://github.com/ahmetaa/zemberek-nlp) | TR | **1,379** | 🟢 **Apache-2.0** — 572 B, `sha256₁₂ c55ac4a942b0` | 🔴 **`NOASSERTION`** | **2026-11-17** |
+| [`CAMeL-Lab/camel_tools`](https://github.com/CAMeL-Lab/camel_tools) | AR | 594 | 🟢 MIT — 1,087 B, `sha256₁₂ 7a3ef160e895` | MIT | 2026-10-14 |
+
+🔴 **`zemberek-nlp` is larger than every Arabic, Persian, Hebrew or Turkish education artefact this
+base has ever measured** — `p903`'s channel topped out at 2,432 ★ for an *idle corpus* and **6 ★**
+for an agent — and it was invisible for the same reason `HanLP` was invisible for 919 passes
+(`920-F4`): every prior leg in these languages asked for *education*. 🔵 The 572 B payload is the
+Apache **notice**, not the licence body; the family and version are unambiguous in its first line,
+which is why `NOASSERTION` is the search channel's defect and not a real ambiguity. `906-G1`'s
+class, third instance, on the largest member of a tier again.
+
+### 🟢 `921-F5` — `920-G4` discharged: Indonesian fails at the substrate layer, and the nearest miss is **two days**
+
+`920-G4` predicted a lower yield for Indonesian than APAC's, because the no-whitespace precondition
+that makes `PyThaiNLP` load-bearing does not hold. The prediction was right and the measurement is
+sharper than the prediction ([record](../evidence/substrate-918R1-grading.2026-11-19-p921.tsv)):
+
+| Repo | ★ | Grant (byte-read) | Pushed | Idle | `918-R1` |
+|---|---|---|---|---|---|
+| [`IndoNLP/indonlu`](https://github.com/IndoNLP/indonlu) | 659 | 🟢 Apache-2.0, 11,131 B | 2024-11-16 | **733 d** | 🔴 FAIL |
+| [`sastrawi/sastrawi`](https://github.com/sastrawi/sastrawi) | 443 | 🟢 MIT, 1,079 B | 2022-09-06 | 1,535 d | 🔴 FAIL |
+| [`har07/PySastrawi`](https://github.com/har07/PySastrawi) | 366 | 🟢 MIT, 1,084 B | 2026-05-21 | **182 d** | 🔴 FAIL — **by two days** |
+| [`Wikidepia/indonesian_datasets`](https://github.com/Wikidepia/indonesian_datasets) | 131 | 🔴 **no licence file on any of 25 probed paths** | 2026-04-25 | 208 d | 🔴 FAIL |
+| [`IndoNLP/nusax`](https://github.com/IndoNLP/nusax) | 119 | 🟢 Apache-2.0, 11,357 B | 2023-05-08 | 1,291 d | 🔴 FAIL |
+
+🟡 **The two-day miss is recorded deliberately, and it does not change the verdict.** `918-R1` is a
+threshold and a threshold that is renegotiated when a row lands near it is not a threshold.
+**PySastrawi is the row to re-probe first next pass**: one push moves the Indonesian tier from
+`NOT DELIVERABLE` to `DELIVERABLE`, and nothing else in the tier is within a year.
+
+### 🔴 `921-F6` — Indic measured for the first time at this layer, and the 641 ★ national catalogue is ungranted
+
+India is the largest education market this base tracks and it had **no substrate-layer verdict at
+all**. It has one now, and every member fails:
+
+| Repo | ★ | Grant (byte-read) | Pushed | Idle |
+|---|---|---|---|---|
+| [`goru001/inltk`](https://github.com/goru001/inltk) | 838 | 🟢 MIT, 1,062 B | 2024-01-20 | 1,034 d |
+| [`anoopkunchukuttan/indic_nlp_library`](https://github.com/anoopkunchukuttan/indic_nlp_library) | 654 | 🟢 MIT, 1,082 B | 2024-06-07 | 895 d |
+| [`AI4Bharat/indicnlp_catalog`](https://github.com/AI4Bharat/indicnlp_catalog) | 641 | 🔴 **no licence file on any of 25 probed paths** | 2024-12-14 | 705 d |
+| [`AI4Bharat/IndicTrans2`](https://github.com/AI4Bharat/IndicTrans2) | 497 | 🟢 MIT, 1,128 B | 2025-10-03 | 412 d |
+
+🔴 **`indicnlp_catalog` is the index the Indian NLP field points newcomers at, it is 641 ★, and it
+carries no grant** — `T25`'s class on a *catalogue*, which is the asset a localisation engagement
+would most naturally copy from.
+
+### 🟢 `921-R1` — ten tiers measured, and the rule is not population, not GDP and not market size
+
+Pooling `p919`'s Thai leg, `p920`'s four APAC legs and this pass's five
+([grading](../evidence/substrate-918R1-grading.2026-11-19-p921.tsv)):
+
+| 🟢 Substrate **DELIVERABLE** | 🔴 Substrate **NOT DELIVERABLE** |
+|---|---|
+| ZH, JA, TH, VI (`p920`/`p919`) · KO · **TR**, **AR** (`p921`) | **ID**, **HI/Indic** (`p921`) · PT (passes only on a 106 ★ LGPL-3.0 verb conjugator) |
+
+🔵 **The rule: a vernacular substrate stays alive exactly where the text cannot be turned into
+model-ready tokens with whitespace and a regex.** Chinese, Japanese and Thai have no word spacing;
+Vietnamese spaces syllables, not words; Korean, Turkish and Arabic are agglutinative or clitic-heavy
+enough that surface forms explode. Indonesian, Hindi and Portuguese tokenise on whitespace — and
+their stacks have been **absorbed by multilingual models and left to go idle**, at 200 M, 600 M and
+260 M speakers respectively. 🔵 **The rule even predicts the shape of the survivor**: the one
+Portuguese library still maintained ([`verbecc`](https://github.com/bretttolbert/verbecc), 106 ★,
+pushed 2026-11-08) does **verb conjugation** — the single part of Portuguese a regex cannot do.
+
+🔴 **What this changes for a delivery team.** For an Indonesian, Hindi or Brazilian-Portuguese
+engagement, *there is no maintained vernacular substrate to adopt* — the budget line is a
+multilingual model plus your own evaluation set and glossary, and a plan that assumes otherwise is
+costed on a library that has not moved in two years. For ZH/JA/TH/VI/KO/TR/AR, adopt the named stack.
+See `compose/patterns.md` **P43**/**P44** and `intel/trends.md` **T55**.
+
+### 🟢 `921-F1` / `921-F2` / `921-F4` — the three instrument findings, in the order they were found
+
+- 🟢 **`920-G2` discharged.** `konlpy/konlpy` (722 B, `sha256₁₂ a66980ac3c64`) now reads
+  **`GPL-3.0-or-later`**, not a bare `GPL`. Notice-style payloads under 1,500 B fall through to a
+  version regex over the prose.
+- 🟢 **`920-G1` discharged — and the remedy it prescribed is not available here.** It asked for a
+  `LICENSE.*` **glob**; a glob needs a directory listing, and `gh api repos/<owner>/<repo>/contents`
+  returns **403 "not enabled for this session"** for any repository not attached (measured on
+  `polm/unidic-lite`). `raw.githubusercontent.com` serves an exact path and cannot enumerate. The
+  glob is therefore a **26-name probe list**, and the residual blind spot is declared as `921-G2`
+  rather than hidden. Fixture reproduces exactly: `polm/unidic-lite` → `LICENSE` 1,051 B **MIT**
+  (packaging code) *and* `LICENSE.unidic` 1,515 B **BSD, © The UniDic Consortium** (the dictionary
+  you install), `sha256₁₂ d2cfdec25d7a` — **the same hash `p920` recorded by hand**, now generated.
+  False-positive control at scale: 16 repositories probed this pass, **zero spurious sibling rows**.
+- 🔴 **`921-F4` — and running that fix over 16 repositories found the defect it was derived from was
+  stated too narrowly.** `bretttolbert/verbecc` byte-reads 7,652 B whose title block is *"GNU LESSER
+  GENERAL PUBLIC LICENSE / Version 3, 29 June 2007"* — the version is on the second line of the block
+  the grader already reads — and the primary rule still returned a bare **`LGPL`**. `920-G2` was
+  written as if the defect belonged to short payloads; it belongs to the grader, which extracts a
+  family and never a version. Fixed at **every** size, with `vngrs-ai/vnlp` (34,523 B stock AGPL-3.0)
+  as the control. 🔵 What is deliberately *not* claimed: a full licence text yields `LGPL-3.0` and
+  never `-or-later`, because the *or later* election lives in the program's own notice.
+
+### 🔵 `921-F8` — the mandated legs, filed as one line per `920-G3`
+
+All 8 run. **28 named facts probed mechanically against the live shelf: 26 already present, 2 new**
+([probe](../evidence/websearch-exhaustion-probe.2026-11-19-p921.tsv)) — Futuresource's *67% of
+teachers now using AI tools* (EMEA) and Arizton's *APAC holds >45% of the global EdTech market*,
+both filed to `intel/market.md` and both secondary-sourced. **Zero repositories.** Fortieth
+consecutive nil at the top of the English-language shelf; the four substrate legs returned
+**16 repositories, 16 unseen**.
+
+### 🔴 `921-F9` — a channel lost, recorded so a later pass does not re-spend
+
+`huggingface.co` **fails DNS in this session** (`ENOTFOUND`), the same failure class as `920-G5`'s
+`eur-lex.europa.eu`. 🔵 This matters more than a missing citation: the plausible explanation for
+`921-F6`'s idle Indic GitHub tier is that **AI4Bharat's current artefacts are model weights on a
+model hub, not code in a repository** — and that explanation **cannot be tested from this session**.
+It is registered as `921-G1` and is **not** published as a trend, because an untestable mechanism is
+a hypothesis.
+
+
 ## `2026-11-19` (p920) — **`919-G5` and `919-G6` are both discharged, and together they settle what the vernacular tiers actually are: empty at the agent layer in all six languages measured, deliverable at the substrate layer in four of them. 🔴 Mexico's largest education repository is **2 ★**. And `919-G3`'s prescribed remedy was built, run, and is insufficient as written — a cell saying `NOT MIT` and a cell saying `MIT` carry the same token set.**
 
 🔵 **Summary.** The eight mandated WebSearch legs, four Spanish-language Mexico supply legs, four

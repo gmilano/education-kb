@@ -1,0 +1,18 @@
+repo	branch	path	http	bytes	sha256_12	families	verdict	note
+IndoNLP/indonlu	master	LICENSE	200	11131	bd9d250c0f04	Apache-2.0	Apache-2.0	
+IndoNLP/nusax	main	LICENSE	200	11357	c71d239df917	Apache-2.0	Apache-2.0	
+Wikidepia/indonesian_datasets	-	-	404	0	-	none	NO-LICENCE-FILE-FOUND	searched 25 names over 3 branches
+sastrawi/sastrawi	master	LICENSE	200	1079	a8c5c885dde7	MIT	MIT	
+har07/PySastrawi	master	LICENSE	200	1084	35e398410198	MIT	MIT	
+goru001/inltk	master	LICENSE	200	1062	2c25f314fd11	MIT	MIT	
+anoopkunchukuttan/indic_nlp_library	master	LICENSE	200	1082	021fdfaed932	MIT	MIT	
+AI4Bharat/indicnlp_catalog	-	-	404	0	-	none	NO-LICENCE-FILE-FOUND	searched 25 names over 3 branches
+AI4Bharat/IndicTrans2	main	LICENSE	200	1128	383258420065	MIT	MIT	
+ahmetaa/zemberek-nlp	master	LICENSE	200	572	c55ac4a942b0	Apache-2.0	Apache-2.0	
+vngrs-ai/vnlp	main	LICENSE	200	34523	8486a10c4393	AGPL-3.0	AGPL-3.0	
+otuncelli/turkish-stemmer-python	master	LICENSE.txt	200	11344	511c590688e4	Apache-2.0	Apache-2.0	
+CAMeL-Lab/camel_tools	master	LICENSE	200	1087	7a3ef160e895	MIT	MIT	
+ARBML/ARBML	master	LICENSE	200	1070	3e1b130d17e7	MIT	MIT	
+Nkluge-correa/Tucano	main	LICENSE	200	10773	9996e362b890	Apache-2.0	Apache-2.0	
+bretttolbert/verbecc	main	LICENSE.txt	200	7652	e3a994d82e64	LGPL-3.0	LGPL-3.0	version read from the title block (921-F4); the "or later" election is NOT in the licence text — read the program's own notice
+ajdavidl/Portuguese-NLP	-	-	404	0	-	none	NO-LICENCE-FILE-FOUND	searched 25 names over 3 branches

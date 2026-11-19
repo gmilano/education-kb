@@ -4,6 +4,45 @@ region: Global
 updated: 2026-11-19
 ---
 
+## 🆕 `p921` · 2026-11-19 — **Three of `p920`'s gaps discharged, one of them by building the instrument it asked for and then finding that the gap was stated too narrowly. 🔴 The pass's largest yield was a correction to a sentence this base published itself: "there is nothing to adopt" was a verdict with no layer named, and at the layer it did not name there is a 1,379 ★ Apache-2.0 stack.**
+
+🔵 **Summary.** 8 mandated WebSearch legs filed as one line (`920-G3`), 4 language-substrate
+discovery legs, **17 repositories byte-read** across two generated evidence records, **three
+instrument fixes** in `ingest/p913-grant-authority.sh` with offline fixtures and controls, one
+published generalisation corrected by address across two files, two trends, two compose patterns.
+🔴 28 named facts from the mandated legs probed mechanically: **26 of 28 already present**.
+
+| Gap | Status | Evidence |
+|---|---|---|
+| **`920-G1`** — the grant authority cannot see a `LICENSE.<asset>` sibling | 🟢 **DISCHARGED — and the prescribed remedy does not exist in this environment** | A `LICENSE.*` **glob** needs a directory listing; `gh api repos/<o>/<r>/contents` returns **403 "not enabled for this session"** for unattached repos and `raw.githubusercontent.com` cannot enumerate. Replaced by a **26-name probe list** reporting **every** match. `polm/unidic-lite` → `LICENSE` 1,051 B MIT **and** `LICENSE.unidic` 1,515 B BSD © The UniDic Consortium, `sha256₁₂ d2cfdec25d7a` — the hash `p920` recorded by hand, now generated. **16 repositories probed, 0 spurious sibling rows.** Residual blind spot declared as `921-G2`. `921-F2` |
+| **`920-G2`** — a notice-style payload yields a family and no version | 🟢 **DISCHARGED** | `konlpy/konlpy` (722 B, `sha256₁₂ a66980ac3c64`) now reads **`GPL-3.0-or-later`**. `921-F1` |
+| 🔴 **`920-G4`** — Indonesia's substrate layer is unmeasured | 🟢 **DISCHARGED, and the predicted low yield is a nil** | Five candidates byte-read, **all five fail `918-R1`**; leader **733 days idle**; nearest miss `har07/PySastrawi` at **182 days — two days outside**. `921-F5` · [grading](../evidence/substrate-918R1-grading.2026-11-19-p921.tsv) |
+| **`920-G3`** — the mandated English legs are exhausted; file a nil in one line | 🟢 **APPLIED, and it held** | 28 facts probed, **26 present, 2 new** (both analyst market figures, both marked secondary). **Zero repositories — fortieth consecutive nil.** The four substrate legs returned **16 repositories, 16 unseen**. `921-F8` · [probe](../evidence/websearch-exhaustion-probe.2026-11-19-p921.tsv) |
+| **`920-G5`** (= `919-G1`, `918-G1`) — no primary legal text | 🔴 **RE-DECLARED UNCHANGED, eleventh pass** | Not re-tested; the failure is DNS. 🔵 **A second host joins it this pass:** `huggingface.co` fails the same way — see `921-G1` |
+| **`920-G6`** (p913 propagation), **`920-G7`** (`919-G2` ledger re-cut, `919-G4`, `919-G10`, `918-G3`) | 🔴 **NOT REACHED** | Carried forward unchanged. 🔵 `919-G2` — the 216-address residue queue — remains the largest known, costed, network-free unit of work on this base's books, now **three passes** unreached |
+
+### Gaps declared in `p921`
+
+| Gap | Remedy | Cost |
+|---|---|---|
+| 🔴 **`921-G1`** — **the model-hub channel is unreachable, and it is the competing explanation for this pass's headline finding.** `huggingface.co` fails DNS (`ENOTFOUND`). The plausible reading of an idle `AI4Bharat` GitHub tier is that the artefacts moved to model weights on a hub; **this session cannot test that**, so `T55` publishes the measurement and explicitly withholds the mechanism | One pass from a session whose network policy resolves `huggingface.co`. 🔴 Do not spend a leg on another HTTP client — this is the `915-F2` DNS class, now on a fifth host | a network-policy change; zero in-session effort |
+| **`921-G2`** — the asset-sibling probe is a **named list, not a glob**: a sibling called `LICENSE.anything-else` is still invisible | Either (a) a listing channel — any repository attached to the session can be listed, so a periodic audit over attached repos would measure the list's recall; or (b) harvest sibling filenames from the repos already shelved and extend `SIBLINGS`. 🔵 Note what cannot be done: recall cannot be estimated from repos that pass, only from repos known to have siblings | one audit; low network |
+| 🔴 **`921-G3`** — **`918-R1` grades a tier by its top passing member and has no role test**, so a tier whose only live member is the wrong *kind* of artefact grades `DELIVERABLE`. Measured fixture: Portuguese passes on `bretttolbert/verbecc` — a 106 ★ LGPL-3.0 verb conjugator for five Romance languages, which is not a Portuguese stack and is not permissive | Add a role predicate to `918-R1`: the passing member must be the tier's *general* artefact, not an adjacent single-purpose one, and a copyleft pass must be reported as `DELIVERABLE — COPYLEFT`. Fixtures ready: PT (fails the new test), TR and AR (pass it) | one rule change, no network |
+| **`921-G4`** — **the agent layer in Turkish and Arabic rests on `p903`**, which measured four languages in one leg and is 18 passes old; this pass changed the substrate verdict in those languages and did **not** re-measure the agent layer | Re-run the agent leg for TR and AR in the `919-F5`/`920-F7` shape — national curriculum programme and teacher-facing artefact (`müfredat`, `kazanım`; `منهج`, `خطة الدرس`), not topic words | 2–4 legs |
+| 🔵 **`921-G6`** — **`920-R1`'s binding adjudication rule was unrunnable as written**: the gate's own default list sweeps the two append-only logs, returning **206 subjects of which 205 involve a log** against **4** on the delivery shelves | 🟢 **Already fixed this pass** (default list = the three delivery files; control re-run, still fires). The gap that remains is the *rule*: `920-R1` says "adjudicate every SET-arm hit" and does not say against which surface — **a binding rule must name its input set**, or the next instrument inherits the same ambiguity | done; rule wording outstanding |
+| **`921-G5`** — **`921-R1` is derived from ten tiers chosen by this base's own history, not sampled.** The tokenisation rule fits 10/10, which is also what a rule fitted to its own evidence does | Test it on tiers it has never seen, choosing them **by the predicted mechanism**: Khmer and Lao (no word spacing → predict maintained), Finnish and Hungarian (agglutinative → predict maintained), Swahili and Tagalog (whitespace, moderate morphology → predict idle). A single falsification is worth more than five confirmations | 3–6 legs |
+
+### 🟡 One defect of my own, and it is the same class `p920` recorded
+
+`921-F4` — the residual version-dropping defect in the grant authority — **was found by running
+this pass's own fix over 16 repositories, not by reading the specification.** `920-G2` had framed
+the defect as a property of *notice-style* payloads; it is a property of the **grader**, which
+extracts a family and never a version at any size, and a 7,652 B full LGPL text carrying
+*"Version 3, 29 June 2007"* on the second line of the title block was being published as a bare
+`LGPL`. 🔵 The transferable rule, which costs nothing: **a fix derived from one fixture is run over
+the whole cohort before it is believed** — the cohort is where the specification's framing fails.
+
+
 ## 🆕 `p920` · 2026-11-19 — **Four of `p919`'s gaps discharged, and one of them by refuting the remedy rather than the gap: `919-G3` specified a token-set comparison, it was built, and it cannot see the defect it was specified against. 🔴 The sweep's real yield was two live licence cells wrong for seven passes, both from the mechanism `p899` already demonstrated.**
 
 🔵 **Summary.** 8 mandated WebSearch legs, 4 Spanish-language Mexico supply legs, 4

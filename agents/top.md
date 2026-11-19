@@ -29,6 +29,18 @@ curriculum graph, correct for the asset and a trap for anyone who reads the repo
 `master/README.rst`.** That is `p900`'s false-absence class landing on the AGPL anchor of the
 whole LMS tier; the two-channel rule caught it. See `agents/trending.md` `901-F3`.
 
+**Latest sweep — `p921` (2026-11-19).** 🔴 **No remeasure of this file's rows this pass, and no
+new agent rows — because the agent layer returned nothing again and the substrate layer returned
+everything.** The four discovery legs were Turkish, Arabic, Indonesian and Indic *language
+substrate*, not education agents: **16 repositories byte-read, 16 this base had never held**, against
+the eight mandated English legs' **zero** (fortieth consecutive nil). 🟢 The result corrects a
+sentence this file's companion shelf has carried since `p903` — *"at the agent tier in Arabic,
+Persian, Hebrew and Turkish there is nothing to adopt"* — which is true **at the agent tier** and was
+being read as the whole verdict: `ahmetaa/zemberek-nlp` is **1,379 ★, Apache-2.0 (byte-read; the
+search channel says `NOASSERTION`), pushed 2026-11-17**. 🔵 **The operative rule for this file:
+a tier verdict that does not name its layer is not a verdict** — see `agents/trending.md` `921-F3`
+and `921-R1`.
+
 **Latest sweep — `p919` (2026-11-19).** 🔴 **No full remeasure this pass — deliberately.** The `p918` sweep is hours old and `p894`'s cadence note stands: the largest intra-day move across ~30 tracked repos was +21 stars on a 60,000-star repo. Spot check only: `HKUDS/DeepTutor` **60,684** `Apache-2.0` (p918: 60,675). The budget went to `918-G7` instead, and it returned **14 repositories this base had never seen** against the global English leg's **zero** — the 39th consecutive nil at the top of the English-language shelf. New tier below: **Indonesia and Thailand**.
 
 **Previous sweep — `p918` (2026-11-19).** 21 of 22 anchor rows re-resolved on `search`

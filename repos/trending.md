@@ -4,6 +4,81 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p921) — **A 1,379 ★ Apache-2.0 Turkish language stack, pushed two days ago, that this base's own published verdict said did not exist. 🔴 And the licence channel got it wrong on the tier's largest member for the third time.**
+
+### 🔴 `921-R1` — what `918-R1` grades when you run it over ten language tiers instead of one
+
+Generated, not typed ([grading record](../evidence/substrate-918R1-grading.2026-11-19-p921.tsv);
+[grants](../evidence/vernacular-substrate-layer.2026-11-19-p921.tsv)). Every grant byte-read this
+pass with the `921-F1`/`921-F2`/`921-F4` authority:
+
+| Tier | Top member | ★ | Grant (byte-read) | Pushed | Idle | Verdict |
+|---|---|---|---|---|---|---|
+| **TR** | `ahmetaa/zemberek-nlp` | **1,379** | 🟢 Apache-2.0 | 2026-11-17 | 2 d | 🟢 **DELIVERABLE** |
+| **AR** | `CAMeL-Lab/camel_tools` | 594 | 🟢 MIT | 2026-10-14 | 36 d | 🟢 **DELIVERABLE** |
+| **ID** | `IndoNLP/indonlu` | 659 | 🟢 Apache-2.0 | 2024-11-16 | 733 d | 🔴 **NOT DELIVERABLE** |
+| **HI/Indic** | `goru001/inltk` | 838 | 🟢 MIT | 2024-01-20 | 1,034 d | 🔴 **NOT DELIVERABLE** |
+| **PT** | `bretttolbert/verbecc` | 106 | 🟡 LGPL-3.0 | 2026-11-08 | 11 d | 🟡 passes the letter, fails the use |
+
+🔵 **PT is the row to read carefully.** It passes `918-R1` — ≥ 50 ★, a real grant, pushed 11 days
+ago — and it is a **verb conjugator for five Romance languages under LGPL-3.0**, not a Portuguese
+stack. The larger Portuguese entries are a **375 ★ curated list with no licence** (`ajdavidl/Portuguese-NLP`)
+and an **Apache-2.0 LLM idle 268 days** (`Nkluge-correa/Tucano`). 🔴 **A rule that grades a tier by
+its top passing member will call this tier solved.** It is not; `918-R1` needs a role test as well
+as a liveness test, declared as `921-G3`.
+
+### 🔴 `921-R2` — the search channel's licence field, wrong again, on the biggest repo in the tier
+
+Third measured instance of `906-G1`: `ahmetaa/zemberek-nlp` reports **`NOASSERTION`** on
+`search/repositories` and byte-reads as an unambiguous **Apache-2.0** notice (572 B,
+`sha256₁₂ c55ac4a942b0`, *"Licensed under the Apache License, Version 2.0"* on its third line).
+🔵 **The pattern across all three instances is the same and is worth stating as a rule:** the field
+is unreliable *specifically* on repositories whose grant is a **notice or a pointer rather than a
+full licence body** — `OpenPronounce` (`p913`), `pawtograder/platform` (`p899`, 658 B GPL notice,
+`NOASSERTION`), `zemberek-nlp` (`p921`, 572 B Apache notice, `NOASSERTION`). 🟢 **Operative rule:
+a short licence payload is exactly where the index stops being evidence** — and short payloads are
+disproportionately common outside the US/English shelf, which is where this base now spends its
+discovery budget.
+
+### 🟢 `921-R3` — two ungranted repositories at 641 ★ and 131 ★, both of them indexes of other people's work
+
+`AI4Bharat/indicnlp_catalog` (641 ★) and `Wikidepia/indonesian_datasets` (131 ★) carry **no licence
+file on any of the 25 names the authority probes, on any branch**. Both are *catalogues of datasets*
+— the artefact a localisation engagement copies from first and the artefact least likely to carry a
+grant. 🔵 Treat an unlicensed catalogue as a **reading list, not a source**: its rows may each be
+licensed, the catalogue's own selection and schema are not.
+
+### 🔴 `921-R5` — `920-R1`'s gate was run as specified and it is a 2%-precision noise generator, because two of its five input files are append-only logs
+
+`920-R1` binds this base to adjudicate every SET-arm hit from `ingest/p920-cell-divergence.py`
+against a fresh byte-read. Run this pass **at its own default invocation**, it returns:
+
+| Input list | Rows with a licence cell | Diverging subjects | Involving a trending log |
+|---|---|---|---|
+| default (5 files) | 4,169 | **206** | **205 of 206** |
+| delivery shelves only (3 files) | 463 | **4** | — |
+
+🔴 **The two trending logs are append-only by design**: a log records the superseded cell next to
+the pass that superseded it, so a log cell is *supposed* to disagree with the live shelf. Sweeping
+them makes 202 of 206 subjects the instrument comparing a delivery cell against its own history and
+calling it a defect — `919-G0`'s class on the instrument `919-G3` asked for, two passes after it
+was built. 🟢 **Fixed in the script's default list**, with the measurement committed in its header
+and the offline control re-run (`--selftest` still exits 0 and the PrairieLearn fixture still
+fires). A log can still be swept by naming it on the command line.
+
+🟢 **And the adjudication `920-R1` actually requires, now that it is readable:** the four surviving
+subjects — `PrairieLearn`, `apereo/java-cas-client`, `jitsi/jitsi-meet`, `nbgallery/nbgallery` — are
+**all `SEQUENCE`-arm hits whose SET values are identical**, which `920-R1` binds as measurements and
+never failures. **The SET arm is clean: `p921` introduced no divergent licence cell.**
+
+### 🔵 `921-R4` — two instrument fixes landed and one more found by running them
+
+`920-G1` and `920-G2` are discharged in `ingest/p913-grant-authority.sh` (asset-sibling probe,
+notice-style version recovery), and running them over 16 repositories surfaced a **third** defect of
+the same class — a full GNU text whose version the grader was dropping. Full account:
+`agents/trending.md` `921-F1`, `921-F2`, `921-F4`.
+
+
 ## `2026-11-19` (p920) — **`919-R1` stops being a refinement and becomes the rule: six vernacular tiers measured, zero deliverable agents, four deliverable substrates. 🔴 And a second rule this base has to adopt about itself — a cell-divergence sweep needs polarity, because `NOT MIT` and `MIT` are the same bag of tokens.**
 
 ### 🟢 `920-R1` — the cell-divergence sweep has two arms, and only one of them is a gate

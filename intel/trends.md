@@ -6,7 +6,7 @@ updated: 2026-11-19
 
 # Current trends — education
 
-**Fifty-four trends, re-counted mechanically in `p920`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **54**; `T53`–`T54` added in `p920`, and the command was run after writing them and before writing this number. 🟢 Two passes running that the rule has held. *(prior banner:* **Fifty-two trends, re-counted mechanically in `p919`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **52**; `T51`–`T52` added in `p919`, and the command was run after writing them and before writing this number. `T50` was added in `p918` without this banner being re-run, which is the drift this sentence exists to catch — caught one pass later this time.)*) (*prior banner:* **Forty-nine trends, re-counted mechanically in `p917`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **49**; `T48`–`T49` added in `p917`, and the command was run before the word was written, not after). (*prior banner:* **Forty-seven trends, re-counted mechanically in `p916`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **47**; `T44`–`T47` added in `p916`. 🔵 The rule this line has now carried through four passes finally held: `p916` ran the command rather than editing the word.).) (*prior banner:* **Forty-three trends, re-counted mechanically in `p915`** (🔴 **this line read *"Thirty-nine"* and was four short — `T40`–`T42` were added in `p914` and `T43` in `p915`, and `p914` incremented nothing. That is the *third* consecutive recurrence of the drift this very sentence was written to stop, which makes the rule worth restating as a procedure rather than a warning: 🔵 the count is `grep -cE '^## T[0-9]+' intel/trends.md`, it is **43**, and a pass that adds a trend re-runs that command instead of editing the word.*)* (🔴 this line read *"Thirty-one"* and was **eight short**: `T32`–`T38` were added in `p908`–`p912` and `T39` in `p913`. `compose/patterns.md` carries the rule — *a pass that adds one should re-count, not increment* — and this file drifted the same way and further. 🔵 The count is `grep -cE '^## T[0-9]+' intel/trends.md`; **do not hand-edit it.** `T37` is **materially corrected in `p913`** and `T38` has a second chapter added in `p913`.) (**T30 and T31 added in `p907`** — the LMS-to-agent bridge being built per-institution on the *user's own credentials*, which needs no institutional consent; and the agent-skill marketplaces having no education tier at all, which makes `T26`'s distribution channel measurably empty. Both are the first trends in this file derived from **global code search**, an instrument this base had recorded as unusable; **T29 added in `p906`** — vernacular open education supply measured across eight languages and found to be a single-country phenomenon, with *no licence at all* the default state in the other seven; **T26 added in `p903`** — the unit of publication shifting from the
+**Fifty-six trends, re-counted mechanically in `p921`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **56**; `T55`–`T56` added in `p921`, command run after writing them and before writing this number — 🟢 three passes running that the rule has held. *(prior banner:* **Fifty-four trends, re-counted mechanically in `p920`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **54**; `T53`–`T54` added in `p920`, and the command was run after writing them and before writing this number. 🟢 Two passes running that the rule has held.*)* *(prior banner:* **Fifty-two trends, re-counted mechanically in `p919`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **52**; `T51`–`T52` added in `p919`, and the command was run after writing them and before writing this number. `T50` was added in `p918` without this banner being re-run, which is the drift this sentence exists to catch — caught one pass later this time.)*) (*prior banner:* **Forty-nine trends, re-counted mechanically in `p917`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **49**; `T48`–`T49` added in `p917`, and the command was run before the word was written, not after). (*prior banner:* **Forty-seven trends, re-counted mechanically in `p916`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **47**; `T44`–`T47` added in `p916`. 🔵 The rule this line has now carried through four passes finally held: `p916` ran the command rather than editing the word.).) (*prior banner:* **Forty-three trends, re-counted mechanically in `p915`** (🔴 **this line read *"Thirty-nine"* and was four short — `T40`–`T42` were added in `p914` and `T43` in `p915`, and `p914` incremented nothing. That is the *third* consecutive recurrence of the drift this very sentence was written to stop, which makes the rule worth restating as a procedure rather than a warning: 🔵 the count is `grep -cE '^## T[0-9]+' intel/trends.md`, it is **43**, and a pass that adds a trend re-runs that command instead of editing the word.*)* (🔴 this line read *"Thirty-one"* and was **eight short**: `T32`–`T38` were added in `p908`–`p912` and `T39` in `p913`. `compose/patterns.md` carries the rule — *a pass that adds one should re-count, not increment* — and this file drifted the same way and further. 🔵 The count is `grep -cE '^## T[0-9]+' intel/trends.md`; **do not hand-edit it.** `T37` is **materially corrected in `p913`** and `T38` has a second chapter added in `p913`.) (**T30 and T31 added in `p907`** — the LMS-to-agent bridge being built per-institution on the *user's own credentials*, which needs no institutional consent; and the agent-skill marketplaces having no education tier at all, which makes `T26`'s distribution channel measurably empty. Both are the first trends in this file derived from **global code search**, an instrument this base had recorded as unusable; **T29 added in `p906`** — vernacular open education supply measured across eight languages and found to be a single-country phenomenon, with *no licence at all* the default state in the other seven; **T26 added in `p903`** — the unit of publication shifting from the
 application to the agent-addressable curriculum corpus, the first trend in this file derived from a
 non-English repository channel; **T25 added in `p902`** — the licence trap moving from code to the data
 and content assets, where no index can see it; **T24 added in `p901`** — path-dependent licences, the first trend in this file derived from repositories the SPDX channel refused to resolve at all; **T23 added in `p900`** — the first trend in this file derived from a
@@ -2248,3 +2248,49 @@ vocabulary**, and the vocabulary is already written down for free in the very re
 the deliverability test. 🟡 The honest caveat, carried from `T50`: vernacular querying is a recall
 instrument. A tier reading zero means *this base found nothing*, and for Thailand that nil has now
 reproduced twice while Indonesia's collapsed on the first reshaped query.
+
+## T55 — The vernacular NLP substrate survives exactly where tokenisation is hard, and dies where it is easy — regardless of how many people speak the language (added `p921`)
+
+Ten language tiers have now been graded at the substrate layer against `918-R1`
+([record](../evidence/substrate-918R1-grading.2026-11-19-p921.tsv)). The split is total and it does
+not follow speakers, GDP or edtech spend:
+
+- 🟢 **Maintained:** Mandarin (`HanLP`, 36,539 ★), Thai (`PyThaiNLP`), Japanese (`vibrato`,
+  `nagisa`), Vietnamese (`underthesea`), Korean (`Kiwi`), **Turkish (`zemberek-nlp`, 1,379 ★,
+  pushed 2026-11-17)**, **Arabic (`camel_tools`, 594 ★)**.
+- 🔴 **Idle:** Indonesian (top member 733 days idle, ~200 M speakers), Hindi/Indic (1,034 days,
+  ~600 M), Portuguese (the 375 ★ leader is an unlicensed list, ~260 M).
+
+🔵 **The mechanism.** Where whitespace and a regex cannot produce model-ready tokens — no word
+spacing, syllable-only spacing, agglutination, clitics — a language-specific library is a hard
+prerequisite and someone keeps maintaining it. Where they can, the multilingual model absorbed the
+job and the stack was abandoned. The rule predicts the *survivor's shape* as well as the verdict:
+the one maintained Portuguese library is a **verb conjugator**, the single part of Portuguese a
+regex cannot do.
+
+🔴 **What it changes commercially.** The instinct on a localisation engagement is to scale the
+substrate budget with the size of the language market. That instinct is **backwards**: the large,
+easy-tokenising markets are precisely where nothing exists to adopt and the work is a multilingual
+model plus your own evaluation set and glossary, while a mid-size agglutinative market hands you a
+1,379 ★ Apache-2.0 stack for free. 🟡 **The claim's boundary:** this is a rule about *code
+repositories on GitHub*. Whether these stacks moved to a model hub rather than dying is the obvious
+competing explanation and it is **untestable from this session** — `huggingface.co` fails DNS here
+(`921-G1`). It is recorded as a hypothesis, not folded into the trend.
+
+## T56 — A licence index stops being evidence exactly where the grant is a notice rather than a licence body, and that is disproportionately the non-English shelf (added `p921`)
+
+Three measured instances, all on repositories large enough that nobody re-checks:
+`OpenPronounce` (`p913`), `pawtograder/platform` (658 B GPL notice → `NOASSERTION`, `p899`), and
+`ahmetaa/zemberek-nlp` (**572 B Apache-2.0 notice → `NOASSERTION`, 1,379 ★, `p921`**). 🔵 The
+common property is not size or origin but **payload form**: a project that pastes the Apache or GPL
+*notice* — the paragraph upstream tells you to put in a file header — rather than vendoring the
+full text defeats the index's classifier, which is trained on the body.
+
+🔴 **Why it is a trend and not a defect report.** Vendoring a 35 kB licence body is a Western
+open-source convention; a notice plus a URL is the norm in a great deal of non-US, non-English,
+academically maintained supply — which is exactly the shelf this base's discovery budget has moved
+to (`920-G3`). So the index's error rate is **structurally higher precisely where the new supply
+is**, and a team that filters a candidate list by the index's licence field will systematically
+drop permissive non-Western repositories as "unlicensed". 🟢 Operative rule: **a licence payload
+under ~1,500 B is read, never classified** — and `ingest/p913-grant-authority.sh` now recovers the
+family *and the version* from such payloads (`921-F1`).

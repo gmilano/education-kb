@@ -88,6 +88,16 @@ data access* rather than education agents.
 
 ### North America
 
+#### 🆕 `p921` — the leg was run and returned nothing again; this line is the whole entry, by rule
+
+🔵 `920-G3` made this a one-line filing. The North America mandated leg returned **seven named facts,
+all seven already in this file** (federal framework March 2026, Illinois' 1 July 2026 guidance
+deadline, Virginia S.B. 394, Ohio's July 2026 mandate, NYC's March 2026 guidance, the Stanford AI
+Index teacher-policy figure, the state-bill count)
+([probe](../evidence/websearch-exhaustion-probe.2026-11-19-p921.tsv)). 🔴 **Third consecutive pass
+with zero new North America facts.** `919-G7`'s budget rule holds: re-check quarterly or on a named
+legislative event.
+
 #### 🆕 `p919` — the regional leg was re-run and returned **nothing this file did not already hold**, which is itself the measurement
 
 - 🟢 **Corroboration, not news.** A fresh North America leg returned the **134 bills across 31
@@ -673,6 +683,28 @@ A 9190, EO 14277, the US Department of Education framework and Berkeley Law were
 already written.
 
 ### EMEA
+
+#### 🆕 `p921` — Türkiye and the Gulf acquire a supply story, and it is the substrate tier, not the agent tier
+
+- 🔴 **This file's EMEA supply picture has been built on a verdict that named no layer.** `p903`
+  measured the Arabic/Persian/Hebrew/Turkish **agent** tier — best member **6 ★**, mostly unlicensed —
+  and this base reasoned from it as *"there is nothing to adopt."* `p921` measured the **substrate**
+  tier in the same languages and found the two largest permissive language assets it holds outside
+  East Asia:
+  [`ahmetaa/zemberek-nlp`](https://github.com/ahmetaa/zemberek-nlp) — **1,379 ★, Apache-2.0
+  (byte-read; the index says `NOASSERTION`), pushed 2026-11-17** — and
+  [`CAMeL-Lab/camel_tools`](https://github.com/CAMeL-Lab/camel_tools) (594 ★, MIT, NYU Abu Dhabi).
+  🟢 **A Türkiye or Gulf free-text-marking engagement now has a permissive stack to adopt**; the
+  engagement shape is `compose/patterns.md` **P43**.
+- 🆕 **New demand fact, and one of only two the eight mandated legs produced this pass.**
+  **Futuresource Consulting reports 67% of teachers now using AI tools**, framing EMEA adoption as
+  moving *"from experimentation to structured implementation"*, and **Fosway's 2026 EMEA AI Market
+  Assessment puts vendor AI delivery at 26% of features, up from 11% in 2025**. 🟡 Both are
+  **secondary-sourced** (vendor/analyst summaries; the full reports were not read) and are marked so
+  under this file's standing rule.
+- 🔵 **Why the pairing matters for a proposal.** Demand is institutionalising (67%, structured
+  implementation) at the same moment the supply verdict flips from *nothing* to *a permissive
+  parsing layer*. The gap is the pedagogy tier, which is the billable part.
 
 #### 🆕 `p919` — the postponement corroborates for a third time, and the primary text is unreadable for a ninth pass
 
@@ -1720,6 +1752,27 @@ problem — so this nil is still not evidence of saturation.
 
 ### APAC
 
+#### 🆕 `p921` — Indonesia and India measured at the substrate layer: both empty, and the Indian national catalogue is ungranted
+
+- 🔴 **Indonesia (`920-G4` discharged).** Five candidates byte-read; **every one fails `918-R1`**.
+  `IndoNLP/indonlu` (659 ★, Apache-2.0) is **733 days idle**; `Wikidepia/indonesian_datasets`
+  (131 ★) carries **no licence file**. 🟡 Nearest miss in the entire ten-tier measurement:
+  `har07/PySastrawi` (366 ★, MIT) at **182 days — two days outside the window.**
+- 🔴 **India, measured at this layer for the first time.** The largest education market this file
+  tracks had **no substrate verdict at all**. All four candidates fail: `goru001/inltk` (838 ★,
+  1,034 days idle), `anoopkunchukuttan/indic_nlp_library` (654 ★, 895 d),
+  `AI4Bharat/IndicTrans2` (497 ★, 412 d), and **`AI4Bharat/indicnlp_catalog` — 641 ★ and carrying
+  no licence file on any of 25 probed paths.**
+- 🔵 **Read with `p920`'s APAC finding, this is the regional shape:** East and Southeast Asia's
+  *hard-tokenising* languages have maintained permissive substrates (`HanLP` 36,539 ★, `PyThaiNLP`,
+  `Kiwi`, `underthesea`, `vibrato`); the region's two largest *easy-tokenising* markets have none.
+  **Market size predicts the opposite of what is true here** — see `intel/trends.md` **T55** and
+  `compose/patterns.md` **P44**.
+- 🆕 **New demand fact (second of the two from the mandated legs).** **Arizton (June 2026) puts APAC
+  at over 45% of the global EdTech market**, with growth driven by government programmes and
+  enterprise demand; MarketsandMarkets' APAC AI-in-education line ($591.6 M 2024 → $1,848.1 M 2029)
+  is already in this file. 🟡 Secondary-sourced, marked so.
+
 
 #### 🆕 `p920` — the APAC language substrate is permissive, maintained, and was invisible to 919 passes of education-shaped searching
 
@@ -2610,6 +2663,26 @@ and own**, not a vendor to partner with.
 regulatory-led posture and Australia's National AI Plan were all returned and all already written.
 
 ### LATAM
+
+#### 🆕 `p921` — Brazil's Portuguese substrate measured, and the honest answer is that there is nothing to adopt
+
+🔴 **Portuguese joins Indonesian and Indic in the empty column.** The tier's largest member,
+[`ajdavidl/Portuguese-NLP`](https://github.com/ajdavidl/Portuguese-NLP) (375 ★), is a **curated list
+with no licence file on either channel** — `search` reports `NULL` and the grant authority finds
+nothing on 25 names over 4 branches. `Nkluge-correa/Tucano` (86 ★, Apache-2.0) is **268 days idle**.
+The only maintained member, [`bretttolbert/verbecc`](https://github.com/bretttolbert/verbecc)
+(106 ★), is **LGPL-3.0** and is a verb conjugator for five Romance languages, not a Portuguese stack.
+
+🔵 **What to do with that in a Brazilian proposal, stated plainly because it is the commercially
+useful part:** cost the engagement as *no substrate* — multilingual model, your own marked-answer
+evaluation set, a versioned **BNCC** glossary, and a priced human-in-the-loop first cohort
+(`compose/patterns.md` **P44**). 🔴 A competitor costing "we adopt the Brazilian NLP toolkit" is
+costing a library that has not moved in two years, and the difference shows up in week six.
+
+🟢 **This completes the LATAM supply picture this file has been assembling since `p917`:** Brazil's
+*curriculum* cluster is deliverable (`portabilis/i-educar` + `i-diario`, AGPL-3.0, 117 ★), Mexico's
+teacher-published supply is the clearest demand signal and the least deliverable (`920-F7`, largest
+repo **2 ★**), and the *language* layer underneath both is **absent**.
 
 #### 🆕 `p920` — Mexico, measured for the first time: 74 repositories, the largest is 2 ★
 

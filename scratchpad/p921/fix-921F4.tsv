@@ -1,0 +1,4 @@
+repo	branch	path	http	bytes	sha256_12	families	verdict	note
+bretttolbert/verbecc	main	LICENSE.txt	200	7652	e3a994d82e64	LGPL-3.0	LGPL-3.0	version read from the title block (921-F4); the "or later" election is NOT in the licence text — read the program's own notice
+vngrs-ai/vnlp	main	LICENSE	200	34523	8486a10c4393	AGPL-3.0	AGPL-3.0	
+konlpy/konlpy	master	LICENSE	200	722	a66980ac3c64	GPL-3.0-or-later	GPL-3.0-or-later	NOTICE-STYLE payload (722 B) — family from the title line, VERSION recovered from the prose (921-F1 / 920-G2)

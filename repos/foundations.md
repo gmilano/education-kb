@@ -384,7 +384,16 @@ behind them is the reason the section exists: across four non-English channels, 
 permissive, maintained education assets are **corpora**, while the *agents* in those same languages
 top out at **6 ★ and are mostly unlicensed**. That inverts the usual calculus for a localisation
 engagement: **adopt the in-language corpus under MIT, build the agent tier**, because at the agent
-tier in Arabic, Persian, Hebrew and Turkish there is nothing to adopt. Same verdict `p894` reached
+tier in Arabic, Persian, Hebrew and Turkish there is nothing to adopt. 🔴 **Corrected `p921`:
+that clause is true of the AGENT tier and this paragraph reasoned from it as if it were the
+whole verdict.** At the **substrate** tier Turkish has
+[`ahmetaa/zemberek-nlp`](https://github.com/ahmetaa/zemberek-nlp) — **1,379 ★, Apache-2.0
+byte-read, pushed 2026-11-17** — and Arabic has
+[`CAMeL-Lab/camel_tools`](https://github.com/CAMeL-Lab/camel_tools) (594 ★, MIT). Both are
+larger than anything in the table above and both pass `918-R1`; see the `p921` section below.
+🔵 The repair to the *method*, not just the cell: **name the layer in the verdict.** A tier is
+two layers with opposite answers (`919-R1`), so "nothing to adopt" without a layer is a claim
+this base cannot support. Same verdict `p894` reached
 via `UniTime` and `p895` via `elimu-ai/webapp`, arriving from a third direction.
 
 🔴 **The two that are deliberately not rows here.** https://github.com/MjeedBakr/Student-Success-Kit
@@ -484,6 +493,42 @@ though the tokenisers pass: `polm/unidic-lite` is **52 ★ and last pushed 2020-
 file at all**. 🔵 For a closed Japanese build, prefer `nagisa` (self-contained, MIT) or `vibrato`
 (MIT *or* Apache-2.0) over the MeCab + UniDic chain, and if you need MeCab, take the **BSD** arm and
 vendor the dictionary licence alongside it.
+
+## The vernacular substrate across ten tiers — added `p921`, discharging `920-G4`
+
+`p921` extended the measurement to **Turkish, Arabic, Indonesian, Indic and Portuguese** and graded
+all ten measured tiers against `918-R1` from generated output
+([grading](../evidence/substrate-918R1-grading.2026-11-19-p921.tsv),
+[grants](../evidence/vernacular-substrate-layer.2026-11-19-p921.tsv)). Every grant below is
+byte-read.
+
+### 🟢 Adopt these
+
+| Repo | Lang | Licence (byte-read `p921`) | ★ / pushed | Role |
+|---|---|---|---|---|
+| https://github.com/ahmetaa/zemberek-nlp | TR | 🟢 **Apache-2.0** — 572 B notice, `sha256₁₂ c55ac4a942b0`. 🔴 `search/repositories` reports **`NOASSERTION`** | **1,379 ★** / 2026-11-17 | Turkish morphology, tokenisation, spelling correction, normalisation and NER, on the JVM. **The largest Turkish-language NLP asset this base has measured in any category**, and larger than every Arabic/Persian/Hebrew/Turkish *education* artefact in the corpora section above. 🔵 Turkish is agglutinative: surface forms explode, so a tutor that marks free-text Turkish needs a morphological analyser the way a Thai tutor needs a segmenter |
+| https://github.com/CAMeL-Lab/camel_tools | AR | 🟢 MIT — 1,087 B, `sha256₁₂ 7a3ef160e895` | 594 ★ / 2026-10-14 | Arabic morphological analysis and disambiguation, dialect identification, sentiment, NER, diacritisation and orthographic normalisation, from NYU Abu Dhabi. **Permissive, maintained, academically maintained rather than vendor-maintained** |
+| https://github.com/otuncelli/turkish-stemmer-python | TR | 🟢 Apache-2.0 — 11,344 B, `sha256₁₂ 511c590688e4` | 232 ★ / 2025-02-26 | 🟡 **Fails `918-R1` on recency (631 d).** Listed because it is pure-Python where `zemberek` is JVM: if the deployment cannot carry a JVM, this is the fallback and it is a **frozen** one |
+
+🔴 **Not adoptable, and named so a later pass does not re-propose it:**
+https://github.com/vngrs-ai/vnlp (291 ★, Turkish) is **AGPL-3.0** — byte-read, 34,523 B,
+`sha256₁₂ 8486a10c4393`. A hosted tutor that calls it inherits the network-use disclosure duty.
+
+### 🔴 Measured and empty — the three tiers with no substrate to adopt
+
+| Tier | Top member | ★ | Grant | Idle | Why it is listed |
+|---|---|---|---|---|---|
+| **ID** Indonesian | `IndoNLP/indonlu` | 659 | Apache-2.0 | **733 d** | 🟡 Nearest miss in the whole measurement: `har07/PySastrawi` (366 ★, MIT) is idle **182 days** — two days outside the window. **Re-probe it first.** `Wikidepia/indonesian_datasets` (131 ★) has **no licence file** |
+| **HI/Indic** | `goru001/inltk` | 838 | MIT | **1,034 d** | 🔴 `AI4Bharat/indicnlp_catalog` — **641 ★, the catalogue the field points newcomers at — carries no licence file on any of 25 probed paths**. `IndicTrans2` (497 ★, MIT) is the freshest at 412 days idle |
+| **PT** Portuguese | `ajdavidl/Portuguese-NLP` | 375 | 🔴 **none — both channels**: `search` reports `NULL` and the authority finds no licence file on any of 25 names over 4 branches | 147 d | A curated **list**, not a library. The only maintained member is https://github.com/bretttolbert/verbecc (106 ★, **LGPL-3.0** byte-read from its title block, 7,652 B, `sha256₁₂ e3a994d82e64`) — a verb conjugator for five Romance languages. `Nkluge-correa/Tucano` (86 ★, Apache-2.0) is idle 268 days |
+
+🔵 **`921-R1`, the rule these ten tiers fall into, and it is the part to carry into a proposal.**
+A vernacular substrate stays maintained **exactly where whitespace and a regex cannot produce
+model-ready tokens** — no word spacing (ZH, JA, TH), syllable spacing (VI), or agglutinative/
+clitic-heavy morphology (KO, TR, AR). Where tokenisation is easy (ID, HI, PT) the stacks have been
+absorbed by multilingual models and left idle, at 200 M, 600 M and 260 M speakers respectively.
+**Speaker population and market size predict nothing here.** The rule even predicts the survivor's
+shape: the one maintained Portuguese library does verb conjugation — the one thing a regex cannot do.
 
 ## National-curriculum data as an agent substrate — added `p904`
 

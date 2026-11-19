@@ -3385,3 +3385,85 @@ A Spanish- or Portuguese-language engagement. `920-R2`: the layer split is only 
 the language needs its own substrate. For Mexico the agent layer is the whole verdict — 74
 repositories, largest 2 ★, nothing to adopt — and the substrate is the global one. Use **P41**'s
 build-the-agent shape with the Nueva Escuela Mexicana vocabulary in place of Kurikulum Merdeka.
+
+## P43 — A Türkiye or Gulf engagement: the agent tier is empty and the substrate tier is 1,379 ★ and permissive (added `p921`)
+
+**When this applies.** A client in Türkiye or an Arabic-speaking market asks you to start from "the
+local open-source thing" for a tutor that must mark **free-text answers in the local language**.
+This base's own shelf said there was nothing to adopt in these languages; that was measured at the
+**agent** tier (`p903`, best member 6 ★, mostly unlicensed) and it is still true. `p921` measured
+the **substrate** tier and it is the opposite. **P42 is the ZH/JA/KO/VI sibling of this pattern;
+the difference here is that the whole stack is one JVM library plus one Python library.**
+
+### The stack
+
+| Layer | Pick | Licence (byte-read `p921`) | Why this one |
+|---|---|---|---|
+| Language substrate — TR | [`ahmetaa/zemberek-nlp`](https://github.com/ahmetaa/zemberek-nlp) | 🟢 Apache-2.0, 572 B notice, `sha256₁₂ c55ac4a942b0` | **1,379 ★, pushed 2026-11-17.** Morphology, tokenisation, normalisation, spelling correction, NER. 🔴 **JVM** — budget a service boundary if your stack is Python. 🔴 **Do not filter it out on the index's licence field, which says `NOASSERTION`** (`T56`) |
+| Pure-Python TR fallback | [`otuncelli/turkish-stemmer-python`](https://github.com/otuncelli/turkish-stemmer-python) | 🟡 Apache-2.0, 11,344 B | Only if a JVM is impossible. **631 days idle — a frozen dependency, vendor it** |
+| Language substrate — AR | [`CAMeL-Lab/camel_tools`](https://github.com/CAMeL-Lab/camel_tools) | 🟢 MIT, 1,087 B | 594 ★, pushed 2026-10-14. Morphological disambiguation, **dialect identification**, diacritisation, orthographic normalisation |
+| Arabic learner-facing UI reference | [`m7medVision/nakhlah.js`](https://github.com/m7medVision/nakhlah.js) | MIT | 25 ★ — small, and the only permissive Arabic education *application* this base holds. Read it for **RTL learner UI**, which is the slow part to build |
+| In-language corpus — TR | [`deeplearningturkiye/turkce-yapay-zeka-kaynaklari`](https://github.com/deeplearningturkiye/turkce-yapay-zeka-kaynaklari) | MIT | 2,432 ★ — 🔴 idle since 2021: **mine it, do not depend on it** |
+| Learner-state model | [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | MIT | Language-independent; the substrate swap does not touch it |
+| LMS seam | **LTI 1.3** into Moodle/Open edX, **MCP** for agent read/write | — | Keeps your tool a separate work from an AGPL/GPL platform |
+
+🔴 **The one repo to refuse:** [`vngrs-ai/vnlp`](https://github.com/vngrs-ai/vnlp) (291 ★, Turkish)
+is **AGPL-3.0** by byte-read. A hosted tutor calling it inherits the network-use source-disclosure
+duty — which is the whole product.
+
+### Wiring
+
+1. **Morphology first, prompt second.** Turkish and Arabic surface forms explode (agglutination;
+   clitics plus optional diacritics), so a free-text answer is lemmatised and tagged *before* it
+   reaches the model. Partial credit and misconception tags then key on lemmas, not on whatever the
+   LLM's tokenizer did to an inflected form. This is what makes the marking defensible to a teacher.
+2. **`zemberek` behind a thin HTTP service** (it is JVM; everything else here is not). One
+   `/analyze` endpoint returning lemma, POS and morpheme boundaries is the entire contract.
+3. **Normalise before you compare.** `zemberek`'s normaliser and `camel_tools`' orthographic
+   normalisation absorb the spelling and diacritic variation that otherwise reads as a wrong answer.
+4. **Dialect-gate the Arabic path.** `camel_tools`' dialect identification decides whether to mark
+   against MSA or to flag for human review — the single biggest source of unfair marking in Gulf
+   deployments.
+5. **Learner state and LMS seam exactly as P42.**
+
+**Licence posture:** Apache-2.0 + MIT end to end. Your tutor can be closed and branded.
+**Estimate:** 6–8 weeks to a markable free-text pilot in one subject, +2 weeks for the Arabic
+dialect gate. **What you are NOT buying:** an education agent — there is none in either language;
+you are buying the parsing layer and building the pedagogy.
+
+## P44 — An Indonesian, Hindi or Brazilian-Portuguese engagement: cost it as *no substrate*, deliberately (added `p921`)
+
+**When this applies.** The mirror image of **P43**, and the more common conversation. The market is
+huge, the client assumes a local stack exists, and `p921` measured that **it does not**: Indonesian's
+leader is 733 days idle, Indic's 1,034, and Portuguese's 375 ★ leader is an unlicensed list
+([grading](../evidence/substrate-918R1-grading.2026-11-19-p921.tsv)). **The deliverable of this
+pattern is a correctly-costed proposal**, which is worth more than a stack that has not moved in two
+years.
+
+### What you tell the client, and what you build
+
+| Instead of | Build | Why |
+|---|---|---|
+| "we will adopt the national NLP toolkit" | A **multilingual model behind your own evaluation set** — 300–500 marked student answers per subject, collected from the client's own history | `T55`: these languages tokenise on whitespace, so the multilingual model absorbed the job; the toolkit was abandoned *because it was no longer needed*, not because the language is unserved |
+| "the local library handles grading" | **Your own glossary and misconception list**, versioned per curriculum (`Kurikulum Merdeka`, NEP/NCF, BNCC) | The curriculum vocabulary is the asset; `919-F5`'s Indonesian supply and `920-F7`'s Mexican supply are both *teachers publishing curriculum artefacts*, which is where to source it |
+| "we will fork the catalogue" | 🔴 **Nothing.** [`AI4Bharat/indicnlp_catalog`](https://github.com/AI4Bharat/indicnlp_catalog) (641 ★) and [`Wikidepia/indonesian_datasets`](https://github.com/Wikidepia/indonesian_datasets) (131 ★) carry **no licence file on any probed path** | An unlicensed catalogue is a **reading list, not a source** (`921-R3`). Its rows may be licensed; its selection and schema are not |
+| — | 🟡 **One standing re-probe:** [`har07/PySastrawi`](https://github.com/har07/PySastrawi) (366 ★, MIT) is **182 days idle — two days outside `918-R1`**. One push flips the Indonesian verdict | Cheapest watch item on this base's books |
+
+### Wiring
+
+1. **Evaluation set before model choice.** With no substrate to anchor on, the only defensible
+   artefact is a marked answer set from the client's own data; it is also the thing that survives a
+   model swap.
+2. **Glossary as a versioned repo, not a prompt.** Curriculum vocabulary changes by cohort; keep it
+   diffable and attach the curriculum version to every marking decision.
+3. **Human-in-the-loop on the first cohort, by design, and priced.** This is where the budget that
+   would have gone to "adopting the local stack" actually goes.
+4. **LMS seam as P43.** In LATAM the platform is overwhelmingly Moodle or Chamilo (GPL-3.0), so the
+   LTI/MCP boundary is what keeps your work a separate, closeable one.
+
+**Licence posture:** whatever you write, plus the model's terms — there is no third-party copyleft
+in the path, because there is no third party.
+**Estimate:** 8–10 weeks, of which ~3 are the evaluation set and glossary. 🔵 **Say this in the
+proposal**: the reason it is not 6 is the absence this pattern is named for, and a competitor who
+costs it at 6 is costing a library that has not been pushed since 2024.
+

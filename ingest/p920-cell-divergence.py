@@ -139,7 +139,21 @@ if __name__ == "__main__":
         hit = any(s.endswith("PrairieLearn") for s, _, _ in div)
         print(f"\ncontrol: PrairieLearn divergence detected = {hit}")
         sys.exit(0 if hit else 1)
+    # ── 921-F10.  THE DEFAULT FILE LIST MADE THIS INSTRUMENT UNUSABLE AS A GATE, and the reason
+    # is structural rather than a tuning problem.  `p920` shipped the list above, which includes
+    # `repos/trending.md` and `agents/trending.md` — and those two files are **APPEND-ONLY LOGS**.
+    # A log's job is to RECORD a superseded cell next to the pass that superseded it, so a cell in
+    # the log is SUPPOSED to disagree with the live shelf.  Measured on the p921 tree:
+    #     default list (5 files):          4,169 rows → 206 diverging subjects
+    #     delivery shelves only (3 files):   463 rows →   4 diverging subjects
+    #     of the 206, subjects involving a trending log:  205
+    # 🔴 So 202 of the 206 are the instrument comparing a delivery cell against its own history and
+    # calling it a defect — `919-G0`'s class exactly: a gate generating false work faster than the
+    # base generates shelf growth, by comparing live content against something stale.  The four
+    # that survive on the delivery shelves are ALL `SEQUENCE`-arm hits with IDENTICAL sets, which
+    # `920-R1` already binds as measurements and never failures — i.e. the SET arm is CLEAN.
+    # 🔵 A log may still be swept DELIBERATELY by naming it on the command line; it is no longer
+    # swept by default, because a gate nobody can read is a gate nobody runs.
     div = report(args or ["agents/top.md", "repos/foundations.md",
-                          "verticals/solutions.md", "repos/trending.md",
-                          "agents/trending.md"], "LIVE SHELF")
+                          "verticals/solutions.md"], "LIVE SHELF (delivery files only — 921-F10)")
     sys.exit(1 if div else 0)

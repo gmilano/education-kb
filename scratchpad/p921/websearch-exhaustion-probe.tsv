@@ -1,0 +1,28 @@
+NA-67pct-teachers	NEW	-
+NA-whitehouse-framework	PRESENT	intel/market.md intel/open-gaps.md 
+NA-illinois	PRESENT	agents/trending.md repos/foundations.md repos/trending.md 
+NA-virginia-sb394	PRESENT	agents/trending.md intel/market.md 
+NA-ohio	PRESENT	agents/top.md agents/trending.md repos/trending.md 
+NA-stanford-ai-index	PRESENT	agents/trending.md intel/market.md intel/open-gaps.md 
+NA-nyc-guidance	PRESENT	agents/trending.md repos/trending.md intel/open-gaps.md 
+EMEA-euaiact-aug2026	PRESENT	agents/top.md agents/trending.md repos/trending.md 
+EMEA-council-of-europe	PRESENT	agents/trending.md repos/trending.md intel/open-gaps.md 
+EMEA-eurydice	PRESENT	agents/trending.md repos/trending.md intel/market.md 
+EMEA-oecd-outlook	PRESENT	agents/trending.md repos/trending.md intel/market.md 
+EMEA-fosway	PRESENT	agents/trending.md repos/trending.md intel/market.md 
+EMEA-epson	PRESENT	agents/trending.md intel/market.md 
+APAC-arizton	NEW	-
+APAC-uae	PRESENT	agents/top.md agents/trending.md repos/trending.md 
+APAC-worldbank	PRESENT	agents/trending.md repos/trending.md intel/market.md 
+APAC-ipsos	PRESENT	agents/trending.md repos/trending.md intel/market.md 
+APAC-mnm-figures	PRESENT	repos/trending.md intel/market.md 
+LATAM-dec-survey	PRESENT	agents/trending.md repos/trending.md intel/market.md 
+LATAM-iesalc	PRESENT	agents/top.md agents/trending.md repos/trending.md 
+LATAM-ceibal	PRESENT	agents/top.md agents/trending.md repos/trending.md 
+LATAM-iadb	PRESENT	agents/trending.md repos/trending.md intel/market.md 
+LATAM-cepal	PRESENT	agents/trending.md repos/trending.md intel/market.md 
+REPO-education-agent-skills	PRESENT	agents/top.md agents/trending.md repos/foundations.md 
+REPO-chinatextbook	PRESENT	agents/top.md agents/trending.md repos/trending.md 
+REPO-openeducat	PRESENT	agents/top.md agents/trending.md repos/foundations.md 
+REPO-genai-beginners	PRESENT	agents/trending.md repos/trending.md intel/open-gaps.md 
+REPO-flowise	PRESENT	agents/trending.md repos/trending.md intel/open-gaps.md 

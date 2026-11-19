@@ -1,0 +1,6 @@
+repo	branch	path	http	bytes	sha256_12	families	verdict	note
+konlpy/konlpy	master	LICENSE	200	722	a66980ac3c64	GPL-3.0-or-later	GPL-3.0-or-later	NOTICE-STYLE payload (722 B) — family from the title line, VERSION recovered from the prose (921-F1 / 920-G2)
+polm/unidic-lite	master	LICENSE	200	1051	34565936df8f	MIT	BODY-MIT	graded from the body, not a licence title — weaker evidence than a title verdict
+polm/unidic-lite	master	LICENSE.unidic	200	1515	d2cfdec25d7a	BSD	BODY-BSD	graded from the body, not a licence title — weaker evidence than a title verdict
+polm/unidic-py	master	LICENSE	200	1076	8736ad0d4636	MIT	MIT	
+polm/unidic-py	master	LICENSE.unidic	200	1515	d2cfdec25d7a	BSD	BODY-BSD	graded from the body, not a licence title — weaker evidence than a title verdict

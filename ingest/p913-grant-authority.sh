@@ -57,6 +57,24 @@ NAMES=(LICENSE LICENSE.txt LICENSE.md LICENSE.TXT LICENCE LICENCE.txt COPYING CO
        MIT-LICENSE MIT-LICENSE.txt MIT_LICENSE GPL-LICENSE APACHE-LICENSE BSD-LICENSE
        MIT-License.txt COPYRIGHT COPYRIGHT.txt)
 
+# ── 921-F2.  920-G1 DISCHARGED, AND THE REMEDY IT PRESCRIBED IS NOT AVAILABLE IN THIS
+# ENVIRONMENT.  `920-G1` asked for "the `LICENSE.*` glob" — but a glob needs a DIRECTORY LISTING,
+# and `gh api repos/<owner>/<repo>/contents` returns **403 "GitHub access to this repository is
+# not enabled for this session"** for every repository not attached to the session (measured
+# p921 on `polm/unidic-lite`).  `raw.githubusercontent.com`, the only open channel, serves an
+# EXACT PATH and cannot enumerate.  So the glob is replaced by a NAMED PROBE LIST, and the
+# residual blind spot is recorded rather than hidden: a sibling named outside this list is still
+# invisible.  Measured fixture: `polm/unidic-lite` carries `LICENSE` (1,051 B, MIT — the
+# PACKAGING CODE) and `LICENSE.unidic` (1,515 B, BSD, (c) The UniDic Consortium — THE DICTIONARY
+# YOU ACTUALLY INSTALL).  Reading the first and stopping publishes "MIT" over a corpus owned by
+# somebody else, which is T25 inside the artefact class this authority exists to cover.
+SIBLINGS=(LICENSE.unidic LICENSE.data LICENSE.dataset LICENSE.datasets LICENSE.docs
+          LICENSE.doc LICENSE.content LICENSE.model LICENSE.models LICENSE.weights
+          LICENSE.media LICENSE.assets LICENSE.fonts LICENSE.images LICENSE.corpus
+          LICENSE.dict LICENSE.dictionary LICENSE.third-party LICENSE.third_party
+          LICENSE.THIRD-PARTY LICENSE-DATA LICENSE-DOCS LICENSE-CONTENT COPYING.data
+          COPYING.LIB COPYING.DOC)
+
 # ---- the adjudicator.  $1 = payload file, $2 = bytes.  Prints "families<TAB>verdict<TAB>note". ----
 adjudicate() {
   local B="$1" bytes="$2" title t fam=() v note=""
@@ -127,6 +145,62 @@ adjudicate() {
     elif printf '%s' "$t" | grep -qiE 'creative common|comun creativ|comum criativ'; then
       fam=("CC-UNSPECIFIED"); note="TRANSLATED grant title, graded on ASCII tokens (913-F6)"
     fi
+  fi
+
+  # ── 921-F1.  920-G2 DISCHARGED: A NOTICE IS NOT A LICENCE TEXT, AND THE VERSION LIVES IN ITS
+  # PROSE.  `konlpy/konlpy` (722 B, `sha256_12 a66980ac3c64`) carries the GPL *notice* — the
+  # paragraph upstream pastes into a file header — not the licence body.  The title line names
+  # "GNU General Public License", so the primary rule returns a bare `GPL` with NO VERSION, and
+  # `GPL-2.0-only` and `GPL-3.0-or-later` are not interchangeable for a client build: the first
+  # is incompatible with Apache-2.0 and the second is not.  The version exists only in the prose
+  # ("either version 3 of the License, or (at your option) any later version"), so where the
+  # family is a GNU one and the payload is too small to BE the licence text (the real bodies are
+  # ~18-35 kB), fall through to a version regex over the body.  A payload that carries the full
+  # text keeps its family unqualified, because there the version is structural, not prose.
+  # ── 921-F4.  A RESIDUAL OF THE SAME CLASS, FOUND BY RUNNING 921-F1's OWN FIX AT SCALE, AND IT
+  # IS NOT CONFINED TO SHORT PAYLOADS.  `bretttolbert/verbecc` byte-reads 7,652 B whose title
+  # block is "GNU LESSER GENERAL PUBLIC LICENSE / Version 3, 29 June 2007" — the version is
+  # RIGHT THERE, on the second line of the block this grader already reads — and the primary rule
+  # still returned a bare `LGPL`, because the `case` extracts a FAMILY and never a version.
+  # 920-G2 was written as if the defect were a property of notice-style payloads; it is a
+  # property of the grader.  LGPL-2.1 and LGPL-3.0 differ for a client build, so the version is
+  # extracted from the title block at EVERY size.  🔵 What is NOT claimed: the "or later"
+  # election lives in the program's own notice, not in the licence text, so a full text yields a
+  # bare version (`LGPL-3.0`) and never an `-or-later` suffix.  That is why this stage runs
+  # BEFORE 921-F1's and leaves short payloads to it.  Control: `vngrs-ai/vnlp`, 34,523 B stock
+  # AGPL-3.0 (`sha256_12 8486a10c4393`), which already carries its version in the family.
+  if [ "${#fam[@]}" -gt 0 ] && [ "$bytes" -ge 1500 ]; then
+    case "${fam[0]}" in
+      GPL|LGPL)
+        local tver=""
+        if   printf '%s' "$t" | grep -qiE 'version 3'; then tver="3.0"
+        elif printf '%s' "$t" | grep -qiE 'version 2\.1'; then tver="2.1"
+        elif printf '%s' "$t" | grep -qiE 'version 2'; then tver="2.0"; fi
+        if [ -n "$tver" ]; then
+          fam[0]="${fam[0]}-${tver}"
+          note="version read from the title block (921-F4); the \"or later\" election is NOT in the licence text — read the program's own notice"
+        fi ;;
+    esac
+  fi
+
+  if [ "${#fam[@]}" -gt 0 ] && [ "$bytes" -lt 1500 ]; then
+    case "${fam[0]}" in
+      GPL|LGPL|AGPL-3.0)
+        local vnum="" vtail=""
+        if   grep -qiE 'version 3[^0-9]' "$B"; then vnum="3.0"
+        elif grep -qiE 'version 2\.1' "$B";   then vnum="2.1"
+        elif grep -qiE 'version 2[^0-9]' "$B"; then vnum="2.0"; fi
+        if [ -n "$vnum" ]; then
+          if grep -qiE 'any later version' "$B"; then vtail="-or-later"; else vtail="-only"; fi
+          case "${fam[0]}" in
+            AGPL-3.0) fam[0]="AGPL-${vnum}${vtail}" ;;
+            *)        fam[0]="${fam[0]}-${vnum}${vtail}" ;;
+          esac
+          note="NOTICE-STYLE payload (${bytes} B) — family from the title line, VERSION recovered from the prose (921-F1 / 920-G2)"
+        else
+          note="NOTICE-STYLE payload (${bytes} B) naming a GNU family with NO recoverable version — do not assume 3.0 (921-F1)"
+        fi ;;
+    esac
   fi
 
   if [ "${#fam[@]}" -gt 0 ]; then
@@ -297,7 +371,20 @@ else
       code=$(curl -sS --max-time 30 -o "$D/p" -w '%{http_code}' \
              "https://raw.githubusercontent.com/$slug/$br/$f" 2>/dev/null)
       [ "$code" = "200" ] || continue
-      emit "$slug" "$br" "$f"; found=1; break 2
+      emit "$slug" "$br" "$f"; found=1
+      # 921-F2 / 920-G1: the primary payload is not necessarily the only grant.  Probe the named
+      # asset-sibling list on the SAME branch and emit a row for EVERY one that resolves.  A repo
+      # whose only grant is the plain file emits exactly one row — that is the false-positive
+      # control, and `konlpy/konlpy` is the standing fixture for it.
+      if [ "${SKIP_SIBLINGS:-0}" != "1" ]; then
+        for sb in "${SIBLINGS[@]}"; do
+          [ "$sb" = "$f" ] && continue
+          sc=$(curl -sS --max-time 15 -o /dev/null -w '%{http_code}' \
+               "https://raw.githubusercontent.com/$slug/$br/$sb" 2>/dev/null)
+          [ "$sc" = "200" ] && emit "$slug" "$br" "$sb"
+        done
+      fi
+      break 2
     done; done
     [ $found -eq 0 ] && printf '%s\t-\t-\t404\t0\t-\tnone\tNO-LICENCE-FILE-FOUND\tsearched %d names over %d branches\n' \
       "$slug" "${#NAMES[@]}" "${#branches[@]}" >> "$OUT"

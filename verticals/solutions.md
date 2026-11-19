@@ -679,3 +679,26 @@ AGPL-3.0, pushed 2026-08-31) remains the regionally-authored option. Full tier a
   of a credible, auditable open option is itself a market signal.
 - **No open-source financial-aid or admissions-decisioning platform.** Also Annex III
   high-risk in the EU. Same signal, stronger.
+
+## 🆕 The parsing layer under a deployed LMS, by language — added `p921`
+
+Every platform in this file grades free text by handing it to a model. In seven of the ten language
+tiers this base has now measured, there is a **maintained permissive library that should sit between
+the student's answer and the model**; in three there is not, and that changes what a deployment
+costs. This section exists because the distinction is invisible from the platform's side — Moodle,
+Open edX and Canvas look identical in Turkish and in Indonesian.
+
+| Deployment language | Put this under the LMS | Licence (byte-read `p921`/`p920`) | Seam |
+|---|---|---|---|
+| Turkish | https://github.com/ahmetaa/zemberek-nlp | 🟢 Apache-2.0 | JVM service behind an LTI 1.3 tool; **one `/analyze` endpoint** |
+| Arabic | https://github.com/CAMeL-Lab/camel_tools | 🟢 MIT | Python, in-process with the grading tool; dialect-gate before marking |
+| Mandarin / Japanese / Korean / Vietnamese / Thai | `HanLP` · `vibrato`/`nagisa` · `Kiwi` · `underthesea` · `pythainlp` | 🟢 Apache-2.0 / MIT | As **P42** |
+| **Indonesian · Hindi/Indic · Portuguese** | 🔴 **nothing — measured, not assumed** | — | Budget a marked evaluation set and a curriculum glossary instead (**P44**) |
+
+🔴 **The licence boundary that decides whether the result can be branded.** The platforms are
+copyleft — Moodle and Chamilo GPL-3.0, Open edX and Canvas AGPL-3.0 — and every substrate named
+above is Apache-2.0 or MIT. Keeping the parser in a **separate process reached over LTI 1.3 or MCP**
+is what keeps your work a separate work; linking it into a platform plugin is what does not.
+🔴 Do not reach for https://github.com/vngrs-ai/vnlp (Turkish, 291 ★): **AGPL-3.0** by byte-read, and
+a hosted tutor calling it inherits the network-use disclosure duty.
+
