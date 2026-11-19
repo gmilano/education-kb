@@ -4,6 +4,192 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p925) — **The forty-fourth consecutive nil was never a fact about education software. It was a fact about the query shape. The prose legs returned 0 unheld repositories; the topic index returned 97, of which 19 are permissive, byte-read and new.**
+
+🔵 **Summary.** The four mandated English prose legs ran and filed as one line (`920-G3`). A
+**topic-qualified repository channel** then ran against the same industry and returned **141
+repositories, 97 unheld**; **35 shortlisted, 35 grants byte-read, 35 of 35 resolved**; **19
+permissive rows shelved** across `agents/top.md`, `repos/foundations.md` and
+`verticals/solutions.md`; **two licence traps** at 2,070 ★ and 1,712 ★; **one noncommercial
+curriculum graph at 8,648 ★**; **two licence false *negatives*** running in opposite directions;
+and a standing claim of this base **retired with measurement**.
+
+### 🟢 `925-F1` The nil is a property of the instrument, and this is the measurement that shows it
+
+Forty-four passes of this base have reported a nil at "the top of the English-language agent shelf".
+The four mandated legs ran again this pass:
+
+| Mandated prose leg | Unheld education repositories returned |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | **0** — every named repo is held, or is a general agent framework, or is a curated index |
+| `github trending education AI 2026` | **0** — named `HKUDS/DeepTutor`, `THU-MAIC/OpenMAIC`, `withmarbleapp/os-taxonomy`, `patchy631/ai-engineering-hub`; this base holds all four |
+| `open source platform education ERP CRM MIT Apache` | **0** — returned one vendor's own comparison page, as in `p924`; named OpenEduCat, OpenSIS, Fedena, GegoK12, RosarioSIS, Gibbon, `frappe/education`, all held |
+| `AI {industry} industry trends 2026` | **0 repositories** (it is a trends leg); intel used in `intel/trends.md` |
+
+Then, same pass, same budget, **topic-qualified** `gh api search/repositories`:
+
+| Leg | Rows | Unheld |
+|---|---|---|
+| `topic:edtech stars:>80 pushed:>2026-06-01` | 30 | 21 |
+| `topic:education topic:ai stars:>150 pushed:>2026-08-01` | 24 | 18 |
+| `topic:ai-education stars:>60 pushed:>2026-06-01` | 13 | 8 |
+| `topic:lms`, `topic:learning-management-system`, `topic:e-learning` | — | 24 |
+| `topic:intelligent-tutoring-system`, `topic:assessment topic:ai` | — | 9 |
+| four prose qualifiers (`ai tutor`, `curriculum agent`, `student information system`, `classroom agent LLM`) | — | 17 |
+| **deduplicated total** | **141** | 🟢 **97** |
+
+🔴 **So the sentence "the English-language agent shelf is exhausted" was a statement about
+WebSearch's handling of a prose query, published for forty-four passes as a statement about the
+supply of open education software.** 🔵 **The operative rule — `925-R1`: a nil is reportable only
+against a named channel. "Nothing exists" and "this query shape found nothing" are different
+findings, and this base has been publishing the second as the first.**
+
+The honest limit on the correction: topic membership is **author-declared**, so a topic channel
+reaches only projects whose authors tag them, and it will have its own blind spot. The claim here is
+narrow and measured — the *prose* channel had one, the *topic* channel does not share it, and 97
+repositories lived in the gap.
+
+### 🔴 `925-F2` Two licence traps, both at over a thousand stars, both invisible to every filter except the grant text
+
+| Repo | ★ | `search/repositories` | Byte-read | Bytes / `sha256₁₂` |
+|---|---|---|---|---|
+| `CaviraOSS/PageLM` | **2,070** | `NOASSERTION` | 🔴 **"PageLM Community License"** | 8,562 / `20a39a9c5993` |
+| `chadyi/StudyOnTV` | **1,712** | `NOASSERTION` | 🔴 **"Source Available License — Personal Use Only"** | 1,042 / `fdc484954b1b` |
+
+PageLM's grant permits use "for **personal, educational, or non-commercial research purposes**" and
+defines *Commercial Use* as "any use of the Software in connection with any business,
+revenue-generating activity, or commercial purpose". 🔴 **A consultancy engagement is squarely
+Commercial Use**, and PageLM is a NotebookLM-alternative study platform — exactly the artefact a
+studio would reach for. StudyOnTV's grant permits "personal, non-commercial, household use only" and
+explicitly prohibits "redistribution of this software or any derivative work, in source or binary
+form, to any third party", plus use of its name or branding.
+
+🔵 **What makes these dangerous is not the grant, it is the shape of the signal around it.** Both
+pass a star filter, both pass a topic query, both appear on trending roundups, and both report
+`NOASSERTION` — a value this base has 553 rows' experience of treating as *"the detector did not
+recognise the text"*, which is true and which is also how a bespoke non-commercial licence enters a
+shelf. **`NOASSERTION` is a prompt to read, not a licence.**
+
+### 🔴 `925-F3` `T25` lands a second time, at eight thousand stars: `cn-math-taxonomy` is `CC BY-NC 4.0`
+
+`xiaoyang111222/cn-math-taxonomy` — **8,648 ★, pushed 2026-11-19** — is a knowledge graph of
+Chinese school mathematics (primary → senior secondary), English (grade 3 → senior secondary) and
+junior-secondary physics: **1,644 knowledge points, 2,403 prerequisite edges, 6,723 items**, aligned
+to the national curriculum standard, with an adaptive prerequisite diagnostic attached.
+
+Byte-read grant: **`Attribution-NonCommercial 4.0 International`** (19,345 B, `db2e35513dba`).
+
+🔵 This is the **APAC analogue of `withmarbleapp/os-taxonomy`** (7,725 ★, `ODbL-1.0`), and the pair
+makes `intel/trends.md` **`T25`** — *the licence trap moves from the code to the data and content
+assets, where no index can see it* — a measured regularity rather than a single observation:
+
+| Curriculum graph | ★ | Grant | Software licence? | Commercial use? |
+|---|---|---|---|---|
+| `withmarbleapp/os-taxonomy` | 7,725 | `ODbL-1.0` | 🔴 no — a **database** licence | permitted, with share-alike on the database |
+| `xiaoyang111222/cn-math-taxonomy` | 8,648 | `CC BY-NC 4.0` | 🔴 no — a **content** licence | 🔴 **prohibited** |
+
+🔴 **The two largest curriculum-graph assets in this industry are both ungoverned by a software
+licence, and the larger of the two forbids commercial use outright.** A pass that reads either repo
+as software, or either licence cell as a software grant, publishes wrong data.
+
+### 🟢 `925-F4` The licence false negative runs in **both** directions, and both directions cost something
+
+| Repo | ★ | Channel | Byte-read | Cost of trusting the channel |
+|---|---|---|---|---|
+| `inducer/relate` | 439 | `NOASSERTION` | 🟢 **MIT/X Consortium** (1,144 B, `e6c20b652766`) | 🔴 A permissive 439-★ university courseware platform **skipped** |
+| `claroline/Claroline` | 349 | `NOASSERTION` | 🔴 **AGPL-3.0** (34,615 B, `426f3f93060d`, canonical) | 🔴 A network-copyleft LMS **shelved as unknown-or-permissive** |
+
+RELATE's licence file opens *"RELATE is licensed to you under the MIT/X Consortium license:"* — a
+prose preamble ahead of the grant, which is why a detector keyed on a canonical first line reports
+nothing. 🔵 **This is the same defect class as `923-F1` and `924-F1`** — a detector keyed on surface
+form rather than structure — now observed on the **search channel's own licence field** rather than
+on this base's grant authority. The method that resolves it is `923-F3`'s: read the text.
+
+### 🔴 `925-F5` A WordPress plugin can be GPL and serve no licence file at all
+
+`LearnPress/learnpress` (275 ★, pushed 2026-11-19) returns **404 on 18 paths** — `{main, master,
+develop}` × `{LICENSE, LICENSE.md, LICENSE.txt, COPYING, LICENCE, license}` — and additionally 404
+on `license.txt` and `LICENSE.txt` at `master`. `readme.txt` returns **200**: the WordPress plugin
+convention places the grant in a `License:` header *inside the readme*, where no licence-file probe
+will find it.
+
+🔵 **The gate this implies (`925-G1`):** for a WordPress-ecosystem repo, "no licence file" is not
+evidence of no licence; it is evidence that the probe looked in the wrong place. The row is recorded
+with the grant **unresolved by file** and is not shelved as permissive — the honest state, not a
+guess in either direction. 🔵 Note that `Automattic/sensei` (GPL-2.0) and `gocodebox/lifterlms`
+(GPL-3.0), both WordPress LMS plugins, **do** ship canonical licence files, so the convention is
+inconsistent within its own ecosystem.
+
+### 🔵 `925-F6` One repository that cannot carry a licence cell
+
+`learning-commons-org/knowledge-graph` (169 ★) describes itself as "the data layer for smarter
+educational AI". Its `LICENSE.md` (5,788 B, `86b7ebf9b61d`) says: **code is MIT**; **datasets are
+not all licensed the same way**, each labelled with an access type across **Open**, **Open + Gated**
+and **Gated** tiers; and in terms, *"Open + Gated and Gated content are not covered by CC BY 4.0,
+CC0, or any other open license referenced here, even where other parts of Knowledge Graph are."*
+
+🔵 Every shelf in this base has a single `Licence` column. **This repository's grant is a function of
+which dataset you downloaded**, so any single value in that column is false. It is recorded with the
+split named and no cell — the first row on this base to be admitted *without* a licence value rather
+than with a wrong one.
+
+### 🔴 `925-F7` Region cannot be read off a repository's own artefacts — measured, not asserted
+
+The task this base serves places opportunities by region, and `agents/top.md`'s shelves carry an
+`Origin` column. `p925` tested whether that column can be filled from the repository itself.
+
+**Probe 1 — README locale signals.** Ten new repositories' READMEs were grepped for country,
+language, institution and university strings (`Ireland|Munster|Brazil|Germany|India|Nigeria|Kenya|
+Vietnam|Indonesia|中文|日本語|한국어|University of …|Universidad …|Penn State|…`).
+🔴 **Hits: 1 of 10**, and the one hit was the substring `s University` inside unrelated prose.
+
+**Probe 2 — manifests.** The same ten repositories' `package.json` / `composer.json` /
+`pyproject.toml` were fetched and grepped for `author`, `homepage`, `repository.url`, `support`.
+🔴 **Six resolved `200`; zero carried an author, homepage or organisation field that places the
+project.** `langx/langx` carried a `repository.url` — pointing back at its own GitHub address.
+
+**What is left.** Exactly two hard signals: the **language of the repository description**, and a
+**recognisable institution inside the org name**.
+
+| Placement | Count | Basis |
+|---|---|---|
+| 🟢 Hard-placed | **6** | `microsoft/StudentSim`, `Azure/Moodle`, `microsoft/o365-moodle` (org); `3yangyang9/DeepTutor-AILearning`, `five-plus-one/AI-Marker-Suite`, `ERRRC/kaogong-shuati`, `xiaochong0302/course-tencent-cloud` (Chinese description → APAC); `thm-mni-ii/feedbacksystem` (org = TH Mittelhessen, Germany → EMEA) |
+| 🟡 Weakly placed | **2** | `lynote-ai/ai-tutor` (ships a `README.zh-CN`); `chuma-beep/mathua` (sponsor badge points at `selar.com`, a Nigerian payments host) |
+| 🔵 **Unplaced** | **11** | `zoonk/zoonk`, `tutors-sdk/tutors`, `haxtheweb/haxcms-php`, `iblai/lms`, `inducer/relate`, `pacewisdomhq/TutorLoom`, `onemnemo/mnemo`, `langx/langx`, `SJRiz/pytogether`, `zuhairhalawa/studyai`, `shigella520/MindTrain` |
+
+🔵 **Written down as unplaced, because a guessed region is worse than a missing one**: the KB's
+region field is a closed five-value vocabulary feeding a filter, and a wrong value is
+indistinguishable from a measured one once compiled. 🔵 **`925-G2`:** the next pass that wants these
+eleven placed must use a channel *outside the repository* — the authors' org pages, the project
+websites (`tutors.dev`, `zoonk.com`, `lynote.ai`, `pytogether.org`, `ibl.ai`), or commit-author
+metadata — and should expect the websites to be the productive one, since three of the eleven link
+one from the README.
+
+### 🔵 `925-F8` `api.github.com/repos/` is still not an existence channel here, re-confirmed on 35 repositories
+
+Every one of the 35 shortlisted repositories was tried on `gh api repos/{owner}/{repo}` first.
+🔴 **35 of 35 returned** *"GitHub access to this repository is not enabled for this session. Use
+add_repo to request access."* — not a 404, not a rate limit, a session-scope refusal. The two
+channels that work are unchanged: **`search/repositories`** (which resolved **35 of 35**, with the
+licence-field defects in `925-F4`) and **`raw.githubusercontent.com`** (which resolved **34 of 35**
+licence files; the one miss is `925-F5`). 🔵 Recorded because the refusal message *invites* a tool
+call, and a pass that accepts the invitation for every third-party repo it wants to read will spend
+its whole budget attaching repositories it only needs to read two files from.
+
+### 🟢 `925-R1` The rule this pass publishes
+
+> **A nil is reportable only against a named channel.** Write *"the prose-query channel returned
+> nothing"*, never *"there is nothing"*. A pass that reports a nil must name the instrument, and a
+> pass that inherits a nil older than ten passes must re-test it against a *different* instrument
+> before repeating it.
+
+Pre-registered test for the successor pass: the forty-four-pass nil survived forty-four passes
+because no pass changed instrument. 🔵 **`925-G3`** — apply `925-R1` to the *other* standing nils in
+this base (the "measured and empty" language tiers in `repos/foundations.md`, the empty
+agent-skill-marketplace education tier in `T26`, the registered-and-empty examination-board tier in
+`verticals/solutions.md`) and report, per nil, whether it was ever tested on more than one channel.
+My prior: **the tiers measured by direct probe will hold, and the tiers measured by search will not.**
+
 ## `2026-11-19` (p924) — **`923-G1` asked whether other families share `923-F1`'s defect. Four do, and three of the four are *not* the defect `923-G1` described. 🔴 `AGPL-1.0` publishes as `GPL`, `LGPL-2.0` publishes as `GPL-2.0`, and **the Unlicense — a public-domain dedication — publishes as carrying a NONCOMMERCIAL term.** Measured on the ASF's, FSF's and SPDX's own published texts through a licence-text channel this base did not have yesterday.**
 
 🔵 **Summary.** The 8 mandated WebSearch legs filed as one line (`920-G3`), **a new primary

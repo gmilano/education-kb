@@ -329,6 +329,57 @@ clients and the Open edX analytics stack — after the shelf-vs-history diff sho
 deleted from this file by the 2026-11-18 cleanup rewrite without being listed as removals. All
 re-measured today on both channels.
 
+## 🆕 `p925` — the LMS tier re-opened by topic search, and the multi-tenancy gap closed
+
+🔴 **`p924` recorded "no new platform, and that is a measured result rather than an unsearched one."**
+That verdict was correct *for the mandated vertical prose leg* and wrong as a statement about the
+supply. `p925` ran the same leg — it returned the same vendor comparison page — and then ran
+`topic:lms`, `topic:learning-management-system` and `topic:e-learning` against
+`search/repositories`. **Eleven deployable platforms this base had never held came back.** Every
+grant below was byte-read from `raw.githubusercontent.com` on 2026-11-19.
+
+### 🟢 The one that closes a real gap
+
+Every LMS in the table at the top of this file is either **copyleft** (Moodle GPL-3.0, Open edX and
+Canvas AGPL-3.0, Chamilo and ILIAS GPL-3.0) or **permissive and single-tenant by design** (Artemis,
+Kolibri, OpenOLAT). A studio standing up a platform that serves several client institutions from one
+deployment has had nothing permissive to start from.
+
+| Platform | Repo | Licence (byte-read) | ★ | Where it fits | AI layering seam |
+|---|---|---|---|---|---|
+| **TutorLoom** | https://github.com/pacewisdomhq/TutorLoom | **Apache-2.0** (11,361 B, `a7f87303f2e9`) | 98 | 🟢 **Self-hosted *multi-tenant* LMS** for training institutes and teams — course builder, trainer and student portals, progress tracking. Django 6 + DRF + React 🔵 **The first permissive multi-tenant LMS on this shelf.** | Django app boundary; DRF gives an agent a typed API without scraping a UI |
+| **ibl.ai/lms** | https://github.com/iblai/lms | MIT (1,062 B, `d9d62c94b512`) | 88 | Skills-intelligence platform: competency tracking and credentialing rather than course delivery. Next.js 15 / React 19 / Tauri — ships as desktop **and** web | Competency graph is the primary object; the agent writes evidence against competencies, not grades against courses |
+| **Tutors** | https://github.com/tutors-sdk/tutors | MIT (1,087 B, `b418e808b99a`) | 125 | Course-as-filesystem reader, published to `tutors.dev` | 🟢 **No database** — an agent authors content by writing files |
+| **HAXcms** | https://github.com/haxtheweb/haxcms-php | Apache-2.0 (11,362 B, `b662f44e55e8`) | 130 | A *universe of microsites*, PHP backend, no database, Lit web components; carries an **OpenSSF Scorecard** badge | Per-course or per-cohort sites generated and discarded on demand |
+| **RELATE** | https://github.com/inducer/relate | **MIT/X Consortium** (1,144 B, `e6c20b652766`) | 439 | University courseware with git-versioned content and automatic grading; released on PyPI as `relate-courseware` | 🔴 Reported `NOASSERTION` by the search channel — see `agents/top.md` `925-F4`; the grant is permissive |
+| **Feedbacksystem** | https://github.com/thm-mni-ii/feedbacksystem | Apache-2.0 (10,784 B, `824e945ea176`) | 24 | TH Mittelhessen's personalised-feedback system — **EMEA**, institution-run | 🟢 **Published Helm chart on Artifact Hub** — the only row in this file with a packaged install path maintained by the authors |
+| **pytogether** | https://github.com/SJRiz/pytogether | MIT (1,072 B, `c8df073d1320`) | 262 | Browser-based collaborative Python IDE: real-time editing, shared drawing canvas, voice | Classroom coding an agent can observe with nothing installed on the student machine |
+
+### 🔴 Copyleft platforms — real, deployable, and `DELIVERABLE — COPYLEFT` at best
+
+Shelved so a later pass does not rediscover them and mistake them for permissive.
+
+| Platform | Repo | Licence (byte-read) | ★ | Note |
+|---|---|---|---|---|
+| **LearnHouse** | https://github.com/learnhouse/learnhouse | **AGPL-3.0** (34,522 B, `20b067f86de3`) | 2,483 | The largest new LMS this pass. AGPL reaches network use — hosting it for a client is distribution. |
+| **CourseLit** | https://github.com/codelitdev/courselit | **AGPL-3.0** (34,142 B, `9c0cb21c26d8`) | 1,304 | Course + digital-download commerce on the client's own domain; positioned against Teachable/Thinkific/Podia. The **commerce** tier this file has otherwise lacked. |
+| **Claroline** | https://github.com/claroline/Claroline | **AGPL-3.0** (34,615 B, `426f3f93060d`) | 349 | 🔴 **Search channel says `NOASSERTION`; the byte-read is canonical AGPL-3.0.** The false negative runs in *both* directions (`925-F4`) — this one would have been mis-shelved as permissive. |
+| **ELMS:LN** | https://github.com/elmsln/elmsln | GPL-3.0 (35,192 B, `78ccc98f3768`) | 253 | Distributed learning network; same stable as HAXcms, different grant. |
+| **course-tencent-cloud** | https://github.com/xiaochong0302/course-tencent-cloud | GPL-2.0 (18,430 B, `b0f38548973d`) | 1,177 | 🟢 **APAC** — Chinese online-school / knowledge-payment system, Docker-deployed, explicitly free for commercial use *under GPL-2.0*. The paid-content billing model is the part the permissive tier has no answer for. |
+| **Sensei LMS** | https://github.com/Automattic/sensei | GPL-2.0 (18,091 B, `f9c375a1be4a`) | 599 | WordPress LMS, Automattic-maintained. Relevant only where the client estate is already WordPress. |
+| **LifterLMS** | https://github.com/gocodebox/lifterlms | GPL-3.0 (35,140 B, `b98fbb37db5b`) | 211 | Second WordPress LMS; course sales and content protection. |
+| **UDOIT** | https://github.com/ucfopen/UDOIT | GPL-3.0 (35,146 B, `c53a65c2fd56`) | 119 | 🟢 **Accessibility inspection for an LMS course** — scans a course, reports issues, explains the fix. University of Central Florida. 🔵 The only accessibility artefact on this base, and accessibility is a named line item in most public-sector education tenders. |
+| **o365-moodle** | https://github.com/microsoft/o365-moodle | GPL-3.0 (35,146 B, `c53a65c2fd56`) | 216 | Microsoft 365 / Entra plugins for Moodle. 🔵 Licence file **byte-identical** to UDOIT's — a control confirming both are canonical GPL-3.0. |
+
+### 🔵 `p925` — verified and refused, with the reason recorded
+
+| Repo | ★ | Why refused |
+|---|---|---|
+| https://github.com/CaviraOSS/PageLM | 2,070 | **"PageLM Community License"** — non-commercial only, and it defines commercial use to include any business or revenue-generating activity. A client engagement is excluded. |
+| https://github.com/chadyi/StudyOnTV | 1,712 | **"Source Available — Personal Use Only"**; redistribution to third parties explicitly prohibited. |
+| https://github.com/LearnPress/learnpress | 275 | 🔴 **No licence file on 18 probed paths.** `readme.txt` serves `200` — the WordPress convention of a `License:` header inside the readme. The grant is **unresolved by file**, so the row is not shelved. |
+| https://github.com/Azure/Moodle | 186 | Not refused on the grant (MIT, 1,090 B, `91f7258203fd`) — it is **deployment tooling for Moodle**, so it belongs beside the Moodle row above rather than as a platform of its own. Worth knowing it exists before anyone rebuilds it. |
+
 ## What you inherit when you deploy one of these — measured `p905`
 
 A vertical platform is chosen on features and deployed with its dependency tree. This section records

@@ -6,7 +6,7 @@ updated: 2026-11-19
 
 # Current trends — education
 
-**Fifty-six trends, re-counted mechanically in `p921`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **56**; `T55`–`T56` added in `p921`, command run after writing them and before writing this number — 🟢 three passes running that the rule has held. *(prior banner:* **Fifty-four trends, re-counted mechanically in `p920`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **54**; `T53`–`T54` added in `p920`, and the command was run after writing them and before writing this number. 🟢 Two passes running that the rule has held.*)* *(prior banner:* **Fifty-two trends, re-counted mechanically in `p919`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **52**; `T51`–`T52` added in `p919`, and the command was run after writing them and before writing this number. `T50` was added in `p918` without this banner being re-run, which is the drift this sentence exists to catch — caught one pass later this time.)*) (*prior banner:* **Forty-nine trends, re-counted mechanically in `p917`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **49**; `T48`–`T49` added in `p917`, and the command was run before the word was written, not after). (*prior banner:* **Forty-seven trends, re-counted mechanically in `p916`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **47**; `T44`–`T47` added in `p916`. 🔵 The rule this line has now carried through four passes finally held: `p916` ran the command rather than editing the word.).) (*prior banner:* **Forty-three trends, re-counted mechanically in `p915`** (🔴 **this line read *"Thirty-nine"* and was four short — `T40`–`T42` were added in `p914` and `T43` in `p915`, and `p914` incremented nothing. That is the *third* consecutive recurrence of the drift this very sentence was written to stop, which makes the rule worth restating as a procedure rather than a warning: 🔵 the count is `grep -cE '^## T[0-9]+' intel/trends.md`, it is **43**, and a pass that adds a trend re-runs that command instead of editing the word.*)* (🔴 this line read *"Thirty-one"* and was **eight short**: `T32`–`T38` were added in `p908`–`p912` and `T39` in `p913`. `compose/patterns.md` carries the rule — *a pass that adds one should re-count, not increment* — and this file drifted the same way and further. 🔵 The count is `grep -cE '^## T[0-9]+' intel/trends.md`; **do not hand-edit it.** `T37` is **materially corrected in `p913`** and `T38` has a second chapter added in `p913`.) (**T30 and T31 added in `p907`** — the LMS-to-agent bridge being built per-institution on the *user's own credentials*, which needs no institutional consent; and the agent-skill marketplaces having no education tier at all, which makes `T26`'s distribution channel measurably empty. Both are the first trends in this file derived from **global code search**, an instrument this base had recorded as unusable; **T29 added in `p906`** — vernacular open education supply measured across eight languages and found to be a single-country phenomenon, with *no licence at all* the default state in the other seven; **T26 added in `p903`** — the unit of publication shifting from the
+**Sixty trends, re-counted mechanically in `p925`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **60**; `T59`–`T60` added in `p925`, command run after writing them and before writing this number). 🔴 **This line read *"Fifty-six"* and was four short — `T57`–`T58` were added in `p922` and neither that pass nor the two after it re-ran the command, which is the fifth recurrence of the drift this sentence exists to stop.** 🔵 The count is `grep -cE '^## T[0-9]+' intel/trends.md`; **do not hand-edit it.** *(prior banner:* **Fifty-six trends, re-counted mechanically in `p921`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **56**; `T55`–`T56` added in `p921`, command run after writing them and before writing this number — 🟢 three passes running that the rule has held. *(prior banner:* **Fifty-four trends, re-counted mechanically in `p920`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **54**; `T53`–`T54` added in `p920`, and the command was run after writing them and before writing this number. 🟢 Two passes running that the rule has held.*)* *(prior banner:* **Fifty-two trends, re-counted mechanically in `p919`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **52**; `T51`–`T52` added in `p919`, and the command was run after writing them and before writing this number. `T50` was added in `p918` without this banner being re-run, which is the drift this sentence exists to catch — caught one pass later this time.)*) (*prior banner:* **Forty-nine trends, re-counted mechanically in `p917`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **49**; `T48`–`T49` added in `p917`, and the command was run before the word was written, not after). (*prior banner:* **Forty-seven trends, re-counted mechanically in `p916`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **47**; `T44`–`T47` added in `p916`. 🔵 The rule this line has now carried through four passes finally held: `p916` ran the command rather than editing the word.).) (*prior banner:* **Forty-three trends, re-counted mechanically in `p915`** (🔴 **this line read *"Thirty-nine"* and was four short — `T40`–`T42` were added in `p914` and `T43` in `p915`, and `p914` incremented nothing. That is the *third* consecutive recurrence of the drift this very sentence was written to stop, which makes the rule worth restating as a procedure rather than a warning: 🔵 the count is `grep -cE '^## T[0-9]+' intel/trends.md`, it is **43**, and a pass that adds a trend re-runs that command instead of editing the word.*)* (🔴 this line read *"Thirty-one"* and was **eight short**: `T32`–`T38` were added in `p908`–`p912` and `T39` in `p913`. `compose/patterns.md` carries the rule — *a pass that adds one should re-count, not increment* — and this file drifted the same way and further. 🔵 The count is `grep -cE '^## T[0-9]+' intel/trends.md`; **do not hand-edit it.** `T37` is **materially corrected in `p913`** and `T38` has a second chapter added in `p913`.) (**T30 and T31 added in `p907`** — the LMS-to-agent bridge being built per-institution on the *user's own credentials*, which needs no institutional consent; and the agent-skill marketplaces having no education tier at all, which makes `T26`'s distribution channel measurably empty. Both are the first trends in this file derived from **global code search**, an instrument this base had recorded as unusable; **T29 added in `p906`** — vernacular open education supply measured across eight languages and found to be a single-country phenomenon, with *no licence at all* the default state in the other seven; **T26 added in `p903`** — the unit of publication shifting from the
 application to the agent-addressable curriculum corpus, the first trend in this file derived from a
 non-English repository channel; **T25 added in `p902`** — the licence trap moving from code to the data
 and content assets, where no index can see it; **T24 added in `p901`** — path-dependent licences, the first trend in this file derived from repositories the SPDX channel refused to resolve at all; **T23 added in `p900`** — the first trend in this file derived from a
@@ -2397,6 +2397,78 @@ index.
 🟢 **What to say in a proposal, which does not depend on any of the above being a mechanism:**
 *"The curation you are about to copy is unlicensed in two tiers out of three. Clearing it is three
 days (see `compose/patterns.md` **P47**), and the usual answer is yes."*
+
+## T59 — In open education software, star rank is inversely associated with licence permissiveness, so a star-sorted shelf selects against the grant you need (added `p925`)
+
+`p925` ran twelve discovery legs over GitHub's **topic** index and byte-read the grant of 35
+shortlisted education repositories. Sorting the result by stars and reading the grant column down
+produces a clean gradient:
+
+| Star band | Repositories byte-read `p925` | Permissive (MIT / Apache-2.0 / BSD) | Not deliverable |
+|---|---|---|---|
+| **> 1,000 ★** | 7 | 🔴 **0** | 🔴 **7** — `CC BY-NC`, bespoke non-commercial, source-available-personal-only, none-declared, AGPL-3.0 ×2, GPL-2.0 |
+| **200–999 ★** | 13 | 6 | 7 |
+| **< 200 ★** | 15 | 🟢 **13** | 2 |
+
+🔴 **Nothing above a thousand stars in this industry was deliverable.** The permissive supply's
+largest member is `inducer/relate` at **439 ★**, its median is **133 ★**, and the two most useful
+rows the pass found — `microsoft/StudentSim` (evaluation of a tutor, **83 ★**) and
+`thm-mni-ii/feedbacksystem` (institution-run feedback with a published Helm chart, **24 ★**) — sit
+**below every star floor this base has previously used**.
+
+🔵 **Why the association is causal rather than coincidental.** The large education repositories are
+either (a) **products** whose owners want the distribution of open source and the revenue of a
+licence (`PageLM`, `StudyOnTV`, `courselit`, `learnhouse`, `course-tencent-cloud`), or (b)
+**content and curriculum assets**, which are naturally licensed under content and database terms
+rather than software ones (`cn-math-taxonomy`, `os-taxonomy` — see `T25`). Both categories draw
+stars precisely because they are finished and usable to an individual, and both categories put the
+restriction in the grant. The permissive end is dominated by **institutional** and **toolkit** code,
+which is less immediately usable and therefore less starred.
+
+🟢 **Operational consequence.** Sort by stars to **find**; filter by byte-read grant to **shelve**;
+set the star floor **low** — an education discovery leg with a floor at 200 ★ would have returned
+none of this pass's best rows. Recorded as gate `925-G4` in `repos/trending.md`.
+
+🔵 **How to break this trend.** It predicts that a *future* permissive education repository above
+1,000 ★ will be institutional or toolkit code rather than a product. `pacewisdomhq/TutorLoom`
+(Apache-2.0, multi-tenant, 98 ★) is the candidate to watch: it is the first permissive artefact here
+with a commercial-grade feature set, so if it crosses 1,000 ★ without relicensing, this trend is
+weakening.
+
+## T60 — The portable asset in a regulated education market is the evidence layer, not the agent — the same four capabilities satisfy four different regulatory regimes (added `p925`)
+
+`p925`'s four regional legs produced four regulatory regimes that look incompatible and are not:
+
+| Region | The binding constraint |
+|---|---|
+| EMEA | EU AI Act lists systems that **determine access to education** and **assess learning outcomes** as **high-risk**; the AI Office has enforced since **2026-08-02** |
+| North America | Statutes bar AI as the **primary basis** for a grade or a discipline decision; consent is **opt-in** in some states and **opt-out** in others; dated district deadlines (North Carolina: model policy **2026-12-31**) |
+| APAC | Vietnam's AI law (in force **2026-03-01**) names **education high-risk**; South Korea's AI Basic Act in force **2026-01-22** |
+| LATAM | **716 instruments across 23 jurisdictions**, fragmented; **92% of students use AI** against **26% of institutions having a strategy** |
+
+🟢 **Every one of them is discharged by the same four capabilities:** (1) a **human-in-the-loop
+record** that proves a human, not a model, was the primary basis for a consequential decision;
+(2) **per-student consent state**, configurable opt-in or opt-out; (3) a **data-flow attestation**
+that student data did not reach a training set; (4) **learning-outcome evidence**, because the OECD
+line and the US grant-priority rule both ask for durable gains rather than engagement.
+
+🔴 **None of the nineteen permissive education agents shelved in `p925` has any of the four**, and
+nor does any agent on the shelves above them. The capability every regime requires is the one the
+open supply does not provide.
+
+🔵 **Why this is a trend and not a checklist.** It inverts the usual regional reading. The naive
+model says a regulated market is harder to sell into; this says the regulation **standardises the
+deliverable across regions**, so the evidence layer is built once and sold four times, while the
+tutor itself — the part everyone builds — is the part that must be localised per market
+(`T26`, `T29`) and is the part a client can get free. 🔵 It also explains why the EMEA and LATAM
+sales are mirror images: in EMEA the rule exists and the capability is missing; in LATAM the
+capability is in daily use and the rule is missing. Same product, opposite pitch.
+
+🟢 **The substrate exists and is permissive**: `yetanalytics/lrsql` (Apache-2.0),
+`openfun/ralph` (Apache-2.0), `adlnet/ADL_LRS` and the xAPI tier for the record;
+`openedx/openedx-aspects` for analytics; `microsoft/StudentSim` (MIT, added `p925`) for the
+outcome-evidence half, since it is the first artefact on this base that evaluates a tutoring method
+rather than delivering one. The gap is integration, not invention.
 
 ## T56 — A licence index stops being evidence exactly where the grant is a notice rather than a licence body, and that is disproportionately the non-English shelf (added `p921`)
 

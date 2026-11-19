@@ -4,6 +4,99 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p925) — **97 unheld repositories came out of GitHub's topic index in one pass, after forty-four passes of prose queries returned none. The trending shelf's intake problem was never supply.**
+
+### 🟢 The channel — GitHub's **topic** index, via `search/repositories`
+
+`p924` opened a primary licence-text channel. `p925` opens a primary **discovery** channel, and it
+is the same host this base already trusts. Topics are author-declared labels on a repository;
+`search/repositories` accepts them as qualifiers and sorts by stars:
+
+```
+gh api -X GET search/repositories \
+  -f q='topic:edtech stars:>80 pushed:>2026-06-01' \
+  -f sort=stars -f order=desc -f per_page=30 \
+  --jq '.items[] | "\(.full_name)\t\(.stargazers_count)\t\(.license.spdx_id // "NONE")\t\(.pushed_at[0:10])"'
+```
+
+🟢 **Twelve legs, 141 rows, 97 this base had never held.** The four mandated English prose legs, run
+in the same pass, returned **zero** unheld rows. The full accounting is in `agents/trending.md`
+`925-F1`; what belongs in *this* file is what the channel means for a trending shelf.
+
+### 🔴 What this says about the last forty-four trending entries
+
+This file exists to record what is new this week. For forty-four passes its intake has been a prose
+search engine, and its entries have therefore been **the four repositories that prose engine knows
+about** — `HKUDS/DeepTutor`, `THU-MAIC/OpenMAIC`, `withmarbleapp/os-taxonomy`,
+`patchy631/ai-engineering-hub` — re-measured for star drift. 🔴 **Star drift on four repositories is
+not a trend record.** The topic channel's 97 unheld rows include nine repositories above 1,000 ★
+that have never appeared in this file:
+
+| Repo | ★ | Pushed | Grant (byte-read `p925`) | Ever in this file? |
+|---|---|---|---|---|
+| `xiaoyang111222/cn-math-taxonomy` | **8,648** | 2026-11-19 | 🔴 `CC BY-NC 4.0` | no |
+| `learnhouse/learnhouse` | **2,483** | 2026-11-19 | 🔴 `AGPL-3.0` | no |
+| `CaviraOSS/PageLM` | **2,070** | 2026-11-15 | 🔴 bespoke non-commercial | no |
+| `Nutlope/llamatutor` | **2,054** | 2026-10-23 | 🔴 none declared | no |
+| `chadyi/StudyOnTV` | **1,712** | 2026-11-18 | 🔴 source-available, personal use only | no |
+| `codelitdev/courselit` | **1,304** | 2026-11-19 | 🔴 `AGPL-3.0` | no |
+| `xiaochong0302/course-tencent-cloud` | **1,177** | 2026-11-16 | 🔴 `GPL-2.0` | no |
+| `chuma-beep/mathua` | 430 | 2026-11-18 | 🟢 **MIT** (1,074 B, `6bd7c2a354d5`) | no |
+| `inducer/relate` | 439 | 2026-11-18 | 🟢 **MIT/X** (1,144 B, `e6c20b652766`) | no |
+
+🔵 **Read the grant column before reading the star column.** Of the nine, **seven are not
+deliverable** — which is itself the most useful thing this pass learned about the top of the
+education shelf: *the large, visible, trending end of this industry is predominantly copyleft,
+non-commercial or unlicensed, and the permissive supply sits two orders of magnitude lower in stars.*
+
+### 🟢 New this week — the permissive rows, byte-read
+
+Shelved in full in `repos/foundations.md` and `verticals/solutions.md`; listed here as the trending
+record. All grants read from `raw.githubusercontent.com` on **2026-11-19**.
+
+| Repo | ★ | Grant | Bytes / `sha256₁₂` | One line |
+|---|---|---|---|---|
+| `inducer/relate` | 439 | **MIT/X Consortium** | 1,144 / `e6c20b652766` | University courseware, git-versioned content, auto-grading; 🔴 channel said `NOASSERTION` |
+| `chuma-beep/mathua` | 430 | MIT | 1,074 / `6bd7c2a354d5` | Adaptive maths: 3,015 concepts, mastery gates, FSRS review |
+| `AkshitIreddy/AI-Powered-Video-Tutorial-Generator` | 322 | MIT | 1,069 / `6c87c23cbf5c` | Illustrated video lessons, local or cloud models |
+| `3yangyang9/DeepTutor-AILearning` | 331 | Apache-2.0 | 11,407 / `596087a7f098` | 🟢 Multi-tenant platform with a **billing tier** — APAC |
+| `SJRiz/pytogether` | 262 | MIT | 1,072 / `c8df073d1320` | Browser collaborative Python IDE with shared canvas |
+| `ERRRC/kaogong-shuati` | 256 | MIT | 1,061 / `b7722af28e18` | 国考/省考 exam practice with AI explanations — APAC |
+| `zuhairhalawa/studyai` | 240 | MIT | 1,068 / `326f6a6b9c20` | Local-first lecture study platform; AI tutor optional |
+| `Azure/Moodle` | 186 | MIT | 1,090 / `91f7258203fd` | Scalable Moodle clusters on Azure — MIT tooling round a GPL app |
+| `zoonk/zoonk` | 157 | MIT | 1,061 / `34f44fc04045` | Goal → dated daily learning plan |
+| `onemnemo/mnemo` | 133 | Apache-2.0 | 11,325 / `9e43fad60ad0` | .NET 10 study app — the only .NET row on this base |
+| `haxtheweb/haxcms-php` | 130 | Apache-2.0 | 11,362 / `b662f44e55e8` | Database-free microsite universe; **OpenSSF Scorecard** badge |
+| `shigella520/MindTrain` | 129 | MIT | 1,066 / `d69b0f7c3228` | Pluggable-scheduler trainer, optional Anki/FSRS |
+| `tutors-sdk/tutors` | 125 | MIT | 1,087 / `b418e808b99a` | Course-as-filesystem reader toolkit |
+| `lynote-ai/ai-tutor` | 123 | MIT | 1,062 / `017037465041` | 🟢 "Only teaches a sentence it can quote" |
+| `langx/langx` | 111 | **BSD-3-Clause** | 1,519 / `f90e8a082588` | Language exchange; 🟢 structurally confirmed **3**-clause |
+| `pacewisdomhq/TutorLoom` | 98 | Apache-2.0 | 11,361 / `a7f87303f2e9` | 🟢 **First permissive multi-tenant LMS** on this base |
+| `iblai/lms` | 88 | MIT | 1,062 / `d9d62c94b512` | Agentic LMS; competency graph as primary object |
+| `microsoft/StudentSim` | 83 | MIT | 1,073 / `a03acaea0251` | 🟢 **Simulated students for evaluating a tutor** — first evaluation-side artefact here |
+| `thm-mni-ii/feedbacksystem` | 24 | Apache-2.0 | 10,784 / `824e945ea176` | 🟢 Helm chart on Artifact Hub; TH Mittelhessen — EMEA |
+
+🔵 **The star distribution is the finding.** Nineteen permissive, maintained, education-specific
+repositories, and **the largest is 439 ★ while the median is 133 ★**. Compare the refused set above,
+where the median is 1,712 ★. A shelf built by sorting on stars selects *against* the licence this
+base exists to find.
+
+### 🔴 The star-sort trap, stated as a rule
+
+> `925-G4` — **In this industry, star rank and licence permissiveness are inversely associated.** A
+> discovery leg that sorts by stars and truncates at 30 rows returns mostly non-deliverable
+> software. Sort by stars to *find*, filter by byte-read grant to *shelve*, and set the star floor
+> low — this pass's two most useful rows (`microsoft/StudentSim` at 83 ★ and
+> `thm-mni-ii/feedbacksystem` at 24 ★) are below every star floor this base has previously used.
+
+### 🔵 Method note for the next pass
+
+The topic channel's blind spot is **author declaration**: it reaches only repositories whose authors
+tagged them. 🔵 So the 97 is a floor, not a census, and the correct successor leg is not a bigger
+star window but **more topics** — `topic:moodle`, `topic:scorm`, `topic:lti`, `topic:canvas-lms`,
+`topic:spaced-repetition`, `topic:student-information-system`, `topic:grading`, `topic:mooc`, and
+the non-English topic strings this base's vernacular tiers imply.
+
 ## `2026-11-19` (p924) — **Four of five catalogue nils survive a second query shape and become measured properties of their tiers; the fifth is a `922-R2` counter-example. 🟢 And a primary licence-text channel opened, on the one host this base already trusts.**
 
 ### 🟢 The channel — `spdx/license-list-data`

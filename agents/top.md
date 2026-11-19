@@ -29,6 +29,27 @@ curriculum graph, correct for the asset and a trap for anyone who reads the repo
 `master/README.rst`.** That is `p900`'s false-absence class landing on the AGPL anchor of the
 whole LMS tier; the two-channel rule caught it. See `agents/trending.md` `901-F3`.
 
+**Latest sweep — `p925` (2026-11-19).** 🟢 **The forty-fourth consecutive English-prose nil is a
+property of the query shape, not of the supply — and this pass measured that rather than reporting
+it again.** The four mandated WebSearch legs ran and returned **zero** unheld education repositories
+for the forty-fourth consecutive pass. The same budget spent on **topic-qualified repository search**
+(`gh api search/repositories` over `topic:edtech`, `topic:ai-education`, `topic:education topic:ai`,
+`topic:lms`, `topic:learning-management-system`, `topic:e-learning`,
+`topic:intelligent-tutoring-system`, `topic:assessment topic:ai`, plus four prose qualifiers)
+returned **141 repositories, 97 of which this base had never held**. 🔴 **So the standing sentence —
+"the English-language agent shelf is exhausted" — was never measured against a topic-qualified
+channel, and it is wrong.** Thirty-five were shortlisted and **35 of 35 had their grant byte-read**
+from `raw.githubusercontent.com`; **19 are permissive and new** and are shelved below.
+🔴 **Two high-star education repositories are licence traps that a star filter cannot see:**
+`CaviraOSS/PageLM` (**2,070 ★**) publishes a bespoke *"PageLM Community License"* that forbids any
+use "in connection with any business, revenue-generating activity" — **a consultancy engagement is
+Commercial Use** — and `chadyi/StudyOnTV` (**1,712 ★**) is *"Source Available — Personal Use Only"*,
+forbidding commercial use **and** redistribution. Both read `NOASSERTION` on the search channel.
+🔴 **And `xiaoyang111222/cn-math-taxonomy` — 8,648 ★, 1,644 knowledge points, 2,403 prerequisite
+edges — is `CC BY-NC 4.0`**: the APAC analogue of `withmarbleapp/os-taxonomy`, and the first
+curriculum graph on this base carrying a *NonCommercial* term. 🔵 That is `intel/trends.md` **`T25`**
+landing a second time, at eight thousand stars. See `agents/trending.md` `925-F1`–`925-F7`.
+
 **Latest sweep — `p924` (2026-11-19).** 🔴 **No remeasure of this file's rows and no new agent rows
 — the forty-third consecutive nil at the agent layer.** The eight mandated English legs returned
 **zero repositories** and **21 of 24 named facts this base already holds**; the one repository the
@@ -890,6 +911,57 @@ Thailand there is no second shelf to fall back to and no second shelf that is ne
 agent; adopt the Nueva Escuela Mexicana vocabulary** — the *campos formativos* and *ejes
 articuladores* that every one of these 74 repositories encodes by hand, and which is the part a
 foreign-built tutor gets wrong.
+
+## The topic-qualified channel — 19 permissive agents and platforms, added `p925`
+
+🟢 **Why this section exists.** Forty-four passes of mandated English *prose* legs
+(`top open source AI agents education 2026 github MIT` and its three siblings) have returned nothing
+unheld. `p925` kept those legs *and* spent the same budget on GitHub's **topic** index. The prose
+legs returned **0** unheld repositories; the topic legs returned **97**. The nil was the instrument.
+
+**Method, and its limits.** Candidates came from `gh api search/repositories` with `sort=stars`;
+every row below then had its `LICENSE`/`LICENSE.md`/`COPYING` fetched from
+`raw.githubusercontent.com` and the **grant text read**, with byte size and `sha256₁₂` recorded.
+`api.github.com/repos/` is session-scoped and returns *"GitHub access to this repository is not
+enabled for this session"* for every third-party repo — **it is not an existence channel here**; the
+two channels that work remain `search/repositories` and `raw`. Stars are as at **2026-11-19**.
+
+🔴 **Region is the weak column, and it is weak for a measured reason — see `925-F7`.** Ten of these
+repositories had `package.json` / `composer.json` / `pyproject.toml` probed for an `author`,
+`homepage` or organisation field: **zero carried one that places the project**, and no README carried
+a locale signal either. Only two hard signals exist — the **language of the repository description**
+and a **recognisable institution inside the org name**. That hard-places **6 of 19**, weakly places
+**2**, and leaves **11 unplaced**. Unplaced is written as unplaced below, not guessed.
+
+### 🟢 Agent tier — built to teach, tutor, assess or simulate
+
+| Agent | Repo | Licence (byte-read) | ★ | Last push | What it does | Origin |
+|---|---|---|---|---|---|---|
+| **StudentSim** | https://github.com/microsoft/StudentSim | MIT (1,073 B, `a03acaea0251`) | 83 | 2026-11-19 | 🟢 **A research framework that builds *per-student simulators*** — a stand-in learner carrying a specific student's skill level and characteristic weaknesses, so a tutoring method can be tried against it before a human is involved. Its own README names the two properties it is graded on: **behavioural fidelity** (a simulator that answers better than the student has none of the gaps the tutoring targets) and **guidance responsiveness** (if it does not change its answer after tutoring the way that student did, it cannot tell you whether the guidance helped). 🔵 **This is the first artefact on this base that addresses evaluation of a tutor rather than delivery of one** — the gap `intel/trends.md` has recorded since the OECD "durable learning gains" line. | Global — `microsoft` org; project site bilingual EN/中文 |
+| **Lynote Learning Path** | https://github.com/lynote-ai/ai-tutor | MIT (1,062 B, `017037465041`) | 123 | 2026-11-16 | Self-hosted tutor that turns notes, slides, PDFs and links into a chapter learning path plus quizzes. 🟢 **Its stated constraint is the interesting part: "it only teaches a sentence it can quote"** — extractive grounding as a product rule, not a prompt. Bring-your-own model key; Docker Compose. | APAC *(weak — ships a `README.zh-CN`; no manifest signal)* |
+| **Mathua** | https://github.com/chuma-beep/mathua | MIT (1,074 B, `6bd7c2a354d5`) | 430 | 2026-11-18 | Adaptive maths engine: **3,015 concepts**, generated problems, **mastery gating** and **FSRS spaced review**, Go + Next.js, self-hostable. 🟢 The mastery-gate-plus-FSRS combination is the same architecture as `HKUDS/DeepTutor`'s learning paths, at a size a studio can actually read end to end. | EMEA *(weak — sponsor link is `selar.com`, a Nigerian payments host; a badge, not a manifest)* |
+| **studyai** | https://github.com/zuhairhalawa/studyai | MIT (1,068 B, `326f6a6b9c20`) | 240 | 2026-10-24 | **Local-first** study platform for university lectures: PowerPoint ingest, spaced repetition, exam generation, with the AI tutor **optional** and on a free-tier model. 🔵 The optionality is the design note worth keeping — the platform is useful with the model switched off. | 🔵 unplaced |
+| **MindTrain** | https://github.com/shigella520/MindTrain | MIT (1,066 B, `d69b0f7c3228`) | 129 | 2026-10-15 | Java knowledge-training platform with **pluggable schedulers**, agent-skill integration and optional **Anki/FSRS** backends. 🔵 A scheduler-pluggable trainer is the shape `compose/patterns.md` has been hand-wiring; this one ships the seam. | 🔵 unplaced |
+| **DeepTutor-AILearning** | https://github.com/3yangyang9/DeepTutor-AILearning | Apache-2.0 (11,407 B, `596087a7f098`) | 331 | 2026-10-09 | 🟢 **Multi-tenant learning platform for offline training institutions** — platform operator manages institutions, models and billing policy; institutions manage campuses; campuses manage teachers and students; students work through textbook assessment, gap remediation and knowledge-point study. 🔵 **The billing-and-tenancy layer is what this base has never had**: every other tutor here is single-tenant. 🔴 The name is *not* a fork of `HKUDS/DeepTutor` — different owner, different grant, different architecture. | APAC — repository description is in Chinese |
+| **AI-Marker-Suite** | https://github.com/five-plus-one/AI-Marker-Suite | 🔴 **GPL-3.0** (35,153 B, `8d13aacc9396`) | 192 | 2026-11-19 | Browser-based marking assistant for teachers: recognises **handwritten** answer sheets, scores against a rubric, supports trial marking, per-sub-question scoring, **double-marking arbitration** and export of marking history. 🔴 **Copyleft — `DELIVERABLE — COPYLEFT` only.** The double-marking-arbitration workflow is the part worth reading even if the grant rules out shipping it. | APAC — repository description is in Chinese |
+| **kaogong-shuati** | https://github.com/ERRRC/kaogong-shuati | MIT (1,061 B, `b7722af28e18`) | 256 | 2026-09-24 | Civil-service exam practice app (国考 / 省考 / 事业单位): 行测 and 申论 question banks, wrong-answer book, AI explanations. 🔵 Joins the national-examination tier as its **second** permissive Mandarin member. | APAC — repository description is in Chinese |
+| **AI-Powered-Video-Tutorial-Generator** | https://github.com/AkshitIreddy/AI-Powered-Video-Tutorial-Generator | MIT (1,069 B, `6c87c23cbf5c`) | 322 | 2026-09-21 | Generates and edits illustrated video lessons with expressive presenters, distinct voices and a native timeline; Windows desktop, **local models or cloud providers**. 🔵 The only video-generation artefact on this shelf with a permissive grant and a local-model path. | 🔵 unplaced |
+| **Zoonk** | https://github.com/zoonk/zoonk | MIT (1,061 B, `34f44fc04045`) | 157 | 2026-11-19 | Turns a goal stated in the learner's own words into a **dated daily plan** — lessons, practice and reviews laid out to a target date. 🔵 Goal-to-schedule is a different primitive from material-to-path (`Lynote`) and from mastery-gating (`Mathua`); all three are MIT and compose. | 🔵 unplaced |
+| **Feedbacksystem** | https://github.com/thm-mni-ii/feedbacksystem | Apache-2.0 (10,784 B, `824e945ea176`) | 24 | 2026-11-19 | Personalised automated feedback for students, with a **published Helm chart on Artifact Hub** and CI/coverage in the open. 🟢 **Lowest star count on this shelf and the most deployable thing on it** — an institution-run system with a packaged install path, which is the gap `verticals/solutions.md` names under "what you inherit when you deploy one of these". | EMEA — org `thm-mni-ii` = TH Mittelhessen, Fachbereich MNI (Germany) |
+
+### 🔴 Refused this pass — high-star education repositories that are not deliverable
+
+Recorded because each one passes a star filter, a trending list and a topic query, and fails only on
+the grant text. Every one was byte-read; none is shelved.
+
+| Repo | ★ | Search channel says | Byte-read grant says | Why refused |
+|---|---|---|---|---|
+| https://github.com/CaviraOSS/PageLM | 2,070 | `NOASSERTION` | **"PageLM Community License"** (8,562 B, `20a39a9c5993`) | Grants use for "personal, educational, or non-commercial research purposes" only, and defines **Commercial Use** as any use "in connection with any business, revenue-generating activity, or commercial purpose". 🔴 **A client engagement is Commercial Use.** |
+| https://github.com/chadyi/StudyOnTV | 1,712 | `NOASSERTION` | **"Source Available License — Personal Use Only"** (1,042 B, `fdc484954b1b`) | Personal, non-commercial, household use only; **redistribution in source or binary form to any third party is explicitly prohibited**, as is use of the name or branding. |
+| https://github.com/xiaoyang111222/cn-math-taxonomy | 8,648 | `NOASSERTION` | **`CC BY-NC 4.0`** (19,345 B, `db2e35513dba`) | 🔴 A **NonCommercial** term on a curriculum graph of 1,644 knowledge points, 2,403 prerequisite edges and 6,723 aligned items. See `925-F3` — this is the second curriculum asset on this base with a non-software grant, and the first that is noncommercial. |
+| https://github.com/Nutlope/llamatutor | 2,054 | `NONE` | *(no grant to read)* | No licence declared. Default copyright; not adoptable. |
+| https://github.com/LearnPress/learnpress | 275 | `NONE` | 🔴 **no licence file on 18 probed paths** (3 branches × 6 filenames) | `readme.txt` returns `200` — the WordPress-plugin convention puts the grant in a `License:` header inside that file rather than in a licence file. Recorded with the grant **unresolved by file**; not shelved as permissive. See `925-F5`. |
+| https://github.com/learning-commons-org/knowledge-graph | 169 | `NOASSERTION` | 🔵 **split grant** (5,788 B, `86b7ebf9b61d`) | Code is MIT; **datasets are licensed per dataset** across *Open*, *Open+Gated* and *Gated* tiers, and the licence states that Open+Gated and Gated content are "not covered by CC BY 4.0, CC0, or any other open license referenced here". 🔵 **One licence cell cannot represent this repository**, so it gets none. |
 
 ## What we searched for and did not find
 

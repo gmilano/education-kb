@@ -10,7 +10,7 @@ Concrete recipes. Each names the exact repos, how they wire together, the licenc
 the result, and a realistic build estimate. Every repo referenced is verified in
 `agents/top.md`, `repos/foundations.md` or `verticals/solutions.md`.
 
-**Thirty-seven patterns, re-counted mechanically in `p916`** (`grep -cE '^## P[0-9]+' compose/patterns.md` → **37**; `P36`–`P37` added in `p916`, both run through the command rather than the word) (*prior banner:* **Thirty-five patterns, re-counted mechanically in `p915`** (🔴 **this line read *"Thirty-two"* and was three short — `P33` was added in `p914` and `P34`–`P35` in `p915`.** The count is `grep -cE '^## P[0-9]+' compose/patterns.md`, it is **35**, and a pass that adds one re-runs that command rather than editing the word — the same drift recurred in `intel/trends.md` this pass and is corrected there too.*)* (🔴 this line read *"Twenty-six, counted mechanically in `p907`"* and was **six short**: `P27`–`P31` were added in `p908`–`p912` and `P32` in `p913`, none of them re-counting. `p907` corrected the same line from *"twenty-three"* and wrote the rule — **a pass that adds a pattern should re-count, not increment** — and the drift resumed on the very next pass. 🔵 The count is now `grep -cE '^## P[0-9]+' compose/patterns.md`; **do not hand-edit this number**), **plus the G1 licence gate added in p897 and extended with gate `904-G1` in p904, `905-G1` in p905, `907-G1` in `p907`, `912-G1` in `p912` and `913-G1` in `p913`** (**P26 added in `p907`** — the sanctioned LMS-to-agent bridge, built from the seven per-institution user-credential bridges `intel/trends.md` **T30** measured, and the only end-to-end permissive pattern here that touches a commercial LMS) (**P22 added in `p903`** — the
+**Fifty patterns, re-counted mechanically in `p925`** (`grep -cE '^## P[0-9]+' compose/patterns.md` → **50**; `P48`–`P50` added in `p925`, command run after writing them and before writing this number). 🔴 **This line read *"Thirty-seven"* and was ten short — `P38`–`P47` were added across `p917`–`p923` and not one of those passes re-ran the command.** That is the largest drift this sentence has ever had to correct, and the fourth time it has had to. 🔵 The count is `grep -cE '^## P[0-9]+' compose/patterns.md`; **do not hand-edit it.** *(prior banner:* **Thirty-seven patterns, re-counted mechanically in `p916`** (`grep -cE '^## P[0-9]+' compose/patterns.md` → **37**; `P36`–`P37` added in `p916`, both run through the command rather than the word) (*prior banner:* **Thirty-five patterns, re-counted mechanically in `p915`** (🔴 **this line read *"Thirty-two"* and was three short — `P33` was added in `p914` and `P34`–`P35` in `p915`.** The count is `grep -cE '^## P[0-9]+' compose/patterns.md`, it is **35**, and a pass that adds one re-runs that command rather than editing the word — the same drift recurred in `intel/trends.md` this pass and is corrected there too.*)* (🔴 this line read *"Twenty-six, counted mechanically in `p907`"* and was **six short**: `P27`–`P31` were added in `p908`–`p912` and `P32` in `p913`, none of them re-counting. `p907` corrected the same line from *"twenty-three"* and wrote the rule — **a pass that adds a pattern should re-count, not increment** — and the drift resumed on the very next pass. 🔵 The count is now `grep -cE '^## P[0-9]+' compose/patterns.md`; **do not hand-edit this number**), **plus the G1 licence gate added in p897 and extended with gate `904-G1` in p904, `905-G1` in p905, `907-G1` in `p907`, `912-G1` in `p912` and `913-G1` in `p913`** (**P26 added in `p907`** — the sanctioned LMS-to-agent bridge, built from the seven per-institution user-credential bridges `intel/trends.md` **T30** measured, and the only end-to-end permissive pattern here that touches a commercial LMS) (**P22 added in `p903`** — the
 national-curriculum corpus pattern, built from the Arabic-language channel's finding that the
 curriculum exists at national scale and carries no grant; see `intel/trends.md` **T26**) (**P20 added in `p901`** — the first end-to-end permissive *synchronous* pattern in this file, unlocked by `p901`'s verification of `jitsi/jitsi-meet` at Apache-2.0) (**P19 added in `p900`** — the
 first end-to-end permissive pattern in this file that is not offline-first, built entirely from
@@ -3671,3 +3671,123 @@ yes, plus an `MIT` or `CC-BY-4.0` commit that helps every later engagement in th
 catalogue to clear.** Four of the five have a maintained permissive *library* (P45, P46) — so go
 straight to the library tier and budget the curation as **your own work product**, which is the one
 case in this pattern where the curation becomes an asset you own outright.
+
+## P48 — The regulated-market tutor: ship the evidence layer, not the agent (added `p925`)
+
+**For:** any education engagement in EMEA, North America or Vietnam/South Korea where an agent will
+touch a grade, an admission or a discipline decision. **Cost:** ~6–8 weeks for the evidence layer;
+the tutor is adopted, not built. **Licence posture of the result: 🟢 fully permissive.**
+
+🔵 **The insight is `intel/trends.md` `T60`.** Four regulatory regimes — EU AI Act high-risk
+(enforcing since **2026-08-02**), US state human-oversight statutes, Vietnam's AI law (in force
+**2026-03-01**), and LATAM's absent-institutional-strategy gap — are discharged by the **same four
+capabilities**. None of the nineteen permissive education agents shelved in `p925` provides any of
+them. So the differentiated deliverable is the layer underneath, and the tutor above it is
+interchangeable.
+
+### The wiring
+
+| Layer | Component | Licence | Why this one |
+|---|---|---|---|
+| Tutor (interchangeable) | https://github.com/lynote-ai/ai-tutor | MIT | 🟢 "Only teaches a sentence it can quote" — extractive grounding is a *product rule*, so every claim already has a citation to put in the record |
+| Mastery model | https://github.com/chuma-beep/mathua | MIT | 3,015 concepts with **mastery gating**; the gate decision is the auditable event |
+| Learner-model maths | https://github.com/CAHLR/pyBKT | MIT | Bayesian knowledge tracing — a defensible, inspectable mastery estimate rather than a model's opinion |
+| **Evidence store** | https://github.com/yetanalytics/lrsql | Apache-2.0 | xAPI LRS. Every tutor turn, gate decision and human override becomes a statement with an actor, verb, object and timestamp |
+| **Evidence pipeline** | https://github.com/openfun/ralph | Apache-2.0 | xAPI ingestion/validation; keeps malformed statements out of the record you will be audited on |
+| **Outcome evidence** | https://github.com/microsoft/StudentSim | MIT | 🟢 **The piece that did not exist before `p925`.** Build per-student simulators, run the tutoring policy against them, and keep the result — this is how you answer "durable learning gains" before a child is involved |
+| Human-in-the-loop UI | https://github.com/thm-mni-ii/feedbacksystem | Apache-2.0 | EMEA-origin, institution-run, **Helm chart on Artifact Hub** — the review queue a teacher actually signs off in |
+| Accessibility gate | https://github.com/ucfopen/UDOIT | 🔴 GPL-3.0 | Run as a **separate service** beside the LMS, never linked in. WCAG findings are a tender line item in EMEA public procurement |
+
+### The four capabilities, concretely
+
+1. **Human-in-the-loop record.** Every consequential decision writes two xAPI statements to `lrsql`:
+   the agent's *proposal* and the human's *disposition*. 🔴 The statute wording to satisfy is
+   "AI may not be the **primary basis**" — which is a claim about process, so the record must show a
+   human disposition exists for **every** proposal, not that one exists on average.
+2. **Consent state.** One table, per student, with `opt_in | opt_out | not_required` and the
+   jurisdiction that determined it. Hawaii H.B. 5253 requires opt-**in**; Alabama H.B. 1227 requires
+   an opt-**out**; make it configuration, because `p925`'s LATAM leg found Brazil tightening toward
+   the EU model while Argentina loosens.
+3. **Data-flow attestation.** California AB 1159 would bar student data from training AI models.
+   `lynote-ai/ai-tutor` is bring-your-own-key and self-hosted; pin the provider's no-training terms,
+   and log the egress boundary so the attestation is evidence rather than a promise.
+4. **Grade-band gating.** New York A 9190 would limit classroom AI to **grade 9+** with diagnostic
+   and special-education exceptions. Gate at the orchestration layer, not in the tutor's prompt.
+
+🟢 **Why it is sellable four times.** The same implementation is the EU conformity file, the US
+oversight record, Vietnam's high-risk documentation and LATAM's missing institutional strategy. The
+tutor is localised per market; the evidence layer is not.
+
+🔴 **What this pattern does *not* do.** It does not make a non-deliverable tutor deliverable. If the
+client has already chosen `CaviraOSS/PageLM` or `chadyi/StudyOnTV`, the grant forbids the engagement
+regardless of what is logged underneath — see `925-F2`.
+
+## P49 — The multi-tenant studio platform: one deployment, many client institutions, permissive throughout (added `p925`)
+
+**For:** a studio that wants one platform serving several client institutions rather than a fork per
+client. **Cost:** ~4–6 weeks to a first tenant. **Licence posture: 🟢 fully permissive
+(Apache-2.0 + MIT).**
+
+🔴 **Why this was impossible before `p925`.** Every LMS on this base was either copyleft (Moodle
+GPL-3.0; Open edX and Canvas AGPL-3.0; Chamilo and ILIAS GPL-3.0) or permissive **and single-tenant
+by design** (Artemis, Kolibri, OpenOLAT). A studio had to choose between a grant it could not ship
+and a deployment per client.
+
+### The wiring
+
+| Layer | Component | Licence | Role |
+|---|---|---|---|
+| **Platform core** | https://github.com/pacewisdomhq/TutorLoom | Apache-2.0 (11,361 B, `a7f87303f2e9`) | 🟢 **Self-hosted multi-tenant LMS** — Django 6 + DRF + React; course builder, trainer and student portals, progress tracking. The **first permissive multi-tenant LMS on this base** |
+| Tenancy + billing reference | https://github.com/3yangyang9/DeepTutor-AILearning | Apache-2.0 (11,407 B, `596087a7f098`) | 🟢 Read this for the **four-level tenancy model** (platform → institution → campus → class) and the **billing-policy layer**. APAC-origin, and the only permissive artefact here that treats *who pays* as a first-class concern |
+| Competency graph | https://github.com/iblai/lms | MIT | Competencies, not courses, as the primary object — the model a corporate-academy tenant actually wants |
+| Per-tenant microsites | https://github.com/haxtheweb/haxcms-php | Apache-2.0 | 🟢 **No database.** Generate a site per cohort and discard it; carries an **OpenSSF Scorecard** badge, which is the only supply-chain posture on this shelf |
+| Content as files | https://github.com/tutors-sdk/tutors | MIT | Course-as-filesystem: an agent authors content by writing files, with no API to go through |
+| Live coding classroom | https://github.com/SJRiz/pytogether | MIT | Browser-based collaborative Python with shared canvas and voice — nothing installed on a student machine |
+| Model serving | https://github.com/ollama/ollama + https://github.com/vllm-project/vllm | MIT / Apache-2.0 | Per-tenant model isolation |
+| Metering | https://github.com/BerriAI/litellm | MIT | Per-tenant token attribution — pairs with TutorLoom's tenancy and DeepTutor-AILearning's billing model |
+
+🔵 **The sequencing that matters.** Stand up TutorLoom first and get **two** tenants running before
+adding any agent. Multi-tenancy defects are discovered at the second tenant, never the first, and
+they are structural — tenant-scoped querysets, per-tenant storage prefixes, per-tenant model keys.
+Adding an agent before the second tenant exists means debugging two new systems at once.
+
+🔴 **The honest limits.** TutorLoom is **98 ★** — adopting it means being a significant fraction of
+its user base, so budget for upstream contribution and read the tenancy isolation yourself rather
+than assuming it. `3yangyang9/DeepTutor-AILearning` is **not** a fork of `HKUDS/DeepTutor` despite
+the name: different owner, different grant, different architecture. And 🔵 **nine of these components
+are region-unplaced** (`925-F7`), so none of them carries a localisation assumption you can inherit.
+
+## P50 — The curriculum-graph decision: three assets, three grants, and only one you can ship (added `p925`)
+
+**For:** the week in any K-12 or exam-prep engagement when someone proposes "just use the open
+curriculum graph". **Cost:** 2 days to decide; weeks to months if you decide wrong.
+
+🔴 **The trap, stated once.** The two largest open curriculum graphs in this industry have **15,000
+stars between them and neither is governed by a software licence.** A pass that reads the licence
+field, sees something plausible, and ships, has shipped a licence breach.
+
+| Asset | ★ | Grant (byte-read `p925`) | Kind of licence | Can a client engagement ship it? |
+|---|---|---|---|---|
+| https://github.com/xiaoyang111222/cn-math-taxonomy | **8,648** | **`CC BY-NC 4.0`** (19,345 B, `db2e35513dba`) | 🔴 **content**, **NonCommercial** | 🔴 **No.** 1,644 knowledge points, 2,403 prerequisite edges, 6,723 items, aligned to the Chinese national standard, with an adaptive prerequisite diagnostic — the best structure for the region and it forbids commercial use |
+| https://github.com/withmarbleapp/os-taxonomy | 7,725 | `ODbL-1.0` | 🔴 **database** | 🟡 **Yes, with share-alike on the database.** A derived or extended graph must be released under ODbL. Model the obligation before building on it |
+| https://github.com/learning-commons-org/knowledge-graph | 169 | 🔵 **split: code MIT, data per dataset** (5,788 B, `86b7ebf9b61d`) | 🔴 **per-asset** | 🟡 **Per dataset, every time.** *Open* tiers are usable; the licence states in terms that **Open+Gated** and **Gated** content are "not covered by CC BY 4.0, CC0, or any other open license referenced here" |
+| https://github.com/chuma-beep/mathua | 430 | 🟢 **MIT** (1,074 B, `6bd7c2a354d5`) | 🟢 **software**, and the graph ships inside it | 🟢 **Yes.** **3,015 concepts** with mastery gating and FSRS review, Go + Next.js, self-hostable |
+
+### The two days
+
+| Day | Do |
+|---|---|
+| **1** | **Byte-read the grant of every curriculum asset in the proposal**, not the licence field. 🔴 All three of the large ones report `NOASSERTION` on `search/repositories` — the value this base has 553 rows of experience reading as *"the detector did not recognise the text"*, which is also exactly how a NonCommercial term enters a shelf (`925-F2`). Fetch `LICENSE`/`LICENSE.md` from `raw.githubusercontent.com` and **read it**. |
+| **2** | Classify into **software grant** / **database grant** / **content grant** / **per-asset**, then decide. 🟢 **Default to `chuma-beep/mathua`**: it is the only one of the four with a software licence, it is MIT, and its graph is large enough (3,015 concepts) for a real engagement. Reach for `os-taxonomy` only if you can accept ODbL share-alike on your derived graph, and for `cn-math-taxonomy` only via a licence negotiated with the author. |
+
+🔵 **The structural fix, if the client needs Chinese-curriculum alignment specifically.** Do not copy
+`cn-math-taxonomy`. Use its *public structure* as a specification — knowledge points, prerequisite
+edges, curriculum-standard alignment, prerequisite diagnostic — and build the graph from the client's
+own licensed textbook corpus into `mathua`'s MIT schema. 🟢 You keep the architecture, which is the
+part that took judgment, and you own the data, which is the part that carries the grant.
+
+🔵 **Why this pattern exists as a pattern.** `intel/trends.md` `T25` predicted the licence trap would
+move from code to the data and content assets, where no index can see it. `p925` found the second
+instance at **8,648 stars**. Two instances at seven and eight thousand stars is a regularity, and a
+regularity in this position needs a standing procedure rather than a warning.
+

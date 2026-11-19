@@ -621,6 +621,32 @@ mechanism: a curated index is written as documentation and published without any
 software. It matters because **the curation is the deliverable** — it is the first asset a
 localisation engagement copies from.
 
+## The topic-qualified substrate tier — added `p925`
+
+🟢 **Eight permissive repositories this base had never held**, all surfaced by GitHub's **topic**
+index after forty-four passes of English *prose* legs returned nothing (see `agents/top.md`
+`925-F1`). Every grant below was **byte-read** from `raw.githubusercontent.com` on 2026-11-19, with
+byte size and `sha256₁₂` recorded so a later pass can detect an edit without re-reading the text.
+
+| Repo | Licence (byte-read) | ★ | Role |
+|---|---|---|---|
+| https://github.com/inducer/relate | **MIT/X Consortium** (1,144 B, `e6c20b652766`) | 439 | 🟢 **RELATE — a university courseware platform**: Django, PyPI-released as `relate-courseware`, run in production for engineering teaching, with versioned course content in git and automatic grading. 🔴 **The search channel reports this repo as `NOASSERTION`** because its licence file opens with the prose line *"RELATE is licensed to you under the MIT/X Consortium license"* rather than the canonical MIT header — an SPDX detector keyed on the first line misses it. See `925-F4`: **this base would have skipped a 439-★ permissive courseware platform on a licence false negative.** |
+| https://github.com/tutors-sdk/tutors | MIT (1,087 B, `b418e808b99a`) | 125 | **Tutors** — an open learning *web toolkit* rather than an LMS: course content authored as a folder structure, rendered by a reader app, published to `tutors.dev`. 🔵 The content-as-filesystem model is the cheapest seam on this shelf for an agent to write into, because there is no database to go through. |
+| https://github.com/haxtheweb/haxcms-php | Apache-2.0 (11,362 B, `b662f44e55e8`) | 130 | **HAXcms** — build and manage a *universe of microsites* with **no database**, PHP backend, Lit web components. 🟢 Carries an **OpenSSF Scorecard badge** and a `repostatus: active` badge — the only row added this pass with a published supply-chain posture. 🔵 Database-free microsites is the right substrate for per-course or per-cohort sites that an agent generates and discards. |
+| https://github.com/pacewisdomhq/TutorLoom | Apache-2.0 (11,361 B, `a7f87303f2e9`) | 98 | 🟢 **Self-hosted, multi-tenant LMS** — Django 6 + DRF + React, course builder, trainer and student portals, progress tracking, CI badge green. **Multi-tenancy under a permissive grant is the gap in `verticals/solutions.md`'s LMS tier**: Moodle is GPL-3.0, Open edX and Canvas are AGPL-3.0, and Artemis/Kolibri/OpenOLAT are permissive but single-tenant by design. |
+| https://github.com/iblai/lms | MIT (1,062 B, `d9d62c94b512`) | 88 | **ibl.ai/lms** — self-described *agentic* LMS: skills/competency discovery, credential tracking, workforce development. Next.js 15 + React 19 + Tauri, so it ships as a desktop app as well as a web app. 🔵 The competency graph, not the course list, is the primary object — which is the shape `intel/trends.md` `T26` predicted. |
+| https://github.com/onemnemo/mnemo | Apache-2.0 (11,325 B, `9e43fad60ad0`) | 133 | **Mnemo** — a study application on Photino X + .NET 10. 🔵 The only .NET artefact on this shelf, which matters for a client estate that is Microsoft-standardised and will not take a Python or Node runtime. |
+| https://github.com/SJRiz/pytogether | MIT (1,072 B, `c8df073d1320`) | 262 | **pytogether.org** — a fully browser-based **collaborative** Python IDE: real-time editing, live drawing on a shared canvas, voice chat. 🟢 Pairs directly with the assessment tier: a classroom coding session that a grading agent can observe without an install on the student's machine. |
+| https://github.com/langx/langx | **BSD-3-Clause** (1,519 B, `f90e8a082588`, **non-endorsement clause present, no advertising clause**) | 111 | **LangX** — language-exchange app, Expo mobile/web + Fastify + MongoDB Atlas. 🔵 **Structurally confirmed 3-clause, not 4-clause**, which is the distinction `p924`'s `924-F1` found the grant authority could not make: 3-clause is GPL-compatible, 4-clause is not. The non-endorsement obligation survives into any branded derivative a client ships. |
+
+### 🔵 Also verified this pass and deliberately *not* shelved
+
+| Repo | ★ | Grant (byte-read) | Why it is here and not above |
+|---|---|---|---|
+| https://github.com/Azure/Moodle | 186 | MIT (1,090 B, `91f7258203fd`) | Deployment tooling for scalable Moodle clusters on Azure — **MIT templates wrapping a GPL-3.0 application**. Genuinely useful and genuinely permissive, but it is infrastructure-as-code for someone else's LMS, so it belongs beside the Moodle row in `verticals/solutions.md`, not on the substrate shelf. |
+| https://github.com/microsoft/o365-moodle | 216 | GPL-3.0 (35,146 B, `c53a65c2fd56`) | Microsoft 365 / Entra ID plugins for Moodle. 🔵 **Byte-identical licence file to `ucfopen/UDOIT`** — same `sha256₁₂` — which is the expected result for two canonical GPL-3.0 texts and a useful control on the read method. Copyleft, so `DELIVERABLE — COPYLEFT` at best. |
+| https://github.com/learning-commons-org/knowledge-graph | 169 | 🔵 split: **code MIT, data per-dataset** (5,788 B, `86b7ebf9b61d`) | The data layer this tier most needs, and the one row that **cannot carry a licence cell** — its datasets run across *Open*, *Open+Gated* and *Gated* tiers and the licence says in terms that the gated ones are **not** covered by CC BY 4.0, CC0 "or any other open license referenced here". Adopting it means reading per dataset, every time. |
+
 ## National-curriculum data as an agent substrate — added `p904`
 
 The substrate a curriculum-aligned product stands on, and the first cluster in this file that a
