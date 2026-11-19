@@ -6,7 +6,7 @@ updated: 2026-11-19
 
 # Current trends — education
 
-**Thirty-nine trends, re-counted mechanically in `p913`** (🔴 this line read *"Thirty-one"* and was **eight short**: `T32`–`T38` were added in `p908`–`p912` and `T39` in `p913`. `compose/patterns.md` carries the rule — *a pass that adds one should re-count, not increment* — and this file drifted the same way and further. 🔵 The count is `grep -cE '^## T[0-9]+' intel/trends.md`; **do not hand-edit it.** `T37` is **materially corrected in `p913`** and `T38` has a second chapter added in `p913`.) (**T30 and T31 added in `p907`** — the LMS-to-agent bridge being built per-institution on the *user's own credentials*, which needs no institutional consent; and the agent-skill marketplaces having no education tier at all, which makes `T26`'s distribution channel measurably empty. Both are the first trends in this file derived from **global code search**, an instrument this base had recorded as unusable; **T29 added in `p906`** — vernacular open education supply measured across eight languages and found to be a single-country phenomenon, with *no licence at all* the default state in the other seven; **T26 added in `p903`** — the unit of publication shifting from the
+**Forty-three trends, re-counted mechanically in `p915`** (🔴 **this line read *"Thirty-nine"* and was four short — `T40`–`T42` were added in `p914` and `T43` in `p915`, and `p914` incremented nothing. That is the *third* consecutive recurrence of the drift this very sentence was written to stop, which makes the rule worth restating as a procedure rather than a warning: 🔵 the count is `grep -cE '^## T[0-9]+' intel/trends.md`, it is **43**, and a pass that adds a trend re-runs that command instead of editing the word.) (🔴 this line read *"Thirty-one"* and was **eight short**: `T32`–`T38` were added in `p908`–`p912` and `T39` in `p913`. `compose/patterns.md` carries the rule — *a pass that adds one should re-count, not increment* — and this file drifted the same way and further. 🔵 The count is `grep -cE '^## T[0-9]+' intel/trends.md`; **do not hand-edit it.** `T37` is **materially corrected in `p913`** and `T38` has a second chapter added in `p913`.) (**T30 and T31 added in `p907`** — the LMS-to-agent bridge being built per-institution on the *user's own credentials*, which needs no institutional consent; and the agent-skill marketplaces having no education tier at all, which makes `T26`'s distribution channel measurably empty. Both are the first trends in this file derived from **global code search**, an instrument this base had recorded as unusable; **T29 added in `p906`** — vernacular open education supply measured across eight languages and found to be a single-country phenomenon, with *no licence at all* the default state in the other seven; **T26 added in `p903`** — the unit of publication shifting from the
 application to the agent-addressable curriculum corpus, the first trend in this file derived from a
 non-English repository channel; **T25 added in `p902`** — the licence trap moving from code to the data
 and content assets, where no index can see it; **T24 added in `p901`** — path-dependent licences, the first trend in this file derived from repositories the SPDX channel refused to resolve at all; **T23 added in `p900`** — the first trend in this file derived from a
@@ -64,7 +64,9 @@ competing with these projects, it is the deployment arm they lack.
 ## T3 — The EU's high-risk deadline moved to December 2027, and that is a selling window
 
 Regulation (EU) 2026/1744 postponed Annex III high-risk obligations for stand-alone education
-systems from 2 August 2026 to **2 December 2027**. Transparency duties (Article 50) still apply
+systems from 2 August 2026 to **2 December 2027**.
+
+🟡 **Risk flag added in `p915`, and it bears on the words "selling window" in this heading.** One source this pass states that the postponement is **conditional** — that the Commission may bring the date **forward** once the necessary standards and guidance are in place, making 2 December 2027 an **outer limit rather than a guarantee**. 🔴 **Single channel, secondary source, and the search itself flagged it as the only result making the point, so it is recorded here as an unverified risk and not as a fact.** It is written down anyway because this trend is used to *time a commercial pitch*: if the date can move forward, the window is narrower than the rest of this section implies, and that asymmetry favours telling a client early. 🔵 `915-G2` names the primary text to read — Article 1 of Regulation (EU) 2026/1744 on EUR-Lex — and `915-G1` records why this pass could not read it. Transparency duties (Article 50) still apply
 from August 2026, and the emotion-recognition ban in schools has been in force since February
 2025.
 
@@ -1815,7 +1817,7 @@ curated shelf carries **29 `NOASSERTION` rows** (`p909`'s census) that have neve
 at a 3-in-5 observed NonCommercial rate the expected count of NC rows hiding in the shelf is not
 zero. **NonCommercial bars the engagement, not merely the redistribution.**
 
-## T41 — The grant gap in interactive content tracks the **runtime / authoring** split, and both authoring surfaces are ungranted and alive (measured `p914`)
+## T41 — H5P's authoring half is ungranted while its runtime is GPL-3.0 (measured `p914`) — 🔴 **and the *mechanism* `p914` proposed for it is refuted in `p915`; this trend is scoped to H5P**
 
 `T24` found grants that change by directory. `T25` found the trap moving into data and content
 assets. `p914` measured a third shape, in the one content tier that almost every education build
@@ -1854,6 +1856,32 @@ body rather than a title line, which the authority records as weaker evidence. T
 authoring surfaces are cleanly permissive; the fourth is permissive on weaker evidence. H5P is
 the outlier in this file, not the rule.
 
+### 🔴 Amended in `p915` — the explanatory claim is withdrawn, the H5P observation stands
+
+`p914` proposed a mechanism for the table above: **runtimes acquire grants early because they ship;
+editors acquire them late because the team uses them first.** `914-G4` asked for a second content
+stack before promoting it. `p915` measured five authoring surfaces and **all five are licensed**:
+
+| Repo | Role | Grant (byte-read `p915`) | ★ | Created |
+|---|---|---|---|---|
+| `adaptlearning/adapt_framework` | runtime | GPL, 35,129 B | 636 | 2013-10-09 |
+| `adaptlearning/adapt_authoring` | **authoring tool** | **GPL, 35,140 B — fully reproduced** | 563 | **2013-10-14** |
+| `course-code-framework/coursecode` | runtime/CLI | **MIT**, 1,069 B | 7 | 2026-02-12 |
+| `course-code-framework/coursecode-desktop` | **desktop editor** | **MIT**, 1,069 B | 5 | 2026-02-12 |
+| `QFlowLearn/qflow-author` | authoring tool | AGPL-3.0, 34,020 B | 0 | — |
+
+🔴 **Adapt refutes the mechanism on every limb.** It is the largest open-source e-learning authoring
+tool in this industry; its editor is licensed with a fully reproduced payload; and the editor was
+created **five days after** the runtime — the opposite of "editors acquire grants late". The
+`coursecode` halves are licensed identically, on the same day, on both sides of the same split.
+
+🟢 **What survives is the observation and its delivery consequence**, both unchanged: H5P's two
+editors carry no payload on a 16×3 ladder while its runtimes carry byte-identical GPL-3.0, so an
+H5P **authoring** feature cannot lawfully be shipped and serving H5P is unaffected. 🔵 **What is
+withdrawn is the generalisation.** A mechanism inferred from one vendor's repository layout is a
+property of that vendor until a second stack is measured — and the second stack said no.
+🟢 `914-G4` is discharged. The permissive authoring answer is in `repos/foundations.md` and `P34`.
+
 ## T42 — The LMS-to-agent bridge is generalising off the single institution, on two limbs at once (measured `p914`)
 
 `T30` recorded the bridge tier as built **per institution, on the user's own credentials**, which
@@ -1884,3 +1912,49 @@ refuted — the LATAM university-MCP cohort this base measured in `p907`/`p908` 
 single population in the tier. The claim is that the *ceiling* has moved: a generic bridge to a
 commercial LMS now exists where it did not, and at least one institution is publishing its own
 agent tier rather than buying one.
+
+## T43 — The GNU family is granted **by reference** as often as by reproduction, so a byte-size band is a *form* classifier and never a validity test (measured `p915`)
+
+`p640` established this base's most-used licence heuristic: an **MIT**-phrased payload outside
+~1,000–1,250 B is a narrowed derivative, and `914-F4` followed its two hits through to the text and
+confirmed both. The obvious next move is to port the band to the GNU family. 🔴 **It would be
+wrong, and it would misread the two most important rows in the Anki tier — including Anki itself.**
+
+Every GNU-family payload byte-read in `p915`:
+
+| Repo | Grant | Bytes | Form |
+|---|---|---|---|
+| `ankimcp/anki-mcp-server-addon` | AGPL-3.0 | **227** | 🔵 **by reference** — names the licence and holder, links `gnu.org/licenses/agpl-3.0.txt` |
+| `ankitects/anki` | AGPL-3.0 | **1,937** | 🔵 **by reference, plus a mixed-grant inventory** |
+| `NaEs25/studiamo` | AGPL-3.0 | 33,880 | reproduced |
+| `QFlowLearn/qflow-author` | AGPL-3.0 | 34,020 | reproduced |
+| `QkeleQ10/Study-Tools` | AGPL-3.0 | **34,523** | reproduced — 🟢 exactly `p913`'s measured true-AGPL count |
+| `adaptlearning/adapt_framework` | GPL | 35,129 | reproduced |
+| `adaptlearning/adapt_authoring` | GPL | 35,140 | reproduced |
+
+🔵 **The mechanism, and it is a legal one rather than a sloppiness one.** Naming *"the GNU Affero
+General Public License, version 3 or later"* together with the copyright holder is a **complete and
+effective grant**. The FSF's own instructions tell projects to apply the licence with a short notice
+and ship the full text alongside; a project that puts the notice in `LICENSE` and the text elsewhere
+— or simply links it — has granted exactly the same rights as one that pastes 34 kB.
+🔴 **A 227-byte AGPL payload and a 34,523-byte AGPL payload grant the same rights.**
+
+**Three byte-classes, offered as a form classifier only:** by-reference ≈ 227 B – 1,937 B; AGPL
+reproduced ≈ 33.9 – 34.5 kB; GPL reproduced ≈ 35.1 kB. 🔵 The classes are useful for *triage* — a
+short GNU payload must be **read**, because it is where a mixed grant or a carve-out will be hiding
+— and they are **never** evidence that a grant is narrowed or invalid.
+
+🟡 **The carve-out case, which is the commercially live one.** `ankitects/anki`'s 1,937 B is not a
+single grant: it reserves BSD-3 for user contributions, and carves out CC BY 4.0 (`statsbg.py`),
+MIT (`mpv.py`, `winpaths.py`, jQuery/jQuery-UI, `plot.js`), Apache-2.0 (MathJax) and BSD-3
+(`protobuf.js`), notes LGPL Qt translations in binary distributions, and licenses **the logo** under
+AGPL-3.0 with a *separate limited alternative grant* for books, blogs and videos. The adjudicator
+reduced it to `AGPL-3.0`, which is right as the **primary** grant and incomplete as a description of
+the payload. 🔵 **This is `T24`'s path-dependent-licence shape arriving in a short payload** — the
+place a size band would have told you not to look.
+
+**Implication for delivery.** Do not let any instrument in `ingest/` grade the GNU family on size.
+Keep `p640`'s band where it was earned — MIT — and for GNU, read the payload: short means *read it
+now*, not *distrust it*. `915-G4` asks whether Apache-2.0 and MPL are also distributed by reference
+at small sizes, because band-shaped rules exist or are implied for those too.
+

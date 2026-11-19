@@ -601,6 +601,38 @@ band, recorded because this base has never had one.**
 | https://github.com/aaryansamanta/NextGen-AI | 491 | 1,327 B · `31d2ea3bba94` | **MIT for source code only.** Brand assets, team photos, videos, logos and the top-level PDFs in `website/img`, `website/video` are reserved © NextGenAI and require written contact before reuse. 🟢 The *code* is usable; the org's identity material is not, which is the correct and unremarkable posture — it is only a trap for a scanner that reports one licence per repo. |
 | https://github.com/Andiii208/seu-handbook-skill | 55 | 1,497 B · `965a0edb5701` | 🔴 **MIT on the code, CC BY-NC-SA 4.0 on `references/` and `data/`** — the Southeast University student handbook text, which *is* the product. The skill's whole value is the clause-level handbook corpus, and that corpus is **NonCommercial**. Ship the retrieval code, re-author the corpus, or do not ship. A textbook instance of `T25`, now with the MIT band as its detector. |
 
+## Study, recall and grading-bridge agents — added `p915`
+
+Nine addresses from twelve discovery legs (angles distinct from `p914`'s seven), every grant
+byte-read on the resolved branch with `ingest/p913-grant-authority.sh`. The cohort's centre of
+gravity is **spaced repetition** and **the grading bridge** — not the chat tutor.
+
+🔴 **Two rows in this table are copyleft and the reason is structural, not incidental.** See `T42`:
+`anki-mcp-server-addon` runs *inside* an AGPL-3.0 host and inherits its grant, while the same
+owner's `anki-mcp-server` — which talks to Anki from outside the process — is MIT. The process
+boundary is the licence boundary.
+
+| Agent | Repo | Licence (byte-read `p915`) | ★ | Last push | What it does | Origin |
+|---|---|---|---|---|---|---|
+| **LearnKit** | https://github.com/ctrlaltwill/LearnKit | **MIT** (`main/LICENSE.md`, 1,068 B, `sha256₁₂ 38a90d0f7738`) | 185 | 2026-10-31 | Turns an **Obsidian vault** into a study system: flashcards, spaced repetition, review queue and analytics over notes the learner already wrote. TypeScript. 🔵 No content ingestion step — the corpus is the learner's own notes, which sidesteps the content-licence trap `T25` describes | Global |
+| **flashcards-open-source-app** | https://github.com/kirill-markin/flashcards-open-source-app | **MIT** (`main/LICENSE`, 1,070 B, `sha256₁₂ 0e319ca9aaa9`) | 119 | 2026-11-19 | AI-generated flashcards for daily study across **iOS, macOS, Android and web** — exam prep and vocabulary. TypeScript. The only cross-platform-native row in this cohort | Global |
+| **anki-mcp-server-addon** | https://github.com/ankimcp/anki-mcp-server-addon | 🔴 **AGPL-3.0** (`main/LICENSE`, **227 B**, `sha256₁₂ 34b58d896fdb`) — a **by-reference** grant, see `T43` | 104 | 2026-11-17 | An **Anki addon** implementing an MCP server, so an agent reaches the live deck from inside the application rather than over a side channel. Python. 🔴 **Inherits AGPL-3.0 from Anki itself; may not be bundled in a closed deliverable.** Use the MIT `anki-mcp-server` row above for that | Global |
+| **true-recall** | https://github.com/pieralukasz/true-recall | **MIT** (`main/LICENSE`, 1,070 B, `sha256₁₂ 23444362494b`) | 68 | 2026-11-16 | Native spaced repetition for **Obsidian**: AI-generated cards, **FSRS v6** scheduling, image occlusion, retention analytics. TypeScript. 🟢 The most current scheduler generation measured in this base | Global |
+| **studiamo** | https://github.com/NaEs25/studiamo | 🔴 **AGPL-3.0** (`main/LICENSE`, 33,880 B, `sha256₁₂ f0c3e444e06d`) | 27 | 2026-10-30 | Turns YouTube videos, PDFs and notes into active-recall flashcards with spaced repetition, **fact verification** and Telegram delivery. Python. 🔵 The fact-verification stage is what `P23`'s hallucination gate asks for, shipped as a pipeline step | 🟡 EMEA — Italian-language project name; **origin inferred from naming, not verified** |
+| **ProcrastiLearn** | https://github.com/Vladyslav-Soldatenko/ProcrastiLearn | **Apache-2.0** (`master/LICENSE`, 11,351 B, `sha256₁₂ 45386cd5bf35`) | 24 | 2026-11-01 | Android app that **gates chosen apps** (TikTok and the like) behind flashcard reps — opening a gated app triggers a full-screen review. Kotlin. 🔵 Distribution mechanism rather than content: the intervention is placed where the attention already is | Global |
+| **Exam_Intellect** | https://github.com/RakeshBabuGajula/Exam_Intellect | **MIT** (byte-read on `ExamIntellect/LICENSE`, 1,075 B, `sha256₁₂ a4e58d1074c9`; the identical payload is also on `master`) | 19 | 2026-10-15 | AI proctoring dashboard: live exam monitoring, student analytics, automated feedback. Python. 🟡 **There is no `main` branch** — content lives on `master` and on a second branch named `ExamIntellect` (both return 200), so a clone or submodule pin that assumes `main` will fail. 🔵 Measured, because `p915`'s grant ladder resolved it on the `ExamIntellect` branch and the default-branch assumption would have been wrong either way | Global |
+| **gradescope-mcp** | https://github.com/Yuanpeng-Li/gradescope-mcp | **MIT** (`main/LICENSE`, 1,068 B, `sha256₁₂ 29d0f3f4463a`) | 8 | 2026-11-12 | 🟢 **The first Gradescope bridge in this base.** MCP server letting an agent **grade against a rubric**, review regrade requests and manage assignments. Python. 🟢 **Every write is previewed before it is applied** — the human-in-the-loop control Oklahoma SB 1734 and `T1`'s grading statutes require, shipped as a default rather than written into a policy document. `P35` is built on it | North America — Gradescope's core market |
+| **Chinese-Teaching-AI-Agent** | https://github.com/forgemorrow/Chinese-Teaching-AI-Agent | **MIT** (`main/LICENSE`, 1,068 B, `sha256₁₂ 2e7ffdde3eb5`) | 8 | 2026-11-14 | Lesson-prep assistant for **K-12 Chinese-language teachers**, built on Streamlit with the MiMo/Anthropic SDK. Python. 🔵 Teacher-facing rather than learner-facing, and in-language — the shape `T29` found the vernacular supply tier to be missing | APAC — China |
+
+🔴 **Three addresses were refused this pass and the refusals are recorded, not discarded.**
+`narender-rk10/MyProctor.ai-…-PROCTORING-SYSYTEM` (**237 ★** — the pass's highest-starred find)
+carries **no licence payload** on 16 filenames × 3 branches; `bahfahh/engram-quest` (33 ★) ships a
+**bespoke `Engram Quest Plugin License Version 1.1, November 2026`** (2,701 B), which is not an OSI
+grant; and `vosslab/vosslab-skills` (6 ★) is **unverifiable** — `search/repositories` reports it as
+MIT while every licence filename returns `404` and the per-repository endpoint returns `403` under
+this session's scoping. 🔵 The third is the one with a method consequence: **a search-reported
+licence is not an independent second channel.** Full audit in `agents/trending.md` `915-F7`.
+
 ## What we searched for and did not find
 
 Recording gaps because an unrecorded gap looks exactly like coverage.

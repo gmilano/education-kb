@@ -1,0 +1,8 @@
+repo	branch	path	http	bytes	sha256_12	families	verdict	note
+ankitects/anki	main	LICENSE	200	1937	8c7ce84427b1	AGPL-3.0	AGPL-3.0	
+Gego-K12/gegok12	main	LICENSE	200	1150	b8694396d7dc	MIT	MIT	
+adaptlearning/adapt_authoring	master	LICENSE	200	35140	b98fbb37db5b	GPL	GPL	
+adaptlearning/adapt_framework	master	LICENSE	200	35129	e90ca2f081fa	GPL	GPL	
+course-code-framework/coursecode	main	LICENSE	200	1069	055ad2b298ef	MIT	MIT	
+course-code-framework/coursecode-desktop	main	LICENSE	200	1069	055ad2b298ef	MIT	MIT	
+QFlowLearn/qflow-author	main	LICENSE	200	34020	d8a6cc31abc1	AGPL-3.0	AGPL-3.0	

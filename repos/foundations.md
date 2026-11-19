@@ -753,6 +753,72 @@ survive, in order of preference:
 🔴 **What does not survive:** vendoring `Lumi` or `h5p-editor-php-library` into a deliverable, and
 any statement to a client that "H5P is open source" without naming which half.
 
+## The authoring tier, re-measured — `p915` discharges `914-G4`
+
+`p914` measured H5P and found its runtime licensed (GPL-3.0) and **both its editors carrying no
+grant at all**, then proposed `T41`: runtimes acquire grants early because they ship, editors
+acquire them late because the team uses them first. `914-G4` asked for a second content stack
+before that was promoted. Five authoring surfaces were byte-read this pass and **all five are
+licensed**, so `T41`'s explanatory claim is withdrawn and its H5P observation kept.
+
+| Repo | Role | Licence (byte-read `p915`) | ★ | Created | Role in delivery |
+|---|---|---|---|---|---|
+| https://github.com/adaptlearning/adapt_framework | Runtime | 🔴 **GPL** (`master/LICENSE`, 35,129 B, `sha256₁₂ —`) | 636 | 2013-10-09 | The Adapt responsive e-learning runtime; SCORM/xAPI output |
+| https://github.com/adaptlearning/adapt_authoring | **Authoring tool** | 🔴 **GPL** (`master/LICENSE`, 35,140 B) | 563 | **2013-10-14** | 🔵 **The largest open-source e-learning authoring tool in this industry.** A client may already be running it — include it on that test alone |
+| https://github.com/course-code-framework/coursecode | Runtime / CLI | 🟢 **MIT** (`main/LICENSE`, 1,069 B) | 7 | 2026-02-12 | Course-as-code pipeline with SCORM output |
+| https://github.com/course-code-framework/coursecode-desktop | **Desktop editor** | 🟢 **MIT** (`main/LICENSE`, 1,069 B) | 5 | 2026-02-12 | 🟢 **The only permissively licensed authoring editor measured in this base** |
+| https://github.com/QFlowLearn/qflow-author | Authoring tool | 🔴 **AGPL-3.0** (`main/LICENSE`, 34,020 B) | 0 | — | QTI authoring from the owner of `QFlowLearn/qti3`; recorded for completeness, too small to build on |
+
+🔴 **The Adapt pair is what refutes the mechanism.** Its editor is licensed, its payload is
+**fully reproduced**, and it was created **five days *after* the runtime** — the opposite of what
+`T41` predicted. The `coursecode` halves are licensed identically on the same day. 🟢 The delivery
+consequence of `914-F5` is unchanged: **H5P authoring specifically cannot be shipped.** What changes
+is that this is a fact about H5P, not about authoring tools.
+
+🟢 **And `914-F5`'s prohibition now has a permissive answer.** An engagement needing a *closed*
+authoring deliverable has `coursecode` + `coursecode-desktop` (both MIT, SCORM on output so the
+artefact plays in the LMS already in the estate). 🟡 **Stated with its size: 7 ★ and 5 ★, created
+February 2026.** It is a starting point that exists, not a mature upstream, and `P34` wires it up
+with that caveat in the recipe. For a hosted or deploy-and-extend engagement, Adapt is far more
+capable and GPL-3.0 has no network-use clause (`913-F1`), so serving authored output is unaffected.
+
+## Permissive student systems, including a government-published one — added `p915`
+
+| Repo | Licence (byte-read `p915`) | ★ | Last push | Role |
+|---|---|---|---|---|
+| https://github.com/bcgov/SIMS | 🟢 **Apache-2.0** (`main/LICENSE`, 11,358 B, `sha256₁₂ cfc7749b96f6`) | 29 | 2026-11-19 | 🟢 **Government of British Columbia** — post-secondary **student financial aid**. TypeScript, 636 open issues, developed in the open |
+| https://github.com/nomadicjosh/etsis | **MIT** (`main/LICENSE.md`, 1,114 B, `sha256₁₂ 8f8a3e4bfffc`) | 46 | 2026-11-19 | Higher-education SIS on CodefyPHP — PHP 8.4, MariaDB, DDEV. 🟡 **Self-declared active alpha; breaking changes and DB migrations expected** |
+| https://github.com/opensacorg/learning-blocks | **MIT** (`master/LICENSE`, 1,076 B, `sha256₁₂ 06145c4016db`) | 6 | 2026-09-16 | Learning Blocks SIS. 🟡 22 forks against 6 ★ and last push September — read as a data model, not an upstream |
+
+🟢 **`bcgov/SIMS` is the first government-published, permissively licensed student system in this
+base, and its value is not its star count.** A provincial government maintaining a real
+financial-aid system in the open under **Apache-2.0** is citable as a reference architecture in any
+public-sector engagement *and* reusable inside a closed derivative. 🔵 North America has returned
+**nil** demand-side rows for five consecutive passes; this is a North American **supply** row, which
+is a different and more useful thing.
+
+🟡 **`etsis` does not displace this base's existing MIT SIS claims and must not be read as doing
+so.** `academico-sis/academico` (MIT, 413 ★) remains the maintained permissive core;
+`Gego-K12/gegok12` (MIT, **confirmed by byte-read this pass at 1,150 B** against an API
+`NOASSERTION`) remains the K-12 data model. What `etsis` adds is the **higher-education** shape
+under a permissive grant, where Academico is explicitly aimed at small and medium institutions.
+🔴 Its own README says it is in active alpha — read it as a forkable codebase, not as something to
+put under a client's registrar this year.
+
+## Spaced-repetition scheduling as a commodity primitive — added `p915`
+
+| Repo | Licence (byte-read `p915`) | ★ | Host surface |
+|---|---|---|---|
+| https://github.com/ctrlaltwill/LearnKit | **MIT** (1,068 B, `sha256₁₂ 38a90d0f7738`) | 185 | Obsidian — flashcards, SR, review analytics |
+| https://github.com/kirill-markin/flashcards-open-source-app | **MIT** (1,070 B, `sha256₁₂ 0e319ca9aaa9`) | 119 | iOS / macOS / Android / web |
+| https://github.com/pieralukasz/true-recall | **MIT** (1,070 B, `sha256₁₂ 23444362494b`) | 68 | Obsidian — **FSRS v6**, image occlusion, retention analytics |
+
+🔵 **This base has carried `open-spaced-repetition/fsrs4anki` as its single FSRS row.** Three
+independent MIT implementations — two of them inside a note-taking tool the learner already owns —
+mean the retention-scheduling layer in an engagement no longer has to be built or bought. It has to
+be **chosen**. 🟡 All three were created in 2026; none is a stable dependency yet, and `true-recall`
+is the only one on FSRS v6.
+
 ## Gaps and caveats
 
 - **`openedx/XBlock` and `openedx/xblock-sdk` exist but are not in the tables above.**

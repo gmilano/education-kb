@@ -10,7 +10,7 @@ Concrete recipes. Each names the exact repos, how they wire together, the licenc
 the result, and a realistic build estimate. Every repo referenced is verified in
 `agents/top.md`, `repos/foundations.md` or `verticals/solutions.md`.
 
-**Thirty-two patterns, re-counted mechanically in `p913`** (🔴 this line read *"Twenty-six, counted mechanically in `p907`"* and was **six short**: `P27`–`P31` were added in `p908`–`p912` and `P32` in `p913`, none of them re-counting. `p907` corrected the same line from *"twenty-three"* and wrote the rule — **a pass that adds a pattern should re-count, not increment** — and the drift resumed on the very next pass. 🔵 The count is now `grep -cE '^## P[0-9]+' compose/patterns.md`; **do not hand-edit this number**), **plus the G1 licence gate added in p897 and extended with gate `904-G1` in p904, `905-G1` in p905, `907-G1` in `p907`, `912-G1` in `p912` and `913-G1` in `p913`** (**P26 added in `p907`** — the sanctioned LMS-to-agent bridge, built from the seven per-institution user-credential bridges `intel/trends.md` **T30** measured, and the only end-to-end permissive pattern here that touches a commercial LMS) (**P22 added in `p903`** — the
+**Thirty-five patterns, re-counted mechanically in `p915`** (🔴 **this line read *"Thirty-two"* and was three short — `P33` was added in `p914` and `P34`–`P35` in `p915`.** The count is `grep -cE '^## P[0-9]+' compose/patterns.md`, it is **35**, and a pass that adds one re-runs that command rather than editing the word — the same drift recurred in `intel/trends.md` this pass and is corrected there too.) (🔴 this line read *"Twenty-six, counted mechanically in `p907`"* and was **six short**: `P27`–`P31` were added in `p908`–`p912` and `P32` in `p913`, none of them re-counting. `p907` corrected the same line from *"twenty-three"* and wrote the rule — **a pass that adds a pattern should re-count, not increment** — and the drift resumed on the very next pass. 🔵 The count is now `grep -cE '^## P[0-9]+' compose/patterns.md`; **do not hand-edit this number**), **plus the G1 licence gate added in p897 and extended with gate `904-G1` in p904, `905-G1` in p905, `907-G1` in `p907`, `912-G1` in `p912` and `913-G1` in `p913`** (**P26 added in `p907`** — the sanctioned LMS-to-agent bridge, built from the seven per-institution user-credential bridges `intel/trends.md` **T30** measured, and the only end-to-end permissive pattern here that touches a commercial LMS) (**P22 added in `p903`** — the
 national-curriculum corpus pattern, built from the Arabic-language channel's finding that the
 curriculum exists at national scale and carries no grant; see `intel/trends.md` **T26**) (**P20 added in `p901`** — the first end-to-end permissive *synchronous* pattern in this file, unlocked by `p901`'s verification of `jitsi/jitsi-meet` at Apache-2.0) (**P19 added in `p900`** — the
 first end-to-end permissive pattern in this file that is not offline-first, built entirely from
@@ -2896,3 +2896,86 @@ with a separate grant from day one.
 - **Where grade *writes* are in scope on day one.** Read-only first (`P26`): writes put the tier
   inside the EU AI Act's assessment scope (**2 Dec 2027**) and inside FERPA record-amendment rules
   in the US, and a multi-vendor write path multiplies both reviews by the number of vendors.
+
+## P34 — Ship a **closed** course-authoring deliverable, now that H5P authoring is ruled out (added `p915`)
+
+**The problem this solves.** `914-F5` established that `h5p/h5p-editor-php-library` and
+`Lumieducation/Lumi` — the two H5P authoring surfaces — carry **no licence payload at all** on a
+16-filename × 3-branch ladder, while the H5P runtimes carry byte-identical GPL-3.0. The delivery
+consequence was blunt: 🔴 **you may lawfully serve H5P and you may not lawfully ship a tool that
+makes it.** Any engagement whose deliverable is *authoring* had nothing permissive to stand on.
+`p915` measured the tier and found the answer.
+
+**The stack.**
+
+| Layer | Repo | Licence | Why this one |
+|---|---|---|---|
+| Authoring editor | https://github.com/course-code-framework/coursecode-desktop | **MIT** (1,069 B) | 🟢 The only permissively licensed authoring editor measured in this base — white-labellable outright |
+| Course build / packaging | https://github.com/course-code-framework/coursecode | **MIT** (1,069 B) | Course-as-code pipeline, SCORM on output |
+| SCORM runtime for playback | https://github.com/jcputney/scorm-again | permissive (in `repos/foundations.md`) | Plays the package in whatever LMS is already in the estate; no LMS fork needed |
+| Content ingestion | https://github.com/docling-project/docling · https://github.com/opendatalab/MinerU | permissive | Turn the client's existing DOCX/PDF/slide estate into structured source for the pipeline |
+| Generation + citation gate | `pydantic/pydantic-ai` + `P23`'s acceptance test | MIT | Draft activities from the ingested corpus; the citation trail is an output, not a prompt instruction |
+| Scheduling (optional) | https://github.com/pieralukasz/true-recall (**FSRS v6**, MIT) | MIT | If the deliverable includes retention, take the scheduler rather than build it (`T43` tier) |
+
+**Wiring.** `docling`/`MinerU` normalise the client's existing material into structured content →
+`pydantic-ai` drafts activities against that corpus with `P23`'s hallucination gate in front of
+publication → authors review and correct in `coursecode-desktop` → `coursecode` builds a **SCORM
+package** → `scorm-again` guarantees playback, so delivery does not depend on which LMS the client
+runs. 🔵 **The licence boundary is clean end to end**: every layer is permissive, so the authoring
+tool itself can be branded and sold closed.
+
+🟡 **The honest caveat, and it belongs in the pitch rather than the appendix.**
+`coursecode`/`coursecode-desktop` are **7 ★ and 5 ★, created 2026-02-12**. This is not a mature
+upstream and should be scoped as **a fork you will own and maintain**, not a dependency you will
+track. Budget for that explicitly. 🔴 **`915-R-G1` is open:** the SCORM output was read from the
+project's description, not generated and validated. **Run one package through `scorm-again` in the
+client's actual LMS before signing**, because the entire interoperability claim rests on it.
+
+🔴 **When to reach for Adapt instead.** If the deliverable may be copyleft — a hosted authoring
+service, or a deploy-and-extend engagement where the client keeps the result open —
+`adaptlearning/adapt_authoring` (GPL, 563 ★) is **far more capable** than CourseCode and is the
+category's real anchor. GPL-3.0 has no network-use clause (`913-F1`), so **hosting** it for the
+client is unaffected; only a closed, branded derivative is foreclosed.
+
+**Estimate.** 8–10 weeks for ingestion + generation + the citation gate over an existing content
+estate, assuming the authoring UI is taken as-is and extended rather than redesigned. Add 3–4 weeks
+if the SCORM validation in `915-R-G1` turns up gaps.
+
+## P35 — Rubric grading inside the institution's existing gradebook, with the human-in-the-loop control as a shipped default (added `p915`)
+
+**The problem this solves.** `T1` records that the binding statutes regulate **use**: Oklahoma
+SB 1734 bars AI used *solely* for grading, discipline or promotion, and several states require a
+district AI policy before deployment. A grading pilot therefore fails on **oversight evidence**, not
+on model quality — and a pilot that writes grades straight into the gradebook cannot produce that
+evidence after the fact.
+
+**The stack.**
+
+| Layer | Repo | Licence | Role |
+|---|---|---|---|
+| Gradebook bridge | https://github.com/Yuanpeng-Li/gradescope-mcp | **MIT** (1,068 B) | 🟢 **Grade against a rubric, review regrade requests, manage assignments — with every write previewed before it is applied.** The oversight control is the tool's default, not a policy document |
+| Alternative / additional bridges | `vishalsachdev/canvas-mcp` (MIT) · `RohanMuppa/brightspace-mcp-server` (MIT) | MIT | Same seam on Canvas and D2L, so the pattern is not single-vendor (`P33`, `T42`) |
+| Deterministic grading where it is possible | https://github.com/ucbds-infra/otter-grader · https://github.com/Submitty/Submitty (BSD-3) | permissive | Anything auto-gradable should never reach a model; reserve the model for prose |
+| Learner model / mastery | https://github.com/CAHLR/pyBKT | MIT | Turns a stream of graded attempts into a mastery estimate rather than a score |
+| Orchestration + audit | `langchain-ai/langgraph` (MIT) · `langfuse/langfuse` | MIT | Every suggested grade, its rubric citation and the human decision, retained as the oversight record |
+
+**Wiring.** Submissions land in Gradescope/Canvas as they already do → deterministic work routes to
+`otter-grader`/`Submitty` → prose goes to the model with the **rubric as the retrieval context**, so
+each suggested mark carries the rubric clause it came from → `gradescope-mcp` stages the write and
+**holds it for preview** → an instructor approves, edits or rejects → `langfuse` retains suggestion,
+citation, decision and identity → `pyBKT` turns the approved stream into mastery estimates.
+
+🟢 **Why the preview step is the commercial centre of this pattern, not a nicety.** It makes "AI is
+not the sole determinant" an **architectural property with a per-decision audit trail**, which is
+exactly the artefact an Oklahoma, Maryland, Virginia, Idaho or North Carolina deployment has to
+produce. 🔵 Sell the audit trail; the grading is the easy half.
+
+🟡 **Caveats.** `gradescope-mcp` is **8 ★, created 2026-03-18** — permissive and small, so treat it
+as a component to fork and own. Gradescope itself is a **proprietary hosted platform**: this pattern
+layers on a product the client already pays for and does not replace it. 🔴 Confirm the client's
+Gradescope terms permit API-driven writes before building on the bridge.
+
+**Estimate.** 6–8 weeks for one course-shape on one gradebook with the audit trail in place; +2–3
+weeks per additional LMS bridge, which is mostly configuration because the three bridges share the
+seam `P33` describes.
+

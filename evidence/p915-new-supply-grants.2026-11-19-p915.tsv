@@ -1,0 +1,17 @@
+repo	branch	path	http	bytes	sha256_12	families	verdict	note
+nomadicjosh/etsis	main	LICENSE.md	200	1114	8f8a3e4bfffc	MIT	MIT	
+bcgov/SIMS	main	LICENSE	200	11358	cfc7749b96f6	Apache-2.0	Apache-2.0	
+Yuanpeng-Li/gradescope-mcp	main	LICENSE	200	1068	29d0f3f4463a	MIT	MIT	
+ankimcp/anki-mcp-server-addon	main	LICENSE	200	227	34b58d896fdb	AGPL-3.0	AGPL-3.0	
+ctrlaltwill/LearnKit	main	LICENSE.md	200	1068	38a90d0f7738	MIT	MIT	
+pieralukasz/true-recall	main	LICENSE	200	1070	23444362494b	MIT	MIT	
+kirill-markin/flashcards-open-source-app	main	LICENSE	200	1070	0e319ca9aaa9	MIT	MIT	
+opensacorg/learning-blocks	master	LICENSE	200	1076	06145c4016db	MIT	MIT	
+QkeleQ10/Study-Tools	main	LICENSE	200	34523	8486a10c4393	AGPL-3.0	AGPL-3.0	
+NaEs25/studiamo	main	LICENSE	200	33880	f0c3e444e06d	AGPL-3.0	AGPL-3.0	
+bahfahh/engram-quest	master	LICENSE	200	2701	4aa2ba9abfc6	none	UNKNOWN-TEMPLATE	no licence title and no grant phrase; title block was: # Engram Quest Plugin License Version 1.1, November 2026 Thi
+Vladyslav-Soldatenko/ProcrastiLearn	master	LICENSE	200	11351	45386cd5bf35	Apache-2.0	Apache-2.0	
+forgemorrow/Chinese-Teaching-AI-Agent	main	LICENSE	200	1068	2e7ffdde3eb5	MIT	MIT	
+RakeshBabuGajula/Exam_Intellect	ExamIntellect	LICENSE	200	1075	a4e58d1074c9	MIT	MIT	
+vosslab/vosslab-skills	-	-	404	0	-	none	NO-LICENCE-FILE-FOUND	searched 16 names over 3 branches
+narender-rk10/MyProctor.ai-AI-BASED-SMART-ONLINE-EXAMINATION-PROCTORING-SYSYTEM	-	-	404	0	-	none	NO-LICENCE-FILE-FOUND	searched 16 names over 3 branches

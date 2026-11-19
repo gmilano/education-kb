@@ -98,6 +98,9 @@ absent.
 | **Timetablely** | https://github.com/GEOSOFT-GLOBAL/timetablely | MIT | **Restored p894.** Automated timetable generator, 27 ★ — the small-scale permissive alternative to UniTime. **Pushed 2026-08-17, three months idle;** a starting point, not a dependency. |
 | **i-Diário** | https://github.com/portabilis/i-diario | **AGPL-3.0** — 🔴 **byte-read correction, p896** | **Restored p896.** The teacher-facing *diário de classe* (class register: attendance, marks, lesson records) companion to **i-Educar** above, from the same Brazilian publisher — 117 ★, pushed 2026-10-14. 🔴 **GitHub reports `NOASSERTION` and the licence is AGPL-3.0**: the `LICENSE` file is the **Affero GPL in Portuguese translation** (*"LICENÇA PÚBLICA GERAL AFFERO GNU"*, 35,326 B), which GitHub's SPDX matcher cannot recognise. An engagement that read the API field alone would treat the strongest copyleft in this file as "licence unknown". **Together with i-Educar this is the most complete open Brazilian public-school stack.** |
 | **Gestão Escolar** | https://github.com/Antonio-Neves/Gestao-Escolar | MIT | **Restored p896.** Python/Django school-management system, 50 ★, pushed 2026-10-12, Portuguese-language. Self-described as in development. **The only MIT-licensed LATAM-origin school system this KB has verified** — thin, but it is the permissive option in a category where the mature Brazilian systems are GPL and AGPL. |
+| **SIMS (BC Gov)** | https://github.com/bcgov/SIMS | 🟢 **Apache-2.0** (byte-read `p915`, `main/LICENSE`, 11,358 B, `sha256₁₂ cfc7749b96f6`) | **Added `p915`, and it is the first government-published permissive student system in this file.** The **Government of British Columbia's** post-secondary **student financial aid** system — TypeScript, 29 ★, 636 open issues, pushed 2026-11-19, developed in the open by a provincial government. 🔵 Not an SIS in the registrar sense: it is the **aid and eligibility** tier, which no other row here covers. Citable as a public-sector reference architecture *and* reusable in a closed derivative. 🟡 Star count is low because the audience is one province, not because the system is small |
+| **etSIS** | https://github.com/nomadicjosh/etsis | **MIT** (byte-read `p915`, `main/LICENSE.md`, 1,114 B, `sha256₁₂ 8f8a3e4bfffc`) | **Added `p915`** — 46 ★, pushed 2026-11-19, created 2015. Higher-education SIS on **CodefyPHP** (PHP 8.4, MariaDB, DDEV). 🔵 It fills the one permissive gap this tier had: Academico is explicitly for **small and medium institutions** and GegoK12 is **K-12-shaped**, so until now there was no permissive **higher-education** registrar option. 🔴 **Read the caveat as part of the row: its README declares "active alpha. Breaking changes and necessary database migrations are expected."** A forkable codebase and a data model to learn from — not something to put under a client's registrar this year |
+| **Learning Blocks** | https://github.com/opensacorg/learning-blocks | **MIT** (byte-read `p915`, `master/LICENSE`, 1,076 B, `sha256₁₂ 06145c4016db`) | **Added `p915`** — 6 ★ but **22 forks**, last push 2026-09-16. 🟡 The fork-to-star ratio says it is being copied rather than followed; read it as a student-information **data model**, not an upstream to track |
 
 **Rejected this pass, recorded so it is not re-proposed (p892).** A fresh search for
 open-source school ERP returned **Fedena** in a licence comparison table under **Apache-2.0**,
@@ -549,6 +552,37 @@ as policy-driven and procurement-gated. A tenant-agnostic MIT bridge is the diff
 "we can demo against your LMS" and "we can demo against a Singapore polytechnic's". It is 68 ★ and
 nine days from its last push — treat it as a credible starting point to be read, not as a
 dependency to pin. See `compose/patterns.md` `P33`.
+
+## The authoring tier as a deployable system — added `p915`
+
+A client producing its own course content is running an authoring tool, and this file had no row
+for one. Both halves of each pair were byte-read in `p915`.
+
+| Platform | Repo | Licence | Where it is strong | AI layering seam |
+|---|---|---|---|---|
+| **Adapt** | https://github.com/adaptlearning/adapt_authoring | 🔴 **GPL** (byte-read, 35,140 B) | 🔵 **The largest open-source e-learning authoring tool there is** — 563 ★, plus its runtime `adapt_framework` at 636 ★. Responsive HTML course production with SCORM/xAPI output; widely used in corporate and public-sector L&D | Plugin architecture on the runtime; generate Adapt JSON course structures from a source corpus. 🔴 **No closed, branded derivative** — deploy-and-extend only. GPL-3.0 has no network-use clause (`913-F1`), so **serving** authored output is unaffected |
+| **CourseCode** | https://github.com/course-code-framework/coursecode · https://github.com/course-code-framework/coursecode-desktop | 🟢 **MIT** both halves (1,069 B each) | 🟢 **The only permissively licensed authoring path measured in this base.** Course-as-code with a desktop editor and SCORM output | No layering needed on the licence side — it can be white-labelled outright. 🟡 **7 ★ and 5 ★, created 2026-02-12: a starting point that exists, not a mature upstream.** `P34` wires it up with that caveat in the recipe |
+
+🔴 **Read this against `914-F5`, which is the reason the row exists.** H5P's runtime is GPL-3.0 and
+**both of its editors carry no grant at all**, so an H5P *authoring* feature cannot lawfully be
+shipped. Adapt and CourseCode are the two answers: Adapt if the deliverable may be copyleft and
+capability matters, CourseCode if the deliverable must be closed. 🟢 `915-F3` also establishes that
+the unlicensed-editor problem is **specific to H5P** — five authoring surfaces were measured in
+`p915` and all five are licensed.
+
+## The national-SIS bridge — one EMEA instance, added `p915`
+
+| Repo | Licence | System it bridges | Note |
+|---|---|---|---|
+| https://github.com/QkeleQ10/Study-Tools | 🔴 **AGPL-3.0** (byte-read `p915`, `main/LICENSE`, **34,523 B** — 🟢 exactly `p913`'s measured true-AGPL byte count, a positive control) | **Magister**, the Dutch student information system | 32 ★, pushed 2026-11-08, Netherlands. A browser extension improving the SIS interface for students |
+
+🔵 **Why it is in this file: it is `T30` against a *national SIS* rather than an LMS.** `T30`
+describes the LMS-to-agent bridge being built per-institution on the **user's own credentials**,
+needing no institutional consent. Every prior instance in this base bridged a *learning* platform.
+This one bridges the system that holds grades and enrolment for a whole country's schools, built by
+an individual, running in the student's browser. 🔴 **AGPL-3.0 and a browser extension is a real
+constraint** — distribution triggers source disclosure — so this is a pattern to learn from, not a
+component to bundle. 🟡 It is one instance; do not read a trend off it.
 
 ## Honest gaps
 

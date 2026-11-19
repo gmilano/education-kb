@@ -570,6 +570,33 @@ class of detail away. The two legs that **did** produce rows this pass (LATAM, A
 a national policy and a national plan are large enough to survive summarisation. 🔴 **Do not read
 this leg as "North America is settled."** See `914-G3`.
 
+#### `p915` — North America: a government-published permissive supply row
+
+🟢 **Supply (new).** `bcgov/SIMS` — **Apache-2.0** (byte-read, 11,358 B), 29 ★, 636 open issues,
+pushed 2026-11-19. The **Government of British Columbia's** post-secondary **student financial aid**
+system, developed in the open. 🟢 **The first government-published, permissively licensed student
+system in this base**, and the significance is not the star count: a provincial government maintaining
+a real aid-and-eligibility system under Apache-2.0 makes it **citable as a reference architecture** in
+any public-sector engagement *and* reusable inside a closed derivative. It also covers a tier no other
+row here does — eligibility and aid, not registrar.
+
+🟢 **Supply (new).** `Yuanpeng-Li/gradescope-mcp` — **MIT**, 8 ★. The first **Gradescope** bridge in
+this base, on a platform central to North American higher-ed grading. Every write is **previewed
+before it is applied**.
+
+🟡 **Opportunity, and it is the clearest one this pass produced.** `T1`'s North American statutes
+regulate **use**: Oklahoma SB 1734 bars AI as the *sole* determinant of grading, discipline or
+promotion, and Maryland, Idaho, Oklahoma and Virginia require district-level AI policy adoption while
+North Carolina's deadlines land 31 December 2026 and 30 June 2027. 🔵 **What that market buys is
+oversight evidence, not model quality** — a per-decision audit trail showing a human decided. `P35`
+builds exactly that from `gradescope-mcp`'s preview gate plus `langfuse` retention, and `bcgov/SIMS`
+gives the public-sector half a permissive reference to cite. **Sell the audit trail; the grading is
+the easy half.**
+
+🔴 **Demand side: nil, fifth consecutive pass.** 134 bills / 31 states, NC Session Law 2026-41, NY
+A 9190, EO 14277, the US Department of Education framework and Berkeley Law were all returned and all
+already written.
+
 ### EMEA
 
 🟢 **Promoted in `p902` — four facts held only in the log until now** (see `902-F1`; the
@@ -1503,6 +1530,31 @@ leg: genuine saturation on the instruments, plus a demand-side channel reduced t
 with every primary host unreachable (`000` to all six probed). See `914-G3`, which this leg is the
 strongest argument for.
 
+#### `p915` — one supply row, and a timing risk on the EU window
+
+🟢 **Supply (new).** `QkeleQ10/Study-Tools` — **AGPL-3.0** (byte-read, 34,523 B), 32 ★, Netherlands,
+pushed 2026-11-08. A browser extension improving **Magister**, the Dutch **national student
+information system**. 🔵 This is `T30` — the per-institution bridge built on the **user's own
+credentials**, needing no institutional consent — landing on a *national SIS* rather than an LMS, for
+the first time in this base. The system holds grades and enrolment for a whole country's schools; the
+bridge is one person's browser extension. 🔴 AGPL-3.0 on a distributed extension means source
+disclosure on distribution: **a pattern to learn from, not a component to bundle.**
+
+🟡 **Opportunity, and it is a timing one.** `T3` is annotated in `p915` with an **unverified
+single-source claim that the 2 December 2027 high-risk date is conditional and may be brought
+forward** by the Commission once standards and guidance land. If that is right, the "selling window"
+framing understates the urgency and the asymmetry favours **telling an EMEA client early**: a
+conformity programme scoped to a 2027 outer limit is cheap insurance, while one scoped to a date that
+moves forward is a missed deadline. 🔴 Do not state it as fact in a client deck — `915-G2` names the
+primary text (Article 1 of Regulation (EU) 2026/1744) and `915-G1` records why this pass could not
+read it.
+
+🔴 **Demand side: nil, fifth consecutive pass.** Annex III classification, the Article 4 standard-drop,
+`Regulation (EU) 2026/1744`, the 2 Dec 2027 deferral, Ofqual and the UK DfE product-safety standards
+were all returned by this pass's EMEA leg and **all were already written here**. 🔵 Per `915-F2` the
+channel cause is now measured on two independent channels and is a **DNS allowlist**, not a search
+problem — so this nil is still not evidence of saturation.
+
 ### APAC
 
 🟢 **Promoted in `p902` — two convening facts, plus the region's one dataset-scale supply row**
@@ -2271,6 +2323,25 @@ inconsistent with the rest and is not relied on here. **Declared gap `914-G2`: r
 `National-AI-Plan-December-2025` PDF and the Australian Framework for Generative AI in Schools
 directly, and extract Action 5's funded quantum.**
 
+#### `p915` — one teacher-facing, in-language supply row
+
+🟢 **Supply (new).** `forgemorrow/Chinese-Teaching-AI-Agent` — **MIT** (byte-read, 1,068 B), 8 ★,
+pushed 2026-11-14. A lesson-prep assistant for **K-12 Chinese-language teachers**, Streamlit with the
+MiMo/Anthropic SDK. 🔵 Two things make a small repository worth a row here: it is **teacher-facing**
+rather than learner-facing, which is the thinner half of this market's supply, and it is
+**in-language**, which is the shape `T29` measured as largely absent outside a single country. It is
+also permissive, where the Chinese-origin platform tier in `verticals/solutions.md` (`SmartKBS`) is
+AGPL-3.0.
+
+🟡 **Opportunity.** `T29` and `T11` together say the binding constraint in APAC is **teacher
+capacity**, not learner tooling, and the instruments that bind are curriculum mandates and teacher
+licensing rather than AI statutes. A teacher-facing, in-language lesson-prep tier is therefore the
+part of the stack a ministry or a provider can actually buy — and at 8 ★ this is a **component to fork
+and own**, not a vendor to partner with.
+
+🔴 **Demand side: nil.** Korea's AI Basic Act, Vietnam's education-high-risk listing, TEQSA's
+regulatory-led posture and Australia's National AI Plan were all returned and all already written.
+
 ### LATAM
 
 🟢 **Promoted in `p902` — two facts held only in the log** (method: `902-F1`):
@@ -2901,6 +2972,33 @@ would settle the education share of the budget, which these sources do **not** b
 **Declared gap `914-G1`: fetch `CONPES 4144` from `dnp.gov.co` from a session whose network policy
 allows it, and extract the education-pillar budget line.**
 
+#### `p915` — 🔴 **explicit nil on both sides, and what was searched**
+
+**Stated rather than left silent, because silence here looks exactly like coverage.**
+
+- 🔴 **Supply: nil.** Twelve discovery legs (lesson planning, rubric grading, special education,
+  curriculum generation, campus MCP, spaced repetition, item generation, SIS, accessibility, teacher
+  agent, proctoring, packaged education skill), each bounded by recent push date and diffed against
+  the 442 addresses already written, returned **no LATAM-origin repository** not already in this base.
+  🔵 Note what that is *not* evidence of: this base already carries a dense LATAM supply tier —
+  `portabilis/i-educar` and `i-diario`, the BNCC corpus repositories, `academico-sis/academico`,
+  `theteacherbot/ICFES-Exam-Engine`, `migueldsants/OpENEM` and the campus-MCP cohort. The nil means
+  **no new supply this window**, not thin coverage.
+- 🔴 **Demand: nil.** UNESCO IESALC's 87 % adoption / 26 % formal strategy / 9 % evaluation figures,
+  the 55 %-no-AI-budget finding, the Digital Education Council LATAM survey (92 % of students, 79 % of
+  faculty), **CONPES 4144**, the 716-instrument regulatory count, Brazil's PL 2.338/2023 and the
+  UNESCO regional observatory were all returned by this pass's LATAM leg and **all seven were already
+  written here.**
+- 🔴 **One instrument limit worth recording against this region specifically.** `iesalc.unesco.org`
+  and `unesco.org` are both unreachable from this session on **both** channels (`915-F2`), and UNESCO
+  is the single most important primary source for LATAM demand-side evidence. **The LATAM figures in
+  this file are therefore secondary-sourced throughout** — multi-source agreement, not primary-read.
+  `915-G1` covers it.
+
+🟡 **The opportunity is unchanged and is the one `CONPES 4144` creates:** budget to 2030 with **no
+obligations or sanctions on private suppliers**, which remains the most sellable regulatory posture in
+the region — a funded buyer with no compliance gate to clear.
+
 ### Global
 
 Cross-regional plays that do not depend on one jurisdiction.
@@ -2995,6 +3093,26 @@ Both are vendor-blog citations of unnamed primary reports. **See
 adds two more disagreeing figures and no new primary source.**
 
 ## Declared gaps
+
+### Declared in `p915`
+
+- 🔴 **`915-G1`** — re-declares `914-G3` **with its mechanism now known.** The demand side needs one
+  pass from a session whose network policy *resolves* `eur-lex.europa.eu`, `oecd.org`,
+  `unesco.org` and `iesalc.unesco.org`. Both the session container (`curl` → `000`) and the
+  server-side fetcher (→ `getaddrinfo ENOTFOUND`) fail, the latter at **DNS**, so the hosts are
+  outside an allowlist rather than refused at the HTTP layer. 🔵 **Do not spend a leg on another HTTP
+  client, library or user-agent — none will work.** This is the fifth consecutive pass in which no
+  primary legal text could be byte-read, and it is the highest-value outstanding gap in the base.
+- **`915-G2`** — read **Article 1 of Regulation (EU) 2026/1744** and establish whether the
+  2 December 2027 Annex III date is **conditional and advanceable by the Commission**. `T3` is
+  annotated with this as an unverified single-source risk; it decides whether `T3`'s "selling window"
+  framing is sound.
+- **`915-G3`** — bound the instrument limit `915-F7` found: **how often does `search/repositories`
+  report an SPDX licence for a repository with no readable payload?** Until it is measured, a
+  search-reported licence counts as **one** channel, not two.
+- **`915-G4`** — `T43`'s by-reference grant class was measured in the **GNU** family only. Probe
+  whether Apache-2.0 and MPL payloads are also distributed by reference at small byte sizes, because
+  band-shaped rules exist or are implied for those.
 
 - 🟢 **`p914` ADVANCES `910-G4` by three byte-reads, and the `NOASSERTION` tier is now 3 of 5
   NonCommercial across this base.** `910-G4` asked what `NOASSERTION` rows actually *say*, having

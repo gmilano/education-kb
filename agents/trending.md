@@ -4,6 +4,251 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p915) — **`914-G4` discharged and `T41` refuted as a general mechanism: Adapt's authoring tool and its runtime carry the *same* full GPL payload, and the editor was created five days *after* the runtime. `914-G3` re-measured on a second, independent channel and still blocked — the block is a DNS allowlist, so no other HTTP client will help. The GNU family is granted *by reference* as often as by reproduction: Anki's own AGPL payload is 1,937 B and its addon's is **227 B**, against 34,523 B for a reproduced one — so `p640`'s size-band logic must not be ported to the GNU family. Nine agents added, three refused.**
+
+**Channels and posture.** `gh api search/repositories` over **twelve** education-shaped discovery
+queries (angles distinct from `p914`'s seven: lesson-planning, rubric-grading, special education,
+curriculum generation, campus MCP, spaced repetition, item generation, SIS, accessibility, teacher
+agent, proctoring, packaged education skill), diffed against the **442** addresses already written
+across the six delivery pages; grants adjudicated with this base's own
+**`ingest/p913-grant-authority.sh`** (title-line primary, 16 filenames × 3 branches) rather than a
+fresh grader, on `913-F2`'s rule that *a pass must read the instrument history before building a new
+instrument*. Plus **8 WebSearch legs** (4 global, 4 regional). Evidence:
+`evidence/p915-new-supply-grants.2026-11-19-p915.tsv`,
+`evidence/p915-authoring-tier-grants.2026-11-19-p915.tsv`,
+`evidence/p915-new-supply-metrics.2026-11-19-p915.tsv`,
+`evidence/p915-primary-host-channels.2026-11-19-p915.tsv`.
+
+🔴 **Query contamination, measured and discarded.** The `lesson plan` leg was the only one of the
+twelve scoped `in:name,description,readme`, and `readme` matching turned it into a generic
+awesome-list and coding-agent channel: of its 40 hits, **37 were not education supply at all**
+(`public-apis`, `awesome-go`, `xterm.js`, `TradingAgents`, agent-skill catalogues at 300k+ ★).
+🔵 **None of the 37 was written to any page.** Recorded because the failure is a reusable
+instrument note: `readme`-scoped search cannot be used for vertical discovery, because every
+tutorial repository in every domain contains the words of every domain. The remaining eleven legs
+were `in:name,description` and produced the cohort below.
+
+### 🟢 `915-F1` Nine addresses added, and the cohort's centre of gravity is **spaced repetition and the grading bridge**
+
+Full rows in `agents/top.md`. Shape of what was found:
+
+| | Count | Grant |
+|---|---|---|
+| Spaced-repetition / active-recall study tooling | 5 | 3 MIT, 1 AGPL-3.0, 1 Apache-2.0 |
+| Grading and proctoring | 2 | **2 MIT** |
+| Teacher-facing lesson prep | 1 | MIT |
+| In-host LMS/app addon | 1 | **AGPL-3.0** |
+
+Two worth naming individually:
+
+- 🟢 **`Yuanpeng-Li/gradescope-mcp`** (MIT, 8 ★) is the **first Gradescope bridge in this base**.
+  Gradescope is a core North American higher-ed grading platform and had no row on any page. It
+  lets an agent grade against a rubric, review regrades and manage assignments, and 🔵 **every
+  write is previewed before it is applied** — which is the human-in-the-loop control `T1`'s
+  grading statutes (Oklahoma SB 1734) actually require, shipped as a default rather than a policy.
+- 🟢 **`ctrlaltwill/LearnKit`** (MIT, 185 ★) and **`pieralukasz/true-recall`** (MIT, 68 ★) both put
+  **FSRS scheduling inside Obsidian**, over notes the learner already owns. Together with
+  `kirill-markin/flashcards-open-source-app` (MIT, 119 ★) that is three permissive FSRS
+  implementations added in one pass, against the single `fsrs4anki` row this base has carried.
+
+### 🔴 `915-F2` `914-G3` re-measured on a second, independent channel — still blocked, and now the *mechanism* is known
+
+`p914` recorded `curl` returning `000` for six primary-document hosts and declared `914-G3`: the
+demand side needs one pass from a session that can reach `eur-lex.europa.eu`, `oecd.org` and
+`unesco.org`. This pass re-tested **both** channels:
+
+| Channel | Egress | Result |
+|---|---|---|
+| `curl` from the session container | session proxy | `000` on all 6 hosts |
+| **server-side fetcher** (different egress entirely) | not the container | 🔴 **`getaddrinfo ENOTFOUND`** |
+
+🔵 **The two channels fail *differently*, and the difference is the finding.** `curl`'s `000` is
+consistent with a proxy refusal; the server-side fetcher's `ENOTFOUND` is a **DNS resolution
+failure**, which means the hosts are outside an allowlist rather than being refused at the HTTP
+layer. 🔴 **Therefore no other HTTP client, library or user-agent will discharge `914-G3`** — and a
+future pass should not spend a leg trying one. The gap is a **network-policy change**, not a tooling
+problem. `914-G3` is **re-declared unchanged as `915-G1`**, with its cost now stated: this is the
+fifth consecutive pass in which no primary legal text could be byte-read.
+
+### 🟢 `915-F3` `914-G4` discharged — `T41` is **refuted as a general mechanism** and stays scoped to H5P
+
+`T41` (from `914-F5`) observed that H5P's runtime halves carry GPL-3.0 while both its *editors*
+carry no payload at all, and proposed the mechanism: **runtimes acquire grants early because they
+ship; editors acquire them late because the team uses them first.** `914-G4` asked for another
+content stack before promoting it. Measured this pass:
+
+| Repo | Role | ★ | Created | Grant (byte-read) | Bytes |
+|---|---|---|---|---|---|
+| `adaptlearning/adapt_framework` | **runtime** | 636 | 2013-10-09 | GPL | 35,129 |
+| `adaptlearning/adapt_authoring` | **authoring tool** | 563 | **2013-10-14** | **GPL** | 35,140 |
+| `course-code-framework/coursecode` | runtime/CLI | 7 | 2026-02-12 | **MIT** | 1,069 |
+| `course-code-framework/coursecode-desktop` | **desktop editor** | 5 | 2026-02-12 | **MIT** | 1,069 |
+| `QFlowLearn/qflow-author` | **authoring tool** | 0 | — | AGPL-3.0 | 34,020 |
+
+🔴 **Adapt refutes the mechanism on every limb of it.** It is the largest open-source e-learning
+authoring tool in this industry; its editor is licensed, with a **fully reproduced** payload; and the
+editor was created **five days after** the runtime, which is the *opposite* of "editors acquire
+grants late". The `coursecode` pair is licensed identically on the same day on both halves, and
+`qflow-author` is an authoring tool with a reproduced AGPL payload. 🟢 **Five authoring surfaces, all
+five licensed.** `T41`'s *observation* about H5P stands and is unaffected — `914-F5`'s delivery
+consequence is unchanged — but its **explanatory claim is withdrawn**. `intel/trends.md` `T41` is
+amended in this pass to say so. 🔵 The transferable point: a mechanism inferred from one vendor's
+repository layout is a property of that vendor until a second stack is measured, and here the second
+stack said no.
+
+### 🔴 `915-F4` The GNU family is granted **by reference** as often as by reproduction — and a size band would misread it
+
+Promoted to `intel/trends.md` **`T43`**. Byte counts of every GNU-family payload read this pass:
+
+| Repo | Grant | Bytes | Form |
+|---|---|---|---|
+| `ankimcp/anki-mcp-server-addon` | AGPL-3.0 | **227** | 🔵 **by reference** — names the licence + holder, links `gnu.org` |
+| `ankitects/anki` | AGPL-3.0 | **1,937** | 🔵 **by reference, plus a mixed-grant inventory** |
+| `NaEs25/studiamo` | AGPL-3.0 | 33,880 | reproduced |
+| `QFlowLearn/qflow-author` | AGPL-3.0 | 34,020 | reproduced |
+| `QkeleQ10/Study-Tools` | AGPL-3.0 | **34,523** | reproduced — 🟢 exactly `p913`'s measured true-AGPL count |
+| `adaptlearning/adapt_framework` | GPL | 35,129 | reproduced |
+| `adaptlearning/adapt_authoring` | GPL | 35,140 | reproduced |
+
+🔵 **Why this matters as an instrument rule.** `p640` established that an **MIT**-phrased payload
+outside ~1,000–1,250 B is a *narrowed derivative*, and `914-F4` confirmed that band twice. The
+natural next move is to port the band to the GNU family — and it would be **wrong**, because a short
+GNU payload is not narrowed, it is **referential**: naming "GNU Affero General Public License,
+version 3 or later" plus the copyright holder is a complete and effective grant that happens not to
+reproduce 34 kB of text. 🔴 **A 227-byte AGPL payload and a 34,523-byte AGPL payload grant the same
+rights.** Any size-band rule applied to GNU would flag the two most important rows here —
+**Anki itself** among them — as suspect derivatives. `T43` records the three byte-classes
+(by-reference ≈227 B–1,937 B; AGPL reproduced ≈33.9–34.5 kB; GPL reproduced ≈35.1 kB) as a *form*
+classifier only, never as a validity test.
+
+🟡 **A second-order caveat, stated because it is the commercially live one.** `ankitects/anki`'s
+1,937 B payload is **not a single grant**: it carves out BSD-3 user contributions, CC BY 4.0
+(`statsbg.py`), MIT (`mpv.py`, `winpaths.py`, jQuery, plot.js), Apache-2.0 (MathJax), BSD-3
+(protobuf.js) and LGPL Qt translations in binary distributions, and licenses **the logo** under
+AGPL-3.0 with a separate limited alternative grant. The adjudicator reduced it to `AGPL-3.0`, which
+is correct as the *primary* grant and incomplete as a description of the payload.
+
+### 🟢 `915-F5` `T42`'s inherit-vs-bridge mechanism confirmed on a third limb — inside **one owner's own** project family
+
+`T42` holds that bridges are permissive because they are written to be embedded, while plugins are
+copyleft because they inherit from the platform they plug into. The strongest available control for
+that is a single owner shipping both halves, and this pass found one:
+
+| Repo | Owner | Role | Grant |
+|---|---|---|---|
+| `ankimcp/anki-mcp-server` | `ankimcp` | **external** MCP bridge, talks to Anki | **MIT** (568 ★, already in this base) |
+| `ankimcp/anki-mcp-server-addon` | `ankimcp` | **in-host addon**, runs inside Anki | 🔴 **AGPL-3.0** (104 ★, added `p915`) |
+| `ankitects/anki` | upstream | the host | 🔴 **AGPL-3.0** |
+
+🔵 **Same owner, same product, opposite grants, and the inheritance is explicit** — the addon runs
+inside an AGPL-3.0 host and takes its licence; the bridge sits outside the process boundary and
+stays MIT. 🟢 This is the cleanest instance of `T42` in the base because owner, domain, team and
+week are all held constant, so the only variable left is the process boundary.
+🔴 **Delivery consequence:** a closed deliverable may use `anki-mcp-server`, and may **not** bundle
+`anki-mcp-server-addon`. AGPL-3.0 §13's network-use clause is not triggered by a desktop addon, but
+distribution is — so the constraint is on shipping, not on running it internally.
+
+### 🟢 `915-F6` `GegoK12`'s published MIT confirmed against an API `NOASSERTION` — and `T40` held again
+
+`verticals/solutions.md` carries `Gego-K12/gegok12` as **MIT**, and `search/repositories` reports
+`NOASSERTION` for it. Byte-read: **MIT, 1,150 B** — inside `p640`'s band. 🟢 **The published cell is
+correct and the API is the weaker channel.** On the 24 addresses graded this pass the `T40` split
+held for the third pass running: every `NOASSERTION` resolved to a readable grant the classifier
+could not reduce (`gegok12` MIT; `anki-mcp-server-addon` a by-reference AGPL; `engram-quest` a
+bespoke licence; `ankitects/anki` a mixed-grant payload), and every `NONE` resolved to no payload at
+all.
+
+### 🔴 `915-F7` Three addresses refused — and one of them exposes an instrument limit worth recording
+
+| Repo | ★ | Verdict |
+|---|---|---|
+| `narender-rk10/MyProctor.ai-…-PROCTORING-SYSYTEM` | **237** | 🔴 no licence payload; 16 names × 3 branches all `404` |
+| `bahfahh/engram-quest` | 33 | 🔴 **bespoke grant** — `# Engram Quest Plugin License Version 1.1, November 2026`, 2,701 B, not an OSI licence |
+| `vosslab/vosslab-skills` | 6 | 🔴 **unverifiable** — see below |
+
+🔴 **`vosslab/vosslab-skills` is the one to read.** `search/repositories` reports its licence as
+**`MIT`**, and it cannot be corroborated on any channel available here: all 16 licence filenames
+return `404` across 3 branches, and the per-repository endpoint `repos/vosslab/vosslab-skills`
+returns **`403 — GitHub access to this repository is not enabled for this session`**, because API
+access is scoped to the repositories attached to the session. 🔵 **The instrument note:
+`search/repositories` will report a named SPDX licence for a repository whose grant this session
+cannot verify on any other channel.** A search-reported licence is therefore not a second channel —
+it is the *same* channel as the star count. Refused rather than published, on the two-channel rule.
+🟡 `engram-quest` is recorded rather than discarded because a licence *written this month* and
+version-numbered (`1.1`) is `T25`'s bespoke-grant class arriving in the study-tooling tier.
+
+### Demand side — 🔴 nil on all four regions, fifth consecutive pass, and the cause is now measured twice
+
+Nineteen candidate facts the eight WebSearch legs returned were checked by string against the six
+delivery pages. **All nineteen were already written**: the Digital Omnibus / `Regulation (EU)
+2026/1744` and the 2 Dec 2027 deferral, Article 4's standard-drop, 134 bills / 31 states, NC Session
+Law 2026-41, NY A 9190, Berkeley Law, Ofqual, EO 14277, UNESCO IESALC's 87 % / 26 % / 9 %, the
+Digital Education Council LATAM survey, CONPES 4144, the 716-instrument count, KHDA, Maryland, the
+OECD Digital Education Outlook, Vietnam, Korea's AI Basic Act and TEQSA.
+
+🔵 **One substantive addition, and it is a *risk flag on an existing claim* rather than a new fact.**
+`T3` is titled *"the EU's high-risk deadline moved to December 2027, and that is a selling window"*.
+One source this pass states the postponement is **conditional** — the Commission may bring the date
+**forward** once standards and guidance are in place, making 2 December 2027 an **outer limit rather
+than a guarantee**. 🔴 **Single channel, secondary source, and the search itself flagged it as the
+only result making the point.** It is *not* recorded as a fact; `T3` is annotated with it as an
+unverified risk, because a trend being used to time a commercial pitch should carry the possibility
+that its window closes early. `915-G2` names the primary text to read.
+
+🟢 **But the regional legs did produce supply, which the last four passes did not.** Two rows are
+region-placed by *repository content*, not by inference:
+- **North America:** `bcgov/SIMS` (**Apache-2.0**, 29 ★, pushed 2026-11-19) — the **Government of
+  British Columbia's** post-secondary student financial-aid system. 🟢 The first
+  **government-published, permissively licensed** student system in this base.
+- **EMEA:** `QkeleQ10/Study-Tools` (AGPL-3.0, 32 ★, Netherlands) — a browser extension improving
+  **Magister**, the Dutch SIS. 🔵 Evidence for `T30`: the per-institution bridge built on the user's
+  own credentials, here against a *national* SIS rather than an LMS.
+
+### 🟢 `915-F8` Verification posture of this pass, stated so it can be checked
+
+- 🟢 **Every URL written this pass resolves.** 18 distinct new `github.com` addresses were added
+  across the delivery pages; **all 18** returned `200` on a `raw.githubusercontent.com` read of a
+  real file on a real branch. **Zero `404`s, zero unresolved rows.**
+- 🟢 **Zero header-as-data and zero ragged tables in the added lines.** `ingest/validate-pages.py`
+  documents that its two shape heuristics must be run on a **diff**, not page-wide; its `--stdin`
+  flag is not honoured (it re-scans its own default file set), so the two heuristics were
+  re-implemented and run over this pass's **716 added lines** across the eight pages:
+  **0 placeholder-as-data rows, 0 ragged tables.** 🔵 Run page-wide the packaged script reports
+  findings only in `intel/open-gaps.md` and `intel/measured-unusable.md` — **neither of which this
+  pass touched** — which is the false-positive class its own header describes.
+- 🟢 **`p911-identifier-collision` passes with the new identifiers in place** — **78** published
+  identifiers judged, **35** in `compose/patterns.md` (`P1`–`P35`) and **43** in `intel/trends.md`
+  (`T1`–`T43`), each naming exactly one thing.
+- 🔴 **Both published counts were wrong before this pass and are corrected mechanically.**
+  `intel/trends.md` read *"Thirty-nine"* against an actual **43**, and `compose/patterns.md` read
+  *"Thirty-two"* against an actual **35** — `p914` added `T40`–`T42` and `P33` and incremented
+  neither line. 🔵 This is the **third consecutive recurrence** of a drift the trends file carries an
+  explicit rule against, so `p915` restates it as a procedure in both files: re-run
+  `grep -cE '^## T[0-9]+'` / `grep -cE '^## P[0-9]+'`, do not edit the word.
+- 🔵 **`make hooks` is at exact parity with `HEAD`: 53/76 gates green, and the same 23 red.** The
+  baseline was **measured, not assumed** — `HEAD` was checked out into a detached worktree and the
+  suite run there, returning a **byte-identical gate list**. 🔴 **This pass therefore fixed none of
+  the 23 and introduced none.** They are long-standing: `gate-promotion-ledger` and
+  `gate-cell-reproduction` (*"zero published cells parsed — a parse fault, not a clean shelf"*) both
+  predate this pass and neither of this pass's rows touches them.
+
+### Gaps declared this pass
+
+- **`915-G1`** — 🔴 **`914-G3`, re-declared with its mechanism known.** The demand side needs one
+  pass from a session whose network policy *resolves* `eur-lex.europa.eu`, `oecd.org` and
+  `unesco.org`. Do **not** spend a leg on another HTTP client: both the container and the
+  server-side fetcher fail, the latter at DNS. This remains the highest-value outstanding gap.
+- **`915-G2`** — read Article 1 of **`Regulation (EU) 2026/1744`** on EUR-Lex and establish whether
+  the 2 December 2027 date is **conditional and advanceable by the Commission**. `T3` is written as a
+  selling window; if the date can move forward, the window is narrower than this base states.
+- **`915-G3`** — `915-F7`'s instrument limit needs a bound: **how often** does
+  `search/repositories` name an SPDX licence for a repository with no readable payload? Re-run the
+  grant authority over a sample of search-reported licences and measure the disagreement rate. Until
+  then, treat a search-reported licence as one channel, not two.
+- **`915-G4`** — `T43`'s by-reference class was found in the **GNU** family only. Probe whether
+  Apache-2.0 and MPL payloads are also distributed by reference at small byte sizes, because
+  `p640`-style bands exist or are implied for those too.
+
 ## `2026-11-19` (p914) — **Fourteen agents added, four refused for having no grant at all — including the pass's highest-starred find at 497 ★. The two API non-answers, `NONE` and `NOASSERTION`, were measured as *different signals* and behaved differently 8 times out of 8. H5P's authoring half has no licence while its runtime half is GPL-3.0, and both editors were pushed this week. D2L Brightspace finally has a tenant-agnostic MIT bridge.**
 
 **Channels and posture.** `gh api search/repositories` over **seven** education-shaped discovery

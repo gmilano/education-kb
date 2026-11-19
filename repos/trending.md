@@ -4,6 +4,94 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p915) — **The authoring tier is licensed after all: Adapt's editor (563 ★) carries a fully reproduced GPL payload and was created *five days after* its runtime, which refutes `T41`'s mechanism and discharges `914-G4`. `coursecode` + `coursecode-desktop` give this base its first **MIT** authoring pair — the permissive answer to `914-F5`'s H5P prohibition. Four repos added to foundations.**
+
+**Channels and posture.** Two `gh api search/repositories` legs over the authoring/editor tier
+(`QTI SCORM authoring`, `course authoring elearning`), grants byte-read with
+`ingest/p913-grant-authority.sh`. Evidence:
+`evidence/p915-authoring-tier-grants.2026-11-19-p915.tsv`.
+
+### 🟢 `915-R1` The permissive authoring pair — `914-F5`'s prohibition now has an answer
+
+`914-F5` established that H5P's runtime is GPL-3.0 while **both** its editors carry no grant at
+all, and drew the delivery consequence: 🔴 *"you can lawfully serve H5P and you cannot lawfully ship
+a tool that makes it."* That left any engagement needing an **authoring** deliverable with nothing
+permissive to build on. This pass found a pair:
+
+| Repo | Role | Licence (byte-read) | ★ | Last push |
+|---|---|---|---|---|
+| https://github.com/course-code-framework/coursecode | course-as-code runtime/CLI, SCORM output | **MIT** (`main/LICENSE`, 1,069 B) | 7 | 2026-11-06 |
+| https://github.com/course-code-framework/coursecode-desktop | **desktop authoring editor** | **MIT** (`main/LICENSE`, 1,069 B) | 5 | 2026-10-29 |
+
+🟡 **Read with its size honestly: 7 ★ and 5 ★, both created 2026-02-12.** This is not a replacement
+for H5P's authoring ecosystem and it is not a mature upstream. 🟢 **What it is, is the only
+permissively licensed authoring path measured in this base** — both halves MIT, both payloads
+in `p640`'s band, SCORM on the output side so the artefact plays in any LMS already in the estate.
+For a closed authoring deliverable it is a *starting point that exists*, where the alternative is
+none. `P34` wires it up.
+
+### 🔴 `915-R2` Adapt — the authoring tier's real anchor, and it is copyleft on both halves
+
+| Repo | Role | Licence (byte-read) | ★ | Created | Bytes |
+|---|---|---|---|---|---|
+| https://github.com/adaptlearning/adapt_framework | runtime | 🔴 **GPL** | 636 | 2013-10-09 | 35,129 |
+| https://github.com/adaptlearning/adapt_authoring | **authoring tool** | 🔴 **GPL** | 563 | **2013-10-14** | 35,140 |
+
+Added to `repos/foundations.md` under the authoring tier. 🔵 **Adapt is the largest open-source
+e-learning authoring tool in this industry and it belongs in a foundations file regardless of its
+grant** — a client may already be running it, and `verticals/solutions.md`'s own test is *what the
+client is already running*. 🔴 **For a closed derivative it is unavailable**; for a hosted or
+deploy-and-extend engagement it is the most capable option in the category, and GPL-3.0 has no
+network-use clause (`913-F1`), so serving authored output is unaffected.
+
+🔴 **And it refutes `T41`.** See `agents/trending.md` `915-F3`: the editor is licensed, fully
+reproduced, and *younger than the runtime by five days* — the opposite of the mechanism `T41`
+proposed. `914-G4` is discharged; `T41` is amended to stay scoped to H5P.
+
+### 🟢 `915-R3` Permissive student systems — one government-published
+
+| Repo | Licence (byte-read) | ★ | Last push | Role |
+|---|---|---|---|---|
+| https://github.com/bcgov/SIMS | **Apache-2.0** (`main/LICENSE`, 11,358 B) | 29 | 2026-11-19 | 🟢 **Government of British Columbia** — post-secondary **student financial aid**. TypeScript, 636 open issues, actively developed in the open |
+| https://github.com/nomadicjosh/etsis | **MIT** (`main/LICENSE.md`, 1,114 B) | 46 | 2026-11-19 | Higher-education SIS on CodefyPHP (PHP 8.4, MariaDB, DDEV). 🟡 **Self-declared active alpha** |
+| https://github.com/opensacorg/learning-blocks | **MIT** (`master/LICENSE`, 1,076 B) | 6 | 2026-09-16 | Learning Blocks SIS. 🟡 22 forks against 6 ★ and last push September — read as a data model, not an upstream |
+
+🟢 **`bcgov/SIMS` is the first government-published, permissively licensed student system in this
+base.** The significance is not its star count — it is that a provincial government maintains a
+real financial-aid system in the open under Apache-2.0, which makes it citable as a **reference
+architecture** in any public-sector engagement, and reusable in a closed derivative. North America
+has returned nil demand-side rows for five passes; this is a North American *supply* row.
+
+🟡 **`etsis` is added with its alpha warning as part of the row, not a footnote.** Its README states
+*"The application is in active alpha. Breaking changes and necessary database migrations are
+expected."* 🔵 **It does not displace this base's existing MIT SIS claims** — `academico-sis/academico`
+(MIT, 413 ★) remains the maintained permissive core and `Gego-K12/gegok12` (MIT, confirmed by
+byte-read this pass) the K-12 data model. What `etsis` adds is the **higher-education** shape in a
+permissive grant, where Academico is explicitly aimed at small and medium institutions. Read it as a
+forkable codebase; do not put it under a client's registrar this year.
+
+### 🟢 `915-R4` Three permissive FSRS implementations, against the one this base carried
+
+| Repo | Licence (byte-read) | ★ | Host |
+|---|---|---|---|
+| https://github.com/ctrlaltwill/LearnKit | **MIT** (1,068 B) | 185 | Obsidian — flashcards, spaced repetition, review analytics |
+| https://github.com/kirill-markin/flashcards-open-source-app | **MIT** (1,070 B) | 119 | iOS / macOS / Android / web |
+| https://github.com/pieralukasz/true-recall | **MIT** (1,070 B) | 68 | Obsidian — **FSRS v6**, image occlusion, retention analytics |
+
+🔵 **The pattern worth recording: the scheduler has become a commodity primitive.** This base has
+carried `open-spaced-repetition/fsrs4anki` as the single FSRS row. Three independent MIT
+implementations, two of them inside a **note-taking tool the learner already owns**, mean the
+retention-scheduling layer no longer has to be built or bought in an engagement — it has to be
+*chosen*. 🟡 All three are 2026 creations; none is a stable dependency yet.
+
+### Gaps declared this pass
+
+- **`915-R-G1`** — `coursecode`'s SCORM output was read from its description, not run. Before `P34`
+  is sold, generate a package and validate it against `jcputney/scorm-again` (already in
+  foundations) in a real LMS.
+- **`915-R-G2`** — `bcgov` is a large government org publishing in the open; this pass probed one
+  repository. Sweep the owner for other education-tier systems under permissive grants.
+
 ## `2026-11-19` (p914) — **The interactive-content tier measured as a tier rather than as components: H5P's two runtimes carry byte-identical GPL-3.0, both its authoring surfaces carry nothing, and both were pushed this week. 24 new addresses graded by the corrected authority with zero family disagreements. One new permissive dev-toolkit row, one new GPL Node runtime.**
 
 **Channel.** `gh api search/repositories` for discovery and metrics (seven queries bounded by

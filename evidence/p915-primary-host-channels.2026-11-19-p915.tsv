@@ -1,0 +1,9 @@
+host	channel	result
+unesco.org	curl-container	000
+eur-lex.europa.eu	curl-container	000
+oecd.org	curl-container	000
+future-ed.org	curl-container	000
+digitaleducationcouncil.com	curl-container	000
+iesalc.unesco.org	curl-container	000
+eur-lex.europa.eu	server-side-fetch	getaddrinfo ENOTFOUND
+www.iesalc.unesco.org	server-side-fetch	getaddrinfo ENOTFOUND
