@@ -437,6 +437,55 @@ artefacts a course can be built around, and they are maintained by the departmen
 | https://github.com/cmu-db/bustub | MIT (byte-read 1,075 B) | Carnegie Mellon's educational RDBMS — **5,171 ★**, pushed 2026-11-13. The largest restored row in this file by an order of magnitude, and the reference artefact for database teaching worldwide. |
 | https://github.com/RWTH-OS/eduOS-rs | Apache-2.0 | RWTH Aachen's teaching operating system in Rust — 493 ★, pushed 2026-10-04. |
 
+## Licence posture of the whole shelf — measured `p909`
+
+Every pass before this one measured licences **per row**. `p909` measured them **across all 345
+addresses** in this file, `agents/top.md` and `verticals/solutions.md` at once, so the shelf has a
+distribution rather than an impression.
+
+| Grant | Count | Share | Posture for a client deliverable |
+|---|---|---|---|
+| MIT | **151** | 44.8% | 🟢 build on it |
+| Apache-2.0 | **65** | 19.3% | 🟢 build on it (patent grant) |
+| BSD-3-Clause | 13 | 3.9% | 🟢 build on it |
+| ISC | 3 | 0.9% | 🟢 build on it |
+| **Permissive subtotal** | **232** | **68.8%** | 🟢 |
+| `NOASSERTION` | **29** | 8.6% | 🟡 **byte-read before quoting** — `906-G1` measured this field wrong in *both* directions |
+| AGPL-3.0 | 26 | 7.7% | 🔴 network copyleft — keep out of the deliverable, integrate over an API |
+| `NONE` | **18** | 5.3% | 🔴 **no grant at all — unusable, however good the code** |
+| GPL-3.0 | 16 | 4.7% | 🔴 |
+| LGPL-3.0 | 4 | 1.2% | 🟡 linkable without infecting the caller |
+| GPL-2.0 | 3 | 0.9% | 🔴 |
+| ECL-2.0 | 3 | 0.9% | 🟡 Apache-family, written for universities |
+| MulanPSL-2.0 | 3 | 0.9% | 🟡 OSI-permissive; **authoritative text is Chinese** (`p906`) |
+| ODbL-1.0 · CC0-1.0 · CC-BY-4.0 | 1 · 1 · 1 | 0.9% | 🟡 **data/content licences, not software grants** |
+| **Measured total** | **337** | | |
+
+🔵 **Two numbers to carry into an engagement.** **68.8% permissive** is the honest answer to *"can
+we build on open education software?"* — yes, for roughly two rows in three. **23.3% copyleft or
+ungranted** is why the other third needs a licence conversation before an architecture
+conversation, and the **29 `NOASSERTION` rows** are the queue where the published metadata cannot
+be trusted either way and only a byte-read settles it.
+
+🔴 **Eight addresses are missing from that 337, and seven of them are a named class.**
+`mwouts/jupytext` (`902-G3`) is no longer alone: `darl-genai/instructional_agents`,
+`digitalcredentials/learner-credential-wallet`, `longsightgroup/qti3`,
+`mitodl/open-learning-ai-tutor`, `openolat/qtiworks` and `tokenaii/horus-taleeq-0.2b-base` are
+all **`raw` `200` and `422` from `gh api search/repositories` when queried individually** — real,
+readable, and unmeasurable on the only star channel this base has. **2.0% of the shelf. None gets
+an estimated star count.** The eighth is `projectfedena/fedena`, which is the inverse case:
+measurable on search (**547 ★**, SPDX `NONE`, last push `2020-05-18`) and `NORESOLVE` on a
+nine-path raw ladder, because it is a 2010-era Rails application with no `README` and no
+`.gitignore` at root — `404` on `LICENSE` and `200` on `Rakefile` at the same ref, which is the
+discriminating evidence that it is **live and ungranted**. Its exclusion from this file as *"not a
+candidate"* is correct and is now evidenced rather than asserted.
+
+🟢 **Gate for anyone re-running this census (`909-G1`).** Do **not** batch `repo:` qualifiers
+without diffing. One `422` member returns `422` for the **entire call** and silently replaces
+every row in it; this pass lost 14 measurable repositories to 1 unmeasurable one and recovered
+them only by re-querying individually. Query one address per call, or batch and then diff the
+returned set against the requested set.
+
 ## Dependency reproducibility and grant disclosure — measured `p905`
 
 Every figure here is byte-read from the repository's own manifests on its **real default branch**

@@ -4,6 +4,98 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p909) — **Full two-channel census of all 345 delivery addresses. 343 alive. The shelf's licence posture measured for the first time: 68.8% permissive, 23.3% copyleft or ungranted. The star-unmeasurable class is 7 repositories, not 1. Batched `repo:` census queries are unsafe and the reason is measured.**
+
+**Channels.** `raw.githubusercontent.com` at the `HEAD` ref with a 9-path ladder (both
+nonexistent controls returned `404` on every path), and `gh api search/repositories`. 🔴
+`WebFetch` failed DNS on every primary source tried this pass; `github.com` HTML remains `403`.
+Full reasoning for every finding below is in [`agents/trending.md`](../agents/trending.md) `p909`.
+
+### 🟢 Census result — 345 distinct addresses in `agents/top.md`, `repos/foundations.md`, `verticals/solutions.md`
+
+| Outcome | Count |
+|---|---|
+| Resolved on the raw channel | **343** |
+| Metasyntactic artefact of the gate, not a row (`github.com/OWNER/REPO`, `909-G3`) | 1 |
+| `NORESOLVE` on the 9-path ladder — **and alive** (`909-F1`) | 1 |
+| Measurable on the search channel | **337** |
+| Real on raw, **unmeasurable** on the only star channel (`909-F2`) | **7** |
+
+### 🟢 Licence posture of the whole shelf (337 measured)
+
+**MIT 151 · Apache-2.0 65 · BSD-3-Clause 13 · ISC 3 → 232 permissive = 68.8%.**
+`NOASSERTION` 29 (8.6%, byte-read required) · AGPL-3.0 26 · `NONE` 18 · GPL-3.0 16 · LGPL-3.0 4 ·
+GPL-2.0 3 · ECL-2.0 3 · MulanPSL-2.0 3 · ODbL-1.0 1 · CC0-1.0 1 · CC-BY-4.0 1.
+🔴 **23.3% is copyleft or carries no grant at all.** 🟡 The three data/content licences
+(ODbL, CC0, CC-BY) are **not software grants** and must not be read as permission to build.
+
+### 🔴 The seven star-unmeasurable repositories — all `raw` `200`, all search `422` individually
+
+`darl-genai/instructional_agents` · `digitalcredentials/learner-credential-wallet` ·
+`longsightgroup/qti3` · `mitodl/open-learning-ai-tutor` · `mwouts/jupytext` ·
+`openolat/qtiworks` · `tokenaii/horus-taleeq-0.2b-base`
+
+`p902` found the first of these and published it as `unmeasurable, not estimated`. The class is
+**2.0% of the shelf**. All seven keep their rows; **none gets an estimated star count.**
+
+### 🔴 Measured top of the shelf by stars (search channel, 2026-11-19)
+
+| Repository | ★ | Grant | Last push |
+|---|---|---|---|
+| `freeCodeCamp/freeCodeCamp` | 459,300 | BSD-3-Clause | 2026-11-18 |
+| `ollama/ollama` | 187,555 | MIT | 2026-11-18 |
+| `openai/whisper` | 113,016 | MIT | 2026-08-31 |
+| `vllm-project/vllm` | 97,185 | Apache-2.0 | 2026-11-19 |
+| `infiniflow/ragflow` | 94,399 | Apache-2.0 | 2026-11-18 |
+| `OpenHands/OpenHands` | 93,774 | MIT | 2026-11-19 |
+| `TapXWorld/ChinaTextbook` | 84,747 | 🔴 `NONE` | 2026-10-26 |
+| `opendatalab/MinerU` | 83,954 | 🟡 `NOASSERTION` | 2026-11-18 |
+| `microsoft/ai-agents-for-beginners` | 80,377 | MIT | 2026-11-17 |
+| `docling-project/docling` | 70,766 | MIT | 2026-11-18 |
+| `mem0ai/mem0` | 69,205 | Apache-2.0 | 2026-11-18 |
+| `BerriAI/litellm` | 63,505 | 🟡 `NOASSERTION` | 2026-11-19 |
+| `crewAIInc/crewAI` | 61,086 | MIT | 2026-11-18 |
+| `HKUDS/DeepTutor` | **60,504** | Apache-2.0 | 2026-11-18 |
+| `odoo/odoo` | 55,914 | 🟡 `NOASSERTION` | 2026-11-19 |
+| `langchain-ai/langgraph` | 45,131 | MIT | 2026-11-19 |
+| `THU-MAIC/OpenMAIC` | **43,906** | MIT | 2026-11-18 |
+| `HKUDS/LightRAG` | 40,763 | MIT | 2026-11-18 |
+
+🔵 **The two education-native repositories in this list are `DeepTutor` (60,504) and `OpenMAIC`
+(43,906)**; `ChinaTextbook` is larger than both but carries **no grant**. Everything else at this
+scale is general infrastructure, which is the same shape `T16` describes: education's own open
+supply is an order of magnitude smaller than the infrastructure it runs on.
+
+### 🔴 `909-G1` Batched `repo:` census queries are unsafe — measured
+
+One batch of 15 `repo:` qualifiers returned a single `422 Validation Failed` **for the whole
+call**, replacing all results: **14 measurable repositories lost to 1 unmeasurable one**, silently.
+🟢 **Census work queries one address per call, or batches and then diffs returned against
+requested.** This pass did the diff, which is why the unmeasurable class is `7` and not `21`.
+
+### 🔴 Supply legs — nil for new rows, 37th consecutive time
+
+`github trending` and the vertical-platform leg returned `HKUDS/DeepTutor`,
+`TapXWorld/ChinaTextbook`, `SirhanMacx/Claw-ED`, `geekjourneyx/interactive-learning`,
+`openeducat/openeducat_erp`, `sakaiproject/sakai`, `instructure/canvas-lms`,
+`ILIAS-eLearning/ILIAS`, `oppia/oppia` — **all already held.**
+
+🔴 **One address the leg implied does not exist.** From the true statement that Sakai is
+*"stewarded by the Apereo Foundation"*, the natural address is **`apereo/sakai`** — **`404` on the
+raw ladder, absent from `search/repositories`**. The real address is **`sakaiproject/sakai`**,
+already in three delivery rows. 🟢 Nothing entered any file from it. **Owner inference from prose
+is barred.**
+
+### 🟢 One row promoted to delivery
+
+**`geekjourneyx/interactive-learning`** — MIT (byte-read `LICENSE@HEAD`, 1,069 B,
+`sha256₁₂ 02b7dc1969f4`), **52 ★**, pushed `2026-04-10`, APAC — China. Named in this log since
+`p907` with **no row in any delivery file**: `908-F1`'s log/delivery divergence landing inside the
+agent-*skill* cohort that `p896` had already flagged as twice-enumerated-incomplete. Now in
+[`agents/top.md`](../agents/top.md).
+
+---
+
 ## `2026-11-19` (p908) — **`repos/foundations.md` carried 431 repository addresses into its last rewrite and 159 out, and seven of the dropped ones are repositories the log says were promoted *into this file*. They are restored with their grants byte-read. `OpenOLAT/qtiworks` — a BSD-3-Clause QTI engine — is real, readable and invisible to the index everyone searches with.**
 
 Method, channels and the promotion-audit numbers are in

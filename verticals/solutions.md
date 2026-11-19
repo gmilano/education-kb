@@ -355,6 +355,45 @@ someone else's LMS** — it is instrumentation for proving an intervention worke
 client would deploy as their learning environment. One row, in the file where an engagement would
 actually look for it.
 
+## Who actually buys this in EMEA — measured `p909`
+
+A platform shortlist is only useful if it is pointed at the buyer, and for Europe this base had
+named **no** buyer and **no** vendors. `p909` closes that with a denominator and a named cohort.
+
+🔵 **The buyer is national, not the school.** An analysis of **390 public AI-in-education tenders
+across 25 countries** finds **central government ran 124** of them; **individual schools, school
+trusts and colleges ran 11**. A platform strategy aimed at per-school procurement in Europe is
+aimed at roughly 3% of the public money. 🟡 Two independent searches carried this figure; no
+primary source could be fetched (see below).
+
+🟢 **The UK is the concrete, named instance — and it ships an open specification.** The **AI
+Tutoring Tools Pioneer Programme** (Find a Tender notice `056738-2026`) awarded **8 contracts of
+£300,000 each**, £2.4m in total, to **Medly AI, Zero Gravity Tech, Learn Anything Education,
+Flint, Pearson Education, ElevenLabs, Eedi and Google UK**. Scope: **Years 9–10**, English, maths,
+science and modern foreign languages, aimed at pupils from underrepresented backgrounds. Awards
+summer 2026; national availability is a **2027 ambition, not a deadline**.
+
+🔵 **The clause that matters for a studio: the standard co-designed under these contracts is owned
+by DSIT/i.AI and will be shared with the wider market.** That is a public tutoring specification
+arriving ahead of the products that must meet it — the same position `T9` describes, where the
+buyer writes the spec and the integrator who read it first wins. 🟡 **One secondary source reports
+six winners from 53 applications** instead of eight awards; the eight-award figure comes from the
+tender notice's awardee listing and is the one carried here. The conflict is recorded, not
+resolved.
+
+🔴 **Two EMEA programmes that did *not* survive corroboration, and are therefore not platform
+rows.** Poland's AI-lab framework (**12,000 kits** — 8,000 primary, 4,000 secondary — six
+suppliers, early 2026) and France's **P2IA** (six AI services tested in classrooms since January
+2026) each appeared on **one** source and **failed a second, targeted search that returned nothing
+on either**. They are open leads, with the failed query recorded so the next pass does not
+re-derive the absence.
+
+🔴 **Channel limit, stated plainly.** `WebFetch` failed DNS (`ENOTFOUND`) on every primary source
+tried this pass — `lumination.ai`, `algoritmos.uniandes.edu.co`, `acento.com.do` — because those
+hosts are outside this session's allowed network domains. **No primary-source channel existed**,
+so every figure in this section rests on search snippets and is labelled with how many
+independent searches carried it. Nothing here was promoted to a table row.
+
 ## Honest gaps
 
 - **Unlicensed content corpora are the biggest trap in this category (added p891).** The largest

@@ -50,6 +50,29 @@ implies is `902-G2`; the full audit is `agents/trending.md` `902-F2` and
 `repos/foundations.md` with **stars recorded as `unmeasurable`, not estimated** — see `902-G3` for
 the appendix change that makes that a first-class value.
 
+**Latest sweep — `p909`, and it is the first census of *every* address in this file rather than a
+cohort.** All **345** distinct repository addresses across this file, `repos/foundations.md` and
+`verticals/solutions.md` were probed on both channels: **343 resolved**, 1 was a metasyntactic
+artefact of the gate rather than a row (`909-G3`), and 1 returned `NORESOLVE` on a 9-path ladder
+**while being alive** — `projectfedena/fedena`, `404` on `README.md`/`.gitignore`/`LICENSE` and
+`200` on `Rakefile` (`909-F1`). 🔴 **The star-unmeasurable class `p902` opened with one
+repository is seven**: `darl-genai/instructional_agents`, `mitodl/open-learning-ai-tutor`,
+`mwouts/jupytext`, `digitalcredentials/learner-credential-wallet`, `longsightgroup/qti3`,
+`openolat/qtiworks`, `tokenaii/horus-taleeq-0.2b-base` — every one `raw` `200`, every one `422`
+from the only star channel **when queried individually**. They keep their rows and **none gets an
+estimate**. 🔵 **Both channels now have a measured failure direction**, which is why the
+two-channel rule is load-bearing rather than belt-and-braces: `fedena` is search-measurable and
+raw-unresolved; those seven are raw-alive and search-unmeasurable.
+
+🟢 **The shelf's licence posture, measured for the first time (337 addresses the search channel
+could read):** MIT **151**, Apache-2.0 **65**, BSD-3-Clause 13, ISC 3 → **232 permissive =
+68.8%**. `NOASSERTION` **29** (8.6%, byte-read required — `906-G1` showed that field errs in
+*both* directions), AGPL-3.0 26, **`NONE` 18**, GPL-3.0 16, LGPL-3.0 4, GPL-2.0 3, ECL-2.0 3,
+MulanPSL-2.0 3, and ODbL-1.0/CC0-1.0/CC-BY-4.0 one each — 🟡 **those last three are data and
+content licences, not software grants.** 🔴 **23.3% of this shelf is copyleft or carries no grant
+at all**, which turns this base's long-standing impression that education's open supply is
+licence-trapped into a measured share.
+
 **Cadence note.** The largest intra-day move across ~30 tracked repos was +21 stars on a
 60,000-star repo. Star counts are a **daily** metric; remeasuring hourly buys nothing and the
 call budget belongs in regional research instead.
@@ -237,6 +260,7 @@ Sorted by stars.
 | **SchoolConnect** | https://github.com/cculb/schoolconnect | **MIT** (byte-read `p907`, `LICENSE@main`, 1,071 B) | 4 | 2025-12-28 | **Added `p907`, and it is the first *guardian-persona* agent in this table.** Scrapes, stores and analyses a student's academic record from **PowerSchool Parent Portal** into SQLite, and exposes it over an **MCP server** so an agent can answer a parent's questions. 🔵 Every other row here serves a learner, a teacher or an institution; this one serves the **parent**, which is a buyer segment this KB had no supply evidence for. 🟡 Scraping a portal is brittle and may breach the district's terms — read `compose/patterns.md` **P26**'s governance note. Idle since 2025-12-28 | North America |
 | **universidad-pacifico-mcp** | https://github.com/andrsnrua/universidad-pacifico-mcp | **ISC** (byte-read `p907`, `LICENSE@main`, 748 B) | 1 | 2026-10-06 | **Added `p907` — the first Peru-origin entry in this table, and it refutes a declared gap.** `p904` recorded *"no Argentine, Peruvian or Central American origin repository in any query"*; this is Peru. MCP server over **Universidad del Pacífico**'s Aula Virtual (Blackboard Ultra, `aulavirtual.up.edu.pe`): **70 tools, 5 prompts**, covering courses, syllabi, announcements, assignments and grades, attendance, a **local library** that extracts text from PDF/DOCX/PPTX/XLSX, and private exports. 🔵 Uses *"el acceso y los permisos de tu propia cuenta"* — no institutional key. Self-declared **"proyecto comunitario no oficial"**. 🔵 It was invisible to `p904` not because the Spanish channel is flat but because its description is Spanish *infrastructure* prose that never says "IA" or "educación" | LATAM — Peru |
 | **ExamGuardian** | https://github.com/andbriha/ExamGuardian | **MIT** (byte-read `p907`, `LICENSE@main`, 1,065 B) | 0 | 2026-11-14 | **Added `p907` for its design discipline, not its size**, and it is the most *regulator-ready* proctoring code this KB has read. Self-hosted exam attempts with identity checks, saved answers, camera/screen evidence and **human review**. 🔵 **It separates the two things the EU AI Act cares about: "the academic score is calculated from answers; the integrity verdict is a separate examiner decision"**, and its README states *"an observation is a reason to inspect context, not a calibrated probability of cheating"*. 🔵 It also **enumerates what it does not implement** (automatic integrity scoring, speaker attribution, micro-earpiece recognition, immutable PDF signing). Exam monitoring is high-risk under the AI Act from **2 Dec 2027** — this is the posture `compose/patterns.md` **P4** prescribes, written down by its author. 🟡 Self-described pilot; accuracy and classroom-scale capacity *"require measured validation"* | EMEA |
+| **interactive-learning** | https://github.com/geekjourneyx/interactive-learning | **MIT** (byte-read `p909`, `LICENSE@HEAD`, 1,069 B, `sha256₁₂ 02b7dc1969f4`, *"MIT License / Copyright (c) 2026 geekjourneyx"*) | 52 | 2026-04-10 | **Added `p909`, and it was named in this base's log since `p907` with no row in any delivery file** — `908-F1`'s log/delivery divergence landing inside the agent-*skill* cohort that `p896` had already recorded as twice-declared-flat against an incomplete roster. Turns any text, link, document or question into a **verifiable learning path**, then exports a shareable **HTML checkpoint card**. Installed into an existing agent with `npx skills add`, so there is **no front end to build** and the learner already has the client. Its own framing is the sharpest statement of this cohort's thesis on these shelves: *"总结器解决压缩，解决不了误解"* — **a summariser solves compression, not misunderstanding**; it tests whether the learner understood rather than re-explaining. 🟡 Idle since 2026-04-10, and at 52 ★ it does **not** move the cohort ceiling, remeasured this pass at **126 ★** (`flysheep-ai/education-skills`, up from the 125 ★ `p896` recorded). | APAC — China (Chinese-language README) |
 
 🔵 **`80` rows in the table above, re-counted mechanically in `p907`** (`77` at the close of
 `p906`; **`p907` added 3** — `SchoolConnect`, `universidad-pacifico-mcp` and `ExamGuardian`, all
@@ -439,6 +463,22 @@ is the wrong test for the corpus form, which needs a different one: curriculum c
 maintenance recency.** On those, `Bakloriya-AI-SKILLS` reads as complete and current (300/300 units,
 pushed 2026-11-09) — and **unusable**, because it carries no grant. The pattern that takes the
 schema and discards the content is `compose/patterns.md` **P22**.
+
+🔴 **`p909` makes it three times this cohort has been enumerated incompletely, and this time the
+missing member was in the log the whole time.** `geekjourneyx/interactive-learning` (**MIT**,
+**52 ★**, byte-read `LICENSE@HEAD`, 1,069 B, `sha256₁₂ 02b7dc1969f4`) has been named in
+`agents/trending.md`, `repos/trending.md`, `intel/market.md` and `intel/open-gaps.md` since
+`p907` — and had **no row in any delivery file** when `p909` opened them. `p908`'s own supply leg
+listed it among repositories *"all four already held"*: held in the **log**, not in **delivery**.
+That is `908-F1`'s divergence landing inside the one cohort `p896` had already flagged for roster
+incompleteness, which makes it the third instance rather than a new class. 🟢 **It now has a row
+in the table above.** It is the cohort's clearest *pedagogical* statement rather than its largest
+member: it refuses to be a summariser, converting material into a **verifiable learning path**
+with an exportable **HTML checkpoint card**, on the explicit thesis that *"a summariser solves
+compression, not misunderstanding."* 🟡 At 52 ★ it does not approach the ceiling, which `p909` **remeasured at 126 ★**
+(`flysheep-ai/education-skills`, MIT, pushed `2026-01-30` — up 1 from the 125 ★ `p896` recorded);
+`ArnaudGuiovanna/tutor-mcp` also moved, 104 → **107 ★**. The **1,000 ★** watch condition is
+untouched — the cohort remains an order of magnitude short.
 
 ## What we searched for and did not find
 

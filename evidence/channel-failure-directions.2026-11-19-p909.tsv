@@ -1,0 +1,12 @@
+repo	raw_channel	search_channel	direction	note
+projectfedena/fedena	NORESOLVE on 9-path ladder; 200 on Rakefile, app/controllers/application_controller.rb, db/schema.rb	200 — 547 stars, SPDX NONE, pushed 2020-05-18	search-measurable / raw-unresolved	2010-era Rails app, no README and no .gitignore at root; LICENSE is a true 404 while Rakefile is a true 200, which evidences live-and-ungranted
+darl-genai/instructional_agents	200	422 individually	raw-alive / search-unmeasurable	agents/top.md
+digitalcredentials/learner-credential-wallet	200	422 individually	raw-alive / search-unmeasurable	verticals/solutions.md
+longsightgroup/qti3	200	422 individually	raw-alive / search-unmeasurable	verticals/solutions.md
+mitodl/open-learning-ai-tutor	200	422 individually	raw-alive / search-unmeasurable	agents/top.md
+mwouts/jupytext	200	422 individually	raw-alive / search-unmeasurable	repos/foundations.md; first of class, found p902 (902-G3)
+openolat/qtiworks	200	422 individually	raw-alive / search-unmeasurable	verticals/solutions.md
+tokenaii/horus-taleeq-0.2b-base	200	422 individually	raw-alive / search-unmeasurable	repos/foundations.md
+apereo/sakai	404 on ladder	absent from search/repositories	absent on both — fabricated address	inferred from the true statement that Sakai is "stewarded by the Apereo Foundation"; real address is sakaiproject/sakai (ECL-2.0, 1,241 stars)
+nonexistentorg999/nope999	404 on every path	n/a	control	negative control
+anotherfakeowner123/fakerepo456	404 on every path	n/a	control	negative control

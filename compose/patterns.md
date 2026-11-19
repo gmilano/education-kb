@@ -2289,3 +2289,99 @@ this build**: keep it as an attributed input layer, separate from the client's o
   (`moodle-local_mcp`'s shape, GPL implications accepted) is simpler and audits better.
 - **Anywhere the SIS must be written to.** No row in this cohort does it safely, and `p908` found
   none that claims to.
+
+## P28 — Spec-first tutoring: build against the UK's published standard inside the EU's deferral window (added `p909`)
+
+**When to reach for this.** An EMEA engagement, secondary phase, where the buyer is a ministry or
+agency rather than a school — which `p909` measured as the normal case: of **390 public
+AI-in-education tenders across 25 countries, central government ran 124 and individual schools,
+trusts and colleges ran 11**. The commercial hook is that the **UK's AI Tutoring Tools Pioneer
+Programme standard is owned by DSIT/i.AI and will be shared with the wider market**, so the
+specification arrives *before* the products that must satisfy it, and the EU's Annex III education
+obligations do not bite until **2 December 2027** (`T3`). This pattern builds to the published
+spec during that window.
+
+**Scope it to the buyer's own scope**, not to a generic tutor: **Years 9–10**, English, maths,
+science and modern foreign languages, with pupils from underrepresented backgrounds as the
+designed-for case. That is the programme's stated remit and it is a far easier acceptance
+conversation than "a tutor".
+
+### The stack — every row measured on both channels in the `p909` census (2026-11-19)
+
+| Layer | Repo | Grant | ★ | Why this one |
+|---|---|---|---|---|
+| Tutor core | https://github.com/HKUDS/DeepTutor | Apache-2.0 | 60,504 | Agentic tutoring grounded in the student's *own* material with persistent learning history — the only education-native repo at this scale with a patent grant |
+| Retrieval | https://github.com/HKUDS/LightRAG | MIT | 40,763 | Same lab as the tutor core, so the idioms match; avoids an integration seam |
+| Retrieval (alt) | https://github.com/infiniflow/ragflow | Apache-2.0 | 94,399 | Pick this instead when the client wants a product-shaped RAG service rather than a library |
+| Curriculum ingestion | https://github.com/docling-project/docling | MIT | 70,766 | Syllabus and textbook PDFs into structured text; **prefer over `opendatalab/MinerU` (83,954 ★), which is `NOASSERTION` and needs a byte-read first** |
+| Learner memory | https://github.com/mem0ai/mem0 | Apache-2.0 | 69,205 | Persistent learner state across sessions — the "lifelong" half of the tutor claim |
+| Inference (server) | https://github.com/vllm-project/vllm | Apache-2.0 | 97,185 | Sovereign/in-country serving, which `T6` records as a procurement requirement rather than a preference |
+| Inference (edge) | https://github.com/ollama/ollama | MIT | 187,555 | School-premises fallback where connectivity or data residency forbids the server tier |
+| Institutional surface | https://github.com/boyuchengz/canvas-mcp | MIT | 118 | LMS bridge (class `T30`) — roster and coursework context without building a front end |
+| Learner surface | https://github.com/geekjourneyx/interactive-learning | MIT | 52 | **Verifiable learning path + exportable HTML checkpoint card.** Added to `agents/top.md` in `p909` |
+| Teacher surface | https://github.com/SirhanMacx/Claw-ED | MIT | 65 | Local-first lesson drafts, student materials and slides — the teacher-facing half the programme's remit implies |
+| Assessment/standards | https://github.com/openolat/qtiworks | BSD-3-Clause | 🟡 unmeasurable | QTI engine, so items are portable to the buyer's existing assessment estate. **Star count is `unmeasurable`, not zero** (`909-F2`) |
+
+🟢 **Every grant above is permissive.** That is deliberate and it is the whole point of the
+assembly: the deliverable can be closed, relicensed or handed over, which is what a ministry
+framework contract will ask for.
+
+### How it wires together
+
+1. **Ingest the buyer's curriculum, not the internet.** `docling` turns the awarding body's
+   syllabus documents into structured text; `LightRAG` indexes **only** that corpus. The
+   anti-hallucination control is corpus scoping plus the acceptance test from **`P23`** — carry
+   `P23`'s hallucination gate over verbatim; do not re-derive it.
+2. **Bind the tutor to a learner, not a session.** `DeepTutor` over `mem0`, so the learning
+   history survives and the "personalised" claim is evidenced rather than asserted.
+3. **Serve it where the data is allowed to be.** `vLLM` in-country for the institutional tier,
+   `ollama` on premises for the offline tier. Decide this before architecture, not after — `T6`.
+4. **Take context from the LMS, do not replace it.** `canvas-mcp` for roster and coursework.
+   Where the institution runs Moodle or Canvas itself, **integrate over the API and keep
+   `moodle/moodle` (GPL-3.0) and `instructure/canvas-lms` (AGPL-3.0) out of the deliverable** —
+   and note that `sakaiproject/sakai` is **ECL-2.0**, an Apache-family grant, so a Sakai estate is
+   the one LMS core on these shelves you *can* link into a closed deliverable.
+5. **Deliver to the learner with no front end to build.** `interactive-learning` as a skill in a
+   client the learner already has, with `Claw-ED` giving the teacher lesson drafts from the same
+   corpus.
+6. **Emit the checkpoint card on every completed path** — and this is the step that makes the
+   pattern worth naming.
+
+### 🔵 The insight: the checkpoint card *is* the compliance artefact
+
+When Annex III lands on **2 December 2027**, a tutoring system in the EU owes **human oversight
+and logging** — evidence that a person could see and correct what the system concluded about a
+learner. Most teams will build that as compliance overhead nobody uses.
+
+`interactive-learning` already exports a **shareable, reviewable HTML checkpoint card** recording
+what the learner was taken through and what they demonstrated. 🔵 **Emit it per learner per path,
+retain it, and the oversight and logging obligation is discharged by a feature teachers and
+parents actually want to look at.** Build it now, during the deferral, and the 2027 date is a
+delivery milestone rather than a re-architecture. Pair it with **Article 50 transparency, which
+is already live since 2 August 2026** and is *not* deferred — disclose the AI interaction from day
+one.
+
+### 🔴 What this pattern must not do
+
+- **No emotion or affect inference, in any form.** Inferring a learner's emotions in an education
+  institution has been **prohibited in the EU since February 2025**, with only medical and safety
+  carve-outs. `T14` records that affective design is exactly what drives retention metrics, which
+  is why this needs saying in the architecture document and not just the legal annex.
+- **No `TapXWorld/ChinaTextbook` (84,747 ★) as a content source.** It is the largest
+  education-adjacent repository on these shelves and it carries **no licence at all** (`NONE`),
+  which `909-F3` measures as the state of 5.3% of this shelf. Scale is not permission.
+- **No `MinerU` in the deliverable until its grant is byte-read.** `NOASSERTION` at 83,954 ★ is
+  the single largest unresolved licence question on the shelf, and `906-G1` measured that field
+  wrong in **both** directions.
+- **Do not write to the SIS.** No row in this stack does it safely; `p908` found none that claims
+  to, and that verdict is unchanged.
+
+### 🟡 Honest limits
+
+The two learner- and teacher-facing surfaces are **small and idle** — `interactive-learning` 52 ★,
+last push `2026-04-10`; `Claw-ED` 65 ★, last push `2026-09-19`. Treat them as **forkable
+reference implementations**, not as upstreams to depend on; the agent-*skill* cohort's ceiling is
+**126 ★** and its 1,000 ★ watch condition has never fired. The DSIT/i.AI standard itself **has not
+been read** — its existence and ownership rest on the tender notice as reported by two searches,
+and **no primary source could be fetched this pass**. 🔵 **The first action on a live engagement is
+to obtain that standard**; this pattern is positioned for it, not validated against it.

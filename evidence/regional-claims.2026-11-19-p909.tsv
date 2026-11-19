@@ -1,0 +1,17 @@
+region	claim	searches_carrying_it	primary_source_fetched	verdict
+EMEA	UK AI Tutoring Tools Pioneer Programme, Find a Tender 056738-2026, 8 contracts x GBP 300,000 = GBP 2.4m; awardees Medly AI, Zero Gravity Tech, Learn Anything Education, Flint, Pearson Education, ElevenLabs, Eedi, Google UK; Years 9-10 English/maths/science/MFL	2	no (WebFetch DNS failure)	PUBLISHED with count conflict recorded
+EMEA	Standard co-designed under those contracts owned by DSIT/i.AI and shared with the wider market	2	no	PUBLISHED
+EMEA	One secondary source reports six winners from 53 applications instead of eight awards	1	no	CONFLICT RECORDED, not resolved
+EMEA	390 public AI-in-education tenders across 25 countries; central government ran 124, individual schools/trusts/colleges ran 11	2	no	PUBLISHED
+EMEA	Poland AI-lab framework, 12,000 kits (8,000 primary / 4,000 secondary), six suppliers, early 2026	1 — failed a second targeted search	no	NOT PUBLISHED as fact; open lead
+EMEA	France P2IA, six AI services tested in classrooms since January 2026	1 — failed a second targeted search	no	NOT PUBLISHED as fact; open lead
+APAC	China April 2026 "AI + Education" plan incorporates AI into teacher qualification examinations and certification	2	no	PUBLISHED
+APAC	Ministry bars primary pupils from using generative AI independently	1 aggregator, flagged unverified by the search itself	no	NOT PUBLISHED; high-value open lead
+APAC	No first-hand APAC classroom-adoption measurement found (infrastructure, teacher or student usage)	2 legs, both negative	n/a	INFORMED ABSENCE recorded
+LATAM	Peru PL 00569/2026-CD, Camara de Diputados, amends Ley General de Educacion: digital literacy and AI training transversally in educacion basica, teacher training, limits on automated systems in pedagogical decisions	bill NUMBER on 1 channel (Uniandes ficha); legislative PUSH corroborated by Gestion, Andina, Caretas, lpderecho.pe	no	PUBLISHED with the evidence split stated
+LATAM	None of the independent Peruvian press coverage could be tied to the 00569 number; committee status unestablished	2	no	LIMIT recorded
+LATAM	CELE Observatorio Legislativo, Jan 2025 - Apr 2026: Argentina 63, Brazil 36, Mexico 35, Peru 17, Chile 16, Colombia 14, Paraguay 14, Ecuador 5, Guatemala 1 = 201 total	2; breakdown sums exactly to the independently reported total of 201	no	PUBLISHED
+LATAM	Window conflict: first leg gave Jan 2025 - Feb 2026 for the same 201	2	no	CONFLICT RECORDED; breakdown-bearing window carried
+LATAM	Most frequent themes in window are honour/reputation, cybersecurity, content moderation; AI led only Jan-Apr 2025	1	no	PUBLISHED as the basis of T33, with limits stated
+LATAM	No LATAM real-adoption data (infrastructure, teachers, students)	1 leg, negative, raised as its own caveat	n/a	INFORMED ABSENCE recorded
+North America	FIPSE awards quantified at USD 169 million, including support for responsible AI use	2	no	PUBLISHED

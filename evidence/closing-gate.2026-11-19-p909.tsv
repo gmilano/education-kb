@@ -1,0 +1,14 @@
+repo	raw_verdict	resolving_path_or_control
+HKUDS/DeepTutor	ALIVE	README.md
+HKUDS/LightRAG	ALIVE	README.md
+SirhanMacx/Claw-ED	ALIVE	README.md
+boyuchengz/canvas-mcp	ALIVE	README.md
+docling-project/docling	ALIVE	README.md
+geekjourneyx/interactive-learning	ALIVE	README.md
+infiniflow/ragflow	ALIVE	README.md
+mem0ai/mem0	ALIVE	README.md
+ollama/ollama	ALIVE	README.md
+openolat/qtiworks	ALIVE	README.md
+vllm-project/vllm	ALIVE	README.md
+nonexistentorg999/nope999	NORESOLVE	CONTROL
+apereo/sakai	NORESOLVE	CONTROL

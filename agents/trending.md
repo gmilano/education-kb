@@ -4,6 +4,243 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p909) — **Both channels were measured failing, in opposite directions, in one sweep: a 9-path raw ladder false-negatived a live 547★ repository, and 7 shelf repositories (not 1) are provably real and unmeasurable on the only star channel. The shelf's licence posture is measured for the first time: 68.8% permissive. Peru acquires an education-AI instrument. No primary-source channel was available.**
+
+**Channels and posture.** `raw.githubusercontent.com` with the `HEAD` ref (both controls run —
+`nonexistentorg999/nope999` and `anotherfakeowner123/fakerepo456` returned `404` on every path),
+`gh api search/repositories`, and **10 WebSearch legs** (the 8 prescribed, one of them run in
+Spanish, plus 2 corroboration legs). 🔴 **`WebFetch` was unavailable for every primary source
+tried** — `algoritmos.uniandes.edu.co`, `lumination.ai` and `acento.com.do` all failed DNS
+(`ENOTFOUND`, host outside this session's allowed network domains). **No primary-source channel
+existed this pass**, so every regional fact below is labelled with how many independent searches
+carried it. `github.com` HTML remains `403` for every address including nonexistent ones, so
+`curl -sI` was again **not** used as a verification channel (`907-F2`).
+
+🟢 **Closing gate: the 1 address this pass added to a delivery file was verified on both channels
+before writing** (`geekjourneyx/interactive-learning` — `raw` `200`, licence bytes read, search
+channel `200`). `0` broken rows added. **No row was added from a web-search snippet.**
+
+### 🔴 `909-F1` The raw-channel existence probe's verdict is a function of its path ladder, and a 9-path ladder reported a live 547★ repository as absent
+
+This pass probed all **345** distinct repository addresses in `agents/top.md`,
+`repos/foundations.md` and `verticals/solutions.md` on the raw channel. **343 resolved; 1 was a
+metasyntactic artefact (`909-G3`); 1 returned `NORESOLVE` — and it is alive.**
+
+`projectfedena/fedena` returned `404` at `HEAD` on all nine ladder paths — `README.md`,
+`.gitignore`, `LICENSE`, `README.rst`, `LICENSE.md`, `COPYING`, `package.json`, `pom.xml`,
+`setup.py` — and `200` on `Rakefile`, `app/controllers/application_controller.rb` and
+`db/schema.rb`. It is a 2010-era Rails application with **no README and no `.gitignore` at
+root**. The search channel measures it at **547 ★**, SPDX **`NONE`**, last push **2020-05-18**.
+
+🟢 **The two delivery rows that bar it are correct, and this pass independently reconfirmed the
+grounds.** `repos/foundations.md` records it as *"not a candidate"* and `verticals/solutions.md`
+as *"no `LICENSE`"*. That is now evidenced discriminatively rather than by a bare absence:
+`LICENSE` is a true `404` **while `Rakefile` is a true `200` on the same ref** — live *and*
+ungranted, which no single probe could have told apart from deleted.
+
+🔵 **The gate (`909-G2`): `NORESOLVE` on a fixed ladder is not absence.** Either carry one
+language-idiomatic path per ecosystem (`Rakefile`, `Gemfile`, `pom.xml`, `go.mod`, `Cargo.toml`,
+`composer.json`, `*.csproj`) or report the verdict as **`unresolved-on-ladder`** and never as
+`absent`. This base has recorded false *absence* on the search channel twice (`p900`, `p901`);
+this is the first time it has measured false absence on the **raw** channel, which is the channel
+every licence byte-read depends on.
+
+### 🔴 `909-F2` The star-unmeasurable cohort is 7 repositories, not 1 — and both channels now have a measured failure direction
+
+`p902` recorded `mwouts/jupytext` as *"the first repository this base can prove is real and
+cannot measure"* and published it with stars as `unmeasurable, not estimated` (`902-G3`). A
+census of all 345 addresses finds the class is **seven**, every one `raw` `200` and every one
+`422` from `gh api search/repositories` **when queried individually**, not merely inside a batch:
+
+| Repository | Raw channel | Search channel | Delivery file |
+|---|---|---|---|
+| `darl-genai/instructional_agents` | 🟢 `200` | 🔴 `422` | `agents/top.md` |
+| `digitalcredentials/learner-credential-wallet` | 🟢 `200` | 🔴 `422` | `verticals/solutions.md` |
+| `longsightgroup/qti3` | 🟢 `200` | 🔴 `422` | `verticals/solutions.md` |
+| `mitodl/open-learning-ai-tutor` | 🟢 `200` | 🔴 `422` | `agents/top.md` |
+| `mwouts/jupytext` | 🟢 `200` | 🔴 `422` | `repos/foundations.md` |
+| `openolat/qtiworks` | 🟢 `200` | 🔴 `422` | `verticals/solutions.md` |
+| `tokenaii/horus-taleeq-0.2b-base` | 🟢 `200` | 🔴 `422` | `repos/foundations.md` |
+
+**7 of 345 = 2.0% of the shelf carries no measurable star count.** All seven keep their rows;
+none gets an estimate.
+
+🔵 **Read `909-F1` and `909-F2` together, because they were measured in the same sweep and they
+point opposite ways.** `projectfedena/fedena` is measurable on search and unresolved on raw; these
+seven are alive on raw and unmeasurable on search. **Neither channel is sound alone, and neither
+channel's failure is one-directional.** The two-channel rule is not belt-and-braces here — it is
+load-bearing in both directions, which is a stronger statement than this base has previously been
+able to make.
+
+### 🔴 `909-G1` Never batch `repo:` qualifiers for a census — one unmeasurable member silently voids up to fourteen measurable ones
+
+The census ran 15 `repo:` qualifiers per `search/repositories` call. One batch returned a single
+`422 Validation Failed` **for the whole call**, and the error replaced the entire result set:
+**14 measurable repositories were lost to 1 unmeasurable one**, and the loss was silent — the
+call returned a body, just not rows. They were recovered only by re-querying each address
+individually.
+
+🟢 **The gate.** Census work queries one address per call, **or** batches and then **diffs the
+returned set against the requested set** and re-queries the difference. This pass did the diff,
+which is the only reason the number `7` is `7` and not `21`. A pass that had batched without
+diffing would have published 21 repositories as unmeasurable, of which 14 would have been wrong.
+
+### 🟢 `909-F3` The shelf's licence posture, measured for the first time
+
+Across the **337** addresses the search channel could measure:
+
+| Grant | Count | Share | Globant can build on it |
+|---|---|---|---|
+| MIT | **151** | 44.8% | 🟢 yes |
+| Apache-2.0 | **65** | 19.3% | 🟢 yes |
+| BSD-3-Clause | 13 | 3.9% | 🟢 yes |
+| ISC | 3 | 0.9% | 🟢 yes |
+| **Permissive subtotal** | **232** | **68.8%** | 🟢 |
+| `NOASSERTION` | 29 | 8.6% | 🟡 byte-read required — and per `906-G1` the SPDX field errs in **both** directions |
+| AGPL-3.0 | 26 | 7.7% | 🔴 network-copyleft; keep out of the deliverable |
+| `NONE` | 18 | 5.3% | 🔴 no grant, unusable |
+| GPL-3.0 | 16 | 4.7% | 🔴 |
+| LGPL-3.0 | 4 | 1.2% | 🟡 linkable |
+| GPL-2.0 | 3 | 0.9% | 🔴 |
+| ECL-2.0 | 3 | 0.9% | 🟡 Apache-family, education-specific |
+| MulanPSL-2.0 | 3 | 0.9% | 🟡 OSI-permissive, authoritative text **Chinese** (`p906`) |
+| ODbL-1.0 / CC0-1.0 / CC-BY-4.0 | 1 / 1 / 1 | 0.9% | 🟡 **data and content licences, not software grants** |
+
+🔵 **The number that matters commercially is 68.8%**, and the number that matters operationally is
+the **29 `NOASSERTION` rows**, because that is the queue of grants whose published metadata cannot
+be trusted in either direction and which only a byte-read settles. 🔴 **23.3% of the shelf is
+copyleft or ungranted** — this base's long-standing reading that education's open supply is
+licence-trapped is now a measured share rather than an impression.
+
+### 🔴 `909-F4` A third missing member of the agent-*skill* cohort, and it was in the log the whole time
+
+`p896` recorded that this cohort had been *"declared flat against an incomplete roster"* twice.
+It is three. **`geekjourneyx/interactive-learning` (MIT, 52 ★)** has been named in
+`agents/trending.md`, `repos/trending.md`, `intel/market.md` and `intel/open-gaps.md` since
+`p907` — and had **no row in any delivery file** when `p909` opened them. `p908`'s own supply leg
+listed it among repositories *"all four already held"*; it was held in the **log**, not in
+**delivery**, which is exactly `908-F1`'s divergence landing inside the one cohort already flagged
+for roster incompleteness.
+
+🟢 **Promoted to `agents/top.md` this pass**, verified on both channels, licence byte-read
+(`LICENSE@HEAD`, 1,069 B, `sha256₁₂ 02b7dc1969f4`, *"MIT License / Copyright (c) 2026
+geekjourneyx"*). It converts any text, link, document or question into a **verifiable learning
+path** and exports a shareable **HTML checkpoint card**, installed into an existing agent with
+`npx skills add` — no front end to build. Its own framing is the sharpest statement of the
+cohort's thesis this base has found: *"总结器解决压缩，解决不了误解"* — **a summariser solves
+compression, not misunderstanding**. 🟡 Idle since `2026-04-10`. At 52 ★ it does **not** move the
+cohort ceiling, which `p909` **remeasured at 126 ★** (`flysheep-ai/education-skills`, MIT, up 1
+from `p896`’s 125); `ArnaudGuiovanna/tutor-mcp` also moved, 104 → **107 ★**. The 1,000 ★ watch
+condition is untouched.
+
+### 🔴 `909-F5` The mandated supply legs are nil for new rows — 37th consecutive time — and this pass's own leg generated a fabricated address
+
+The `github trending` and vertical-platform legs returned `HKUDS/DeepTutor`,
+`TapXWorld/ChinaTextbook`, `SirhanMacx/Claw-ED`, `geekjourneyx/interactive-learning`,
+`openeducat/openeducat_erp`, `sakaiproject/sakai`, `instructure/canvas-lms`,
+`ILIAS-eLearning/ILIAS` and `oppia/oppia` — **all already held.** Recorded as a nil.
+
+🔴 **And the leg produced one address that does not exist.** The global LMS leg described Sakai as
+*"stewarded by the Apereo Foundation"* — true, and the natural address from it is **`apereo/sakai`**,
+which this pass probed: **`404` on the raw ladder and absent from `search/repositories`.** The real
+address, already carried in three delivery rows, is **`sakaiproject/sakai`** (`200` on
+`HEAD/README.md`).
+
+🔵 **This is `T946`'s rule — a bare organisation name is not an address — reproduced inside this
+pass's own research, and it is `902-F2`'s mechanism exactly: a correct fact about stewardship
+generating an incorrect address.** The fabrication did not come from a stranger's curated list
+this time; it came from a true sentence. 🟢 Nothing entered any file from it. **Owner inference
+from prose is barred: an address is verified or it is not written.**
+
+### 🟢 `909-F6` Regional research — what is new, and what is an informed absence
+
+**EMEA — named players and a measured buyer structure, which closes this base's standing "EMEA
+players unanswered" gap.** The UK's **AI Tutoring Tools Pioneer Programme** (Find a Tender notice
+`056738-2026`) awarded **8 contracts of £300,000 each** (£2.4m): **Medly AI, Zero Gravity Tech,
+Learn Anything Education, Flint, Pearson Education, ElevenLabs, Eedi and Google UK**. Scope is
+**Years 9–10** in English, maths, science and modern foreign languages, targeting pupils from
+underrepresented backgrounds; awards summer 2026, national availability a **2027 ambition, not a
+deadline**. 🔵 **The commercially important clause: the standard co-designed under these contracts
+is owned by DSIT/i.AI and will be shared with the wider market** — an open specification a studio
+can build against before the market has. 🟡 **Count conflict:** one secondary source reports **six**
+winners from **53** applications. The eight-award figure comes from the tender notice's awardee
+listing and is the one carried; the conflict is recorded, not resolved.
+
+**EMEA buyer structure (2 searches).** An analysis of **390 public AI-in-education tenders across
+25 countries** finds **central government ran 124** of them, while **individual schools, trusts
+and colleges ran 11**. 🔵 **In EMEA the buyer is national, not the school** — the same conclusion
+`p576` reached for Colombia versus Argentina, now with a European denominator.
+
+🔴 **EMEA, uncorroborated and therefore not published as fact.** Poland's AI-lab framework
+(**12,000 kits** — 8,000 primary, 4,000 secondary — six suppliers, early 2026) and France's
+**P2IA** (six AI services tested in classrooms since January 2026) each appeared on **one**
+source and **failed a second, targeted search** that returned nothing on either. Both are
+recorded as open leads with the query that failed, so the next pass does not re-derive the
+absence.
+
+**APAC — one new limb on an instrument already held.** China's April 2026 **"AI + Education"**
+action plan (five central departments, MOE-led, 2030 horizon) is already on these shelves; the
+limb this base did **not** hold is **teacher credentialing — AI is to be incorporated into teacher
+qualification examinations and certification.** 🔵 That converts AI competence from professional
+development into a **licensing gate**, which is a different and much harder procurement driver.
+🔴 **Not published:** an aggregator claim that the Ministry bars primary pupils from using
+generative AI independently — single source, no official corroboration, flagged as unverified by
+the search itself.
+
+**LATAM — Peru acquires an education-specific AI instrument, at bill stage.** **`PL 00569/2026-CD`**,
+in the Cámara de Diputados, would incorporate digital literacy and AI training **transversally and
+progressively into educación básica** by amending the Ley General de Educación: critical and ethical
+AI use, disinformation and bias detection, data protection, teacher training, and **limits on the
+use of automated systems in pedagogical decisions**.
+
+🟡 **Published with its evidence split stated, because the two halves have different strength.**
+The **bill number** rests on **one** channel (the Uniandes *Sistemas de Algoritmos Públicos* ficha,
+which both Peru legs returned). The **existence of a Peruvian legislative push on AI in basic
+education** is corroborated across several independent Peruvian outlets — Gestión, Andina, Caretas,
+lpderecho.pe — which describe a related bill delegating curriculum development to **Minedu** from
+**2028** rather than creating a standalone AI course, and another institutionalising AI training in
+*educación básica regular* with a **Programa Nacional de Capacitación Docente en IA** under **Ley
+31814 and its reglamento**. 🔴 **None of that coverage could be tied to the `00569` number.** The
+status of the bill in committee could not be established on any channel.
+
+🔵 **Why this does not disturb this base's standing Peru verdicts.** `Gap 445-B` retired Peru as a
+genuine **supply** absence after four nil channels, and the `p576` instrument table carries Peru
+only as *"Minedu, 205 rural schools for 2026"*. This is a **demand-side, regulatory** finding:
+**Peru is still supply-absent and is now regulation-active**, which is the profile that argues for
+a build rather than a compose engagement.
+
+**LATAM — a denominator, and it reconciles.** CELE's *Observatorio Legislativo* records
+digital-technology bills in LATAM congresses for **January 2025 – April 2026**: Argentina **63**,
+Brazil **36**, Mexico **35**, **Peru 17**, Chile **16**, Colombia **14**, Paraguay **14**, Ecuador
+**5**, Guatemala **1**. 🟢 **That sums to exactly 201, the total the first leg reported**, which is
+why the figure is carried at all. 🟡 The first leg gave the window as January 2025 – **February**
+2026 for the same 201; the breakdown-bearing source's window is carried and the conflict recorded.
+🔵 **The most frequent themes in the window are honour/reputation, cybersecurity and content
+moderation — AI led only in January–April 2025.** LATAM legislative attention has moved *off* AI as
+a standalone subject even as education-AI bills appear inside it, which is the opposite of the
+direction this base has been assuming.
+
+**North America — one figure added to an instrument already held.** The FIPSE awards this base
+already records are quantified: **$169 million**, including support for responsible AI use.
+
+🔴 **Informed regional absences, restated because silence looks like coverage.** **No first-hand
+APAC classroom-adoption measurement** — infrastructure, teacher usage or student usage rates — was
+returned by either APAC leg; the regional leg explicitly reported finding nothing on AI adoption in
+Chinese, Indian or Japanese schools beyond policy ambition. **No LATAM real-adoption data**
+(infrastructure, teachers, students) was returned either; the LATAM leg raised this as its own
+caveat. Both are recorded as measured absences, not as covered ground.
+
+### 🟢 `909-G3` The URL-extraction gate false-positives on documentation prose
+
+Extracting `github.com/OWNER/REPO` addresses from the delivery files yields the literal address
+**`github.com/OWNER/REPO`** — from a `p907` sentence *explaining that*
+`curl -sI https://github.com/OWNER/REPO` *is not a usable existence check in this environment*.
+🟢 **Not a defect in the file; a defect in the gate.** Any address gate must exclude the
+metasyntactic forms (`OWNER/REPO`, `owner/repo`, `USER/REPO`, `org/repo`, `<owner>/<repo>`) before
+probing, or it will keep reporting this base's own methodology notes as broken rows.
+
+---
+
 ## `2026-11-19` (p908) — **this base's research log and its delivery surface have come apart. Of 30 repositories the log says the words "Promoted to" about, 20 are not in the file they were promoted into — and the cause is measured: the last three full rewrites of the three delivery files retained between 5.5% and 18.9% of their repository addresses. 26 rows restored or filed. Both of `p907`'s declared LATAM gaps refuted, in Spanish.**
 
 **Channels.** `raw.githubusercontent.com` (`200` real / `404` absent, both controls run),

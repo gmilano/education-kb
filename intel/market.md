@@ -463,6 +463,22 @@ The one "North America" regulation overview it surfaced is about the United Stat
 provincial ministries and Mexico's SEP are **unmeasured here**, and the `North America` reading
 above should be understood as *United States*.
 
+#### `p909` — the FIPSE commitment is quantified
+
+🟢 This file already records the Department of Education's **FIPSE** awards as the quarter's
+largest public funding commitment touching responsible AI use. The figure it lacked is
+**$169 million**. 🟡 Two independent searches carried it; no primary source could be fetched this
+pass (`WebFetch` failed DNS on every host tried), so it is a search-snippet figure and is labelled
+as one.
+
+🔵 **Why the amount changes the read and not just the record.** A nine-figure federal programme
+whose scope explicitly includes responsible AI use is the first North American money on these
+shelves that is **neither state-level guidance nor a district pilot**. The regulatory picture in
+this region is 134 bills across 31 states and 35 states-plus-Puerto Rico issuing guidance — a
+compliance surface with no procurement behind it. $169M is procurement. 🔵 **An engagement that
+has been selling AI governance to US districts should be reading FIPSE-funded institutions as the
+buyer with a budget line, and the state guidance as the specification that buyer must satisfy.**
+
 ### EMEA
 
 🟢 **Promoted in `p902` — four facts held only in the log until now** (see `902-F1`; the
@@ -1141,6 +1157,44 @@ München (🇩🇪), SPbPU (🇷🇺), SRCE's national Croatian Moodle (🇭🇷
 (🇸🇪). **Regulation in this region is top-down; the supply is bottom-up, and the two are not talking
 to each other** — which is the gap a studio sells into.
 
+#### `p909` — EMEA finally has named players and a measured buyer, and the UK is shipping a public specification
+
+This region's standing weakness on these shelves has been that its **regulation** was documented
+in detail and its **market** was not: who buys, and from whom, was unanswered across several
+passes. `p909` closes both halves.
+
+🔵 **The buyer is central government, by a factor of eleven.** Across **390 public
+AI-in-education tenders in 25 countries**, **central government ran 124**; **individual schools,
+school trusts and colleges ran 11**. A go-to-market built on per-school selling is addressing
+roughly 3% of Europe's public AI-in-education money. This is the European analogue of `p576`'s
+Colombia-versus-Argentina finding — **in EMEA, as in Colombia, the buyer is national.**
+
+🟢 **The named cohort: the UK's AI Tutoring Tools Pioneer Programme** (Find a Tender
+`056738-2026`), **8 × £300,000 = £2.4m**, awarded to **Medly AI, Zero Gravity Tech, Learn Anything
+Education, Flint, Pearson Education, ElevenLabs, Eedi and Google UK**. Scope: **Years 9–10**,
+English, maths, science and modern foreign languages, targeting pupils from underrepresented
+backgrounds; awards summer 2026, national availability a **2027 ambition, not a deadline**.
+
+🔵 **The opportunity is the specification, not the contract.** **The standard co-designed under
+these contracts is owned by DSIT/i.AI and will be shared with the wider market.** A public tutoring
+standard, authored by the buyer, published to everyone, landing in the window before the EU's
+Annex III education obligations bite on **2 December 2027** — that is the same structure `T3`
+identifies as a selling window and `T9` identifies as buyer-written spec, now with a document to
+point at. 🔵 **The sellable position: be the integrator who has already built against the DSIT/i.AI
+standard and can evidence Article 50 transparency, while the high-risk clock has not yet run.**
+
+🟡 **Conflict recorded, not resolved.** One secondary source reports **six** winners from **53**
+applications rather than eight awards. The eight-award figure comes from the tender notice's
+awardee listing and is the one carried.
+
+🔴 **Two programmes that failed corroboration and are deliberately not carried as facts.** Poland's
+AI-lab framework (**12,000 kits**, 8,000 primary / 4,000 secondary, six suppliers, early 2026) and
+France's **P2IA** (six AI services tested in classrooms since January 2026) each rest on **one**
+source and **failed a second targeted search that returned nothing on either**. Recorded as open
+leads with the failed query attached. 🔵 Poland and France are the two largest unmeasured EMEA
+cells on this file's register; the next pass should run them in **Polish** and **French**, since
+`p576` and `p374` both found that national-language press is where this material lives.
+
 ### APAC
 
 🟢 **Promoted in `p902` — two convening facts, plus the region's one dataset-scale supply row**
@@ -1683,6 +1737,39 @@ education AI companies for the region.** The regulatory picture for APAC is well
 *commercial* picture is not. A future pass should run the APAC leg per country in that country's
 language, which is the method `p708` proved for LATAM and `p908` re-confirmed.
 
+#### `p909` — China's AI-in-education plan has a teacher-*credentialing* limb, which is a different buyer
+
+🟢 The April 2026 **"AI + Education"** action plan — five central departments, MOE-led, 2030
+horizon — is already on these shelves, as is Beijing's **≥8 class hours** of AI per student per
+academic year. The limb this base did **not** hold: **AI is to be incorporated into teacher
+qualification examinations and certification.**
+
+🔵 **Why that is a category change rather than a detail.** Every other instrument on this file
+treats teacher AI capability as **professional development** — a budget line that competes with
+every other budget line and slips. Putting AI into the **qualification exam** makes it a
+**licensing gate**: a cohort that must be trained to a published standard on a statutory timetable,
+with an assessment attached. 🔵 **That is the single largest addressable training-and-assessment
+population in this region, and it is compulsory rather than discretionary.** The composable
+asset for it is the grading and item-bank tier `P25` assembles from the Mandarin cohort — the
+buyer is a certification authority, not a school.
+
+🟡 Two searches carried the plan; the credentialing limb appeared in official-outlet summaries
+(`english.www.gov.cn`) as reported by the search channel. 🔴 No primary source could be fetched
+(`WebFetch` DNS failure), and the plan's **full text was not read** this pass.
+
+🔴 **Not published, because it did not corroborate.** A claim that the Ministry **bars primary
+pupils from using generative AI independently** — and bars teachers from substituting AI for core
+instruction — appeared on **one** aggregator, which the search channel itself flagged as
+unverified against any official source. If true it would materially constrain any K-6 tutor
+deployment in China, so it is recorded as a **high-value open lead**, not as a fact.
+
+🔴 **The region's standing absence, restated because silence reads as coverage.** **No first-hand
+APAC classroom-adoption measurement exists on these shelves** — no infrastructure, teacher-usage
+or student-usage rates for China, India or Japan. Both APAC legs this pass returned **policy
+ambition only**, and one reported explicitly that it found nothing on adoption in those countries'
+schools. 🔵 Every APAC opportunity above is therefore inferred from **instruments**, not from
+measured usage, and should be presented to a client that way.
+
 ### LATAM
 
 🟢 **Promoted in `p902` — two facts held only in the log** (method: `902-F1`):
@@ -2141,6 +2228,54 @@ and both returned real, named, dated instruments.
 - **Costa Rica** is among the countries that have formally adopted the **OECD AI Principles**;
   Brazil, Chile, Mexico, Uruguay and several Central American and Caribbean states have engaged
   **UNESCO's Readiness Assessment Methodology**.
+
+#### `p909` — Peru acquires an education-specific AI instrument, and LATAM legislative attention has moved *off* AI
+
+🟢 **Peru, `PL 00569/2026-CD`, Cámara de Diputados.** It would amend the **Ley General de
+Educación** to incorporate digital literacy and AI training **transversally and progressively into
+educación básica**: critical and ethical use of AI, detection of disinformation and bias, data
+protection, **teacher training**, and **limits on the use of automated systems in pedagogical
+decisions**.
+
+🟡 **Published with its evidence split stated, because the halves differ in strength.** The **bill
+number** rests on **one** channel — the Uniandes *Sistemas de Algoritmos Públicos* ficha, returned
+by both Peru legs. The **existence of a Peruvian legislative push on AI in basic education** is
+corroborated across several independent Peruvian outlets (Gestión, Andina, Caretas, lpderecho.pe),
+which describe a related bill delegating curriculum development to **Minedu** from **2028** rather
+than creating a standalone AI course, and another institutionalising AI training in *educación
+básica regular* with a **Programa Nacional de Capacitación Docente en IA** under **Ley 31814 and
+its reglamento**. 🔴 **None of that coverage could be tied to the `00569` number**, and the bill's
+committee status could not be established on any channel.
+
+🔵 **What this does to this file's Peru verdict — it refines it rather than overturning it.**
+`Gap 445-B` retired Peru as a genuine **supply** absence after four nil channels, and the `p576`
+instrument table carries Peru only as *"Minedu, 205 rural schools for 2026"*. Nothing here
+disturbs that: **Peru is still supply-absent and is now regulation-active.** 🔵 **That is precisely
+the profile that argues for a *build* engagement rather than a *compose* one** — statutory demand
+forming, with no local open-source estate to assemble from, which is the inverse of Brazil (where
+`i-educar` and the standard-anchored agents exist) and of Colombia (where `Ley 2626 de 2026`
+mandates the curriculum nationally).
+
+🟢 **And the region now has a denominator that reconciles.** CELE's *Observatorio Legislativo*
+records digital-technology bills in LATAM congresses for **January 2025 – April 2026**: Argentina
+**63**, Brazil **36**, Mexico **35**, **Peru 17**, Chile **16**, Colombia **14**, Paraguay **14**,
+Ecuador **5**, Guatemala **1**. **That sums to exactly 201** — the total the first leg reported
+independently — which is the only reason the figure is carried at all. 🟡 The first leg gave the
+window as January 2025 – **February** 2026 for the same 201; the breakdown-bearing source's window
+is carried and the conflict recorded.
+
+🔴 **The finding inside the denominator is the one worth acting on, and it runs against this
+file's assumption.** The most frequent themes in that window are **honour and reputation,
+cybersecurity and content moderation** — **AI led only in January–April 2025.** LATAM legislative
+attention has moved *off* AI as a standalone subject, even as education-AI bills keep appearing
+inside the broader digital-technology flow. 🔵 **Commercial consequence: a LATAM pitch built on
+"AI regulation is coming" is selling against a receding wave.** The durable pitch is the one
+Colombia and Peru both evidence — **curricular mandate and teacher capacity**, which is `T11`, not
+risk compliance, which is `T1`.
+
+🔴 **Restated absence.** **No LATAM real-adoption data** — infrastructure, teacher or student usage
+rates — was returned by the regional leg, which raised the gap as its own caveat. Peru's **17**
+bills and Argentina's **63** measure legislative *activity*, not classrooms.
 
 ### Global
 

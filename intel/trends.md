@@ -1331,3 +1331,59 @@ with two instances, not a measured population** — the claim is that the shape 
 to tooling, not that it is yet the dominant licence of the tier. 🔵 **The test for the next pass:
 enumerate the education entries in the two marketplaces `T31` measured and read each grant from the
 payload.** If the CC share there is material, `T32` graduates from a shape to a distribution.
+
+## T33 — The regulatory lever is moving from *AI-as-subject* to *AI embedded in other instruments*, and LATAM is where the shift is measured
+
+Every trend above this one reads regulation the way `T1` framed it: AI statutes, risk
+classification, compliance dates. `p909` measured something that cuts across that reading — the
+**standalone AI instrument is no longer where the attention is**, and the duties are migrating
+into education law, teacher-licensing law and procurement documents instead.
+
+**The measurement, and it is LATAM's.** CELE's *Observatorio Legislativo* records
+digital-technology bills in Latin American congresses for **January 2025 – April 2026**:
+Argentina **63**, Brazil **36**, Mexico **35**, Peru **17**, Chile **16**, Colombia **14**,
+Paraguay **14**, Ecuador **5**, Guatemala **1** — **201 in total, and the breakdown sums exactly
+to 201**, which is why the figure is carried. 🔴 **The most frequent themes in that window are
+honour and reputation, cybersecurity and content moderation. AI led only in January–April 2025.**
+
+🔵 **That is a receding wave, and this KB had been assuming a rising one.** Several passes have
+framed the LATAM opportunity as *"AI regulation is coming"*. On the only quantified regional
+series these shelves hold, AI peaked as a standalone legislative subject **eighteen months ago**
+and has since been displaced by three other digital-policy topics.
+
+**But the education duties did not recede — they changed vehicle.** In the same window and the
+ones around it:
+
+- 🇵🇪 **Peru** — `PL 00569/2026-CD` puts AI into the **Ley General de Educación**, not into an AI
+  act: digital literacy and AI training transversally through *educación básica*, teacher
+  training, and limits on automated systems in **pedagogical decisions**.
+- 🇨🇴 **Colombia** — `Ley 2626 de 2026` was already this base's clearest case of the same shape:
+  binding by **curricular mandate** rather than risk regulation.
+- 🇨🇳 **China** — the April 2026 *"AI + Education"* plan carries AI into **teacher qualification
+  examinations and certification**, making it a **licensing** duty rather than a professional-
+  development aspiration.
+- 🇬🇧 **United Kingdom** — the AI Tutoring Tools Pioneer Programme puts the duty in a
+  **procurement standard** owned by DSIT/i.AI and published to the market.
+- 🇪🇺 **EU** — and the counterpoint that completes the picture: the one jurisdiction whose lever
+  *is* a standalone AI statute **deferred its education obligations to 2 December 2027** (`T3`).
+
+🔵 **The commercial consequence, which is the point of the trend.** A compliance-led pitch —
+risk classification, conformity assessment, Annex III documentation — is aimed at the vehicle that
+is slowing down. The instruments that are **binding now** are curriculum mandates, teacher
+licensing and procurement specifications, and those buy **curriculum alignment, teacher capacity
+and standards conformance** (`T11`, `T9`) rather than AI governance. 🔵 **Read with `T15`** — open
+source has built least where regulation has decided most — **this says the gap is not in
+governance tooling, it is in curriculum-aligned and credential-aligned delivery.**
+
+🟡 **Limits, stated.** The 201-bill series is **one source**, reached on two searches, and
+**no primary source could be fetched this pass** (`WebFetch` DNS failure on every host tried); a
+second leg gave the window as January 2025 – **February** 2026 for the same total, and the
+breakdown-bearing window is the one carried. The non-LATAM items are each individually evidenced
+on these shelves but are **not a measured series** — they are five instruments read as a shape, so
+the claim is that the shape is visible in five jurisdictions, **not** that the migration is
+quantified outside LATAM.
+
+🔵 **The test for the next pass.** Take the CELE series and split the LATAM education-AI bills out
+of the 201 by vehicle — education-code amendment versus standalone AI act. If education-code
+amendments are rising while standalone AI bills fall, `T33` graduates from a shape to a measured
+distribution, and the ordering in `T1` needs revisiting.
