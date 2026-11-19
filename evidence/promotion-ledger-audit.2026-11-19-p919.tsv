@@ -1,0 +1,15 @@
+# p919 — audit of gate-promotion-ledger's C1-UNADJUDICATED queue against the LIVE delivery shelf.
+# Instrument: compose/code/p436-promotion-ledger/ledger.py . evidence/promotion-ledger.2026-10-25-p436.tsv
+metric	value
+findings_total	450
+C1_UNADJUDICATED_rows	423
+C1_distinct_slugs	353
+C1_already_on_a_live_delivery_shelf	132
+C1_already_shelved_pct	37.4
+C1_not_on_any_live_shelf	221
+C1_numeric_fraction_artefacts	5
+C1_genuine_unshelved_addresses	216
+C1_slugs_present_in_pinned_p436_ledger	7
+pinned_ledger_rows	266
+pinned_ledger_date	2026-10-25
+passes_since_pinned_ledger	~483

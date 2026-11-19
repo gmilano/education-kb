@@ -402,6 +402,24 @@ had been carried on this shelf, deleted by the 2026-11-18 cleanup rewrite, and l
 that pass's own list of removals. Every restored row was re-measured today on both channels;
 **none of them 404s.** Raw diff: `evidence/shelf-vs-history-diff.2026-11-18-p896.tsv`.
 
+## Language substrate for vernacular tutoring — added `p919`
+
+🔵 **Why this is its own section and not a row in *In-language education corpora*:** a corpus is
+material a tutor reads; this is the layer that makes the student's answer *parseable at all*. `p919`
+found the distinction by measuring Thailand, where the education-agent tier is empty and this tier is
+not — see `repos/trending.md` `919-R1`.
+
+| Repo | Licence | Role |
+|---|---|---|
+| https://github.com/PyThaiNLP/pythainlp | 🟢 Apache-2.0 — byte-read `p919`, 11,357 B, `sha256₁₂ b40930bbcf80` | **Added `p919`. 1,175 ★, pushed 2026-11-13** — passes `918-R1`. Thai tokenisation, POS tagging, transliteration, spell-checking. 🔴 **Thai is written with no spaces between words**, so any tutor that marks free-text Thai cannot segment on whitespace: this is a precondition, not an optimisation. The only maintained permissive Thai NLP stack found. |
+
+🟡 **Measured this pass and deliberately NOT shelved**, so the next pass does not re-discover them as
+new: `vistec-AI/thai2transformers` (125 ★, Apache-2.0 byte-read, idle since **2023-11-06**) and
+`OpenThaiGPT/openthaigpt` (121 ★, **Apache-2.0 by byte-read though `search/repositories` reports
+`NOASSERTION`**, idle since **2023-05-26**). Both fail `918-R1` on recency by over three years.
+🔴 `PyThaiNLP/pythainlp-corpus` (10 ★) is **`CC-BY-4.0` — a data licence, not a software grant**; it is
+the corpus, not the library that loads it.
+
 ## National-curriculum data as an agent substrate — added `p904`
 
 The substrate a curriculum-aligned product stands on, and the first cluster in this file that a

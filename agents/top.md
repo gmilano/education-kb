@@ -29,7 +29,9 @@ curriculum graph, correct for the asset and a trap for anyone who reads the repo
 `master/README.rst`.** That is `p900`'s false-absence class landing on the AGPL anchor of the
 whole LMS tier; the two-channel rule caught it. See `agents/trending.md` `901-F3`.
 
-**Latest sweep — `p918` (2026-11-19).** 21 of 22 anchor rows re-resolved on `search`
+**Latest sweep — `p919` (2026-11-19).** 🔴 **No full remeasure this pass — deliberately.** The `p918` sweep is hours old and `p894`'s cadence note stands: the largest intra-day move across ~30 tracked repos was +21 stars on a 60,000-star repo. Spot check only: `HKUDS/DeepTutor` **60,684** `Apache-2.0` (p918: 60,675). The budget went to `918-G7` instead, and it returned **14 repositories this base had never seen** against the global English leg's **zero** — the 39th consecutive nil at the top of the English-language shelf. New tier below: **Indonesia and Thailand**.
+
+**Previous sweep — `p918` (2026-11-19).** 21 of 22 anchor rows re-resolved on `search`
 ([record](../evidence/shelf-remeasure.2026-11-19-p918.tsv)): `OpenHands/OpenHands` **93,816** `MIT`,
 `microsoft/ai-agents-for-beginners` **80,443** `MIT`, `crewAIInc/crewAI` **61,093** `MIT`,
 `HKUDS/DeepTutor` **60,675** `Apache-2.0` (p917: 60,661), `langchain-ai/langgraph` **45,154** `MIT`,
@@ -752,6 +754,53 @@ vernacular open education-agent supply reachable on this channel at all, against
 picture (~86% South-East Asian teacher use) that `intel/market.md` records as large. Japanese supply
 is found by `学習 支援 AI` (**60**) and not by the loanword shape, which is `T45` reproducing inside
 a single language.
+
+## Indonesia and Thailand — `918-G7` discharged, added `p919`
+
+🔴 **`p918` recorded ZERO supply for both countries. For Indonesia that was a property of the query,
+not of the world.** Re-asked on the **national curriculum programme** (`Kurikulum Merdeka`) and the
+**teacher-facing artefact** (`modul ajar`, `guru`) instead of on `AI tutor Indonesia`, the channel
+returned **10 repositories, none previously seen by this base**. Both channels on every row;
+[record](../evidence/apac-id-th-supply.2026-11-19-p919.tsv).
+
+🔴 **0 of 10 pass `918-R1`** (≥ 50 ★ · byte-read grant ≠ `NONE` · pushed within 180 days). The tier is
+**`PRESENT — NOT DELIVERABLE` at the agent layer** — Indonesia is the fourth consecutive vernacular
+tier to answer that way.
+
+| Agent | Repo | Licence | ★ | Last push | What it does | Origin |
+|---|---|---|---|---|---|---|
+| GURU / Arjuna Quiz Engine | https://github.com/anandpatikat/guru-latihan-dinamis | 🔴 **none — no licence file on any probed path, on either branch** | 115 | 2026-11-19 | Generates printable curriculum-aligned assessments for Indonesian teachers. The most-starred Indonesian education agent this base has found — **and it is ungranted, so it cannot be built on** | Indonesia (LATAM-style community publishing; roadmap through 2026–27 is the author's target, not delivered scope) |
+| Kurikulum-AI | https://github.com/JMLcommunity/Kurikulum-AI | 🟢 MIT (1,081 B, `sha256₁₂ 879619fd1e3d`, byte-read `p919`) | 46 | 🔴 **2020-06-14** | An AI curriculum in Bahasa Indonesia — teaching *material*, not an agent. Idle 6.4 years | Indonesia |
+| modul-ajar-generator | https://github.com/NgodingCik/modul-ajar-generator | 🔴 **CC BY-NC 4.0** (17,688 B, `sha256₁₂ 2b275bb77aa6`, byte-read `p919`) — **noncommercial, and a *content* licence applied to a web application** | 2 | 2026-05-17 | Lesson-module (RPP) generator for PAUD/TK teachers. 🔵 This is what a **true** noncommercial positive looks like — the term is in the licence's name; see `919-F3` | Indonesia |
+| kurikulum-merdeka-asesmen-skills | https://github.com/y4zh/kurikulum-merdeka-asesmen-skills | 🟢 MIT (1,065 B, `sha256₁₂ 1e41d9c6af01`, byte-read `p919`) | 0 | 2026-11-17 | Agent **skills** for lesson modules, assessment writing and exam conversion, split by school level. 🔵 The best permissive grant in the Indonesian tier, and the one asset here worth reading — it is already packaged in the shape this file names in *"the tutor as an agent skill"* | Indonesia |
+| ebook-generator | https://github.com/dikkayulianto/ebook-generator | 🟢 MIT (1,070 B, `sha256₁₂ ceb34bc8f5b0`, byte-read `p919`) | 0 | 2026-11-19 | Generates ebooks from source material | Indonesia |
+
+🔴 **Five further Indonesian repositories were measured and are not given rows: they are 0 ★ *and*
+carry no licence file at all** — `ianbandanesse24-ai/Project-Guru-Digital-2026`,
+`eldorray/modulajar-ai`, `odifunan4-ux/Guruku-ID`, `msjasukses/kurikulum`,
+`adrianatiwi06-collab/edtech-kurikulum-merdeka`. 🟡 **`eldorray/modulajar-ai`'s README states MIT and
+there is no `LICENSE` file on any probed path** — the claim is unbacked and the repository is
+ungranted in fact. A README is not a grant.
+
+### Thailand — the nil reproduces at the agent layer and collapses one layer down
+
+🔴 **No open-source Thai education agent exists on this channel**, after the same reshaped method
+(`ONET`, `TCAS`, `ระบบการศึกษา`). That nil is **informed**, not silent. 🟢 **The language substrate
+underneath it is deliverable**, which is a different and more useful answer:
+
+| Asset | Repo | Licence | ★ | Last push | Layer | `918-R1` |
+|---|---|---|---|---|---|---|
+| PyThaiNLP | https://github.com/PyThaiNLP/pythainlp | 🟢 Apache-2.0 (11,357 B, `sha256₁₂ b40930bbcf80`, byte-read `p919`) | 1,175 | 2026-11-13 | substrate | 🟢 **PASS** |
+| thai2transformers | https://github.com/vistec-AI/thai2transformers | 🟢 Apache-2.0 (11,357 B, `sha256₁₂ 58d1e17ffe51`, byte-read `p919`) | 125 | 🔴 2023-11-06 | models | ❌ recency |
+| OpenThaiGPT | https://github.com/OpenThaiGPT/openthaigpt | 🟢 Apache-2.0 (595 B, `sha256₁₂ b2a8a8f529b3`, byte-read `p919`) — 🔴 the search channel reports `NOASSERTION` for this repo; the two channels disagree and the bytes win | 121 | 🔴 2023-05-26 | models | ❌ recency |
+
+🔵 **Why the substrate matters more here than elsewhere: Thai is written without spaces between
+words.** A tutor that marks free-text Thai answers cannot tokenise them with whitespace, so a
+segmenter is not an optimisation, it is a precondition. `PyThaiNLP` is the maintained permissive one.
+
+🔵 **The rule this produced.** `918-R1` is applied **per layer**, not per region, and the layer is
+published with the verdict — otherwise *"tier empty"* is ambiguous between *nothing here* and
+*nothing to fork, and a maintained stack to build on*. See `repos/trending.md` `919-R1`.
 
 ## What we searched for and did not find
 

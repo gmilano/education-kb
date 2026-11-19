@@ -4,6 +4,91 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p919) — **`918-R1` needed one more axis and Thailand supplied it: a regional tier can fail the deliverability threshold at the agent layer and pass it at the substrate layer, and the engagement advice is opposite in each case. 🔴 Three instrument findings, all pointing the same way — this base's gates are now generating more false work than shelf growth.**
+
+### 🟢 `919-R1` — the layer-aware refinement of `918-R1`
+
+`918-R1` bound this base to a published threshold: **≥ 50 ★ · a byte-read grant that is not `NONE` ·
+pushed within 180 days**, below which a tier is reported as *present but not deliverable*. It has held
+for five tiers. Thailand breaks it — not by failing, but by returning **two different answers for the
+same country** depending on which layer is measured:
+
+| Layer | Thailand's best member | `918-R1` | What a delivery team does |
+|---|---|---|---|
+| Education **agent** | nothing found on a reshaped query | 🔴 **tier empty** | build it |
+| Language **substrate** | `PyThaiNLP/pythainlp` — **1,175 ★**, Apache-2.0 byte-read, pushed 2026-11-13 | 🟢 **PASS** | adopt it |
+
+**The rule, as it now stands:** *apply `918-R1` per layer, not per region, and publish the layer with
+the verdict.* A tier reported as `PRESENT — NOT DELIVERABLE` without a layer is ambiguous between
+"there is nothing here" and "there is nothing here **to fork**, and a maintained stack to build on".
+
+🔵 **Re-reading the five tiers `918-R1` was applied to under the new rule changes none of their
+verdicts and changes what two of them mean.** The Mandarin, Japanese, Korean and Vietnamese tiers
+`918-F2` graded were all measured at the **agent** layer; their substrate layers were never probed.
+Those four tiers are therefore **not known to be substrate-empty** — they are unmeasured there, which
+is a different claim and a cheaper gap to close. Registered as `919-G5`.
+
+🟡 **Layering also explains `p904`'s LATAM result retrospectively.** The LATAM curriculum cluster that
+*passed* `918-R1` passed as **curriculum data**, not as agents — the same split, found earlier and not
+named. `README.md`'s standing advice *bring the tutor, adopt the curriculum spine* is this rule,
+stated for one region before it was generalised.
+
+### 🔴 `919-R2` — `gate-promotion-ledger`'s denominator is a file frozen on 2026-10-25
+
+Run this pass: **450 findings, 423 `C1-UNADJUDICATED` rows, 353 distinct slugs.** `918-G2` reported
+the queue as **28** and prescribed working it as the cheapest available shelf growth.
+
+🔴 **132 of the 353 — 37.4% — are already published on a live delivery shelf**, including all four
+`918-G2` named by hand. The gate compares live prose against
+`evidence/promotion-ledger.2026-10-25-p436.tsv`: **266 rows, pinned ~483 passes ago**, in which only
+**7 of the 353** appear. Every promotion made since October reports as unadjudicated by construction.
+
+**Remedy, in order of cost:**
+
+1. 🔵 **Re-cut the pinned ledger from the live shelf** before reading the gate again. Until then its
+   output cannot separate *never shelved* from *shelved after October*, and
+   [`c1-unshelved-residue`](../evidence/c1-unshelved-residue.2026-11-19-p919.txt) — **216 addresses** —
+   is the only trustworthy form of the queue, obtained by shelf-diff rather than by the gate.
+2. Add an `owner/repo` shape guard: the gate currently reads prose fractions as addresses and emitted
+   **`18/18`, `20/20`, `22/24`, `4/4`, `7/7`** as repositories
+   ([fixtures](../evidence/ledger-fraction-artefacts.2026-11-19-p919.txt)).
+
+🟡 **The standing lesson about `DECLARED_RED`.** This gate sits in that set, so it fails every run; a
+check that always fails is a check nobody reads, and `916-R1` and `917-F3` each rediscovered the
+`logged-not-shelved` class **by hand** while it was printing a list. 🔵 A permanently-red gate is not a
+known defect being tracked — it is an instrument that has been switched off without anyone saying so.
+**22 of the 23 red gates `918-R2` enumerated remain unread**, and this pass's experience is that
+reading one costs minutes and changes what the next pass should do.
+
+### 🟢 `919-R3` — the noncommercial scan has a guaranteed false-positive rate of 45 addresses, and a one-line fix
+
+`918-G0`'s phantom restriction was a keyword match on **stock AGPL-3.0 §6(c)** — *"allowed only
+occasionally and noncommercially"* — present verbatim in every GPL-3.0 and AGPL-3.0 payload. On
+`p909`'s census that is **45 of this base's addresses** (AGPL-3.0 26 + GPL-3.0 16 + GPL-2.0 3),
+`moodle/moodle`, `openedx/openedx-platform`, `instructure/canvas-lms` and `h5p/h5p-php-library` among
+them.
+
+**Fix:** strip the canonical GPL/AGPL body before scanning and match only the residue. A true positive
+looks like `NgodingCik/modul-ajar-generator`, where the noncommercial term is in the licence's *name*
+(`CC BY-NC 4.0`), not buried in boilerplate. Full write-up in `agents/trending.md` `919-F3`.
+
+### 🟢 `919-R4` — new permissive substrate shelved this pass
+
+| Repo | Licence (byte-read) | ★ | Pushed | Why it belongs in `repos/foundations.md` |
+|---|---|---|---|---|
+| [`PyThaiNLP/pythainlp`](https://github.com/PyThaiNLP/pythainlp) | 🟢 Apache-2.0 — 11,357 B, `sha256₁₂ b40930bbcf80` | 1,175 | 2026-11-13 | Thai tokenisation, POS, transliteration, spell-checking. 🔵 Thai has **no inter-word spaces**, so a Thai tutor that scores free-text answers cannot be built without a segmenter; this is the maintained permissive one |
+
+🟡 **Measured and deliberately not shelved**: `vistec-AI/thai2transformers` (125 ★, Apache-2.0, idle
+since **2023-11-06**) and `OpenThaiGPT/openthaigpt` (121 ★, Apache-2.0 **by byte-read** though the
+search channel says `NOASSERTION`, idle since **2023-05-26**). Both fail `918-R1` on recency by over
+three years. They are recorded here rather than on the shelf so the next pass does not re-discover
+them as new.
+
+🔴 **`PyThaiNLP/pythainlp-corpus` (10 ★) is `CC-BY-4.0` — a data licence, not a software grant.** It is
+the corpus, not the library, and it belongs in a different column from the thing that loads it.
+
+---
+
 ## `2026-11-19` (p918) — **`917-G4` is discharged with a published threshold, and applying it reclassifies two whole estates. 🔴 `917-G8` is discharged by actually running the gates: 53 of 76 green, 23 red — and the gate this base was told to start with is right once and wrong four times, which is itself the finding.**
 
 ### 🟢 `918-R1` — the top-of-shelf threshold, decided and applied

@@ -88,6 +88,26 @@ data access* rather than education agents.
 
 ### North America
 
+#### 🆕 `p919` — the regional leg was re-run and returned **nothing this file did not already hold**, which is itself the measurement
+
+- 🟢 **Corroboration, not news.** A fresh North America leg returned the **134 bills across 31
+  states**, **North Carolina Session Law 2026-41** (AI-literacy standards; model policy 31 Dec 2026,
+  local policies 30 Jun 2027, teacher training 30 Jun 2028), **California AB 1159**, **New York
+  A 9190**, **Idaho SB 1227**, **Executive Order 14277**, the Department of Education's April 2026
+  K-12 guidance and OET's March 2026 responsible-AI framework, and the **April 2026 ADA web
+  accessibility deadline** — every one already published in the `p918` block below, at the same
+  values.
+- 🔵 **Why that is worth a line rather than silence.** This base's North America regulatory picture is
+  now **stable across two independent legs one day apart**. A repeated measurement that agrees is
+  weak evidence that the *picture* is right and strong evidence that **the channel is exhausted** —
+  the marginal regional WebSearch leg for North America is no longer buying anything, and the budget
+  belongs on supply-side and non-English legs, which returned 14 unseen repositories this pass
+  against this leg's zero.
+- 🔴 **Mexico remains unmeasured.** Two consecutive North America legs have returned **no Mexican
+  source at all**, and this file's "North America" is in practice the United States plus a single
+  Canadian employment-law reference. Declared as `919-G6` rather than left to look like coverage.
+
+
 #### 🆕 `p918` — the nearest deadlines are state-level, and the volume of bills is now the story
 
 - **134 AI-in-education bills were introduced across 31 states** in the 2026 session, concentrated
@@ -653,6 +673,23 @@ A 9190, EO 14277, the US Department of Education framework and Berkeley Law were
 already written.
 
 ### EMEA
+
+#### 🆕 `p919` — the postponement corroborates for a third time, and the primary text is unreadable for a ninth pass
+
+- 🟢 **`Regulation (EU) 2026/1744` re-corroborated on a fresh leg**: stand-alone Annex III education
+  obligations at **2 December 2027**, transparency duties (Article 50) from **2 August 2026**,
+  emotion-recognition ban in schools in force since **2 February 2025**.
+- 🟢 **Article 4 AI literacy, stated explicitly this pass**: the obligation **has applied since 2
+  February 2025 to every organisation that deploys an AI system — which is every school already using
+  one**, irrespective of the 2027 high-risk date. 🔵 This is the nearest live EMEA obligation and it is
+  the one most often mistaken for a future one; it is a reason to open a conversation *now* rather
+  than against the 2027 window.
+- 🔴 **`919-G1` — ninth consecutive pass with no primary legal text.** Re-tested this pass:
+  `eur-lex.europa.eu`, `data.consilium.europa.eu` and `www.unesco.org` **all fail DNS resolution**
+  from this session (`getent hosts` → no result; an HTTPS attempt returns code `000`). `915-F2`
+  established the failure is DNS and not HTTP, and this pass confirms it on two further hosts. Every
+  EU AI Act date in this file remains **secondary-sourced and marked so**.
+
 
 #### 🆕 `p918` — the postponement holds, and the UK has moved first on product safety
 
@@ -1683,6 +1720,31 @@ problem — so this nil is still not evidence of saturation.
 
 ### APAC
 
+#### 🆕 `p919` — Indonesia's "no supply" was a query artefact; Thailand's is real at one layer and false at the layer below
+
+- 🔴 **Indonesia: 10 repositories where `p918` measured zero, and 0 of 10 are deliverable.** Re-asked
+  on the national curriculum programme (`Kurikulum Merdeka`) and the teacher-facing artefact (`modul
+  ajar`) rather than on English topic words. The most-starred Indonesian education agent —
+  `anandpatikat/guru-latihan-dinamis`, **115 ★, pushed today** — **carries no licence file at all**,
+  and 6 of the 10 are ungranted. [Record](../evidence/apac-id-th-supply.2026-11-19-p919.tsv);
+  `agents/top.md` carries the tier.
+- 🟢 **Thailand: no open education agent, and a maintained permissive language stack.**
+  `PyThaiNLP/pythainlp` — **1,175 ★, Apache-2.0 byte-read, pushed 2026-11-13** — passes `918-R1`,
+  while the agent tier is genuinely empty. 🔵 Thai is written **without spaces between words**, so a
+  segmenter is a precondition for any tutor that marks free-text Thai, not an optimisation.
+- 🔵 **The opportunity this creates, stated as a difference from the rest of APAC.** In Indonesia and
+  Thailand a studio is **not competing with an incumbent open agent — there isn't one.** The
+  deliverable is a built agent on permissive substrate, with the local curriculum vocabulary taken
+  from the practitioner repositories above (read for requirements, never as a dependency — `T52`).
+  That is a **shorter engagement than the "no supply" reading implies**, and it is the opposite
+  conclusion to the one `918-G7`'s nil would have supported.
+- 🟡 **Regulatory picture re-corroborated and unchanged**: Korea's AI Basic Act in force 22 January
+  2026 with a guidance-first grace period through 2026; Vietnam's AI law effective March 2026 naming
+  education among high-risk areas; Australia's TEQSA institutional action plans; Singapore's AI
+  Verify toolkit; China's labelling and consent obligations; Japan principles-based. The EU Act's
+  extraterritorial reach continues to bind APAC vendors whose outputs are used in the EU.
+
+
 #### 🆕 `p918` — demand is large and documented; vernacular open supply exists and is not deliverable
 
 - **Korea's AI Basic Act entered into force 22 January 2026.** Enforcement decrees are still being
@@ -2523,6 +2585,26 @@ and own**, not a vendor to partner with.
 regulatory-led posture and Australia's National AI Plan were all returned and all already written.
 
 ### LATAM
+
+#### 🆕 `p919` — a second independent leg returns the same two headline figures, and the gap between them is still the offer
+
+- 🟢 **Corroborated on a fresh leg, at the same values**: the Digital Education Council's 2026 LATAM
+  higher-education survey at **92% of students and 79% of faculty** actively using AI, UNESCO IESALC
+  at **87% of institutions using AI and 26% holding a formal strategy**, the **716 AI regulatory
+  instruments across 23 countries** counted by Universidad de los Andes (80%+ initiated since 2023),
+  and the **UNESCO Observatory on AI in Education for LATAM** (April 2026, with CAF, CENIA, Ceibal,
+  Fundación Santillana, Tecnológico de Monterrey and ProFuturo).
+- 🆕 **One figure this file did not hold**, from the PISA 2025 regional read: across the **13 LATAM
+  countries assessed, around nine in ten 15-year-olds have already used an AI chatbot for
+  schoolwork**, while in Brazil **53% of school administrators report using AI and only 22% report
+  their school has any guidance on it**. 🔵 That is the `87%/26%` institutional gap reproduced **one
+  tier down, in schools rather than universities** — the same shape, measured on a different
+  population by a different instrument, which is the strongest form this file's central LATAM claim
+  has taken.
+- 🔵 **The offer is unchanged and better evidenced: governance, not capability.** Adoption is
+  near-universal and self-directed at both tiers; strategy, policy and teacher guidance are where the
+  measured deficit is, in higher education and in schools alike.
+
 
 #### 🆕 `p918` — the governance gap is now quantified by UNESCO, and it is the offer
 

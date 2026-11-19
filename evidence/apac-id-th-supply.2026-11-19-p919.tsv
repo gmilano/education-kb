@@ -1,0 +1,18 @@
+# p919 — 918-G7 discharge. Indonesia + Thailand education-agent supply, reshaped queries.
+# Channels: RAW = raw.githubusercontent.com licence byte-read; SEARCH = gh api search/repositories.
+# Threshold applied is 918-R1: >=50 stars AND byte-read grant != NONE AND pushed within 180 days.
+country	slug	stars	search_spdx	raw_grant	raw_bytes	raw_sha12	pushed	918R1	note
+ID	anandpatikat/guru-latihan-dinamis	115	NULL	NONE-ON-RAW	-	-	2026-11-19	FAIL-grant	most-starred ID education agent found; no licence file on any probed path
+ID	JMLcommunity/Kurikulum-AI	46	MIT	MIT License	1081	879619fd1e3d	2020-06-14	FAIL-stars+recency	AI curriculum content; idle 6.4 years
+ID	NgodingCik/modul-ajar-generator	2	NOASSERTION	CC-BY-NC-4.0	17688	2b275bb77aa6	2026-05-17	FAIL-stars+grant	noncommercial AND a content licence applied to software
+ID	y4zh/kurikulum-merdeka-asesmen-skills	0	MIT	MIT License	1065	1e41d9c6af01	2026-11-17	FAIL-stars	agent-skill packaging of lesson modules + assessment; best permissive ID grant
+ID	dikkayulianto/ebook-generator	0	MIT	MIT License	1070	ceb34bc8f5b0	2026-11-19	FAIL-stars	ebook generation
+ID	ianbandanesse24-ai/Project-Guru-Digital-2026	0	NULL	NONE-ON-RAW	-	-	2026-11-18	FAIL-stars+grant	teacher admin + Gemini key
+ID	eldorray/modulajar-ai	0	NULL	NONE-ON-RAW	-	-	2026-09-20	FAIL-stars+grant	README claims MIT; no LICENSE file on raw -- claim unbacked
+ID	odifunan4-ux/Guruku-ID	0	NULL	NONE-ON-RAW	-	-	2026-09-08	FAIL-stars+grant	teaching-kit app
+ID	msjasukses/kurikulum	0	NULL	NONE-ON-RAW	-	-	2026-11-07	FAIL-stars+grant	-
+ID	adrianatiwi06-collab/edtech-kurikulum-merdeka	0	NULL	NONE-ON-RAW	-	-	2026-11-03	FAIL-stars+grant	-
+TH	PyThaiNLP/pythainlp	1175	Apache-2.0	Apache License	11357	b40930bbcf80	2026-11-13	PASS	substrate, not an agent: Thai tokenisation/NLP
+TH	vistec-AI/thai2transformers	125	Apache-2.0	Apache License	11357	58d1e17ffe51	2023-11-06	FAIL-recency	Thai pretrained transformers; idle 3.0 years
+TH	OpenThaiGPT/openthaigpt	121	NOASSERTION	Apache License 2.0	595	b2a8a8f529b3	2023-05-26	FAIL-recency	search says NOASSERTION, raw byte-read says Apache-2.0 -- two-channel disagreement
+TH	PyThaiNLP/pythainlp-corpus	10	CC-BY-4.0	-	-	-	2026-10-07	FAIL-stars+grant	data licence, not a software grant

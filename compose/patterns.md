@@ -3266,3 +3266,50 @@ and found nothing, and an informed gap is information. 🔴 Also not for a clien
 deliverable to *be* a local open-source contribution: this pattern produces a closed derivative of
 permissive APAC-origin infrastructure, which is a different promise.
 
+
+## P41 — Ship a Thai or Indonesian tutor where there is no tutor to fork (added `p919`)
+
+**When to reach for this.** The client is in a market where `918-R1` reports the education-agent tier
+as empty or `PRESENT — NOT DELIVERABLE` — measured so far for **Indonesia** and **Thailand**
+(`p919`), and for Mandarin, Japanese, Korean and Vietnamese (`p918`). 🔵 The instinct on reading
+*"no open supply"* is to quote a from-scratch build. **That is the wrong quote**, and `T51` is why:
+the agent layer being empty says nothing about the layer underneath it, and in Thailand the layer
+underneath passes the threshold outright.
+
+**The wiring.**
+
+| Role | Repo / agent | Licence | Why this one |
+|---|---|---|---|
+| Tutor runtime | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 `Apache-2.0` | **60,684 ★**, pushed 2026-11-18. The anchor tutor on this shelf; it is not localised, which is the point — you localise it rather than find a local one |
+| 🔴 **Thai segmentation** | [`PyThaiNLP/pythainlp`](https://github.com/PyThaiNLP/pythainlp) | 🟢 `Apache-2.0` (byte-read, 11,357 B) | **1,175 ★**, pushed 2026-11-13. **Thai has no inter-word spaces.** Free-text answer marking does not work without this. Not optional, not deferrable |
+| Local inference | [`ollama/ollama`](https://github.com/ollama/ollama) | 🟢 `MIT` | Keeps student text in-country. `T6` records sovereign inference as a procurement requirement, not a preference |
+| Retrieval | [`qdrant/qdrant`](https://github.com/qdrant/qdrant) | 🟢 `Apache-2.0` | Curriculum retrieval; self-hostable beside the model |
+| LMS surface | [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 `GPL-3.0` — **plugin boundary, do not link into your code** | Dominant in both markets. Ship as a plugin; `T17` has the permissive-extension-point route |
+| Curriculum vocabulary (ID) | [`y4zh/kurikulum-merdeka-asesmen-skills`](https://github.com/y4zh/kurikulum-merdeka-asesmen-skills) | 🟢 `MIT` (byte-read, 1,065 B) | 🔵 **Read, do not depend on.** 0 ★ — its value is that it encodes `Kurikulum Merdeka` lesson-module and assessment structure by school level, already shaped as agent skills |
+| Teacher console | [`appsmithorg/appsmith`](https://github.com/appsmithorg/appsmith) | 🟢 `Apache-2.0` | Review queue — nothing generated reaches a student unreviewed |
+
+**Order of work.**
+
+1. **Measure the substrate layer before quoting.** Run `918-R1` at the agent layer *and* at the
+   language layer. A pass that reports only the first will over-quote the build.
+2. **Stand up segmentation first, in Thailand.** It is the component that decides whether free-text
+   marking is possible at all, and it is the cheapest thing in the stack to prove.
+3. **Harvest requirements from the practitioner repositories — never a dependency.** `T52`: 6 of the
+   10 Indonesian repositories carry **no licence file**, including the 115 ★ leader. Read them for
+   curriculum vocabulary, assessment formats and what teachers actually generate.
+4. 🔵 **If one of those repositories is genuinely needed, open an issue before forking.** A teacher
+   who published a working tool and omitted a licence has usually not *refused* one. An email is
+   cheaper than a reimplementation and faster than a legal review.
+5. **Localise `DeepTutor` against the national curriculum**, with retrieval grounded on curriculum
+   documents rather than on the model's priors.
+6. **Ship behind the LMS plugin boundary** and keep the teacher approval queue in front of students.
+
+🔴 **Two licence traps specific to this pattern.** A README that says MIT is **not a grant** —
+`eldorray/modulajar-ai` claims MIT and has no `LICENSE` file on any probed path. And
+`NgodingCik/modul-ajar-generator` is **`CC BY-NC 4.0`**: noncommercial *and* a content licence on a
+web application, which is unusable for a client engagement in two independent ways. Byte-read every
+grant in this tier; the search channel reports both of these identically as `NULL`/`NOASSERTION`.
+
+🟡 **Rough shape.** 8–10 weeks for Thailand (segmentation is proven early and de-risks the rest);
+6–8 weeks for Indonesia, where no segmentation layer is required and the curriculum vocabulary is
+richer. Both assume the client already runs Moodle; add 3–4 weeks if not.

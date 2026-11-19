@@ -4,6 +4,212 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p919) — **`918-G7` is discharged and Indonesia's nil was a query artefact, not an absence: 10 repositories where `p918` measured zero, and 0 of 10 are deliverable. Thailand is different in a way worth naming — the agent layer really is empty, the *language* layer is not. 🔴 And `918-G2`, this base's own "cheapest growth available" prescription, is refuted: 37.4% of the queue it pointed at was already on the shelf.**
+
+Three of this pass's four legs were spent on gaps this base declared about *itself*, and two of
+them were wrong. That is now the third consecutive pass — `918-G0`, `918-R3`, and today `918-G2` —
+in which **an instrument or a prescription of this base's own generated false work**. The pattern
+is worth more than any single repository this pass found, and it is written up as `919-F4`.
+
+### 🟢 `919-F5` — `918-G7` discharged: Indonesia's supply exists. `p918` asked the wrong question.
+
+`918-G7` recorded **ZERO** vernacular education-agent supply for Indonesia and Thailand, against
+the largest teacher-adoption figures in APAC, and prescribed re-measuring *"in a shape the original
+did not use — platform-named and institution-named rather than topic words."* That prescription is
+correct and it worked on the first attempt.
+
+Querying on the **national curriculum programme** (`Kurikulum Merdeka`) and the **teacher-facing
+artefact** (`modul ajar`, `guru`) rather than on `AI tutor Indonesia` returned **10 repositories,
+none of them previously seen by this base**. Every one was measured on both channels
+([record](../evidence/apac-id-th-supply.2026-11-19-p919.tsv)).
+
+🔴 **0 of 10 pass `918-R1`** (≥ 50 ★ · byte-read grant ≠ `NONE` · pushed within 180 days), and the
+shape of the failure is the one `918-F2` found in Mandarin, Japanese, Korean and Vietnamese:
+
+| Slug | ★ | Grant (byte-read) | Pushed | `918-R1` |
+|---|---|---|---|---|
+| [`anandpatikat/guru-latihan-dinamis`](https://github.com/anandpatikat/guru-latihan-dinamis) | **115** | 🔴 **none — no licence file on any probed path** | 2026-11-19 | ❌ grant |
+| [`JMLcommunity/Kurikulum-AI`](https://github.com/JMLcommunity/Kurikulum-AI) | 46 | 🟢 MIT (1,081 B, `sha256₁₂ 879619fd1e3d`) | **2020-06-14** | ❌ ★ + recency |
+| [`NgodingCik/modul-ajar-generator`](https://github.com/NgodingCik/modul-ajar-generator) | 2 | 🔴 **CC BY-NC 4.0** (17,688 B, `sha256₁₂ 2b275bb77aa6`) | 2026-05-17 | ❌ ★ + grant |
+| [`y4zh/kurikulum-merdeka-asesmen-skills`](https://github.com/y4zh/kurikulum-merdeka-asesmen-skills) | 0 | 🟢 MIT (1,065 B, `sha256₁₂ 1e41d9c6af01`) | 2026-11-17 | ❌ ★ |
+| [`dikkayulianto/ebook-generator`](https://github.com/dikkayulianto/ebook-generator) | 0 | 🟢 MIT (1,070 B, `sha256₁₂ ceb34bc8f5b0`) | 2026-11-19 | ❌ ★ |
+
+The remaining five — `ianbandanesse24-ai/Project-Guru-Digital-2026`, `eldorray/modulajar-ai`,
+`odifunan4-ux/Guruku-ID`, `msjasukses/kurikulum`, `adrianatiwi06-collab/edtech-kurikulum-merdeka` —
+are **0 ★ and carry no licence file at all**.
+
+🔴 **Two results that only a byte-read produces.** `eldorray/modulajar-ai`'s README states MIT;
+there is **no `LICENSE` file on any probed path on either branch**, so the claim is unbacked and the
+repository is ungranted in fact. And `NgodingCik/modul-ajar-generator` is **`CC BY-NC 4.0`** — a
+*noncommercial* grant, and a *content* licence applied to a web application. Either one would have
+entered this shelf as usable had the search channel's `NOASSERTION`/`NULL` been read as "unknown,
+probably fine".
+
+🔵 **What this means for a delivery engagement.** Indonesia is the fourth consecutive vernacular
+tier to come back `PRESENT — NOT DELIVERABLE`. The teacher demand is real and locally expressed —
+these are working teachers publishing lesson-module generators for their own classrooms — and there
+is nothing in it to adopt. **Build the agent; adopt the curriculum vocabulary.** The one asset worth
+reading before building is `y4zh/kurikulum-merdeka-asesmen-skills`, not for its code but because it
+is already shaped as **agent skills** split by school level — the packaging this base named in
+*"the tutor as an agent skill"* — under a byte-read MIT grant.
+
+### 🟡 `919-F6` — Thailand is empty at the agent layer and deliverable at the layer underneath, and that distinction is new
+
+The same reshaped method run on Thailand (`ONET`, `TCAS`, `ระบบการศึกษา`) returned **no open-source
+education agent** — `918-G7`'s nil **reproduces** for Thailand where it collapsed for Indonesia. The
+nil is therefore an informed one, and it is not the whole answer:
+
+| Slug | ★ | Grant | Pushed | `918-R1` | Layer |
+|---|---|---|---|---|---|
+| [`PyThaiNLP/pythainlp`](https://github.com/PyThaiNLP/pythainlp) | **1,175** | 🟢 Apache-2.0 (11,357 B, `sha256₁₂ b40930bbcf80`) | 2026-11-13 | 🟢 **PASS** | substrate |
+| [`vistec-AI/thai2transformers`](https://github.com/vistec-AI/thai2transformers) | 125 | 🟢 Apache-2.0 (11,357 B, `sha256₁₂ 58d1e17ffe51`) | 2023-11-06 | ❌ recency | models |
+| [`OpenThaiGPT/openthaigpt`](https://github.com/OpenThaiGPT/openthaigpt) | 121 | 🟢 Apache-2.0 (595 B, `sha256₁₂ b2a8a8f529b3`) | 2023-05-26 | ❌ recency | models |
+
+🔴 **A two-channel disagreement worth recording**: `search/repositories` reports
+`OpenThaiGPT/openthaigpt` as **`NOASSERTION`**; the byte-read is an unambiguous 595-byte Apache-2.0
+pointer. The search channel's licence field errs in *both* directions — `906-G1` established that,
+and this is a fresh instance on a 121 ★ repository.
+
+🔵 **The generalisation this forces.** Until now this base has graded a regional tier as a single
+thing. Thailand shows that is too coarse: **`918-R1` can fail at the agent layer and pass at the
+substrate layer in the same country**, and the delivery advice differs completely between them. A
+Thai engagement has no tutor to fork and a maintained, permissive, Thai-language NLP stack to build
+one on. Proposed as `919-R1` in `repos/trending.md`; it is the layer-aware refinement of `918-R1`.
+
+### 🔴 `919-F4` — `918-G2` told this pass to go and shelve 28 repositories. 132 of them were already shelved.
+
+`918-G2` was this base's **highest-confidence, cheapest** prescription: *"the cheapest shelf growth
+available, and it needs no network… work the `C1-UNADJUDICATED` rows the gate names."* It named four
+by hand: `matmiidu/paes-ensayos`, `theteacherbot/ICFES-Exam-Engine`, `001kenji/KCSE-predictor`,
+`tristcoil/hanabira.org`.
+
+**All four are already on two or three live delivery shelves each.** They were not a backlog; they
+were history. Running the instrument and auditing its output against the live shelf
+([record](../evidence/promotion-ledger-audit.2026-11-19-p919.tsv)):
+
+| Measure | Value |
+|---|---|
+| `gate-promotion-ledger` findings | **450** |
+| `C1-UNADJUDICATED` rows / distinct slugs | 423 / **353** (`918-G2` said **28**) |
+| 🔴 **Already on a live delivery shelf** | **132 — 37.4%** |
+| Not on any live shelf | 221 |
+| …of which numeric-fraction parse artefacts | **5** (`18/18`, `20/20`, `22/24`, `4/4`, `7/7`) |
+| Genuine un-shelved addresses | **216** |
+| 🔴 C1 slugs present in the pinned ledger it is compared against | **7 of 353** |
+
+**The mechanism.** The gate compares live prose against
+`evidence/promotion-ledger.2026-10-25-p436.tsv` — **266 rows, pinned at `p436`, 2026-10-25**, roughly
+483 passes ago. Every promotion made since then reports as unadjudicated *by construction*. The gate
+is in `DECLARED_RED`, so it has been failing continuously, and a gate that always fails is a gate
+nobody reads — which is exactly how `916-R1` and `917-F3` came to rediscover the `logged-not-shelved`
+class **by hand while this instrument was printing a list**.
+
+🔵 **The correction is not "work the queue".** It is that **the queue's denominator is a frozen
+file**, and until the pinned ledger is re-cut the gate cannot distinguish *never shelved* from
+*shelved after October*. The real queue is **216**, not 28 and not 353, and it is only knowable by
+the shelf-diff this pass ran. Registered as `919-G2`.
+
+🟡 **A second, smaller defect in the same instrument**: it reads prose fractions as repository
+addresses. `22/24` is not an owner and a repo. Fixtures are in
+[`ledger-fraction-artefacts`](../evidence/ledger-fraction-artefacts.2026-11-19-p919.txt), and the fix
+is an `owner/repo` shape guard — the same class as `918-G4`.
+
+### 🟢 `919-F1` — `918-G5` discharged: there are no same-table duplicates. The live class is cross-table, and it is a *cell* defect.
+
+`918-G5` registered the duplicate-row class as never swept for, after `PrairieLearn` was found by
+luck. The sweep is run ([record](../evidence/duplicate-row-sweep.2026-11-19-p919.txt)).
+
+Grouping each table row by its **subject** — the first repository address in the row — and comparing
+only **within the same table**: **786 row-subjects across the five delivery files, and ZERO subjects
+appear twice in one table.** 🟢 The shelf is clean on the shape `918-G5` feared.
+
+🔴 **The real class is one table away.** A naive grouping — every slug *mentioned* anywhere in any row
+of a file — raises 34 hits, and reading them apart is the whole finding:
+
+- **23 in `compose/patterns.md`** are a repository used in several patterns. Expected, correct, not a defect.
+- **Most of the rest are the same repository in two tables with two different field sets** — `moodle/moodle` in a licence table and in a dependency-audit table. Also correct.
+- **One is a mention, not a row**: `repos/foundations.md` L162 is the `OpenJudge` row, which *names*
+  `AI-for-Education/pedagogy-benchmark` in its prose. 🔵 This is `918-G4`'s false-positive class
+  exactly — *this row's subject* versus *something this row talks about* — reproduced in my own
+  instrument before I had finished reading its output.
+
+### 🔴 `919-F2` — and the one true positive is the same repository again, in a new place: the cell disagreed with its own prose
+
+`verticals/solutions.md` carries `PrairieLearn` in two tables. `p899` corrected one; `p918` corrected
+the other. **They now disagree.**
+
+| Row | Licence **cell** as written |
+|---|---|
+| L141 (*Autograding and assessment platforms*) | `AGPL-3.0 Community Edition + proprietary Enterprise Edition. NOT MIT` |
+| L193 (*assessment delivery*) | 🔴 `MIT + AGPL-3.0 conjunction, plus proprietary EE directories` |
+
+Re-read from bytes this pass (`LICENSE@master`, **37,237 B**, `sha256₁₂ 548cbfae567a` — the same
+payload `p918` read). The grant is explicit: *"The PrairieLearn Community Edition (CE) consists of all
+content outside of the above mentioned … directories and is licensed under the GNU Affero General
+Public License"*, while MIT reaches only *"All portions of the software copyright by the University of
+Illinois Board of Trustees and by contributors outside of PrairieLearn, Inc."*
+
+🟡 **Be precise about what was wrong.** L193's *prose* states this correctly — it says the CE is
+AGPL-3.0 and only the Illinois portions are MIT. It is the **licence cell** that reads as a work
+offered under either licence. 🔵 **For this base that distinction is the point: the cell is what the
+compiler types into an entity, and the prose is not.** A reader gets the truth; the pipeline gets
+`MIT`. The cell is rewritten this pass to match the byte-read and the L141 row.
+
+🔴 **And the gate that is supposed to catch exactly this never saw it.** `gate-shelf-consistency` was
+run against the tree **before and after** the fix and reported **the identical four slugs both times**
+— `PrairieLearn` appears in neither list. It compares licence *tokens*, and both cells contained
+`AGPL-3.0`, so a cell reading *"MIT + AGPL-3.0 conjunction"* and a cell reading *"AGPL-3.0 (CE)"*
+register as agreement. 🔵 That re-reads `918-R3`'s conclusion: the gate's *"one true positive worth the
+other four"* was a **different** PrairieLearn defect, found by luck, and this one was always invisible
+to it. Registered as `919-G9`.
+
+**This promotes `918-G5` into something sharper than it was registered as.** The defect to sweep for
+is not *a slug in two rows* — that is usually legitimate — it is **a slug whose licence cells
+disagree across tables**, and the sweep that finds it must compare cells, not rows. Registered as `919-G3`.
+
+### 🟢 `919-F3` — `918-G0`'s phantom "noncommercial" is not phantom, and the diagnosis generalises to 45 addresses
+
+`918-G0` recorded, as this base's loudest red flag, that its own instrument reported a **noncommercial
+restriction on `PrairieLearn` that does not exist**, and that the error ran toward killing a viable
+build. The instrument was keyword-matching, and this pass found what it matched.
+
+The string **is in the file**, at line 274 of the 37,237-byte payload:
+
+> *"c) Convey individual copies of the object code with a copy of the written offer to provide the
+> Corresponding Source. This alternative is allowed only occasionally and **noncommercially**, and
+> only if you received the object code with such an offer, in accord with subsection 6b."*
+
+That is **stock GNU AGPL-3.0 §6(c)**, present verbatim in every GPL-3.0 and AGPL-3.0 payload in
+existence. It is not a restriction on the work; it is a condition on one method of conveying object
+code.
+
+🔴 **So the false positive is not a one-off — it is guaranteed on every copyleft repository this base
+holds.** Against `p909`'s licence census that is **45 addresses**: AGPL-3.0 **26** + GPL-3.0 **16** +
+GPL-2.0 **3**. Any noncommercial scan that greps the payload will flag all 45, including
+`moodle/moodle`, `openedx/openedx-platform`, `instructure/canvas-lms` and `h5p/h5p-php-library` — the
+four platforms most of this base's patterns are built on.
+
+🔵 **The rule this yields** — and it costs nothing to apply: *a noncommercial finding is only a finding
+if the matched string sits **outside** the stock licence text.* Match the payload against the canonical
+GPL/AGPL body first and scan only the residue. `NgodingCik/modul-ajar-generator` above is what a **true**
+positive looks like — `CC BY-NC 4.0`, where the noncommercial term is in the licence's own name.
+Registered as `919-G4`.
+
+### 🔵 `919-F7` — the global discovery leg returned this base's own shelf, and that is the finding
+
+The mandated global legs (`top open source AI agents education 2026 github MIT`, `github trending
+education AI 2026`) returned **`HKUDS/DeepTutor`, `THU-MAIC/OpenMAIC`, `patchy631/ai-engineering-hub`
+and `withmarbleapp/os-taxonomy`** — every one already an anchor row here, with star figures *below*
+this base's own measurements (one aggregator still quoting DeepTutor at 52,783 against today's
+**60,684**).
+
+🟡 **No new permissive education agent surfaced on the English-language global leg this pass.** That is
+the **39th consecutive nil supply leg** at the top of the English-language shelf, and it is the
+clearest argument yet for where the remaining discovery budget belongs: the vernacular and
+institutional legs returned 14 unseen repositories today, the global leg returned zero.
+
+---
+
 ## `2026-11-19` (p918) — **`917-G3` is discharged, and APAC answers exactly as LATAM did: the vernacular estate is real on count and empty at the top of the shelf. 157 unseen repositories across Mandarin, Japanese, Korean and Vietnamese; the best permissive, byte-read education agent in all of them is 36 ★ and 383 days idle. 🔴 This pass's own instrument reported a noncommercial restriction on `PrairieLearn` that does not exist — caught before publication, fixed in the authority.**
 
 🔵 **Summary.** 12 `gh api search/repositories` legs in six languages plus the eight mandated

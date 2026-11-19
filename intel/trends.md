@@ -6,7 +6,7 @@ updated: 2026-11-19
 
 # Current trends — education
 
-**Forty-nine trends, re-counted mechanically in `p917`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **49**; `T48`–`T49` added in `p917`, and the command was run before the word was written, not after). (*prior banner:* **Forty-seven trends, re-counted mechanically in `p916`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **47**; `T44`–`T47` added in `p916`. 🔵 The rule this line has now carried through four passes finally held: `p916` ran the command rather than editing the word.).) (*prior banner:* **Forty-three trends, re-counted mechanically in `p915`** (🔴 **this line read *"Thirty-nine"* and was four short — `T40`–`T42` were added in `p914` and `T43` in `p915`, and `p914` incremented nothing. That is the *third* consecutive recurrence of the drift this very sentence was written to stop, which makes the rule worth restating as a procedure rather than a warning: 🔵 the count is `grep -cE '^## T[0-9]+' intel/trends.md`, it is **43**, and a pass that adds a trend re-runs that command instead of editing the word.*)* (🔴 this line read *"Thirty-one"* and was **eight short**: `T32`–`T38` were added in `p908`–`p912` and `T39` in `p913`. `compose/patterns.md` carries the rule — *a pass that adds one should re-count, not increment* — and this file drifted the same way and further. 🔵 The count is `grep -cE '^## T[0-9]+' intel/trends.md`; **do not hand-edit it.** `T37` is **materially corrected in `p913`** and `T38` has a second chapter added in `p913`.) (**T30 and T31 added in `p907`** — the LMS-to-agent bridge being built per-institution on the *user's own credentials*, which needs no institutional consent; and the agent-skill marketplaces having no education tier at all, which makes `T26`'s distribution channel measurably empty. Both are the first trends in this file derived from **global code search**, an instrument this base had recorded as unusable; **T29 added in `p906`** — vernacular open education supply measured across eight languages and found to be a single-country phenomenon, with *no licence at all* the default state in the other seven; **T26 added in `p903`** — the unit of publication shifting from the
+**Fifty-two trends, re-counted mechanically in `p919`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **52**; `T51`–`T52` added in `p919`, and the command was run after writing them and before writing this number. `T50` was added in `p918` without this banner being re-run, which is the drift this sentence exists to catch — caught one pass later this time.) (*prior banner:* **Forty-nine trends, re-counted mechanically in `p917`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **49**; `T48`–`T49` added in `p917`, and the command was run before the word was written, not after). (*prior banner:* **Forty-seven trends, re-counted mechanically in `p916`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **47**; `T44`–`T47` added in `p916`. 🔵 The rule this line has now carried through four passes finally held: `p916` ran the command rather than editing the word.).) (*prior banner:* **Forty-three trends, re-counted mechanically in `p915`** (🔴 **this line read *"Thirty-nine"* and was four short — `T40`–`T42` were added in `p914` and `T43` in `p915`, and `p914` incremented nothing. That is the *third* consecutive recurrence of the drift this very sentence was written to stop, which makes the rule worth restating as a procedure rather than a warning: 🔵 the count is `grep -cE '^## T[0-9]+' intel/trends.md`, it is **43**, and a pass that adds a trend re-runs that command instead of editing the word.*)* (🔴 this line read *"Thirty-one"* and was **eight short**: `T32`–`T38` were added in `p908`–`p912` and `T39` in `p913`. `compose/patterns.md` carries the rule — *a pass that adds one should re-count, not increment* — and this file drifted the same way and further. 🔵 The count is `grep -cE '^## T[0-9]+' intel/trends.md`; **do not hand-edit it.** `T37` is **materially corrected in `p913`** and `T38` has a second chapter added in `p913`.) (**T30 and T31 added in `p907`** — the LMS-to-agent bridge being built per-institution on the *user's own credentials*, which needs no institutional consent; and the agent-skill marketplaces having no education tier at all, which makes `T26`'s distribution channel measurably empty. Both are the first trends in this file derived from **global code search**, an instrument this base had recorded as unusable; **T29 added in `p906`** — vernacular open education supply measured across eight languages and found to be a single-country phenomenon, with *no licence at all* the default state in the other seven; **T26 added in `p903`** — the unit of publication shifting from the
 application to the agent-addressable curriculum corpus, the first trend in this file derived from a
 non-English repository channel; **T25 added in `p902`** — the licence trap moving from code to the data
 and content assets, where no index can see it; **T24 added in `p901`** — path-dependent licences, the first trend in this file derived from repositories the SPDX channel refused to resolve at all; **T23 added in `p900`** — the first trend in this file derived from a
@@ -65,6 +65,14 @@ competing with these projects, it is the deployment arm they lack.
 
 Regulation (EU) 2026/1744 postponed Annex III high-risk obligations for stand-alone education
 systems from 2 August 2026 to **2 December 2027**.
+
+🟢 **Independently corroborated in `p919`** on a fresh EMEA leg: a second set of sources names
+`Regulation (EU) 2026/1744`, the **2 December 2027** date for stand-alone Annex III education systems,
+transparency duties from **2 August 2026**, and the emotion-recognition ban in force since **2 February
+2025** — and separately confirms that **Article 4 AI-literacy obligations have applied since 2 February
+2025 to every organisation that uses an AI system, schools included**. 🔴 Still secondary sources only:
+`eur-lex.europa.eu`, `data.consilium.europa.eu` and `www.unesco.org` **all fail DNS resolution** from this
+session, re-tested in `p919` — ninth consecutive pass (`919-G1`).
 
 🟡 **Risk flag added in `p915`, and it bears on the words "selling window" in this heading.** One source this pass states that the postponement is **conditional** — that the Commission may bring the date **forward** once the necessary standards and guidance are in place, making 2 December 2027 an **outer limit rather than a guarantee**. 🔴 **Single channel, secondary source, and the search itself flagged it as the only result making the point, so it is recorded here as an unverified risk and not as a fact.** It is written down anyway because this trend is used to *time a commercial pitch*: if the date can move forward, the window is narrower than the rest of this section implies, and that asymmetry favours telling a client early. 🔵 `915-G2` names the primary text to read — Article 1 of Regulation (EU) 2026/1744 on EUR-Lex — and `915-G1` records why this pass could not read it. Transparency duties (Article 50) still apply
 from August 2026, and the emotion-recognition ban in schools has been in force since February
@@ -2136,3 +2144,59 @@ admissions advisor in a category with no open agent anywhere in the world). What
 anything you can take a dependency on. Grade every result with `repos/trending.md` `918-R1` before
 reporting a tier as supply.
 
+
+## T51 — A country's education-agent tier and its language-substrate tier have *opposite* deliverability, and conflating them produces the wrong engagement plan
+
+Measured in `p919` on Thailand ([record](../evidence/apac-id-th-supply.2026-11-19-p919.tsv)).
+
+| Layer | Thailand's best member | `918-R1` |
+|---|---|---|
+| Education **agent** | nothing found, on a reshaped non-English query | 🔴 **empty** |
+| Language **substrate** | `PyThaiNLP/pythainlp` — **1,175 ★**, Apache-2.0 byte-read, pushed 2026-11-13 | 🟢 **PASS** |
+
+Every regional supply verdict this base published before `p919` was a **single grade for a whole
+country**, and all of them were measured at the agent layer. Thailand shows that is too coarse to
+plan from: the same country is *empty* and *deliverable* depending on which layer is asked about,
+and the delivery advice inverts between them.
+
+🔵 **Why the substrate layer is load-bearing rather than incidental.** Thai is written **without
+spaces between words**. A tutor that marks free-text Thai cannot tokenise on whitespace, so the
+segmenter is a precondition for the product existing at all — not a performance optimisation that
+can be deferred. The same argument holds for any language whose orthography does not hand you token
+boundaries: Japanese, Mandarin, Khmer, Lao.
+
+**What it implies for delivery.** *"There is no open Thai tutor"* is true and is the wrong thing to
+tell a client. The right statement is: **there is nothing to fork, and there is a maintained
+permissive stack to build on**, which is a shorter and cheaper project than the first sentence
+suggests. 🔴 Four tiers graded in `p918` — Mandarin, Japanese, Korean, Vietnamese — were measured at
+the agent layer only, so they are **not known to be substrate-empty**; they are unmeasured there
+(`919-G5`).
+
+## T52 — The no-grant default is strongest exactly where the authorship is closest to the classroom
+
+Three cohorts in this base, measured independently, line up by **who wrote the code** rather than by
+region, language or category:
+
+| Cohort | Who writes it | Grant posture |
+|---|---|---|
+| Open grading / assessment tier (`T21`) | universities (CMU, Illinois, TU Munich) | 🟢 permissive, byte-readable, maintained |
+| Vernacular agent tiers (`T29`, `918-F2`) | individuals and small teams | 🟡 mixed; the most-starred members are routinely ungranted |
+| Indonesian teacher tier (`p919`) | **practising schoolteachers**, for their own classrooms | 🔴 **6 of 10 carry no licence file at all**; the most-starred member (115 ★) is ungranted |
+
+The Indonesian cohort is the clearest instance because the authorship is unambiguous — these are
+lesson-module and assessment generators published by teachers under the national `Kurikulum Merdeka`
+programme. 🔴 **The single most-starred education agent found in the country cannot be built on**, not
+because of a restrictive licence but because of no licence.
+
+🟡 **Two failure modes a search index cannot distinguish, and only a byte-read separates:**
+`eldorray/modulajar-ai` **states MIT in its README and has no `LICENSE` file on any probed path** —
+an unbacked claim — while `NgodingCik/modul-ajar-generator` carries a real, readable
+**`CC BY-NC 4.0`**: noncommercial, and a *content* licence applied to a web application. Both show as
+`NULL`/`NOASSERTION` on the search channel, and they are opposite problems.
+
+**What it implies for delivery.** `T23` established that a third of education's permissive supply is
+unaddressable. `T52` says where to expect it and what to do: **the closer a repository is to an actual
+classroom, the less likely it carries a grant** — so practitioner-authored supply is read for
+**requirements and vocabulary**, never taken as a dependency. 🔵 And it is often worth asking: a
+teacher who published a working tool and omitted a licence has usually not refused one. The cheapest
+route to an Indonesian or LATAM asset is frequently an issue, not a fork.

@@ -1,0 +1,164 @@
+# p919 — 918-G5 discharge: duplicate-row sweep over the five delivery files.
+# Method A (naive): group every github.com slug MENTIONED in a table row.
+# Method B (refined): group by the row's SUBJECT (first slug) within the SAME table.
+# Result: Method B finds ZERO same-table duplicates. The live class is CROSS-TABLE.
+
+
+TOTAL same-table duplicate subjects: 0
+
+===== METHOD A RAW HITS (cross-table + mention noise) =====
+
+===== agents/top.md: 184 distinct slugs in table rows, 0 appear in >1 row =====
+
+===== repos/foundations.md: 224 distinct slugs in table rows, 7 appear in >1 row =====
+
+--- ai-for-education/pedagogy-benchmark (2 rows) ---
+  L162: | https://github.com/agentscope-ai/OpenJudge | Apache-2.0 | **Added p894.** Unified LLM/agent evaluation and quality-reward framework, **1,113 ★, pushed 2026-11-18** — permissive and the most actively maintained evaluation substrate in this file. It **judges agents, not learners**, which is exactly why it belongs here and not in `agents/top.md`: it is the harness under `compose/patterns.md` **P7**
+  L347: | https://github.com/AI-for-Education/pedagogy-benchmark | MIT | Pedagogical-ability benchmark. Pairs with the harness above as an education-specific eval gate. |
+
+--- h5p/h5p-php-library (2 rows) ---
+  L278: | https://github.com/h5p/h5p-php-library | GPL-3.0 | H5P interactive content. Ubiquitous across Moodle and Open edX. |
+  L796: | https://github.com/h5p/h5p-php-library | **Runtime** — the H5P core that *plays* content, inside Moodle and Open edX | 🔴 **GPL-3.0** (`master/LICENSE.txt`, 35,146 B, `sha256₁₂ c53a65c2fd56`) | 156 | 2026-11-10 |
+
+--- instructure/canvas-lms (2 rows) ---
+  L77: | https://github.com/instructure/canvas-lms | AGPL-3.0 | Canvas. Dominant in North American higher ed; strong LTI and REST API. |
+  L595: | https://github.com/instructure/canvas-lms | 348 npm (212 + 136) | no lockfile read | 🔴 no | 🔴 no — `COPYRIGHT` is its own AGPL |
+
+--- moodle/moodle (2 rows) ---
+  L76: | https://github.com/moodle/moodle | GPL-3.0 (no root `LICENSE`; verified in `COPYING.txt`) | The world's most-deployed LMS. Huge plugin surface, which is where AI work actually lands. |
+  L589: | https://github.com/moodle/moodle | 65 + 3 direct → **316 resolved** | `composer.lock` | 🟢 yes | 🔴 no |
+
+--- openedx/openedx-platform (2 rows) ---
+  L75: | https://github.com/openedx/openedx-platform | AGPL-3.0 | Open edX LMS & Studio. The reference large-scale MOOC/LMS core — **8,242 ★, pushed 2026-11-17**. 🔴 **Slug corrected in p896**: this is the canonical name and `openedx/edx-platform` is a rename alias. The earlier note in this row said the opposite; it was produced by probing the `main` branch of a repo whose default branch is `master`. Both
+  L588: | https://github.com/openedx/openedx-platform | 311 | **311/311 `==`** | 🟢 **yes — the reference standard** | 🔴 no (`dependabot.yml` only) |
+
+--- openolat/openolat (2 rows) ---
+  L85: | https://github.com/OpenOLAT/OpenOLAT | Apache-2.0 | Swiss-origin LMS. Permissive, enterprise-grade, under-used outside EMEA. |
+  L592: | https://github.com/OpenOLAT/OpenOLAT | 183 `<dependency>` | Maven | 🟡 partial | 🔴 no |
+
+--- sakaiproject/sakai (2 rows) ---
+  L82: | https://github.com/sakaiproject/sakai | ECL-2.0 | Sakai. Higher-ed LMS; ECL-2.0 is Apache-2.0 with an education-oriented patent clause. |
+  L591: | https://github.com/sakaiproject/sakai | 272 `<module>` | Maven | 🟡 partial | 🔴 no |
+
+===== verticals/solutions.md: 110 distinct slugs in table rows, 4 appear in >1 row =====
+
+--- autolab/autolab (2 rows) ---
+  L142: | **Autolab** | https://github.com/autolab/Autolab | Apache-2.0 | CMU's autograding platform with secure job execution | Patent-granting and permissive; pair with `autolab/Tango` (Apache-2.0) when grading must be called from something that is not Autolab |
+  L194: | **Autolab** | https://github.com/autolab/Autolab | Apache-2.0 | CMU autograding platform with secure execution. |
+
+--- jupyterhub/jupyterhub (2 rows) ---
+  L177: | **JupyterHub** | https://github.com/jupyterhub/jupyterhub | BSD-3-Clause | The authenticated, persistent-storage case — institutional deployments with per-student state | Services API and per-user servers; an assistant runs as a Hub service with the student's own scope |
+  L224: | **JupyterHub** | https://github.com/jupyterhub/jupyterhub | BSD-3-Clause | Multi-user computational classrooms. |
+
+--- learningequality/kolibri (2 rows) ---
+  L26: | **Kolibri** | https://github.com/learningequality/kolibri | MIT | Offline/low-bandwidth deployments | Offline-capable; pair with `ollama` for a fully disconnected tutor |
+  L211: | **Kolibri** | https://github.com/learningequality/kolibri | MIT | See LMS table — designed offline-first from the start. |
+
+--- prairielearn/prairielearn (2 rows) ---
+  L141: | **PrairieLearn (CE)** | https://github.com/PrairieLearn/PrairieLearn | 🔴 **AGPL-3.0 Community Edition + proprietary Enterprise Edition. NOT MIT — corrected p899** | Randomised, auto-graded STEM problem generation; the strongest assessment *engine* here. 533 ★, pushed 2026-11-18 | 🔴 **Read the licence note in `repos/foundations.md` before planning anything.** `apps/course-agent/` — the AI tier — 
+  L193: | **PrairieLearn** | https://github.com/PrairieLearn/PrairieLearn | 🔴 **NOT MIT — corrected `p918`. MIT + AGPL-3.0 conjunction, plus proprietary Enterprise Edition directories** (`LICENSE@master`, 37,237 B, `sha256₁₂ 548cbfae567a`, byte-read `p918`) | Randomised auto-graded assessment delivery. **This row read a bare `MIT` for every pass since `p899` corrected the *other* PrairieLearn row in this 
+
+===== compose/patterns.md: 134 distinct slugs in table rows, 23 appear in >1 row =====
+
+--- appsmithorg/appsmith (2 rows) ---
+  L1646: | Teacher console | [`appsmithorg/appsmith`](https://github.com/appsmithorg/appsmith) | 🟢 `Apache-2.0` | Human-in-the-loop queue. The teacher approves or discards every generated signal |
+  L1732: | Teacher console | [`appsmithorg/appsmith`](https://github.com/appsmithorg/appsmith) | 🟢 `Apache-2.0` | The approval queue. Nothing generated reaches a student unreviewed |
+
+--- bncc-dev/bncc-pacotes (2 rows) ---
+  L1511: | **Curriculum grounding (Brazil)** | https://github.com/bncc-dev/bncc-pacotes | 🔴 `NOASSERTION` — **byte-read before use** | BNCC (Brazilian national curriculum) as packages + an MCP server. 10 ★ — thin, verify the grant |
+  L1942: | **Agent tool surface** | https://github.com/dfdb76/bncc-mcp (**MIT**, independent) and/or the MCP worker in https://github.com/bncc-dev/bncc-pacotes; `npx -y @bncc/mcp` runs locally | MIT; 🔴 **`bncc-pacotes` reserves the project name and visual identity** |
+
+--- cahlr/pybkt (5 rows) ---
+  L1427: | **Learner model** | https://github.com/CAHLR/pyBKT | **MIT** (`LICENSE@master`, `sha256₁₂ ad0c7a38bf01`) | UC Berkeley CAHLR. Turns a response history into a per-skill mastery estimate — **the input that makes feedback adaptive rather than generic** |
+  L1574: | Learner model | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) + [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | MIT + MIT | Neural knowledge tracing **with its classical baseline beside it**. Ship both: pyBKT is what you show when the client asks whether the neural model earns its cost |
+  L1644: | Mastery model | [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | 🟢 `MIT` | UC Berkeley CAHLR Bayesian Knowledge Tracing. **Do not invent a comprehension score** — this is the evidence-backed one, and it is the tier a general-purpose campus LLM stack does not provide |
+  L1731: | Mastery model | [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | 🟢 `MIT` | Per-skill mastery from observed responses. UC Berkeley CAHLR |
+  L2959: | Learner model / mastery | https://github.com/CAHLR/pyBKT | MIT | Turns a stream of graded attempts into a mastery estimate rather than a score |
+
+--- cvmcosta/ltijs (2 rows) ---
+  L1296: | Agent tier | `ai-shifu` (Apache-2.0) or `Pyris` (MIT) behind https://github.com/Cvmcosta/ltijs | Apache-2.0 / MIT | Authored teaching flow, model layer kept swappable. |
+  L2831: | Sanctioned install path | https://github.com/Cvmcosta/ltijs | Apache-2.0 | LTI 1.3 / Advantage. One tool registration per platform, four platforms, one tool |
+
+--- docling-project/docling (2 rows) ---
+  L2391: | Curriculum ingestion | https://github.com/docling-project/docling | MIT | 70,766 | Syllabus and textbook PDFs into structured text; **prefer over `opendatalab/MinerU` (83,954 ★), which is `NOASSERTION` and needs a byte-read first** |
+  L2916: | Content ingestion | https://github.com/docling-project/docling · https://github.com/opendatalab/MinerU | permissive | Turn the client's existing DOCX/PDF/slide estate into structured source for the pipeline |
+
+--- edunelsonit/jambora (2 rows) ---
+  L2613: | AI-assisted CBT | [`edunelsonit/Jambora`](https://github.com/edunelsonit/Jambora) | 🟢 Apache-2.0 · 11,357 B · `c71d239df917` |
+  L2690: | CBT delivery reference | https://github.com/Kirchhoff-dev/cbt-app-updates (offline, 30+ subjects) and https://github.com/edunelsonit/Jambora (Apache-2.0) | permissive | `p911`'s Nigerian cluster. Use them as the **conformance corpus** for the schema: a format three independent implementations can already emit is a format a board can adopt. |
+
+--- faixiang/moodle-mcp (2 rows) ---
+  L2200: | Reference implementation — Moodle | https://github.com/Faixiang/Moodle-MCP (read-only) then https://github.com/G36maid/moodle-mcp (read-write) | MIT | Already shelved in `repos/foundations.md`; **these use the institutional Web Service API**, which is the posture this pattern wants |
+  L2829: | Bridge — Moodle, read-only then read-write | https://github.com/Faixiang/Moodle-MCP → https://github.com/G36maid/moodle-mcp | MIT | Institutional Web Service API, which is the posture `P26` requires |
+
+--- g36maid/moodle-mcp (2 rows) ---
+  L2200: | Reference implementation — Moodle | https://github.com/Faixiang/Moodle-MCP (read-only) then https://github.com/G36maid/moodle-mcp (read-write) | MIT | Already shelved in `repos/foundations.md`; **these use the institutional Web Service API**, which is the posture this pattern wants |
+  L2829: | Bridge — Moodle, read-only then read-write | https://github.com/Faixiang/Moodle-MCP → https://github.com/G36maid/moodle-mcp | MIT | Institutional Web Service API, which is the posture `P26` requires |
+
+--- hkuds/deeptutor (2 rows) ---
+  L2388: | Tutor core | https://github.com/HKUDS/DeepTutor | Apache-2.0 | 60,504 | Agentic tutoring grounded in the student's *own* material with persistent learning history — the only education-native repo at this scale with a patent grant |
+  L3227: | Tutor / classroom agent | https://github.com/HKUDS/DeepTutor | **Apache-2.0** | 60,675 ★, pushed 2026-11-18. 🔵 **Already APAC-origin (HKU)** — this is not a Western import, which matters in the room |
+
+--- hkuds/lightrag (2 rows) ---
+  L1844: | Prerequisite structure | https://github.com/HKUDS/LightRAG | MIT | A curriculum *is* a prerequisite graph; `SKILL.md`'s chapter tree is the edge list. Use it so a stuck learner is routed backwards to the missing prerequisite, not re-shown the same unit |
+  L2389: | Retrieval | https://github.com/HKUDS/LightRAG | MIT | 40,763 | Same lab as the tutor core, so the idioms match; avoids an integration seam |
+
+--- jcputney/scorm-again (2 rows) ---
+  L1577: | Legacy delivery | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | MIT | Ships the result into the client's existing LMS **without re-authoring**, because their content is already SCORM |
+  L2915: | SCORM runtime for playback | https://github.com/jcputney/scorm-again | permissive (in `repos/foundations.md`) | Plays the package in whatever LMS is already in the estate; no LMS fork needed |
+
+--- jupyter/nbgrader (2 rows) ---
+  L1424: | **Notebook grading** | https://github.com/jupyter/nbgrader | BSD-3-Clause | For data-science courses; already shelved. Use instead of Submitty when the course is notebook-native |
+  L1726: | Assignment flow | [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | 🟢 `BSD-3-Clause` | `1,370★`. Release / collect / autograde / feedback. The course standard |
+
+--- kirchhoff-dev/cbt-app-updates (2 rows) ---
+  L2611: | CBT delivery (practice tier) | [`Kirchhoff-dev/cbt-app-updates`](https://github.com/Kirchhoff-dev/cbt-app-updates) — **offline** JAMB/WAEC/Post-UTME simulator, 30+ subjects | 🟢 MIT · 1,071 B · `9f194f984482` |
+  L2690: | CBT delivery reference | https://github.com/Kirchhoff-dev/cbt-app-updates (offline, 30+ subjects) and https://github.com/edunelsonit/Jambora (Apache-2.0) | permissive | `p911`'s Nigerian cluster. Use them as the **conformance corpus** for the schema: a format three independent implementations can already emit is a format a board can adopt. |
+
+--- langchain-ai/langgraph (3 rows) ---
+  L1428: | **Agent orchestration** | https://github.com/langchain-ai/langgraph | MIT | Policy checks become explicit, auditable graph nodes |
+  L1845: | Agent tier | https://github.com/langchain-ai/langgraph or https://github.com/pydantic/pydantic-ai | MIT | Explicit nodes per teaching move — explain, worked example, graded probe, distractor explanation — mirroring what `patterns.md` already encodes per subject |
+  L2835: | Agent runtime | https://github.com/langchain-ai/langgraph or https://github.com/crewAIInc/crewAI | MIT | Not the differentiator. Pick for the team's familiarity |
+
+--- learningequality/kolibri (3 rows) ---
+  L1513: | **Offline fallback** | https://github.com/learningequality/kolibri | MIT | For the schools where even WhatsApp is intermittent |
+  L1849: | Delivery, offline | https://github.com/learningequality/kolibri (MIT) or https://github.com/Crosstalk-Solutions/project-nomad (Apache-2.0) | MIT / Apache-2.0 | Where connectivity is the binding constraint, ship the corpus to the device and keep the agent tier optional |
+  L2694: | Offline / low-connectivity | https://github.com/learningequality/kolibri (**MIT**) and https://github.com/iiab/iiab (🔴 **GPL-2.0**) | mixed — read before bundling | Non-negotiable for WAEC, KNEC and NEAEA catchments; `ElnatanAnbelu/ethioexam` is the market's own worked example of the same constraint. 🔴 **The two grants differ and the table says so deliberately**: Kolibri is MIT, Internet-in-a-Bo
+
+--- ollama/ollama (3 rows) ---
+  L1509: | **Local/sovereign inference** | https://github.com/ollama/ollama *or* vLLM | MIT / Apache-2.0 | Keeps teacher messages in-country where a ministry requires it |
+  L1846: | Model serving | https://github.com/ollama/ollama (on-prem) or https://github.com/vllm-project/vllm (campus scale) | MIT / Apache-2.0 | Ministry work is data-residency work. Keep inference inside the client's boundary |
+  L2394: | Inference (edge) | https://github.com/ollama/ollama | MIT | 187,555 | School-premises fallback where connectivity or data residency forbids the server tier |
+
+--- openedx/codejail (2 rows) ---
+  L1426: | **Sandboxed execution** | https://github.com/openedx/codejail *or* https://github.com/ls1intum/Ares | Apache-2.0 / MIT | **Never let an agent execute student code outside one of these** |
+  L1729: | Sandboxing | [`openedx/codejail`](https://github.com/openedx/codejail) | 🟢 `Apache-2.0` | **Before any agent or grader executes student code.** Non-negotiable |
+
+--- stevenacoffman/roster (2 rows) ---
+  L2202: | Rostering / identity of record | https://github.com/StevenACoffman/roster | **MIT** (byte-read `p907`) | **OneRoster v1.2**, and its authorization is enforced **in the database**, so a caller scoped to one school cannot read another's rows. This is the multi-tenant isolation the sanctioned version must build and the user-credential version gets for free |
+  L2832: | Identity of record across vendors | https://github.com/StevenACoffman/roster | **MIT** | **OneRoster v1.2** with authorization enforced *in the database*. 🔴 **Non-optional here** — a multi-vendor tier is multi-tenant by construction, and application-layer scoping will leak one faculty's rows into another's |
+
+--- submitty/submitty (2 rows) ---
+  L1423: | **Grading platform** | https://github.com/Submitty/Submitty | **BSD-3-Clause** (`LICENSE.md@main`, `sha256₁₂ c123708cb4ef`) | 807 ★, RPI/RCOS, 12 years old, pushed 2026-11-18. Submission + autograding + **TA/manual grading with rubrics** in one system. **No copyleft, no patent clause, no enterprise carve-out — the derivative can be closed.** |
+  L2958: | Deterministic grading where it is possible | https://github.com/ucbds-infra/otter-grader · https://github.com/Submitty/Submitty (BSD-3) | permissive | Anything auto-gradable should never reach a model; reserve the model for prose |
+
+--- ucbds-infra/otter-grader (3 rows) ---
+  L1425: | **Platform-free autograding** | https://github.com/ucbds-infra/otter-grader | BSD-3-Clause | Python **and R**, grades locally or in a container. Use when the client will not adopt a platform |
+  L1728: | Language-agnostic autograding | [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) | 🟢 `BSD-3-Clause` | Add when the course is **R as well as Python**, or when submissions arrive via Canvas/Gradescope |
+  L2958: | Deterministic grading where it is possible | https://github.com/ucbds-infra/otter-grader · https://github.com/Submitty/Submitty (BSD-3) | permissive | Anything auto-gradable should never reach a model; reserve the model for prose |
+
+--- ucfopen/canvasapi (2 rows) ---
+  L1578: | Platform seam (optional) | [`ucfopen/canvasapi`](https://github.com/ucfopen/canvasapi) | MIT | Talks to AGPL-3.0 Canvas **over its API**, so the platform's licence does not reach your code |
+  L2201: | Reference implementation — Canvas | https://github.com/ucfopen/canvasapi | MIT | University of Central Florida's Python wrapper — a permissive seam onto an AGPL-3.0 platform |
+
+--- vllm-project/vllm (2 rows) ---
+  L1846: | Model serving | https://github.com/ollama/ollama (on-prem) or https://github.com/vllm-project/vllm (campus scale) | MIT / Apache-2.0 | Ministry work is data-residency work. Keep inference inside the client's boundary |
+  L2393: | Inference (server) | https://github.com/vllm-project/vllm | Apache-2.0 | 97,185 | Sovereign/in-country serving, which `T6` records as a procurement requirement rather than a preference |
+
+--- yetanalytics/lrsql (4 rows) ---
+  L1297: | Analytics | https://github.com/davidpesce/moodle-logstore_xapi (**GPL-3.0**, in-platform plugin) → https://github.com/yetanalytics/lrsql (**Apache-2.0**) · https://github.com/openedx/openedx-aspects (**Apache-2.0**) | mixed | The plugin lives inside the copyleft platform where copyleft is expected; the LRS and your analysis stay permissive. |
+  L1576: | Evidence out | [`adlnet/xapi-spec`](https://github.com/adlnet/xapi-spec) + [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | Apache-2.0 + Apache-2.0 | The normative spec to validate against, and a SQL-backed LRS to write to |
+  L2204: | Audit / evidence | https://github.com/yetanalytics/lrsql | Apache-2.0 | xAPI statement per agent action: the record that distinguishes a sanctioned bridge from a scraper |
+  L2836: | Audit / efficacy | https://github.com/yetanalytics/lrsql | Apache-2.0 | One xAPI statement per tool call, across all vendors — the only place the board sees one number |
+
+===== intel/market.md: 0 distinct slugs in table rows, 0 appear in >1 row =====
