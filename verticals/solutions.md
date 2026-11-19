@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-18
+updated: 2026-11-19
 ---
 
 # Vertical solutions — education
@@ -34,6 +34,29 @@ engagement usually touches at least two.
 | **Pupilfirst** | https://github.com/pupilfirst/pupilfirst | **MIT** — multi-grant, byte-read p899 (`LICENSE@master`, 1,684 B, `sha256₁₂ bda0aa6d49f2`) | Cohort-based, asynchronous programmes with review workflows and mentoring built in | 🔴 **Added p899, and it displaces a standing claim in this file.** This KB records **Mentingo (109 ★) as its counter-example to "the platforms clients run are copyleft"** — the first MIT LMS. **Pupilfirst is MIT and 982 ★, nine times larger.** Multi-grant: `docs/` is **CC-BY-SA-4.0**, client-side JavaScript is MIT, everything else MIT — so unlike PrairieLearn's superficially similar structure there is **no proprietary tier**, and unlike Open edX the client JS is not AGPL. 🟡 **Caveat that decides how to use it: last push 2025-12-09, ~11 months idle.** Read it as a permissive, complete, forkable codebase rather than an upstream to track. From **Pupilfirst Pvt. Ltd., India** — the only APAC-origin LMS in this table. |
 | **Tutor** | https://github.com/overhangio/tutor | AGPL-3.0 | The de facto Open edX deployment/ops tool | Plugin system for injecting services into an Open edX cluster |
 | **SmartKBS** | https://github.com/youufis/SmartKBS | **AGPL-3.0** (byte-read `master/LICENSE`, 34,833 B, `sha256₁₂ c017a2e33418`) | **Chinese K-12 — primary, junior and senior secondary.** Added `p906`, and it is the first Chinese-origin platform in this file. A general-subject **AI teaching platform** rather than an LMS with AI bolted on: item bank with intelligent paper composition, examinations, practice, homework with **automatic marking**, live classroom interaction (buzz-in, random questioning, polling, group discussion, collaborative whiteboard), roll-call and attendance, a 12-level title/points scheme, learning analytics and per-student growth records. Self-describes its worked examples as information technology and general technology subjects. **99 ★, pushed 2026-11-18** — actively developed. | 🔵 **It is the seam, which is the point:** the classroom-interaction and attendance tiers are the two things Moodle, Open edX and Canvas all push to third-party plugins, and here they are first-party next to the grading tier. 🔴 **AGPL-3.0 — a closed, branded derivative is not available**, so this is a deploy-and-extend or reference-architecture option, not a white-label one; Mentingo remains the only MIT platform in this file. 🟡 Single-maintainer, created 2026-05-26: treat continuity as a risk and read the 34,833 B licence as a filled-in appendix, not a modified grant. |
+
+🔴 **Added `p907`, and it is an absence rather than a platform.** The table above covers Moodle,
+Open edX, Canvas and the permissive cores — and **`D2L Brightspace` and `Blackboard`, two of the
+four LMS platforms a higher-ed client is likely to already be running, had no row anywhere in this
+KB's delivery files before this pass.** Neither is open source, which is why they never appeared on
+an open-source shelf; but a vertical-solutions file exists to describe **what a client is already
+running**, and on that test the omission was wrong.
+
+What `p907` found, via global code search:
+
+| Platform | Open source? | The seam that exists today | Licence |
+|---|---|---|---|
+| **D2L Brightspace** | 🔴 No — commercial | https://github.com/GuanmingQiao/POLITEMALL-MCP — MCP server over two Singapore polytechnic/ITE tenants (`lms.polite.edu.sg`, `nyplms.polite.edu.sg`), npm `@qiaoguanming/politemall-mcp` | **MIT** (byte-read) |
+| **Blackboard (Ultra)** | 🔴 No — commercial | https://github.com/andrsnrua/universidad-pacifico-mcp — Universidad del Pacífico, Perú; **70 tools**, local document extraction, private exports | **ISC** (byte-read) |
+| **Blackboard (classic)** | 🔴 No — commercial | https://github.com/bolgerru/blackboard-mcp — Trinity College Dublin, deadline tracker. 🔴 **No licence file: read only, do not copy** | 🔴 none |
+| **PowerSchool** (SIS, parent-facing) | 🔴 No — commercial | https://github.com/cculb/schoolconnect — parent-portal extraction to SQLite + MCP server | **MIT** (byte-read) |
+
+🔵 **The seam for a commercial LMS is the agent bridge, not a plugin** — and the published examples
+reach the platform **as the signed-in person**, which needs no procurement and is also why they are
+not deployable as-is. `compose/patterns.md` **P26** scopes the sanctioned build;
+`intel/trends.md` **T30** has the cohort and the governance argument. 🟡 These are 0–2 ★ projects:
+reference implementations for a tool surface, not systems to deploy.
+
 
 **Added p893 — the copyleft rule now has a real exception.** Every other LMS in the table above
 is GPL, AGPL or ECL. **Mentingo (109 ★, pushed 2026-11-18) is MIT**, licence byte-read, and it

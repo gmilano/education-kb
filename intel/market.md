@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-18
+updated: 2026-11-19
 ---
 
 # Market intelligence — education
@@ -405,6 +405,35 @@ April 2026 K-12 guidance and the Office of Educational Technology's March 2026 f
 graded work; and the North Carolina **Khanmigo** earmark. 🔵 No supply-side finding: the Mandarin
 cohort this pass shelved is APAC-origin, and no North-America-origin repository surfaced that the
 tree did not hold.
+
+
+#### Added `p907` — three facts this file was missing on its largest region
+
+- **Federal: a named bill, and what it would actually fund.** Rep. **Suzanne Bonamici** planned to
+  introduce legislation mandating **AI risk assessment** and creating grants for **training,
+  credentialing, research on AI's impact on education, and equitable AI access**. Separately a House
+  committee **advanced the `K-12 AI Literacy and Readiness Act of 2026`**, and the White House has
+  urged Congress to set a unified federal approach that would **preempt much of what the states have
+  built**. 🔵 **The preemption threat is the commercially material part**: a 50-state configurable
+  compliance product (`compose/patterns.md` **P3**) is valuable precisely because state divergence
+  persists — federal preemption is the risk that would devalue it, and it is now on the record as an
+  administration objective.
+- **States: a public university system is about to be required to have a policy at all.** Florida's
+  **Board of Governors** is weighing a rule requiring **all public colleges** to adopt policies
+  covering staff and student AI use; **only two have adopted formal policy, one of them the
+  University of Florida**. 🔵 This is the sharpest available datum on the *governance* gap in US
+  higher ed: not that institutions have weak AI policies, but that in a large state system almost
+  none have one, with a mandate arriving. That is a near-term, repeatable engagement — the same
+  deliverable sold to dozens of institutions in one jurisdiction on one deadline.
+- **Vendor footprint: the anchor deals are systemwide.** The **California State University** system's
+  **ChatGPT Edu** rollout reached **460,000+ students and 63,000+ faculty and staff**, and
+  **Northeastern joined Anthropic's "Claude for Higher Education"** initiative. 🔵 Read against
+  Ellucian's 49 to 66 per cent jump in institution-wide adoption and the Inside Higher Ed finding
+  that **52 per cent of presidents believe the sector is not prepared**, the picture is **procured
+  first, governed second** — which is the condition `P5` was written for, and it is not only a LATAM
+  condition.
+
+🟡 **Evidence grade: search-snippet with the source named, not primary text.** Every non-GitHub host is refused at this session's egress proxy (`403` on `unesco.org`, `eur-lex.europa.eu` and `oecd.org`, all re-probed `p907`). Confirm against the primary instrument before a client deck.
 
 ### EMEA
 
@@ -1036,6 +1065,24 @@ a fact. 🟡 The snippets again carried **no EMEA adoption statistics and no nam
 vendors**, and **Africa coverage was again thin** — consistent with the dedicated Africa and Middle
 East legs in `p891`/`p900`, and still the reason the market-share gap below stays open.
 
+
+#### Added `p907` — the regional leg that was missing from this file
+
+- **The `PIO Education Model` (Catalonia) — a per-system self-assessment instrument, not a policy
+  template.** Reported as *"applicable to any AI system in use or under consideration in the
+  school"*, i.e. it is run **per tool**, which is the granularity the AI Act's deployer duties
+  actually demand. 🔵 **Why it matters commercially:** `T11` and `P4` both assume an institution
+  needs a conformity *process* built for it; Catalonia has published one. For an EMEA engagement
+  this is a free, regionally credible starting artefact — and a competitor if a studio proposes to
+  build the same thing from scratch. *(single source)*
+- **Sweden's school leaders' union has stated that schools are already running AI systems that are
+  high-risk under the AI Act**, naming **grade-recommendation tools**. 🔵 This is the clearest
+  public statement by a *deployer-side* body that the December 2027 obligation already has live
+  inventory behind it — useful in discovery, because it reframes AI Act work from future compliance
+  to existing exposure. *(single source)*
+
+🟡 **Evidence grade: search-snippet with the source named, not primary text.** Every non-GitHub host is refused at this session's egress proxy (`403` on `unesco.org`, `eur-lex.europa.eu` and `oecd.org`, all re-probed `p907`). Confirm against the primary instrument before a client deck.
+
 ### APAC
 
 🟢 **Promoted in `p902` — two convening facts, plus the region's one dataset-scale supply row**
@@ -1530,6 +1577,24 @@ exam-delivery substrate to adopt, with the standing caveat that **three of the t
 and one is Mulan PSL v2**, so the closed-derivative question has to be asked per repository rather
 than per cohort.
 
+
+#### Added `p907` — Japan's instruments, and the education app this file had no row for
+
+- **Japan is the region's clearest promotion-first regime, and it now has a second-phase plan.**
+  The **AI Promotion Act** (2025) is a promotion statute rather than a prohibition regime, and the
+  Cabinet adopted a **second-phase AI Basic Plan in July 2026**. 🔵 For delivery this is the
+  opposite posture to the EU's: the binding constraint in Japan is **copyright**, which sources
+  describe as the live point of contention, not high-risk classification. A Japanese engagement
+  should put rights-clearance of training and retrieval corpora where an EMEA engagement puts
+  conformity assessment. *(two sources on the Act; the Basic Plan phase is single source)*
+- **ByteDance's `Gauth` became one of the top education apps in the United States.** 🔵 The concrete
+  instance of a pattern this file argues elsewhere: **APAC edtech capital is now exported into North
+  American consumer demand**, so the competitive set for a US K-12 or test-prep engagement includes
+  an APAC-origin free app, not only US incumbents. 🟡 "Top education app" is an app-store ranking
+  claim with no date or store named in the source — directional only. *(single source)*
+
+🟡 **Evidence grade: search-snippet with the source named, not primary text.** Every non-GitHub host is refused at this session's egress proxy (`403` on `unesco.org`, `eur-lex.europa.eu` and `oecd.org`, all re-probed `p907`). Confirm against the primary instrument before a client deck.
+
 ### LATAM
 
 🟢 **Promoted in `p902` — two facts held only in the log** (method: `902-F1`):
@@ -1890,6 +1955,30 @@ Santiago with its full partner list. 🔵 **Supply side unchanged from `p904`:**
 discovery budget went to the eight APAC language channels, so the Spanish/Portuguese ceiling
 `p904` measured still stands, and **Mexico remains the largest supply-side hole in this KB.**
 
+
+#### Added `p907` — Mexico's instrument named, and the regional observatory
+
+- **Mexico: the `Federal Law Regulating Artificial Intelligence` is the named instrument, and it is
+  still under Senate discussion.** Sources conflict on status — one holds that *enacted 2026
+  amendments already create the first binding obligations with direct compliance implications*,
+  another that *multiple AI bills have been introduced and none enacted as of early 2026*, a third
+  that the Federal Law *remains under Senate discussion with passage expected in 2026*. 🔴 **The
+  conflict is recorded rather than averaged.** A separate criminal-law reform on AI deepfakes is
+  pending Senate approval. Mexico's renewed data-protection law adds a **right to object to
+  automated decisions**, which is the operative obligation a school-facing deployment meets today.
+  🔵 **Mexico remains this file's largest LATAM gap on both axes** — `p904` found no Mexico-origin
+  education repository in 26 queries and no `EXANI` tooling above 0 stars, and the statute that
+  would govern a deployment there is not yet law.
+- **Brazil: pending `PL 2338`, the operative supervisory body is the `ANPD`** and the operative
+  instrument is the **LGPD**, which already recognises a right to request review of automated
+  decisions. 🔵 This is the practical answer to "what do we comply with now" for a Brazilian
+  engagement, and it is a *data-protection* answer, not an AI-Act-shaped one.
+- **UNESCO has launched an observatory of AI in education for Latin America and the Caribbean.**
+  🔵 A regional, institutionally credible reference point a studio can cite in public-sector
+  procurement — and the only pan-LATAM education-specific AI body this file has identified.
+
+🟡 **Evidence grade: search-snippet with the source named, not primary text.** Every non-GitHub host is refused at this session's egress proxy (`403` on `unesco.org`, `eur-lex.europa.eu` and `oecd.org`, all re-probed `p907`). Confirm against the primary instrument before a client deck.
+
 ### Global
 
 Cross-regional plays that do not depend on one jurisdiction.
@@ -1952,6 +2041,13 @@ Cross-regional plays that do not depend on one jurisdiction.
   disclosures, against 316 resolved packages in Moodle and 355 in Gibbon. 🔵 This converts a
   compliance anxiety into a **scoped, billable first-week deliverable** — the dependency-grant scan —
   and `scancode-toolkit` (Apache-2.0) is the instrument. See `repos/foundations.md`.
+
+
+#### `p907` note
+
+*(`p907` added regional facts to `### North America`, `### EMEA`, `### APAC` and `### LATAM` above.
+No Global-scope fact was added this pass: of 31 facts scored from the eight mandated search legs,
+the 10 absent from the delivery surface were all regional. See `agents/trending.md` `907-F8`.)*
 
 ## Declared gaps
 

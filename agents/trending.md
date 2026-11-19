@@ -1,8 +1,307 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-18
+updated: 2026-11-19
 ---
+
+## `2026-11-18` (p907) — **the instrument this base shelved is live. Global `search/code` is served in this session, and it reaches a tier repo search structurally cannot see: production-grade education *interop* engineering sitting at 0–2 ★ because its descriptions never say "AI" or "education" — its code says OneRoster, QTI 1.2 and D2L. Two declared gaps are refuted, including Peru.**
+
+**Channel.** GitHub **global code search** (`gh api -X GET search/code`), 18 queries in two batches,
+one of them a deliberate control. This is the channel a standing instrument note in this log closed with *"`search/code`
+returns `200` but `total_count: 0` for every query tried — unauthenticated code search is answered, not
+served. **Do not build a pass on it.**"* That note is **wrong in this session** and `907-F1` records why. (The note sits in the
+`stars are measurable after all` section, which carries a date but **no pass id**, so it is cited by
+its text rather than by a pass number.)
+Network posture otherwise unchanged from `p906`: `raw.githubusercontent.com` `200`,
+`gh api search/*` live, `github.com` HTML `403` **for every address including ones that do not exist**
+(`907-F2`), every non-GitHub host refused at the egress proxy.
+
+🔵 **Dateline, stated rather than collapsed.** The discovery and licence work below was measured
+**2026-11-18**; the pass crossed midnight and the star sweep (`907-F9`) and the files' frontmatter
+carry **2026-11-19**. Records:
+[`codesearch-ceiling.2026-11-18-p907.tsv`](../evidence/codesearch-ceiling.2026-11-18-p907.tsv) (all
+18 queries and their `total_count`),
+[`codesearch-novel-measured.2026-11-18-p907.tsv`](../evidence/codesearch-novel-measured.2026-11-18-p907.tsv)
+(all 392 novel repositories measured, so the poisoning in `907-F3` is auditable rather than
+asserted),
+[`licence-bytes.2026-11-18-p907.tsv`](../evidence/licence-bytes.2026-11-18-p907.tsv) (every licence
+byte-read, with file, payload size and the recognised grant text),
+[`star-sweep.2026-11-19-p907.tsv`](../evidence/star-sweep.2026-11-19-p907.tsv).
+
+### 🔴 `907-F1` Instrument correction: global code search **is** served here, and the standing "do not build a pass on it" note should not be relied on again without a re-probe
+
+Measured first, before any discovery query was written:
+
+| Query | `total_count` |
+|---|---|
+| `lti_1p3 tutor` | **101** |
+| `bkt knowledge tracing language:python` | **1,928** |
+| `"caliper" analytics education` | **6,520** |
+| `repo:moodle/moodle aiprovider` (repo-scoped control) | **236** |
+
+🔵 **The mechanism, stated because it explains the contradiction rather than hiding it.** `gh auth
+status` in this session reports *"The token in GH_TOKEN is invalid"* — and `search/code` answers
+anyway. Credentials are injected by the session's egress proxy, not by the token `gh` can see. So
+the base's earlier `total_count: 0` reading was almost certainly a **genuine measurement of a
+different session's posture**, not a permanent property of the API. 🟡 **The lesson is about method,
+not about this one note: an instrument verdict recorded as permanent ("do not build a pass on it")
+outlived the condition that produced it.** Instrument notes in this base should carry
+the posture they were measured under, and be re-probed, not inherited.
+
+### 🔴 `907-F2` `curl -sI https://github.com/OWNER/REPO` is **not an existence test in this environment**, and this pass proves it with controls
+
+The quality bar this base runs under asks for every URL to be verified with `curl -sI`. Run here, it
+returns **`403` for all 21 addresses this pass verified — and `403` for three addresses that
+certainly do not exist**:
+
+| Address | `curl -sI` github.com | `raw` README |
+|---|---|---|
+| `swl10/pyslet` (real, 76 ★) | `403` | **`200`** (`README.rst`) |
+| `StevenACoffman/roster` (real, 0 ★) | `403` | **`200`** |
+| `gmilano/this-repo-does-not-exist-p907` | `403` | — |
+| `zzzz-nonexistent-owner-p907/zzzz` | `403` | — |
+| `nonexistent/nonexistent` | `403` | **`404`** |
+
+🔵 **So `curl -sI` on `github.com` has a 100% false-pass rate here and must not be used as the
+verification channel.** `raw.githubusercontent.com` discriminates (`200` real / `404` absent) and is
+what every row below was verified on, alongside the `search/repositories` measurement. **Both
+controls were run this pass**, and are recorded so the next pass does not re-derive them.
+
+### 🔴 `907-F3` The channel is **poisoned by security fuzzing wordlists**, and this is the code-search analogue of `724-S`'s poisoned `tutor` keyword
+
+Batch 2 was written as a control: nine queries on education *standard tokens* (`imsqti`, `pyBKT`,
+`common cartridge`, `fsrs`, `qti`, `xapi`, `oneroster`). Its 212 novel repositories' high-star tail is
+**almost entirely non-education**:
+
+| Repo | ★ | What it actually is |
+|---|---|---|
+| `James-Yu/LaTeX-Workshop` | 12,416 | VS Code LaTeX extension |
+| `xonsh/xonsh` | 9,704 | Python shell |
+| `TheKingOfDuck/fuzzDicts` | 8,448 | 🔴 **web fuzzing wordlist** |
+| `six2dez/OneListForAll` | 3,298 | 🔴 **web fuzzing wordlist** |
+| `gh0stkey/Web-Fuzzing-Box` | 2,811 | 🔴 **web fuzzing wordlist** |
+| `insightglacier/Dictionary-Of-Pentesting` | 2,090 | 🔴 **pentest dictionary** |
+| `evilc0deooo/PentesterSpecialDict` | 1,922 | 🔴 **pentest dictionary** |
+| `neomutt/neomutt` | 3,865 | mail client |
+
+🔵 **Why.** A fuzzing wordlist contains `moodle`, `canvas`, `qti`, `xapi` and `scorm` as **dictionary
+entries** — one token per line, tens of thousands of lines. Code search indexes file *contents*, so
+every education standard token matches every wordlist in existence, and wordlists are popular. The
+same mechanism makes `awesome-*` catalogues and agent-skill megacollections rank: they carry the
+vocabulary as data, not as implementation. **Any future code-search pass on this base must exclude
+the wordlist and catalogue classes before reading the ranking**, or it will mistake a pentest
+dictionary for education supply.
+
+### 🟢 `907-F4` What the channel is genuinely for: the **per-institution, user-credential LMS bridge** — a cluster of seven, all created in the last eight months, none above 4 ★
+
+This is the find of the pass, and no repo-search query in 906 passes reached it, because **these
+repositories do not describe themselves as AI or as education**. Verified: licence byte-read where one
+exists, stars and `pushed_at` from `search/repositories`, existence from `raw` README `200`.
+
+| Repo | ★ | Licence (byte-read) | Pushed | Institution / system | Region |
+|---|---|---|---|---|---|
+| https://github.com/GuanmingQiao/POLITEMALL-MCP | 2 | **MIT** (1,070 B) | 2026-11-15 | **POLITEMall + NYP** — Singapore polytechnic/ITE **D2L Brightspace** tenants | **APAC** |
+| https://github.com/andrsnrua/universidad-pacifico-mcp | 1 | **ISC** (748 B) | 2026-10-06 | **Universidad del Pacífico, Perú** Aula Virtual (Blackboard Ultra), **70 tools / 5 prompts** | **LATAM** |
+| https://github.com/cculb/schoolconnect | 4 | **MIT** (1,071 B) | 2025-12-28 | **PowerSchool Parent Portal** — the *guardian* persona, not the student | **North America** |
+| https://github.com/bolgerru/blackboard-mcp | 0 | 🔴 **none** | 2026-10-15 | **Trinity College Dublin** Blackboard, deadline tracker | **EMEA** |
+| https://github.com/chenshi5858/CanvasGPTAssistant | 0 | 🔴 **none** | 2026-09-09 | Canvas LMS | — |
+| https://github.com/PaoloJN/lms-data-bridge | 1 | 🔴 **none** | 2026-04-03 | "any LMS" via Chrome extension + MCP server | — |
+| https://github.com/MikeTheGreat/MarkdownToCanvasLMS | 0 | 🔴 **none** | 2026-11-10 | Canvas authoring | — |
+
+🔵 **The architectural signature, which is the part worth carrying into delivery.** POLITEMALL-MCP's
+README states it: it *"talks directly to each tenant's own REST API **as the signed-in person — no
+institutional API key or app registration involved**."* The Peru server says the same in Spanish
+(*"Usa el acceso y los permisos de tu propia cuenta"*) and adds *"proyecto comunitario **no
+oficial**"*. **This is a different integration route from `T13`'s community-plugin pattern: it needs
+no institutional consent, no procurement and no vendor partnership, because it borrows the user's own
+session.** That is why it is proliferating per-tenant, and it is also why four of the seven carry **no
+licence at all** — they are built by students for their own institution, not published as supply.
+
+🟡 **Read the governance risk before reusing any of this.** A bridge that acts as the signed-in
+person is, from the institution's point of view, indistinguishable from credential sharing, and three
+of these explicitly disclaim official status. The *pattern* is adoptable; these *instances* mostly are
+not. `compose/patterns.md` **P26** scopes it as a sanctioned build.
+
+### 🔴 `907-F5` A declared gap is refuted: **Peru**
+
+`p904` recorded, under *"What `p904` did not find"*: **"No Argentine, Peruvian or Central American
+origin repository in any query."** `andrsnrua/universidad-pacifico-mcp` is **Peru-origin**
+(`aulavirtual.up.edu.pe`, Universidad del Pacífico, Lima), **ISC-licensed, byte-read**, 70 tools,
+pushed 2026-10-06. 🔵 **It was invisible to `p904` not because the Spanish channel is flat — `p904`
+measured that correctly — but because this repository's description is a Spanish *infrastructure*
+description that never uses the words `p904` searched for.** The gap was an artefact of the channel,
+and the channel was the thing `p904` could not vary. Argentina and Central America **remain
+unrefuted**.
+
+### 🟢 `907-F6` Three licence findings, and one is a **new failure class** that runs *against* the studio's interest
+
+**(1) `swl10/pyslet` — the API cannot classify a textbook-standard BSD-3-Clause.** 76 ★, the
+highest-star education-native repository this channel reached. `search/repositories` reports
+**`NOASSERTION`**. `LICENSE.txt` byte-read (2,906 B) is **verbatim BSD-3-Clause** — three numbered
+conditions, the *"Neither the name of the copyright holder nor the names of its contributors may be
+used to endorse"* clause, copyright *"2017 Steve Lay"*. **It is permissive and the index says
+unknown.** 🟡 It is also **dead: last push 2020-03-31**, last PyPI release `pyslet-0.7.20170805`.
+
+**(2) `LJKelly3141/coursepack` — a `LICENSE` file that contains *metadata but no grant*, and the API
+reads that one.** Root `LICENSE` is **41 bytes**, in full:
+
+```
+YEAR: 2026
+COPYRIGHT HOLDER: Logan Kelly
+```
+
+That is the unfilled `usethis::use_mit_license()` R template stub. The **actual grant is in
+`LICENSE.md` (1,070 B, full MIT text)**. The API reports `NOASSERTION`; the repository is **MIT**.
+🔵 **This is the mirror image of `p899`'s PrairieLearn correction, and the more dangerous direction to
+have a rule about.** PrairieLearn was published here as permissive and was not; coursepack is
+published by the index as unknown and **is** permissive. A pipeline that drops `NOASSERTION` rows
+silently discards usable permissive supply. **Gate rule: when SPDX is `NOASSERTION`, read both
+`LICENSE` *and* `LICENSE.md` before concluding anything** — added to `compose/patterns.md` **G1** as
+axis `907-G1`.
+
+**(3) `dmccreary/intelligent-textbooks` — 38 ★, and the grant is `CC BY-NC-SA 4.0` declared only in
+prose.** No `LICENSE` or `LICENSE.md` at root (`404` on both); `README.md` declares
+**Creative Commons Attribution-**NonCommercial**-ShareAlike 4.0** and points at `docs/license.md`.
+🔴 **`NonCommercial` makes this unusable in a client deliverable**, and it is a further instance of
+`T24`'s path-dependent licences and `T25`'s content-asset trap — this time at a path *no root probe
+reaches*.
+
+### 🔴 `907-F7` Negative result, measured because the absence is an opportunity: the agent-skill megacollections have **no education tier at all**
+
+`T26` holds that the unit of publication is shifting to the agent-addressable corpus. The obvious
+delivery vehicle is the skill megacollection, and code search surfaced the two largest. Probed
+repo-scoped:
+
+| Repo | ★ | Licence | `curriculum` | `lesson plan` | `rubric grading` | `tutor pedagogy` |
+|---|---|---|---|---|---|---|
+| `sickn33/agentic-awesome-skills` | **49,962** | MIT | 42 | 266 | 24 | — |
+| `LeoYeAI/agent-master-skills` | **2,206** | MIT | 46 | — | — | **0** |
+| `TensorBlock/awesome-mcp-servers` | 1,101 | MIT | — | — | — | `moodle canvas lms`: **2** |
+
+🔵 **The hit counts are incidental vocabulary, not education skills.** Inspecting the returned
+**paths** for the 49,962 ★ collection's `curriculum` hits: `skills/product-design-harness/`,
+`skills/offers/references/`, `skills/linkedin-profile-optimizer/SKILL.md`, `skills/loki-mode/`,
+`tools/scripts/build-catalog.js`. Marketing, product-design and sales skills that use the word
+"curriculum" in passing. **`tutor pedagogy` in the 2,206 ★ collection returns `0`.**
+🟢 **So: 2,955+ and 2,700+ published agent skills respectively, and not one education tier between
+them.** For a studio this is the cleanest statement of the `T26` opportunity in this base — the
+distribution channel exists, is MIT, is enormous, and is empty where education should be.
+
+### 🟡 `907-F8` The eight mandated WebSearch legs ran. Scored against the **delivery** surface they are **not** null — 10 of 31 facts are absent
+
+Four global legs and four regional legs (North America, EMEA, APAC, LATAM) ran as mandated. Scored
+the way `902-G1` requires — against the six **delivery** files, with the two append-only logs out of
+the denominator — **10 of 31 checked facts are absent**:
+
+| Fact | Region | Status |
+|---|---|---|
+| Rep. **Suzanne Bonamici** bill: AI risk assessment + grants for training, credentialing, equitable access | North America | **ABSENT** |
+| **Florida Board of Governors** proposed rule requiring all public colleges to adopt staff/student AI-use policies; only two have, incl. U. Florida | North America | **ABSENT** |
+| **"Claude for Higher Education"** — Northeastern joined | North America | absent from delivery (log only) |
+| **PIO Education Model** (Catalonia) — per-system self-assessment instrument for any AI system in use or under consideration | EMEA | **ABSENT** |
+| Japan **AI Promotion Act** (2025) | APAC | absent from delivery (log only) |
+| Japan **second-phase AI Basic Plan**, Cabinet-adopted July 2026 | APAC | absent from delivery (log only) |
+| **ByteDance `Gauth`** — became a top education app in the US | APAC → NA | **ABSENT** |
+| Mexico **Federal Law Regulating Artificial Intelligence** — under Senate discussion, passage expected 2026 | LATAM | **ABSENT** |
+| Brazil **ANPD** as the operative AI supervisory body pending PL 2338 | LATAM | absent from delivery (log only) |
+| **UNESCO observatory of AI in education for Latin America and the Caribbean** | LATAM | absent from delivery (log only) |
+
+🔵 **This is `p902`'s correction recurring, and it is worth naming as a standing scoring rule.** Read
+against the whole tree, these legs look like the sixth consecutive null — every one of these facts is
+*somewhere* in 14 MB of append-only log. Read against the files an engagement actually opens, a third
+of them are missing. **A fact buried in a trending log is not delivered.** All 10 are written to
+`intel/market.md` this pass, under the region whose `###` subsection they belong to.
+
+🟡 **Caveat carried from `p890`, unchanged and still binding:** every non-GitHub host is refused at
+this session's egress proxy (`unesco.org`, `eur-lex.europa.eu`, `oecd.org` all probed this pass, all
+`403`). The 10 facts above are **search-snippet evidence with the source named**, not primary text.
+`DigComp 3.0` remains unreadable for a third consecutive pass.
+
+### 🟢 `907-F9` The full star sweep is **run**, after four passes of deferral — 315 delivery-row addresses, and the drift is small, one-directional and clean
+
+The sweep had been due `2026-11-19` and deferred by `p901`, `p904`, `p906` and this pass's own
+earlier draft. **It ran.** The pass crossed midnight, so the sweep carries the `2026-11-19` date
+while the discovery work above was measured `2026-11-18`; both dates are stated rather than
+collapsed. Records: [`star-sweep.2026-11-19-p907.tsv`](../evidence/star-sweep.2026-11-19-p907.tsv).
+
+**Scope.** Every GitHub address appearing in the four shelf files (`agents/top.md`,
+`repos/foundations.md`, `verticals/solutions.md`, `compose/patterns.md`) — **315 distinct
+addresses**, swept in 53 batched `search/repositories` queries. **306 resolved.**
+
+**Drift, measured on the one table with a machine-readable star column** (`agents/top.md`, 84
+comparable rows):
+
+| | Rows |
+|---|---|
+| Unchanged | **56** |
+| Moved | **28** |
+| Moved **down** | **0** |
+| Absent from the index | **0** |
+
+Largest movements, and all 28 were applied to the table this pass:
+
+| Repo | Recorded | Swept | Δ |
+|---|---|---|---|
+| `amosblomqvist/learnharness` | 10,110 | **10,213** | **+103** |
+| `langchain-ai/langgraph` | 45,093 | **45,129** | +36 |
+| `openhands/openhands` | 93,731 | **93,766** | +35 |
+| `patchy631/ai-engineering-hub` | 41,974 | **42,007** | +33 |
+| `molly554/whiteboard-ai-tutor` | 232 | **262** | **+30** |
+| `virgiliojr94/book-to-skill` | 38,369 | **38,398** | +29 |
+| `crewaiinc/crewai` | 61,058 | **61,086** | +28 |
+| `HKUDS/DeepTutor` | 60,451 | **60,478** | +27 |
+
+🔵 **The sweep's real result is a negative one, and it is reassuring: nothing in this base's star
+data was materially stale.** 56 of 84 rows had not moved at all, no row moved down, and the two
+largest proportional movers are a 33-day-old repository (`learnharness`, which `p904` already
+flagged as outrunning the cadence note) and a 262 ★ project. **The cadence note holds, and the
+four-pass deferral cost this base nothing** — which is itself worth recording, because it means
+the sweep can be a weekly rather than a daily obligation.
+
+### 🟡 `907-F10` The 9 addresses the index did not resolve, classified — and `p900`'s false-absence class is confirmed again
+
+| Address | Class |
+|---|---|
+| `owner/repo` | **Not a row** — a placeholder inside a `compose/patterns.md` gate script. Correctly present |
+| `openedx/xblock-sdk.` | **Extraction artefact** — a trailing sentence period captured by this pass's URL regex, not a bad row in the file |
+| `longsightgroup/qti3` | **Known**: `repos/foundations.md` already records *"not in the search index, so stars are unmeasurable (`900-G2`)"* — confirmed |
+| `tokenaii/horus-taleeq-0.2b-base` | **Known**: carried in `agents/top.md` as *"not in the search index"* — confirmed |
+| `digitalcredentials/learner-credential-wallet` | Unindexed here; the row already names the OpenWallet Foundation address to track |
+| `mitodl/open-learning-ai-tutor` | 🔵 **`raw` `200`** |
+| `darl-genai/instructional_agents` | 🔵 **`raw` `200`** |
+| `jazzband/pip-tools` | 🔵 **`raw` `200`** |
+| `mwouts/jupytext` | 🔵 **`raw` `200`** |
+
+🔵 **The last four are `p900`'s "unindexed-but-readable" class, and this is an independent
+confirmation of it on a different sample.** All four return `200` on `raw.githubusercontent.com`
+and nothing from `search/repositories`. `jazzband/pip-tools` and `mwouts/jupytext` are
+widely-deployed packages, so there is no question of them being dead. **A pass that treated
+search-absence as non-existence would have deleted four correct rows** — which is exactly what
+`p900` measured a 44% false-absence rate for, and the reason this base verifies on two channels.
+🟡 **Net: 0 broken rows across 315 delivery addresses.**
+
+### 🔵 Declared gaps from this pass
+
+- **Code search was run on 18 queries only, and the wordlist-exclusion rule was derived *after* the
+  queries ran.** A pass that applies the `907-F3` exclusion from the start will get a cleaner
+  ranking from the same channel. **This channel is not exhausted — it is one pass old.**
+- **Argentina and Central America remain unrefuted** (Peru is now refuted). The code-search channel
+  is the one that found Peru; it should be pointed at `aula virtual`, `campus virtual` and
+  `siga`/`sistema académico` tokens next.
+- **The four unlicensed bridges in `907-F4` were not approached.** Three are student projects at
+  identifiable institutions; an issue asking for a licence is cheap and has worked for this base
+  before. Not done this pass.
+- **`personamanagmentlayer/pcl`** (45 ★, Apache-2.0 byte-read, 10,953 B) was measured but **not
+  promoted**: it self-describes as *"The World's First Programming Language for AI Persona
+  Management"*, which is a marketing claim this base cannot verify, and its relevance to education is
+  inferred from `P13`'s persona-stateless requirement rather than stated by the project. **Read it
+  before using it.**
+- **`907-F7`'s negative result was measured by hit-count and path inspection, not by reading every
+  skill file.** The claim "no education tier" is strong but not exhaustive; a pass that enumerates
+  the `skills/` directory listing would settle it.
+- **`turnkeylinux-apps/canvas`** (13 ★, no licence file, `README.rst` `200`) is a Canvas LMS
+  **appliance build** — potentially a `verticals/solutions.md` deployment row, not read this pass.
+
 
 ## `2026-11-18` (p906) — **the last eight untried language channels are now measured, and seven of them are empty. Mandarin is the only non-English education-supply channel on GitHub with usable scale — and the twelve repositories it holds were all sitting in this log with no row in any delivery file.**
 

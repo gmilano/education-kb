@@ -1,12 +1,12 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-18
+updated: 2026-11-19
 ---
 
 # Current trends — education
 
-**Twenty-nine trends** (**T29 added in `p906`** — vernacular open education supply measured across eight languages and found to be a single-country phenomenon, with *no licence at all* the default state in the other seven; **T26 added in `p903`** — the unit of publication shifting from the
+**Thirty-one trends** (**T30 and T31 added in `p907`** — the LMS-to-agent bridge being built per-institution on the *user's own credentials*, which needs no institutional consent; and the agent-skill marketplaces having no education tier at all, which makes `T26`'s distribution channel measurably empty. Both are the first trends in this file derived from **global code search**, an instrument this base had recorded as unusable; **T29 added in `p906`** — vernacular open education supply measured across eight languages and found to be a single-country phenomenon, with *no licence at all* the default state in the other seven; **T26 added in `p903`** — the unit of publication shifting from the
 application to the agent-addressable curriculum corpus, the first trend in this file derived from a
 non-English repository channel; **T25 added in `p902`** — the licence trap moving from code to the data
 and content assets, where no index can see it; **T24 added in `p901`** — path-dependent licences, the first trend in this file derived from repositories the SPDX channel refused to resolve at all; **T23 added in `p900`** — the first trend in this file derived from a
@@ -397,6 +397,18 @@ community, where three of the seven servers have no licence at all. **For a clie
 on Moodle this is a real risk and a real opening** — first-party-grade MCP for Moodle, built to
 the organisation's conventions, is unclaimed work.
 
+🔵 **Extended `p907`, and the extension changes who the buyer is.** Every server this trend was
+built on reaches the LMS through an *institutional* surface — the Moodle Web Service API, Open edX
+staff credentials. Global code search found a second route that this trend had not seen: **bridges
+that act as the signed-in person and therefore need no institutional surface at all.**
+`GuanmingQiao/POLITEMALL-MCP` (MIT, 2 ★) states it outright — *"talks directly to each tenant's own
+REST API as the signed-in person — no institutional API key or app registration involved"* — and
+`andrsnrua/universidad-pacifico-mcp` (ISC, 1 ★, Peru) says the same in Spanish while declaring
+itself *"no oficial"*. 🔵 **So the MCP-over-LMS pattern has split into two products with different
+buyers**: a *sanctioned* integration sold to the institution, and an *unsanctioned* one adopted by
+the student or parent with no procurement at all. The second is spreading faster because it has no
+gatekeeper. See **T30**.
+
 ## T14 — Affective design is now a regulated feature in China, and the carve-out for education is conditional on *not* doing the thing that drives retention
 
 **Added p894.** China's **Interim Measures for the Administration of Anthropomorphic AI
@@ -649,6 +661,27 @@ page be the evidence for a licence claim in a client deliverable. On this KB's o
 base rate of error in unresolved rows was **5 of 7** — high enough that byte-reading is cheaper
 than the first conversation with a client's counsel. See `repos/trending.md` (p897) for the full
 measurements and `repos/foundations.md` for the corrected rows.
+
+
+🔵 **Extended `p907` with two further cases, and the second is a *new failure class* running against
+the studio's interest.** (1) `swl10/pyslet` (76 ★) is **verbatim BSD-3-Clause** — three numbered
+conditions, the endorsement clause, *"Copyright 2017 Steve Lay"*, byte-read at 2,906 B — and the
+search index reports **`NOASSERTION`**. The index cannot classify a textbook-standard permissive
+licence. (2) `LJKelly3141/coursepack` is **MIT**, and the index reports `NOASSERTION` because the
+file it reads, root `LICENSE`, is **41 bytes containing no grant at all**:
+
+```
+YEAR: 2026
+COPYRIGHT HOLDER: Logan Kelly
+```
+
+— the unfilled `usethis::use_mit_license()` R template stub, with the real MIT text sitting beside
+it in `LICENSE.md`. 🔴 **This is the direction of error this trend had only one example of: the
+index under-reporting permissiveness.** A sourcing pipeline that filters out `NOASSERTION` rows to
+stay safe will silently discard usable permissive supply — and in a channel where the education
+ceiling is 76 ★, discarding the top row is discarding the channel. **Operational rule, now gate
+`907-G1` in `compose/patterns.md`: when SPDX reports `NOASSERTION`, read `LICENSE` *and*
+`LICENSE.md` *and* the `README` licence declaration before concluding anything.**
 
 ## T20 — Vernacular education agents are appearing, and they are *not* translations of English ones — the native language is in the data contract
 
@@ -1172,3 +1205,81 @@ actually rests on, and not a proof of non-existence. The instrument that would t
 gap `906-G2`: English-metadata queries carrying a national curriculum term (`CBSE`, `NCERT`,
 `gaokao`, `UTBK`, `JLPT`, `TOPIK`). **Until that runs, read this trend as a statement about what is
 findable, and price the India vernacular tier as build either way.**
+
+## T30 — The LMS-to-agent bridge is being built **per institution, on the user's own credentials** — which removes procurement from the critical path, and removes the licence with it
+
+**Evidence (`p907`, global code search — a channel no earlier pass could use).** Seven bridges, all
+created within the last eight months, none above 4 ★, each wired to **one named institution's**
+learning platform:
+
+| Bridge | Licence | Institution / system | Region |
+|---|---|---|---|
+| `GuanmingQiao/POLITEMALL-MCP` | **MIT** | POLITEMall + NYP — Singapore polytechnic/ITE **D2L Brightspace** | APAC |
+| `andrsnrua/universidad-pacifico-mcp` | **ISC** | Universidad del Pacífico, Perú — Blackboard Ultra, **70 tools** | LATAM |
+| `cculb/schoolconnect` | **MIT** | **PowerSchool Parent Portal** — the guardian, not the student | North America |
+| `bolgerru/blackboard-mcp` | 🔴 none | Trinity College Dublin Blackboard | EMEA |
+| `chenshi5858/CanvasGPTAssistant` | 🔴 none | Canvas | — |
+| `PaoloJN/lms-data-bridge` | 🔴 none | "any LMS", via Chrome extension + MCP | — |
+| `MikeTheGreat/MarkdownToCanvasLMS` | 🔴 none | Canvas authoring | — |
+
+**What makes this a trend and not a list.** Four properties hold across the set, and together they
+describe a different product from `T13`'s community plugins:
+
+1. **No institutional surface is used.** These call the tenant's own REST API *as the signed-in
+   person*. No API key, no app registration, no vendor partnership, no procurement.
+2. **They are per-tenant, not per-platform.** The unit of publication is *my university's Moodle
+   instance*, not "Moodle" — which is why there are seven of them for four platforms and why there
+   will be more.
+3. **They are geographically distributed in a way open education supply normally is not.**
+   Singapore, Peru, Ireland and the US in one seven-row cohort. This base has spent several passes
+   establishing that open education supply is concentrated in the US, EMEA and China; **the bridge
+   tier is not**, because the thing being built is local by definition.
+4. **Four of the seven carry no licence at all.** They are built by students for their own
+   institution, not published as supply — which is `T23`'s unaddressability arriving in a new tier.
+
+🔵 **Why it matters commercially, and it cuts both ways.** For a studio, the *pattern* is the
+finding: an agent surface over a client's existing LMS can be demonstrated in days without touching
+procurement, which is the single slowest step in an education engagement. **That is the fastest
+credible demo in this KB.** And the same property is the risk — a bridge acting as the signed-in
+person is, from the institution's side, difficult to distinguish from credential sharing, and three
+of these projects declare themselves unofficial precisely because they know it. 🔴 **So the
+deliverable is the sanctioned version of an unsanctioned pattern**: same user-facing capability,
+institutional consent and an auditable service identity underneath. `compose/patterns.md` **P26**
+scopes exactly that, and the governance note is the point of the pattern rather than a caveat on it.
+
+🟡 **Honest limits.** Seven repositories is a cohort, not a census; the channel is one pass old and
+its exclusion rules were derived after the queries ran. The claim here is that the *form* is
+recurring independently in four regions, which seven independent instances do support — not that
+this tier has scale. **None of these is adoptable as a dependency.**
+
+## T31 — `T26`'s distribution channel exists, is permissive, is enormous — and is **empty where education belongs**
+
+**T26** holds that the unit of publication is shifting from the application to the
+agent-addressable corpus. The obvious vehicle is the published **agent-skill collection**, and
+`p907` measured the two largest that global code search surfaced:
+
+| Collection | ★ | Licence | Published skills | Education tier |
+|---|---|---|---|---|
+| `sickn33/agentic-awesome-skills` | **49,962** | MIT | 2,955+ | 🔴 **none found** |
+| `LeoYeAI/agent-master-skills` | **2,206** | MIT | 2,700+ | 🔴 **none found** |
+
+**How this was measured, because the raw numbers say the opposite.** Repo-scoped code search returns
+42 hits for `curriculum` and 266 for `lesson plan` in the 49,962 ★ collection — which looks like an
+education tier until the **paths** are read. They are `skills/product-design-harness/`,
+`skills/offers/references/`, `skills/linkedin-profile-optimizer/SKILL.md`, `skills/loki-mode/` and
+`tools/scripts/build-catalog.js`: marketing, sales and product-design skills using the word
+"curriculum" in passing. In the 2,206 ★ collection, **`tutor pedagogy` returns `0`**.
+
+🔵 **The implication is the cleanest opportunity statement in this file.** Two MIT-licensed
+collections with a combined ~5,650 published skills and tens of thousands of stars are the
+distribution channel a studio would want for education IP — and education is **not in them**.
+Meanwhile the corpora themselves are being published nationally and *unlicensed*: `p903`'s Arabic
+national-curriculum agent-skill corpus, `p904`'s Brazilian `bncc-dev` cluster (MIT + CC BY 4.0, and
+the only licensed one). 🔵 **So the asset is appearing and the shelf it would sit on is bare.**
+Publishing a licensed, curriculum-grounded education skill pack into these channels is low-cost,
+high-visibility studio marketing with no incumbent to displace.
+
+🟡 **Limits, stated.** Measured by hit count and path inspection, **not** by enumerating every skill
+file — so "none found" is strong evidence of absence, not proof. Both collections are themselves
+aggregators of other people's skills, so their licence covers the collection, not necessarily each
+item. And this is two collections: the largest two this channel reached, not the market.

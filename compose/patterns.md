@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-18
+updated: 2026-11-19
 ---
 
 # Compose patterns — education
@@ -10,7 +10,7 @@ Concrete recipes. Each names the exact repos, how they wire together, the licenc
 the result, and a realistic build estimate. Every repo referenced is verified in
 `agents/top.md`, `repos/foundations.md` or `verticals/solutions.md`.
 
-**Twenty-three patterns, plus the G1 licence gate added in p897 and extended with gate `904-G1` in p904** (**P22 added in `p903`** — the
+**Twenty-six patterns, counted mechanically in `p907`** (the figure here read *"twenty-three"* through the addition of `P24`, `P25` and `P26`, and is corrected in `p907` — **a pass that adds a pattern should re-count, not increment**, the same drift `agents/top.md` records for its row count), **plus the G1 licence gate added in p897 and extended with gate `904-G1` in p904, `905-G1` in p905 and `907-G1` in `p907`** (**P26 added in `p907`** — the sanctioned LMS-to-agent bridge, built from the seven per-institution user-credential bridges `intel/trends.md` **T30** measured, and the only end-to-end permissive pattern here that touches a commercial LMS) (**P22 added in `p903`** — the
 national-curriculum corpus pattern, built from the Arabic-language channel's finding that the
 curriculum exists at national scale and carries no grant; see `intel/trends.md` **T26**) (**P20 added in `p901`** — the first end-to-end permissive *synchronous* pattern in this file, unlocked by `p901`'s verification of `jitsi/jitsi-meet` at Apache-2.0) (**P19 added in `p900`** — the
 first end-to-end permissive pattern in this file that is not offline-first, built entirely from
@@ -151,6 +151,29 @@ dependencies it names.** Zero is the expected answer, and it means the scan is t
 no dependencies"* and *"DeepTutor has one dependency"* — both false, both about platforms this KB
 recommends — and would have handed a client the most-starred tutor in open source with no statement
 that its build is not reproducible.
+
+### The dual-file axis, added as gate `907-G1` in p907
+
+The three axes above all assume that **when you find a licence file, it contains a licence.** `p907`
+found two repositories where that assumption is false, in opposite directions, and the index
+mis-reported both:
+
+- `LJKelly3141/coursepack` — root `LICENSE` is **41 bytes**: `YEAR: 2026` /
+  `COPYRIGHT HOLDER: Logan Kelly`, and **no grant**. It is the unfilled
+  `usethis::use_mit_license()` R template stub. The real MIT text sits in **`LICENSE.md`** beside
+  it. SPDX reports `NOASSERTION`; the repository is **MIT**.
+- `dmccreary/intelligent-textbooks` — **no licence file at root at all**; `README.md` declares
+  **`CC BY-NC-SA 4.0`** and points at `docs/license.md`. 🔴 `NonCommercial`: unusable in a client
+  deliverable, and invisible to any root-only probe.
+
+**Gate rule `907-G1`.** When SPDX reports `NOASSERTION` or no licence, **do not conclude "no grant"
+and do not discard the row.** Read, in order: `LICENSE`, `LICENSE.md`, `LICENCE`, `COPYING`,
+`LICENSE.txt`, then the `README` licence declaration, then any path the README points at. Only
+after all of those return nothing is the row unlicensed. 🔵 **Why this gate differs from the other
+three: they protect the client from a licence that is worse than it looks. This one protects the
+*studio* from discarding permissive supply that looks worse than it is** — and in a channel whose
+education ceiling is 76 ★, silently dropping `NOASSERTION` rows throws away the top of the shelf
+(`swl10/pyslet`: verbatim BSD-3-Clause, byte-read, reported `NOASSERTION`).
 
 ## P1 — Licence-clean AI tutor on a permissive LMS
 
@@ -2077,3 +2100,84 @@ which is the one place this pattern can fail outright and which no repository in
 publishes a measurement for. 🔴 **Measure OCR accuracy on the client's own scanned work before
 committing to the handwriting scope** — that is this pattern's equivalent of P23's hallucination
 gate, and the cohort gives you no published number to rely on.
+
+## P26 — Sanctioned LMS-to-agent bridge: the fastest credible demo in this KB, and the governance tier that makes it sellable (added `p907`)
+
+**Why this pattern exists.** `intel/trends.md` **T30** records seven bridges, built in the last
+eight months at four named institutions in four regions, that put an agent over a client's existing
+LMS **without using any institutional surface**: they call the tenant's own REST API as the
+signed-in person. No API key, no app registration, no vendor partnership — **and therefore no
+procurement**, which is the slowest step in every education engagement this KB describes.
+
+🔴 **And that is exactly why none of them is the deliverable.** A bridge acting as the signed-in
+person is, from the institution's side, hard to distinguish from credential sharing. Three of the
+seven declare themselves unofficial for that reason (`andrsnrua/universidad-pacifico-mcp`:
+*"proyecto comunitario no oficial"*). **This pattern is the sanctioned version of an unsanctioned
+pattern**: identical user-facing capability, with institutional consent and an auditable service
+identity underneath.
+
+### Stack
+
+| Layer | Pick | Licence | Why |
+|---|---|---|---|
+| Reference implementation — D2L Brightspace | https://github.com/GuanmingQiao/POLITEMALL-MCP | **MIT** (byte-read `p907`) | The only D2L row in this KB. **Read it for its tool decomposition, not to deploy it** |
+| Reference implementation — Blackboard Ultra | https://github.com/andrsnrua/universidad-pacifico-mcp | **ISC** (byte-read `p907`) | **70 tools / 5 prompts**, incl. local PDF/DOCX/PPTX/XLSX text extraction and private exports — the most complete tool surface in the cohort |
+| Reference implementation — Moodle | https://github.com/Faixiang/Moodle-MCP (read-only) then https://github.com/G36maid/moodle-mcp (read-write) | MIT | Already shelved in `repos/foundations.md`; **these use the institutional Web Service API**, which is the posture this pattern wants |
+| Reference implementation — Canvas | https://github.com/ucfopen/canvasapi | MIT | University of Central Florida's Python wrapper — a permissive seam onto an AGPL-3.0 platform |
+| Rostering / identity of record | https://github.com/StevenACoffman/roster | **MIT** (byte-read `p907`) | **OneRoster v1.2**, and its authorization is enforced **in the database**, so a caller scoped to one school cannot read another's rows. This is the multi-tenant isolation the sanctioned version must build and the user-credential version gets for free |
+| Agent runtime | any permissive framework already in `agents/top.md` | MIT / Apache-2.0 | Not the differentiator here |
+| Audit / evidence | https://github.com/yetanalytics/lrsql | Apache-2.0 | xAPI statement per agent action: the record that distinguishes a sanctioned bridge from a scraper |
+
+### How it wires together
+
+1. **Replace the credential, keep the tool surface.** Take the tool decomposition from the reference
+   implementation for the client's platform — the Peru server's seven tool groups (courses,
+   materials/syllabi, announcements, activities/grades, calendar, participation, local library) are
+   the most complete published map. Re-implement against an **institutional service identity**
+   (LTI 1.3 via `Cvmcosta/ltijs`, OAuth app registration, or the platform's admin API) instead of
+   the user's session.
+2. **Scope the identity to the user, inside the server.** The capability users want is *my* courses
+   and *my* grades. With a service identity you must enforce that yourself — which is why
+   `StevenACoffman/roster`'s database-enforced authorization is the design to copy rather than
+   application-layer checks.
+3. **Emit an xAPI statement per tool call** into `lrsql`. This makes the bridge auditable, and it is
+   also the `P7` efficacy tier for free.
+4. **Run gate `G1` plus axis `907-G1`** over the whole set before shipping — four of the seven
+   reference bridges carry **no licence at all** and cannot be copied from, only read.
+
+### The design rules that make it defensible
+
+- 🔴 **Never ship the user-credential version to a client, even as a pilot.** It is precisely what
+  the institution's security review exists to stop, and discovering that in review costs the
+  engagement.
+- 🔴 **Read-only first.** Six of the seven reference bridges are read-only; the one read-write
+  Moodle server in this KB is a separate, later step. Grade *writes* put the deployment inside the
+  EU AI Act's assessment scope (**2 Dec 2027**) and inside FERPA's record-amendment rules in the US.
+- 🟡 **The parent persona is a distinct product.** `cculb/schoolconnect` (MIT, PowerSchool Parent
+  Portal) is the only guardian-facing agent in this KB. Guardian access has its own consent
+  structure — do not treat it as a student bridge with a different login.
+
+### Licence posture
+
+**Permissive end to end.** Every reference implementation and infrastructure pick above is MIT, ISC
+or Apache-2.0, all byte-read this pass. The client owns the bridge; nothing here forces disclosure.
+🔵 **The only end-to-end permissive pattern in this file that touches a commercial LMS.**
+
+### Estimate
+
+**4–6 weeks** for a read-only sanctioned bridge on one platform with xAPI audit: 1 week to port the
+tool surface, 1–2 weeks institutional identity and per-user scoping, 1 week audit tier, 1–2 weeks
+security review and hardening. 🔵 **A throwaway demo on a staff member's own test account is 2–3
+days** — which is the point of the pattern, provided the demo is labelled a demo and never quietly
+becomes the pilot.
+
+### Where it does not apply
+
+- **Blackboard, if the client wants a licensed starting point.** The only Blackboard bridge found
+  carries no licence (`bolgerru/blackboard-mcp`), so Blackboard work starts from the platform's own
+  REST documentation instead.
+- **Where the client has no LMS.** This pattern's value is that the system of record already exists;
+  if it does not, `P1` builds the platform instead.
+- **Where procurement is already solved.** If the institution will sponsor an app registration from
+  day one, skip the reference implementations and build straight onto LTI 1.3 — the bridges in
+  `T30` are interesting for the constraint they route around, not for their code.

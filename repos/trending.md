@@ -1,8 +1,102 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-18
+updated: 2026-11-19
 ---
+
+## `2026-11-18` (p907) — **`OneRoster` appears nowhere in any delivery file of this KB. Neither does D2L Brightspace or Blackboard. The interoperability section is one of this base's strongest, and it is missing the rostering standard half the world's student systems speak — because the repositories that implement it sit at 0 ★ and never say "education" in their description.**
+
+**Channel.** GitHub **global code search**, an instrument a standing note in `agents/trending.md` had
+closed as unusable and which is **live in this session**. Full method, the 18 queries, the
+fuzzing-wordlist poisoning control and the two existence controls are in
+[`agents/trending.md`](../agents/trending.md) `907-F1`–`907-F3`. Every row below: licence
+**byte-read** from `raw.githubusercontent.com`, stars and `pushed_at` from `search/repositories`,
+existence proved by `README` `200` against a `404` control.
+
+### 🔴 `907-R1` The absence, and why a full-looking section hid it
+
+`repos/foundations.md` → `Interoperability and standards` carries 19 rows and is one of the best
+sections in this base: LTI 1.3 in three languages (`ltijs`, `tsugi`, `pylti1.3`), QTI 3 twice
+(`Citolab/qti-components` GPL-3.0, `longsightgroup/qti3` MIT), SCORM (`scorm-again`), Common
+Cartridge **reading** (`instructure/common-cartridge-viewer`), Ed-Fi twice, Open Badges, CAS, three
+Moodle/Open edX MCP servers and `canvasapi`.
+
+Grepped across all six delivery files this pass:
+
+| Term | Occurrences in delivery files |
+|---|---|
+| `Ed-Fi` | held (2 rows) |
+| `LTI` | held (3 implementations) |
+| `QTI` | held (2 implementations) |
+| **`OneRoster`** | 🔴 **zero** |
+| **`D2L`** | 🔴 **zero** |
+| **`Blackboard`** | 🔴 **zero** |
+
+🔵 **Why this matters more than a missing row usually does.** Ed-Fi and OneRoster are *not*
+substitutes: Ed-Fi is a US K-12 state-reporting data standard, while **OneRoster (1EdTech) is the
+rostering and gradebook-exchange standard that SIS and LMS vendors implement worldwide** — it is what
+a client means when they say "we need the class lists and grades to flow". A KB that holds Ed-Fi
+twice and OneRoster zero times is **tuned to US K-12 state reporting and silent on the integration
+every other engagement actually asks for.** And `D2L Brightspace` and `Blackboard` are two of the
+four LMS platforms a higher-ed client is likely to already run; this base has rows for the other two
+(Canvas, Moodle) plus Open edX, and **nothing at all** for these.
+
+🔵 **The absence was invisible for the same structural reason as `906-R1`'s Mandarin tier: the
+section looked full.** Nineteen verified rows do not read as a gap. And no repo-search query reaches
+these repositories, because a OneRoster server's description says *"ConnectRPC, OpenTelemetry,
+sqlc"* — it does not say "education".
+
+### 🟢 `907-R2` The rows that close it
+
+| Repo | ★ | Licence (byte-read) | Pushed | What it is |
+|---|---|---|---|---|
+| https://github.com/StevenACoffman/roster | 0 | **MIT** (1,070 B) | 2026-10-02 | **IMS Global OneRoster v1.2** in **Go 1.27** — ConnectRPC (Connect/gRPC/gRPC-Web), protovalidate schema validation, `sqlc` + PostgreSQL, OpenTelemetry tracing. **20 read RPCs and 18 curation RPCs**, because a roster is hand-edited as well as loaded. 🔵 **Authorization is enforced in the database, not in application code, so a caller scoped to one school cannot read another school's rows** — multi-tenant isolation at the layer that actually holds |
+| https://github.com/swl10/pyslet | 76 | 🔴 **BSD-3-Clause** — byte-read (`LICENSE.txt@master`, 2,906 B), API says `NOASSERTION` | **2020-03-31** | **Pyslet** — "Python package for Standards in Learning Education and Training (LET)". Implements **multiple** LET standards in one permissive library (QTI, IMS Content Packaging, LTI, plus OData/Atom). **The highest-star education-native repository this channel reached.** 🟡 **Dead: 5½ years idle, last PyPI release `pyslet-0.7.20170805`.** Vendor it as a reference implementation; do not add it as a tracked dependency |
+| https://github.com/LJKelly3141/coursepack | 0 | **MIT** — byte-read from **`LICENSE.md`**, because root `LICENSE` is a 41-byte metadata stub with no grant (`907-F6`) | 2026-11-17 | Builds a **Canvas** course from plain text: declarative YAML manifests → **IMS Common Cartridge + QTI 1.2 quiz package** + browsable local preview + a paper form of any assessment, with the rendered site **audited against WCAG 2.1 AA**. Containment enforced twice (render allowlist + canary) to keep assessment sources out of the public site. 🔵 **The complement this base was missing: `common-cartridge-viewer` *reads* cartridges, this one *writes* them** — which is the direction agent-generated courseware needs |
+| https://github.com/GuanmingQiao/POLITEMALL-MCP | 2 | **MIT** (1,070 B) | 2026-11-15 | **The only D2L Brightspace row in this KB.** MCP server over two Singapore polytechnic/ITE Brightspace tenants (`lms.polite.edu.sg`, `nyplms.polite.edu.sg`), published to npm as `@qiaoguanming/politemall-mcp`. Acts **as the signed-in person — no institutional API key or app registration** |
+| https://github.com/aleka07/scorm_agents | 1 | **MIT** (1,077 B) | 2026-08-24 | Document → **SCORM 1.2** package via a four-stage agent pipeline: Docling ingest → ChromaDB embed → *Architect* agent proposes structure → RAG-grounded *Writer* with **citation tracking** → *Assessment* agent generates MCQ/true-false/matching → HTML + SCORM API wrapper + ZIP. 🔵 The corporate-L&D counterpart to `coursepack`: pairs with `jcputney/scorm-again` (MIT, already shelved) for the runtime half |
+| https://github.com/peblproject/PEBL | 9 | **Apache-2.0** (11,350 B) | **2021-03-25** | xAPI-native personal learning environment. 🟡 **Dead since 2021**; recorded as a permissive xAPI reference next to `adlnet/xapi-spec`, not as a dependency |
+
+### 🟡 `907-R3` Measured and deliberately **not** shelved
+
+Stating these rather than dropping them silently, per this base's own rule:
+
+- **https://github.com/ProfeAnaEslavaEdTech/mllde-xapi** — `CC-BY-4.0` byte-read (17,145 B), 0 ★,
+  pushed 2026-11-18. An **xAPI IRI registry and profile for CEFR-aligned voice/language measurement**
+  with a `w3id.org/mllde` namespace. 🔵 Genuinely interesting as a *vocabulary* — and `CC-BY-4.0` is
+  a **content licence on what is effectively a schema**, which is `T25`'s trap exactly. A profile is
+  arguably content, so this is defensible; it is flagged, not condemned.
+- **https://github.com/OERforge/textbookimprover** — `GPL-3.0` byte-read (35,149 B), 1 ★, pushed
+  2026-11-18 (**today**). Converts OER textbooks from DOCX/Markdown/HTML/EPUB/LaTeX/AsciiDoc/
+  PowerPoint/CNXML into a common form. Copyleft, so arm's length in a proprietary build.
+- **https://github.com/Alimento-Team/chalix-ed** — `AGPL-3.0` byte-read (35,136 B), 0 ★. An Open edX
+  derivative; AGPL and inactive since 2026-08-05.
+- **https://github.com/dmccreary/intelligent-textbooks** — 38 ★ and 🔴 **`CC BY-NC-SA 4.0`**
+  (declared in `README` only; no root licence file). **NonCommercial — unusable in a client
+  deliverable.** See `907-F6`.
+- **https://github.com/turnkeylinux-apps/canvas** — 13 ★, **no licence file**, `README.rst` `200`,
+  pushed 2026-11-16. A **Canvas LMS appliance build**. Possibly a `verticals/solutions.md`
+  deployment row; **not read this pass**, and recorded so the next pass does not rediscover it.
+- **Unlicensed, therefore not promoted** (`p893` rule): `bolgerru/blackboard-mcp` (Trinity College
+  Dublin Blackboard + deadline tracker), `PaoloJN/lms-data-bridge`, `chenshi5858/CanvasGPTAssistant`,
+  `MikeTheGreat/MarkdownToCanvasLMS`, `Tools4ever-NIM/NIM-System-REST-OneRoster-v1.1` (a **second**
+  OneRoster implementation, as vendor connectors — no licence file). **Five repositories, zero
+  licences.** `blackboard-mcp` would otherwise be this base's only Blackboard row.
+
+### 🔵 Declared gaps from this pass
+
+- **Blackboard still has no *licensed* row.** The only Blackboard code this channel found carries no
+  grant. This is now a named gap, not an oversight.
+- **`roster` is 0 ★ and one author.** It is the best-engineered OneRoster implementation found, and
+  it is a single-contributor project seven weeks old. Shelved as a **reference implementation and a
+  starting point**, which is what its row says — not as an upstream to depend on.
+- **No OneRoster implementation at scale was found in any language.** `Tools4ever-NIM`'s connectors
+  are vendor integration code without a licence; `StevenACoffman/roster` is new. 🔵 **For a standard
+  this central, that is itself the finding** — and it is the strongest build-vs-adopt signal in this
+  file after the registrarial tier.
+- **`907-F3`'s wordlist-exclusion rule was derived after these queries ran**; a cleaner pass on the
+  same channel is owed.
+
 
 ## `2026-11-18` (p906) — **a whole repository tier was missing from `foundations.md`: the Mandarin assessment and question-bank engines. 347 repositories in that channel, and the `Assessment, grading and academic integrity` section held zero Chinese-origin rows.**
 
