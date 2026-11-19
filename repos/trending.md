@@ -4,6 +4,103 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p910) — **A supply tier this KB had never queried: 14 national-examination markets, 11,508 nominal hits, 255 distinct live education repositories — and 63.9% of them carry no licence file at all. Measured inverse of the shelf's 68.8% permissive. The bare-acronym channel is 63% homonym noise; one co-term takes it to 4%.**
+
+**Channels.** `gh api search/repositories` (26 queries) and `raw.githubusercontent.com` with the
+default branch **resolved from the search channel before any byte-read** (`884-G2`'s fix, which
+`p906` had regressed). Both nonexistent controls negative on both channels. `github.com` HTML
+remains `403` for every address, so `curl -sI` was not used (`907-F2`). Full reasoning for every
+finding below is in [`agents/trending.md`](../agents/trending.md) `p910`.
+
+### 🟢 Per-market supply ceiling — the first measurement of this tier in the tree
+
+Nominal hits are exact; the education-context counts are a **top-25-by-stars sample** (`910-G3`).
+
+| Market | Exam term | Bare hits | Co-termed hits | Best permissive artefact found | ★ |
+|---|---|---|---|---|---|
+| 🇲🇾 Malaysia | `KSSM` | 165 | 🔴 **2** | [`lerlerchan/Prompt-libraries-for-Malaysia-Educators`](https://github.com/lerlerchan/Prompt-libraries-for-Malaysia-Educators) MIT | 6 |
+| 🇮🇩 Indonesia | `SNBT` / `UTBK` | 923 | 36 | [`DeJavi08/cat-snbt-skd`](https://github.com/DeJavi08/cat-snbt-skd) MIT | 1 |
+| 🇰🇷 Korea | `TOPIK` / `suneung` | 3,008 | 15 | [`l-yohai/suneung`](https://github.com/l-yohai/suneung) MIT *(eval, not tutor)* | 5 |
+| 🇯🇵 Japan | `JLPT` | 3,446 | 360 | [`aiktb/furiganamaker`](https://github.com/aiktb/furiganamaker) MIT | **312** |
+| 🇭🇰 Hong Kong | `HKDSE` | 307 | 17 | [`JUPASCal/JUPASCal.github.io`](https://github.com/JUPASCal/JUPASCal.github.io) MIT | 10 |
+| 🇸🇬 Singapore | `PSLE` | 286 | 10 | [`BaijayantaRoy/bandup`](https://github.com/BaijayantaRoy/bandup) MIT | 2 |
+| 🇦🇺 Australia | `NAPLAN` | 140 | 3 | [`nsip/nias2`](https://github.com/nsip/nias2) **Apache-2.0** *(bare term only — `910-G1`)* | 7 |
+| 🇬🇧 UK | `GCSE` | 2,636 | 358 | [`StudentSuite/awesome-study-resources`](https://github.com/StudentSuite/awesome-study-resources) MIT | 39 |
+| 🇮🇱 Israel | `bagrut` | 332 | 27 | [`peleg-jpg/israeli-bagrut-psychometric`](https://github.com/peleg-jpg/israeli-bagrut-psychometric) MIT | 0 |
+| 🇯🇴 Jordan | `Tawjihi` | 228 | 4 | 🔴 **none — all 4 ungranted** | — |
+
+🔴 **Jordan is the first market in this KB measured as having education supply and zero adoptable
+education supply.** Four repositories, the most complete of them
+[`jacoubsmairat/TawjihiQuiz`](https://github.com/jacoubsmairat/TawjihiQuiz) (a full Tawjihi question-bank
+platform), and not one carries a `LICENSE`.
+
+🔴 **Malaysia's ceiling is 2 repositories.** `KSSM sekolah` returns `NotaBabMKZ` (an AI KSSR/KSSM
+textbook-note generator, no grant) and `superdskp` (a KSSM Bahasa Inggeris CEFR explorer, no grant).
+The one MIT artefact in the market is a **prompt library**, not software.
+
+### 🔴 Licence posture of the national-exam cohort (255 sampled) versus the curated shelf (337, `p909`)
+
+| | `p910` national-exam cohort | `p909` curated shelf |
+|---|---|---|
+| Permissive | 🔴 **25.1%** (64) | 🟢 **68.8%** (232) |
+| No `LICENSE` at all | 🔴 **63.9%** (163) | 5.3% (18) |
+| `NOASSERTION` | 5.5% (14) | 8.6% (29) |
+| Copyleft | 3.9% (10) | 13.6% (46) |
+| Content licences (CC) | 1.6% (4) | 0.9% (3) |
+
+🔵 **The shelf is 68.8% permissive because 909 passes of curation made it so. The tier underneath
+it is 63.9% ungranted.** The difference between those two numbers is the whole value of this KB,
+and this is the first pass that can state it as a measurement rather than a claim.
+
+🟡 **46% of the cohort has zero stars; only 12 of 255 clear 100 ★.** There is no national-exam
+equivalent of `DeepTutor` in any of these ten markets — no concentration to adopt, and
+29% pushed since 2026-09-01, so no abandonment either. **Live, diffuse, ungranted.**
+
+### 🟢 Promoted to `repos/foundations.md` this pass
+
+| Repo | ★ | Grant, byte-read `2026-11-19` (bytes · `sha256₁₂`) | Ref · pushed | Why it matters |
+|---|---|---|---|---|
+| [`tristcoil/hanabira.org`](https://github.com/tristcoil/hanabira.org) | **436** | 🟢 **MIT** 1,061 B · `fb81a218ce1c` | `main` · 🔴 2025-03-26 | 🟢 **A self-hostable Japanese *and* Korean learning portal under MIT** — the largest permissive full application in this tier. 🔴 20 months idle: a base to fork, not a dependency. |
+| [`aiktb/furiganamaker`](https://github.com/aiktb/furiganamaker) | **312** | 🟢 **MIT** 1,095 B · `a13d4cbed2ef` *(no title line — `910-G2`)* | `main` · 2026-10-25 | 🟢 Browser-extension **delivery surface** for reading support on any page — `T22`'s thesis in its purest form. |
+| [`jamsinclair/open-anki-jlpt-decks`](https://github.com/jamsinclair/open-anki-jlpt-decks) | **252** | 🟢 **MIT** 1,071 B · `dfb974763030` | `main` · 2026-03-12 | 🟢 **The only MIT deck-build pipeline in the cohort** — the adoptable path around the CC BY-NC corpus at 3,149 ★. |
+| [`davidluzgouveia/kanji-data`](https://github.com/davidluzgouveia/kanji-data) | **244** | 🟢 **MIT** 1,070 B · `4c4fe92a5adf` | `master` · 2026-02-27 | 🟢 JSON kanji dataset with JLPT levels. **Default branch is `master`** — one of two rows here the pre-`884-G2` probe would have mis-read. |
+| [`AnchorI/jlpt-kanji-dictionary`](https://github.com/AnchorI/jlpt-kanji-dictionary) | 44 | 🟢 **MIT** 1,069 B · `d0ce81237400` | `main` · 🔴 2025-05-02 | 🟢 Structured kanji + vocabulary JSON by JLPT level. Second permissive corpus extract. |
+| [`StudentSuite/awesome-study-resources`](https://github.com/StudentSuite/awesome-study-resources) | 39 | 🟢 **MIT** 1,069 B · `537c697c69a5` | `main` · **2026-11-17** | 🟢 UK exam-prep resource index, pushed two days before this pass. Fork ratio `39:79` — **more forks than stars**, which is how a reference list behaves when people actually use it. |
+| [`SpiderIkun/korean-study-web`](https://github.com/SpiderIkun/korean-study-web) | 39 | 🟢 **MIT** 1,084 B · `83bd45bc2c0c` | `main` · 2026-05-18 | 🟢 TOPIK vocabulary + pronunciation tool **written in Chinese for Chinese students in Korea** — a cross-border learner segment this KB had no supply for. |
+| [`JUPASCal/JUPASCal.github.io`](https://github.com/JUPASCal/JUPASCal.github.io) | 10 | 🟢 **MIT** 1,065 B · `bf45e6d51cdf` | `main` · 2026-07-17 | 🟢 HKDSE→JUPAS **admissions** score calculator. The only admissions-tier artefact in the cohort. |
+| [`milesberry/networx`](https://github.com/milesberry/networx) | 8 | 🟢 **MIT** 1,068 B · `9cbc8ea74b49` | `main` · 2026-03-24 | 🟢 Drag-and-drop network emulator built for **GCSE and A-Level** Computer Science — teaching simulation, a tier this shelf is thin on. |
+| [`nsip/nias2`](https://github.com/nsip/nias2) | 7 | 🟢 **Apache-2.0** 11,371 B · `b0d65685ad40` | `master` · 2026-10-21 | 🟢 **National Schools Interoperability Programme's own NAPLAN validation and post-processing stack** — government-adjacent assessment infrastructure under Apache-2.0, and the row the co-term instrument destroyed (`910-G1`). |
+| [`lerlerchan/Prompt-libraries-for-Malaysia-Educators`](https://github.com/lerlerchan/Prompt-libraries-for-Malaysia-Educators) | 6 | 🟢 **MIT** 1,102 B · `9bd543a84b9a` | `main` · **2026-11-18** | 🟢 KSSR/KSSM-aligned teacher prompt library with Malaysian context (RM, local scenarios). **Malaysia's only permissive artefact**, pushed the day before this pass. |
+| [`l-yohai/suneung`](https://github.com/l-yohai/suneung) | 5 | 🟢 **MIT** 1,066 B · `fc5a26453227` | `main` · 🔴 2023-11-23 | 🟢 **LLM benchmark on the Korean CSAT (수능)** — joins `wassce-benchmark`, `pedagogy-benchmark` and `bncc-benchmark` in the eval tier. 🔴 3 years idle: a method to re-run, not a harness to depend on. |
+| [`fattaillabs/mogo-print`](https://github.com/fattaillabs/mogo-print) | 1 | 🟢 **MIT** 1,069 B · `f9479d61666b` | `main` · **2026-11-08** | 🟡 Korean mock-exam PDF trimming for A4. Trivial in scope and **named here for one reason**: paper logistics is what Korean exam prep actually spends its time on. |
+
+### 🔴 Not promoted — measured, barred, and named so no later pass re-discovers them as finds
+
+| Repo | ★ | Grant, byte-read | Verdict |
+|---|---|---|---|
+| [`5mdld/anki-jlpt-decks`](https://github.com/5mdld/anki-jlpt-decks) | **3,149** | 🔴 **CC BY-NC 4.0** 19,346 B · `3711f963c05d` (field: `NOASSERTION`) | 🔴 **NonCommercial bars the engagement, not just the distribution.** The largest artefact in the tier. |
+| [`davidzbot/singapore-primary-math-syllabus`](https://github.com/davidzbot/singapore-primary-math-syllabus) | 0 | 🔴 **CC BY-NC 4.0** 19,347 B · `41003d4a7474` (field: `NOASSERTION`) | 🔴 Machine-readable **MOE 2021 Primary Maths syllabus** — the exact shape `P22` needs, and unusable. `P29` re-authors it. |
+| [`evanclan/OpenJLPT`](https://github.com/evanclan/OpenJLPT) | 82 | 🔴 **CC BY-SA 4.0** 20,138 B · `28a9529c7d0b` | 🔴 Self-describes as *"correctly-licensed"* — and share-alike propagates. **Licence hygiene ≠ compatibility.** |
+| [`truthyblue/jlpt-max-deck`](https://github.com/truthyblue/jlpt-max-deck) | 80 | 🔴 **AGPL-3.0** 34,523 B · `0d96a4ff68ad` | 🟡 Network copyleft on a **flashcard deck**. Counsel question, not a verdict. |
+| [`stephenmk/yomitan-jlpt-vocab`](https://github.com/stephenmk/yomitan-jlpt-vocab) | 142 | 🔴 **CC BY-SA 4.0** 20,131 B · `7abe19ec9bb7` (`LICENSE.txt`) | 🔴 Share-alike. Served at **`LICENSE.txt`**, not `LICENSE` — a one-path ladder reports it ungranted. |
+| [`hlorenzi/jisho-open`](https://github.com/hlorenzi/jisho-open) | 71 | 🔴 **none** — 8-path ladder exhausted | 🔴 Largest ungranted *tool* in the tier. |
+| [`blossom-software/kanjikana-core-1000`](https://github.com/blossom-software/kanjikana-core-1000) | 4 | 🟡 **CC BY 4.0** 18,657 B · `9ba9550ad484` | 🟡 Attribution-only: usable as **content**, and it is **not a software grant**. |
+| [`obfusk/jiten`](https://github.com/obfusk/jiten) | 133 | 🔴 AGPL-3.0 (field) | 🔴 Not byte-read this pass — **recorded as unverified**, not as fact. |
+
+### 🟡 What this tier does *not* contain, stated because an unrecorded absence reads as coverage
+
+- 🔴 **No SIS, LMS or ERP.** Not one of the 255 is a platform core. The tier is exam-prep
+  applications, decks, datasets and past-paper tooling.
+- 🔴 **No agent framework and almost no agent.** `BaijayantaRoy/bandup` (Singapore essay marking)
+  and `summeraprx/topik-shortcut` (Korean OCR + NLP over real past exams, **ungranted**) are the
+  only two AI-native builds in ten markets.
+- 🔴 **India, Nigeria, Kenya, South Africa, Chile and Germany were not queried on this instrument**
+  (`CBSE`, `NCERT`, `WAEC`, `JAMB`, `KCSE`, `CAPS`, `PAES`, `Abitur`). `906-G2` named India as the
+  claim this channel would price and **it remains unpriced**.
+- 🔴 **No LATAM and no North America leg was run on this instrument.** The fourteen terms are APAC
+  and EMEA. For those two regions this pass adds **no supply evidence at all**, and the regional
+  sections of [`intel/market.md`](../intel/market.md) say so rather than implying coverage.
+
 ## `2026-11-19` (p909) — **Full two-channel census of all 345 delivery addresses. 343 alive. The shelf's licence posture measured for the first time: 68.8% permissive, 23.3% copyleft or ungranted. The star-unmeasurable class is 7 repositories, not 1. Batched `repo:` census queries are unsafe and the reason is measured.**
 
 **Channels.** `raw.githubusercontent.com` at the `HEAD` ref with a 9-path ladder (both

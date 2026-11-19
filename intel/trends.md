@@ -1387,3 +1387,53 @@ quantified outside LATAM.
 of the 201 by vehicle — education-code amendment versus standalone AI act. If education-code
 amendments are rising while standalone AI bills fall, `T33` graduates from a shape to a measured
 distribution, and the ordering in `T1` needs revisiting.
+
+## T25 — National-curriculum-aligned supply is the **inverse** of the curated open-source shelf: live, diffuse, and two-thirds ungranted (measured `p910`)
+
+🔵 **The claim this trend replaces.** Every trend above this one is about the open education tier
+that *can* be adopted — `T21`'s mature permissive grading stack, `T17`'s permissive extension
+points, `T23`'s measured permissive-but-unaddressable supply. All of them describe a **curated**
+population: `p909` measured this KB's shelf at **68.8% permissive** across 337 repositories. That
+figure is the product of 909 passes of filtering, and nothing in this file said what the tier
+underneath looked like.
+
+🔴 **Now measured.** `p910` queried fourteen national examinations — JLPT, TOPIK, suneung/CSAT,
+HKDSE, PSLE, SNBT/UTBK, KSSM/SPM, NAPLAN, GCSE, bagrut, Tawjihi — and sampled **255 distinct live
+education repositories**:
+
+| | National-exam tier | Curated shelf |
+|---|---|---|
+| Permissive | 🔴 **25.1%** | 🟢 **68.8%** |
+| **No `LICENSE` file at all** | 🔴 **63.9%** | 5.3% |
+| Zero stars | 🔴 **46%** | — |
+| Pushed since 2026-09-01 | 🟢 **29%** | — |
+
+🟢 **It is not abandoned and it is not fake.** 19 of the 255 were pushed in the seven days to
+2026-11-19, one on the day of the measurement. Students, teachers and tuition centres are building
+exam-prep software in public, continuously, in every one of these markets — **and they are not
+adding a licence.**
+
+🔴 **Three consequences a studio should price differently because of this.**
+
+1. **The exam-aligned content layer is a build, not an adoption.** In six of the eight APAC markets
+   measured, local supply is either ungranted or prompts-only. Malaysia's entire permissive
+   national-curriculum supply is **one MIT prompt library**; Jordan's is **nothing** — four live
+   Tawjihi repositories, zero licences. A bid that assumes "there will be something open for the
+   local curriculum" is wrong more often than it is right.
+2. **The restriction concentrates exactly where the value is.** The permissive artefacts are
+   *tools* and small derived datasets; every broad-coverage **corpus** found is CC BY-NC, CC BY-SA
+   or AGPL — including the largest artefact in the tier (3,149 ★, **CC BY-NC**) and Singapore's
+   machine-readable **MOE primary mathematics syllabus** (**CC BY-NC**). 🔴 **NonCommercial is a
+   different class of problem from copyleft**: copyleft constrains how you distribute, NC bars the
+   paid engagement itself. No architecture fixes it.
+3. **Discovery of this tier is an instrument problem, not a search-effort problem.** The bare
+   national-exam acronym is **63% homonym noise** (`910-F1`); one co-term takes it to 4% but
+   silently drops the institutional artefacts (`910-G1`). Teams will either find Minecraft
+   libraries or miss the government infrastructure, and both failures look like "we searched".
+
+🟢 **Where the opportunity actually is, and it follows directly from the measurement.** In these
+markets a studio is not displacing an incumbent open platform — **there is none**. The competition
+is the client's unfinished internal build. The defensible asset is the **re-authored, grant-clean
+curriculum spine** (`compose/patterns.md` **P22** for Brazil's BNCC, **P29** for the APAC exam
+tier): the one thing the open tier cannot supply here, because where a national syllabus *has* been
+published machine-readably, it was published NonCommercial.

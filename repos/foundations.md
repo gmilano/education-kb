@@ -555,6 +555,50 @@ rewrite and 159 out**. The rows below were each named in a trending-log promotio
 That is the evidence behind `T32`, and it is the reason this base reads the payload instead of the
 badge.
 
+## National-examination supply — measured `p910`
+
+🔵 **What this section is for.** Every other section of this file holds infrastructure a studio
+composes *with*. This one holds the thin permissive layer of a tier that is otherwise unusable, and
+it exists so an APAC or Israel engagement starts from measurement rather than from optimism.
+
+`p910` ran the English-metadata-plus-national-exam-term channel (`906-G2`'s named instrument) over
+**14 markets**: 11,508 nominal hits bare, 832 with a co-term, **255 distinct live education
+repositories sampled — and 63.9% of them carry no `LICENSE` at all**, against this shelf's
+68.8% permissive (`p909`). Full method, per-market ceilings and the barred list are in
+[`repos/trending.md`](trending.md) `p910`.
+
+🔴 **Read this before using anything below.** The permissive rows here are **tools and small
+derived datasets**. Every broad-coverage national-exam *corpus* found in the sweep is CC BY-NC,
+CC BY-SA or AGPL — including the largest artefact in the tier
+([`5mdld/anki-jlpt-decks`](https://github.com/5mdld/anki-jlpt-decks), 3,149 ★, **CC BY-NC 4.0**
+while GitHub's field says `NOASSERTION`) and Singapore's machine-readable MOE maths syllabus
+([`davidzbot/singapore-primary-math-syllabus`](https://github.com/davidzbot/singapore-primary-math-syllabus),
+**CC BY-NC 4.0**, same mislabel). **NonCommercial bars a paid engagement outright** — no
+architecture works around it. The curriculum spine is a **build**; `compose/patterns.md` **P29**
+is the route.
+
+| Repo | ★ | Licence (byte-read `p910`, default branch resolved from the search channel) | Last push | Role |
+|---|---|---|---|---|
+| [`tristcoil/hanabira.org`](https://github.com/tristcoil/hanabira.org) | **436** | **MIT** — `main/LICENSE`, 1,061 B, `sha256₁₂ fb81a218ce1c` | 🔴 2025-03-26 | **Self-hostable Japanese *and* Korean learning portal** — the largest permissive full application in this tier. Fork it as a base; do not depend on it (20 months idle). |
+| [`aiktb/furiganamaker`](https://github.com/aiktb/furiganamaker) | **312** | **MIT** grant text, no title line — `main/LICENSE`, 1,095 B, `sha256₁₂ a13d4cbed2ef` | 2026-10-25 | Browser-extension reading-support surface (furigana over any page). The **delivery-surface** tier of `T22`. 🟡 A title-matching licence scanner reports this repo as unlicensed; it is MIT. |
+| [`jamsinclair/open-anki-jlpt-decks`](https://github.com/jamsinclair/open-anki-jlpt-decks) | **252** | **MIT** — `main/LICENSE`, 1,071 B, `sha256₁₂ dfb974763030` | 2026-03-12 | **The only MIT deck-build pipeline in the cohort.** Generates JLPT decks rather than redistributing one, which is the adoptable path around the restricted corpora. |
+| [`davidluzgouveia/kanji-data`](https://github.com/davidluzgouveia/kanji-data) | **244** | **MIT** — `master/LICENSE`, 1,070 B, `sha256₁₂ 4c4fe92a5adf` | 2026-02-27 | JSON kanji dataset with JLPT levels and WaniKani mappings. **Default branch `master`** — read the grant on the resolved branch or you will mis-report it (`884-G2`). |
+| [`AnchorI/jlpt-kanji-dictionary`](https://github.com/AnchorI/jlpt-kanji-dictionary) | 44 | **MIT** — `main/LICENSE`, 1,069 B, `sha256₁₂ d0ce81237400` | 🔴 2025-05-02 | Structured kanji and vocabulary JSON by JLPT level, English + example sentences. Second permissive corpus extract. |
+| [`StudentSuite/awesome-study-resources`](https://github.com/StudentSuite/awesome-study-resources) | 39 | **MIT** — `main/LICENSE`, 1,069 B, `sha256₁₂ 537c697c69a5` | **2026-11-17** | UK exam-prep and study-tool index. **79 forks against 39 stars** — the usage signal of a reference list, and a cheap map of what UK learners actually reach for. |
+| [`SpiderIkun/korean-study-web`](https://github.com/SpiderIkun/korean-study-web) | 39 | **MIT** — `main/LICENSE`, 1,084 B, `sha256₁₂ 83bd45bc2c0c` | 2026-05-18 | TOPIK vocabulary, Hangul pronunciation and living-cost tooling **written in Chinese for Chinese students in Korea** — a cross-border learner segment with no other supply in this KB. |
+| [`JUPASCal/JUPASCal.github.io`](https://github.com/JUPASCal/JUPASCal.github.io) | 10 | **MIT** — `main/LICENSE`, 1,065 B, `sha256₁₂ bf45e6d51cdf` | 2026-07-17 | HKDSE → **JUPAS admissions** score calculator. The only admissions-tier artefact in the cohort; admissions is a regulated use under the EU AI Act and a high-value one in APAC. |
+| [`milesberry/networx`](https://github.com/milesberry/networx) | 8 | **MIT** — `main/LICENSE`, 1,068 B, `sha256₁₂ 9cbc8ea74b49` | 2026-03-24 | Drag-and-drop **network emulator for GCSE and A-Level Computer Science**. Teaching-simulation tier, which this shelf is otherwise thin on. |
+| [`nsip/nias2`](https://github.com/nsip/nias2) | 7 | **Apache-2.0** — `master/LICENSE`, 11,371 B, `sha256₁₂ b0d65685ad40` | 2026-10-21 | **National Schools Interoperability Programme's NAPLAN validation and post-processing infrastructure** (Australia). Government-adjacent assessment plumbing under Apache-2.0 — and it is invisible to a co-termed query (`910-G1`), because it describes itself as *validation*, not *assessment*. |
+| [`lerlerchan/Prompt-libraries-for-Malaysia-Educators`](https://github.com/lerlerchan/Prompt-libraries-for-Malaysia-Educators) | 6 | **MIT** — `main/LICENSE`, 1,102 B, `sha256₁₂ 9bd543a84b9a` | **2026-11-18** | KSSR/KSSM-aligned teacher prompt library with Malaysian context (RM, local scenarios). 🔴 **Malaysia's entire permissive supply, and it is prompts rather than software** — the market's co-termed ceiling is **2 repositories**. |
+| [`l-yohai/suneung`](https://github.com/l-yohai/suneung) | 5 | **MIT** — `main/LICENSE`, 1,066 B, `sha256₁₂ fc5a26453227` | 🔴 2023-11-23 | **LLM benchmark on the Korean CSAT (수능)**. Joins `acheamponge/wassce-benchmark`, `AI-for-Education/pedagogy-benchmark` and `bncc-dev/bncc-benchmark` in the eval tier. 🔴 3 years idle — re-run the method, do not depend on the harness. |
+| [`fattaillabs/mogo-print`](https://github.com/fattaillabs/mogo-print) | 1 | **MIT** — `main/LICENSE`, 1,069 B, `sha256₁₂ f9479d61666b` | **2026-11-08** | Korean mock-exam PDF trimming for A4 printing (macOS). 🟡 Trivial in scope, carried for one reason: **paper logistics is a real cost centre in Korean exam prep**, and no agent tier addresses it. |
+
+🔴 **What this tier does not contain.** No SIS, no LMS, no ERP, no agent framework — not one of the
+255 is a platform core. **Jordan is the first market this KB has measured as having education
+supply and zero *adoptable* education supply** (4 repositories, all ungranted, the most complete
+being a full Tawjihi question-bank platform). **India, Nigeria, Kenya, South Africa, Chile and
+Germany have not been run on this instrument**, and neither has any LATAM or North America term.
+
 ## Gaps and caveats
 
 - **`openedx/XBlock` and `openedx/xblock-sdk` exist but are not in the tables above.**

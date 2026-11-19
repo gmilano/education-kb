@@ -2385,3 +2385,136 @@ reference implementations**, not as upstreams to depend on; the agent-*skill* co
 been read** — its existence and ownership rest on the tender notice as reported by two searches,
 and **no primary source could be fetched this pass**. 🔵 **The first action on a live engagement is
 to obtain that standard**; this pattern is positioned for it, not validated against it.
+
+## P29 — National-examination tutor for a market whose *corpus* cannot be licensed: build the spine, generate the items, capture the rest from the learner (added `p910`)
+
+**Use when** the engagement is exam-outcome-driven in one of the markets `p910` measured — Japan
+(JLPT), Korea (TOPIK / suneung), Hong Kong (HKDSE), Singapore (PSLE), Indonesia (SNBT / UTBK),
+Malaysia (KSSM), Australia (NAPLAN), UK (GCSE) or Israel (bagrut) — and the client expects the
+studio to "start from what's open". 🔴 **In six of those nine markets what's open is ungranted, and
+where a national syllabus has been published machine-readably it was published
+`CC BY-NC`** (`T25`, `910-F2`, `910-F3`). This pattern is the shape that survives that fact.
+
+### 🔴 Step 0 — the exclusion list, which is the actual design decision
+
+Run `G1` first, then **bar these by name** and record the bar in the handover (`P24`):
+
+| Do **not** ingest | ★ | Grant, byte-read `p910` | Why it is fatal, not inconvenient |
+|---|---|---|---|
+| [`5mdld/anki-jlpt-decks`](https://github.com/5mdld/anki-jlpt-decks) | 3,149 | **CC BY-NC 4.0** (field: `NOASSERTION`) | The largest exam corpus in the tier. **NonCommercial bars the engagement**, and the client is paying. |
+| [`davidzbot/singapore-primary-math-syllabus`](https://github.com/davidzbot/singapore-primary-math-syllabus) | 0 | **CC BY-NC 4.0** (field: `NOASSERTION`) | The MOE 2021 primary maths spine — the exact artefact this pattern needs, and unusable. |
+| [`evanclan/OpenJLPT`](https://github.com/evanclan/OpenJLPT) | 82 | **CC BY-SA 4.0** | Self-describes as *"correctly-licensed"*. Share-alike propagates into the client's deliverable. |
+| [`stephenmk/yomitan-jlpt-vocab`](https://github.com/stephenmk/yomitan-jlpt-vocab) | 142 | **CC BY-SA 4.0** (`LICENSE.txt`) | Same, and a one-path licence probe reports it as ungranted. |
+| [`truthyblue/jlpt-max-deck`](https://github.com/truthyblue/jlpt-max-deck) | 80 | **AGPL-3.0** | Network copyleft on content. Counsel question with no upside. |
+| [`summeraprx/topik-shortcut`](https://github.com/summeraprx/topik-shortcut) | 1 | **no grant** | The only AI-native TOPIK build in existence. Cannot be forked or vendored. **Rebuild it.** |
+| [`jacoubsmairat/TawjihiQuiz`](https://github.com/jacoubsmairat/TawjihiQuiz) | 0 | **no grant** | Jordan's most complete exam platform. Same verdict. |
+
+🔵 **Say this to the client in the first week.** The exclusion list is the deliverable's warranty:
+it is why the thing you hand over can be sold, and it is cheaper to establish now than to unpick
+after an ingest.
+
+### 🟢 The stack, every row permissive and byte-verified
+
+**Spine — build, do not adopt (`P22`'s method, new market).** Re-author the exam specification from
+the examination authority's **own public documents** into your schema: objective → topic → item
+type → marking rule. Use [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) and
+[`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) as the **structural
+reference** (both already on this shelf), not as content. The client owns this artefact outright —
+it is the one piece no competitor can clone from GitHub.
+
+**Exam-rule engine — adopt, per market.**
+[`DeJavi08/cat-snbt-skd`](https://github.com/DeJavi08/cat-snbt-skd) (MIT) encodes Indonesia's CAT
+timing and scoring for SNBT/UTBK *and* the CPNS SKD;
+[`SISUBEN/DSE-ICT-Master`](https://github.com/SISUBEN/DSE-ICT-Master) (MIT) and
+[`Goodbilly/BillyStreet-HKDSE-Math-Mock-Platform`](https://github.com/Goodbilly/BillyStreet-HKDSE-Math-Mock-Platform)
+(MIT grant, 🟡 holder line reads `GitHub, Inc.` — `910-G2`, fix upstream before shipping) encode the
+HKDSE paper split. **Take the rules, expect to rewrite the UI.**
+
+**Portal base — fork.** [`tristcoil/hanabira.org`](https://github.com/tristcoil/hanabira.org)
+(MIT, 436 ★) is the only permissive full application in the tier and covers **Japanese and Korean
+in one codebase**. 🔴 20 months idle: fork it, budget the dependency upgrade, do not track upstream.
+
+**Items — generate, never redistribute.**
+[`jamsinclair/open-anki-jlpt-decks`](https://github.com/jamsinclair/open-anki-jlpt-decks) (MIT) is a
+deck **build pipeline**, which is the licence-clean inverse of a deck;
+[`davidluzgouveia/kanji-data`](https://github.com/davidluzgouveia/kanji-data) (MIT, `master`) and
+[`AnchorI/jlpt-kanji-dictionary`](https://github.com/AnchorI/jlpt-kanji-dictionary) (MIT) are the
+two permissive reference datasets. Author new items against the spine with
+[`satvik314/educhain`](https://github.com/satvik314/educhain) (MIT).
+
+**Corpus coverage — capture from the learner, which is the real answer to `910-F2`.**
+[`metrovoc/immersive-memorize`](https://github.com/metrovoc/immersive-memorize) (MIT) builds cards
+from subtitles in media **the learner already chose**. 🟢 Nothing licensed is redistributed, the
+corpus is per-learner, and coverage grows without touching a restricted deck. **This is the
+pattern's key move**: it converts a licensing dead end into a product feature.
+
+**Retention — adopt.** [`ankitects/anki`](https://github.com/ankitects/anki) +
+[`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) (both on
+this shelf) for FSRS-6 scheduling; [`warleysr/ankipa`](https://github.com/warleysr/ankipa) for
+pronunciation assessment where the exam has a speaking component (TOPIK, GCSE MFL).
+
+**Reading and marking tier — adopt the pedagogy, not the model.**
+[`Mocas-12/jlpt-n1-Yomitaku`](https://github.com/Mocas-12/jlpt-n1-Yomitaku) (MIT) carries
+**trap-classified** explanations per item type — item-level pedagogical metadata that is otherwise
+absent from open repositories, and the natural input to `P23`'s hallucination gate.
+[`BaijayantaRoy/bandup`](https://github.com/BaijayantaRoy/bandup) (MIT) carries the **Singapore
+PSLE / A-Level GP essay rubric**; take the rubric encoding even if you replace the implementation.
+
+**Delivery surface — follow `T22`.**
+[`aiktb/furiganamaker`](https://github.com/aiktb/furiganamaker) (MIT, 312 ★) is the reference for a
+browser-extension reading-support surface: the tutor meets the learner on the page they are already
+reading rather than in another portal.
+
+**Agent runtime, grounding and sovereign inference — all already on this shelf.**
+[`pydantic-ai`](https://github.com/pydantic/pydantic-ai) (MIT) or
+[`langgraph`](https://github.com/langchain-ai/langgraph) (MIT) for orchestration;
+[`HKUDS/LightRAG`](https://github.com/HKUDS/LightRAG) (MIT) +
+[`qdrant`](https://github.com/qdrant/qdrant) (Apache-2.0) to ground every answer in the
+client-owned spine; [`ollama`](https://github.com/ollama/ollama) (MIT) or
+[`vllm`](https://github.com/vllm-project/vllm) (Apache-2.0) for in-country inference, which `T6`
+records as a procurement requirement rather than a preference across this region.
+
+**Acceptance gates — non-negotiable, and they are what makes it sellable.**
+`P23`'s hallucination gate against the spine; `P7`'s evidence tier;
+[`promptfoo`](https://github.com/promptfoo/promptfoo) (MIT) as the harness; and
+[`l-yohai/suneung`](https://github.com/l-yohai/suneung) (MIT) as the **method** for an
+exam-aligned eval — it scores an LLM against a real national paper, which is the only benchmark
+shape a ministry buyer finds legible. 🔴 It is 3 years idle: re-implement the method, do not depend
+on the harness.
+
+### 🟢 Market-specific add-ons
+
+- 🇭🇰 **Hong Kong:** [`JUPASCal/JUPASCal.github.io`](https://github.com/JUPASCal/JUPASCal.github.io)
+  (MIT) models HKDSE → JUPAS admissions scoring. 🔴 Admissions is a **high-risk use** under the EU
+  AI Act and a regulated one in several APAC jurisdictions — if the engagement touches it, run
+  `P4`'s conformity track, not this pattern alone.
+- 🇦🇺 **Australia:** [`nsip/nias2`](https://github.com/nsip/nias2) (Apache-2.0) is the National
+  Schools Interoperability Programme's own NAPLAN validation and post-processing stack. **Start
+  institutional work here** — it is the one government-adjacent permissive artefact in the region.
+- 🇲🇾 **Malaysia:**
+  [`lerlerchan/Prompt-libraries-for-Malaysia-Educators`](https://github.com/lerlerchan/Prompt-libraries-for-Malaysia-Educators)
+  (MIT, KSSR/KSSM-aligned, local currency and scenarios) is the **entire** permissive local supply.
+  Pair with `P10`'s teacher-enablement track; the 2026–2035 National Education Plan is the demand
+  driver and nothing open answers it.
+- 🇮🇱 **Israel:**
+  [`peleg-jpg/israeli-bagrut-psychometric`](https://github.com/peleg-jpg/israeli-bagrut-psychometric)
+  (MIT) covers Bagrut **and** the Psychometric entrance exam, and its two-line provenance grant is
+  the model `P24` asks for.
+- 🇬🇧 **UK:** [`milesberry/networx`](https://github.com/milesberry/networx) (MIT) for GCSE/A-Level
+  Computer Science simulation;
+  [`StudentSuite/awesome-study-resources`](https://github.com/StudentSuite/awesome-study-resources)
+  (MIT, 79 forks / 39 ★) as a cheap map of what learners actually use. Sequence behind `P28` — build
+  against the UK's published standard inside the EU deferral window.
+
+### 🟡 Honest limits
+
+🔴 **Nothing in this stack is large.** Outside `hanabira.org` (436 ★), `furiganamaker` (312 ★) and
+the two deck/dataset repositories, every market-specific row is **under 10 ★ and single-author** —
+`bandup` 2 ★, `cat-snbt-skd` 1 ★, `DSE-ICT-Master` 1 ★, `edubot-backend` 0 ★. 🔵 **They are adopted
+for their *encodings*** — the exam's timing rules, paper structure and marking rubric — **not for
+their code volume or their maintenance**. Price every one as a reference implementation to be
+rewritten, and put the spine, the gates and the capture path in the quote, because that is where
+the delivered value is. 🔴 **No row in this pattern was run**: the grants were byte-read and the
+architectures were read, and nothing here has been executed against a live exam cohort. 🟡 Korea is
+the weakest leg — the capability exists only as an ungranted repository, so a Korea engagement
+starts with a rebuild and should be priced accordingly.

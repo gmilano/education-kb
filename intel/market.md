@@ -479,6 +479,25 @@ compliance surface with no procurement behind it. $169M is procurement. 🔵 **A
 has been selling AI governance to US districts should be reading FIPSE-funded institutions as the
 buyer with a budget line, and the state guidance as the specification that buyer must satisfy.**
 
+#### `p910` — explicitly no new North America evidence this pass
+
+🔴 **`p910`'s instrument was APAC- and EMEA-weighted and produced *no* North America supply
+evidence.** The fourteen exam terms run (`906-G2`'s channel — `KSSM`, `SNBT`, `UTBK`, `TOPIK`,
+`suneung`, `CSAT`, `JLPT`, `NAPLAN`, `HKDSE`, `bagrut`, `Tawjihi`, `GCSE`, `PSLE`, `SPM`) include
+**no US or Canadian term**: `SAT`, `ACT`, `AP`, `Regents`, `STAAR`, `EQAO` and `CEGEP` were **not
+queried**. This section is therefore unchanged by this pass, and that is a **gap in coverage, not a
+finding of absence**.
+
+🟡 **The one inference worth carrying, flagged as an inference.** In every market `p910` did
+measure, open national-exam supply was *hobbyist and ungranted* while the institutional tier was
+absent or government-published (Australia's `nsip/nias2`, Apache-2.0). The US has the largest
+state-level standards apparatus in this file (`T11`, and the Education Commission of the States'
+April 2026 guidelines) **and** the most mature open assessment infrastructure already on this
+KB's shelf (`PrairieLearn`, `Submitty`, `edx-ora2`, `otter-grader`, `nbgrader`). 🔵 **If the pattern
+holds, the US gap is not tooling but *alignment artefacts* — machine-readable state standards —
+and that is testable with an `SAT`/`AP`/`STAAR` run of this instrument.** Registered as the
+highest-value North America probe for a later pass; **not asserted here**.
+
 ### EMEA
 
 🟢 **Promoted in `p902` — four facts held only in the log until now** (see `902-F1`; the
@@ -1195,6 +1214,35 @@ leads with the failed query attached. 🔵 Poland and France are the two largest
 cells on this file's register; the next pass should run them in **Polish** and **French**, since
 `p576` and `p374` both found that national-language press is where this material lives.
 
+#### `p910` — national-examination supply in EMEA: two markets measured, one first-ever row
+
+🔵 `p910`'s instrument (`906-G2`, see [`repos/trending.md`](../repos/trending.md) `p910`) was run
+on two EMEA exam systems. It is **not** a regional survey — Germany (`Abitur`), France, the Gulf
+and all of Africa were **not queried on this channel** — and the two results point in opposite
+directions:
+
+- 🇬🇧 **United Kingdom — `GCSE`: 2,636 nominal hits, 358 co-termed, and the tier is consumer-grade.**
+  The top result by stars on `GCSE revision` is a **bookmarklet-hacks-for-school** repository
+  (182 ★). The permissive finds are a resource index
+  ([`StudentSuite/awesome-study-resources`](https://github.com/StudentSuite/awesome-study-resources),
+  MIT, 79 forks against 39 stars) and a **GCSE/A-Level network emulator**
+  ([`milesberry/networx`](https://github.com/milesberry/networx), MIT) built by a teacher. 🟡 The UK's
+  open GCSE supply is pupils and teachers building revision aids, not institutions building
+  platforms — which is consistent with `T9`: the buyer here has written a procurement spec, and the
+  open tier has not answered it.
+- 🇮🇱 **Israel — `bagrut`: 332 nominal hits, 27 co-termed, and this KB's first Israel-origin row.**
+  [`peleg-jpg/israeli-bagrut-psychometric`](https://github.com/peleg-jpg/israeli-bagrut-psychometric)
+  (MIT) covers both the **Bagrut** matriculation and the **Psychometric** entrance exam. 🟢 Its
+  licence is the only **provenance-aware grant** this tree has found in the wild — two copyright
+  lines, one for the upstream contributors and one for the packager's "security vetting and
+  distribution" — which is exactly what `P24`'s handover tier argues a client should receive. 🟡
+  The rest of the Israeli cohort is student final projects: real, live, and almost all ungranted.
+
+🔴 **Declared, not implied: `DigComp 3.0` is still unreadable from this environment.**
+`ec.europa.eu` and `digital-skills-jobs.europa.eu` both returned `connect_rejected` from the egress
+proxy when re-tested on 2026-11-19. Third consecutive pass. The EU AI-literacy framework remains a
+**gap in this file, not a fact in it**.
+
 ### APAC
 
 🟢 **Promoted in `p902` — two convening facts, plus the region's one dataset-scale supply row**
@@ -1770,6 +1818,34 @@ ambition only**, and one reported explicitly that it found nothing on adoption i
 schools. 🔵 Every APAC opportunity above is therefore inferred from **instruments**, not from
 measured usage, and should be presented to a client that way.
 
+#### `p910` — the national-examination supply floor, market by market
+
+🔵 **New instrument, APAC-weighted.** `p910` ran the English-metadata-plus-exam-term channel
+(`906-G2`) across eight APAC markets. This is the first time this file can price *local* supply per
+market instead of reasoning from regional adoption statistics. Method and caveats:
+[`repos/trending.md`](../repos/trending.md) `p910`. Counts are nominal GitHub hits (exact);
+posture figures are a top-25-by-stars sample (`910-G3`).
+
+| Market | Exam | Bare / co-termed hits | Adoptable local supply | What to assume in a bid |
+|---|---|---|---|---|
+| 🇯🇵 Japan | `JLPT` | 3,446 / 360 | 🟡 **Tools yes, corpora no** — 5 MIT tools incl. `hanabira.org` (436 ★) and `furiganamaker` (312 ★) | Adopt the tooling; **the deck corpora are CC BY-NC / BY-SA / AGPL**, so generate or capture per learner |
+| 🇰🇷 Korea | `TOPIK`, `suneung` | 3,008 / 15 | 🔴 **One MIT benchmark, one *ungranted* agent** | The only AI-native TOPIK build (`topik-shortcut`) has **no licence** — budget a rebuild |
+| 🇬🇧→🇭🇰 Hong Kong | `HKDSE` | 307 / 17 | 🟡 3 MIT applications, all ≤1 ★ | Subject-scoped mocks + a JUPAS admissions calculator exist; **institutional tier does not** |
+| 🇮🇩 Indonesia | `SNBT`, `UTBK` | 923 / 36 | 🟡 One MIT CAT engine (`cat-snbt-skd`) | The **exam rules** are encoded locally and worth adopting; everything else is build |
+| 🇸🇬 Singapore | `PSLE` | 286 / 10 | 🟡 One MIT agent (`bandup`, essay marking) | 🔴 **The MOE syllabus dataset is CC BY-NC** — the curriculum spine cannot be adopted (**P29**) |
+| 🇦🇺 Australia | `NAPLAN` | 140 / 3 | 🟢 **Apache-2.0 government-adjacent infrastructure** (`nsip/nias2`) | The strongest institutional artefact in the region; validation plumbing is already open |
+| 🇲🇾 Malaysia | `KSSM` | 165 / **2** | 🔴 **Prompts only** — `Prompt-libraries-for-Malaysia-Educators` (MIT) | Ceiling is **2 repositories**. Assume nothing local to adopt; the 2026–2035 National Education Plan creates the demand and no supply answers it |
+| 🇯🇴 Jordan | `Tawjihi` | 228 / 4 | 🔴 **None — all four ungranted** | **First market in this KB with education supply and zero adoptable supply.** Everything is build |
+
+🟢 **The opportunity this creates, stated as a sales position rather than a lament.** In six of
+these eight markets the exam format is public, the demand is state-driven, and the open supply is
+**unlicensed hobby code**. A studio that arrives with a licence-clean, re-authored curriculum spine
+and a governed agent tier is not competing with an incumbent open platform, **because there is
+none** — the competition is the client's own unfinished internal build. 🔴 The converse is the
+risk: a delivery team that greps GitHub for "KSSM" or "SNBT" will find Kotlin state machines and
+Minecraft serialisation libraries (`910-F1`), and a team that finds the real repositories will find
+no grant on two-thirds of them.
+
 ### LATAM
 
 🟢 **Promoted in `p902` — two facts held only in the log** (method: `902-F1`):
@@ -2277,6 +2353,23 @@ risk compliance, which is `T1`.
 rates — was returned by the regional leg, which raised the gap as its own caveat. Peru's **17**
 bills and Argentina's **63** measure legislative *activity*, not classrooms.
 
+#### `p910` — explicitly no new LATAM evidence this pass
+
+🔴 **No LATAM term was run on `p910`'s instrument.** The pass covered fourteen APAC and EMEA
+national examinations; **`PAES` (Chile), `ICFES` (Colombia), `EXANI` (Mexico), `ENEM` (Brazil) and
+`PSU`/`UBA` entrance routes were not queried on this channel.** Nothing in this section was
+measured or revised by this pass, and the silence is recorded rather than left to look like
+coverage.
+
+🟡 **What stands from earlier passes, unchanged and still the operative position:** `p904` measured
+**Mexico** as the largest supply-side hole in this KB (`EXANI examen` → 0 ★ ceiling, no
+Mexico-origin education repository in 26 Spanish/Portuguese queries), and `bncc-dev` remains the
+reference specification for a curriculum spine anywhere in the region. 🔵 `p910`'s Singapore
+finding **sharpens why that matters**: the one market in this pass with a machine-readable national
+syllabus published it under **CC BY-NC**, which is unusable in a paid engagement. A studio that
+holds a re-authored, grant-clean BNCC spine (`P22`) holds the thing that six of this pass's eight
+APAC markets lack entirely — and that is a **LATAM-built asset sellable outside LATAM**.
+
 ### Global
 
 Cross-regional plays that do not depend on one jurisdiction.
@@ -2372,6 +2465,37 @@ adds two more disagreeing figures and no new primary source.**
 
 ## Declared gaps
 
+- 🟢 **`p910` PARTIALLY DISCHARGED `906-G2`, the English-metadata channel this file has carried as
+  "the highest-value remaining instrument" since `p906` — and the instrument needed fixing before
+  it worked.** Fourteen national-examination terms with no prior occurrence anywhere in this tree
+  were queried: **11,508 nominal hits bare, and 63% of the sampled rows are homonyms** (`SNBT` is
+  Minecraft's serialisation format, `KSSM` is a Kotlin state-machine library, `TOPIK` is topic
+  modelling, `PSLE` is `psleep`). Adding one co-term takes the collision rate to **4%** and the
+  nominal count to 832. 🔴 **But the co-term has a measured recall cost** (`910-G1`): the best
+  institutional row of the pass — `nsip/nias2`, Apache-2.0, Australia's NAPLAN validation
+  infrastructure — appears **only on the bare term**, because infrastructure describes itself as
+  *validation*, not *assessment*. **The channel must be run both ways, and the bare run must be
+  read rather than filtered.**
+- 🔴 **`906-G2` is NOT fully discharged, and the part left undone is the part it was raised for.**
+  It named India as the claim this instrument would price. **`CBSE` and `NCERT` were not run on the
+  co-term instrument** (they appear in this tree from earlier passes through other channels), and
+  neither were **Nigeria** (`WAEC`, `JAMB`), **Kenya** (`KCSE`), **South Africa** (`CAPS`,
+  `matric`), **Chile** (`PAES`), **Mexico** (`EXANI`, still the largest hole — `p904`), **Brazil**
+  (`ENEM`), **Germany** (`Abitur`) or any **US/Canada** term (`SAT`, `AP`, `STAAR`, `Regents`,
+  `EQAO`). **India remains unpriced. North America and LATAM have no supply evidence from this
+  instrument at all**, and the regional sections above say so explicitly rather than staying silent.
+- 🔴 **New gap `910-G4` — `NOASSERTION` resolved to NonCommercial twice out of two byte-reads in
+  this tier, and this file has no idea how common that is.** Both reads were CC BY-NC 4.0 — the
+  3,149 ★ `5mdld/anki-jlpt-decks` and Singapore's machine-readable MOE maths syllabus. 🔵 This tree
+  has catalogued `NOASSERTION` as *"requires a byte-read"* since `p906`; it has never recorded what
+  the bytes **say**. **Unaudited: the 29 `NOASSERTION` rows in the curated shelf** (`p909`'s
+  census) — how many of those are NonCommercial rather than merely unlabelled? **NC bars the
+  engagement, not just the distribution**, so if even one shelf row is NC it is a worse defect than
+  any licence finding in this file to date. This is the highest-value audit outstanding.
+- 🔴 **New gap `910-G3` — the 255-repository posture figures are a sample, not a census.** The sweep
+  took the **top 25 by stars per term**, and **46% of the cohort has zero stars**, so the sort is
+  close to arbitrary over most of the tier. The nominal counts (11,508 / 832) are exact; the
+  63.9%-ungranted figure is a sample statistic and must not be quoted as a census.
 - 🟢 **`p906` closed the language-channel gap this file has carried since `p903` — all eight
   declared-untried channels were run, and the answer is a shape, not a list.** `p903` left "Urdu and
   Indonesian untried"; `p904` widened it to "Hindi, Vietnamese, Thai, Japanese, Korean and Mandarin"

@@ -394,6 +394,32 @@ hosts are outside this session's allowed network domains. **No primary-source ch
 so every figure in this section rests on search snippets and is labelled with how many
 independent searches carried it. Nothing here was promoted to a table row.
 
+## National-examination delivery platforms — added `p910`
+
+🔵 **Why these are here and not in `repos/foundations.md`.** They are *applications a client can
+stand up*, not libraries to compose with. 🔴 **And the honest framing first: this is the weakest
+platform tier in this file.** `p910` measured the national-exam channel across 14 markets and
+found **no SIS, no LMS and no exam platform of institutional scale** — 255 live repositories,
+63.9% with no `LICENSE` at all, 46% with zero stars (see [`repos/trending.md`](../repos/trending.md)
+`p910`). The four rows below are the permissive applications that exist. They are small. Their
+value is that the **national exam format is already encoded in them**, which is the part a studio
+would otherwise spend a discovery phase reconstructing.
+
+| Platform | Repo | Licence (byte-read `p910`) | ★ · last push | Where it is strong | AI layering seam |
+|---|---|---|---|---|---|
+| **hanabira.org** | https://github.com/tristcoil/hanabira.org | 🟢 **MIT** — `main/LICENSE`, 1,061 B, `sha256₁₂ fb81a218ce1c` | 436 ★ · 🔴 2025-03-26 | **Self-hostable Japanese *and* Korean learning portal**: vocabulary, grammar, reading, spaced review. Self-hosting is a stated goal, so the deployment story is already written — and it covers **two** national-exam markets (JLPT, TOPIK) in one codebase. | 🟢 The grammar and reading surfaces are where a tutor agent attaches; the review scheduler is where `fsrs4anki`'s FSRS-6 replaces whatever is built in. 🔴 **20 months idle** — treat as a fork base and budget the upgrade, not as a maintained upstream. |
+| **cat-snbt-skd** | https://github.com/DeJavi08/cat-snbt-skd | 🟢 **MIT** — `main/LICENSE`, 1,077 B, `sha256₁₂ e6e7edb3e2b8` | 1 ★ · 2026-09-03 | **CAT (Computer-Assisted Test) simulator for Indonesia's SNBT/UTBK *and* the CPNS civil-service SKD** — the two highest-stakes exams in the country, in one delivery engine with the real timing and scoring rules. | 🟢 The item bank is the seam: keep the CAT engine, feed it generated items, and add explanation generation on review. 🟡 1 ★ — adopt the **exam-rule encoding**, expect to rewrite the UI. |
+| **DSE-ICT-Master** | https://github.com/SISUBEN/DSE-ICT-Master | 🟢 **MIT** — `main/LICENSE`, 1,065 B, `sha256₁₂ c20159ff7a53` | 1 ★ · 🔴 2025-12-17 | **HKDSE ICT** study platform with paper-structured practice. Hong Kong's co-termed ceiling is 17 repositories; this is the one with a grant and a platform shape. | 🟢 Subject-scoped, so it is a template: the DSE paper structure generalises across subjects once the item source is swapped. |
+| **BillyStreet HKDSE Math Mock** | https://github.com/Goodbilly/BillyStreet-HKDSE-Math-Mock-Platform | 🟡 **MIT grant text, 1,059 B, `sha256₁₂ cd35957e7f35` — but the copyright holder line reads `GitHub, Inc.`** (`910-G2`) | 0 ★ · 🔴 2025-11-17 | **HKDSE Mathematics Paper 1 / Paper 2 mock platform** — the exam's two-paper split encoded in the delivery flow. | 🟡 The grant is MIT and the named licensor is a company that does not own the work — an unedited template default. Usable in substance; **expect counsel to stop on it**, so get the holder line corrected upstream before it goes into a client build. |
+
+🔴 **Barred, and named so the absence is not read as coverage.** Jordan's most complete Tawjihi
+platform ([`jacoubsmairat/TawjihiQuiz`](https://github.com/jacoubsmairat/TawjihiQuiz) — full
+question-bank management) carries **no licence file**, and neither do the two Malaysian KSSM
+applications. Singapore's machine-readable **MOE 2021 Primary Mathematics syllabus**
+([`davidzbot/singapore-primary-math-syllabus`](https://github.com/davidzbot/singapore-primary-math-syllabus))
+is **CC BY-NC 4.0** while GitHub's field says `NOASSERTION` — **NonCommercial, so it is barred from
+a paid engagement**, and the syllabus spine must be re-authored (`compose/patterns.md` **P29**).
+
 ## Honest gaps
 
 - **Unlicensed content corpora are the biggest trap in this category (added p891).** The largest
