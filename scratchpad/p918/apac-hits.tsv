@@ -1,0 +1,192 @@
+leg_id	slug	stars	spdx	pushed_at	description
+ZH1	ophiraShen/EasyDS	43	NONE	2025-05-23	EasyDS是一款创新型AI教育系统，专为考研数据结构学习设计。系统采用费曼学习法，通过多智能体协同教学模式，实现深度交互式学习体验。不同于传统"问答式"AI辅导，EasyDS引导学生主动讲解题目，智能体根据学生表现动态调整教学策略，形成"讲解-反馈-修正-强化"的学习闭环，有效提升学习效果。
+ZH1	EduAgentX-Remake/EduAgentX-BackEnd	31	NONE	2025-11-16	基于Spring AI + LangGraph4j 工作流 + RAG 知识库 + Redis 高并发优化 + Dubbo微服务架构（7个独立服务）/单体架构+ Higress 云原生网关的教育智能体平台
+ZH1	abaiar/OmniAI-Edu	17	NONE	2026-09-05	OmniAI Edu 是一款面向人工智能通识教育的一站式实践平台，围绕 学知识、看效果、动手做、得反馈 四大核心模块构建完整的学习闭环。平台深度集成 OpenMAIC 多智能体互动课堂引擎，并内置手写数字识别、AI 智能出题与判分、学习数据分析等功能，为 AI 通识教育提供从理论到实践的全链路支持。
+ZH1	ggjinyu68986/AI-Shool-Counselor	10	NONE	2025-09-09	AI辅导员智能体系统是一个基于腾讯云智能体开发平台构建的多智能体协作教育辅导平台。系统通过主智能体进行智能意图识别和任务分发，结合五个专业智能体（学情分析、职业测评、学习规划、资源推荐、通用对话），为学生提供全方位的个性化教育服务。
+ZH1	shentuk/mooc-manus-edu	10	NONE	2026-04-16	EduManus 是基于 MoocManus 定制的教学领域多智能体协作系统。它将通用 AI Agent 能力聚焦于教育教学场景，为教师提供课程规划、作业批改、答疑辅导、学习分析、试题生成等智能化教学辅助服务。 系统支持完全私有化部署，使用 A2A（Agent-to-Agent）+ MCP（Model Context 
+ZH1	cxkzai/ai-admissions-platform	5	MIT	2026-07-02	AI-Admissions Platform 是一个面向中小教培机构（**V1 聚焦 K12 少儿编程教育**）的 AI 招生顾问平台，通过多角色智能体 + RAG 知识库 + 自动化工作流，覆盖"线索获取 → 需求挖掘 → 试听转化 → 老带新裂变"招生全链路，让一个招生主管 + 一线顾问的团队效能翻倍。
+ZH1	Cathy-wang132/Computer-Network-Security-Q-A-Dataset	5	NONE	2025-05-27	本数据集共包含1788条关于计算机网络安全的问答数据，采用Excel格式整理，内容涵盖了网络协议、防火墙、攻击防护、加密技术、网络安全架构、常见网络攻击手法及其防御措施等领域。数据精炼专业，适用于AI大模型训练、智能体知识库构建、安全教育系统开发等多种场景！
+ZH1	leafmove/AutoBox	3	NONE	2026-09-09	叶动智能体，为科研教育打造的桌面AI驾驶舱，AI钥匙必须掌握在人类手中
+ZH1	Lu-Yu-Zhen/KongMeng-Agent	3	Apache-2.0	2026-10-13	面向中小学教育的 AI 智能体双端桌面应用：学生端（KongMeng-Student）+ 教师端（备课智能体），基于 Electron 与 LangGraph，附学生端-云端-教师端同步演示原型
+ZH1	byte-love/eduverse	3	NONE	2026-05-28	🚀 基于 Spring AI 多智能体协作的在线教育微服务平台 | 5 大 AI Agent（路由/推荐/咨询/购买/知识辅导）协同工作 | Spring   Boot 3 + Spring Cloud 微服务架构 | 覆盖课程管理、Elasticsearch 搜索、学习追踪、积分体系、支付结算全业务闭环 | 生产级 
+ZH1	123L-svg/smart-education-agent	2	NONE	2026-09-06	智慧教育多Agent问答辅助系统：基于 Spring Cloud Alibaba + Spring AI 的多智能体在线教育问答平台
+ZH1	shibocao797-max/intellilearn-agent-platform	2	MIT	2026-11-11	智学协同教育智能体平台：面向学习场景的 AI 多智能体系统，支持意图调度、学习资源生成与 SSE 实时推送。
+ZH1	jiukai/Statistical-Analysis-Skills-with-WorkBuddy	2	NOASSERTION	2026-05-09	WorkBuddy AI Skills for Stata-run, python-run, and Time Series Analysis - 面向经管科研的统计软件AI教育智能体技能包
+ZH1	NissonCX/EduGenius	2	MIT	2026-03-17	AI 自适应教育平台，基于 LangGraph 多智能体教学、RAG 文档学习与 Next.js/FastAPI 全栈实现。
+ZH1	quiet-sys/AInoAgentAcademy	2	MIT	2026-07-29	基于大模型与多智能体协同的 AI 沉浸式个性化学习平台。涵盖对话式画像构建、多智能体资源生成、算法可视化、代码沙箱判题及 LangGraph 智慧课堂，打造从方向选择到学习总结的完整教育闭环。
+ZH1	LXaowei/AI-Self-Study-Abroad	2	NONE	2025-12-18	专为意向留学的本科生及家长打造的自主留学管家，我们打破传统中介高收费、信息不透明的痛点，以“教育平权”为核心理念，通过专属智能体支持+轻量化增值服务，让留学申请更透明、高效、低成本。   平台依托四个核心智能体覆盖全周期需求：从大一成长规划到大四申请落地，通过留学方案推荐智能体完成选校定位，借助文书生成智能体准备申请材
+ZH1	coscatld/MathTutor	2	Apache-2.0	2026-11-18	MathTutor（数迹）— 开源数学教育智能体，融合苏格拉底式分级引导、可验证数学推理与学习过程追踪，构建“独立尝试—分级引导—迁移验证—学情更新”的个性化教学闭环。An open-source AI math tutor with verifiable reasoning, adaptive guidance, a
+ZH1	Cathy-wang132/Short-Bedtime-Stories-Dataset	2	NONE	2025-04-15	本数据集包含了5万条简短的睡前小故事，格式为Excel，适用于AI大模型训练、智能体知识库构建等多种应用场景。故事内容简洁、富有趣味，适合用于儿童教育、情感陪伴以及故事推荐系统的开发等！
+ZH1	x2825641378-art/studentCode	2	NONE	2026-08-28	超星杯“AI+教育”创新应用大赛——在工业4.0与新质生产力全面爆发的2026年，信息技术（IT）与运营技术（OT）的深度融合正重塑制造业的岗位图谱。随着AI智能体（Agent）技术的普及，未来工程师的核心职能将从基础的工具执行者，转变为“智能体管理者”与系统规划者。 然而，当前大学生在面临产业结构剧变时，普遍存在“技
+ZH1	infinitytom/wuli-physics-tutor	2	MIT	2026-10-23	一个不给答案的物理辅导智能体后端。  学生把题目和自己的想法发进来，它不讲解、不给步骤，而是先判断这一轮里**第一处会阻断后续推理的认知断点**在哪，然后只针对那一处提一个问题。学生说对了就往前推，说错了就换个角度再问一次。全程只用最小的帮助，直到学生自己走完。  这套东西原本是为一篇教育硕士论文做的实验平台——要在真
+ZH1	GeWu-academy/lianqianyan	1	NOASSERTION	2026-10-14	ai智能体加教育领域
+ZH1	huang2006-hiker/CUEB-AI	1	Apache-2.0	2026-03-27	CUEB生活学习教育方面的智能体
+ZH1	Mryushi/edu-agent	1	NONE	2026-06-10	AI驱动的教育辅导智能体平台 | LangGraph + Next.js + Milvus + mem0
+ZH1	wesley442/interactive-edu-skills	1	MIT	2026-10-26	面向本地智能体和 AI 教学页面的互动教育技能库
+ZH1	wxxxqcy/ai-learning-assistant	1	NONE	2026-09-11	教育智能体端到端评测框架，支持有状态环境、工具调用、策略与安全评测及回归测试。
+ZH2	liyupi/ai-code-helper	769	NONE	2025-07-10	2025 年 AI 编程助手实战项目（作者：程序员鱼皮），基于 Spring Boot 3.5 + Java 21 + LangChain4j + AI 构建智能编程学习与求职辅导机器人，覆盖 AI 大模型接入、LangChain4j 核心特性、流式对话、Prompt 工程、RAG 检索增强、向量数据库、Tool Ca
+ZH2	HoYeeco/TutoringSys	3	NONE	2026-06-05	Scoututor：基于大模型的智能作业批改与辅导系统
+ZH2	777nx/ai-code-helper	3	NONE	2025-07-15	2025 年 AI 编程助手实战项目，基于 Spring Boot 3.5 + Java 21 + LangChain4j + AI 构建智能编程学习与求职辅导机器人，覆盖 AI 大模型接入、LangChain4j 核心特性、流式对话、Prompt 工程、RAG 检索增强、向量数据库、Tool Calling 工具调用
+ZH2	hedaiyu-site/Python_ITS_Based_on_KGLLM	2	GPL-3.0	2026-04-21	“基于知识图谱与大模型的Python智能学习辅导系统”毕设项目，坚持每周更新
+ZH2	DanoAndHolidays/cnsoftbei	2	NONE	2026-06-27	它是一个 AI 驱动的个性化学习平台，通过多智能体协作（画像构建、资源生成、路径规划、智能辅导、学习评估）提供学习支持。前端使用 React + TypeScript + Vite + Ant Design，后端调用 MiniMax-M2.7 大模型（兼容 Anthropic API 格式）。
+ZH2	suxiangyu138/AI-Smart-Teaching-Agent-Platform	2	MIT	2026-09-13	K12+大学 数学 RAG 智能辅导平台 — 多模型聚合 · 深空玻璃拟态 · 对话历史 · 思考可视化  6 家大模型 · 四层学段适配 · PDF 知识库 · LaTeX 渲染 · 流式平滑输出 · 思考过程折叠
+ZH2	liyu-1028/jobhunter	2	MIT	2026-08-03	🚀 JobHunter 岗位智能匹配与招考直通车：DeepSeek 大模型 + Serper/Tavily/Bing/牛客多源真实搜索，支持岗位多维匹配、245 央国企校招直通车、全国高校辅导员招聘聚合与 Windows 单文件 EXE 部署
+ZH2	daliulian585/shu-xiao-ban-math-tutor	2	MIT	2026-04-24	数小伴 - 中职数学教学智能体，帮助中职学生将数学知识与专业场景连接。 特色：苏格拉底式教学、28个专业场景库、教师辅助系统。 技术栈：豆包大模型、LangChain、Coze智能体平台。 应用场景：课后辅导、课前预习、教师备课、分层出题。
+ZH2	Yan-0914/xiaoan	2	NONE	2026-07-30	「小安」校园灾害应急智能体 —— 基于 ReAct Agent 架构的全栈校园安全 AI 解决方案。集预防-演练-预警-求救于一体：AI 辅导员支持多模态交互，5类灾害沉浸式演练，实时天气预警，一键SOS求救。技术栈：Next.js 14 全栈 + 火山引擎 ARK 大模型 + ReAct Agent + RAG + 
+ZH2	ccc330/curriculum-driven-learning-tutor	1	MIT	2025-08-17	一个基于大模型的智能学习辅导系统，采用"提问-引导-讲解-答疑"的教学模式
+ZH2	LGY4/ai-personalized-learning-agent-system	1	MIT	2026-05-09	基于大模型的个性化资源生成与学习多智能体系统：支持学生画像、学习路径规划、资源生成、题库生成、智能辅导与质检 Agent 协作。
+ZH2	ye-kaifan/statphys_assistant	1	NONE	2025-12-16	通用大语言模型在物理学等高度专业化领域的能力不足，是我们亟待攻克的智能鸿沟。为此，我们倾力打造统计物理助教大模型，旨在彻底革新物理系师生的教学与学习体验！我们首先借助物理能力顶尖的Gemini 2.5 Pro，海量生成统计物理各个层面的思维链（CoT）数据集，构建了模型智能的基石；随后对Qwen3-1.7B模型进行Lo
+ZH2	imfinefku/examination-ai	1	NONE	2026-10-09	青云智能考试系统在传统题库管理、组卷、考试、阅卷、成绩统计等核心功能的基础上，深度融合大语言模型 与 RAG（检索增强生成）技术，打造出会出题、会阅卷、会分析、会辅导的 AI 辅助能力。  系统覆盖教师、学生、管理员三类角色：教师通过自然对话即可完成命题组卷与考试编排，学生获得个性化错题讲解与针对性练习，管理员实现全流
+ZH2	JavaDataSource/ai-code-helper	1	NONE	2026-11-02	AI编程助手实战项目，基于 Spring Boot 4 + Java 21 + LangChain4j + AI 构建智能编程学习与求职辅导机器人，覆盖 AI 大模型接入、LangChain4j 核心特性、流式对话、Prompt 工程、RAG 检索增强、向量数据库、Tool Calling 工具调用、MCP 模型上下文
+ZH2	huih3508-spec/rag-program-tutoring-system	0	NONE	2026-06-27	基于 RAG 的编程智能辅导系统，SpringBoot3+Milvus 实现大模型幻觉抑制、流式对话与用户额度管控
+ZH2	XingGuang111/MathGuide	0	NOASSERTION	2026-11-05	基于本地轻量大模型的小学数学启发式错题辅导系统。拍照搜题 → 智能分析 → 逐步引导学生自主思考，而不是直接给答案。
+ZH2	r32114094-art/Career-Assistant	0	NONE	2026-04-23	GenAI Career Assistant 是一个基于 LangGraph 构建的生产级人工智能职业代理（Agent）系统。它采用 DeepSeek 大模型为核心大脑，集成了 SerpAPI 联网搜索能力与动态时间上下文。该项目能够智能路由目标，为用户提供涵盖生成式 AI 领域的技术学习知识库、简历修改与评审、模拟面
+ZH2	down812/smart	0	NONE	2026-05-20	“智辅知行”是一款基于DeepSeek大模型与RAG技术的AI辅导员平台，面向高校场景，通过私有化部署保障数据安全，解决信息查询低效、辅导员事务负担重、交互体验差等痛点。平台提供智慧问答（支持多轮对话）、校园预览、用户反馈闭环及关键词可视化分析等核心功能，覆盖PC端与小程序，实现“服务-反馈-优化”的智能化生态。作品以
+ZH2	whatYouWaitFor/ai-code-assistant	0	NONE	2026-05-06	基于 Spring Boot 3.5 + Java 21 + LangChain4j + AI 构建智能编程学习与求职辅导机器人，覆盖 AI 大模型接入、LangChain4j 核心特性、流式对话、Prompt 工程、RAG 检索增强、向量数据库、Tool Calling 工具调用、MCP 模型上下文协议、安全防护、V
+ZH2	Raint-s/ai-code-helper	0	NONE	2025-11-02	基于 Spring Boot 3.5 + Java 21 + LangChain4j + AI 构建智能编程学习与求职辅导机器人，覆盖 AI 大模型接入、LangChain4j 核心特性、流式对话、Prompt 工程、RAG 检索增强、向量数据库、Tool Calling 工具调用、MCP 模型上下文协议、Web 爬虫
+ZH2	cindy-design/AI-Code-Helper	0	NONE	2026-03-29	本项目基于 Spring Boot 3.5 + Java 21 + LangChain4j + AI 构建智能编程学习与求职辅导机器人，覆盖 AI 大模型接入、LangChain4j 核心特性、流式对话、Prompt 工程、RAG 检索增强、向量数据库、Tool Calling 工具调用、MCP 模型上下文协议、Web
+ZH2	suxiaoluo1/---	0	NONE	2026-05-23	我构建了一个面向《软件项目管理》课程的多模态个性化学习助手，目标是解决学生在课程学习中“资料分散、提问缺少上下文、练习反馈滞后、教师难以及时掌握学情”的问题。系统采用 Streamlit + FastAPI + MySQL 架构，结合本地 Ollama qwen2.5vl:7b 多模态大模型、ChromaDB 向量库和
+ZH2	xull0924/CrewAI_resume	0	NONE	2026-03-28	基于 CrewAI 多智能体框架搭建一站式求职辅导系统，设计岗位研究员、简历优化师、模拟面试官三大角色，实现岗位分析、简历优化、模拟面试全流程自动化；通过 Streamlit 搭建交互界面，支持用户输入求职意向与技能信息并实时展示执行状态与结果；集成自定义岗位检索工具与简历知识库工具，实现基于关键词匹配的模拟 RAG 
+ZH3	zhangjiarui530/OpenEduECNU	90	Apache-2.0	2024-04-15	专为AIPC设计，致力于打破传统教育的局限，通过一个集成化的本地大模型应用平台，提供AI助教、互动问答、智能出题、教学大纲与思维导图生成 以及代码助手功能等个性化学习与教学体验，为学生与教师创造前所未有的教学与学习体验。
+ZH3	GitHubDaily/AI-Course-Generator	36	MIT	2025-11-01	基于讯飞星辰 Agent 开源平台构建的 AI 教育工具，帮助教师快速生成课程大纲和教学内容。
+ZH3	CreatureK/Teaching-Assistance	20	NONE	2026-03-02	2025软件课程设计——基于 Spring Boot 3 + Vue 3 的 AI 辅助教学平台。集成通义千问大模型，支持课程介绍、教学目标、大纲及讲义的智能生成与编辑，提供完善的教师端与管理后台。
+ZH3	jetyu/Dawn	14	Apache-2.0	2025-07-20	基于 Spring Boot 和 Vue.js 的现代化智能教育平台，集成了 AI 辅助教学功能，旨在为教育工作者和学生提供更高效、更智能的教学体验。
+ZH3	gdemoni/EduAvatar	11	NOASSERTION	2026-08-13	EduAvatar是一个课程教学数字人系统，将大语言模型（LLM）、检索增强生成（RAG）、语音合成（TTS）和数字人面部渲染技术融为一体，实现一个能讲课、会答疑、带表情的 AI 智能助教。  用户对着麦克风说话提问，系统自动识别语音，通过 LangGraph 智能 Agent 分析意图、检索课程知识库，生成口语化回答
+ZH3	Siilyb/PTAjs	8	NONE	2026-03-31	自动识别题型，支持判断、单选、函数、编程题。可配置自动切换题型。支持PTA Pintia 程序题 自动答题 ai答题 程序设计类实验辅助教学平台 拼题A
+ZH3	SNOOPY-alt/heuristic-learning-system	6	MIT	2025-05-04	启发式智能导学系统 - 基于 Dify 平台的 AI 辅助教学系统
+ZH3	hapince-code/AI-EduForge	6	MIT	2026-05-11	AI辅助教学平台 EduForge 是一个面向中小学教师的 AI 教学资源生成平台，支持教学 PPT、React 交互课件、PDF 试卷、课本资源库和开发者 API。
+ZH3	homoalien/AIEDU	5	NONE	2025-04-27	2025年-中国大学生计算机设计大赛-微课与AI辅助教学-基于虚拟助教的"人工智能通识课"交互式学习平台
+ZH3	uczltw6/course-tutor	5	MIT	2026-04-23	 AI课程助教工作台 — 蒸馏老师教学风格，本地预处理省token
+ZH3	MathMindCanvas/MathMind	5	MIT	2026-02-26	MathMind Canvas 是一个智能数学教学辅助工具，结合了绘图、几何计算和AI辅助教学功能，为用户提供直观的数学学习和解题环境。
+ZH3	luojiaxuan/Python-Teaching-Aid-System	4	NONE	2020-04-19	Python教学辅助系统，集合判题，收发作业，捕捉和分析错误、提取学生知识弱点等功能辅助教学。
+ZH3	songyuexin666-wq/AI-teach	3	MIT	2026-09-23	这是一个智能ai辅助教学系统。包括：登录，信息存储、更新，智能问答，按提问生成对应知识的PPT讲解（重点创新）以及一些系统运作的基本功能。目前该系统处于改进阶段，已可以进行初步的使用。
+ZH3	muhanking111/ai-smart-education-system	2	NONE	2026-08-21	面向教师与学生的 AI 智慧教育全栈平台，采用 Vue 3 + TypeScript + Vite 与 Spring Boot 3.2 前后端分离架构，整合 MyBatis-Plus、MySQL、Redis、JWT、WebSocket/STOMP、ECharts 和可配置 LLM 适配层，覆盖教师工作台、学生端学习、课
+ZH3	Cfeat/ISTM	1	GPL-3.0	2025-05-22	AI辅助教学系统
+ZH3	jh0262/vocational-project-teaching-designer	1	NONE	2026-06-16	AI辅助教育教学开发
+ZH3	RENAI-PHYSICS-AI/Ren-ai_Intelligent_Teaching_Assistant_for_College_Physics	1	GPL-3.0	2026-10-04	仁爱学院物理教学部大学物理智能助教
+ZH3	ueacdyy-sys/intelligent-teaching-research-assistant	1	NONE	2026-06-01	AI 辅助教学与科研工作台的重构基线项目
+ZH3	alonegg/ai-teaching-platform	1	NONE	2025-07-27	AI教学资源整合平台 - 为教育工作者提供AI辅助教学工具和资源的综合性平台
+ZH3	kongchuanhujiao/ProvinceServer	1	AGPL-3.0	2021-07-03	《互联网+ 空中与传统互动教学AI系统》服务 | 帮助教师追踪学生上课状态、知识巩固等场景，优化和提升教学体验。
+ZH3	Pengyiyan0411/gauss-electromagnetism-lab	1	NONE	2026-04-16	3D 高斯电磁学全栈交互式实验平台 | 微内核插件化架构 | 支持云端同步、多人协作、AI 助教、学术级数值仿真
+ZH3	itzhong666/aiteachweb	1	NONE	2026-06-15	开发一个面向高校教学的AI智能助教平台，包含管理员、教师、学生三端。教师端支持AI备课、自动出题/批改/评语生成及学情分析；学生端提供基于知识库的智能问答助手和随堂小练；管理端负责用户、知识库、题目及活跃度监控。
+ZH3	Mengnanguo-wq/smart-learning-platform	1	NONE	2026-07-28	智能学习平台（微服务架构）- 基于 Spring Cloud Alibaba 的在线教育系统，包含 16 个微服务模块，支持 AI 智能助教、学习记录追踪、课程管理等核心功能
+ZH3	FanSail42/Intelligent-Programming-Learning	1	NONE	2026-06-14	本课题拟设计并实现智能编程学习助教系统“慧编学伴”。系统面向学生、教师与管理员三类角色，采用FastAPI、Vue3、MySQL、Redis与Chroma等技术栈，以课程级RAG智能对话、结构化代码讲解、错题本与学习仪表盘、教师班级学情视图及AI模型与用量治理为主线，在吸收LLM与RAG领域研究成果的基础上，探索“可信
+ZH3	Wangqiyunzhi/kecheng-dayi	1	NONE	2026-06-22	在传统高校课堂中，学生课后遇到问题时，内向者不好意思当面提问，班级群提问易被刷走，而反复询问相同问题也大量消耗老师精力，答疑效率低下。为此，我们开发一款课程答疑微信小程序，通过微信将提问、回答与知识管理整合为轻量级闭环。学生可随时提问（支持文字和图片），老师或助教在问题看板中统一处理，系统自动沉淀历史问答，形成可检索、
+JA1	narumi-mase/osaka-lesson-dataset	0	NONE	2026-06-30	教育AIエージェント研究のために，大阪市教育センター公開の中学校学習指導案を構造化したデータセット。
+JA1	nhack-dev/content-sales-agent-kit	0	NOASSERTION	2026-10-28	【特典】SNS集客→LINE教育→自社コンテンツ→自動販売をAIエージェントが通しで回す手順書（BYOK）
+JA1	Mk9207/-Constructive-Cognitive-Hierarchy-Command-Architecture	0	NOASSERTION	2025-06-22	認知プロセスを階層化し、感覚・推論・目標設定などの各レイヤーを動的に接続する構造的アーキテクチャ。AI・ロボット・教育・会話エージェントなどにおいて、複数段階の意思決定を統合的に制御する枠組みを提供する。  This architecture provides a constructive cognitive fram
+JA2	kenoharada/AI-LaBuddy	22	MIT	2023-07-02	AI LaBuddyは、大規模言語モデルや深層学習を駆使して、研究室のさまざまなタスクを自動化・効率化するためのツール集です。研究者が行う実験や分析、論文の執筆や資料作成を支援し、Slack上でのコミュニケーションを活性化することができます
+JA2	danggialam/Mind-Mentor-AI	5	NONE	2025-08-10	MindMentorは、AIチューターと自然な会話をしながら学習を進められる教育支援プラットフォームです。 生徒は教科を選択してAIと対話し、文脈を保った質の高い応答や復習サポートを受けられます。 フロントエンドはReact、バックエンドはFastAPIで構築し、OpenAI Assistants APIにより文脈に沿
+JA2	tamikenn/discord-JMLE-bot	1	MIT	2025-11-15	医師国家試験受験生のためのAI学習支援Discord Bot
+JA2	neathosalo/EJU_Learn	1	NONE	2026-04-22	EJU留学試験AI学習支援システム - 日本留学考试AI学习系统
+JA2	kikumon-dev/Code_Megami	1	NONE	2026-01-11	AIを使った（異世界）コード解説アプリです。クスッと笑える楽しい解説でプログラミング学習をゲーム化し強力に支援します。
+JA2	oze-xxbumpxx/cookpit	1	NOASSERTION	2026-11-02	Clean Architecture + DDD で作る献立・買い物・在庫管理 PWA。Next.js 16 / Hono / Drizzle のモノレポと、Claude Code による AI 支援開発ワークフローの学習を兼ねてのプロダクト
+JA2	masuda-hikari/LearnBuddyAI	0	NONE	2026-01-17	AI学習支援パーソナルチューター
+JA2	nextshare1100/a-istudy-for-highschool	0	NONE	2025-09-16	AI学習支援アプリケーション
+JA2	raputoru828-byte/gakunavi-syoko-app	0	NONE	2025-10-31	AI学習支援ボット「学ナビ -SYOKO-」
+JA2	s2427176-web/AI_STUDY_APP	0	NONE	2026-08-29	大学生向けAI学習支援ツール
+JA2	watanabe3tipapa/ai-ratchet-pe	0	NONE	2026-08-22	AIを支援する自動化runner（学習用）
+JA2	Reo8989/ai-developer-training	0	NONE	2026-08-16	AIデベロッパーとなるための学習支援アプリ
+JA2	yu8taka8950/web_learning	0	NONE	2026-10-16	Web閲覧を学習につなげるAI学習支援アプリ
+JA2	shuya310/sakumon	0	NONE	2026-10-20	卒業研究_作問学習支援ステムの開発
+JA2	adabana-saki/StudyBot	0	MIT	2026-05-12	AI搭載学習支援Discord Bot - ゲーミフィケーション/WebUI/スマホ連携
+JA2	nov11masaki/ScienceBuddy	0	NONE	2025-12-02	小学校理科学習支援システム - AI対話による予想・考察支援
+JA2	wolkin-ai/vibe-coding-starter	0	NONE	2025-10-05	Vibe Coding Starter - AI支援プログラミング学習用のReact + TypeScript + Supabaseテンプレート
+JA2	Marqelle-JR/aicoach-web	0	NONE	2025-09-24	AI を活用したコード理解・学習支援ツールのプロトタイプ Web アプリケーション。
+JA2	YU-Kawasaki-05/juku-ai-slack	0	NONE	2026-10-27	Slack 連携型・生徒別 AI 学習支援ボット（ポートフォリオ／匿名化版）
+JA2	msyskr/ai-mentor-cakephp2	0	NONE	2026-08-28	CakePHP 2 のエラーから学ぶ、マルチAIエージェント型のプログラミング学習支援ツール。
+JA2	aki251101/GPTs-Java-Learning-Navigator	0	NONE	2026-01-30	Java学習をDay単位で設計・記録・継続する学習支援GPT（Google Drive連携）
+JA2	VOMOYA/benkyo-ai-bot	0	NONE	2026-09-12	勉強AIボットくん - 小4〜中3対応 5教科AI学習支援PWA
+JA2	SALT-417/ai-passport-trainer	0	NONE	2026-08-28	生成AIパスポート2026年対応のオリジナル496問、層化模擬試験、学習履歴、Ollama AI支援を備えたReact学習アプリ
+JA2	tatarat-code/lms-guiding-ai	0	NONE	2026-11-19	LMS型ガイディングAI：学習目標から自分専用の学習支援AIアプリを生成・改訂・保存・実行する（Cloudflare Workers + D1）
+JA2	RikuOis/function_assessment	0	NONE	2025-11-06	作問学習を生成AIによって対話的に支援する
+KO1	sodam-ai/SoDam-Reverse-Eng	1	Apache-2.0	2026-09-11	방어·교육 전용 한국어 리버스 엔지니어링 Claude Code 플러그인 — 내 코드·AI 에이전트·안드로이드 앱·바이너리 실행파일 분석(전부 실사용 검증됨), 안전 3층(AI거부+deny-hook+SHA-256), 왕초보 한/영 가이드 (Apache-2.0)
+KO1	wys1110/ai-agent-training-materials	0	NONE	2026-06-16	[교육] Claude Code·Codex·스킬·에이전트 워크플로를 설명하는 AI 에이전트 교육 자료
+KO1	bjpark-lab/AI-Agent-Architect	0	NONE	2026-09-03	삼성전자 실무자 AI 교육 2단계(에이전트 설계)
+KO1	asjasj3964/SpeechMate	0	NONE	2026-07-11	발화 단위 신입 상담원 교육 AI 에이전트
+KO1	maybecocheon/AI-maestro_meeting-minutes-agent	0	NONE	2026-07-10	AI 마에스트로 교육 4주차 - 회의록 메일 발송 에이전트
+KO1	maybecocheon/AI-maestro_googlesheet-website-agent	0	NONE	2026-07-10	AI 마에스트로 교육 4주차 - 구글시트 연동된 웹사이트 에이전트
+KO1	maybecocheon/AI-maestro_scholarship_research_agent	0	NONE	2026-07-24	AI 마에스트로 교육 5주차 - 장학금 조사 보고서 에이전트
+KO1	maybecocheon/AI-maestro_university-info-agent	0	NONE	2026-07-10	AI 마에스트로 교육 4주차 - 타대학 정보 수집 에이전트
+KO1	pyoung527/ai-agent-1on1-class	0	NONE	2026-09-06	AI 에이전트 활용 기초 1:1 교육 자료
+KO1	janggoons/knu-edu-ai-agent-2026	0	NONE	2026-11-11	강원대 사범대학 교수 특강 「AI 에이전트 시대의 교육」 자료
+KO1	scottnaddle/aistudio-videobrief-generator	0	NONE	2025-11-04	EduBrief Agent: 단행본 원고 기반 교육 비디오 브리프 생성 에이전트**
+KO1	wogho/OpenMento	0	MIT	2026-04-13	다중 에이전트 오케스트레이션 기반 AI 교육 자율 운영 플랫폼
+KO1	daniel8824-del/agent-class-site	0	NONE	2026-02-07	AI 에이전트 클래스 교육 웹사이트 — Apple.com급 시네마틱 경험
+KO1	LukasBeanz/research_agent_fastapi_final	0	NONE	2026-07-20	여러 AI 에이전트 기술을 하나의 FastAPI 웹앱으로 통합한 "리서치(조사) 에이전트" 교육/실습용 최종 프로젝트
+KO1	ricky00-dev/bull-and-bear	0	NONE	2026-11-15	매수·매도 AI 에이전트 토론 기반 모의투자 교육 서비스 (졸업 전시)
+KO1	imakerjun/sds-harness-lab	0	NONE	2026-05-11	삼성SDS × 멀티캠퍼스 AI 코드 에이전트 교육 — 의도적으로 불완전한 FastAPI 실습 코드베이스
+KO1	IDEABANKhidi/agent-anatomy	0	NONE	2026-03-31	프로덕션 AI 에이전트 해부 시리즈 — Claude Code 소스 분석 기반 교육 프로젝트
+KO1	ybs5546-design/ai-feedback-inquiry	0	NONE	2026-10-10	다양한 교육 연구 주제의 연구계획서 작성, 문헌 검색, PDF 파싱과 검수를 지원하는 한국어 다중 에이전트 프로젝트
+KO1	drsmin/txlens	0	NONE	2026-10-16	마이데이터 거래내역 정규화·분류 + 패턴 탐지 LangGraph 에이전트 (KB AI 엘리트 교육 최종 제출)
+KO1	dorec9/AI-Lecture-Agent	0	NONE	2026-02-26	멀티모달 LLM(Gemini)과 에이전트 오케스트레이션(LangGraph)을 활용하여, 복잡한 PPT 문서로부터 논리적인 강의 스크립트를 추출하고 최종 교육 영상(.mp4)을 생성하는 End-to-End 파이프라인을 구현한 프로젝트
+KO1	20210685/Nexus_AI_Contribution-Quantifier	0	NONE	2026-04-12	[결과가 아닌 ‘과정’을 평가하는 최초의 AI 에이전트, Nexus] 기존 평가가 놓친 무임승차 문제와 정성적 기여(기획, 중재 등)를 Multi-Agent AI가 Git 커밋과 대화 로그를 정밀 분석하여 해결합니다 . '과정 데이터'를 기반으로 기여도를 자동 산출하는 차별화된 로직을 
+KO2	hanejj/LLM-tutor	1	NONE	2025-11-27	LLM 기반 AI 학습 튜터 서비스
+KO2	holmesLee-ws/go-economics	0	NONE	2026-11-17	경영경제 AI 튜터 학습 워크스페이스
+KO2	holmesLee-ws/go-strategy	0	NONE	2026-11-17	경영전략 AI 튜터 학습 워크스페이스
+KO2	holmesLee-ws/go-icfr	0	NONE	2026-11-17	내부회계관리제도(ICFR) AI 튜터 학습 워크스페이스
+KO2	7iw8n/Learning-Squad-FE	0	NONE	2024-06-08	개인 문서 기반 AI 학습 튜터 'Learning Squad'
+KO2	Seongbong-Ha/Haeksim	0	MIT	2025-09-16	NLP 프로젝트 - AI 학습 튜터 핵심(Haeksim) 프로젝트
+KO2	holmesLee-ws/go-valuation	0	NONE	2026-11-17	가치평가 AI 튜터 학습 워크스페이스 (국내법 중심 + 글로벌 비교)
+KO2	MUSE-CODE-SPACE/muse-language	0	NONE	2025-12-08	AI 기반 언어 학습 플랫폼 - AI 튜터, 발음 평가, 간격 반복 학습, 게이미피케이션
+KO2	holmesLee-ws/go-innovation-rnd	0	NONE	2026-11-17	기술경영·R&D·IP 사업화 AI 튜터 학습 워크스페이스
+KO2	holmesLee-ws/go-security	0	NONE	2026-11-17	정보보호·개인정보 AI 튜터 학습 워크스페이스(국내법 중심 + 글로벌 비교)
+KO2	holmesLee-ws/go-project-management	0	NONE	2026-11-17	프로젝트 관리 AI 튜터 학습 워크스페이스 (국내 제도 중심 + 글로벌 비교)
+KO2	holmesLee-ws/go-sales	0	NONE	2026-11-17	실무형 B2B 영업 AI 튜터 학습 워크스페이스(국내법 중심 + 글로벌 비교)
+KO2	holmesLee-ws/go-corporate-communications	0	NONE	2026-11-17	기업 커뮤니케이션(홍보·언론·IR·공시·대관·위기) AI 튜터 학습 워크스페이스
+KO2	holmesLee-ws/go-startup-agile	0	NONE	2026-11-17	창업·린·애자일 경영 AI 튜터 학습 워크스페이스(국내법 중심 + 글로벌 비교)
+KO2	holmesLee-ws/go-mis	0	NONE	2026-11-17	경영정보시스템(MIS) AI 튜터 학습 워크스페이스 — 국내 법·제도 중심 + 글로벌 비교
+KO2	holmesLee-ws/go-data-analytics	0	NONE	2026-11-17	경영 데이터 분석·의사결정 AI 튜터 학습 워크스페이스(국내법 중심 + 글로벌 비교)
+KO2	holmesLee-ws/go-leadership-negotiation	0	NONE	2026-11-17	조직행동·리더십·협상 AI 튜터 학습 워크스페이스(국내 근거 중심 + 글로벌 비교)
+KO2	holmesLee-ws/go-hse	0	NONE	2026-11-17	안전·보건·환경(HSE) AI 튜터 학습 워크스페이스 — 국내법 중심, 글로벌 비교
+KO2	david1005910/Driver_test	0	NONE	2026-11-03	운전면허 필기시험 학습 앱 - 도로교통공단 문제은행 999문항, 모의고사, 오답노트, RAG AI 튜터
+KO2	holmesLee-ws/go-control	0	NONE	2026-11-17	go-control — 전사 위험·내부통제·내부감사(GRC 총론) AI 튜터 학습 워크스페이스
+KO2	jungtaejin/spring-ai-tutor	0	MIT	2026-09-17	Spring AI 학습 튜터 API: 구조화 출력·대화 메모리·툴 호출·SSE 스트리밍 (Anthropic Claude)
+KO2	lucy071101/RAG-Math-Tutor	0	NONE	2026-09-30	RAG 기반 AI 수학 학습 튜터 PoC | 시장조사·서비스 기획·LangChain·Chroma·Gemini
+KO2	jjinttaim/programming-final-practice	0	NONE	2026-06-17	고등학교 자바(Java) 배열(Array) 단원 기말 대비 자가 학습 플랫폼 — Next.js, 9개 학습 모드 + 모의시험 + AI 튜터
+KO2	yujin1103/engtutor	0	NONE	2026-08-31	한국인 영어 왕초보용 AI 회화 튜터 — 로컬 LLM(Ollama), 학습 리포트, 프롬프트 인젝션 다층 방어
+KO2	gook-lab/nihongo	0	NOASSERTION	2026-10-30	마스코트와 함께하는 일본어 학습 PWA — SM-2 간격반복 + Gemini AI 튜터, 오프라인 발음 재생 (React 19 · Vite · Firebase · IndexedDB)
+HI1	ai-padhai-sathi/ai-padhai-sathi	0	NONE	2026-09-09	AI पढ़ाई साथी — कक्षा 9–12 के विद्यार्थियों के लिए AI आधारित शिक्षा ऐप।
+HI1	mukesh01-coder/ANANT-VR-	0	NONE	2026-09-23	ANANT VR = एक ऑल-इन-वन Virtual Reality / Digital Super Platform, जिसमें VR, AI, शिक्षा, गेमिंग, वर्चुअल मीटिंग, शॉपिंग और डिजिटल सेवाएँ एक ही जगह हों।
+HI1	sadar-naman/My-Vision-for-INDIA	0	NONE	2026-07-17	शहडोल (MP) के ब्यौहारी से निकले एक 15 वर्षीय भविष्य के AI इंजीनियर की ओर से भारतीय शिक्षा, अर्थव्यवस्था और लोकतंत्र में सुधार का एक स्पष्ट दृष्टिकोण।
+VI1	anhai2559/viem-am-dao	2	NONE	2019-02-19	  Viêm âm đạo là căn bệnh phụ khoa phổ biến nhất ở phụ nữ mà ai cũng có thể gặp, kể cả trẻ em. Nếu không điều trị kịp thời sẽ ảnh hưởng đến đời sống tình dục, c
+VI1	hacmadaosi/e-ai-agent	1	NONE	2026-01-21	Dự án là sản phẩm nghiên cứu AI Agent trong lĩnh vực giáo dục, cụ thể là trong quản lý học tập của sinh viên
+VI1	longnhgsvn/Learn-with-AI-tieng-viet	1	GPL-3.0	2025-11-26	Học Cùng AI là nền tảng giáo dục thông minh dựa trên WordPress và AI, cung cấp 6.000+ khóa học từ tiểu học đến đại học. Hệ thống cá nhân hóa lộ trình học, hỗ tr
+VI1	ductai250126-oss/LuzparalosNi-osdeColombia.github.io	1	NONE	2026-07-04	1 dự nhân ái với muc tiêu gây quỹ 10.000 USD trong 6 tháng để cung cấp 500 bộ dụng cụ học tập (ba lô, sách vở, bút viết) và học bổng hỗ trợ cho trẻ em vùng xung
+VI1	trieuhue1010-beep/Huy-n-g-i-h-c-AI	0	NONE	2026-08-21	Xây dựng thương hiệu cá nhân. Chia sẻ học liệu mầm non. Chia sẻ giáo án và kinh nghiệm chuyên môn. Chia sẻ ứng dụng AI trong giáo dục. Kết nối giáo viên, phụ hu
+VI1	phkhhung7/SkillVerse	0	NONE	2026-08-31	SkillVerse là nền tảng giáo dục kỹ năng sống toàn diện dành cho học sinh. Dự án kết hợp công nghệ AI Tutor, Gamification, Mạng xã hội học tập nhằm tạo ra môi tr
+VI1	vantupham/tri-tue-nhan-tao-thpt	0	NOASSERTION	2026-11-09	Bộ tài liệu dạy học giáo dục trí tuệ nhân tạo (AI) cho học sinh THPT lớp 10, 11, 12 theo Khung nội dung 2422/QĐ-BGDĐT: kế hoạch, 36 kế hoạch bài dạy, 36 bộ slid
+VI1	thcsthuyphuong-hue/khtn6_b46_nangluongvasutruyennl	0	NONE	2026-04-12	Đây là trò chơi Ai là triệu phú phiên bản giáo dục gồm các bài tập trắc nghiệm khách quan online dành cho ôn tập bài Năng lượng và sự truyền năng lượng môn Khoa
+VI1	tuanthanh1305/aiblockchain	0	NONE	2025-07-11	 ABAII Blockchain Lab: Nền tảng học tập và trải nghiệm tương tác về công nghệ blockchain. Khám phá các khái niệm từ cơ bản đến nâng cao, bao gồm sinh khóa, các 
+VI1	hoangdo1208/switchthebrain	0	NONE	2026-11-13	● Lĩnh vực: Giáo dục. ● Loại hình sản phẩm: Ứng dụng di động và nền tảng website hỗ trợ học tập. ● Đối tượng hướng đến: Học sinh từ lớp 9 đến lớp 12. ● Sản phẩm
+VI1	05111975phamanhtuan-hue/SmartEdu-Ultimate	0	NONE	2026-03-29	SmartEdu Ultimate - Nền tảng EdTech hoàn chỉnh cho học sinh Việt Nam lớp 6-12 theo chương trình Kết nối tri thức. Tích hợp AI Super Tutor, phòng thí nghiệm ảo, 
+VI1	cmct-ux/Chemical-3d	0	NONE	2026-01-26	Phần mềm mô phỏng thí nghiệm hóa học 3D là một ứng dụng giáo dục nhằm hỗ trợ học sinh học tập và tiếp cận thí nghiệm hóa học theo cách trực quan, an toàn và hiệ
+VI1	cmct-ux/Ung-dung-mo-phong-thi-nghiem-hoa-hoc	0	NONE	2026-01-26	Phần mềm mô phỏng thí nghiệm hóa học 3D là một ứng dụng giáo dục nhằm hỗ trợ học sinh học tập và tiếp cận thí nghiệm hóa học theo cách trực quan, an toàn và hiệ
+VI1	cmct-ux/Mo-phong-thi-nghiem-3D	0	NONE	2026-01-26	Mô phỏng thí nghiệm hóa học 3D là một ứng dụng giáo dục nhằm hỗ trợ học sinh học tập và tiếp cận thí nghiệm hóa học theo cách trực quan, an toàn và hiện đại. Ph
+VI1	cmct-ux/Phan-mem-mo-phong-thi-nghiem-hoa-hoc-3D	0	NONE	2026-01-26	Phần mềm mô phỏng thí nghiệm hóa học 3D là một ứng dụng giáo dục nhằm hỗ trợ học sinh học tập và tiếp cận thí nghiệm hóa học theo cách trực quan, an toàn và hiệ
+VI1	cmct-ux/chemical-3D-	0	NONE	2026-01-26	Phần mềm mô phỏng thí nghiệm hóa học 3D là một ứng dụng giáo dục nhằm hỗ trợ học sinh học tập và tiếp cận thí nghiệm hóa học theo cách trực quan, an toàn và hiệ
+ENCTRL	A-R007/Multi-Agent-Study-Assistant	69	NONE	2025-11-04	AI-powered learning platform with 6 specialized agents for personalized education. Features adaptive roadmaps, quizzes, tutoring, RAG document Q&A, and learning
+ENCTRL	zhangl1001/civil-ai	41	MIT	2026-11-08	Local-first adaptive tutoring agent foundation reference implementation for iOS and Web, with a civil-service exam application.
+ENCTRL	koukekoukej-glitch/feynman-tutor	38	MIT	2026-05-18	AI teaching Skill based on the Feynman Technique — makes YOU teach the AI to expose gaps in your understanding. Works with Claude Code, Cursor, Windsurf, and an
+ENCTRL	lowwwbank/anything-to-course	38	MIT	2026-07-07	Universal AI agent skill that turns any material into learning-science-based self-study courses with retrieval practice, spaced repetition, and tutor mode.
+ENCTRL	towardsai/ai-tutor-app	34	Apache-2.0	2026-10-22	Agentic RAG tutor for applied AI, LLMs, RAG, and Python: a LangGraph agent (FastAPI + Next.js) grounded in a curated course and library corpus.
+ENCTRL	idoforgod/Vibe-learning-AgenticWorkflow	26	NOASSERTION	2026-03-01	Socratic AI Tutor Builder — 21-step agentic workflow for personalized education system
+ENCTRL	tong666-bit/liu-xiaoyan-skill	21	MIT	2026-10-09	四六级/考研英语 AI 陪练：阅读证据、听力复盘、长难句、作文批改与复习计划。刘晓艳风格，非官方。Chinese CET-4/6 & postgraduate English tutoring Agent Skill.
+ENCTRL	WangyiNTU/nanobot-study	18	MIT	2026-02-07	Master AI Agent Assistant in 3 Days. A guided study plan using nanobot (~3k lines of Python) and your own AI Socratic Tutor. Learn Architecture, Skills, and Dep
+ENCTRL	legostin/learn-almost-anything	16	NONE	2026-07-01	Local desktop AI tutor: designs personalized courses on any topic with articles, interactive widgets, comprehension tests, homework review, and TTS lectures. Fr
+ENCTRL	fangyuan-3149/book-learning-tutor	15	NOASSERTION	2026-10-26	授业 · Book Learning Tutor — Turn any book on your drive into a personal AI tutor (Agent Skill)
+ENCTRL	hwl668/Scientific-learning-skills-	15	MIT	2026-10-30	Diagnosis-first Agent Skills that turn AI from answer machine into   learning tutor.
+ENCTRL	grey8-io/learn-ai-with-grey8	10	AGPL-3.0	2026-10-13	Free, self-driving AI bootcamp powered by a local LLM tutor. 15 projects across 12 phases — from Python basics to deploying AI agents. No cloud API keys require
+ENCTRL	Hawary00/AI-Tutor	9	Apache-2.0	2025-11-12	AI-Tutor is a modular educational assistant that leverages advanced LLMs and agentic AI workflows to help students learn science and technology. It integrates L
+ENCTRL	ibenian/algebench	8	MIT	2026-11-17	Interactive 3D math visualizer with an agentic AI tutor. Explore concepts through live    simulations, adjustable parameters, and narrated step-by-step lessons
+ENCTRL	ionpetro/skepsis	5	MIT	2026-11-17	Learn the Greek hiding in everyday English, in 3-minute lessons. Web app + MCP server so your AI agent can tutor you.
+ENCTRL	fcescob/understand	5	MIT	2026-10-13	Mastery-gated tutor skill for AI agents: teaches topics and codebases to durable, transferable understanding.
+ENCTRL	tong666-bit/song-hao-math	5	MIT	2026-10-09	大学数学/考研数学 AI 陪练：微积分、线代、概率统计、复变；分步板书、15个例题、反例与定理条件。宋浩风格，非官方。Chinese mathematics tutoring Agent Skill.
+ENCTRL	CGSeb/lessonfolk	3	MIT	2026-11-17	Learn AI from zero to advanced, with an AI agent as your tutor.
+ENCTRL	nameershah/TaleemAI	3	NOASSERTION	2026-07-12	Built for HEC Generative AI Hackathon. Multi-agent AI tutor with smart LLM routing, PDF-grounded RAG, and audio lecture generation for accessible education.
+ENCTRL	fanfanfanfanfan626/mastery-tutor	3	MIT	2026-10-12	Local-first mastery tutor for AI agents with guided HTML lessons, hands-on practice, transfer checks, spaced review, and learner-owned progress.
+ENCTRL	MudassarAbrar/SAGE__GEMINI_LIVE_AGENT_HACKATHON	3	NONE	2026-03-01	**SAGE** is a real-time, multimodal AI tutoring agent that combines voice, vision, and UI control to provide emotionally intelligent coding education. Unlike st
+ENCTRL	dymchenkko/claude-study-agent	3	MIT	2026-11-18	AI study agent for university courses, built on Claude Code. Learns from your own slides, PDFs and lecture recordings, quizzes you with spaced repetition, track
+ENCTRL	XianLiti123/MindEtude	3	MIT	2026-09-14	本地优先的 AI 教育 Agent（AI 教师）：对话、掌握度、复习、计划、努力值连成一个闭环，数据全部存在本机。Flutter 打造，支持 Android 与 Windows。A local-first AI tutor with its own books — conversation, mastery, revi
+ENCTRL	minouza/MathCrew	2	NOASSERTION	2026-10-13	Provide adaptive math tutoring for grades 1–6 using AI agents that generate problems, analyze errors, and guide student practice.
+ENCTRL	mousam100/Montessori-Agentic-AI-Tutor	2	MIT	2026-05-20	A safeguarding-aware agentic AI tutor for Montessori-inspired personalized education, combining student-level adaptive tutoring with teacher-monitored safety al

@@ -29,7 +29,18 @@ curriculum graph, correct for the asset and a trap for anyone who reads the repo
 `master/README.rst`.** That is `p900`'s false-absence class landing on the AGPL anchor of the
 whole LMS tier; the two-channel rule caught it. See `agents/trending.md` `901-F3`.
 
-**Latest sweep — `p917` (2026-11-19).** All **199** addresses in this file re-probed.
+**Latest sweep — `p918` (2026-11-19).** 21 of 22 anchor rows re-resolved on `search`
+([record](../evidence/shelf-remeasure.2026-11-19-p918.tsv)): `OpenHands/OpenHands` **93,816** `MIT`,
+`microsoft/ai-agents-for-beginners` **80,443** `MIT`, `crewAIInc/crewAI` **61,093** `MIT`,
+`HKUDS/DeepTutor` **60,675** `Apache-2.0` (p917: 60,661), `langchain-ai/langgraph` **45,154** `MIT`,
+`THU-MAIC/OpenMAIC` **43,940** `MIT`, `patchy631/ai-engineering-hub` **42,021** `MIT`,
+`withmarbleapp/os-taxonomy` **7,729** `ODbL-1.0`, `ls1intum/Artemis` **833** `MIT`,
+`PrairieLearn/PrairieLearn` **533** `NOASSERTION`, `CAHLR/pyBKT` **292** `MIT`.
+🔴 **`openedx/edx-platform` was absent on `search` for the third consecutive day** — `Validation
+Failed` — while `raw.githubusercontent.com` serves `200` on `master/README.rst` *and*
+`master/LICENSE`. Three days is not a transient; see `agents/trending.md` `918-F5`.
+
+**Previous sweep — `p917` (2026-11-19).** All **199** addresses in this file re-probed.
 `search/repositories` resolved **195**: `OpenHands/OpenHands` **93,811** `MIT`,
 `microsoft/ai-agents-for-beginners` **80,437** `MIT`, `crewAIInc/crewAI` **61,093** `MIT`,
 `HKUDS/DeepTutor` **60,661** `Apache-2.0` (p901: 60,405), `langchain-ai/langgraph` **45,152** `MIT`,
@@ -700,6 +711,47 @@ The placement comes from an institutional e-mail domain in `pyproject.toml`, via
 `ingest/p917-affiliation-manifest.sh`. That instrument's first cut was wrong in two ways and both
 are recorded at `917-F6`: a consumer mail host (`gmail.com`, `posteo.me`) is not an affiliation, and
 an npm version string (`pkg@1.0.1.patch`) is not an e-mail address.
+
+## APAC vernacular education agents — added `p918`, discharging `917-G3`
+
+🔴 **Tier verdict: `PRESENT — NOT DELIVERABLE`** under the threshold published in
+`repos/trending.md` `918-R1` (≥ 50 ★ · a byte-read grant that is not `NONE` · pushed within
+180 days). The estate is **157 repositories this base had never seen**, found by querying in
+Mandarin, Japanese, Korean and Vietnamese rather than English — and its best permissive member is
+**36 ★ and 383 days idle**. Every row below is real, and **none is adoptable as a dependency.**
+
+🔵 **Read this table for the requirement, not for the code.** It is the first direct evidence in
+this KB of what APAC teachers and institutions are actually building, in their own idiom — including
+an **admissions advisor**, the category `README.md` names as the largest build-vs-adopt gap in the
+industry and for which this base has found no open agent anywhere in the world.
+
+| Agent | Repo | Licence (byte-read `p918`) | ★ | Last push | What it does | Origin |
+|---|---|---|---|---|---|---|
+| **AI-Course-Generator** | https://github.com/GitHubDaily/AI-Course-Generator | **MIT** (`main/LICENSE`, 1,068 B, `sha256₁₂ 5297e38c125c`) | 36 | 2025-11-01 | Teacher-facing course-outline and teaching-content generation, built on the **iFlytek Xingchen** agent platform. 🟡 **The highest-starred permissive, byte-read education agent in the entire APAC vernacular estate — and 383 days idle** | APAC (China) |
+| **AI-LaBuddy** | https://github.com/kenoharada/AI-LaBuddy | **MIT** (1,067 B, `sha256₁₂ 807c3b4466ec`) | 22 | 2023-07-02 | Automates and streamlines research-laboratory tasks with LLMs and deep learning. 🔴 Three years idle — the *higher-education research lab* use case, which no other row in this file addresses | APAC (Japan) |
+| **Dawn** | https://github.com/jetyu/Dawn | **Apache-2.0** (11,340 B, `sha256₁₂ bef48216cd56`) | 14 | 2025-07-20 | Spring Boot + Vue.js teaching platform with AI-assisted instruction built in. 🔵 The only **Apache-2.0** row in this tier — a patent grant, where the rest are MIT | APAC (China) |
+| **AI-EduForge** | https://github.com/hapince-code/AI-EduForge | **MIT** (1,072 B, `sha256₁₂ 0a83fabb2ba6`) | 6 | 2026-05-11 | K-12 teacher resource generation: lesson PPTs, React interactive courseware, PDF test papers, textbook-aligned material. 🔵 **Multi-artefact output from one brief** — closer to the teacher's actual workflow than any single-artefact generator in this file | APAC (China) |
+| **heuristic-learning-system** | https://github.com/SNOOPY-alt/heuristic-learning-system | **MIT** (1,067 B, `sha256₁₂ f0012497d3e1`) | 6 | 2025-05-04 | Heuristic guided-tutoring system built on the **Dify** platform. 🔵 Evidence that the vernacular tier builds on a *platform* rather than raw model calls — and 🔴 Dify is not OSI-permissive, so the harness is not inheritable with the agent | APAC (China) |
+| **ai-admissions-platform** | https://github.com/cxkzai/ai-admissions-platform | **MIT** (1,065 B, `sha256₁₂ 811e88db2038`) | 5 | 2026-07-02 | Multi-role **AI admissions-advisor** platform for small and medium training institutions, v1 focused on K-12 coding education. 🔵 **The admissions gap, addressed — in Chinese, at 5 ★.** Read it as a requirements document for the studio IP `README.md` argues is the most defensible in the industry | APAC (China) |
+| **course-tutor** | https://github.com/uczltw6/course-tutor | **MIT** (1,082 B, `sha256₁₂ f4f4a2cdaa54`) | 5 | 2026-04-23 | Course teaching-assistant workbench that **distils a named teacher's instructional style**, with local pre-processing to cut token spend. 🔵 Two ideas this file has not recorded elsewhere: style transfer from a specific instructor, and cost as a design constraint | APAC (China) |
+| **MathMind** | https://github.com/MathMindCanvas/MathMind | **MIT** (1,071 B, `sha256₁₂ 0773606d562e`) | 5 | 2026-02-26 | Maths teaching aid combining a drawing canvas, geometric computation and AI assistance | APAC (China) |
+| **Montessori-Agentic-AI-Tutor** | https://github.com/mousam100/Montessori-Agentic-AI-Tutor | **MIT** (1,064 B, `sha256₁₂ a1adc7ed2fc0`) | 2 | 2026-05-20 | **Safeguarding-aware** agentic tutor for Montessori-inspired personalised education, pairing learner-level adaptation with a teacher view. 🔵 The only row in this file that treats **safeguarding as an architectural concern** rather than a policy note | APAC (India) |
+
+🔴 **Refused from this tier — the two most-starred repositories the legs returned.**
+`liyupi/ai-code-helper` (**769 ★**) and `ophiraShen/EasyDS` (**43 ★**) both return
+`NO-LICENCE-FILE-FOUND` across 25 candidate filenames on 3 branches. They are the top of the
+measured estate and they are **ungranted**, which is `T34` landing again: in the vernacular tier,
+popularity and licence hygiene move in opposite directions. `ai-code-helper` is additionally a
+*programming-career* project, not an education one — a reminder that a vernacular leg buys recall
+at the cost of precision.
+
+🔵 **Languages that returned nothing.** `pendidikan AI agen belajar` (Bahasa Indonesia) → **0** and
+`การศึกษา AI` (Thai) → **0**; `शिक्षा AI` (Hindi) and `教育 AI エージェント` (Japanese) → **3** each.
+These are **declared nil results, not unsearched regions** — Indonesia and Thailand have no
+vernacular open education-agent supply reachable on this channel at all, against an APAC demand
+picture (~86% South-East Asian teacher use) that `intel/market.md` records as large. Japanese supply
+is found by `学習 支援 AI` (**60**) and not by the loanword shape, which is `T45` reproducing inside
+a single language.
 
 ## What we searched for and did not find
 

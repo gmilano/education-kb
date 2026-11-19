@@ -4,6 +4,129 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p918) — **`917-G3` is discharged, and APAC answers exactly as LATAM did: the vernacular estate is real on count and empty at the top of the shelf. 157 unseen repositories across Mandarin, Japanese, Korean and Vietnamese; the best permissive, byte-read education agent in all of them is 36 ★ and 383 days idle. 🔴 This pass's own instrument reported a noncommercial restriction on `PrairieLearn` that does not exist — caught before publication, fixed in the authority.**
+
+🔵 **Summary.** 12 `gh api search/repositories` legs in six languages plus the eight mandated
+WebSearch legs. Twelve repositories byte-read for their grant; ten resolved, **two have no licence
+file at any of 25 names over 3 branches**. One instrument defect found, fixed and controlled.
+`make hooks` was run — the first pass to actually read it — and its output is the source of
+`918-F4` below. Addresses diffed against **18,074** slugs grepped from the delivery pages.
+
+### 🟢 `918-F2` — `917-G3` discharged: APAC vernacular supply exists, and it is not deliverable
+
+`917-G3` recorded that **APAC placed zero of 17 promotion candidates** and prescribed the
+experiment that moved LATAM from 4 to 240: query in the vernacular. It had never been run for
+Mandarin, Japanese, Korean, Bahasa or Hindi. It has now been.
+
+| Leg | Query | `total_count` | New to this base |
+|---|---|---|---|
+| `ZH3` | `AI 助教 教学` | **79** | yes |
+| `ZH1` | `教育 AI 智能体` | **78** | yes |
+| `JA2` | `学習 支援 AI` | **60** | yes |
+| `KO2` | `학습 AI 튜터` | **27** | yes |
+| `ZH2` | `智能 辅导 大模型` | **23** | yes |
+| `KO1` | `교육 AI 에이전트` | **21** | yes |
+| `VI1` | `giáo dục AI học tập` | **16** | yes |
+| `HI1` | `शिक्षा AI` | **3** | yes |
+| `JA1` | `教育 AI エージェント` | **3** | yes |
+| `ID1` | `pendidikan AI agen belajar` | 🔴 **0** | — |
+| `TH1` | `การศึกษา AI` | 🔴 **0** | — |
+| `ENCTRL` | `education AI tutor agent` (control) | 187 | — |
+
+🟢 **157 distinct repositories that appear in none of this base's 18,074 known addresses.** The
+"APAC has no open education supply" reading is **refuted on count**, by the same instrument change
+that refuted it for LATAM.
+
+🔴 **And the shelf is empty where it matters.** Twelve candidates byte-read with
+`ingest/p913-grant-authority.sh` ([record](../evidence/apac-vernacular-grant.2026-11-19-p918.tsv)):
+
+| Repo | ★ | Grant (byte-read) | Pushed | Verdict |
+|---|---|---|---|---|
+| https://github.com/liyupi/ai-code-helper | **769** | 🔴 **NO-LICENCE-FILE-FOUND** (25 names, 3 branches) | 2025-07-10 | unusable — and it is a *coding*-career project, not education |
+| https://github.com/ophiraShen/EasyDS | 43 | 🔴 **NO-LICENCE-FILE-FOUND** | 2025-05-23 | unusable |
+| https://github.com/GitHubDaily/AI-Course-Generator | **36** | **MIT** (`main/LICENSE`, 1,068 B, `sha256₁₂ 5297e38c125c`) | 2025-11-01 | 🟡 **the best permissive row in the entire vernacular estate — and 383 days idle** |
+| https://github.com/kenoharada/AI-LaBuddy | 22 | **MIT** (1,067 B, `sha256₁₂ 807c3b4466ec`) | 2023-07-02 | lab-task automation, 3 years idle |
+| https://github.com/jetyu/Dawn | 14 | **Apache-2.0** (11,340 B, `sha256₁₂ bef48216cd56`) | 2025-07-20 | Spring Boot + Vue teaching platform |
+| https://github.com/hapince-code/AI-EduForge | 6 | **MIT** (1,072 B, `sha256₁₂ 0a83fabb2ba6`) | 2026-05-11 | K-12 teacher resource generation — PPT, courseware, papers |
+| https://github.com/SNOOPY-alt/heuristic-learning-system | 6 | **MIT** (1,067 B, `sha256₁₂ f0012497d3e1`) | 2025-05-04 | heuristic tutoring on Dify |
+| https://github.com/MathMindCanvas/MathMind | 5 | **MIT** (1,071 B, `sha256₁₂ 0773606d562e`) | 2026-02-26 | maths teaching with geometry + plotting |
+| https://github.com/cxkzai/ai-admissions-platform | 5 | **MIT** (1,065 B, `sha256₁₂ 811e88db2038`) | 2026-07-02 | 🔵 **admissions** — the category `README.md` calls the largest build-vs-adopt gap |
+| https://github.com/uczltw6/course-tutor | 5 | **MIT** (1,082 B, `sha256₁₂ f4f4a2cdaa54`) | 2026-04-23 | distils a named teacher's style; local pre-processing to save tokens |
+| https://github.com/songyuexin666-wq/AI-teach | 3 | **MIT** (1,068 B, `sha256₁₂ 90ef839bfb0a`) | 2026-09-23 | — |
+| https://github.com/mousam100/Montessori-Agentic-AI-Tutor | 2 | **MIT** (1,064 B, `sha256₁₂ a1adc7ed2fc0`) | 2026-05-20 | safeguarding-aware Montessori tutor |
+
+🟢 **10 of 12 are permissive on a byte-read grant, and that is the one genuinely good piece of
+news**: unlike the LATAM shelf, where the ceiling was *unlicensed*, the APAC vernacular ceiling is
+**MIT and readable**. 🔴 **But the two highest-star repositories are the two with no licence file**,
+which is the `T34` pattern landing again: the more popular the vernacular repository, the less
+likely it carries a grant.
+
+🔵 **What this changes for a delivery conversation.** None of these is adoptable as a dependency.
+What they are is **evidence of demand with named local idiom** — `cxkzai/ai-admissions-platform` is
+a Chinese K-12 admissions-advisor agent in a category where this base has recorded *no* open agent
+anywhere in the world. **Read the vernacular shelf for the requirement, not for the code.**
+
+### 🟢 `918-F3` — the generalisation `917-G3` asked for, and it refutes `T29`'s framing
+
+`T29` holds that vernacular supply is a **single-country phenomenon**. `917-G3` set this pass up as
+the test. The result is that it is **not** single-country — it reproduced across four languages and
+at least five countries — but it *is* single-**shaped**:
+
+| Estate | Measured size | Top of shelf | Grant at the top |
+|---|---|---|---|
+| LATAM Spanish (`917-F1`) | 240 | **5 ★** | unlicensed |
+| LATAM Portuguese (`917-F1`) | 27 | **7 ★** | unlicensed |
+| APAC vernacular (`918-F2`) | 157 unseen | **36 ★** permissive / 769 ★ ungranted | MIT at 36 ★ |
+
+🔵 **The common shape, in one line: vernacular querying buys recall and never buys a dependency.**
+Both estates are large, both are dominated by coursework and hackathon projects, and in both the
+most-starred member is ungranted. 🟢 **The correct use of a vernacular leg is requirements
+discovery and regional placement — not shelf growth.** This is published as `T50` in
+`intel/trends.md`, and it is what makes `917-G4`'s threshold decidable; see `repos/trending.md`
+`918-R1`.
+
+### 🔴 `918-F1` — this pass's instrument reported a restriction that does not exist, on the row where it would have cost the most
+
+Running the grant authority over the five rows `gate-shelf-consistency` flags, `PrairieLearn/PrairieLearn`
+came back:
+
+```
+MIT+AGPL-3.0+NONCOMMERCIAL-TERM   BODY-CONJUNCTIVE   3 families in the body, no licence title — notice obligation of 3
+```
+
+🔴 **There is no noncommercial term in PrairieLearn's licence.** The payload was read directly. The
+string the matcher fired on is line 274 — **stock AGPL-3.0 section 6**:
+
+> `alternative is allowed only occasionally and noncommercially, and`
+
+**Mechanism, and it is narrow and exact.** `ingest/p913-grant-authority.sh` line 222 was an
+unguarded `grep -qi "non-commercial\|noncommercial"` over the whole body, reachable **only** from
+the title-less FALLBACK branch. Every GPL-3.0 and AGPL-3.0 payload contains that sentence, so **any
+title-less payload embedding GNU text** was given a family it does not have — and because the family
+count drives the verdict, the **notice obligation was overstated as 3 when it is 2**.
+
+🟢 **Fixed in the authority** (not in a caller — `913-F2`'s lesson), and controlled: after the patch
+`PrairieLearn` reads **`MIT+AGPL-3.0`**, and three stock-AGPL payloads —
+`migueldsants/OpENEM`, `UnitedOpen-Source/microHelium`, `portabilis/i-diario` — are **unchanged at
+`AGPL-3.0`**, because they match on the title line and never reach the fallback.
+[Control record](../evidence/p918-noncommercial-control.2026-11-19-p918.tsv).
+
+🔵 **Why this one mattered more than the usual instrument bug.** Every other licence error this base
+has recorded ran in the *permissive* direction — reporting a copyleft repo as safe. This one ran the
+other way: it would have told a studio that the strongest open STEM assessment engine in the field
+carries a **noncommercial restriction**, which does not kill a clause, it kills the engagement.
+🟢 Caught by the `916-G0` discipline — read the payload before publishing a first.
+
+### 🔵 `918-F5` — `openedx/edx-platform` is absent on `search` for the third consecutive day
+
+`p916` found it, `p917` reproduced it one day later, and `p918` reproduces it again:
+`search/repositories` returns `Validation Failed` — *"resources do not exist or you do not have
+permission"* — while `raw.githubusercontent.com` serves `200` on both `master/README.rst` and
+`master/LICENSE`. 🟢 **Three days is no longer a transient.** It is the *loud* absence shape, so the
+two-channel rule catches it; recorded here so a later pass does not spend a leg rediscovering it.
+
+---
+
 ## `2026-11-19` (p917) — **Three of the four voids `p890` left standing are REFUTED, and the fourth is CONFIRMED — so `916-G5` was right that re-running a query can only confirm, and wrong to expect every void to fall. The pass's own best find is not a discovery at all: the Python LTI 1.3 estate has FOUR live permissive repositories sitting in this log while the one row on the delivery surface is the one this base flags as 27 months idle. 🔴 `916-F8` overstated a lost channel: `search/users` is reachable here — it just cannot place a region.**
 
 **Channels and posture.** `gh api search/repositories` over **28** legs: 8 on `916-G4`'s

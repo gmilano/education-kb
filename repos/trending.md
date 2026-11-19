@@ -4,6 +4,117 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p918) — **`917-G4` is discharged with a published threshold, and applying it reclassifies two whole estates. 🔴 `917-G8` is discharged by actually running the gates: 53 of 76 green, 23 red — and the gate this base was told to start with is right once and wrong four times, which is itself the finding.**
+
+### 🟢 `918-R1` — the top-of-shelf threshold, decided and applied
+
+`917-G4` asked for a rule *"below which a tier is reported as present but not deliverable"*, and
+warned that without one `917-F2` would be rediscovered every pass. `918-F2` rediscovered it exactly
+as predicted, in a different language family. So the rule is published here and is binding on every
+count this base reports.
+
+🔵 **A tier is DELIVERABLE only if its top-of-shelf member satisfies all three:**
+
+| # | Test | Why this and not a count |
+|---|---|---|
+| 1 | **≥ 50 ★** | An adoption floor. Below it there is no user community to inherit, no issue history to read and nobody to ask |
+| 2 | **A byte-read grant that is not `NONE`** | `918-F2` and `917-F2` both topped out on **unlicensed** repositories. An ungranted repo is not a cheap dependency, it is an unusable one |
+| 3 | **Pushed within 180 days** | `GitHubDaily/AI-Course-Generator` is MIT, is the best permissive row in the APAC estate, and is **383 days idle** |
+
+🔵 **A tier that fails any of the three is reported as `PRESENT — NOT DELIVERABLE`, together with
+its measured size.** The size is still published, because an informed gap is information; what is
+withdrawn is the implication that the count is a shelf.
+
+**Applied to every tier this base has measured in a vernacular or minority shape:**
+
+| Tier | Size | Top of shelf | ★ | Grant | Idle | Verdict |
+|---|---|---|---|---|---|---|
+| APAC vernacular (`918-F2`) | 157 unseen | `GitHubDaily/AI-Course-Generator` | 36 | MIT ✅ | 383 d ❌ | 🔴 **PRESENT — NOT DELIVERABLE** (fails 1 and 3) |
+| LATAM Spanish (`917-F1`) | 240 | — | 5 | unlicensed ❌ | — | 🔴 **PRESENT — NOT DELIVERABLE** (fails 1 and 2) |
+| LATAM Portuguese (`917-F1`) | 27 | — | 7 | unlicensed ❌ | — | 🔴 **PRESENT — NOT DELIVERABLE** (fails 1 and 2) |
+| Brazilian national-curriculum cluster (`p904`) | 5 repos | `portabilis/i-educar` + `i-diario` | 117 | AGPL-3.0 ✅ | pushed 2026-10-14 ✅ | 🟢 **DELIVERABLE** — host-only, no closed derivative |
+| Verifiable credentials (`917-R1`) | `europass` 252 / `OpenID4VCI` 85 | the eIDAS wallet estate | — | Apache-2.0 / BSD ✅ | ✅ | 🟢 **DELIVERABLE** — and not an education tier at all |
+
+🔵 **The rule's first real consequence is that it separates `p904`'s LATAM result from `917-F1`'s.**
+Both are "LATAM supply"; one is a shelf and one is a survey. **The national-curriculum and
+national-examination cluster passes all three tests. The general-purpose vernacular tutor fails all
+three, in both language families.** That is the sharpened form of the `README.md` advice — *bring the
+tutor, adopt the curriculum spine* — and it is now derived from a stated rule rather than from one
+pass's impression.
+
+### 🔴 `918-R2` — `917-G8` discharged: the 23 red gates, read
+
+`917-G8` recorded that `make hooks` runs here and reports *"22 standing red gates"*, and that no pass
+had read them. 🔵 **It runs. It reports `🔴 FAIL — 53/76 gates green`, and the red set is 23, not 22.**
+([full output](../scratchpad/p918/hooks-full.txt))
+
+🔴 **One environment correction first:** `make hooks` is **refused by this session's command
+classifier when launched as a background command**, and runs normally in the foreground. `917-G8`'s
+note that *"`Gap 247` recorded it as denied; that verdict was session-local"* is right in substance
+and incomplete in cause — the denial is **invocation-shaped**, not session-shaped. Run it in the
+foreground.
+
+**The red set:** `gate-header-signature`, `gate-offline`, `recount`, `gate-derived-counts`,
+`gate-enumeration`, `gate-absence`, `gate-dates`, `gate-ladder-case`, `gate-shelf-consistency`,
+`gate-prose-claims`, `gate-register-currency`, `gate-fold-identity`, `gate-alias-canonical`,
+`gate-census-currency`, `gate-grant-path`, `gate-census-union`, `gate-ledger`,
+`gate-i2-sweep-crosscheck`, `gate-union-currency`, `gate-action-answered`, `gate-case-collision`,
+`gate-promotion-ledger`, `gate-cell-reproduction`.
+
+### 🔴 `918-R3` — the gate `917-G8` said to start with is wrong four times out of five, and the one time it is right it found a defect no licence instrument can find
+
+`917-G8` ranked `gate-shelf-consistency` first. It flags **five slugs carrying disagreeing licence
+cells**. All five were byte-read this pass
+([record](../evidence/shelf-contradiction-grant.2026-11-19-p918.tsv)):
+
+| Slug | Gate's complaint | Byte-read grant | Verdict on the gate |
+|---|---|---|---|
+| `PrairieLearn/PrairieLearn` | `AGPL-3.0` (`verticals/solutions.md:141`) vs **`MIT`** (`verticals/solutions.md:193`) | **MIT + AGPL-3.0**, 37,237 B, `sha256₁₂ 548cbfae567a` | 🟢 **REAL DEFECT — fixed this pass** |
+| `h5p/h5p-php-library` | `Apache-2.0` (prose) vs `GPL-3.0` (table) | **GPL**, 35,146 B, `sha256₁₂ c53a65c2fd56` | 🔴 **FALSE POSITIVE** — the `Apache-2.0` is a *bundled font* the repo correctly discloses inside its own licence file |
+| `HKUDS/DeepTutor` | `Apache-2.0` (table) vs `MIT` (prose) | **Apache-2.0**, 11,408 B, `sha256₁₂ cd2f54e1e506` | 🔴 **FALSE POSITIVE** — the `MIT` is in a sentence about a *blog*, not a licence cell |
+| `openeducat/openeducat_erp` | five licences on one line | **LGPL**, 8,241 B at branch `19.0` | 🔴 **FALSE POSITIVE** — one multi-column table row read as five cells |
+| `sonstellar969/open-moodle` | `AGPL-3.0` vs `MIT` | **MIT**, 1,088 B, `sha256₁₂ 2e0193644321` | 🔴 **FALSE POSITIVE** — the `AGPL-3.0` is a disclosed *dependency* |
+
+🔵 **So the gate's precision on this run is 1 in 5 — and it still earned its place**, because the one
+true positive is a defect class that **no licence instrument in this base can reach**:
+
+🔴 **`verticals/solutions.md` carries `PrairieLearn` TWICE, in two different tables, and `p899`
+corrected only the one it was looking at.** Line 141, in *Autograding and assessment platforms*,
+carries the full corrected reading. Line 193, in *Study tools, practice and assessment delivery*,
+read:
+
+> `| **PrairieLearn** | …/PrairieLearn | MIT | Randomised auto-graded assessment delivery. Deployable product and library both. |`
+
+**A plain `MIT` cell, fifty lines below the correction, surviving every pass since `p899`.** Every
+licence instrument this base owns asks *"is this cell's licence right for this repo?"* — and both
+cells are about the same repository in the same file, so a per-repo probe can never see it. **Only a
+within-file duplicate check can.** 🟢 Row corrected this pass and cross-referenced to the full note.
+
+🔵 **The operative rule: `p899`-class corrections must be applied by address, not by row.** Grep the
+delivery surface for every occurrence of the slug before declaring a licence correction landed.
+
+🟢 **Control, run after the fix.** `make hooks` re-run on the edited tree reports **4 disagreeing
+slugs, down from 5** — and the four survivors are *exactly* the four classified as false positives
+above, with `PrairieLearn` gone. The classification is therefore confirmed by the gate itself rather
+than merely asserted against it. 🔴 The gate stays red, which is the correct outcome and the reason
+`918-G4` exists: it will stay red until it learns to tell a repository's own grant from a licence
+the repository *discloses* about a bundled component or dependency.
+([after-run](../scratchpad/p918/hooks-after.txt))
+
+### 🔵 `918-R4` — the promotion queue is 28 rows, and the runner has been printing it all along
+
+`gate-promotion-ledger` reports `ledger rows=265  positive claims derived=780  un-landed
+distinct=403`, and the runner prints `PROSE-minus-FILED (promotion queue) : 28` against a filing
+rate of **5.7%** (469 filed of 8,248 distinct addresses). 🔴 **This is the `logged-not-shelved`
+pathology `916-R1` and `917-F3` each rediscovered by hand** — with a live, machine-generated queue
+sitting in a gate neither pass read. The `C1-UNADJUDICATED` rows name specific repositories
+(`matmiidu/paes-ensayos`, `theteacherbot/ICFES-Exam-Engine`, `001kenji/KCSE-predictor`,
+`tristcoil/hanabira.org` …) that claim promotion in `agents/trending.md` with **no ledger row**.
+Declared as `918-G2`; it is the cheapest shelf growth available to the next pass, and it needs **no
+network at all**.
+
+---
+
 ## `2026-11-19` (p917) — **`916-G4` is discharged, and the answer is not a number. The verifiable-credential tier for education is not built out of education repositories — it is the eIDAS 2.0 / OpenID4VCI wallet estate, which no education-named query can see. `europass` returns **252** and `OpenID4VCI` **85** against the three education-named sizes `916-G4` was told not to publish (2, 6, 11). Eleven repositories added, all byte-read, ten Apache-2.0 or BSD. 🔴 `916-G2` discharged with a rate: the file-header layer resolves 3 of 13 "ungranted" rows, a manifest 2 more, a README 2 more — and p913 was missing the Rails filename convention entirely.**
 
 **Channels and posture.** 28 `gh api search/repositories` legs; grants byte-read with

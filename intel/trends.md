@@ -2085,3 +2085,54 @@ employer-verification value in North America, APAC and LATAM, which have no equi
 **Implication for delivery.** Before concluding a regulated tier has no open supply, check which
 *kind* of regulation it is. A prohibition suppresses supply; a mandate with a published reference
 implementation manufactures it. See `repos/foundations.md` and `verticals/solutions.md`.
+
+## T50 — Vernacular querying is a **recall instrument, not a supply instrument**: it reliably finds a large local estate and it has never yet found a dependency (measured `p917` LATAM, `p918` APAC)
+
+`T29` held that vernacular open-source supply is a **single-country phenomenon**. `917-G3` set up
+the test that would settle it, and `918-F2` ran it across Mandarin, Japanese, Korean, Bahasa, Hindi,
+Thai and Vietnamese.
+
+🔵 **`T29`'s framing is refuted and its caution is vindicated.** The phenomenon is **not**
+single-country — it reproduced across four languages and at least five countries. But it is
+single-**shaped**, and the shape is the trend:
+
+| Estate | Query language | Measured size | Top of shelf | Grant at the top |
+|---|---|---|---|---|
+| LATAM (`917-F1`) | Spanish | **240** | 5 ★ | 🔴 unlicensed |
+| LATAM (`917-F1`) | Portuguese | **27** | 7 ★ | 🔴 unlicensed |
+| APAC (`918-F2`) | Mandarin | **79 / 78 / 23** | 769 ★ | 🔴 unlicensed |
+| APAC (`918-F2`) | Japanese | **60** | 22 ★ | 🟢 MIT |
+| APAC (`918-F2`) | Korean | **27 / 21** | — | — |
+| APAC (`918-F2`) | Vietnamese | **16** | — | — |
+| APAC (`918-F2`) | Bahasa Indonesia | 🔴 **0** | — | — |
+| APAC (`918-F2`) | Thai | 🔴 **0** | — | — |
+
+**Three regularities hold across both regions:**
+
+1. **The English-named query undercounts the local estate by one to two orders of magnitude.** This
+   is `T45` (query shape changes measured size) reproducing on the *language* axis, and it is why
+   `p904` had to retract a LATAM absence claim outright.
+2. **The most-starred member of a vernacular estate is almost always ungranted.** `liyupi/ai-code-helper`
+   at **769 ★** has no licence file at any of 25 names on 3 branches; so does the 43 ★ runner-up;
+   so did both LATAM ceilings. This is `T34`'s two-thirds-ungranted finding concentrating at the top
+   of the distribution rather than the tail.
+3. **The estate is coursework, not product** — capstones, hackathon entries and course designs.
+   They are dated, small and unmaintained, which is why `918-R1`'s 180-day recency test does as much
+   work as the star floor.
+
+🟢 **The one asymmetry worth acting on: the APAC ceiling is permissive where the LATAM ceiling was
+unlicensed.** Ten of twelve APAC candidates byte-read to MIT or Apache-2.0. So an APAC vernacular
+repository is more often *readable as a reference design* than a LATAM one, even though neither is
+adoptable as a dependency.
+
+🔴 **A nil result in this instrument is a real finding and must be published as one.** Bahasa
+Indonesia and Thai returned **zero**, against the largest documented teacher-adoption figures in the
+region. Silence there would look exactly like coverage.
+
+**Implication for delivery.** Run the vernacular leg on every regional engagement — and run it for
+**requirements discovery and regional placement, never for shelf growth**. What it buys is evidence
+of what local educators are building in their own idiom (`cxkzai/ai-admissions-platform` is a K-12
+admissions advisor in a category with no open agent anywhere in the world). What it does not buy is
+anything you can take a dependency on. Grade every result with `repos/trending.md` `918-R1` before
+reporting a tier as supply.
+

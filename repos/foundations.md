@@ -7,7 +7,8 @@ updated: 2026-11-19
 # Foundational repos — education
 
 The substrate an education engagement is built on. All URLs and licences verified
-2026-11-18 via `raw.githubusercontent.com` (see `agents/top.md` for method and limits).
+2026-11-18 via `raw.githubusercontent.com`, with the `p918` re-measure of 21 anchor rows in
+[this record](../evidence/shelf-remeasure.2026-11-19-p918.tsv) (see `agents/top.md` for method and limits).
 
 **Read the licence column before you promise anything.** Education's most important
 platforms are copyleft: Open edX, Canvas and Moodle are AGPL-3.0/GPL-3.0. That is fine
@@ -26,6 +27,31 @@ assigning your modifications to PrairieLearn, Inc. Both licence files were byte-
 **The correction is in the grading table below.** This is the third consecutive pass to find a
 published grant wrong (`p897`: five of seven re-read rows; `p896`: `i-diario`), and the first to
 find one wrong in a way that would survive review *because it looked permissive*.
+
+🆕 **`p918` — the `p899` correction above had NOT fully landed, and the reason generalises.**
+`gate-shelf-consistency` (run for the first time this pass — `918-R2`) found
+`verticals/solutions.md` carrying **PrairieLearn twice, in two different tables**: the row `p899`
+corrected, and a second row fifty lines below it still reading a bare **`MIT`**. 🔴 **A per-repo
+licence probe cannot see this**, because both cells are about the same repository in the same file
+and only one is wrong. The second row is corrected this pass. 🟢 **Operative rule: apply a licence
+correction by ADDRESS, not by row — grep the whole delivery surface for the slug before declaring it
+landed.** The byte-read this pass (`LICENSE@master`, 37,237 B, `sha256₁₂ 548cbfae567a`) confirms the
+grading table below exactly: **MIT + AGPL-3.0**, plus the proprietary EE directories.
+
+🔴 **`p918` also found a defect in this base's own grant authority, in the direction that kills a
+build.** The first read of that same PrairieLearn payload reported a **`NONCOMMERCIAL-TERM`** family
+that does not exist — the matcher was firing on stock **AGPL-3.0 section 6** text
+(*"allowed only occasionally and noncommercially"*), which every GPL-3.0 and AGPL-3.0 payload
+contains. It is fixed in `ingest/p913-grant-authority.sh` and controlled against three stock-AGPL
+payloads. Full account: `agents/trending.md` `918-F1`.
+
+🆕 **`p918` deliverability grading.** Counts in this KB are now graded before they are reported as
+supply: a tier is **DELIVERABLE** only if its top member has **≥ 50 ★**, a **byte-read grant that is
+not `NONE`**, and a **push within 180 days**; otherwise it is reported as **`PRESENT — NOT
+DELIVERABLE`** with its measured size. The rule and the first application are in `repos/trending.md`
+`918-R1`. 🟢 Its first consequence for this file: the **Brazilian national-curriculum cluster
+passes** (`portabilis/i-educar` + `i-diario`, AGPL-3.0, 117 ★, pushed 2026-10-14), while the
+general-purpose vernacular tutor fails in **both** LATAM and APAC.
 
 🟢 **p899 also added five grading repos and opened an adaptive-learning section.** `Submitty`
 (BSD-3-Clause, 807 ★, RPI) is the largest permissive grading **platform** in open source and was

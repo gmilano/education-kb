@@ -1,0 +1,5 @@
+repo	branch	path	http	bytes	sha256_12	families	verdict	note
+PrairieLearn/PrairieLearn	master	LICENSE	200	37237	548cbfae567a	MIT+AGPL-3.0	BODY-CONJUNCTIVE	2 families in the body, no licence title — notice obligation of 2
+migueldsants/OpENEM	main	LICENSE	200	34523	8486a10c4393	AGPL-3.0	AGPL-3.0	
+UnitedOpen-Source/microHelium	master	LICENSE	200	34523	0d96a4ff68ad	AGPL-3.0	AGPL-3.0	
+portabilis/i-diario	1.6	LICENSE	200	35326	fe85f94658bf	AGPL-3.0	AGPL-3.0	TRANSLATED grant title, graded on ASCII tokens (913-F6)

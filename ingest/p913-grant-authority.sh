@@ -219,7 +219,21 @@ adjudicate() {
   elif grep -qi "Creative Commons Attribution-NonCommercial" "$B"; then bfam+=("CC-BY-NC")
   elif grep -qi "Creative Commons Attribution" "$B"; then bfam+=("CC-BY")
   elif grep -qiE "Creative Commons?" "$B"; then bfam+=("CC-UNSPECIFIED"); fi
-  grep -qi "non-commercial\|noncommercial" "$B" && bfam+=("NONCOMMERCIAL-TERM")
+  # ── 918-F1.  THE NONCOMMERCIAL MATCHER FIRED ON STOCK GNU TEXT. ──
+  # This line was an unguarded substring match over the WHOLE body, and it is reachable only from
+  # the title-less FALLBACK branch.  Every GPL-3.0 and AGPL-3.0 payload contains, in section 6:
+  #     "alternative is allowed only occasionally and noncommercially, and"
+  # so ANY title-less payload that embeds GNU text was given a spurious NONCOMMERCIAL-TERM family.
+  # Measured on `PrairieLearn/PrairieLearn` (LICENSE@master, 37,237 B, no licence title line): the
+  # true grant is MIT + AGPL-3.0, a notice obligation of 2, and p918 first read it as
+  # BODY-CONJUNCTIVE over THREE families with a NONCOMMERCIAL term that does not exist.  Publishing
+  # that would have told a studio the strongest open STEM assessment engine carries a
+  # noncommercial restriction -- an error in the direction that KILLS a deliverable build.
+  # 913-F2's lesson applies: the guard lives in the authority, not in a caller.
+  if grep -qi "non-commercial\|noncommercial" "$B" \
+     && ! grep -qi "allowed only occasionally and noncommercially" "$B"; then
+    bfam+=("NONCOMMERCIAL-TERM")
+  fi
 
   if [ "${#bfam[@]}" -eq 0 ]; then
     v="UNKNOWN-TEMPLATE"

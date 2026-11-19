@@ -4,6 +4,71 @@ region: Global
 updated: 2026-11-19
 ---
 
+## 🆕 `p918` · 2026-11-19 — **Four of `p917`'s eight gaps discharged. `917-G3` is answered and the answer generalises LATAM's result rather than differing from it; `917-G4` is answered with a rule this base is now bound by; `917-G8` is answered by *running* the thing, and the gate it told us to start with is wrong four times in five. 🔴 This pass's own instrument reported a licence restriction that does not exist — caught before publication.**
+
+🔵 **Summary.** 12 `gh api search/repositories` legs in six non-English languages plus the eight
+mandated WebSearch legs (four global, one per region). 21 of 22 anchor rows re-measured. 21
+repositories byte-read for their grant across three records. **One instrument defect found, fixed in
+the authority and controlled.** `make hooks` run for the first time, in the foreground. Nine
+repositories promoted to the delivery surface, all byte-read, **eight MIT and one Apache-2.0**.
+Addresses diffed against **18,074** slugs grepped from the delivery pages.
+
+🔵 **Closed or settled this pass:**
+
+| Gap | Verdict | What settled it |
+|---|---|---|
+| **`917-G3`** — APAC placed zero of 17 candidates; query APAC supply in non-English shapes | 🟢 **DISCHARGED, and it generalises `917-F1` rather than differing from it** | 12 legs, six languages. **157 repositories unseen by this base**: ZH **79/78/23**, JA **60**, KO **27/21**, VI **16**; 🔴 **ID 0, TH 0**. The tier is **`PRESENT — NOT DELIVERABLE`** — best permissive byte-read member **36 ★, 383 days idle**; the two most-starred members are **ungranted**. 🟢 `T29`'s *single-country* framing is **refuted**, its caution vindicated. `T50`, `agents/trending.md` `918-F2`/`918-F3`, `agents/top.md` APAC tier, `compose/patterns.md` **P40** |
+| **`917-G4`** — decide a top-of-shelf threshold below which a tier is *present but not deliverable* | 🟢 **DISCHARGED with a published, binding rule** | **≥ 50 ★ · a byte-read grant that is not `NONE` · pushed within 180 days.** Applied to five tiers; it separates `p904`'s LATAM curriculum cluster (**passes**) from `917-F1`'s vernacular tutor shelf (**fails, both languages**) — which is the `README.md` advice *bring the tutor, adopt the curriculum spine*, now derived from a stated rule. `repos/trending.md` `918-R1` |
+| **`917-G8`** — `make hooks` reports 22 standing red gates and no pass has read them | 🟢 **DISCHARGED** | It runs: **`53/76` green, 23 red** (not 22). 🔴 Environment correction: it is **refused by this session's command classifier as a background command** and runs normally in the foreground — the denial is *invocation-shaped*, not session-shaped. Red set enumerated in `repos/trending.md` `918-R2`; [full output](../scratchpad/p918/hooks-full.txt) |
+| **`917-G8`a** — *"start with `gate-shelf-consistency`"* | 🟡 **DISCHARGED, and the gate is mostly wrong** | All five flagged slugs byte-read. **Precision 1 of 5.** Four are false positives — a *bundled font* correctly disclosed (`h5p`), a prose sentence about a blog (`DeepTutor`), one multi-column row read as five cells (`openeducat`), a disclosed *dependency* (`open-moodle`). 🟢 **The one true positive is worth the other four**: `verticals/solutions.md` carried **PrairieLearn twice** and `p899` corrected only one of them, leaving a bare `MIT` cell live for 19 passes. `repos/trending.md` `918-R3` |
+| **`917-G1`** — no primary legal text, seventh consecutive pass | 🔴 **RE-DECLARED UNCHANGED, eighth pass** | `eur-lex.europa.eu` still does not resolve; `915-F2` established the failure is DNS. Re-declared as `918-G1` |
+
+### 🔴 `918-G0` — the instrument said "noncommercial" and the licence does not, and the error ran toward killing a build
+
+Every licence defect this base has recorded ran in the **permissive** direction — a copyleft repo
+reported as safe. `918-F1` ran the other way. `ingest/p913-grant-authority.sh` reported
+`PrairieLearn/PrairieLearn` as `MIT+AGPL-3.0+NONCOMMERCIAL-TERM`, *"notice obligation of 3"*.
+
+🔴 **There is no noncommercial term.** The matcher at line 222 was an unguarded
+`grep -qi "non-commercial\|noncommercial"` over the whole body, reachable **only** from the
+title-less FALLBACK branch — and **every** GPL-3.0 and AGPL-3.0 payload contains, in section 6,
+*"alternative is allowed only occasionally and noncommercially"*. So any title-less payload
+embedding GNU text was given a family it does not have, **and the inflated family count drove the
+verdict**: the true notice obligation is **2**.
+
+🟢 **Fixed in the authority** — not in a caller, per `913-F2` — and controlled: `PrairieLearn` now
+reads `MIT+AGPL-3.0`, while `migueldsants/OpENEM`, `UnitedOpen-Source/microHelium` and
+`portabilis/i-diario` are **unchanged at `AGPL-3.0`**, because they match on the title line and
+never reach the fallback. That control also **bounds the blast radius**: title-less payloads only.
+[Record](../evidence/p918-noncommercial-control.2026-11-19-p918.tsv).
+
+🔵 **Why this gets a `G0` entry.** Telling a studio that the strongest open STEM assessment engine
+in the field carries a noncommercial restriction does not cost a clause — it kills the engagement.
+**An instrument that errs toward refusal is not the safe direction; it is just the quiet one.**
+
+### 🔴 Live gaps declared by `p918`
+
+| Gap | Remedy | Cost |
+|---|---|---|
+| **`918-G1`** — `917-G1` re-declared unchanged. **Eighth consecutive pass with no primary legal text.** Every EU AI Act date in `intel/market.md` and `intel/trends.md` is secondary-sourced and marked so | One pass from a session whose network policy *resolves* `eur-lex.europa.eu`, `oecd.org`, `unesco.org`. 🔴 Do **not** spend a leg on another HTTP client — the failure is DNS | a network-policy change; zero in-session effort |
+| 🔴 **`918-G2`** — **the cheapest shelf growth available, and it needs no network.** `gate-promotion-ledger` prints a live `PROSE-minus-FILED` **promotion queue of 28**, plus `un-landed distinct=403` and a filing rate of **5.7%** (469 filed of 8,248 addresses). `916-R1` and `917-F3` each rediscovered this `logged-not-shelved` class **by hand** while the gate was printing the list | Work the `C1-UNADJUDICATED` rows the gate names — `matmiidu/paes-ensayos`, `theteacherbot/ICFES-Exam-Engine`, `001kenji/KCSE-predictor`, `tristcoil/hanabira.org` and the rest — byte-read each grant, file or refuse it, and write the ledger row | one byte-read per row; **no discovery legs at all** |
+| **`918-G3`** — 22 of the 23 red gates remain unread. `918-R2` enumerated them and read exactly one | Take them in cheap-first order: `gate-dates` and `gate-derived-counts` are stale-date debt; `gate-cell-reproduction` reports *"zero published cells parsed — a parse fault, not a clean shelf"*, which means it has been **failing open** and is the one most likely to be hiding real defects | one pass, no network |
+| **`918-G4`** — `918-R3` showed `gate-shelf-consistency` has **1-in-5 precision** on the live shelf, and three of its four false positives are one class: a **correctly disclosed bundled component or dependency** read as a contradiction | Teach the gate the difference between *this repository's grant* and *a licence this repository discloses about something else*. The `h5p` and `open-moodle` payloads are ready-made fixtures | one instrument change; the fixtures already exist |
+| 🔴 **`918-G5`** — **the duplicate-row defect class has never been swept for.** `PrairieLearn` was found by luck, because a licence happened to differ. A repository appearing twice with *consistent* licences but divergent **stars, dates or descriptions** would be invisible to every gate this base owns | Sweep the five delivery files for any slug occurring in more than one table row, and diff the rows field by field. 🔵 `918-R3`'s rule — *apply corrections by address, not by row* — is unenforceable until this exists | one sweep, no network |
+| **`918-G6`** — `917-G5` (`kirstykitto/CLAtoolkit` unplaced) and `917-G6` (licence-filename ladder never audited against a real corpus) and `917-G7` (hand-written domain classifier) were **not reached this pass** | Carried forward unchanged from `p917`; their remedies and costs stand as written there | as `p917` recorded |
+| **`918-G7`** — 🔴 **Indonesia and Thailand returned ZERO vernacular education-agent supply**, against the largest documented teacher-adoption figures in APAC (~86% SE Asian teacher use) | Before concluding the supply is absent, re-measure in a shape the original did not use — `916-G5`'s own lesson, which `918-F2` has not yet applied to its two nil results. Try platform-named and institution-named shapes rather than topic words | 2–4 legs |
+
+### 🔵 `918-F5` — a channel fact recorded so a later pass does not re-spend
+
+`openedx/edx-platform` is **absent on `search/repositories` for the third consecutive day**
+(`p916`, `p917`, `p918`) with `Validation Failed`, while `raw.githubusercontent.com` serves `200` on
+both `master/README.rst` and `master/LICENSE`. 🟢 **Three days is not a transient.** It is the
+*loud* absence shape, so the two-channel rule catches it — but no further leg should be spent
+confirming it.
+
+---
+
+
 ## 🆕 `p917` · 2026-11-19 — **Four of `p916`'s six gaps discharged, and three of them discharged *against* the expectation that declared them. `916-G5` expected voids to fall and one held. `916-G4` asked for a union count and the count is the least useful thing it produced. `916-G2` asked whether a header layer resolves ungranted rows and the answer is a rate — 3 of 13 — plus a filename `p913` never carried. 🔴 One prior channel verdict corrected: `search/users` is NOT blocked.**
 
 🔵 **Summary.** 28 `gh api search/repositories` legs plus the eight mandated WebSearch legs.

@@ -1,0 +1,6 @@
+repo	branch	path	http	bytes	sha256_12	families	verdict	note
+PrairieLearn/PrairieLearn	master	LICENSE	200	37237	548cbfae567a	MIT+AGPL-3.0+NONCOMMERCIAL-TERM	BODY-CONJUNCTIVE	3 families in the body, no licence title — notice obligation of 3
+h5p/h5p-php-library	master	LICENSE.txt	200	35146	c53a65c2fd56	GPL	GPL	
+HKUDS/DeepTutor	main	LICENSE	200	11408	cd2f54e1e506	Apache-2.0	Apache-2.0	
+openeducat/openeducat_erp	19.0	LICENSE	200	8241	528f84036800	LGPL	LGPL	
+sonstellar969/open-moodle	main	LICENSE	200	1088	2e0193644321	MIT	MIT	

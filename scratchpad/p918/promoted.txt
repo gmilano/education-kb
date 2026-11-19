@@ -1,0 +1,9 @@
+GitHubDaily/AI-Course-Generator
+kenoharada/AI-LaBuddy
+jetyu/Dawn
+hapince-code/AI-EduForge
+SNOOPY-alt/heuristic-learning-system
+cxkzai/ai-admissions-platform
+uczltw6/course-tutor
+MathMindCanvas/MathMind
+mousam100/Montessori-Agentic-AI-Tutor

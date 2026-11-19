@@ -3211,3 +3211,58 @@ detection is being abandoned in favour of assessment redesign is the relevant ca
 generator inside a graded assessment is an integrity problem, not a feature. And not where the
 client cannot supply a curriculum corpus: without one, the retrieval tier has nothing to ground on
 and the output degrades to a general chatbot, which is the pitch `T10` records as fading.
+
+## P40 — Enter an APAC market where the local open shelf is *present but not deliverable* (added `p918`)
+
+**The brief this answers.** A client is deploying into China, Japan, Korea, Vietnam, Indonesia or
+Thailand and asks the reasonable question: *what do we adopt locally?* `918-F2` measured the answer
+— **157 local repositories, and not one of them passes `918-R1`.** The naive move is to report "no
+local supply" (wrong, and `p904` already had to retract that claim once for LATAM) or to adopt a
+5 ★ coursework project as a dependency (worse). This pattern does neither.
+
+### Stack
+
+| Layer | Repo | Licence | Why this one |
+|---|---|---|---|
+| Tutor / classroom agent | https://github.com/HKUDS/DeepTutor | **Apache-2.0** | 60,675 ★, pushed 2026-11-18. 🔵 **Already APAC-origin (HKU)** — this is not a Western import, which matters in the room |
+| Multi-agent classroom | https://github.com/THU-MAIC/OpenMAIC | **MIT** | 43,940 ★, Tsinghua. The slide/quiz/PBL generation tier |
+| Live classroom | https://github.com/netless-io/flat | **MIT** | 6,443 ★, China-origin, MIT — the one place the local shelf *is* deliverable |
+| LMS the client already runs | https://github.com/moodle/moodle | GPL-3.0 | Integrate over **LTI 1.3** or MCP so your tool stays a separate work (`P11`) |
+| Requirements input | the `agents/top.md` APAC vernacular table | MIT ×8, Apache-2.0 ×1 | 🔵 **Read, not imported** — see below |
+| Compliance tier | your own, per jurisdiction | — | Vietnam 1 Mar 2027 / Korea 2027 / TEQSA action plans |
+
+### How it wires together
+
+1. **Run the vernacular discovery leg first, before the kickoff.** Twelve `search/repositories` legs
+   in the local language (the shapes are in `scratchpad/p918/queries-apac.tsv`). Budget: ~1 hour.
+2. **Grade every hit with `918-R1`** — ≥ 50 ★, a byte-read grant that is not `NONE`, pushed within
+   180 days. Expect **everything to fail**; that is the measured base rate, not a bad search.
+3. **Mine the failures for requirements.** `cxkzai/ai-admissions-platform` (MIT, 5 ★) is a
+   multi-role admissions advisor; `uczltw6/course-tutor` (MIT, 5 ★) distils a *named teacher's*
+   style and treats token cost as a design constraint; `hapince-code/AI-EduForge` (MIT, 6 ★) emits
+   PPT **and** interactive courseware **and** test papers from one brief. 🔵 **Three product
+   requirements no Western repo in this KB expresses** — delivered free, as a local-language
+   specification, by projects you will never ship.
+4. **Build on the permissive APAC-origin anchors** — DeepTutor, OpenMAIC, Flat — so the deliverable
+   is regionally credible *and* passes `918-R1`.
+5. **Attach the compliance tier per jurisdiction**, because it is the earliest deadline in the
+   world: **Vietnam's education-AI high-risk obligations bite 1 March 2027 for new systems**, ahead
+   of the EU's 2 December 2027.
+
+### Licence posture of the result
+
+🟢 **Clean.** DeepTutor (Apache-2.0), OpenMAIC (MIT) and Flat (MIT) carry no copyleft and no
+enterprise carve-out, so a closed client derivative is available. The vernacular repositories are
+**read and never linked**, so their licences — including the two ungranted ones — never enter the
+build. 🔴 If you do import one, note that `SNOOPY-alt/heuristic-learning-system` is MIT but runs on
+**Dify**, which is *not* OSI-permissive: the agent is inheritable, its harness is not.
+
+### Where it does not apply
+
+🔴 **Indonesia and Thailand, where the vernacular leg returned zero.** There is no local shelf to
+read for requirements, so step 3 yields nothing and the engagement must get its requirements from
+interviews instead. Say so in the proposal rather than returning an empty slide — `918-F2` searched
+and found nothing, and an informed gap is information. 🔴 Also not for a client who needs the
+deliverable to *be* a local open-source contribution: this pattern produces a closed derivative of
+permissive APAC-origin infrastructure, which is a different promise.
+
