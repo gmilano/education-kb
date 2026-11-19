@@ -4,6 +4,347 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p916) — **The `oral reading fluency` void, declared at this base's sixth pass and "reproduced exactly" ever since, is REFUTED — and it was never a fact about the world. `oral reading fluency assessment` returns `4`; `"reading fluency"` returns **102**. Every pass that reproduced the 4 was reproducing the *instrument*. 🔴 Reproducing a measurement exactly is not evidence that the measurement is right. `915-G3` discharged: the search channel fabricates a licence 1 time in 92 and **abstains** 14 times, and a byte-read resolves 10 of those. "No licence file" is not "no grant": `moodle-mod_readaloud` is GPL-3.0-or-later in every source header with no licence file at all.**
+
+**Channels and posture.** `gh api search/repositories` over **eleven** discovery legs on angles
+distinct from `p914`'s seven and `p915`'s twelve (dropout/early-warning, academic advising, degree
+audit, open badges, verifiable credentials, learner record, reading fluency, virtual laboratory,
+knowledge tracing, student information system, learning analytics), diffed against the **9,481**
+addresses and bare slugs already written across the delivery pages and the gap register. Grants
+adjudicated with this base's own **`ingest/p913-grant-authority.sh`** (title-line primary, 16
+filenames × 3 branches), per `913-F2`. Plus the **8 mandated WebSearch legs** (4 global, 4 regional).
+Evidence: `evidence/p916-discovery-legs.2026-11-19-p916.tsv`,
+`evidence/p916-discovery-hits.2026-11-19-p916.tsv`,
+`evidence/p916-shelf-metrics.2026-11-19-p916.tsv`,
+`evidence/p916-region-placement.2026-11-19-p916.tsv`,
+`evidence/p916-grants-reported.2026-11-19-p916.tsv`,
+`evidence/p916-grants-unreported.2026-11-19-p916.tsv`.
+
+### 🟢 `916-F1` `915-G3` is discharged, and the instrument's defect is **abstention**, not fabrication
+
+`915-G3` asked how often `search/repositories` names an SPDX licence for a repository with no
+readable payload, and said: *until then, treat a search-reported licence as one channel, not two.*
+Measured over **92 repositories** in this pass's cohort whose search result carried a licence field,
+every one byte-read with the grant authority:
+
+| Outcome | n | % |
+|---|---|---|
+| Payload readable | **91** | 98.9% |
+| 🔴 Licence named, **no payload on 16 names × 3 branches** | **1** | **1.1%** |
+| of the readable: field and bytes **agree** | 77 | 84.6% |
+| *(of those 77, differing only in family granularity — `BSD-3-Clause` vs `BSD`)* | 2 | — |
+| of the readable: field is **`NOASSERTION`** | **14** | **15.2% of 92** |
+| of those 14: byte-read **resolves a nameable grant** | **10** | **71.4%** |
+
+🔵 **The fabrication class is nearly empty and the abstention class is not.** The single
+no-payload case is `PRX/badges_engine` (37 ★, last pushed 2011), reported `MIT`. The far larger
+effect is `NOASSERTION` — GitHub saw *a* licence file and declined to classify it — and in 10 of 14
+cases the bytes name a grant plainly:
+
+| Repo | search | byte-read |
+|---|---|---|
+| `Apereo-Learning-Analytics-Initiative/OpenLRS` | `NOASSERTION` | **ECL-2.0** |
+| `Apereo-Learning-Analytics-Initiative/OpenLRW` | `NOASSERTION` | **ECL-2.0** |
+| `Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor` | `NOASSERTION` | **ECL-2.0** |
+| `Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy` | `NOASSERTION` | **ECL-2.0** |
+| `fedora-infra/tahrir` | `NOASSERTION` | **AGPL-3.0** |
+| `amajorai/ryu-tuition` | `NOASSERTION` | **Apache-2.0** |
+| `brianloveswords/django-obi` | `NOASSERTION` | **MPL** |
+| `ScottDaniels/labaaoom` | `NOASSERTION` | BSD (body verdict) |
+| `Kosudo/nextSIS` | `NOASSERTION` | **GPL + Apache-2.0 (conjunctive)** |
+| `ocansey/student-outcome-early-warning` | `NOASSERTION` | **MIT + CC (conjunctive)** |
+| `mozilla/openbadges-backpack`, `davelester/WPBadgeDisplay`, `dssg/student-early-warning`, `hhy37/student-early-warning` | `NOASSERTION` | unresolved template |
+
+🔴 **The Apereo row is the one that costs money — and this base already knew it.**
+`Apereo-Learning-Analytics-Initiative` is the learning-analytics estate of the foundation that also
+publishes Sakai, and **all four of its repositories read `NOASSERTION` on the search channel while
+carrying a reproduced ECL-2.0 payload** — a licence this base already holds as Sakai's, Apache-2.0
+with an attribution/patent clause and on every enterprise approved list. 🔵 **`p805` byte-read
+`OpenLRW` as ECL-2.0, and `p816`'s `T50`/`T52` cite it as one of the two counter-examples that
+corrected the channel rule.** This pass therefore **replicates** a known read rather than making a
+new one — the contribution `915-G3` asked for is the *rate*, not the case. What `p916` adds is
+`916-R1`: the correct reading has existed for eleven passes and **the estate still has no row on
+any delivery page.** The instrument was not the failure. The promotion step was. 🔵 And an
+SPDX-driven gate still routes the whole estate to legal review — `906-G1`'s *restrictive-direction*
+class at estate scale, where **nobody audits a rejection**.
+
+🟢 **Verdict for `915-G3`:** a search-reported licence is a **usable but abstaining** second channel.
+It fabricated once in 92. It declined to answer 14 times in 92, and in 10 of those the answer was
+readable. **Do not treat `NOASSERTION` as "unlicensed" — treat it as "unread".**
+
+### 🔴 `916-F2` The inverse direction, and it breaks a rule this base has been using implicitly: **no licence file ≠ no grant**
+
+Fifteen cohort repositories whose search result was `NONE` were byte-read over the same 16 names × 3
+branches. **All fifteen confirmed: no licence file exists.** The channels agree perfectly — and on at
+least one of the fifteen the conclusion a reader would draw is wrong.
+
+🟢 **`justinhunt/moodle-mod_readaloud`** (6 ★, pushed **2026-10-28**) has **no licence file anywhere**
+and is unambiguously **GPL-3.0-or-later**, declared on two independent channels:
+- `README.md`: *"**License:** GNU GPL v3 or later"*
+- **every source file**: `version.php`, `lib.php` and `mod_form.php` each carry the full GNU header
+  block — *"under the terms of the GNU General Public License … either version 3 of the License, or
+  (at your option) any later version"*.
+
+🔵 **This is a class, not an anecdote, and the class is an ecosystem.** Moodle requires GPL-3.0+ of
+every plugin and the convention puts the grant in the **file header**, not in a licence file. All
+three `moodle-*` plugins in this cohort carry the full GNU block in `version.php`; only one of the
+three (`rwthanalytics`) has a root `LICENSE`; `marceloschmitt/moodle-block_analytics_graphs` has
+`LICENSE.md` **only on branch `4.3`** — which the grant authority found and a naïve `master`/`main`
+probe did not. **This base holds many Moodle plugins.** A licence-file sweep that reports
+`NO-LICENCE-FILE-FOUND` for one of them has measured the file, not the grant.
+
+🔴 **Consequence for the gate.** `G1`'s pre-flight must read the **file-header layer** for any
+repository in an ecosystem with a mandated licence (Moodle, WordPress, Drupal), before recording
+`ungranted`.
+
+### 🔴 `916-F3` The **oral reading fluency void is refuted**, and the way it survived is the finding
+
+This base declared an oral-reading-fluency **void** at its sixth pass (`P17`), and has re-measured
+it repeatedly since — `p890` records it as *"Holds, reproduced exactly. Same four: `prosody` (MIT,
+0★), `labaaoom` (2017, `NOASSERTION`), `ReaDirect-V2` (ungranted), `ORF_Calculator_6th` (0★)."*
+`p890` went further and used the void to interpret a GitLab anti-licence: *"the oral reading fluency
+void therefore stands, and for a sharper reason than absence."*
+
+🔴 **It does not stand. Measured this pass, side by side, on the same API, minutes apart:**
+
+| Query | `total_count` |
+|---|---|
+| `oral reading fluency assessment` — the void query, as this base has always run it | **4** |
+| `"reading fluency"` | **102** |
+| `"reading fluency" in:name,description` | **102** |
+
+🔵 **The 4 is a strict subset of the 102** — `ScottDaniels/labaaoom`, one of the canonical four, came
+back on this pass's `"reading fluency"` leg too. The void query is four unquoted terms, so
+`search/repositories` ANDs all of them (`T45`): a repository must carry *oral* **and** *reading*
+**and** *fluency* **and** *assessment*. Here are the four new rows' descriptions — the field the
+query matches — **verbatim**:
+
+| Repo | Description, as the search channel sees it | Fails the AND on |
+|---|---|---|
+| `justinhunt/moodle-mod_readaloud` | *"Reading Fluency Analysis Tool"* | **oral**, **assessment** |
+| `OSU-slatelab/AIRFluTe` | *"An Intelligent Reading Fluency Teacher"* | **oral**, **assessment** |
+| `JambuOverflow/lepic` | *"Supporting the Assessment and Management of Reading Fluency"* | **oral** |
+| `dungnotnull/ReadPulse-AI-Agent` | *"…Assesses **oral reading fluency** (WCPM), benchmarks against Hasbrouck & Tindal national norms…"* | **assessment** — it says *"Assesses"* |
+
+🔴 **All four exist, all four are squarely in the tier, and all four were invisible to the void
+query.** The last row is the sharpest: it names the tier in the exact phrase the void is named after
+and is still excluded, on the inflection of one word.
+
+🔴 **The methodological finding, which generalises past this tier and is the reason this is the
+headline: every pass that "reproduced the void exactly" was reproducing the instrument, not the
+world.** An exact reproduction is the expected behaviour of a deterministic query against a
+slow-moving index — it is evidence of *determinism*, and this base had been reading it as evidence
+of *truth*. 🔵 **A gap re-measurement that re-runs the original query can only ever confirm it.
+Re-measuring a declared absence requires a query shape the original did not use.**
+
+🟢 **What is actually there.** The tier is 102 repositories and it matters disproportionately:
+automated oral-reading assessment is speech-plus-literacy, the highest-value K-12 application of AI
+that is not text generation, and it is a *measurement* task, so it survives the grading prohibitions
+`T1` tracks (Oklahoma SB 1734 bars AI used **solely** for grading; a fluency score is evidence for a
+teacher, not a decision). `grep -ric "reading fluency"` over every **delivery** file still returns
+**0**, so the tier has no row anywhere a client-facing reader would find it. Four rows, placed by
+repository content:
+
+| Repo | ★ | Grant (byte-read) | Region, from repository content | Note |
+|---|---|---|---|---|
+| `justinhunt/moodle-mod_readaloud` | 6 | **GPL-3.0-or-later** — README + file headers, **no licence file** (`916-F2`) | Global (Moodle plugin) | **Poodll ReadAloud.** Guided fluency + comprehension activity, auto-scored by speech recognition for words-per-minute and accuracy. **Pushed 2026-10-28** — the only actively-developed row in the tier |
+| `OSU-slatelab/AIRFluTe` | 3 | **Apache-2.0** | **North America** — Ohio State SLaTe lab | Streaming models fine-tuned on **children's** speech; an "intelligent teacher" prompts with synthesised voice on a difficult word. Permissive, and idle since 2022-12 |
+| `JambuOverflow/lepic` | 7 | **GPL-3.0** | **LATAM** — Brazil, University of Pará | Won the **ICSE 2021** Student Contest on Software Engineering. Android/iOS; teacher marks the mistakes, app computes duration and words-per-minute. Idle since 2021-07 |
+| `dungnotnull/ReadPulse-AI-Agent` | 3 | **MIT** | — not placed | Voice agent on AssemblyAI; the only MIT row in the tier, and three months old |
+
+🔵 **The delivery read.** The permissive half of this tier (`AIRFluTe` Apache-2.0, `ReadPulse` MIT) is
+research code and demo code; the production-shaped artefact (`readaloud`) is GPL-3.0 **and is a
+Moodle plugin, so a client already running Moodle can deploy it without a derivative-work problem at
+all.** That is the one configuration in which copyleft costs nothing, and it is the common one.
+
+🔴 **Consequence for every other declared void in this base.** `p890`'s gap table re-measured four
+absences by re-running four original queries — `OpenLiteracy` (`0`), the LATAM Spanish shelf (`3`),
+the LATAM Portuguese shelf (`0`), Python LTI 1.3 (`4`). **Each of those is a single query shape, and
+one of the four in that same table has now been refuted.** `916-G5` registers the re-measurement the
+other three now need.
+
+### 🔴 `916-F4` The digital-credential tier is an **archaeological site**, and its single live platform is LATAM
+
+🔵 **Prior art, stated first.** `p817` ran `learner credential wallet` (11) and
+`open badges verifiable credential` (6) and this base holds `credential-lens` from that leg, plus
+single historical mentions of `openbadges-badgekit`, `openbadges-backpack` and `openbadges-discovery`
+in `repos/trending.md`. So the tier is not untouched — but **`verticals/solutions.md` contains the
+string "Open Badges" zero times and `repos/foundations.md` once.** It is `logged-not-shelved`, the
+same pathology as `916-R1`, and this pass gives it delivery rows. `salava`, `gdgguadalajara/open-badges-platform`
+and `totara/openbadges` have no prior mention anywhere in this base.
+
+`"open badge"` returns 347 repositories; `"open badges"` 295; **`"verifiable credential" education`
+returns 2.** The stars-ranked head of the tier is uniformly Mozilla-era and dead:
+
+| Repo | ★ | Grant | Last push | State |
+|---|---|---|---|---|
+| `mozilla/openbadges-badgekit` | 123 | MPL-2.0 | 2020-09-01 | self-described *"No Longer Maintained"* |
+| `PRX/badges_engine` | 37 | MIT *(claimed; **no payload** — `916-F1`)* | **2011-09-29** | dead |
+| `totara/openbadges` | 26 | **GPL-3.0** | 2016-03-14 | Moodle integration, dead |
+| `mozilla/openbadges-discovery` | 25 | MPL-2.0 | 2019-03-28 | self-described *"INACTIVE"* |
+| `openmichigan/open_badges` | 25 | **none** (byte-read) | 2012-03-20 | Drupal module, dead |
+| `openbadgefactory/salava` | 22 | **Apache-2.0** (9,720 B, `sha256₁₂ e9852865aedf`) | 2020-10-02 | **Open Badge Passport community edition**, Discendum, **EMEA/Finland**. The tier's only permissive *platform* — and idle five years |
+| 🟢 `gdgguadalajara/open-badges-platform` | 9 | **AGPL-3.0** | **2026-08-31** | **LATAM — Guadalajara, Mexico.** *"Sovereign, immutable and standard-compliant recognition."* **The only actively-developed standalone Open Badges platform this base can find in open source** |
+| `openedx/frontend-app-learner-record` | 7 | AGPL-3.0 | **2026-11-16** | live, but Open edX-bound micro-frontend |
+| 🔴 `1EdTech/openbadges-specification` | 206 | **no licence file** (byte-read, 16 names × 3 branches) | **2026-11-13** | **the standard itself is ungranted on GitHub** |
+
+🔴 **Two findings, and the second is the one for a client deck.** First, `1EdTech/openbadges-specification`
+is actively maintained and carries **no grant** — `T25`'s licence trap, sitting on the specification
+that the whole tier implements. Second: **micro-credentials are a live commercial category with a
+dead open-source supply side.** Everything with stars is a 2011–2020 Mozilla artefact; everything
+alive is small; and the one live standalone platform is **AGPL-3.0 and Mexican**. 🔵 For a LATAM
+engagement that is an asset — a sovereign, standards-compliant, regionally-authored base to extend.
+For an engagement needing a **closed** credential product there is nothing permissive and current to
+start from, and `salava` (Apache-2.0, 2020) is the only permissive fork point that exists.
+
+### 🔴 `916-F5` The retention / early-warning tier — the single most-cited AI-in-education use case — has **no adoptable supply**
+
+Every market source in `intel/market.md` names dropout prediction and student retention among the
+top applications. The supply side does not exist in a form anyone can adopt:
+
+- `student dropout prediction in:name,description` — the stars-ranked head is **23 unwritten
+  repositories with a ceiling of 25 ★**, and **20 of the 23 carry no licence at all**.
+- `"early warning" student in:name,description` — 735 repositories; the new rows top out at **11 ★**.
+- The highest-star **licensed** artefact in the whole tier is `sinothando/student-early-warning-system`
+  (**MIT**, 11 ★, pushed 2026-05-31) — a final-year-project-shaped web app.
+- Both `dssg/student-early-warning` and `hhy37/student-early-warning` read `NOASSERTION` and their
+  payloads do not resolve (`916-F1`).
+
+🔵 **Delivery consequence, stated plainly: the retention model is studio IP.** There is no
+`Artemis`-equivalent here, no permissive platform to fork, and — unlike the grading tier, where
+`Submitty` and `otter-grader` exist — nothing above coursework scale. Price the engagement as a
+build, and take the *substrate* (`pyBKT` for learner modelling, the LMS's own event stream, an LRS)
+from tiers that do have supply.
+
+### 🔴 `916-F6` Knowledge tracing: a large academic tier, and the top of it is **ungranted**
+
+`"knowledge tracing"` returns **766** repositories. Byte-read over the stars-ranked head:
+
+| Repo | ★ | Licence file |
+|---|---|---|
+| `chrispiech/DeepKnowledgeTracing` | 316 | 🔴 **none** — the original DKT implementation |
+| `ckyeungac/deep-knowledge-tracing-plus` | 124 | 🔴 **none** |
+| `ApexEDM/GIKT` | 83 | 🔴 **none** |
+| `jennyzhang0215/DKVMN`, `pydaxing/…-DKT-Pytorch`, `seewoo5/KT`, `sulingling123/Knowledge_Tracing`, `shivanandmn/SAINT_plus…`, `siyuanzhao/2016-EDM`, `xiaofengShi/DKT-TensorFlow` | 90→50 | 🔴 **none, every one** |
+
+**Ten of ten.** 🔵 `CAHLR/pyBKT` (MIT, UC Berkeley), added in `p899`, **remains the only licensed
+learner-modelling primitive this base holds**, and this pass establishes that it is not an oversight
+in the shelf — it is the state of the field. The deep-knowledge-tracing literature publishes code
+and does not license it.
+
+### 🔵 `916-F7` Instrument rule: an unquoted multi-word `in:name,description` query **ANDs every term** and silently truncates a tier
+
+This pass ran the knowledge-tracing leg twice. `knowledge tracing learner model in:name,description`
+returned **13** repositories. `"knowledge tracing" in:name,description` returned **766**. The first
+shape requires *all four words* in name or description, so `pyKT`-shaped repositories — whose
+descriptions say "knowledge tracing models" but never "learner" — are invisible.
+
+🔴 **Paired with `p915`'s finding, this makes a two-sided rule on query *shape*, and both sides are
+silent failures:**
+- `in:name,description,readme` → **contamination** (p915: 37 of 40 hits were not education supply).
+- unquoted multi-term `in:name,description` → **truncation** (this pass: 13 against 766, a 98.3%
+  loss, with no error and a plausible-looking result set).
+🟢 **The sound shape is a quoted phrase scoped `in:name,description`.** Four of this pass's eleven
+legs were run in the defective shape before it was caught; all four were re-run.
+
+### 🔴 `916-F8` Two channels this environment has lost, recorded so a later pass does not re-spend on them
+
+- **`gh api users/{owner}` is blocked**: *"sessions are bound to their configured repositories."*
+  Fifteen owners were attempted and all fifteen returned the same refusal. **`ingest/p913-owner-affiliation.sh`
+  cannot run in this environment at all**, and affiliation must come from repository content.
+  Every region placement in this pass is from a byte-read `README`, never from an owner name — which
+  is `912-F4`'s rule anyway, now enforced by the environment rather than by discipline.
+- **`python3 -I ingest/address-ledger.py` was refused by this session's command classifier** while
+  `bash ingest/*.sh` ran normally. The address diff in this pass was therefore built with `grep`
+  over the delivery files and the gap register (9,481 addresses and bare slugs), which is a
+  **superset** of the ledger's index and so is conservative in the right direction — it can only
+  suppress a candidate, never admit a duplicate.
+
+### 🟡 `916-F9` The eight mandated legs: **2 of 27 facts new**, and both are precision on a date this base already holds
+
+The 4 global and 4 regional WebSearch legs returned 27 distinct named facts. **Twenty-five were
+already on the delivery surface** — UNESCO IESALC's 87%/26%, the Digital Education Council LATAM
+survey, Universidad de los Andes' 716 instruments, CONPES 4144, Cetic.br, Ceibal, the UNESCO LAC
+Observatory, KHDA, the Estonia/Slovakia/Greece/Italy partnerships, EO 14277, Idaho, Florida, the
+OpenAI/Common Sense ballot initiative, the April 2026 ADA deadline, OpenEduCat, ChinaTextbook,
+Claw-ED, DeepTutor, HolonIQ and the OECD outlook among them. **Two were not:**
+
+1. 🟢 The 2 December 2027 education date sits in **Article 113(c)** of the consolidated AI Act — a
+   locus this base had never recorded, having carried the date without its article.
+2. 🟢 **Annex I** high-risk systems defer to **2 August 2028**, six months *beyond* the Annex III
+   education date. This base held only the Annex III leg.
+
+🔵 **The honest read of a 25-of-27 null is not "the channel is exhausted" but "the channel is
+saturated for this industry at this granularity".** The two facts it did yield are both *precision*
+on an existing row, which is the shape of what a saturated channel returns.
+
+### 🟡 `916-F10` `915-G2` narrowed on secondary sources — the date does **not** appear to be advanceable
+
+`915-G2` asked whether the 2 December 2027 date is conditional and advanceable by the Commission,
+because `T3` is written as a selling window. The primary text remains unreadable (`915-G1`). Across
+**six independent secondary analyses** of `Regulation (EU) 2026/1744`: all six place Annex III
+stand-alone high-risk systems — education among them — at **2 December 2027** under Article 113(c);
+**none mentions any Commission power to bring the date forward**; one states explicitly that the
+education deadline is *fixed in law rather than conditional on adoption*. Publication **24 July
+2026**, entry into force **27 July 2026**, both already held.
+
+🔵 **Verdict: `T3`'s window stands, at secondary-source strength.** 🔴 **Not closed** — six
+commentaries agreeing is six commentaries, and an absence of mention is weak evidence of absence of
+power. `916-G1` carries it forward.
+
+### 🟢 `916-F11` Nine rows added, placed by repository content
+
+Four to `agents/top.md`, nine to `repos/foundations.md`, three to `verticals/solutions.md` (two rows
+appear in both an agent and a platform role and are cross-referenced, not duplicated). Region is from
+a byte-read `README` in every case; **where the README carries no country signal the row is left
+unplaced and said so** — `kirstykitto/CLAtoolkit` and `marceloschmitt/moodle-block_analytics_graphs`
+are both unplaced for exactly this reason, and with `users/{owner}` blocked (`916-F8`) there is no
+second channel to place them on.
+
+Region-placed this pass: **North America** — `sandboxnu/graduatenu` (Northeastern),
+`Longhorn-Developers/Degree-Audit-Plus` (UT Austin), `Aaryan-Kapoor/degreeworks-cli` (Kennesaw
+State), `OSU-slatelab/AIRFluTe` (Ohio State), `chtzvt/PyEdsby` (Edsby, Canadian SIS). **EMEA** —
+`rwthanalytics/moodle-local_learning_analytics` (RWTH Aachen), `openbadgefactory/salava`
+(Discendum, Finland), `Kanjo-Elkamira-Ndi/Compass` (**Cameroon** — the second Africa-origin row this
+base holds, after `elimu-ai`). **LATAM** — `gdgguadalajara/open-badges-platform` (Guadalajara),
+`JambuOverflow/lepic` (Pará). 🔴 **APAC produced no placed row in this pass** — not an absence of
+APAC supply, which `p906` measured at scale in Mandarin, but an absence in *these eleven angles*,
+and it is written down rather than left to look like coverage.
+
+### Gaps declared by `p916`
+
+- **`916-G1`** — 🔴 **`915-G1` and `915-G2`, both re-declared unchanged.** The demand side still needs
+  one pass from a session whose network policy *resolves* `eur-lex.europa.eu`, `oecd.org` and
+  `unesco.org`; `916-F10` narrowed `915-G2` on six secondary sources but Article 113(c) has still
+  never been byte-read. **Sixth consecutive pass with no primary legal text.** Do not spend a leg on
+  another HTTP client (`915-F2`: the failure is DNS).
+- **`916-G2`** — `916-F2` showed a licence-file sweep can report `NO-LICENCE-FILE-FOUND` for a plainly
+  granted repository. **Bound the class**: over every row in this tree currently recorded as
+  ungranted, probe the **file-header layer** (`version.php`, the first 30 lines of the primary source
+  file) and report how many carry a full GNU or Apache header block. Cost: one byte-read per row, no
+  new channel. 🔵 Start with the Moodle, WordPress and Drupal plugins, where a licence is *mandated*
+  by the ecosystem and therefore most likely to be present and unfiled.
+- **`916-G3`** — `916-F1` measured abstention at 15.2% on a **cohort** sample, not on the shelf.
+  Re-run the grant authority over every **`NOASSERTION`** row in the delivery files and report how
+  many resolve. The Apereo case suggests the shelf carries unresolved estates.
+- **`916-G5`** — 🔴 **re-measure every declared void in this base with a query shape its original did
+  not use.** `916-F3` refuted one of the four absences in `p890`'s own gap table by changing the
+  shape alone; the other three (`OpenLiteracy`, the LATAM Spanish and Portuguese shelves, Python
+  LTI 1.3) have only ever been confirmed by re-running their original query, which `916-F3` shows
+  can only confirm. Cost: one extra leg per void. 🔵 **This is the highest-value gap `p916` declares**,
+  because a void in this base is not inert — `p890` used the fluency void to interpret an unrelated
+  licence finding, so a false void propagates into reasoning that does not look like it depends on it.
+- **`916-G4`** — this pass's `"verifiable credential" education in:name,description` returned **2**
+  repositories while `p817`'s unquoted `open badges verifiable credential` returned **6** and
+  `learner credential wallet` returned **11**. 🔴 **Three shapes, three populations, and no reason yet
+  to prefer one** — `916-F7` establishes that quoting changes the result set by orders of magnitude,
+  so neither number can be published as the tier's size. Re-run all three shapes plus the vocabulary
+  this pass did not use (`did:`, `OpenID4VCI`, `europass`, `EBSI`, `CLR`) and report the **union**,
+  before the tier's emptiness is stated as a finding rather than as an artefact of query shape.
+
+---
+
+
 ## `2026-11-19` (p915) — **`914-G4` discharged and `T41` refuted as a general mechanism: Adapt's authoring tool and its runtime carry the *same* full GPL payload, and the editor was created five days *after* the runtime. `914-G3` re-measured on a second, independent channel and still blocked — the block is a DNS allowlist, so no other HTTP client will help. The GNU family is granted *by reference* as often as by reproduction: Anki's own AGPL payload is 1,937 B and its addon's is **227 B**, against 34,523 B for a reproduced one — so `p640`'s size-band logic must not be ported to the GNU family. Nine agents added, three refused.**
 
 **Channels and posture.** `gh api search/repositories` over **twelve** education-shaped discovery

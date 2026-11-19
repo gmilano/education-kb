@@ -10,7 +10,7 @@ Concrete recipes. Each names the exact repos, how they wire together, the licenc
 the result, and a realistic build estimate. Every repo referenced is verified in
 `agents/top.md`, `repos/foundations.md` or `verticals/solutions.md`.
 
-**Thirty-five patterns, re-counted mechanically in `p915`** (🔴 **this line read *"Thirty-two"* and was three short — `P33` was added in `p914` and `P34`–`P35` in `p915`.** The count is `grep -cE '^## P[0-9]+' compose/patterns.md`, it is **35**, and a pass that adds one re-runs that command rather than editing the word — the same drift recurred in `intel/trends.md` this pass and is corrected there too.) (🔴 this line read *"Twenty-six, counted mechanically in `p907`"* and was **six short**: `P27`–`P31` were added in `p908`–`p912` and `P32` in `p913`, none of them re-counting. `p907` corrected the same line from *"twenty-three"* and wrote the rule — **a pass that adds a pattern should re-count, not increment** — and the drift resumed on the very next pass. 🔵 The count is now `grep -cE '^## P[0-9]+' compose/patterns.md`; **do not hand-edit this number**), **plus the G1 licence gate added in p897 and extended with gate `904-G1` in p904, `905-G1` in p905, `907-G1` in `p907`, `912-G1` in `p912` and `913-G1` in `p913`** (**P26 added in `p907`** — the sanctioned LMS-to-agent bridge, built from the seven per-institution user-credential bridges `intel/trends.md` **T30** measured, and the only end-to-end permissive pattern here that touches a commercial LMS) (**P22 added in `p903`** — the
+**Thirty-seven patterns, re-counted mechanically in `p916`** (`grep -cE '^## P[0-9]+' compose/patterns.md` → **37**; `P36`–`P37` added in `p916`, both run through the command rather than the word) (*prior banner:* **Thirty-five patterns, re-counted mechanically in `p915`** (🔴 **this line read *"Thirty-two"* and was three short — `P33` was added in `p914` and `P34`–`P35` in `p915`.** The count is `grep -cE '^## P[0-9]+' compose/patterns.md`, it is **35**, and a pass that adds one re-runs that command rather than editing the word — the same drift recurred in `intel/trends.md` this pass and is corrected there too.*)* (🔴 this line read *"Twenty-six, counted mechanically in `p907`"* and was **six short**: `P27`–`P31` were added in `p908`–`p912` and `P32` in `p913`, none of them re-counting. `p907` corrected the same line from *"twenty-three"* and wrote the rule — **a pass that adds a pattern should re-count, not increment** — and the drift resumed on the very next pass. 🔵 The count is now `grep -cE '^## P[0-9]+' compose/patterns.md`; **do not hand-edit this number**), **plus the G1 licence gate added in p897 and extended with gate `904-G1` in p904, `905-G1` in p905, `907-G1` in `p907`, `912-G1` in `p912` and `913-G1` in `p913`** (**P26 added in `p907`** — the sanctioned LMS-to-agent bridge, built from the seven per-institution user-credential bridges `intel/trends.md` **T30** measured, and the only end-to-end permissive pattern here that touches a commercial LMS) (**P22 added in `p903`** — the
 national-curriculum corpus pattern, built from the Arabic-language channel's finding that the
 curriculum exists at national scale and carries no grant; see `intel/trends.md` **T26**) (**P20 added in `p901`** — the first end-to-end permissive *synchronous* pattern in this file, unlocked by `p901`'s verification of `jitsi/jitsi-meet` at Apache-2.0) (**P19 added in `p900`** — the
 first end-to-end permissive pattern in this file that is not offline-first, built entirely from
@@ -2979,3 +2979,95 @@ Gradescope terms permit API-driven writes before building on the bridge.
 weeks per additional LMS bridge, which is mostly configuration because the three bridges share the
 seam `P33` describes.
 
+
+---
+
+## P36 — Student retention / early warning, where the whole model is studio IP (added `p916`)
+
+**When to use it.** A higher-ed or large K-12 client wants to identify at-risk students early.
+This is the most-requested application in the market literature this base holds — and `916-F5`
+measured the supply side: **there is nothing to adopt.** `student dropout prediction` tops out at
+**25 ★** with 20 of 23 rows carrying no licence; `"early warning" student` returns 735 repositories
+whose new rows top out at **11 ★**; `dssg/student-early-warning` and `hhy37/student-early-warning`
+both read `NOASSERTION` and their payloads do not resolve. **Price this as a build, not an
+integration,** and say so in the first conversation — the client has usually been told otherwise.
+
+**What you do adopt is the substrate, and all of it is permissive or client-owned:**
+
+| Layer | Component | Licence | Why this one |
+|---|---|---|---|
+| Record store | `Apereo-Learning-Analytics-Initiative/OpenLRW` | 🟢 **ECL-2.0** | xAPI/Caliper warehouse with a REST tier. **The only permissive learning-record stack in the field** (`916-R1`). ECL-2.0 permits a closed derivative. 🟡 14 months stale — fork and own it |
+| Event source | the client's LMS | client's | Moodle logs, Open edX event tracking or Canvas Live Events — already running, already theirs |
+| Learner model | `CAHLR/pyBKT` | 🟢 **MIT** | Bayesian knowledge tracing from UC Berkeley. 🔴 `916-F6`: **ten of ten** higher-star knowledge-tracing repos have no licence file, so this is effectively the field's only licensed primitive |
+| Orchestration | `LangGraph` | 🟢 MIT | The intervention workflow — flag, route to an advisor, record the outcome, re-score |
+| Advisor surface | `Kanjo-Elkamira-Ndi/Compass` (MIT) or the client's SIS | 🟢 MIT | The human tier. A flag that does not reach an advisor is not an early warning |
+
+**Licence posture.** 🟢 **Permissive end to end.** ECL-2.0 + MIT + MIT + MIT. The risk model itself
+is written for the engagement and is **studio IP** — which is the commercial upside of the supply
+gap, not only its cost.
+
+🔴 **The regulatory gate is the hard part, and it is `G1`'s sibling.** A dropout-risk score is a
+prediction about a named minor or student. Run it against `T1` before architecture: **Oklahoma
+SB 1734** bars AI used *solely* for discipline or promotion decisions — so the advisor action must
+be recorded as a human decision, not a system one; **California AB 1159** bars student data being
+used to train AI models at all, which rules out fine-tuning on the client's own cohort in
+California; the **EU AI Act** lists education among Annex III high-risk uses, deferred to **2
+December 2027** under Article 113(c) (`916-F10`) — an EMEA deployment shipping before then is
+lawful and must still be *built* for conformity, because retrofitting logging and human-oversight
+records after the fact is the expensive path. 🔵 **Design the audit trail first and the model
+second.**
+
+**Estimate.** 10–14 weeks: 3–4 to stand up `OpenLRW` and land the LMS event stream in it, 3–4 for
+features and the `pyBKT` baseline, 2–3 for the intervention workflow and advisor surface, 2–3 for
+the conformity and audit tier. 🔴 Add 4+ weeks if the client has no usable historical outcome
+labels — and ask about labels before quoting, because most clients do not have them.
+
+## P37 — Oral reading fluency assessment on an LMS a client already runs (added `p916`)
+
+**When to use it.** Early-literacy, primary-education or language-learning engagements —
+the highest-value K-12 application of AI that is **not** text generation. 🔵 It also survives the
+grading prohibitions `T1` tracks, because a fluency score is a *measurement* offered to a teacher,
+not an automated decision about a student. That distinction is what makes it sellable in Oklahoma,
+Florida, North Carolina and under the EU AI Act alike.
+
+🔴 **This pattern could not have been written before `p916`, and not because the components were
+missing — because this base had published the tier as a void.** See `T44`.
+
+**The recipe, and it has two shapes depending on what the client runs.**
+
+**Shape A — the client is on Moodle (the common case in EMEA and LATAM public education):**
+
+1. Deploy **`justinhunt/moodle-mod_readaloud`** (Poodll ReadAloud) — GPL-3.0-or-later, pushed
+   2026-10-28. Guided fluency journey, automatic words-per-minute and accuracy scoring by speech
+   recognition, optional comprehension quiz, all inside one Moodle activity.
+2. 🟢 **The licence costs nothing here.** It is a Moodle plugin running inside a GPL-3.0 host that
+   the client already operates. Distributing a modified plugin obliges you to offer source *to the
+   client*, who is the only recipient. **This is the one configuration in which copyleft is free,
+   and it is the common one** — do not reflexively route the client to a permissive rebuild.
+3. 🔴 Read `916-F2` before the licence review: this plugin has **no licence file at all**. The grant
+   is in the `README` and in every source-file header. A procurement checklist that greps for
+   `LICENSE` will reject a correctly licensed plugin.
+4. Add the speech tier the client's jurisdiction allows — on-premise `whisper`/`whisperX` where
+   student voice may not leave the country, which is most of EMEA and increasingly LATAM.
+
+**Shape B — the client needs a standalone or white-label product:**
+
+1. Start from **`OSU-slatelab/AIRFluTe`** (🟢 **Apache-2.0**, Ohio State) — streaming models
+   fine-tuned on **children's** speech, with real-time visual tracking and a prompting teacher
+   model. 🟡 Idle since 2022: fork and own it.
+2. Take the conversational surface from **`dungnotnull/ReadPulse-AI-Agent`** (🟢 MIT) as a
+   reference implementation of a voice-agent assessor.
+3. Take the **teacher workflow** — class, student, text, recording, error marking, statistics —
+   from **`JambuOverflow/lepic`** (🔴 GPL-3.0, ICSE 2021 SCORE winner) as a **design reference
+   only**. 🔴 Do not vendor its code into a closed product; read it, then build.
+4. Licence posture: 🟢 **Apache-2.0 + MIT, permissive end to end**, provided step 3 stays a reading
+   exercise.
+
+🔴 **Data protection is the gate in both shapes.** Children's voice recordings are biometric-adjacent
+personal data in every regime this base tracks. Record retention and deletion before you record
+anything: under **AB 1159** the recordings cannot be used to train a model at all; under GDPR the
+lawful basis for processing a minor's voice is the question procurement will ask first.
+
+**Estimate.** Shape A: **3–5 weeks** — it is largely deployment, configuration and an on-premise
+speech tier, which is why it is the one to propose first. Shape B: **12–16 weeks** to a product,
+plus the data-protection tier.

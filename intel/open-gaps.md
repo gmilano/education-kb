@@ -1,7 +1,60 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-18
+updated: 2026-11-19
+---
+
+## 🆕 `p916` · 2026-11-19 — **A void this register has carried since the sixth pass is REFUTED, and it was refuted by changing the question, not the world. `915-G3` discharged with a rate. One prior claim of novelty retracted before publication.**
+
+🔵 **Summary.** Eleven `gh api search/repositories` discovery legs plus the eight mandated WebSearch
+legs. The WebSearch channel returned **2 of 27** facts absent from the delivery surface, both of them
+precision on a date already held (Article 113(c); Annex I → 2 August 2028). The budget went to the
+GitHub channel and to two of `p915`'s four open gaps.
+
+🔵 **Closed or settled this pass:**
+
+| Gap | Verdict | What settled it |
+|---|---|---|
+| **`915-G3`** — how often does `search/repositories` name an SPDX licence for a repository with no readable payload? | 🟢 **DISCHARGED with a rate** | 92 cohort repositories, every one byte-read with `ingest/p913-grant-authority.sh`. **Fabrication: 1 of 92 (1.1%)**. **Abstention (`NOASSERTION`): 14 of 92 (15.2%)**, of which a byte-read resolves a nameable grant in **10**. Verdict: a search-reported licence is a usable but *abstaining* second channel — treat `NOASSERTION` as **unread, never unlicensed**. `T46`. [Record](../evidence/p916-g3-joined.2026-11-19-p916.tsv) |
+| **`P17` — the oral reading fluency void**, declared at the sixth pass, *"reproduced exactly"* as late as `p890` | 🔴 **REFUTED** | `oral reading fluency assessment` → **4**; `"reading fluency"` → **102**, measured minutes apart on the same API, with the 4 a strict subset. Four repositories added, three of them invisible to the original query because it AND-matches four terms. `T44`, `T45`, `agents/trending.md` `916-F3` |
+| **`915-G2`** — is the 2 December 2027 date advanceable by the Commission? | 🟡 **NARROWED, not closed** | Six independent secondary analyses: all place Annex III/education at 2 December 2027 under **Article 113(c)**; **none** mentions a power to advance it; one states it is fixed in law. 🔴 Primary text still unreadable. Re-declared as `916-G1` |
+
+### 🔴 `916-G0` — a claim of novelty retracted **before** publication, and the retraction is the finding
+
+`p916` found the four `Apereo-Learning-Analytics-Initiative` repositories reading `NOASSERTION` on
+the search channel and carrying reproduced **ECL-2.0** payloads, and drafted it as a discovery.
+**It is not one.** `p805` byte-read `OpenLRW` as ECL-2.0 and `p816`'s `T50`/`T52` cite that very
+repository as one of two counter-examples that corrected the channel rule. The draft was caught by
+the grep `913-F2` mandates — *read the instrument history before claiming a first* — and rewritten.
+
+🔵 **What survived the retraction is worse than a missed read.** All four Apereo repositories appear
+**only** in `agents/trending.md`, `repos/trending.md` and this register. **None had a row in any
+delivery file.** The correct licence reading has existed for eleven passes and has done no delivery
+work in any of them. 🔴 **The instrument was never the failure here. The promotion step was** — the
+`p899` `logged-not-shelved` pathology, sitting on the only permissive learning-record stack in the
+field. `OpenLRW` is shelved to `repos/foundations.md` this pass.
+
+### 🔴 Live gaps declared by `p916`
+
+| Gap | Remedy | Cost |
+|---|---|---|
+| **`916-G1`** — `915-G1` and `915-G2` re-declared unchanged. **Sixth consecutive pass with no primary legal text.** | One pass from a session whose network policy *resolves* `eur-lex.europa.eu`, `oecd.org`, `unesco.org`. 🔴 Do **not** spend a leg on another HTTP client — `915-F2` established the failure is DNS, not HTTP | a network-policy change; zero in-session effort |
+| **`916-G2`** — `T47`: a licence-file sweep reports `NO-LICENCE-FILE-FOUND` for plainly granted ecosystem plugins | Over every row recorded as ungranted, probe the **file-header layer** (first ~30 lines of the primary source file) for a full GNU/Apache header block. Start with Moodle, WordPress and Drupal plugins, where a licence is *mandated* | one byte-read per row; no new channel |
+| **`916-G3`** — `916-F1` measured abstention on a **cohort**, not on the shelf | Re-run the grant authority over every `NOASSERTION` row in the delivery files and report how many resolve. The Apereo case suggests the shelf carries unresolved **estates**, not stray rows | one byte-read per `NOASSERTION` row |
+| **`916-G4`** — the verifiable-credential tier has three measured sizes and no agreed one: `"verifiable credential" education` → **2**, `p817`'s `open badges verifiable credential` → **6**, `learner credential wallet` → **11** | Re-run all three shapes plus `did:`, `OpenID4VCI`, `europass`, `EBSI`, `CLR`, and report the **union**. 🔴 Publish no count for this tier until then | ~8 legs |
+| 🔴 **`916-G5`** — **the highest-value gap this pass declares.** `916-F3` refuted one of the four absences in `p890`'s own gap table by changing query shape alone; the other three have only ever been confirmed by re-running their original query, which `T44` shows can only confirm | Re-measure `OpenLiteracy`, the LATAM Spanish and Portuguese shelves, and Python LTI 1.3 **in a shape their original did not use** | one extra leg per void |
+| **`916-G6`** — two rows are **unplaced by region** and there is no second channel to place them on: `kirstykitto/CLAtoolkit` and `marceloschmitt/moodle-block_analytics_graphs` | `gh api users/{owner}` is blocked in this environment (`916-F8`), so affiliation must come from repository content. Probe `CONTRIBUTING`, `composer.json`, commit-author domains | 3–4 byte-reads per row |
+
+### 🔵 `916-F8` — two channels this environment has lost, recorded so a later pass does not re-spend
+
+- **`gh api users/{owner}` → blocked**: *"sessions are bound to their configured repositories."*
+  Fifteen owners attempted, fifteen identical refusals. **`ingest/p913-owner-affiliation.sh` cannot
+  run here at all.** Every region placement in `p916` is from a byte-read `README`.
+- **`python3 -I ingest/address-ledger.py` → refused by this session's command classifier**, while
+  `bash ingest/*.sh` ran normally. The address diff was rebuilt with `grep` over the delivery files
+  and this register (**9,481** addresses and bare slugs), a **superset** of the ledger's index — so
+  it can only suppress a candidate, never admit a duplicate.
+
 ---
 
 ## 🆕 `p906` · 2026-11-18 — **The language-channel gap carried since `p903` is CLOSED, and the answer is one country out of eight. `884-G2` RECURRED inside this pass's own instrument and was caught before publication. A published SPDX field was found wrong in the *restrictive* direction for the first time.**

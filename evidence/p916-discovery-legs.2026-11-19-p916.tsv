@@ -1,0 +1,12 @@
+leg	total_count	query
+knowledge-tracing	766	"knowledge tracing" in:name,description
+dropout-early-warning	735	"early warning" student in:name,description
+open-badges	295	"open badges" in:name,description
+reading-fluency	102	"reading fluency" in:name,description
+degree-audit	209	"degree audit" in:name,description
+virtual-lab	58	"virtual lab" education in:name,description
+student-information	5660	"student information system" in:name,description
+learning-analytics	2643	"learning analytics" in:name,description
+verifiable-credential-edu	2	"verifiable credential" education in:name,description
+comprehensive-learner-record	69	"learner record" in:name,description
+openbadges3	347	"open badge" in:name,description

@@ -4,6 +4,82 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p916) — **`p805` read Apereo's `NOASSERTION` as ECL-2.0 eleven passes ago and the estate still has no row on any delivery page. The instrument was never the failure here; the promotion step was. All four Apereo Learning Analytics repositories re-confirmed ECL-2.0 and `OpenLRW` finally shelved. Nine repos added. The Moodle plugin grant lives in the file header, not in a licence file — two of three plugins measured have no `LICENSE` at `master`.**
+
+**Channels and posture.** Eleven `gh api search/repositories` legs (quoted-phrase shape, after
+`916-F7`), grants byte-read with `ingest/p913-grant-authority.sh`. Evidence:
+`evidence/p916-grants-reported.2026-11-19-p916.tsv`,
+`evidence/p916-shelf-metrics.2026-11-19-p916.tsv`,
+`evidence/p916-region-placement.2026-11-19-p916.tsv`.
+
+### 🔴 `916-R1` Apereo's Learning Analytics estate — ECL-2.0, read correctly in `p805`, and **never promoted**
+
+🔴 **Correction to this pass's first draft, made before publication.** `p916` found the Apereo
+estate on the `"learning analytics"` leg, byte-read `NOASSERTION` → **ECL-2.0**, and was about to
+publish it as a discovery. **It is not one.** `p805` byte-read `OpenLRW` as ECL-2.0; `p816`'s `T50`
+and `T52` already carry the operative rule — *`NOASSERTION` is RED-until-read, never a skip* — and
+cite this very repository as one of the two counter-examples that corrected `T50`. The grep that
+caught it is the one `913-F2` mandates: **read the base's own history before claiming a first.**
+
+🔵 **What *is* new is worse than a missed read.** `OpenLRS`, `OpenLRW`, `LearningAnalyticsProcessor`
+and `OpenDashboard-legacy` appear **only** in `agents/trending.md`, `repos/trending.md` and
+`intel/open-gaps.md`. **None of the four has ever had a row in `repos/foundations.md`,
+`agents/top.md` or `verticals/solutions.md`.** The correct licence reading has existed for eleven
+passes and has done no delivery work in any of them — the `p899` `logged-not-shelved` pathology, on
+the only permissive learning-record stack in the field. `916-R2` shelves `OpenLRW`.
+
+`"learning analytics" in:name,description` returns **2,643** repositories. The rows that matter are
+not the stars; they are the four published by **`Apereo-Learning-Analytics-Initiative`**, the
+learning-analytics arm of the foundation that publishes **Sakai**. GitHub reports `NOASSERTION` on
+every one of them. Re-confirmed by byte-read this pass, **all four carry a reproduced ECL-2.0
+payload**:
+
+| Repo | ★ | Grant (byte-read) | What it is | State |
+|---|---|---|---|---|
+| `Apereo-Learning-Analytics-Initiative/OpenLRW` | 62 | **ECL-2.0** | Learning Record **Warehouse** — xAPI/Caliper store with a REST tier | pushed 2025-09-12 |
+| `Apereo-Learning-Analytics-Initiative/OpenLRS` | 47 | **ECL-2.0** | Learning Record **Store** — the xAPI endpoint itself | 🔴 **archived** 2019-01-31 |
+| `Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor` | — | **ECL-2.0** | the risk/early-alert scoring job over the warehouse | — |
+| `Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy` | — | **ECL-2.0** | the instructor-facing dashboard tier | legacy |
+
+🔵 **Why this is a foundations row and not a curiosity.** ECL-2.0 is Apache-2.0 with an
+attribution/patent clause; this base already carries it as Sakai's grant and as `agentscope-ai/OpenJudge`'s.
+It is **permissive** — a client can ship a closed derivative. And the estate is the
+*complete shape* of a learning-analytics stack: store → warehouse → scoring → dashboard, each a
+separate repository, each licensed the same way. 🔴 **An SPDX gate reads `NOASSERTION` four times and
+rejects the only permissive LRS stack in the field** — which is `T50`/`T52`'s rule, and `916-F1`
+now prices how often the channel abstains that way. Read `OpenLRS` as a reference architecture
+rather than an upstream (🔴 **archived 2019-01-31**); `OpenLRW` is the live half, and 🟡 **14 months
+stale at 2025-09-12**, a liveness caveat `p637` already recorded against it.
+
+### 🟢 `916-R2` Nine repos added to `repos/foundations.md`
+
+| Repo | ★ | Grant (byte-read) | Region, from README | Why it is substrate |
+|---|---|---|---|---|
+| `Apereo-Learning-Analytics-Initiative/OpenLRW` | 62 | ECL-2.0 | Global (Apereo) | Permissive xAPI warehouse — the retention tier's missing data layer (`916-F5`) |
+| `sandboxnu/graduatenu` | 28 | **GPL-3.0** | **North America** — Northeastern | Degree-audit-driven class scheduler; pushed 2026-09-30, the liveliest degree-audit row |
+| `kirstykitto/CLAtoolkit` | 27 | **GPL-3.0** | 🟡 **unplaced** — README carries no country signal and `users/{owner}` is blocked (`916-F8`) | Connected Learning Analytics toolkit: Django + scikit-learn + gensim over cross-platform learner traces |
+| `rwthanalytics/moodle-local_learning_analytics` | 26 | **GPL-3.0** (`LICENSE@master`, 35,148 B) | **EMEA** — RWTH Aachen | Learning analytics *inside* Moodle, from a university that runs it at scale |
+| `marceloschmitt/moodle-block_analytics_graphs` | 18 | **GPL-3.0** (`LICENSE.md` **on branch `4.3` only**) | 🟡 **unplaced** | Teacher-facing analytics graphs; pushed 2026-09-28. 🔵 The branch-only licence file is `916-F2`'s near-miss |
+| `Longhorn-Developers/Degree-Audit-Plus` | 18 | **MIT** (1,076 B, `sha256₁₂ 27477ecee35a`) | **North America** — UT Austin | **Pushed 2026-11-19 — today.** The permissive degree-audit row |
+| `sinothando/student-early-warning-system` | 11 | **MIT** | 🟡 unplaced | The highest-star *licensed* artefact in the entire early-warning tier (`916-F5`), and it is 11 ★ |
+| `chtzvt/PyEdsby` | 11 | **MIT** | **North America** — Edsby, Canadian SIS | `T30` evidence: an unofficial API wrapper for a commercial SIS with no public API. 🟡 Seeking maintainers since 2018 |
+| `JambuOverflow/lepic` | 7 | **GPL-3.0** | **LATAM** — Brazil, Pará | ICSE 2021 SCORE winner; oral reading fluency (`916-F3`) |
+
+### 🔴 `916-R3` The licence file is not the grant layer — measured across this cohort's Moodle plugins
+
+| Repo | `LICENSE` at `master`/`main` | Grant found by the authority | File header (`version.php`) | Search channel |
+|---|---|---|---|---|
+| `rwthanalytics/moodle-local_learning_analytics` | **200** | GPL, 35,148 B | full GNU block | `GPL-3.0` |
+| `marceloschmitt/moodle-block_analytics_graphs` | **404** | GPL, 35,121 B — **`LICENSE.md` on branch `4.3`** | full GNU block | `GPL-3.0` |
+| `justinhunt/moodle-mod_readaloud` | **404** | 🔴 **none, 16 names × 3 branches** | **full GNU block** | 🔴 `NONE` |
+
+🔵 **Three of three carry the grant in the file header; one of three carries it nowhere else.** Moodle
+mandates GPL-3.0+ of every plugin, so the header is the authoritative layer and the licence file is
+optional decoration. `916-G2` registers the sweep that would bound this class across the tree.
+
+---
+
+
 ## `2026-11-19` (p915) — **The authoring tier is licensed after all: Adapt's editor (563 ★) carries a fully reproduced GPL payload and was created *five days after* its runtime, which refutes `T41`'s mechanism and discharges `914-G4`. `coursecode` + `coursecode-desktop` give this base its first **MIT** authoring pair — the permissive answer to `914-F5`'s H5P prohibition. Four repos added to foundations.**
 
 **Channels and posture.** Two `gh api search/repositories` legs over the authoring/editor tier

@@ -88,6 +88,20 @@ data access* rather than education agents.
 
 ### North America
 
+🟢 **Opportunity added `p916` — the registrarial and advising tier, and it is the one North American
+tier with *permissive* supply.** `p916`'s degree-audit and advising legs placed four rows in this
+region by README content: `Longhorn-Developers/Degree-Audit-Plus` (**MIT**, UT Austin, pushed
+2026-11-19), `Aaryan-Kapoor/degreeworks-cli` (**MIT**, Kennesaw State), `sandboxnu/graduatenu`
+(GPL-3.0, Northeastern) and `chtzvt/PyEdsby` (**MIT**, for the Canadian SIS **Edsby**).
+🔵 **The shape to sell:** every one of these is a bridge built *per institution* on a commercial
+registrarial product — DegreeWorks, Edsby, PeopleSoft — by students, on their own credentials,
+because the vendor has no agent story (`T30`). A North American university client is already running
+the system and already has shadow bridges to it. **Offer the sanctioned version** (`P26`), and
+`916-F3`'s fluency tier adds a K-12 line: `OSU-slatelab/AIRFluTe` is Apache-2.0 and Ohio State's.
+🔴 **The retention tier, which is what this region asks for most, has no adoptable supply at all** —
+see `P36` and price it as a build.
+
+
 🟢 **Promoted in `p902` — three facts that had been sitting in the append-only log, unpublished.**
 `p901` scored the mandated research legs as a "null yield" by grepping each fact against the whole
 tree, which includes an 87,000-line log; re-scored against this file, **11 of 19 facts were missing**
@@ -599,6 +613,20 @@ already written.
 
 ### EMEA
 
+🟢 **Opportunity added `p916` — credentialing and in-LMS analytics, both with the copyleft question
+already answered.** `openbadgefactory/salava` (**Apache-2.0**, Discendum, **Finland**) is the only
+permissive Open Badges platform in open source and has been idle since 2020 — a **fork-and-own**
+proposition for any EMEA client needing a white-label micro-credential product, and there is no
+permissive alternative to compare it against (`916-F4`). `rwthanalytics/moodle-local_learning_analytics`
+(GPL-3.0, **RWTH Aachen**) is learning analytics built *inside* Moodle by a university running it at
+scale — the reference a German, Austrian or Swiss public client will recognise.
+🟢 **And a second Africa-origin row:** `Kanjo-Elkamira-Ndi/Compass` (**MIT**, **Cameroon**) turns a
+standard SIS into an AI advisor — after `elimu-ai`, the second African permissive row this base
+holds. 🔵 **The EU AI Act framing for all of it:** education is Annex III high-risk, deferred to
+2 December 2027 under Article 113(c), so the window to ship and *then* retrofit is real and closing —
+sell conformity-by-design now (`P36`), not compliance later.
+
+
 🟢 **Promoted in `p902` — four facts held only in the log until now** (see `902-F1`; the
 [record](../evidence/surface-yield.2026-11-18-p902.tsv) lists all eleven):
 
@@ -673,6 +701,17 @@ advising a client. What is in force now:
   the Official Journal in this session — **confirm before pricing a compliance package on the
   stricter reading.** No education-specific Commission or national guidance on Article 4
   surfaced, which is itself the opening: nobody has told schools what compliance looks like.
+🟢 **Added `p916` — the article, and the second deferral this file did not hold.** The 2 December
+2027 education date sits in **Article 113(c)** of the consolidated AI Act; this file has carried the
+date since `p890` without its locus, which is what a client's counsel asks for first. And **Annex I**
+high-risk systems (safety components of regulated products) defer separately to **2 August 2028** —
+six months *beyond* the Annex III education date. 🔴 Both facts are **search-snippet evidence from
+six independent secondary analyses, none of them primary**: every pass since `p911` has been unable
+to resolve `eur-lex.europa.eu` (`915-F2`: a DNS allowlist, not a proxy refusal). 🔵 **None of the six
+mentions any Commission power to bring the date forward, and one states the education deadline is
+fixed in law rather than conditional** — so `T3`'s selling window stands, at secondary-source
+strength. `916-G1` carries the byte-read forward.
+
 - **Precision on the Omnibus:** Regulation (EU) 2026/1744 has **applied since 27 July 2026**;
   the education high-risk date it sets is 2 December 2027.
 
@@ -1557,6 +1596,20 @@ problem — so this nil is still not evidence of saturation.
 
 ### APAC
 
+🔴 **Declared gap, `p916`: eleven discovery legs produced *no* APAC-placed row.** The legs were
+dropout/early-warning, academic advising, degree audit, open badges, verifiable credentials, learner
+record, reading fluency, virtual laboratory, knowledge tracing, student information system and
+learning analytics. Not one returned a repository whose README carries an APAC country signal.
+🔵 **This is an absence in these eleven angles, not an absence of APAC supply** — `p906` measured a
+full Mandarin education tier at scale (347 repositories in grading alone) and `verticals/solutions.md`
+carries `youufis/SmartKBS` from it. It is written down because an unstated regional absence is
+indistinguishable from coverage, which is the whole reason this file places findings by region.
+🟡 **The instrument limit is known and named:** `906-G2` established that a repository with English
+metadata and vernacular content is invisible to a vernacular query, and the converse holds — these
+eleven English-phrase legs cannot see vernacular-metadata supply. A pass that wants APAC rows in
+these tiers must run the legs in Mandarin, Japanese and Korean.
+
+
 🟢 **Promoted in `p902` — two convening facts, plus the region's one dataset-scale supply row**
 (method: `902-F1`):
 
@@ -2343,6 +2396,22 @@ and own**, not a vendor to partner with.
 regulatory-led posture and Australia's National AI Plan were all returned and all already written.
 
 ### LATAM
+
+🟢 **Opportunity added `p916`, and it is the strongest regional supply finding in this pass.**
+**The only actively-developed standalone open-source Open Badges platform this base can find, in any
+region, is LATAM-origin**: `gdgguadalajara/open-badges-platform` (**AGPL-3.0**, Guadalajara,
+**Mexico**, pushed 2026-08-31), self-described as *"sovereign, immutable and standard-compliant
+recognition"*. Everything else with stars in that tier is a dead 2011–2020 Mozilla artefact
+(`916-F4`). 🔵 **"Sovereign" is the client-facing word here** — a Mexican, Colombian or Brazilian
+public client evaluating micro-credentials gets a regionally-authored, standards-compliant base and
+a data-residency story in one. 🔴 AGPL-3.0, so this is **deploy-and-extend or reference
+architecture, never white-label**; if the client needs a closed product the fork point is Finnish
+and five years idle (`salava`).
+
+🟢 **And the fluency tier reaches Brazil:** `JambuOverflow/lepic` (GPL-3.0, **University of Pará**)
+won the **ICSE 2021** Student Contest on Software Engineering for exactly the early-literacy
+workflow `P37` describes. Idle since 2021 — a design reference, and a credible local citation.
+
 
 🟢 **Promoted in `p902` — two facts held only in the log** (method: `902-F1`):
 

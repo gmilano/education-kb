@@ -1,0 +1,245 @@
+leg	repo	stars	spdx_search	pushed	description
+dropout prediction student	Hazrat-Ali9/Explainable-AI-for-Student-Dropout-Prediction	25	NONE	2026-08-15	
+dropout prediction student	Wittline/Dropout-Students-Prediction	23	NONE	2021-05-07	The goal of this project is to identify students at risk of dropping out the school
+dropout prediction student	Damiieibikun/Student-s-Dropout-Prediction-using-Supervised-Machine-Learning-Classifiers	21	NONE	2023-11-14	A simple Data science project on Predicting Student's dropout using Machine Learning classification models
+dropout prediction student	ASIF-Kh/Student-Dropout-Prediction	13	NONE	2023-06-14	Student Dropout Prediction using ML models
+dropout prediction student	iampratheesh/Student-Dropout-Prediction	10	NONE	2018-12-07	A web application to predict whether a student is on the verge of dropping out or not.We created a Google Form
+dropout prediction student	J-Pecuchova/Students-Dropout-Prediction	8	NONE	2021-03-20	Towards Predicting Student's Dropout in University Courses Using Different Machine Learning Techniques 
+dropout prediction student	BridgitD/school-dropout-predictions	8	MIT	2015-06-09	Predicting high school students most at-risk for dropping out of high school
+dropout prediction student	Mike-Kirkpatrick/A-Comparative-Analysis-of-Machine-Learning-Techniques-for-Predicting-Student-First-Year-Dropout	8	NONE	2017-09-27	ABSTRACT: Student dropout is of the utmost concern in higher education and machine learning techniques have be
+dropout prediction student	shivamkmishra98/student-dropout-prediction-ml	8	NONE	2025-12-16	Machine Learning project to predict student outcomes (Dropout, Enrolled, or Graduate) using academic and demog
+dropout prediction student	alessandroryo/student-dropout-prediction	7	MIT	2024-09-03	A machine learning project to predict student dropout risks based on demographic, academic, and socio-economic
+dropout prediction student	0rland0/highschool-dropout-prediction	6	NONE	2016-06-10	Project for a school which wants to predict who of his students is likely to drop out so that they can react e
+dropout prediction student	Just-Mike4/College-analysis-and-prediction-model	6	NONE	2025-02-01	Analysing and creating a model to predict student dropout
+dropout prediction student	muhakbarhamid21/student-dropout-prediction	5	NONE	2025-05-21	Prediksi risiko dropout mahasiswa & dashboard interaktif performa akademik.
+dropout prediction student	ATOUIYakoub/student-dropout-prediction	5	NONE	2025-06-18	
+dropout prediction student	Aliipou/Student-Retention-Prediction	5	MIT	2026-09-15	Production-ready ML system for student dropout risk prediction — 137 tests, 100% coverage, scikit-learn, Pytho
+dropout prediction student	soumya27062005/DropShield	5	NONE	2026-08-17	This is an UI for an AI-based Dropout Prediction websites for students where students in risk can be connected
+dropout prediction student	gitit36/Contemporary-US-Economic-Mobility-Analysis-in-R	5	MIT	2023-02-21	Principles of Data Science  Part I. Fivethirtyeight data graphics An R package that provides access to the cod
+dropout prediction student	Nishant28-sh/student-dropout-risk-prediction	4	NONE	2026-04-13	An AI-based system that predicts student dropout risk using academic performance, attendance, and engagement d
+dropout prediction student	nmn-pandey/student-dropout-prediction	4	NONE	2023-11-17	This repository contains code and analysis for predicting student dropout and academic success using demograph
+dropout prediction student	Dipendra367/DropoutPrediction	4	NONE	2025-05-06	A machine learning project that predicts student dropout risk based on academic and personal data using models
+dropout prediction student	nehabharambe/Student-Dropout-Prediction	3	NONE	2019-08-06	Student Retention Challenge Data
+dropout prediction student	penjendru01varun/StudentDropoutPrediction	3	NONE	2026-08-18	
+dropout prediction student	UndavalliJagadeesh/Student_Dropout_Prediction	3	NONE	2023-07-23	A Machine Learning model that is capable of predicting whether a student drops out from his education or not.
+dropout prediction student	SinaShakoori/Student-Dropout-Prediction	3	NONE	2025-06-06	Predict which students are at risk of dropping out based on academic and demographic features. Ideal for socia
+dropout prediction student	tvsirius/ml_zoomcamp_midterm_student_dropout	3	Apache-2.0	2023-11-08	ML project for students dropout prediction
+academic advising	SShiwako15/DegreePilot-AI	0	NONE	2026-10-22	An academic advising application with deterministic degree audits, course eligibility checks, semester schedul
+academic advising	GuilleMontilla/PUPR-AcademicMentor-GPT-CECS4224	0	BSD-3-Clause	2025-06-28	A Custom GPT designed to assist PUPR students and mentors with course selection,   degree audits, and academic
+academic advising	malcolm-csu/CourseVisualizer	0	NONE	2026-10-15	Academic advising tool for CSUDH — interactive HTML prerequisite maps from Navigate360 and PeopleSoft degree a
+academic advising	IfedapoA/Computer-Science-Capstone-Project	0	NONE	2026-11-13	Desktop degree-tracking application for academic advisors: transcript import, degree audit, transfer-credit ev
+academic advising	BrandonWrob/NCSU-Chatbot	0	NONE	2026-04-27	An AI-powered academic advising assistant for NC State University. Combines a hybrid Retrieval-Augmented Gener
+academic advising	Moha808/FCAHPT-Vom-CS-Portal	0	NONE	2026-11-08	Empowering Computer Science students at the Federal College of Animal Health and Production Technology, Vom wi
+academic advising	LukeGentri/NCSU-Chatbot	0	NONE	2026-05-04	An AI-powered academic advising assistant for NC State University. Combines a hybrid Retrieval-Augmented Gener
+virtual laboratory	Abhijit-CinePhysics/CinePhysicsHQ	2	NONE	2026-07-14	Interactive Physics Simulations, Virtual Physics Labs, Dimensional Analysis Tools, Buckingham Pi Theorem Calcu
+virtual laboratory	gulzodanurmetova66-tech/radiation-detector-vlab	1	NONE	2026-10-24	Interactive Virtual Laboratory for Gas-Filled Radiation Detectors in Medical Physics Education. Includes ioniz
+virtual laboratory	Meghadri-tech/IEM-IIFR-internship-project	0	NONE	2026-06-19	A web-based virtual simulation of the Franck–Hertz experiment built using HTML, CSS, and JavaScript for physic
+virtual laboratory	ErickaTumanda/Web-Based-Simulation-Tools-in-Chemistry	0	NONE	2025-04-06	This repository contains a research paper on web-based simulation platforms in chemistry. It explores their im
+virtual laboratory	ruralstemlab/rural-steam-platform	0	NONE	2026-09-14	Rural Steam Platform is an interactive educational ecosystem designed to strengthen STEM learning in rural com
+virtual laboratory	Team-Developers-max/Engineering-Chemistry-Lab-Simulator	0	NONE	2025-12-20	Engineering Lab Simulator is a web-based virtual laboratory designed to enhance engineering education through 
+virtual laboratory	EkerVitorSob/molecule-magic	0	MIT	2025-01-10	A virtual chemistry laboratory simulation designed to make science education accessible and engaging for stude
+virtual laboratory	ayushshinde19/Labdox_Website_creation-	0	NONE	2025-07-09	The official website for Labdox, a platform revolutionizing online practical education. Labdox provides an int
+virtual laboratory	tejastiwari1456/SimpLab-Competency	0	NONE	2026-09-18	SimLab Competency Hub is an AI-powered virtual laboratory platform that transforms practical education from re
+virtual laboratory	mithilsm12/Interactive-Remotely-Controlled-Laboratories	0	NONE	2026-10-20	An interactive virtual laboratory platform for 10th, 11th, and 12th-grade students to explore Physics, Chemist
+admissions agent	kashibro5656-hub/agentic-university-admissions	0	NONE	2026-08-22	Autonomous Multi-Agent Admissions & Enrollment Engine powered by Google ADK, Gemini 3.5 Flash, Cloud Firestore
+admissions agent	ks1505/student-enrollment-agent	0	NONE	2026-08-12	Stateful Conversational AI Agent for University Student Enrollment & Admissions with Tool Execution, Coreferen
+knowledge tracing	utkarshsrivastava/ParallelSparseMatrixFactorization	12	NONE	2016-01-25	Sparse Matrix Factorization (SMF) is a key component in many machine learning problems  and there exist a veri
+knowledge tracing	waruna-2003/Brain-Mapper	2	NONE	2026-11-12	A cognitive-aware learning analytics framework combining Large Language Models and Knowledge Tracing to predic
+knowledge tracing	pragy10/neural_symbolic	0	NONE	2025-09-28	Temporal Learner Modelling using Purely Neural Networks and NeuroSymbolic Model for Knowledge Tracing
+knowledge tracing	HaiNguyen-python/knowledge-tracing-srs	0	MIT	2026-10-16	Knowledge tracing and spaced repetition for vocabulary learning: BKT with EM, PFA and half-life regression, mo
+knowledge tracing	rajalakshmirajkumar8265-ops/Adaptive-E-Learning-Platform-with-Knowledge-Tracing	0	NONE	2026-02-21	Objective: Design an LMS that adapts content difficulty based on learner behavior.  Advanced Focus: Learning a
+knowledge tracing	navidshad/linguistic-knowledge-tree	0	MIT	2026-06-16	An AI-driven personal knowledge tracing system that models, visualizes, and dynamically updates a learner's En
+knowledge tracing	troysatchell/claimtrace	0	NONE	2026-08-23	Claim-provenance-constrained knowledge tracing: a tutoring model that only credits KNOWN what the learner has 
+knowledge tracing	abigail-gh/simlearner	0	MIT	2026-09-20	A learner simulator for evaluating LLM-based maths tutors. Adapts the BEAGLE framework with Bayesian Knowledge
+knowledge tracing	tombro27/mentis	0	NONE	2026-08-22	Adaptive Learning Intelligence System — Gemini generates a prerequisite skill graph for any goal; a determinis
+knowledge tracing	Karthi9548/Edugenuis-personalized-learning	0	NONE	2026-05-06	Deep Knowledge Tracing for Personalized Learning is an AI-based adaptive learning system that uses LSTM models
+knowledge tracing	NayanaChandrika99/Adaptive_Exercise_Recommender	0	NONE	2026-01-05	This project is a personalized exercise recommender that uses a Knowledge Tracing (KT) model to estimate a lea
+knowledge tracing	SatvikPraveen/JSVerseHub	0	MIT	2026-11-10	Research-grade interactive JavaScript learning platform: 15 topics as planets in a galaxy, each with runnable 
+knowledge tracing	amajorai/ryu-tuition	0	NOASSERTION	2026-11-18	A tutor for one learner: turn your own syllabus and notes into a prerequisite graph of skills, each carrying a
+math grading ocr	radhezanwar24/deepseek-ocr-exam-grader	0	MIT	2026-07-29	Python OCR grading project for handwritten math exams with INKML conversion and performance prediction.
+knowledge-tracing	pykt-team/pykt-toolkit	463	MIT	2026-10-18	pyKT: A Python Library to Benchmark Deep Learning based Knowledge Tracing Models
+knowledge-tracing	chrispiech/DeepKnowledgeTracing	316	NONE	2015-12-16	source code for the paper Deep Knowledge Tracing
+knowledge-tracing	CAHLR/pyBKT	292	MIT	2026-11-02	Python implementation of Bayesian Knowledge Tracing and extensions
+knowledge-tracing	bigdata-ustc/EduKTM	268	Apache-2.0	2024-01-02	The Model Zoo of Knowledge Tracing  Models
+knowledge-tracing	hcnoh/knowledge-tracing-collection-pytorch	194	MIT	2022-06-16	A collection of Knowledge Tracing model implementations with PyTorch
+knowledge-tracing	jennyzhang0215/DKVMN	146	NONE	2019-10-21	Dynamic Key-Value Memory Networks for Knowledge Tracing 
+knowledge-tracing	jhljx/GKT	141	MIT	2021-03-19	Graph-based Knowledge Tracing: Modeling Student Proficiency Using Graph Neural Network
+knowledge-tracing	jilljenn/ktm	140	MIT	2025-08-12	Knowledge Tracing Machines: Factorization Machines for Knowledge Tracing
+knowledge-tracing	ckyeungac/deep-knowledge-tracing-plus	124	NONE	2019-01-08	It is the DKT+ model implemented in python3 and tensorflow1.2
+knowledge-tracing	lccasagrande/Deep-Knowledge-Tracing	107	MIT	2020-12-04	An implementation of the Deep Knowledge Tracing (DKT) using Tensorflow 2.0
+knowledge-tracing	mmkhajah/dkt	103	MIT	2019-05-25	Our implementation of the LSTM version of Deep Knowledge Tracing (DKT)
+knowledge-tracing	pydaxing/Deep-Knowledge-Tracing-DKT-Pytorch	91	NONE	2024-06-21	
+knowledge-tracing	seewoo5/KT	90	NONE	2024-08-11	Knowledge Tracing Models with PyTorch
+knowledge-tracing	ZhijieXiong/pyedmine	85	MIT	2026-10-22	A library of algorithms for reproducing knowledge tracing, cognitive diagnosis, exercise recommendat
+knowledge-tracing	ApexEDM/GIKT	83	NONE	2021-07-17	GIKT: A Graph-based Interaction Model for Knowledge Tracing
+knowledge-tracing	sulingling123/Knowledge_Tracing	78	NONE	2019-10-08	自适应学习模型 - 知识追踪
+knowledge-tracing	AiFangzhe/Exercise-Recommendation-System	63	NONE	2023-01-19	we build a student simulator with our concept-aware deep knowledge tracing model, and then use it to
+knowledge-tracing	shivanandmn/SAINT_plus-Knowledge-Tracing-	62	NONE	2021-11-16	Implementation of [SAINT+: Integrating Temporal Features for EdNet Correctness Prediction](https://a
+knowledge-tracing	siyuanzhao/2016-EDM	58	NONE	2017-02-16	Source code and data sets for Going Deeper with Deep Knowledge Tracing (EDM-2016)
+knowledge-tracing	xiaofengShi/DKT-TensorFlow	50	NONE	2018-03-04	Deep Knowledge Tracing in TensorFlow for adaptive-learning experiments.
+dropout-early-warning	dssg/student-early-warning	70	NOASSERTION	2018-08-22	Using machine learning to predict high school dropouts
+dropout-early-warning	sinothando/student-early-warning-system	11	MIT	2026-05-31	
+dropout-early-warning	marcos862/SaturdaysAI_Project_T2	8	GPL-3.0	2024-06-17	Dropout Early Warning Systems for High School Students using Machine Learning
+dropout-early-warning	47combinator/Academic-Forecaster	7	NONE	2026-02-28	Academic Performance Forecasting & Risk Analytics System An advanced, AI-powered academic early-warn
+dropout-early-warning	citrusvanilla/dropout_ews	6	NONE	2017-04-27	An "Early Warning System" trigger for student dropout intervention using a 'feature weighted nearest
+dropout-early-warning	melaku2402/student-performance-predictor	6	NONE	2026-05-24	A five-model early-warning student performance prediction pipeline built using Scikit-Learn (Logisti
+dropout-early-warning	shakilahmedemon/uni-student-risk-prediction-dashboard	3	MIT	2026-01-11	A machine learning–powered early warning system for universities that identifies students at academi
+dropout-early-warning	Tarik4Rashid4/student-performance	3	NONE	2019-06-02	Identifying university students’ weaknesses results in better learning and can function as an early 
+dropout-early-warning	SruthiGS-Gito/sar-ai-early-warning-intervention-recommender	2	NONE	2026-10-30	Student Academic Risk Early Warning and Intervention Recommender. Predicts students at risk of faili
+dropout-early-warning	EduPredictAI-Team/student-performance-ai	2	NONE	2026-09-19	This is a  AI-Based Student Performance Prediction and Early Warning System 
+dropout-early-warning	fotsoeddy/student-performance-prediction-model	2	NONE	2026-06-25	This repository contains machine learning models for predicting student academic performance and cla
+dropout-early-warning	PunishingPoison/Student-Dropout-Predictor	2	NONE	2026-05-14	Student Dropout Predictor is an AI-powered application that predicts student dropout risk using a Ra
+dropout-early-warning	hhy37/student-early-warning	1	NOASSERTION	2018-10-13	on-time graduation and college undermatching or hugh school drop out risk management
+dropout-early-warning	MustabshirahAhmed/StudentDropoutEarlyWarningSystem	1	NONE	2026-01-31	Repository for my artificial Intelligence and Data Science Hackahon(FEMHACK)
+dropout-early-warning	ocansey/student-outcome-early-warning	1	NOASSERTION	2026-08-26	Capacity-constrained early warning for student withdrawal and failure, from registrar data alone. Ev
+dropout-early-warning	123sunxiaolin/Early_Warning_System	1	NONE	2015-12-31	This an important system about collage students
+dropout-early-warning	Kiransindagi/student-performance-early-warning-system	1	MIT	2026-07-04	Early-warning system that predicts at-risk students from demographic, family, and behavioral data — 
+dropout-early-warning	sivanaginipilli-design/explainable-ai-student-early-warning	1	NONE	2026-10-28	Explainable AI-Based Student Performance Prediction and Early Warning System using Python, XGBoost, 
+dropout-early-warning	yashwitha-gwd/Student-Performance-Early-Warning-System	1	NONE	2026-03-14	AI-powered student performance early warning system using Machine Learning.
+dropout-early-warning	saadishaq2/Student-Performance-Early-Warning-System	1	NONE	2026-06-09	
+open-badges	mozilla/openbadges-backpack	862	NOASSERTION	2019-08-22	Mozilla Open Badges Backpack
+open-badges	1EdTech/openbadges-specification	206	NONE	2026-11-13	Specs related to Open Badges
+open-badges	fedora-infra/tahrir	85	NOASSERTION	2026-11-17	Web app for issuing your own Open Badges
+open-badges	Schroedinger-Hat/certo	65	AGPL-3.0	2026-08-24	An open source project for courses, workshops and conferences organizers to create certifications us
+open-badges	1EdTech/openbadges-validator-core	61	Apache-2.0	2025-11-04	Open Badges validation in python
+open-badges	edubadges/edubadges-server	51	AGPL-3.0	2026-11-18	Edubadges: A SURF project for Open Badge issuing and management with Django. 
+open-badges	PRX/badges_engine	37	MIT	2011-09-29	Rails 3.1 Engine for Mozilla Open Badges Issuer
+open-badges	totara/openbadges	26	GPL-3.0	2016-03-14	Repository for Open Badges Integration with Moodle LMS
+open-badges	mozilla/openbadges-discovery	25	MPL-2.0	2019-03-28	INACTIVE - http://mzl.la/ghe-archive - Discovery tool for Open Badges including Pathways and Directo
+open-badges	openmichigan/open_badges	25	NONE	2012-03-20	Drupal module to manage badges for Mozilla's Open Badges infrastructure
+open-badges	ht2/BadgesCoP	24	NONE	2015-08-14	xAPI Community of Practice for Mozilla Open Badges
+open-badges	openbadgefactory/salava	22	Apache-2.0	2020-10-02	Open Badge Passport community edition
+open-badges	1EdTech/digital-credentials-public-validator	18	Apache-2.0	2026-11-18	Public validator for Digital Credentials (Open Badges and Comprehensive Learner Record)
+open-badges	akenall/Open-Contributorship-Badges	15	CC0-1.0	2014-11-17	Research is increasingly reliant on a wide variety of skills ranging from data analysis, programming
+open-badges	davelester/WPBadgeDisplay	12	NOASSERTION	2018-05-23	WordPress plugin that creates a widget to display Open Badges on your blog.
+open-badges	toolness/openbadges.org	10	NONE	2017-03-05	Website for Mozilla's Open Badges project.
+open-badges	brianloveswords/django-obi	10	NOASSERTION	2012-03-24	Django open badge integration
+open-badges	gdgguadalajara/open-badges-platform	9	AGPL-3.0	2026-08-31	Sovereign, Immutable, and Standard-Compliant Recognition.  Esta plataforma es una implementación del
+open-badges	sitcon-tw/open-badge	8	NONE	2014-08-03	SITCON Open Badge System
+open-badges	nandovelazquez/AndroidOpenBadges	8	NONE	2013-02-23	This is a example of how to connect to Mozilla Open Badges from Android using a native app.
+reading-fluency	JambuOverflow/lepic	7	GPL-3.0	2021-07-11	Supporting the Assessment and Management of Reading Fluency
+reading-fluency	justinhunt/moodle-mod_readaloud	6	NONE	2026-10-28	Reading Fluency Analysis Tool
+reading-fluency	rliebert/reading-fluency-app	5	NONE	2025-03-09	
+reading-fluency	OSU-slatelab/AIRFluTe	3	Apache-2.0	2022-12-08	An Intelligent Reading Fluency Teacher
+reading-fluency	dungnotnull/ReadPulse-AI-Agent	3	MIT	2026-09-15	🎙️ Virtual reading specialist voice agent powered by AssemblyAI Voice Agent API & Sync STT. Assesses
+reading-fluency	WiekeHarmsen/readingFluencyFeatureSet	2	GPL-3.0	2025-05-16	This repository contains a pipeline to automatically calculate features related to oral reading flue
+reading-fluency	loepan/MAP-Growth-and-Reading-Fluency-Dashboard	2	GPL-3.0	2026-02-22	Self-contained dashboard for analyzing MAP Growth and Reading Fluency data for schools
+reading-fluency	SeanMcP/fluency-calculator	2	NONE	2017-08-14	🗣 Calculate the speaking or reading fluency of an individual based on fluent and disfluent syllables
+reading-fluency	ScottDaniels/labaaoom	1	NOASSERTION	2017-12-07	LaBaaooM -- an oral reading fluency assessment application for Android tablets
+reading-fluency	Iwakami/reading-fluency	1	MIT	2018-11-03	
+reading-fluency	Ziad-AlHusseiny/nabra-demo	1	NONE	2026-09-07	Interactive prototype — Nabra, an AI reading-fluency screener for Arabic-speaking children
+reading-fluency	sartoriusrex/polyglotist	1	NONE	2023-03-04	Language Learning App targeted at Intermediate Learners to improve reading fluency and vocabulary th
+reading-fluency	kimberlymuckerjohnson-cpu/Progress-Monitoring	1	NONE	2025-11-24	Progress-Monitoring is a streamlined online tool designed for special education and intervention tea
+reading-fluency	digsby06/SummariseApp	0	NONE	2016-03-10	Online learning tool that promotes literacy through improving reading fluency and comprehension.
+reading-fluency	Technology-For-Non-Profit/ReadingFluency	0	NONE	2024-11-08	
+reading-fluency	ramyasriraman2019-cmyk/Padho-advanced	0	MIT	2026-11-16	Reading fluency meter
+reading-fluency	robing-bot/reading-fluency-lab	0	NONE	2026-11-16	Reading Fluency Tracker
+reading-fluency	Xander0s/reading-assessment	0	NONE	2026-05-19	Reading Fluency PWA
+reading-fluency	ramyasriraman2019-cmyk/Padho-repository-	0	NONE	2026-11-16	Reading fluency meter
+reading-fluency	MFERD1/Reading-Fluency	0	NONE	2023-12-22	
+degree-audit	sandboxnu/graduatenu	28	GPL-3.0	2026-09-30	Northeastern class scheduler based on degree audit.
+degree-audit	Longhorn-Developers/Degree-Audit-Plus	18	MIT	2026-11-19	The best way to plan out degree!
+degree-audit	Aaryan-Kapoor/degreeworks-cli	5	MIT	2026-10-08	Read-only DegreeWorks CLI that lets an AI agent build your exact KSU semester schedule — real sectio
+degree-audit	SD-AI-Hackathon/AztecPlanner	5	NONE	2026-03-17	AztecPlanner is an AI-powered academic planner that uses React + Vite + Tailwind on the frontend and
+degree-audit	drbh/go-dart	4	NONE	2018-11-02	🎯 D.A.R.T (Degree Auditing Real Time) - The fastest way to audit a student's degrees
+degree-audit	nomadicjosh/degree-audit	3	GPL-3.0	2016-02-15	Future home of the degree audit plugin for eduTrac SIS, an advanced student information system.
+degree-audit	Jimmyu2foru18/mcu-portal	3	NONE	2026-05-26	A University Portal and Learning Management System (LMS) built with PHP, MySQL, and JavaScript, feat
+degree-audit	Shaohua-Wu-001/1142-nccu-dbs-dars	2	NONE	2026-05-28	NCCU DARS — Degree Audit Reporting System for NCCU Mathematical Sciences undergraduates. Updated May
+degree-audit	dustinknopoff/degree-audit-macos	2	NONE	2020-12-05	
+degree-audit	xander-doom/class-glass	2	MIT	2025-01-12	Web extension to make reading OSU degree audits easier
+degree-audit	Abenezer0101/bikeshare-data-cleaning	2	MIT	2026-09-19	Course registration engine with prerequisite-graph validation, seat and schedule-conflict enforcemen
+degree-audit	ayush-shah12/Academic-Registration-Engine	2	NONE	2025-12-22	A full-stack university academic system that supports course enrollment, grading, degree auditing, a
+degree-audit	madz777/degree-audit-project	1	NONE	2023-09-15	Smart Degree Audit: Automatically generate semester-by-semester schedules based on user interests an
+degree-audit	cmarzari/DegreeAudit	1	NONE	2017-12-03	CSET 1200 Final Project - Degree Audit Program
+degree-audit	cbody2/DegreeAudit	1	NONE	2024-06-02	
+degree-audit	AlexRishmawi/DegreeAudit	1	NONE	2024-04-05	
+degree-audit	camrynfriedman/DegreeAudit	1	NONE	2022-05-01	Final project for CSE 3901. A degree audit website with admin access and user access to pull from th
+degree-audit	nierardi/DegreeAuditParser	1	MIT	2021-02-23	Side project to parse Radford degree audits. Goal is to make a "virtual advisor" at some point for t
+degree-audit	williamdboyd/DegreeAuditToolTeam11	1	NONE	2023-05-10	
+degree-audit	LakeheadUComputerScienceSociety/degree-auditor	1	NONE	2016-07-04	Degree Auditor for CS programs at Lakehead University
+virtual-lab	ShubhamxGupta/Virtual-Labs	1	NONE	2025-03-09	A initiative of  Ministry of Education  Under the National Mission on Education through ICT
+virtual-lab	RISHABH72git/virtual-lab-resources	1	NONE	2026-04-28	A curated collection of free virtual labs and simulations for science, math, and social science educ
+virtual-lab	omnhinge/vlabs	1	NONE	2025-04-10	the website is based on indian education site called virtual labs
+virtual-lab	Divyansh-co/PSIT-Virtual-Labs	1	NONE	2026-08-27	Developed a Virtual Reality Lab for PSIT, integrating Electrical, Computer, and Mechanical labs into
+virtual-lab	IBA-Virtual-Lab/IBA-Virtual-Lab.github.io	1	GPL-3.0	2026-01-23	The Digital Twin Lab is a project of the Department of Biological Sciences Ålesund (IBA) at NTNU Åle
+virtual-lab	hashicorp-education/learn-configure-hcp-vault-terraform	1	MPL-2.0	2026-02-13	HCP Vault tutorial assets used to for the HCP Vault Operations With Terraform virtual lab from Hashi
+virtual-lab	PARTHLAD04/Shiksha_Mitra	1	NONE	2026-09-14	Shiksha Mitra is a Gamified Learning Platform designed specifically for Rural Education. It provides
+virtual-lab	shahriar2203041/unfrozen-school	1	NONE	2025-05-30	A web-based platform that makes science education fun, accessible, and inclusive for Bangladeshi stu
+virtual-lab	Lynsild55/DDOS-SlowLoris-Synopsis-script-and-pp	1	NONE	2025-12-16	I have made a PowerPoint about the DDOS attack called SlowLoris. this repository includes a synopsis
+virtual-lab	Cuadradobig15/VirtualLabsEducation.github.io	0	NONE	2024-10-22	
+virtual-lab	CoolTeachVibes/EducationalLeadershipVirtualLab	0	NONE	2026-10-23	Leadership in Education
+virtual-lab	Cuadradobig15/Virtual-Labs-Education	0	NONE	2024-11-01	
+virtual-lab	insaneado/virtual-lab	0	NONE	2026-05-18	Collaborative 2D physics sandbox for university-level engineering education
+virtual-lab	adarshbm07/Virtual_laboratory_for_stem_education	0	NONE	2026-07-26	Developed an offline-capable virtual laboratory platform for STEM education targeting students from 
+virtual-lab	Siddharth-ji-Bohra/Virtual-Lab	0	NONE	2026-05-28	Collaborative 2D physics sandbox for education — React, Matter.js, Socket.io
+virtual-lab	gokabeb/xylo-virtual-lab	0	NONE	2025-10-30	Premium robotics education platform - code and simulate in your browser
+virtual-lab	SMURF-hack/medtech-virtual-lab-ieee-educational-week	0	NONE	2026-04-16	
+virtual-lab	dkanha283-hub/virtual-lab-library	0	NONE	2026-11-19	Central Digital Engineering Education Library with 3D Models and Virtual Simulations
+virtual-lab	jasondsouza27/Edusync	0	MIT	2025-10-29	Virtual Labs Platform for Computer Science Education
+virtual-lab	YaswanthSaiMuraliKunchala/Secure-Computing-Virtual-Labs	0	NONE	2025-04-10	Secure Computing Virtual Labs for Kalasalingam Academy of Research & Education
+student-information	francoisjacquet/rosariosis	655	GPL-2.0	2026-11-16	RosarioSIS Student Information System for school management. GitLab mirror: https://gitlab.com/franc
+student-information	OS4ED/openSIS-Classic	352	NONE	2026-10-26	openSIS is a commercial grade, secure, scalable & intuitive Student Information System, School Manag
+student-information	FenixEdu/fenixedu-academic	175	LGPL-3.0	2023-06-14	FenixEdu Academic is open source Student Information System
+student-information	zh-h/student-information-system-wechat-applet	47	MIT	2016-10-07	教务系统小程序 student-information-system-wechat-applet
+student-information	nomadicjosh/etsis	46	MIT	2026-11-19	etSIS is the most advanced open source student information system for higher education.
+student-information	QkeleQ10/Study-Tools	32	AGPL-3.0	2026-11-08	A browser extension that improves various aspects of the Dutch student information system Magister.
+student-information	gupta-shantanu/CollegeSystem	21	NONE	2016-09-08	:books: A django based student information system.
+student-information	nur-zaman/better-usis	19	NONE	2025-05-22	Modern Interface and functionality for BRAC University's Student Information System.
+student-information	edenroseFR/Web-based-SSIS	18	MIT	2024-02-27	A web-based student information system made using Flask framework and MySQL.
+student-information	ragcrix/StudentInformationSystem	17	NONE	2026-06-30	Building a REST Service with Spring Boot and MongoDB
+student-information	Kosudo/nextSIS	17	NOASSERTION	2018-07-16	nextSIS is an open-source student information system (SIS) based on PHP and MySQL, built by schools 
+student-information	philipszdavido/student-information-system	14	NONE	2017-10-30	A Vue.js app with a Node.js/TypeScript powered backend for managing student's information
+student-information	coderzaman/Student-Information-System	12	MIT	2024-10-27	A comprehensive project for managing university operations, built with PHP, Bootstrap, HTML, CSS, Ja
+student-information	andresrodriguez55/StudentInformationSystemDesktopAppForEgeUniversity	11	GPL-3.0	2022-01-17	Desktop application of the student information system of Ege University and application of solution 
+student-information	chtzvt/PyEdsby	11	MIT	2022-06-28	Python library for building integrations with the Edsby Student Information System. 
+student-information	Lrunlin/student-information-system	11	NONE	2022-10-08	使用Vue3+Node.js+MySQL搭建的学生信息管理系统
+student-information	Roshannahak/Student-Information-System	11	GPL-3.0	2020-08-13	Student information system is a web application which is used to manage student data. our applicatio
+student-information	Kanjo-Elkamira-Ndi/Compass	11	MIT	2026-08-12	Compass — An AI-powered university academic advisor system. Turns a standard student information sys
+student-information	krishnodey/Stundent-Information-Syastem	10	NONE	2019-12-05	Language: Java Database: SQL Server Description:  It is a well organized Student Information System 
+student-information	selaschuk/SISsync	10	MIT	2019-07-25	A collection of scripts for automating data synchronization between Active Directory and Student Inf
+learning-analytics	THU-KEG/MOOCCubeX	204	GPL-3.0	2023-12-27	A large-scale knowledge repository for adaptive learning, learning analytics, and knowledge discover
+learning-analytics	NetEase-GameAI/ProPose	143	BSD-3-Clause	2023-09-06	[CVPR 2023] Learning Analytical Posterior Probability for Human Mesh Recovery
+learning-analytics	PacktWorkshops/The-Applied-SQL-Data-Analytics-Workshop	82	MIT	2026-03-02	A Quick, Interactive Approach to Learning Analytics with SQL
+learning-analytics	Apereo-Learning-Analytics-Initiative/OpenLRW	62	NOASSERTION	2025-09-12	Standards-based learning record warehouse built for a scalable learning analytics environment.
+learning-analytics	bigmoumou/AI-Agent-Literacy	57	MIT	2026-11-12	Learning Analytics Tools Implementation Applications (NTNU)
+learning-analytics	openfun/ralph	52	MIT	2026-11-19	:gear: Ralph, the ultimate Learning Record Store (and more!) for your learning analytics
+learning-analytics	Apereo-Learning-Analytics-Initiative/OpenLRS	47	NOASSERTION	2019-01-31	Deprecated
+learning-analytics	Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy	47	NOASSERTION	2025-07-12	(Deprecated) A web application that provides a framework for displaying data visualizations
+learning-analytics	jlevy44/PathFlowAI	42	MIT	2022-12-08	A High-Throughput Workflow for Preprocessing, Deep Learning Analytics and Interpretation in Digital 
+learning-analytics	tl-its-umich-edu/my-learning-analytics	37	Apache-2.0	2026-11-17	My Learning Analytics (MyLA)
+learning-analytics	PlaypowerLabs/EdOptimize	31	GPL-3.0	2021-06-05	EdOptimize is an open-source learning analytics platform for K-12 digital learning systems.
+learning-analytics	kirstykitto/CLAtoolkit	27	GPL-3.0	2017-07-11	The Connected Learning Analytics toolkit (new django architecture, superseeding https://github.com/k
+learning-analytics	rwthanalytics/moodle-local_learning_analytics	26	GPL-3.0	2025-05-26	Learning Analytics for Moodle
+learning-analytics	Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor	23	NOASSERTION	2017-03-23	An open source, Java-based analytics workflow manager
+learning-analytics	NickScherbakov/codementor-ai-platform	22	MIT	2026-07-20	AI-powered programming learning platform: adaptive tutoring, real-time code execution, interactive c
+learning-analytics	dazcona/user2code2vec	22	NONE	2019-05-23	🤓 user2code2vec: Embeddings for Profiling Students Based on Distributional Representations of Source
+learning-analytics	bkoester/PLA	19	NONE	2026-11-08	University of Michigan source code and data associated with Practical Learning Analytics course.
+learning-analytics	marceloschmitt/moodle-block_analytics_graphs	18	GPL-3.0	2026-09-28	Learning analytics Moodle plugin - graphs to help teachers.
+learning-analytics	jruiperezv/ANALYSE	18	AGPL-3.0	2022-10-30	Repository of the Learning Analytics tool ANALYSE for Open edX platform
+learning-analytics	openfun/warren	18	MIT	2026-11-18	:bar_chart: A visualization toolkit for your learning analytics (expect some xAPI :heart:) 
+verifiable-credential-edu	ask4moreish/Decentralized-Global-Education-Skills-Passport	2	MIT	2026-11-11	Decentralized Global Education & Skills Passport on Stellar Soroban: verifiable credential issu
+verifiable-credential-edu	xipponk/vc-poc-th	1	MIT	2025-06-30	POC of a Self-Sovereign Identity (SSI) based Verifiable Credential platform for Thailand's educ
+comprehensive-learner-record	1EdTech/digital-credentials-public-validator	18	Apache-2.0	2026-11-18	Public validator for Digital Credentials (Open Badges and Comprehensive Learner Record)
+comprehensive-learner-record	openedx/frontend-app-learner-record	7	AGPL-3.0	2026-11-16	Open edX micro-frontend application for viewing learner records
+comprehensive-learner-record	Civil-Service-Human-Resources/lpg-learner-record	1	MIT	2026-11-17	
+comprehensive-learner-record	Doenet/service	1	NONE	2023-01-05	A learner record store for doenet
+comprehensive-learner-record	khaledalowd/TrainingPlus	1	NONE	2024-08-19	An interface to manage learners records
+comprehensive-learner-record	DevlanSolutionsLTD/iCollege	1	MIT	2021-07-08	iCollege (Learners' Records Information System) is a lightweight college information system, ba
+comprehensive-learner-record	VedSoni-dev/primer	1	Apache-2.0	2026-10-29	An open learner record + MCP server. The memory layer for AI tutoring.
+comprehensive-learner-record	arreojn/ProjectPulse	1	NONE	2026-10-12	Project PULSE is an integrated school information system that centralizes learner records, atte
+comprehensive-learner-record	bahadiraltintas/TemporalLearner-StateEstimation	1	MIT	2026-09-24	This is a computational proof-of-concept. All learner records, adaptive labels, expected gains,
+comprehensive-learner-record	luutuankiet/learn-with-feedback-loop	1	NONE	2026-08-20	You ship more code than you understand. A Claude Code plugin that runs a second, later session 
+comprehensive-learner-record	Ed-Fi-Exchange-OSS/SDCOE-Universal-Transcript	1	Apache-2.0	2021-09-09	The transcript prototype is an exploration into the potential of digital learner records. Our c
+comprehensive-learner-record	ayodele1245/LearnersRecord	0	NONE	2022-12-22	
+openbadges3	mozilla/openbadges-backpack	862	NOASSERTION	2019-08-22	Mozilla Open Badges Backpack
+openbadges3	1EdTech/openbadges-specification	206	NONE	2026-11-13	Specs related to Open Badges
+openbadges3	mozilla/openbadges-badgekit	123	MPL-2.0	2020-09-01	No Longer Maintained
+openbadges3	fedora-infra/tahrir	85	NOASSERTION	2026-11-17	Web app for issuing your own Open Badges
+openbadges3	Schroedinger-Hat/certo	65	AGPL-3.0	2026-08-24	An open source project for courses, workshops and conferences organizers to create certificatio
+openbadges3	1EdTech/openbadges-validator-core	61	Apache-2.0	2025-11-04	Open Badges validation in python
+openbadges3	edubadges/edubadges-server	51	AGPL-3.0	2026-11-18	Edubadges: A SURF project for Open Badge issuing and management with Django. 
+openbadges3	PRX/badges_engine	37	MIT	2011-09-29	Rails 3.1 Engine for Mozilla Open Badges Issuer
+openbadges3	totara/openbadges	26	GPL-3.0	2016-03-14	Repository for Open Badges Integration with Moodle LMS
+openbadges3	openmichigan/open_badges	25	NONE	2012-03-20	Drupal module to manage badges for Mozilla's Open Badges infrastructure
+openbadges3	mozilla/openbadges-discovery	25	MPL-2.0	2019-03-28	INACTIVE - http://mzl.la/ghe-archive - Discovery tool for Open Badges including Pathways and Di
+openbadges3	ht2/BadgesCoP	24	NONE	2015-08-14	xAPI Community of Practice for Mozilla Open Badges

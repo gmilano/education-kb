@@ -819,6 +819,43 @@ mean the retention-scheduling layer in an engagement no longer has to be built o
 be **chosen**. 🟡 All three were created in 2026; none is a stable dependency yet, and `true-recall`
 is the only one on FSRS v6.
 
+## Learning analytics, the record layer, and the retention tier — added `p916`
+
+🔴 **Read `916-R1` before using this section.** The four `Apereo-Learning-Analytics-Initiative`
+repositories were byte-read as **ECL-2.0** in `p805` and cited in `T50`/`T52` — and **none of them
+had a row in this file, `agents/top.md` or `verticals/solutions.md` until now.** The licence reading
+was never the problem; eleven passes of not promoting it was. GitHub reports `NOASSERTION` on all
+four, which is why an SPDX-driven gate never sees them (`916-F1`).
+
+| Repo | Licence (byte-read) | ★ | Last push | What it gives you |
+|---|---|---|---|---|
+| https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW | 🟢 **ECL-2.0** (field says `NOASSERTION`) | 62 | 🟡 2025-09-12 | **Learning Record Warehouse** — xAPI/Caliper store with a REST tier and a OneRoster surface. **The permissive data layer the retention tier does not otherwise have.** ECL-2.0 is Apache-2.0 plus an attribution/patent clause — this base already carries it as Sakai's grant — so a **closed derivative is available** |
+| https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRS | 🟢 ECL-2.0 | 47 | 🔴 **archived 2019-01-31** | The Learning Record Store itself. **Reference architecture, not an upstream** |
+| https://github.com/rwthanalytics/moodle-local_learning_analytics | 🔴 GPL-3.0 (`LICENSE@master`, 35,148 B) | 26 | 2025-05-26 | Learning analytics **inside** Moodle, from a university running it at national scale. **EMEA** — RWTH Aachen (from README) |
+| https://github.com/marceloschmitt/moodle-block_analytics_graphs | 🔴 GPL-3.0 — ⚠️ `LICENSE.md` exists **only on branch `4.3`**; `master` returns `404` | 18 | 2026-09-28 | Teacher-facing analytics graphs. 🔵 The branch-only licence file is `916-F2`'s near-miss: a `master`-only probe reports this repository ungranted. 🟡 Origin not placed |
+| https://github.com/kirstykitto/CLAtoolkit | 🔴 GPL-3.0 | 27 | 2017-07-11 | Connected Learning Analytics toolkit — Django + scikit-learn + gensim over cross-platform learner traces. Idle since 2017. 🟡 Origin not placed — README carries no country signal and `users/{owner}` is blocked in this environment (`916-F8`) |
+| https://github.com/sandboxnu/graduatenu | 🔴 GPL-3.0 | 28 | 2026-09-30 | Degree-audit-driven class scheduler. **North America** — Northeastern (from README) |
+| https://github.com/Longhorn-Developers/Degree-Audit-Plus | 🟢 **MIT** (1,076 B, `sha256₁₂ 27477ecee35a`) | 18 | **2026-11-19** | Degree planning on a degree audit. **The permissive row in the registrarial tier**, and pushed today. **North America** — UT Austin (from README) |
+| https://github.com/chtzvt/PyEdsby | 🟢 **MIT** | 11 | 🟡 2022-06-28 | Python wrapper for **Edsby**, a commercial SIS *with no public API* — built by reverse-engineering it. `T30` evidence against a vendor SIS. 🔴 Self-declared *"seeking maintainers"* since 2018. **North America** (from README) |
+| https://github.com/sinothando/student-early-warning-system | 🟢 **MIT** | 11 | 2026-05-31 | Attendance-and-assessment risk flagging for higher ed. 🔴 **It is here because it is the highest-star *licensed* artefact in the entire early-warning tier, and it is 11 ★** — see `916-F5`. 🟡 Origin not placed |
+
+🔴 **The retention tier has no adoptable platform, and that is a measured statement, not an
+impression.** `student dropout prediction` returns a stars-ranked head of 23 unwritten repositories
+with a **25 ★ ceiling**, **20 of 23 carrying no licence at all**; `"early warning" student` returns
+735 repositories whose new rows top out at 11 ★. There is no `Artemis` here and no `Submitty` here.
+🔵 **Price a retention engagement as a build**, and take the substrate from tiers that do have
+supply: `OpenLRW` (ECL-2.0) for the record layer, `CAHLR/pyBKT` (MIT) for learner modelling, the
+LMS's own event stream for features. See `P36`.
+
+🔴 **Knowledge tracing: ten of ten ungranted.** `"knowledge tracing"` returns **766** repositories.
+Byte-read over the stars-ranked head — `chrispiech/DeepKnowledgeTracing` (316 ★, the original DKT),
+`ckyeungac/deep-knowledge-tracing-plus` (124 ★), `ApexEDM/GIKT` (83 ★), `jennyzhang0215/DKVMN`,
+`pydaxing/Deep-Knowledge-Tracing-DKT-Pytorch`, `seewoo5/KT`, `sulingling123/Knowledge_Tracing`,
+`shivanandmn/SAINT_plus-Knowledge-Tracing-`, `siyuanzhao/2016-EDM`, `xiaofengShi/DKT-TensorFlow` —
+**not one has a licence file**, on 16 filenames × 3 branches each. 🔵 `CAHLR/pyBKT` (MIT, UC Berkeley)
+is therefore not merely this base's only licensed learner-modelling primitive; it is close to the
+field's. **The deep-knowledge-tracing literature publishes code and does not license it.**
+
 ## Gaps and caveats
 
 - **`openedx/XBlock` and `openedx/xblock-sdk` exist but are not in the tables above.**

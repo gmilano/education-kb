@@ -584,6 +584,39 @@ an individual, running in the student's browser. 🔴 **AGPL-3.0 and a browser e
 constraint** — distribution triggers source disclosure — so this is a pattern to learn from, not a
 component to bundle. 🟡 It is one instance; do not read a trend off it.
 
+## Digital credentials and micro-credentialing — added `p916`, and the tier is an archaeological site
+
+Micro-credentials are a live commercial category in every market report this base holds. The
+open-source supply side is **not** live. `"open badge"` returns 347 repositories and the
+stars-ranked head is uniformly Mozilla-era and self-declared dead.
+
+🔵 **Prior art, stated first:** `p817` ran `learner credential wallet` (11) and
+`open badges verifiable credential` (6), and this base holds `credential-lens` from that leg. But
+**this file contained the string "Open Badges" zero times** before `p916`, so the tier has had no
+deployable row — `916-R1`'s `logged-not-shelved` pathology again.
+
+| Platform | Repo | Licence (byte-read) | ★ | Last push | State and AI seam |
+|---|---|---|---|---|---|
+| **Open Badge Passport** (community edition) | https://github.com/openbadgefactory/salava | 🟢 **Apache-2.0** (9,720 B, `sha256₁₂ e9852865aedf`) | 22 | 🔴 2020-10-02 | **The tier's only permissive platform**, from **Discendum, Finland** (**EMEA**, from README). Issue, earn, store and share badges with a public passport surface. 🟡 **Idle five years** — read it as a permissive *fork point*, which is exactly what a client needing a closed credential product has to do, because nothing else permissive is current |
+| **Open Badges Platform** | https://github.com/gdgguadalajara/open-badges-platform | 🔴 **AGPL-3.0** | 9 | 🟢 **2026-08-31** | **LATAM — Guadalajara, Mexico** (from README). *"Sovereign, immutable and standard-compliant recognition."* 🟢 **The only actively-developed standalone open-source Open Badges platform this base can find, in any region.** AGPL-3.0, so deploy-and-extend or reference architecture — not white-label |
+| **Open Badges for Moodle** | https://github.com/totara/openbadges | 🔴 GPL-3.0 | 26 | 🔴 2016-03-14 | Badge issuance wired into Moodle. Dead upstream, but the **integration shape** is the reusable part for a client already on Moodle |
+| *(standard)* **Open Badges specification** | https://github.com/1EdTech/openbadges-specification | 🔴 **no licence file** — byte-read, 16 names × 3 branches | 206 | 🟢 **2026-11-13** | 🔴 **The specification the whole tier implements is actively maintained and carries no grant on GitHub.** `T25`'s licence trap, sitting on the standard itself. Implementing a published spec is not a derivative-work question, but **do not vendor this repository's text into a deliverable** |
+| *(dead, recorded so they are not rediscovered)* | `mozilla/openbadges-badgekit` (123 ★, MPL-2.0, *"No Longer Maintained"*) · `mozilla/openbadges-discovery` (25 ★, MPL-2.0, *"INACTIVE"*) · `PRX/badges_engine` (37 ★, **MIT claimed, no payload** — `916-F1`) · `openmichigan/open_badges` (25 ★, no licence file) · `mozilla/openbadges-backpack` (`NOASSERTION`, payload unresolved) | — | — | 2011–2020 | The Mozilla badging estate, in full |
+
+🔴 **The delivery read, and it is a regional one.** For a **LATAM** engagement the live platform is
+regionally authored, standards-compliant and AGPL-3.0 — an asset, and a sovereignty story a Mexican
+or Colombian public client will recognise. For an engagement that needs a **closed** credential
+product in **any** region there is nothing permissive and current: `salava` (Apache-2.0, 2020) is
+the only permissive fork point that exists, and forking a five-year-idle Clojure codebase is a real
+cost that belongs in the estimate. 🟢 For a client already on **Open edX**,
+`openedx/frontend-app-learner-record` (AGPL-3.0, pushed 2026-11-16) is live and in-platform.
+
+🔴 **The successor standard is not measurable yet.** `"verifiable credential" education` returns
+**2** repositories; `p817`'s `open badges verifiable credential` returned **6**;
+`learner credential wallet` returned **11**. Three shapes, three populations — and `916-F7` shows
+query shape moves these numbers by orders of magnitude. **No count for the W3C VC education tier is
+published here**, deliberately. `916-G4` registers the union measurement.
+
 ## Honest gaps
 
 - **Unlicensed content corpora are the biggest trap in this category (added p891).** The largest

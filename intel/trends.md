@@ -6,7 +6,7 @@ updated: 2026-11-19
 
 # Current trends — education
 
-**Forty-three trends, re-counted mechanically in `p915`** (🔴 **this line read *"Thirty-nine"* and was four short — `T40`–`T42` were added in `p914` and `T43` in `p915`, and `p914` incremented nothing. That is the *third* consecutive recurrence of the drift this very sentence was written to stop, which makes the rule worth restating as a procedure rather than a warning: 🔵 the count is `grep -cE '^## T[0-9]+' intel/trends.md`, it is **43**, and a pass that adds a trend re-runs that command instead of editing the word.) (🔴 this line read *"Thirty-one"* and was **eight short**: `T32`–`T38` were added in `p908`–`p912` and `T39` in `p913`. `compose/patterns.md` carries the rule — *a pass that adds one should re-count, not increment* — and this file drifted the same way and further. 🔵 The count is `grep -cE '^## T[0-9]+' intel/trends.md`; **do not hand-edit it.** `T37` is **materially corrected in `p913`** and `T38` has a second chapter added in `p913`.) (**T30 and T31 added in `p907`** — the LMS-to-agent bridge being built per-institution on the *user's own credentials*, which needs no institutional consent; and the agent-skill marketplaces having no education tier at all, which makes `T26`'s distribution channel measurably empty. Both are the first trends in this file derived from **global code search**, an instrument this base had recorded as unusable; **T29 added in `p906`** — vernacular open education supply measured across eight languages and found to be a single-country phenomenon, with *no licence at all* the default state in the other seven; **T26 added in `p903`** — the unit of publication shifting from the
+**Forty-seven trends, re-counted mechanically in `p916`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **47**; `T44`–`T47` added in `p916`. 🔵 The rule this line has now carried through four passes finally held: `p916` ran the command rather than editing the word.) (*prior banner:* **Forty-three trends, re-counted mechanically in `p915`** (🔴 **this line read *"Thirty-nine"* and was four short — `T40`–`T42` were added in `p914` and `T43` in `p915`, and `p914` incremented nothing. That is the *third* consecutive recurrence of the drift this very sentence was written to stop, which makes the rule worth restating as a procedure rather than a warning: 🔵 the count is `grep -cE '^## T[0-9]+' intel/trends.md`, it is **43**, and a pass that adds a trend re-runs that command instead of editing the word.*)* (🔴 this line read *"Thirty-one"* and was **eight short**: `T32`–`T38` were added in `p908`–`p912` and `T39` in `p913`. `compose/patterns.md` carries the rule — *a pass that adds one should re-count, not increment* — and this file drifted the same way and further. 🔵 The count is `grep -cE '^## T[0-9]+' intel/trends.md`; **do not hand-edit it.** `T37` is **materially corrected in `p913`** and `T38` has a second chapter added in `p913`.) (**T30 and T31 added in `p907`** — the LMS-to-agent bridge being built per-institution on the *user's own credentials*, which needs no institutional consent; and the agent-skill marketplaces having no education tier at all, which makes `T26`'s distribution channel measurably empty. Both are the first trends in this file derived from **global code search**, an instrument this base had recorded as unusable; **T29 added in `p906`** — vernacular open education supply measured across eight languages and found to be a single-country phenomenon, with *no licence at all* the default state in the other seven; **T26 added in `p903`** — the unit of publication shifting from the
 application to the agent-addressable curriculum corpus, the first trend in this file derived from a
 non-English repository channel; **T25 added in `p902`** — the licence trap moving from code to the data
 and content assets, where no index can see it; **T24 added in `p901`** — path-dependent licences, the first trend in this file derived from repositories the SPDX channel refused to resolve at all; **T23 added in `p900`** — the first trend in this file derived from a
@@ -1958,3 +1958,80 @@ Keep `p640`'s band where it was earned — MIT — and for GNU, read the payload
 now*, not *distrust it*. `915-G4` asks whether Apache-2.0 and MPL are also distributed by reference
 at small sizes, because band-shaped rules exist or are implied for those too.
 
+
+## T44 — A declared absence that is re-measured with its own original query can only ever be confirmed (measured `p916`)
+
+This base has carried an **oral reading fluency void** since its sixth pass (`P17`), re-measured it
+repeatedly, and recorded it as *"Holds, reproduced exactly"* as recently as `p890`. It is false.
+`oral reading fluency assessment` returns **4**; `"reading fluency"` returns **102**, and the 4 is a
+strict subset. Nothing about the world changed between the two measurements — only the question.
+
+🔴 **The mechanism is `T45`'s, and the consequence is epistemic.** A deterministic query against a
+slow-moving index reproduces exactly *by construction*. Every "the void holds" confirmation this
+base recorded was evidence that `search/repositories` is deterministic, which was never in doubt,
+and was read as evidence that the void is real, which was never tested. **An absence confirmed only
+by its own original query has been confirmed zero times.**
+
+🔵 **It propagates.** `p890` used the fluency void to interpret an *unrelated* licence finding — a
+GitLab anti-licence was read as *"the void therefore stands, and for a sharper reason than
+absence"*. A false void does not stay in its own row; it becomes a premise in reasoning that does
+not look like it depends on it.
+
+**Implication for delivery.** Any gap this base publishes to a client as "no open-source supply
+exists" must name the query shape that established it, and must have been re-measured on a second
+shape. `916-G5` registers that sweep for the three remaining voids in `p890`'s own gap table.
+
+## T45 — Query shape silently changes a vertical's measured size by orders of magnitude, in both directions (measured `p915`, `p916`)
+
+Two defects, discovered a pass apart, in the same instrument, both silent:
+
+- 🔴 **Contamination.** `p915` scoped one leg `in:name,description,readme` and **37 of 40 hits were
+  not education supply at all** — `public-apis`, `awesome-go`, `xterm.js`. Every tutorial repository
+  in every domain contains the words of every domain.
+- 🔴 **Truncation.** `p916` ran `knowledge tracing learner model in:name,description` and got **13**;
+  `"knowledge tracing" in:name,description` returns **766**. An unquoted multi-word query ANDs every
+  term, so a repository whose description says "knowledge tracing models" but never "learner" is
+  invisible. **A 98.3% loss, with no error and a plausible-looking result set.**
+
+🟢 **The sound shape is a quoted phrase scoped `in:name,description`.** Neither failure announces
+itself: contamination returns *more* than it should and truncation returns *less*, and both return a
+well-formed list of real repositories.
+
+**Implication for delivery.** A `total_count` in this base is a measurement of a *query*, not of a
+*tier*, until it has been run in at least two shapes. Four of `p916`'s eleven legs were run in the
+defective shape before it was caught; all four were re-run.
+
+## T46 — `NOASSERTION` is the search channel's dominant failure, and it fails toward *rejection* (measured `p916`)
+
+`915-G3` asked how often `search/repositories` names a licence for a repository with no readable
+payload. Over 92 cohort repositories, every one byte-read: **1** fabricated (1.1%,
+`PRX/badges_engine`, reported MIT, no payload on 16 names × 3 branches) and **14** abstained with
+`NOASSERTION` (15.2%) — of which a byte-read resolved a nameable grant in **10**.
+
+🔵 **This confirms `T50`/`T52`'s rule and finally prices it.** The channel almost never invents a
+licence; it declines to classify one, and declining looks exactly like "unlicensed" to any gate that
+reads the field. The cost lands on **permissive** supply as often as on copyleft: the four
+`Apereo-Learning-Analytics-Initiative` repositories all read `NOASSERTION` and all carry a reproduced
+**ECL-2.0** payload — Apache-2.0 with an attribution clause, on every enterprise approved list.
+
+🔴 **And it is asymmetric in who checks it.** `906-G1` established that a *restrictive* error is never
+challenged because nobody audits a rejection. `NOASSERTION` is that error's largest source.
+
+**Implication for delivery.** Treat `NOASSERTION` as **unread, never unlicensed**. Budget one
+byte-read per `NOASSERTION` row before any licence gate rejects it.
+
+## T47 — In an ecosystem that *mandates* a licence, the grant lives in the file header and the licence file is optional (measured `p916`)
+
+`justinhunt/moodle-mod_readaloud` has **no licence file anywhere** — `404` on 16 filenames across 3
+branches — and is unambiguously **GPL-3.0-or-later**, declared in its `README` and in the full GNU
+header block of `version.php`, `lib.php` and `mod_form.php`. All three `moodle-*` plugins measured
+this pass carry that header; only one of the three has a root `LICENSE`; a second
+(`marceloschmitt/moodle-block_analytics_graphs`) has `LICENSE.md` **only on branch `4.3`**.
+
+🔵 Moodle requires GPL-3.0+ of every plugin, so the header is the authoritative layer and the file
+is decoration. The same is true of WordPress and Drupal plugins. 🔴 **A licence-file sweep that
+reports `NO-LICENCE-FILE-FOUND` for one of these has measured the file, not the grant** — and this
+base holds many such plugins.
+
+**Implication for delivery.** `G1`'s pre-flight reads the file-header layer before recording any
+ecosystem-plugin row as ungranted. `916-G2` registers the sweep that bounds the class.

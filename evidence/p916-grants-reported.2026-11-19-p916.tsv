@@ -1,0 +1,93 @@
+repo	branch	path	http	bytes	sha256_12	families	verdict	note
+1EdTech/digital-credentials-public-validator	main	LICENSE	200	11357	c71d239df917	Apache-2.0	Apache-2.0	
+1EdTech/openbadges-validator-core	develop	LICENSE	200	13185	ba1f153bdba3	Apache-2.0	Apache-2.0	
+Aaryan-Kapoor/degreeworks-cli	main	LICENSE	200	1070	4a3a6b184d9e	MIT	MIT	
+Abenezer0101/bikeshare-data-cleaning	main	LICENSE	200	1072	13473a6c92b9	MIT	MIT	
+Aliipou/Student-Retention-Prediction	main	LICENSE	200	1098	cb02908dd2ac	MIT	MIT	
+Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor	master	LICENSE	200	9919	fb10d1260ddc	ECL-2.0	ECL-2.0	
+Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy	master	LICENSE	200	9919	fb10d1260ddc	ECL-2.0	ECL-2.0	
+Apereo-Learning-Analytics-Initiative/OpenLRS	master	LICENSE	200	11087	a9ea5cca8da2	ECL-2.0	ECL-2.0	
+Apereo-Learning-Analytics-Initiative/OpenLRW	master	LICENSE	200	9878	f339063d2f60	ECL-2.0	ECL-2.0	
+BridgitD/school-dropout-predictions	master	LICENSE	200	1084	9101093c8bc8	MIT	MIT	
+CAHLR/pyBKT	master	LICENSE	200	1132	ad0c7a38bf01	MIT	MIT	
+EkerVitorSob/molecule-magic	main	LICENSE	200	1089	8217b8bc716c	MIT	MIT	
+FenixEdu/fenixedu-academic	master	LICENSE	200	7652	97628afebc60	LGPL	LGPL	
+GuilleMontilla/PUPR-AcademicMentor-GPT-CECS4224	main	LICENSE	200	1502	2c3f62433bcb	BSD	BSD	
+HaiNguyen-python/knowledge-tracing-srs	main	LICENSE	200	1067	c9b6302fd7db	MIT	MIT	
+IBA-Virtual-Lab/IBA-Virtual-Lab.github.io	main	LICENSE	200	35149	3972dc9744f6	GPL	GPL	
+Iwakami/reading-fluency	master	LICENSE	200	1064	1679814b2c0b	MIT	MIT	
+JambuOverflow/lepic	develop	LICENSE	200	35149	3972dc9744f6	GPL	GPL	
+Kanjo-Elkamira-Ndi/Compass	main	LICENSE	200	1070	1070250a3331	MIT	MIT	
+Kiransindagi/student-performance-early-warning-system	main	LICENSE	200	1070	0e7d963f95b2	MIT	MIT	
+Kosudo/nextSIS	master	license.txt	200	39890	cd7a49230f22	GPL+Apache-2.0	CONJUNCTIVE	title grants GPL and the body carries 1 further family/families — notice obligation of 2
+Longhorn-Developers/Degree-Audit-Plus	main	LICENSE	200	1076	27477ecee35a	MIT	MIT	
+NetEase-GameAI/ProPose	main	LICENSE	200	1501	1c6a32ac6b93	BSD	BSD	
+NickScherbakov/codementor-ai-platform	main	LICENSE	200	1072	7893452d41e0	MIT	MIT	
+OSU-slatelab/AIRFluTe	main	LICENSE	200	11357	c71d239df917	Apache-2.0	Apache-2.0	
+PRX/badges_engine	-	-	404	0	-	none	NO-LICENCE-FILE-FOUND	searched 16 names over 3 branches
+PacktWorkshops/The-Applied-SQL-Data-Analytics-Workshop	master	LICENSE	200	1072	bf8ebdbdf261	MIT	MIT	
+PlaypowerLabs/EdOptimize	master	LICENSE	200	35149	3972dc9744f6	GPL	GPL	
+QkeleQ10/Study-Tools	main	LICENSE	200	34523	8486a10c4393	AGPL-3.0	AGPL-3.0	
+Roshannahak/Student-Information-System	master	LICENSE	200	35149	3972dc9744f6	GPL	GPL	
+SatvikPraveen/JSVerseHub	main	LICENSE	200	1066	3a89e0a80269	MIT	MIT	
+Schroedinger-Hat/certo	main	LICENSE	200	33820	895609d3e304	AGPL-3.0	AGPL-3.0	
+ScottDaniels/labaaoom	master	LICENSE	200	2266	684f13bb9dbb	BSD	BODY-BSD	graded from the body, not a licence title — weaker evidence than a title verdict
+THU-KEG/MOOCCubeX	main	LICENSE	200	35149	3972dc9744f6	GPL	GPL	
+WiekeHarmsen/readingFluencyFeatureSet	main	LICENSE	200	35149	3972dc9744f6	GPL	GPL	
+ZhijieXiong/pyedmine	main	LICENSE	200	1085	fc84421fcf96	MIT	MIT	
+abigail-gh/simlearner	main	LICENSE	200	1067	aed31438b2d1	MIT	MIT	
+akenall/Open-Contributorship-Badges	master	LICENSE	200	6555	36ffd9dc085d	CC0-1.0	CC0-1.0	Creative Commons grant — content licence, read scope before building on it
+alessandroryo/student-dropout-prediction	main	LICENSE	200	1073	7b7270f43cb4	MIT	MIT	
+amajorai/ryu-tuition	main	LICENSE	200	9974	c33fbc8b542f	Apache-2.0	Apache-2.0	
+andresrodriguez55/StudentInformationSystemDesktopAppForEgeUniversity	main	LICENSE	200	35130	1e015eada034	GPL	GPL	
+bigdata-ustc/EduKTM	main	LICENSE	200	11367	59f13c04f0e6	Apache-2.0	Apache-2.0	
+bigmoumou/AI-Agent-Literacy	main	LICENSE	200	1068	f8e1c1b97c59	MIT	MIT	
+brianloveswords/django-obi	master	LICENSE	200	193	98d4fe40cac5	MPL	MPL	
+chtzvt/PyEdsby	master	LICENSE.txt	200	1058	2498a71b89ed	MIT	BODY-MIT	graded from the body, not a licence title — weaker evidence than a title verdict
+coderzaman/Student-Information-System	main	LICENSE	200	1069	19c0af801d59	MIT	MIT	
+davelester/WPBadgeDisplay	master	LICENSE	200	86	5490e3f79c07	none	UNKNOWN-TEMPLATE	no licence title and no grant phrase; title block was: This software is available under version 2.0 of the MPL: htt
+dssg/student-early-warning	master	LICENSE	200	2069	11f9627267d7	none	UNKNOWN-TEMPLATE	no licence title and no grant phrase; title block was: BY DOWNLOADING THE STUDENT EARLY WARNING PROGRAM YOU AGREE T
+dungnotnull/ReadPulse-AI-Agent	main	LICENSE	200	1071	c0f86c93899a	MIT	MIT	
+edenroseFR/Web-based-SSIS	main	LICENSE	200	1072	d4f9e998bf38	MIT	MIT	
+edubadges/edubadges-server	develop	LICENSE	200	34519	91b65277959e	AGPL-3.0	AGPL-3.0	
+fedora-infra/tahrir	develop	LICENSE	200	34917	f59751a85c4e	AGPL-3.0	AGPL-3.0	
+francoisjacquet/rosariosis	mobile	LICENSE	200	15214	d954e14e5c75	GPL	GPL	
+gdgguadalajara/open-badges-platform	main	LICENSE	200	32386	d11d906d7e29	AGPL-3.0	AGPL-3.0	
+gitit36/Contemporary-US-Economic-Mobility-Analysis-in-R	master	LICENSE.md	200	1074	63a21931c16e	MIT	MIT	
+hashicorp-education/learn-configure-hcp-vault-terraform	main	LICENSE	200	16761	1d6b69184f4a	MPL	MPL	
+hcnoh/knowledge-tracing-collection-pytorch	main	LICENSE	200	1071	e3ea402ee1ab	MIT	MIT	
+hhy37/student-early-warning	master	LICENSE	200	2069	11f9627267d7	none	UNKNOWN-TEMPLATE	no licence title and no grant phrase; title block was: BY DOWNLOADING THE STUDENT EARLY WARNING PROGRAM YOU AGREE T
+jasondsouza27/Edusync	main	LICENSE.md	200	1090	efa4c6c6d4e5	MIT	MIT	
+jhljx/GKT	master	LICENSE	200	1061	26a11083335e	MIT	MIT	
+jilljenn/ktm	master	LICENSE	200	1071	0c7c1969160d	MIT	MIT	
+jlevy44/PathFlowAI	master	LICENSE	200	1068	6c3d6e6131ff	MIT	MIT	
+jruiperezv/ANALYSE	master	LICENSE	200	35136	e12d78569742	AGPL-3.0	AGPL-3.0	
+kirstykitto/CLAtoolkit	master	LICENSE	200	35142	d62f065830aa	GPL	GPL	
+lccasagrande/Deep-Knowledge-Tracing	master	LICENSE	200	1076	cda24c80a4f3	MIT	MIT	
+loepan/MAP-Growth-and-Reading-Fluency-Dashboard	main	LICENSE	200	35149	3972dc9744f6	GPL	GPL	
+marceloschmitt/moodle-block_analytics_graphs	4.3	LICENSE.md	200	35121	e1c0ad728983	GPL	GPL	
+marcos862/SaturdaysAI_Project_T2	main	LICENSE	200	35149	3972dc9744f6	GPL	GPL	
+mmkhajah/dkt	master	LICENSE.md	200	1088	274d63fffbca	MIT	MIT	
+mozilla/openbadges-backpack	master	LICENSE	200	88	d547972c2558	none	UNKNOWN-TEMPLATE	no licence title and no grant phrase; title block was: This software is available under version 2.0 of the MPL: htt
+mozilla/openbadges-discovery	master	LICENSE	200	15977	bef1747eda88	MPL	MPL	
+navidshad/linguistic-knowledge-tree	main	LICENSE	200	1062	83ed26edf31b	MIT	MIT	
+nierardi/DegreeAuditParser	master	LICENSE	200	1065	b2bf333e656b	MIT	MIT	
+nomadicjosh/degree-audit	master	LICENSE	200	35141	589ed823e9a8	GPL	GPL	
+nomadicjosh/etsis	main	LICENSE.md	200	1114	8f8a3e4bfffc	MIT	MIT	
+ocansey/student-outcome-early-warning	main	LICENSE	200	1465	acafdb945a31	MIT+CC-UNSPECIFIED	CONJUNCTIVE	title grants MIT and the body carries 1 further family/families — notice obligation of 2
+openbadgefactory/salava	master	LICENSE	200	9720	e9852865aedf	Apache-2.0	Apache-2.0	
+openfun/ralph	main	LICENSE.md	200	1094	08ea77291de9	MIT	MIT	
+openfun/warren	main	LICENSE.md	200	1094	0cc59ddb463e	MIT	MIT	
+pykt-team/pykt-toolkit	main	LICENSE	200	1066	f5f955194636	MIT	MIT	
+radhezanwar24/deepseek-ocr-exam-grader	main	LICENSE	200	1070	26ebb4ef12f8	MIT	MIT	
+ramyasriraman2019-cmyk/Padho-advanced	main	LICENSE	200	1069	325a69386fc7	MIT	MIT	
+rwthanalytics/moodle-local_learning_analytics	master	LICENSE	200	35148	8b1ba204bb69	GPL	GPL	
+sandboxnu/graduatenu	main	LICENSE	200	35149	3972dc9744f6	GPL	GPL	
+selaschuk/SISsync	master	LICENSE	200	1084	240cb0c2ea5f	MIT	MIT	
+shakilahmedemon/uni-student-risk-prediction-dashboard	main	LICENSE	200	1069	695c27228829	MIT	MIT	
+sinothando/student-early-warning-system	main	LICENSE	200	1073	0728147b6cac	MIT	MIT	
+tl-its-umich-edu/my-learning-analytics	master	LICENSE	200	11379	b89b380a589b	Apache-2.0	Apache-2.0	
+totara/openbadges	MDL-35073-openbadges	COPYING.txt	200	35147	8ceb4b9ee5ad	GPL	GPL	
+tvsirius/ml_zoomcamp_midterm_student_dropout	main	LICENSE	200	11357	c71d239df917	Apache-2.0	Apache-2.0	
+xander-doom/class-glass	main	LICENSE	200	1068	d1067a6a7e90	MIT	MIT	
+zh-h/student-information-system-wechat-applet	master	LICENSE	200	1065	a47d312fdce5	MIT	MIT	

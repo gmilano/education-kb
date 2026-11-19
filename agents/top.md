@@ -601,6 +601,39 @@ band, recorded because this base has never had one.**
 | https://github.com/aaryansamanta/NextGen-AI | 491 | 1,327 B · `31d2ea3bba94` | **MIT for source code only.** Brand assets, team photos, videos, logos and the top-level PDFs in `website/img`, `website/video` are reserved © NextGenAI and require written contact before reuse. 🟢 The *code* is usable; the org's identity material is not, which is the correct and unremarkable posture — it is only a trap for a scanner that reports one licence per repo. |
 | https://github.com/Andiii208/seu-handbook-skill | 55 | 1,497 B · `965a0edb5701` | 🔴 **MIT on the code, CC BY-NC-SA 4.0 on `references/` and `data/`** — the Southeast University student handbook text, which *is* the product. The skill's whole value is the clause-level handbook corpus, and that corpus is **NonCommercial**. Ship the retrieval code, re-author the corpus, or do not ship. A textbook instance of `T25`, now with the MIT band as its detector. |
 
+## Oral reading fluency, degree audit and advising agents — added `p916`
+
+🔴 **The first four rows exist in a tier this base published as a *void*.** `P17`'s oral-reading-fluency
+void was declared at the sixth pass and "reproduced exactly" as recently as `p890` at
+`total_count = 4`. It was an artefact of query shape: `oral reading fluency assessment` AND-matches
+four terms and returns **4**; `"reading fluency"` returns **102**. Every row below fails that AND on
+a word, not on substance — `ReadPulse` even carries the phrase *"oral reading fluency"* verbatim and
+is excluded because it says *"Assesses"* and not *"assessment"*. See `agents/trending.md` `916-F3` —
+and note that *nothing about the tier changed*, only the question. Every grant below is byte-read on
+the resolved branch with `ingest/p913-grant-authority.sh`; every **Origin** is from a byte-read
+`README`, never from an owner name (`912-F4`), and where the README carries no country signal the
+cell says so rather than guessing.
+
+| Agent | Repo | Licence | ★ | Last push | What it does | Origin |
+|---|---|---|---|---|---|---|
+| **Poodll ReadAloud** | https://github.com/justinhunt/moodle-mod_readaloud | 🔴 **GPL-3.0-or-later — and there is no licence file.** Byte-read over 16 filenames × 3 branches: `404` on every one. The grant is in the `README` (*"License: GNU GPL v3 or later"*) **and in the full GNU header block of `version.php`, `lib.php` and `mod_form.php`**. See `916-F2` | 6 | **2026-10-28** | Guided reading-fluency + comprehension activity for Moodle: student listens, practises line by line, reads aloud; **speech recognition scores words-per-minute and accuracy automatically**, then an optional comprehension quiz. The only actively-developed artefact in the tier | Global (Moodle plugin) |
+| **AIRFluTe** | https://github.com/OSU-slatelab/AIRFluTe | 🟢 **Apache-2.0** | 3 | 2022-12-08 | *An Intelligent Reading Fluency Teacher.* Streaming deep models fine-tuned on **children's** speech; real-time visual tracking plus a teacher model that prompts with synthesised voice on a hard word | **North America** — Ohio State SLaTe lab (from README) |
+| **LEPIC** | https://github.com/JambuOverflow/lepic | 🔴 GPL-3.0 | 7 | 2021-07-11 | Android/iOS app for teachers and literacy professionals: upload a student's read-aloud recording, mark the errors, get duration and words-per-minute. **Won the ICSE 2021 Student Contest on Software Engineering** | **LATAM** — Brazil, University of Pará (from README) |
+| **ReadPulse** | https://github.com/dungnotnull/ReadPulse-AI-Agent | 🟢 **MIT** | 3 | 2026-09-15 | Virtual reading-specialist **voice agent** on AssemblyAI; assesses a read-aloud in conversation. Three months old — read it as a reference implementation, not an upstream | 🟡 not placed — README carries no country signal |
+| **DegreeWorks CLI** | https://github.com/Aaryan-Kapoor/degreeworks-cli | 🟢 **MIT** | 5 | 2026-10-08 | Read-only CLI over **Ellucian DegreeWorks** that *"lets an AI agent build your exact semester schedule"* from real sections. 🔵 **Textbook `T30`**: a bridge to a commercial registrarial system, built per-institution on the **user's own credentials**, needing no institutional consent | **North America** — Kennesaw State (from README) |
+| **Compass** | https://github.com/Kanjo-Elkamira-Ndi/Compass | 🟢 **MIT** | 11 | 2026-08-12 | *"Turns a standard student information system into an AI-powered academic advisor."* The advising tier's only permissive, currently-maintained agent | **EMEA** — **Cameroon** (from README). 🟢 The second Africa-origin row this base holds, after `elimu-ai` |
+
+🔵 **Why the advising pair matters more than its star counts.** `degreeworks-cli` and `Compass`
+bracket the same problem from opposite ends: one reaches *into* a commercial SIS/degree-audit
+product on the student's own login, the other sits *on top* of whatever SIS an institution runs.
+Both are MIT. For an engagement where the client's registrarial system is a vendor product with no
+agent story — which is most of them — these are the two shapes available, and `P12`'s
+UniTime-based pattern is the third.
+
+🔴 **What this table does not contain.** No APAC-origin row. Eleven discovery legs produced none,
+which is a statement about these eleven angles and not about APAC supply — `p906` measured a full
+Mandarin tier at scale. It is written down because an unstated absence reads as coverage.
+
 ## Study, recall and grading-bridge agents — added `p915`
 
 Nine addresses from twelve discovery legs (angles distinct from `p914`'s seven), every grant
