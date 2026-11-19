@@ -1720,6 +1720,31 @@ problem — so this nil is still not evidence of saturation.
 
 ### APAC
 
+
+#### 🆕 `p920` — the APAC language substrate is permissive, maintained, and was invisible to 919 passes of education-shaped searching
+
+🟢 **All four APAC vernacular tiers that `p918` graded `PRESENT — NOT DELIVERABLE` at the agent layer
+pass at the substrate layer** — the layer that makes a student's answer parseable at all
+([record](../evidence/apac-substrate-layer.2026-11-19-p920.tsv)). Best member per language, every
+grant byte-read this pass: **Mandarin** `hankcs/HanLP` **36,539 ★** Apache-2.0 (pushed 2026-11-07);
+**Vietnamese** `undertheseanlp/underthesea` 1,818 ★ Apache-2.0 (2026-11-19); **Korean**
+`bab2min/Kiwi` 810 ★ Apache-2.0 (2026-11-16); **Japanese** `daac-tools/vibrato` 431 ★ MIT *or*
+Apache-2.0 (2026-10-25).
+
+- 🔴 **HanLP is larger than every education agent this base holds except DeepTutor and OpenMAIC**, and
+  it had never appeared in 919 passes — because every prior Mandarin leg asked for *education*.
+- 🔴 **Two licence facts that change what may be built.** `konlpy/konlpy` (1,490 ★), the package most
+  Korean NLP teaching uses, reports `NOASSERTION` on the search channel and byte-reads as
+  **GPL-3.0-or-later** — a closed Korean tutor that imports it inherits that. And `taku910/mecab`
+  reports as ungranted on both channels while being **tri-licensed GPL-2.0 / LGPL-2.1 / BSD-3-Clause**
+  in a subtree file, so a closed Japanese build *is* permitted via the BSD arm.
+- 🔴 **The Japanese dictionary is a separate work with a separate owner.** UniDic is BSD, © The UniDic
+  Consortium, in `LICENSE.unidic`; IPAdic is a bespoke NAIST/ICOT text that is not an OSI licence.
+  Budget licence triage per artefact, not per repository.
+- 🔵 **What this means for an APAC engagement:** there is no vernacular tutor to fork in any of these
+  markets, and there is a maintained permissive language stack to build one on in all four. The
+  engagement is a build, and the substrate is free.
+
 #### 🆕 `p919` — Indonesia's "no supply" was a query artefact; Thailand's is real at one layer and false at the layer below
 
 - 🔴 **Indonesia: 10 repositories where `p918` measured zero, and 0 of 10 are deliverable.** Re-asked
@@ -2585,6 +2610,33 @@ and own**, not a vendor to partner with.
 regulatory-led posture and Australia's National AI Plan were all returned and all already written.
 
 ### LATAM
+
+#### 🆕 `p920` — Mexico, measured for the first time: 74 repositories, the largest is 2 ★
+
+🔴 **Until this pass Mexico had never been measured by this base** (`919-G6`). Four Spanish-language
+supply legs — `Nueva Escuela Mexicana`, `planeación didáctica`, `CONALEP`, `telesecundaria` — returned
+**74 distinct repositories, every one of them previously unseen**, and the whole population tops out at
+**2 ★** with **4 of 74** carrying any licence
+([record](../evidence/mx-supply.2026-11-19-p920.tsv)).
+
+- 🔵 **Read this as a demand signal, not a supply one.** These are working teachers shipping
+  *planeación didáctica* generators aligned to the **Nueva Escuela Mexicana** — *campos formativos*,
+  *ejes articuladores* — for their own classrooms, several pushed within the last month, and almost
+  none of them licensed. The need is being met by hand, repository by repository, because nothing
+  buyable or forkable addresses it.
+- 🔴 **There is nothing in it to adopt.** Zero of 74 pass this base's deliverability threshold
+  (`918-R1`: ≥ 50 ★ · a byte-read grant that is not `NONE` · pushed within 180 days). Four of eight
+  repositories byte-read carry **no licence file on any probed path**.
+- 🔵 **And unlike the APAC tiers there is no substrate layer to fall back on, because Spanish does
+  not need one.** Thai and Japanese require a tokeniser somebody must ship, so a Thai engagement can
+  stand on `PyThaiNLP` with no tutor; Spanish is served by the global substrate this file already
+  holds. **For Mexico the agent-layer verdict is the whole verdict** (`repos/trending.md` `920-R2`).
+- 🟢 **The offer:** build the agent, adopt the NEM curriculum vocabulary. The *campos formativos* and
+  *ejes articuladores* encoded by hand across those 74 repositories are precisely the part a tutor
+  built outside Mexico gets wrong, and they are free to read.
+- 🟡 **Scope limit, stated rather than implied:** these four legs measure **open-source supply**. They
+  say nothing about the Mexican commercial market, SEP procurement, or institutional adoption rates,
+  none of which this file has ever carried for Mexico. That remains open.
 
 #### 🆕 `p919` — a second independent leg returns the same two headline figures, and the gap between them is still the offer
 

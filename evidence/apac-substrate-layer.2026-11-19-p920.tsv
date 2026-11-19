@@ -1,0 +1,20 @@
+slug	lang	layer	stars	search_licence	byte_grant	bytes	sha256_12	pushed	919_R1
+hankcs/HanLP	ZH	substrate	36539	Apache-2.0	Apache-2.0	11357	c71d239df917	2026-11-07	PASS
+messense/jieba-rs	ZH	substrate	996	MIT	MIT	1101	92257c8d1c7a	2026-10-15	PASS
+fxsjy/jieba	ZH	substrate	35243	MIT	MIT	1075	18ba0984839f	2024-08-21	FAIL-recency
+lancopku/pkuseg-python	ZH	substrate	6712	MIT	MIT	1076	1addb8263682	2022-11-05	FAIL-recency
+baidu/lac	ZH	substrate	3996	Apache-2.0	not-read	-	-	2021-05-25	FAIL-recency
+daac-tools/vibrato	JA	substrate	431	Apache-2.0	DUAL-MIT-OR-Apache-2.0	1076	d0104f0f2368	2026-10-25	PASS
+taishi-i/nagisa	JA	substrate	424	MIT	MIT	1065	fa2fb3121bd2	2026-11-14	PASS
+ku-nlp/jumanpp	JA	substrate	413	Apache-2.0	Apache-2.0	11357	c71d239df917	2026-10-13	PASS
+himkt/konoha	JA	substrate	265	MIT	MIT	1067	9e818940bbfa	2026-11-13	PASS
+polm/fugashi	JA	substrate	538	MIT	not-read	-	-	2025-10-24	FAIL-recency
+taku910/mecab	JA	engine	1112	NULL	GPL-2.0-OR-LGPL-2.1-OR-BSD(subtree mecab/COPYING)	240	-	2025-02-22	FAIL-recency
+bab2min/Kiwi	KO	substrate	810	Apache-2.0	Apache-2.0	11372	4070ef926941	2026-11-16	PASS
+ongjin/garu	KO	substrate	182	Apache-2.0	Apache-2.0	11358	cfc7749b96f6	2026-11-16	PASS
+shineware/KOMORAN	KO	substrate	320	Apache-2.0	not-read	-	-	2026-03-30	FAIL-recency
+konlpy/konlpy	KO	substrate	1490	NOASSERTION	GPL-3.0-or-later	722	a66980ac3c64	2023-08-28	FAIL-grant+recency
+undertheseanlp/underthesea	VI	substrate	1818	Apache-2.0	Apache-2.0	10765	05e32ccfed98	2026-11-19	PASS
+vncorenlp/VnCoreNLP	VI	substrate	679	NOASSERTION	not-read	-	-	2023-02-12	FAIL-recency
+trungtv/pyvi	VI	substrate	279	MIT	not-read	-	-	2024-09-26	FAIL-recency
+vunb/vntk	VI	substrate	221	MIT	not-read	-	-	2024-02-26	FAIL-recency

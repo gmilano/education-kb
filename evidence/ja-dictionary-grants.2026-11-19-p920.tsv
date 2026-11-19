@@ -1,0 +1,11 @@
+slug_or_path	asset	grant	bytes	sha256_12	note
+taku910/mecab@master:mecab/COPYING	engine	GPL-2.0 OR LGPL-2.1 OR BSD-3-Clause	240	-	tri-licence declared ONLY in subtree; root read returns NO-LICENCE-FILE-FOUND
+taku910/mecab@master:mecab/BSD	engine	BSD-3-Clause	1602	-	the arm that permits a closed derivative
+taku910/mecab@master:mecab/GPL	engine	GPL-2.0	18009	-	first-named arm; taking it needlessly kills a closed build
+taku910/mecab@master:mecab/LGPL	engine	LGPL-2.1	26428	-	-
+taku910/mecab@master:mecab-ipadic/COPYING	dictionary	NAIST/ICOT bespoke	3795	-	NOT an OSI licence; NO WARRANTY clause must travel with the program
+taku910/mecab@master:mecab-jumandic/COPYING	dictionary	University of Tokyo bespoke	1435	-	separate owner again
+polm/unidic-lite@master:LICENSE	packaging code	MIT (README adds: or WTFPL)	1051	-	covers THE CODE only
+polm/unidic-lite@master:LICENSE.unidic	dictionary data	BSD, UniDic Consortium 2011-2017	1515	d2cfdec25d7a	INVISIBLE to ingest/p913-grant-authority.sh NAMES list
+polm/unidic-py@master:LICENSE.unidic	dictionary data	BSD, UniDic Consortium 2011-2017	1515	-	same payload, same blind spot
+polm/ipadic-py	dictionary packaging	NO-LICENCE-FILE-FOUND	0	-	25 stars, ungranted

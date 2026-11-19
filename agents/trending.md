@@ -4,6 +4,197 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p920) — **`919-G5` and `919-G6` are both discharged, and together they settle what the vernacular tiers actually are: empty at the agent layer in all six languages measured, deliverable at the substrate layer in four of them. 🔴 Mexico's largest education repository is **2 ★**. And `919-G3`'s prescribed remedy was built, run, and is insufficient as written — a cell saying `NOT MIT` and a cell saying `MIT` carry the same token set.**
+
+🔵 **Summary.** The eight mandated WebSearch legs, four Spanish-language Mexico supply legs, four
+language-substrate legs, 21 repositories byte-read for their grant across three records, one new
+instrument with an offline control, and **two live licence cells corrected in the authority**.
+🔴 Every one of the eight mandated legs returned facts this base already holds — measured, not
+asserted: 15 named facts probed, **15 of 15 already present**.
+
+🟢 **`make hooks` run in the foreground: `53/76` green, 23 red — the RED line is byte-identical to
+`p918`'s** ([output](../scratchpad/p920/hooks-full.txt), diffed against
+`scratchpad/p918/hooks-full.txt`). This pass added ~400 lines across five delivery shelves, two
+trends and a pattern, and **introduced no new red gate**. 🟡 It also cleared none of the standing
+23 — `918-G3` is still unread and is still the cheapest known work on this base's books.
+
+### 🟢 `920-F4` — `919-G5` discharged: all four APAC languages pass at the substrate layer and fail at the agent layer
+
+`918-F2` graded Mandarin, Japanese, Korean and Vietnamese at the **agent** layer and found the tier
+`PRESENT — NOT DELIVERABLE` — best permissive byte-read member **36 ★, 383 days idle**. `919-G5`
+predicted the substrate layer would answer differently. It does, and not marginally
+([record](../evidence/apac-substrate-layer.2026-11-19-p920.tsv)):
+
+| Lang | Best substrate member | ★ | Grant (byte-read `p920`) | Pushed | `918-R1` |
+|---|---|---|---|---|---|
+| ZH | [`hankcs/HanLP`](https://github.com/hankcs/HanLP) | **36,539** | 🟢 Apache-2.0 (11,357 B, `sha256₁₂ c71d239df917`) | 2026-11-07 | 🟢 **PASS** |
+| VI | [`undertheseanlp/underthesea`](https://github.com/undertheseanlp/underthesea) | 1,818 | 🟢 Apache-2.0 (10,765 B, `sha256₁₂ 05e32ccfed98`) | **2026-11-19** | 🟢 **PASS** |
+| KO | [`bab2min/Kiwi`](https://github.com/bab2min/Kiwi) | 810 | 🟢 Apache-2.0 (11,372 B, `sha256₁₂ 4070ef926941`) | 2026-11-16 | 🟢 **PASS** |
+| JA | [`daac-tools/vibrato`](https://github.com/daac-tools/vibrato) | 431 | 🟢 **MIT *or* Apache-2.0** (1,076 B, `sha256₁₂ d0104f0f2368`) | 2026-10-25 | 🟢 **PASS** |
+
+🔵 **The generalisation.** `919-R1` was derived from a single country and proposed as a refinement;
+after this pass it is the **normal** finding. Across six vernacular tiers now measured — Mandarin,
+Japanese, Korean, Vietnamese, Thai, Indonesian — **not one has a deliverable education agent, and
+four of six have a deliverable language substrate.** A tier is not a thing that passes or fails; it
+is two layers with opposite verdicts, and the delivery advice differs completely between them.
+
+🔴 **`HanLP` deserves naming on its own.** At 36,539 ★ it is larger than every education *agent*
+this base holds except DeepTutor (60,684) and OpenMAIC (43,874) — a permissive, actively pushed,
+production-grade Chinese language stack that this base had never measured in 919 passes of looking
+for Chinese education supply. It was invisible because every prior Mandarin leg asked for *education*.
+
+### 🔴 `920-F5` — two grants on that tier that no index gets right, and both change what you may build
+
+**`konlpy/konlpy` is GPL-3.0-or-later and the search channel says `NOASSERTION`.** 722 B at
+`master/LICENSE`, `sha256₁₂ a66980ac3c64`, reading *"either version 3 of the License, or (at your
+option) any later version."* This is the package nearly every Korean NLP course teaches, at
+**1,490 ★**. 🔵 A closed Korean tutor that imports it inherits GPL-3.0-or-later. This is the
+`906-G1` class again — the search channel's licence field erring toward *permissive-looking
+silence* on a repository big enough that nobody re-checks.
+
+🟡 **And an instrument limit this exposes.** The payload is a **notice**, not a licence body, so the
+grant authority's title-line rule returns a bare `GPL` with **no version**. The version exists only
+in the prose. For pointer-style payloads the family is recoverable from the title and the *version
+is not* — registered as `920-G2`.
+
+**`taku910/mecab` is tri-licensed, and both channels report it as ungranted.** Search says `NULL`;
+a root byte-read returns `NO-LICENCE-FILE-FOUND`. The grant is at `mecab/COPYING`, 240 B: *"released
+under any of the GPL …, the LGPL …, or the BSD License."* All three payloads are present
+(`mecab/GPL` 18,009 B, `mecab/LGPL` 26,428 B, `mecab/BSD` 1,602 B). 🔵 **You may take MeCab under
+BSD-3-Clause**, so a closed Japanese build is permitted — and a reader trusting either channel would
+have concluded the opposite. `p382`'s subtree-grant class, reproduced on the engine under most of
+the Japanese tokeniser tier.
+
+### 🔴 `920-F6` — the Japanese dictionary is a separate work with a separate owner, and this base's own authority cannot see its licence
+
+`fugashi`'s README states it plainly: *"fugashi requires a dictionary."* The dictionary is not
+covered by the tokeniser's grant, nor by the grant on the pip package that ships it.
+`polm/unidic-lite` carries `LICENSE` (1,051 B, MIT) covering **the packaging code**, and
+`LICENSE.unidic` (1,515 B, `sha256₁₂ d2cfdec25d7a`) — **BSD, © 2011-2017 The UniDic Consortium** —
+covering the data you actually install. `mecab-ipadic/COPYING` (3,795 B) is a **NAIST/ICOT bespoke
+text that is not an OSI licence at all**, and `mecab-jumandic/COPYING` (1,435 B) belongs to a third
+owner, the University of Tokyo.
+
+🔴 **`ingest/p913-grant-authority.sh` probes 25 filenames and not one is a `LICENSE.<asset>`
+sibling**, so this base's own authority reads `unidic-lite` as plain MIT and never opens the
+document that governs the dictionary. `T25` — *the licence trap moved to the data and content
+assets* — reproduced inside the Japanese substrate, in an artefact class the authority was built to
+cover. Registered as `920-G1`, with `LICENSE.unidic` as a ready fixture on two repositories.
+
+### 🔴 `920-F7` — `919-G6` discharged: Mexico measured for the first time, and its largest education repository is 2 ★
+
+Four Spanish-language legs in the shape that worked for LATAM and Indonesia — the national
+curriculum programme and the teacher-facing artefact, not topic words
+([record](../evidence/mx-supply.2026-11-19-p920.tsv)):
+
+| Measure | Value |
+|---|---|
+| Distinct repositories | **74** |
+| 🟢 Unseen by this base | **74 — all of them** |
+| 🔴 Largest repository in the entire supply | **2 ★** |
+| Carrying any licence on the search channel | **4 of 74** |
+| 🔴 Passing `918-R1` | **0** |
+
+Eight byte-read: three MIT, one **CC0-1.0** (`Staryuc2209/Propuestas-Formativas` — a content
+dedication on pedagogical material, which is the honest licence for what it is), and **four with no
+licence file on any probed path**.
+
+🔵 **Mexico is the most extreme `PRESENT — NOT DELIVERABLE` tier this base has measured** —
+Indonesia's leader was 115 ★, the four APAC agent tiers topped out at 36 ★, Mexico's is 2 ★ — and
+the demand signal is the clearest. These are working teachers publishing *planeación didáctica*
+generators aligned to the Nueva Escuela Mexicana, several pushed within the last month, none of them
+commercialised and almost none of them licensed. **Build the agent; adopt the NEM vocabulary.** See
+`agents/top.md` and `intel/market.md`.
+
+### 🔴 `920-F1` — `919-G3` asked for a token-SET comparison. It was built, and it cannot see the defect it was specified against.
+
+`919-G3` prescribed: *"sweep the delivery files for any slug whose licence **cells** differ between
+tables."* `919-G9` explained why `gate-shelf-consistency` misses it — it compares tokens, and both
+PrairieLearn cells contained `AGPL-3.0`. The instrument was built to that specification
+(`ingest/p920-cell-divergence.py`) and run against the real pre-fix tree, `verticals/solutions.md`
+at commit `8bc72dd` (`p918`), the last tree in which the divergence was live.
+
+🔴 **It did not fire.** Both cells return the identical set `{AGPL-3.0, MIT, PROPRIETARY}` — because
+the L141 cell reads ***"NOT MIT"***, and a bag of tokens cannot tell an assertion from its negation.
+🔵 **So `919-G9`'s diagnosis was one level too shallow.** The gate does not fail because both cells
+happen to share `AGPL-3.0`; it fails because **no token-set comparison can represent polarity**, and
+the correction `919-G3` prescribed inherits that defect exactly.
+
+The instrument carries two arms as a result: a **polarity-tagged set** (`¬MIT` ≠ `MIT`), and, where
+the sets agree, a **polarity-tagged sequence** with multiplicity and order. The fixture fires on the
+sequence arm and on nothing else in that file — 99 rows, one hit.
+
+### 🟡 `920-F2` — and the instrument's first defect was this base's own, reproduced for the third pass running
+
+The first live run raised **6** subjects. One, `Submitty/Submitty`, was raised because the sweep
+picked *the densest* cell as the licence cell — and Submitty's prose cell names `Apache-2.0` only to
+contrast it with Autolab, one column to the right of its actual `BSD-3-Clause` cell.
+
+🔵 That is `918-G4`'s *subject-versus-mention* defect, at cell level, **inside the instrument built
+to fix the cell-level version of it** — the same shape `919-F1` caught in its own sweep output
+before finishing reading it. Corrected: the licence cell is the **leftmost** cell carrying a token,
+never the densest. 🔵 The transferable rule, now three passes old and still earning its keep:
+*run the instrument against a case you already know the answer to before you believe its output.*
+
+### 🔴 `920-F3` — the sweep's real yield: two live cells wrong, both from the same mechanism, both fixed
+
+450 address-bearing rows across the three delivery shelves. **4 subjects raised, 2 true positives**
+([record](../evidence/cell-divergence-sweep.2026-11-19-p920.txt)):
+
+| Subject | Arm | `repos/foundations.md` | `verticals/solutions.md` | Verdict |
+|---|---|---|---|---|
+| [`apereo/java-cas-client`](https://github.com/apereo/java-cas-client) | **SET** | 🔴 CONJUNCTIVE Apache-2.0 + JA-SIG BSD, corrected `p913` | bare `Apache-2.0` | 🔴 **TRUE — fixed `p920`** |
+| [`jitsi/jitsi-meet`](https://github.com/jitsi/jitsi-meet) | **SET** | 🔴 CONJUNCTIVE Apache-2.0 + MIT, corrected `p913` | bare `Apache-2.0` | 🔴 **TRUE — fixed `p920`** |
+| `PrairieLearn/PrairieLearn` | SEQUENCE | AGPL-3.0 CE + proprietary EE | same, more verbose | 🟡 false positive |
+| `nbgallery/nbgallery` | SEQUENCE | MIT, `sha256₁₂ 7900749dcb3b` | MIT, same sha | 🟡 false positive |
+
+🔴 **Both true positives are the same mechanism, and it is the one `p899` already demonstrated with
+PrairieLearn: a correction pass fixes the table it is looking at.** `p913` byte-read both
+conjunctions, wrote them into `repos/foundations.md`, and left `verticals/solutions.md` asserting a
+single arm — for seven passes. The consequence is specific: **the notice obligation on each is two,
+not one**, and a team reading the verticals shelf would ship one attribution.
+
+🟢 **Both cells are rewritten this pass against a fresh byte-read** (`java-cas-client`
+`master/LICENSE` 2,321 B `sha256₁₂ 6c21b465e3a0`; `jitsi-meet` `master/LICENSE` 12,596 B
+`sha256₁₂ eae52e200cd8`). After the fix the **SET arm is empty on the live shelf** and both
+subjects drop to the sequence arm — which is the behaviour that makes the two arms worth keeping
+apart. 🔵 Published as `920-R1` in `repos/trending.md`: **the SET arm is a gate; the SEQUENCE arm is
+a measurement, never a failure.** On this run the SET arm was 2 for 2 and the sequence arm 0 for 2.
+
+🟡 **One transcription error of my own, caught before publication.** The first draft of
+[`apac-substrate-layer`](../evidence/apac-substrate-layer.2026-11-19-p920.tsv) carried
+`jieba-rs` as `sha256₁₂ 92257c8d7a`; the byte-read says `92257c8d1c7a`. Found by diffing the
+evidence file against the instrument's own output rather than by re-reading it. 🔵 Hand-copied
+hashes are the one thing in this base that look exactly as authoritative when wrong.
+
+### 🔵 `920-F8` — all four mandated regional legs are now exhausted, not just North America
+
+`919-G7` recorded the **North America** regulatory channel as exhausted and advised spending the
+budget elsewhere. This pass ran all eight mandated legs anyway, as the standing instruction
+requires, and then probed each named fact against the live base
+([record](../evidence/websearch-exhaustion-probe.2026-11-19-p920.tsv)):
+
+| Leg | Facts returned | Already in this base |
+|---|---|---|
+| Global ×4 | OECD DEO 2026, ESSA 45%, FIPSE $169M, Microsoft/IDC 86%, DeepTutor, OpenEduCat | **all** |
+| North America | ECS tracker, PIE ~100 bills, 15 states, Virginia SB 394, Chegg −45% staff | **all** |
+| EMEA | Futuresource 67%, Epson 3,360-teacher survey, DEC EMEA summit, Digital Omnibus → 2027-12-02 | **all** |
+| APAC | Ipsos Education Monitor, Acer Edu Summit, Cambridge English summit, UAE 25 prohibitions | **all** |
+| LATAM | DEC/Tec de Monterrey 92%/79%, UNESCO IESALC 200 institutions / 19 countries, EdTech Hub + Fundación Ceibal | **all** |
+
+**15 named facts probed, 15 already present. Zero new.** 🔵 So `919-G7` generalises: the exhaustion
+is not a North America property, it is a property of **the English-language mandated leg shape**.
+The same budget spent on Spanish-language Mexico legs and four language-substrate legs returned
+**74 + 19 repositories, 74 of them never seen here before.** 🟡 The legs are mandated and will keep
+being run; what changes is that a nil result on them is now the *expected* outcome and is recorded
+as one line rather than read as a signal. Registered as `920-G3`.
+
+🔴 **One correction to how this base files a regional fact.** The APAC leg returned the **UAE's**
+25 generative-AI school prohibitions. The UAE is **EMEA** under this base's closed region
+vocabulary. The fact was already held and correctly placed; the leg was not. Worth one line in any
+pass that reads a regional leg's output as regionally typed — it is not.
+
+
 ## `2026-11-19` (p919) — **`918-G7` is discharged and Indonesia's nil was a query artefact, not an absence: 10 repositories where `p918` measured zero, and 0 of 10 are deliverable. Thailand is different in a way worth naming — the agent layer really is empty, the *language* layer is not. 🔴 And `918-G2`, this base's own "cheapest growth available" prescription, is refuted: 37.4% of the queue it pointed at was already on the shelf.**
 
 Three of this pass's four legs were spent on gaps this base declared about *itself*, and two of

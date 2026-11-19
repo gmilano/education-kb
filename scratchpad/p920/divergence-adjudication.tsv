@@ -1,0 +1,6 @@
+repo	branch	path	http	bytes	sha256_12	families	verdict	note
+apereo/java-cas-client	master	LICENSE	200	2321	6c21b465e3a0	Apache-2.0+BSD	CONJUNCTIVE	title grants Apache-2.0 and the body carries 1 further family/families — notice obligation of 2
+jitsi/jitsi-meet	master	LICENSE	200	12596	eae52e200cd8	Apache-2.0+MIT	CONJUNCTIVE	title grants Apache-2.0 and the body carries 1 further family/families — notice obligation of 2
+Submitty/Submitty	main	LICENSE.md	200	1542	c123708cb4ef	BSD	BSD	
+sakaiproject/sakai	master	LICENSE	200	11120	0688f62d04f1	ECL-2.0	ECL-2.0	
+nbgallery/nbgallery	main	LICENSE	200	1071	7900749dcb3b	MIT	MIT	

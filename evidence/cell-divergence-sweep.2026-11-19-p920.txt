@@ -1,0 +1,53 @@
+p920 — cell-level licence divergence sweep (919-G3 / 919-G9)
+instrument: ingest/p920-cell-divergence.py   fixture: compose/code/p920-cell-divergence/fixtures/verticals-solutions.p918.md
+
+=== OFFLINE CONTROL (the p918 tree, last in which the PrairieLearn divergence was live) ===
+── OFFLINE CONTROL (compose/code/p920-cell-divergence/fixtures/verticals-solutions.p918.md): 99 address-bearing rows with a licence cell; 1 subject(s) whose cells DIVERGE
+
+🔴 PrairieLearn/PrairieLearn   [SEQUENCE]
+   compose/code/p920-cell-divergence/fixtures/verticals-solutions.p918.md:141  set={AGPL-3.0, PROPRIETARY, ¬MIT}
+       seq=AGPL-3.0 · PROPRIETARY · PROPRIETARY · ¬MIT
+       🔴 **AGPL-3.0 Community Edition + proprietary Enterprise Edition. NOT MIT — corrected p899**
+   compose/code/p920-cell-divergence/fixtures/verticals-solutions.p918.md:193  set={AGPL-3.0, PROPRIETARY, ¬MIT}
+       seq=¬MIT · MIT · AGPL-3.0 · PROPRIETARY · PROPRIETARY
+       🔴 **NOT MIT — corrected `p918`. MIT + AGPL-3.0 conjunction, plus proprietary Enterprise Edition directories** (`LICENSE@master`, 37,237 B, `sha256₁₂ 548cbfae567
+
+control: PrairieLearn divergence detected = True
+
+=== LIVE SHELF, AFTER this pass's two corrections ===
+── LIVE SHELF: 450 address-bearing rows with a licence cell; 4 subject(s) whose cells DIVERGE
+
+🔴 PrairieLearn/PrairieLearn   [SEQUENCE]
+   repos/foundations.md:171  set={AGPL-3.0, PROPRIETARY, ¬MIT}
+       seq=¬MIT · AGPL-3.0 · PROPRIETARY · PROPRIETARY · PROPRIETARY · MIT
+       🔴 **NOT MIT — multi-grant, open-core. Corrected p899.** CE is **AGPL-3.0**; `apps/prairielearn/src/ee/` **and `apps/course-agent/`** are **proprietary Enterpris
+   verticals/solutions.md:141  set={AGPL-3.0, PROPRIETARY, ¬MIT}
+       seq=AGPL-3.0 · PROPRIETARY · PROPRIETARY · ¬MIT
+       🔴 **AGPL-3.0 Community Edition + proprietary Enterprise Edition. NOT MIT — corrected p899**
+   verticals/solutions.md:193  set={AGPL-3.0, PROPRIETARY, ¬MIT}
+       seq=AGPL-3.0 · PROPRIETARY · PROPRIETARY · ¬MIT · MIT · AGPL-3.0 · AGPL-3.0 · MIT
+       🔴 **AGPL-3.0 (Community Edition) + proprietary Enterprise Edition. NOT MIT** — cell rewritten `p919` (`LICENSE@master`, 37,237 B, `sha256₁₂ 548cbfae567a`, byte-
+
+🔴 apereo/java-cas-client   [SEQUENCE]
+   repos/foundations.md:364  set={Apache-2.0, BSD}
+       seq=Apache-2.0 · BSD · Apache-2.0
+       🔴 **CONJUNCTIVE: Apache-2.0 + JA-SIG BSD — CORRECTED `p913`, was `Apache-2.0`** (byte-read `master/LICENSE`, 2,321 B)
+   verticals/solutions.md:221  set={Apache-2.0, BSD}
+       seq=Apache-2.0 · BSD
+       🔴 **CONJUNCTIVE: Apache-2.0 + JA-SIG BSD — cell corrected `p920`** (`master/LICENSE`, 2,321 B, `sha256₁₂ 6c21b465e3a0`, re-read `p920`; the search channel says 
+
+🔴 jitsi/jitsi-meet   [SEQUENCE]
+   repos/foundations.md:366  set={Apache-2.0, MIT}
+       seq=Apache-2.0 · MIT · Apache-2.0 · Apache-2.0 · MIT
+       🔴 **CONJUNCTIVE: Apache-2.0 + MIT — CORRECTED `p913`, was `Apache-2.0`** (byte-read `master/LICENSE`, 12,596 B, `sha256₁₂ eae52e200cd8`; the payload is ~1.2 kB 
+   verticals/solutions.md:161  set={Apache-2.0, MIT}
+       seq=Apache-2.0 · MIT · Apache-2.0
+       🔴 **CONJUNCTIVE: Apache-2.0 + MIT — cell corrected `p920`** (`master/LICENSE`, 12,596 B, `sha256₁₂ eae52e200cd8`, re-read `p920`). `p913` byte-read the conjunct
+
+🔴 nbgallery/nbgallery   [SEQUENCE]
+   repos/foundations.md:262  set={MIT}
+       seq=MIT · MIT
+       **MIT** (`LICENSE@master`, 1,071 B, `sha256₁₂ 7900749dcb3b`, `MIT License` title line; SPDX agrees)
+   verticals/solutions.md:178  set={MIT}
+       seq=MIT
+       **MIT** (`master/LICENSE`, `1,071 B`, `sha256₁₂ 7900749dcb3b`)

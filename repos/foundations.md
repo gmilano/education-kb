@@ -420,6 +420,71 @@ new: `vistec-AI/thai2transformers` (125 ★, Apache-2.0 byte-read, idle since **
 🔴 `PyThaiNLP/pythainlp-corpus` (10 ★) is **`CC-BY-4.0` — a data licence, not a software grant**; it is
 the corpus, not the library that loads it.
 
+## The APAC language substrate, measured — added `p920`, discharging `919-G5`
+
+`919-G5` recorded that the Mandarin, Japanese, Korean and Vietnamese tiers had been graded at the
+**agent layer only** (`p918`), and predicted the substrate layer would be where they pass. It does.
+**All four languages clear `918-R1` at this layer, and all four fail it at the agent layer** — the
+`919-R1` split that Thailand produced is not a Thai peculiarity but the normal state of APAC.
+Every grant below is byte-read this pass
+([record](../evidence/apac-substrate-layer.2026-11-19-p920.tsv)).
+
+| Repo | Lang | Licence (byte-read `p920`) | ★ / pushed | Role |
+|---|---|---|---|---|
+| https://github.com/hankcs/HanLP | ZH | 🟢 Apache-2.0 — 11,357 B, `sha256₁₂ c71d239df917` | **36,539 ★** / 2026-11-07 | **The largest permissive language substrate on this shelf in any language** — larger than every education *agent* this base holds except DeepTutor and OpenMAIC. Segmentation, POS, NER, dependency and semantic parsing, plus pinyin and simplified/traditional conversion. Branch is `doc-zh`, not `main` |
+| https://github.com/messense/jieba-rs | ZH | 🟢 MIT — 1,101 B, `sha256₁₂ 92257c8d1c7a` | 996 ★ / 2026-10-15 | The maintained Rust port of `jieba`. 🔵 Reach for this rather than the original: `fxsjy/jieba` is **35,243 ★ and has not been pushed since 2024-08-21**, so the canonical Chinese segmenter fails `918-R1` on recency while its port passes |
+| https://github.com/undertheseanlp/underthesea | VI | 🟢 Apache-2.0 — 10,765 B, `sha256₁₂ 05e32ccfed98` | 1,818 ★ / **2026-11-19** | Vietnamese NLP toolkit, pushed **today**. The only member of the Vietnamese tier that passes `918-R1` at all: `VnCoreNLP` (679 ★) is idle since 2023-02-12, `pyvi` (279 ★) since 2024-09-26, `vntk` (221 ★) since 2024-02-26 |
+| https://github.com/bab2min/Kiwi | KO | 🟢 Apache-2.0 — 11,372 B, `sha256₁₂ 4070ef926941` | 810 ★ / 2026-11-16 | Korean morphological analyser. 🔵 **Use this, not KoNLPy** — see the licence finding below |
+| https://github.com/ongjin/garu | KO | 🟢 Apache-2.0 — 11,358 B, `sha256₁₂ cfc7749b96f6` | 182 ★ / 2026-11-16 | Ultra-light Korean analyser that runs **in the browser via WASM on a 1 MB model**. 🔵 The one member of this whole section that puts the substrate on the *client*, which is what an offline or low-connectivity classroom needs |
+| https://github.com/taishi-i/nagisa | JA | 🟢 MIT — 1,065 B, `sha256₁₂ fa2fb3121bd2` | 424 ★ / 2026-11-14 | RNN-based Japanese tokeniser. 🔵 **Self-contained**: unlike the MeCab wrappers it does not drag in a separately licensed dictionary — see the dictionary finding below |
+| https://github.com/daac-tools/vibrato | JA | 🟢 **MIT *OR* Apache-2.0, disjunctive** — `LICENSE-MIT` 1,076 B, `sha256₁₂ d0104f0f2368` | 431 ★ / 2026-10-25 | Viterbi-based Japanese tokeniser. The disjunction is the licensee's choice, so this is the most permissive option in the tier |
+| https://github.com/ku-nlp/jumanpp | JA | 🟢 Apache-2.0 — 11,357 B, `sha256₁₂ c71d239df917` | 413 ★ / 2026-10-13 | Juman++ morphological analyser, Kyoto University. Payload is byte-identical to HanLP's — stock Apache-2.0 |
+| https://github.com/himkt/konoha | JA | 🟢 MIT — 1,067 B, `sha256₁₂ 9e818940bbfa` | 265 ★ / 2026-11-13 | Wrapper that lets you switch Japanese tokenisers behind one API. Useful for exactly the dictionary problem below |
+
+### 🔴 Two grants on this tier that no index gets right
+
+**`konlpy/konlpy` — `search/repositories` says `NOASSERTION`; the bytes say GPL-3.0-or-later.**
+722 B at `master/LICENSE`, `sha256₁₂ a66980ac3c64`: *"either version 3 of the License, or (at your
+option) any later version."* KoNLPy is **1,490 ★** and is the package nearly every Korean NLP course
+teaches. 🔵 **A closed Korean tutor that imports it inherits GPL-3.0-or-later.** Use `Kiwi` or
+`garu` (both Apache-2.0, both pushed this week) instead. It also fails `918-R1` on recency
+(2023-08-28).
+
+**`taku910/mecab` — the search channel says `NULL`, a root byte-read says `NO-LICENCE-FILE-FOUND`,
+and the repository is tri-licensed.** The grant lives at `mecab/COPYING` (240 B): *"released under
+any of the GPL (see the file GPL), the LGPL (see the file LGPL), or the BSD License (see the file
+BSD)."* All three payloads are present — `mecab/GPL` 18,009 B (GPL-2.0), `mecab/LGPL` 26,428 B
+(LGPL-2.1), `mecab/BSD` 1,602 B. 🔵 **You may take it under BSD-3-Clause, so a closed Japanese
+build is permitted** — but only a *subtree* read tells you that. This is `p382`'s subtree-grant class
+reproduced on the engine sitting under most of the Japanese tier
+([record](../evidence/ja-dictionary-grants.2026-11-19-p920.tsv)).
+
+### 🔴 And the Japanese dictionary is a different work, with a different owner and a different grant
+
+A MeCab-family tokeniser does nothing without a dictionary — `fugashi`'s own README states
+*"fugashi requires a dictionary"* — and the dictionary is licensed separately from both the engine
+and the pip package that ships it:
+
+| Artefact | Grant | Bytes |
+|---|---|---|
+| `polm/unidic-lite` → `LICENSE` | MIT (README adds: *"MIT or WTFPL, as you prefer"*) — and it covers **the packaging code only** | 1,051 B |
+| `polm/unidic-lite` → `LICENSE.unidic` | 🔴 **BSD, © 2011-2017 The UniDic Consortium** — this is what governs the *data* you actually install | 1,515 B, `sha256₁₂ d2cfdec25d7a` |
+| `taku910/mecab` → `mecab-ipadic/COPYING` | 🔴 **NAIST / ICOT bespoke — not an OSI licence.** Requires the NO WARRANTY section to travel with every copy, modified or not | 3,795 B |
+| `taku910/mecab` → `mecab-jumandic/COPYING` | 🔴 Bespoke, © 2005 **University of Tokyo** — a third owner again | 1,435 B |
+
+🔴 **`LICENSE.unidic` is invisible to this base's own grant authority.** `ingest/p913-grant-authority.sh`
+probes 25 filenames and none of them is a `LICENSE.<asset>` sibling, so the authority reads
+`unidic-lite` as plain MIT and never sees the document that governs the dictionary. That is `T25`'s
+*"the licence trap moved to the data and content assets"* reproduced inside the Japanese substrate,
+and it is registered as `920-G1`.
+
+🟡 **The deliverability consequence, stated plainly.** The JA packaging tier fails `918-R1` even
+though the tokenisers pass: `polm/unidic-lite` is **52 ★ and last pushed 2020-09-01**,
+`polm/unidic-py` is 114 ★ and idle since 2025-02-26, and `polm/ipadic-py` (25 ★) carries **no licence
+file at all**. 🔵 For a closed Japanese build, prefer `nagisa` (self-contained, MIT) or `vibrato`
+(MIT *or* Apache-2.0) over the MeCab + UniDic chain, and if you need MeCab, take the **BSD** arm and
+vendor the dictionary licence alongside it.
+
 ## National-curriculum data as an agent substrate — added `p904`
 
 The substrate a curriculum-aligned product stands on, and the first cluster in this file that a

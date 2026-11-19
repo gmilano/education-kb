@@ -6,7 +6,7 @@ updated: 2026-11-19
 
 # Current trends — education
 
-**Fifty-two trends, re-counted mechanically in `p919`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **52**; `T51`–`T52` added in `p919`, and the command was run after writing them and before writing this number. `T50` was added in `p918` without this banner being re-run, which is the drift this sentence exists to catch — caught one pass later this time.) (*prior banner:* **Forty-nine trends, re-counted mechanically in `p917`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **49**; `T48`–`T49` added in `p917`, and the command was run before the word was written, not after). (*prior banner:* **Forty-seven trends, re-counted mechanically in `p916`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **47**; `T44`–`T47` added in `p916`. 🔵 The rule this line has now carried through four passes finally held: `p916` ran the command rather than editing the word.).) (*prior banner:* **Forty-three trends, re-counted mechanically in `p915`** (🔴 **this line read *"Thirty-nine"* and was four short — `T40`–`T42` were added in `p914` and `T43` in `p915`, and `p914` incremented nothing. That is the *third* consecutive recurrence of the drift this very sentence was written to stop, which makes the rule worth restating as a procedure rather than a warning: 🔵 the count is `grep -cE '^## T[0-9]+' intel/trends.md`, it is **43**, and a pass that adds a trend re-runs that command instead of editing the word.*)* (🔴 this line read *"Thirty-one"* and was **eight short**: `T32`–`T38` were added in `p908`–`p912` and `T39` in `p913`. `compose/patterns.md` carries the rule — *a pass that adds one should re-count, not increment* — and this file drifted the same way and further. 🔵 The count is `grep -cE '^## T[0-9]+' intel/trends.md`; **do not hand-edit it.** `T37` is **materially corrected in `p913`** and `T38` has a second chapter added in `p913`.) (**T30 and T31 added in `p907`** — the LMS-to-agent bridge being built per-institution on the *user's own credentials*, which needs no institutional consent; and the agent-skill marketplaces having no education tier at all, which makes `T26`'s distribution channel measurably empty. Both are the first trends in this file derived from **global code search**, an instrument this base had recorded as unusable; **T29 added in `p906`** — vernacular open education supply measured across eight languages and found to be a single-country phenomenon, with *no licence at all* the default state in the other seven; **T26 added in `p903`** — the unit of publication shifting from the
+**Fifty-four trends, re-counted mechanically in `p920`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **54**; `T53`–`T54` added in `p920`, and the command was run after writing them and before writing this number. 🟢 Two passes running that the rule has held. *(prior banner:* **Fifty-two trends, re-counted mechanically in `p919`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **52**; `T51`–`T52` added in `p919`, and the command was run after writing them and before writing this number. `T50` was added in `p918` without this banner being re-run, which is the drift this sentence exists to catch — caught one pass later this time.)*) (*prior banner:* **Forty-nine trends, re-counted mechanically in `p917`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **49**; `T48`–`T49` added in `p917`, and the command was run before the word was written, not after). (*prior banner:* **Forty-seven trends, re-counted mechanically in `p916`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **47**; `T44`–`T47` added in `p916`. 🔵 The rule this line has now carried through four passes finally held: `p916` ran the command rather than editing the word.).) (*prior banner:* **Forty-three trends, re-counted mechanically in `p915`** (🔴 **this line read *"Thirty-nine"* and was four short — `T40`–`T42` were added in `p914` and `T43` in `p915`, and `p914` incremented nothing. That is the *third* consecutive recurrence of the drift this very sentence was written to stop, which makes the rule worth restating as a procedure rather than a warning: 🔵 the count is `grep -cE '^## T[0-9]+' intel/trends.md`, it is **43**, and a pass that adds a trend re-runs that command instead of editing the word.*)* (🔴 this line read *"Thirty-one"* and was **eight short**: `T32`–`T38` were added in `p908`–`p912` and `T39` in `p913`. `compose/patterns.md` carries the rule — *a pass that adds one should re-count, not increment* — and this file drifted the same way and further. 🔵 The count is `grep -cE '^## T[0-9]+' intel/trends.md`; **do not hand-edit it.** `T37` is **materially corrected in `p913`** and `T38` has a second chapter added in `p913`.) (**T30 and T31 added in `p907`** — the LMS-to-agent bridge being built per-institution on the *user's own credentials*, which needs no institutional consent; and the agent-skill marketplaces having no education tier at all, which makes `T26`'s distribution channel measurably empty. Both are the first trends in this file derived from **global code search**, an instrument this base had recorded as unusable; **T29 added in `p906`** — vernacular open education supply measured across eight languages and found to be a single-country phenomenon, with *no licence at all* the default state in the other seven; **T26 added in `p903`** — the unit of publication shifting from the
 application to the agent-addressable curriculum corpus, the first trend in this file derived from a
 non-English repository channel; **T25 added in `p902`** — the licence trap moving from code to the data
 and content assets, where no index can see it; **T24 added in `p901`** — path-dependent licences, the first trend in this file derived from repositories the SPDX channel refused to resolve at all; **T23 added in `p900`** — the first trend in this file derived from a
@@ -2200,3 +2200,51 @@ classroom, the less likely it carries a grant** — so practitioner-authored sup
 **requirements and vocabulary**, never taken as a dependency. 🔵 And it is often worth asking: a
 teacher who published a working tool and omitted a licence has usually not refused one. The cheapest
 route to an Indonesian or LATAM asset is frequently an issue, not a fork.
+
+## T53 — The licence that decides your build is not at the repository root, and three different shapes put it somewhere else
+
+`T25` recorded the licence trap moving from code to data and content. `p920` measured *where* the
+grant physically sits for the artefacts an APAC engagement actually links against, and the root path
+was wrong in three distinct ways on three different repositories:
+
+| Shape | Instance | What a root-path read returns | What is true |
+|---|---|---|---|
+| **Subtree** | `taku910/mecab` | `NO-LICENCE-FILE-FOUND`; search channel `NULL` | `mecab/COPYING` (240 B): **GPL-2.0 *or* LGPL-2.1 *or* BSD-3-Clause**, all three payloads present |
+| **`LICENSE.<asset>` sibling** | `polm/unidic-lite`, `polm/unidic-py` | `MIT` — the packaging code's grant | `LICENSE.unidic` (1,515 B): **BSD, © 2011-2017 The UniDic Consortium**, governing the dictionary data you install |
+| **Notice instead of body** | `konlpy/konlpy` | search channel `NOASSERTION` | 722 B notice: **GPL-3.0-or-later**; the family is readable from the title line and the *version* only from the prose |
+
+🔵 **The practical rule for a delivery team:** run licence triage **per artefact class** — engine,
+dictionary, corpus, packaging — and never per repository. In the Japanese tier alone a single
+`pip install` chain crosses **four owners**: the tokeniser author, Taku Kudo/NTT for MeCab, the
+UniDic Consortium for the data, and NAIST/ICOT for IPAdic.
+
+🔴 **And the direction of each error matters.** The MeCab misread runs *conservative* — it reports a
+BSD-available engine as ungranted and needlessly kills a closed build. The `unidic-lite` and
+`konlpy` misreads run *permissive* — they report MIT or "unknown" over a BSD data licence and a
+copyleft grant. A base that only guards against permissive error catches two of these three.
+
+## T54 — Where open-source education supply is thinnest, the demand signal is loudest, and the relationship is now measured across six markets
+
+Six vernacular tiers have been measured at the agent layer (`p917`–`p920`). **Not one is
+deliverable**, and the ranking of how far each falls short is the inverse of what market size would
+predict:
+
+| Market | Largest education repository in the tier | Passes `918-R1` |
+|---|---|---|
+| Indonesia | 115 ★ (ungranted) | 0 |
+| Mandarin / Japanese / Korean / Vietnamese | 36 ★, 383 days idle | 0 |
+| Thailand | — no education agent at all | 0 |
+| 🔴 **Mexico** | **2 ★** | **0 of 74** |
+
+🔵 **The signal is in what people build anyway.** Mexico's 74 repositories are *planeación
+didáctica* generators written by practising teachers against the Nueva Escuela Mexicana, several
+pushed within the last month, almost none licensed and none commercialised. Indonesia's are
+`modul ajar` generators against Kurikulum Merdeka. These are not abandoned experiments; they are the
+same need being solved privately, repeatedly, in the absence of anything to adopt.
+
+🔵 **What follows for a studio.** The engagement in these markets is never *"integrate the local
+open-source tutor"* — there isn't one. It is **build the agent, adopt the local curriculum
+vocabulary**, and the vocabulary is already written down for free in the very repositories that fail
+the deliverability test. 🟡 The honest caveat, carried from `T50`: vernacular querying is a recall
+instrument. A tier reading zero means *this base found nothing*, and for Thailand that nil has now
+reproduced twice while Indonesia's collapsed on the first reshaped query.

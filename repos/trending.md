@@ -4,6 +4,78 @@ region: Global
 updated: 2026-11-19
 ---
 
+## `2026-11-19` (p920) — **`919-R1` stops being a refinement and becomes the rule: six vernacular tiers measured, zero deliverable agents, four deliverable substrates. 🔴 And a second rule this base has to adopt about itself — a cell-divergence sweep needs polarity, because `NOT MIT` and `MIT` are the same bag of tokens.**
+
+### 🟢 `920-R1` — the cell-divergence sweep has two arms, and only one of them is a gate
+
+`919-G3` specified a sweep for *"any slug whose licence **cells** differ between tables."* Built as
+`ingest/p920-cell-divergence.py` and run, that specification **fails on its own fixture** (`920-F1`).
+The working instrument carries two arms, and this pass measured both:
+
+| Arm | What it compares | Live-shelf hits | True | Precision | Status |
+|---|---|---|---|---|---|
+| **SET** | the **polarity-tagged** token set — `¬MIT` is not `MIT` | 2 | **2** | **2/2** | 🔴 **a gate.** Red means a cell is wrong |
+| SEQUENCE | the polarity-tagged token **sequence**, with multiplicity and order | 2 | 0 | 0/2 | 🟡 **a measurement, never a failure** |
+
+🔵 **The rule, binding from this pass:** a SET-arm hit is adjudicated against a fresh byte-read and
+fixed; a SEQUENCE-arm hit is recorded and not acted on, because two cells stating the same grant at
+different lengths will always differ in sequence. After this pass's two corrections the **SET arm is
+empty across all 450 address-bearing rows** on the three delivery shelves, and the two fixed
+subjects dropped to the sequence arm — which is exactly the transition that makes the split worth
+publishing rather than an excuse for the false positives.
+
+The instrument has an offline control (`--selftest`) against `verticals/solutions.md` at commit
+`8bc72dd`, the last tree carrying the live PrairieLearn divergence, committed as a fixture at
+`compose/code/p920-cell-divergence/fixtures/`. 🔵 **It exits non-zero if the control does not fire** —
+`919-G9` asked for precisely that and this is the instrument that satisfies it.
+
+### 🟢 `920-R2` — `919-R1` is promoted: a regional tier is TWO verdicts, and the agent layer is empty everywhere measured
+
+`919-R1` proposed the layer-aware split from a single country. Six vernacular tiers have now been
+graded at the agent layer and five at the substrate layer:
+
+| Tier | Agent layer | Substrate layer | Best substrate member |
+|---|---|---|---|
+| Mandarin | 🔴 fails `918-R1` | 🟢 **PASS** | `hankcs/HanLP` — **36,539 ★**, Apache-2.0, 2026-11-07 |
+| Vietnamese | 🔴 fails | 🟢 **PASS** | `undertheseanlp/underthesea` — 1,818 ★, Apache-2.0, **2026-11-19** |
+| Korean | 🔴 fails | 🟢 **PASS** | `bab2min/Kiwi` — 810 ★, Apache-2.0, 2026-11-16 |
+| Japanese | 🔴 fails | 🟢 **PASS** | `daac-tools/vibrato` — 431 ★, MIT *or* Apache-2.0, 2026-10-25 |
+| Thai | 🔴 fails | 🟢 PASS (`p919`) | `PyThaiNLP/pythainlp` — 1,175 ★, Apache-2.0 |
+| Indonesian | 🔴 fails | ⬜ not measured | — |
+| 🔴 **Mexico (Spanish)** | 🔴 **fails — leader is 2 ★** | 🔵 **n/a — the substrate is global** | — |
+
+🔵 **The rule.** *Never report a regional tier as a single verdict.* Grade the agent layer and the
+substrate layer separately, and say which one the engagement advice comes from. 🔴 **And the
+corollary that Mexico adds:** the split is only load-bearing where the **language** needs its own
+substrate. Thai and Japanese have no whitespace word boundaries, so somebody must ship a tokeniser;
+Spanish does not, so a Mexican engagement has no second shelf to fall back on *and needs none*. For
+Spanish and Portuguese, the agent-layer verdict is the whole verdict.
+
+### 🔴 `920-R3` — stop reading a nil on the mandated English legs as a signal
+
+15 named facts from this pass's eight mandated legs were probed against the live base.
+**15 of 15 were already present; zero new.** `919-G7` recorded this for North America; it holds for
+all four regions and for all four global legs (`920-F8`). The legs are mandated and will keep being
+run, but a nil on them is now the **expected** result and is filed as one line. 🔵 The discovery
+budget belongs on non-English supply legs: this pass, those returned **93 repositories, 74 of them
+never seen here before**, against the mandated legs' zero.
+
+### 🟡 `920-R4` — a repository address is not a grant address
+
+Three separate findings this pass turn on the same point, and it is worth stating once as a rule:
+
+- `taku910/mecab` — grant at `mecab/COPYING`, a **subtree**; the root says `NO-LICENCE-FILE-FOUND`.
+- `polm/unidic-lite` — `LICENSE` governs the code, `LICENSE.unidic` governs **the data**, and the
+  second filename is not in this base's grant-authority probe list at all.
+- `konlpy/konlpy` — a 722-byte **notice** rather than a licence body, so the family is readable from
+  the title line and the **version is not**.
+
+🔵 **The rule:** a grant is located per *artefact*, not per repository — and the three shapes that
+defeat a root-path probe are **subtrees**, **`LICENSE.<asset>` siblings**, and **notices that point
+at a licence instead of containing one**. Registered as `920-G1` and `920-G2`.
+
+---
+
 ## `2026-11-19` (p919) — **`918-R1` needed one more axis and Thailand supplied it: a regional tier can fail the deliverability threshold at the agent layer and pass it at the substrate layer, and the engagement advice is opposite in each case. 🔴 Three instrument findings, all pointing the same way — this base's gates are now generating more false work than shelf growth.**
 
 ### 🟢 `919-R1` — the layer-aware refinement of `918-R1`

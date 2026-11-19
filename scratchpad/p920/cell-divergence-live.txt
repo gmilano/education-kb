@@ -1,0 +1,36 @@
+── LIVE SHELF: 450 address-bearing rows with a licence cell; 4 subject(s) whose cells DIVERGE
+
+🔴 PrairieLearn/PrairieLearn   [SEQUENCE]
+   repos/foundations.md:171  set={AGPL-3.0, PROPRIETARY, ¬MIT}
+       seq=¬MIT · AGPL-3.0 · PROPRIETARY · PROPRIETARY · PROPRIETARY · MIT
+       🔴 **NOT MIT — multi-grant, open-core. Corrected p899.** CE is **AGPL-3.0**; `apps/prairielearn/src/ee/` **and `apps/course-agent/`** are **proprietary Enterpris
+   verticals/solutions.md:141  set={AGPL-3.0, PROPRIETARY, ¬MIT}
+       seq=AGPL-3.0 · PROPRIETARY · PROPRIETARY · ¬MIT
+       🔴 **AGPL-3.0 Community Edition + proprietary Enterprise Edition. NOT MIT — corrected p899**
+   verticals/solutions.md:193  set={AGPL-3.0, PROPRIETARY, ¬MIT}
+       seq=AGPL-3.0 · PROPRIETARY · PROPRIETARY · ¬MIT · MIT · AGPL-3.0 · AGPL-3.0 · MIT
+       🔴 **AGPL-3.0 (Community Edition) + proprietary Enterprise Edition. NOT MIT** — cell rewritten `p919` (`LICENSE@master`, 37,237 B, `sha256₁₂ 548cbfae567a`, byte-
+
+🔴 apereo/java-cas-client   [SET]
+   repos/foundations.md:364  set={Apache-2.0, BSD}
+       seq=Apache-2.0 · BSD · Apache-2.0
+       🔴 **CONJUNCTIVE: Apache-2.0 + JA-SIG BSD — CORRECTED `p913`, was `Apache-2.0`** (byte-read `master/LICENSE`, 2,321 B)
+   verticals/solutions.md:221  set={Apache-2.0}
+       seq=Apache-2.0
+       Apache-2.0 (byte-read; API says `NOASSERTION`)
+
+🔴 jitsi/jitsi-meet   [SET]
+   repos/foundations.md:366  set={Apache-2.0, MIT}
+       seq=Apache-2.0 · MIT · Apache-2.0 · Apache-2.0 · MIT
+       🔴 **CONJUNCTIVE: Apache-2.0 + MIT — CORRECTED `p913`, was `Apache-2.0`** (byte-read `master/LICENSE`, 12,596 B, `sha256₁₂ eae52e200cd8`; the payload is ~1.2 kB 
+   verticals/solutions.md:161  set={Apache-2.0}
+       seq=Apache-2.0
+       **Apache-2.0**
+
+🔴 nbgallery/nbgallery   [SEQUENCE]
+   repos/foundations.md:262  set={MIT}
+       seq=MIT · MIT
+       **MIT** (`LICENSE@master`, 1,071 B, `sha256₁₂ 7900749dcb3b`, `MIT License` title line; SPDX agrees)
+   verticals/solutions.md:178  set={MIT}
+       seq=MIT
+       **MIT** (`master/LICENSE`, `1,071 B`, `sha256₁₂ 7900749dcb3b`)

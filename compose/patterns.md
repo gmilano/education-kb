@@ -3313,3 +3313,75 @@ grant in this tier; the search channel reports both of these identically as `NUL
 🟡 **Rough shape.** 8–10 weeks for Thailand (segmentation is proven early and de-risks the rest);
 6–8 weeks for Indonesia, where no segmentation layer is required and the curriculum vocabulary is
 richer. Both assume the client already runs Moodle; add 3–4 weeks if not.
+
+## P42 — Build a Mandarin, Japanese, Korean or Vietnamese tutor where there is no tutor to fork (added `p920`)
+
+**When this applies.** An APAC engagement in a market where the client expects you to start from
+"the local open-source thing". `p918` measured all four agent tiers as `PRESENT — NOT DELIVERABLE`
+(best permissive member 36 ★, 383 days idle) and `p920` measured the substrate layer underneath them
+as fully deliverable. **P40 tells you how to enter such a market; this is what you build once you
+are in it.** The Thai/Indonesian version is **P41**; this is its APAC-language sibling, and the
+difference that matters is the dictionary.
+
+**The licence posture of the result is permissive end to end**, which P41 cannot promise.
+
+### The stack
+
+| Layer | Pick | Licence (byte-read `p920`) | Why this one |
+|---|---|---|---|
+| Language substrate — ZH | [`hankcs/HanLP`](https://github.com/hankcs/HanLP) | Apache-2.0, 11,357 B `sha256₁₂ c71d239df917` | 36,539 ★, pushed 2026-11-07. Segmentation → POS → dependency parse in one stack. Branch is **`doc-zh`** |
+| Language substrate — JA | [`daac-tools/vibrato`](https://github.com/daac-tools/vibrato) or [`taishi-i/nagisa`](https://github.com/taishi-i/nagisa) | MIT *or* Apache-2.0 / MIT | 🔵 **Prefer `nagisa` when you want no dictionary problem at all** — it is self-contained |
+| Language substrate — KO | [`bab2min/Kiwi`](https://github.com/bab2min/Kiwi) | Apache-2.0, 11,372 B | 🔴 **Not KoNLPy** — that is GPL-3.0-or-later by byte-read despite a `NOASSERTION` on the API |
+| Language substrate — VI | [`undertheseanlp/underthesea`](https://github.com/undertheseanlp/underthesea) | Apache-2.0, 10,765 B | The only Vietnamese member pushed within 180 days |
+| Offline / low-bandwidth KO | [`ongjin/garu`](https://github.com/ongjin/garu) | Apache-2.0, 11,358 B | 1 MB model, runs **in the browser over WASM** — put the substrate on the client when connectivity is the constraint |
+| Learner-state model | `CAHLR/OATutor` (BKT) or the `pykt-team/pykt-toolkit` models | MIT | Unchanged from P41; the substrate swap does not touch this layer |
+| LMS seam | **LTI 1.3** into the client's platform, **MCP** for the agent's read/write | — | Keeps your tool a separate work (README fact 1) |
+
+### Wiring
+
+1. **Tokenise before you prompt, not after.** The substrate's job is to turn a free-text student
+   answer into tokens, lemmas and a dependency parse *before* it reaches the model, so that partial
+   credit, misconception tagging and the learner-state update key on linguistic units rather than on
+   whatever the tokenizer inside the LLM happened to do. This is the step that makes a vernacular
+   tutor gradeable.
+2. **Key the learner model on substrate output.** BKT/`pykt` skills bind to lemmas and dependency
+   relations emitted in step 1, not to raw strings — otherwise every inflection is a new skill.
+3. **Keep the LLM for explanation, not for parsing.** The parse is deterministic, auditable and
+   free; the explanation is the part worth a model call. This also makes the audit trail the
+   regulators in `intel/market.md` ask for (Article 50, Korea's AI Basic Act) a byproduct.
+4. **Ship over LTI 1.3 / MCP**, as in P11 and P40.
+
+### 🔴 The dictionary step, and why Japanese costs an extra day
+
+If you choose a MeCab-family tokeniser you are shipping **four owners' licences**, not one:
+
+- **MeCab itself** — `mecab/COPYING` declares **GPL-2.0 *or* LGPL-2.1 *or* BSD-3-Clause**. 🔵 **Take
+  the BSD arm explicitly and record that you did**, in writing, in the build. A root-path licence
+  scan returns `NO-LICENCE-FILE-FOUND` for this repository and a careless reading of the first-named
+  file hands you GPL-2.0 for no reason.
+- **UniDic** — `LICENSE.unidic`, BSD, © 2011-2017 The UniDic Consortium. The `LICENSE` beside it is
+  MIT and covers only the packaging code.
+- **IPAdic** — `mecab-ipadic/COPYING`, a bespoke NAIST/ICOT text that is **not an OSI licence** and
+  requires its NO WARRANTY section to travel with every copy you distribute.
+- **JumanDic** — `mecab-jumandic/COPYING`, © University of Tokyo.
+
+🟡 And the packaging tier is **stale**: `polm/unidic-lite` is 52 ★ last pushed **2020-09-01**,
+`polm/unidic-py` idle since 2025-02-26, `polm/ipadic-py` ungranted. 🔵 **So: `nagisa` or `vibrato`
+when the client wants a closed product and a short licence annex; MeCab + UniDic only when you need
+its specific dictionary behaviour, and then budget the triage.**
+
+### Estimate
+
+**8–10 weeks** to a production pilot on one language: 1 week substrate integration and tokenisation
+contract, 1 week dictionary/licence triage (Japanese only — 0 for ZH/KO/VI), 3 weeks learner model
+and content binding, 2 weeks LTI/MCP seam into the client platform, 2 weeks evaluation against the
+client's own assessment data. 🔵 The substrate is free, permissive and maintained in all four
+languages — **the cost is in the curriculum binding, not the language engineering**, which is the
+opposite of what an APAC proposal usually assumes.
+
+### 🔴 What this pattern does *not* cover
+
+A Spanish- or Portuguese-language engagement. `920-R2`: the layer split is only load-bearing where
+the language needs its own substrate. For Mexico the agent layer is the whole verdict — 74
+repositories, largest 2 ★, nothing to adopt — and the substrate is the global one. Use **P41**'s
+build-the-agent shape with the Nueva Escuela Mexicana vocabulary in place of Kurikulum Merdeka.

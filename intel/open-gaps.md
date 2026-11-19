@@ -4,6 +4,46 @@ region: Global
 updated: 2026-11-19
 ---
 
+## 🆕 `p920` · 2026-11-19 — **Four of `p919`'s gaps discharged, and one of them by refuting the remedy rather than the gap: `919-G3` specified a token-set comparison, it was built, and it cannot see the defect it was specified against. 🔴 The sweep's real yield was two live licence cells wrong for seven passes, both from the mechanism `p899` already demonstrated.**
+
+🔵 **Summary.** 8 mandated WebSearch legs, 4 Spanish-language Mexico supply legs, 4
+language-substrate legs, **21 repositories byte-read** across three evidence records, one new
+instrument with an offline control that exits non-zero when the control does not fire, **two live
+licence cells corrected in the authority**, two trends, one compose pattern. 🔴 15 named facts from
+the mandated legs probed against this base: **15 of 15 already present**.
+
+| Gap | Status | Evidence |
+|---|---|---|
+| **`919-G5`** — the Mandarin, Japanese, Korean and Vietnamese tiers were graded at the agent layer only; their substrate layers are unmeasured | 🟢 **DISCHARGED, and the predicted yield was right** | **All four pass `918-R1` at the substrate layer while all four fail it at the agent layer.** `hankcs/HanLP` **36,539 ★** Apache-2.0 (2026-11-07) — larger than every education agent here except DeepTutor and OpenMAIC, and never seen in 919 passes because every prior Mandarin leg asked for *education*. Plus `underthesea` 1,818 ★, `Kiwi` 810 ★, `vibrato` 431 ★. `920-F4`, `920-R2`, `repos/foundations.md`, **P42**, `T53` · [record](../evidence/apac-substrate-layer.2026-11-19-p920.tsv) |
+| 🔴 **`919-G6`** — Mexico has never been measured | 🟢 **DISCHARGED, and the result is the most extreme tier yet** | 4 Spanish-language legs → **74 repositories, all 74 unseen, largest 2 ★, 4 of 74 licensed, 0 pass `918-R1`.** 8 byte-read: 3 MIT, 1 CC0-1.0, **4 with no licence file**. `920-F7`, `agents/top.md`, `intel/market.md` LATAM, `T54` · [record](../evidence/mx-supply.2026-11-19-p920.tsv) |
+| 🔴 **`919-G3`** — sweep the delivery files for any slug whose licence **cells** differ between tables | 🟡 **DISCHARGED BY BUILDING IT, and the remedy as specified does not work** | A token-SET comparison **fails on its own fixture**: the pre-fix PrairieLearn cells both return `{AGPL-3.0, MIT, PROPRIETARY}`, because one of them reads ***"NOT MIT"*** and a bag of tokens cannot represent negation. Rebuilt with **polarity** (`¬MIT` ≠ `MIT`) and a **sequence** arm. `920-F1`, `920-R1` |
+| 🔴 **`919-G9`** — `gate-shelf-consistency` is blind to the `919-G3` class; the fix must fail on the PrairieLearn fixture before it is trusted | 🟢 **DISCHARGED — and `919-G9`'s diagnosis was one level too shallow** | The gate does not fail merely because both cells share `AGPL-3.0`; **no token-set comparison can represent polarity at all**, so the prescribed correction inherited the same blindness. `ingest/p920-cell-divergence.py --selftest` runs against `verticals/solutions.md` at commit `8bc72dd` and **exits non-zero if the control does not fire**. `920-F1` · [record](../evidence/cell-divergence-sweep.2026-11-19-p920.txt) |
+| **`919-G7`** — the North America regulatory channel is exhausted; stop spending the regional budget there | 🟢 **DISCHARGED, and it generalises to all four regions** | 15 named facts from the 8 mandated legs probed mechanically against the live shelf: **15 of 15 already present, zero new.** The exhaustion is a property of the English-language mandated leg shape, not of North America. `920-F8`, `920-R3` · [probe](../evidence/websearch-exhaustion-probe.2026-11-19-p920.tsv) |
+| **`919-G1`** — no primary legal text | 🔴 **RE-DECLARED UNCHANGED, tenth pass** | Not re-tested this pass: `915-F2` established the failure is **DNS**, and `919-G1`'s own remedy says not to spend another leg on a different HTTP client. Re-declared as `920-G5` |
+
+### Gaps declared in `p920`
+
+| Gap | Remedy | Cost |
+|---|---|---|
+| 🔴 **`920-G1`** — the grant authority cannot see a `LICENSE.<asset>` sibling, and that is where the **data** licence lives. `polm/unidic-lite` reads as plain MIT; `LICENSE.unidic` (1,515 B, BSD, © The UniDic Consortium) governs the dictionary you actually install | Add the `LICENSE.*` glob to `NAMES` in `ingest/p913-grant-authority.sh`, and report **every** match rather than the first. Ready fixtures on two repositories (`polm/unidic-lite`, `polm/unidic-py`); false-positive control is any repo whose only match is plain `LICENSE` | one instrument change, no network |
+| 🔴 **`920-G2`** — a **notice-style** payload yields a family and no version. `konlpy/konlpy` byte-reads as `GPL` where the text says *"version 3 … or any later version"*, and GPL-2.0 and GPL-3.0-or-later are not interchangeable for a client build | Where the title line names a family but the payload is under ~1,500 B, fall through to a **version** regex over the body and emit `GPL-3.0-or-later` / `GPL-2.0-only`. Fixture: `konlpy/konlpy`, 722 B, `sha256₁₂ a66980ac3c64` | one instrument change, no network |
+| **`920-G3`** — the mandated English-language legs are an exhausted channel and are still charged the full pass budget | Keep running them (they are mandated) and file a nil as **one line**, as this pass did. Spend the discovery budget on non-English supply legs — this pass they returned **93 repositories, 74 unseen**, against the mandated legs' zero | a budget rule; negative effort |
+| **`920-G4`** — Indonesia's **substrate** layer is still unmeasured, and it is now the only measured tier with no substrate verdict | Apply `920-R2` to Indonesian: the obvious candidates are the Indonesian NLP stacks (`IndoNLP`, `indobenchmark`), and the precondition that made `PyThaiNLP` load-bearing — no whitespace word boundaries — **does not hold for Indonesian**, so the expected yield is lower than APAC's and the result is informative either way | 1–2 legs |
+| **`920-G5`** — `919-G1` re-declared. **Tenth consecutive pass with no primary legal text.** Every EU AI Act date in `intel/market.md` and `intel/trends.md` is secondary-sourced and marked so | One pass from a session whose network policy resolves `eur-lex.europa.eu`. 🔴 Do **not** spend a leg on another HTTP client — the failure is DNS, confirmed on three hosts | a network-policy change; zero in-session effort |
+| 🔴 **`920-G6`** — **the `p913` correction pass is not known to have been fully propagated.** `p913` byte-read a batch of conjunctive grants and wrote them into `repos/foundations.md`; this pass found **two** of them never reached `verticals/solutions.md`. Nobody has checked whether `p913`'s *other* corrections propagated | Re-read `p913`'s correction list and diff every corrected slug against all five delivery shelves. 🔵 The `920-R1` SET arm now does this continuously, but only for slugs carried in **two** tables — a `p913` correction that landed in one table and was never copied to a shelf that does not carry the row at all is invisible to it | one diff, no network |
+| **`920-G7`** — `919-G2` (re-cut the pinned promotion ledger; 216-address queue), `919-G4` (noncommercial residue scan), `919-G10` (`gate-header-signature` C14b debt), `918-G3` (22 red gates unread) **not reached this pass** | Carried forward unchanged. 🔵 `919-G2` remains the largest single unit of known, costed, network-free work on this base's books | as previously recorded |
+
+### 🟡 One defect of my own, recorded because it is the class this base is worst at catching
+
+The first draft of [`apac-substrate-layer`](../evidence/apac-substrate-layer.2026-11-19-p920.tsv)
+carried `messense/jieba-rs` as `sha256₁₂ 92257c8d7a`. The byte-read says **`92257c8d1c7a`**. It was
+a hand-transcription into an evidence file, and it was found by **diffing the evidence file against
+the instrument's own output**, not by re-reading it — a re-read would have confirmed it, because the
+error looks exactly like a hash. 🔵 The rule this suggests, and which costs nothing: *an evidence
+file that restates an instrument's output should be generated from it or diffed against it, never
+typed from it.*
+
+
 ## 🆕 `p919` · 2026-11-19 — **Four of `p918`'s gaps discharged. 🔴 Two of them discharged by *refuting* the gap: `918-G2` sent this pass to shelve 132 repositories that were already shelved, and `918-G5`'s feared defect does not exist while a sharper one does. `918-G0`'s phantom licence restriction is diagnosed and the diagnosis generalises to 45 addresses. `918-G7` is discharged and Indonesia's nil was the query, not the world.**
 
 ### 🔴 `919-G0` — three consecutive passes have been misdirected by this base's own instruments

@@ -802,6 +802,46 @@ segmenter is not an optimisation, it is a precondition. `PyThaiNLP` is the maint
 published with the verdict — otherwise *"tier empty"* is ambiguous between *nothing here* and
 *nothing to fork, and a maintained stack to build on*. See `repos/trending.md` `919-R1`.
 
+## Mexico — measured for the first time in `p920`, discharging `919-G6`
+
+`919-G6` recorded that **Mexico had never been measured**: two consecutive North America legs
+returned no Mexican source, and this base's "North America" was the United States plus one Canadian
+employment-law reference. Four Spanish-language legs were run in the `917-F1`/`919-F5` shape —
+the **national curriculum programme** and the **teacher-facing artefact**, not topic words:
+`Nueva Escuela Mexicana`, `planeación didáctica`, `CONALEP`, `telesecundaria`
+([record](../evidence/mx-supply.2026-11-19-p920.tsv)).
+
+| Measure | Value |
+|---|---|
+| Distinct repositories returned | **74** |
+| 🟢 Previously unseen by this base | **74 — all of them** |
+| 🔴 **Largest repository in the entire Mexican supply** | **2 ★** |
+| Carrying any licence on the search channel | **4 of 74** |
+| 🔴 Passing `918-R1` (≥ 50 ★ · grant ≠ `NONE` · pushed within 180 days) | **0** |
+
+Eight were byte-read for their grant: `arenasarmando1510-creator/LUMO_Engine` (MIT, 1,082 B),
+`Eltruko/planeatron` (MIT, 1,078 B), `azcayel-glitch/Simulador-docentes-IA-NEM` (MIT, 1,071 B) and
+`Staryuc2209/Propuestas-Formativas` (**CC0-1.0**, 7,048 B — a *content* dedication on pedagogical
+material, which is the honest licence for what it is); the other four —
+`serviciosinformaticos132-dot/planeanem-ia`, `lalotg/nemapp`, `ybridondanger/aulyx.mx`,
+`adrianavilananez-code/gestor-docente` — carry **no licence file on any probed path**.
+
+🔴 **Mexico is the fifth consecutive vernacular tier to come back `PRESENT — NOT DELIVERABLE`, and
+it is the most extreme one measured.** Indonesia's leader was 115 ★ (`919-F5`); the Mandarin,
+Japanese, Korean and Vietnamese tiers topped out at 36 ★ (`918-F2`); **Mexico's is 2 ★.** The demand
+signal is unmistakable and entirely uncommercialised: these are working teachers publishing
+*planeación didáctica* generators aligned to the Nueva Escuela Mexicana for their own classrooms,
+several of them pushed within the last month.
+
+🔵 **What this means for a Mexican engagement, and how it differs from Thailand.** `919-R1` says to
+grade the agent layer and the substrate layer separately. For Thai and Japanese that split is
+load-bearing because the language itself needs a tokeniser nobody else ships. **Spanish does not**:
+the substrate layer for a Mexican engagement is the global one this base already holds, so unlike
+Thailand there is no second shelf to fall back to and no second shelf that is needed. **Build the
+agent; adopt the Nueva Escuela Mexicana vocabulary** — the *campos formativos* and *ejes
+articuladores* that every one of these 74 repositories encodes by hand, and which is the part a
+foreign-built tutor gets wrong.
+
 ## What we searched for and did not find
 
 Recording gaps because an unrecorded gap looks exactly like coverage.

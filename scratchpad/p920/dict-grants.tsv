@@ -1,0 +1,4 @@
+repo	branch	path	http	bytes	sha256_12	families	verdict	note
+polm/unidic-lite	master	LICENSE	200	1051	34565936df8f	MIT	BODY-MIT	graded from the body, not a licence title — weaker evidence than a title verdict
+polm/unidic-py	master	LICENSE	200	1076	8736ad0d4636	MIT	MIT	
+polm/ipadic-py	-	-	404	0	-	none	NO-LICENCE-FILE-FOUND	searched 25 names over 3 branches

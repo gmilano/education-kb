@@ -1,0 +1,14 @@
+repo	branch	path	http	bytes	sha256_12	families	verdict	note
+hankcs/HanLP	doc-zh	LICENSE	200	11357	c71d239df917	Apache-2.0	Apache-2.0	
+bab2min/Kiwi	main	LICENSE	200	11372	4070ef926941	Apache-2.0	Apache-2.0	
+undertheseanlp/underthesea	main	LICENSE	200	10765	05e32ccfed98	Apache-2.0	Apache-2.0	
+messense/jieba-rs	main	LICENSE	200	1101	92257c8d1c7a	MIT	MIT	
+daac-tools/vibrato	main	LICENSE-MIT	200	1076	d0104f0f2368	MIT+Apache-2.0	DUAL-MIT-OR-Apache-2.0	both LICENSE-MIT and LICENSE-APACHE are present and readable — the licensee ELECTS one; this is a disjunctive offer, not a conjunctive obligation
+taishi-i/nagisa	master	LICENSE.txt	200	1065	fa2fb3121bd2	MIT	MIT	
+ku-nlp/jumanpp	master	LICENSE	200	11357	c71d239df917	Apache-2.0	Apache-2.0	
+himkt/konoha	main	LICENSE	200	1067	9e818940bbfa	MIT	MIT	
+ongjin/garu	main	LICENSE	200	11358	cfc7749b96f6	Apache-2.0	Apache-2.0	
+fxsjy/jieba	master	LICENSE	200	1075	18ba0984839f	MIT	MIT	
+konlpy/konlpy	master	LICENSE	200	722	a66980ac3c64	GPL	GPL	
+taku910/mecab	-	-	404	0	-	none	NO-LICENCE-FILE-FOUND	searched 25 names over 3 branches
+lancopku/pkuseg-python	master	LICENSE	200	1076	1addb8263682	MIT	MIT	
