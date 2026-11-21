@@ -1,12 +1,12 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-19
+updated: 2026-11-21
 ---
 
 # Current trends — education
 
-**Sixty-seven trends, re-counted mechanically in `p927`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **67**; `T63`–`T67` added in `p927`, command run after writing them and before writing this number — 🟢 **three passes running that the rule has held**). 🔵 The count is `grep -cE '^## T[0-9]+' intel/trends.md`; **do not hand-edit it.** *(prior banner:* **Sixty-two trends, re-counted mechanically in `p926`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **62**; `T61`–`T62` added in `p926`, command run after writing them and before writing this number — 🟢 **two passes running that the rule has held, and the first time this banner has been correct on arrival rather than corrected on the next pass**). 🔵 The count is `grep -cE '^## T[0-9]+' intel/trends.md`; **do not hand-edit it.** *(prior banner:* **Sixty trends, re-counted mechanically in `p925`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **60**; `T59`–`T60` added in `p925`, command run after writing them and before writing this number). *)* 🔴 **This line read *"Fifty-six"* and was four short — `T57`–`T58` were added in `p922` and neither that pass nor the two after it re-ran the command, which is the fifth recurrence of the drift this sentence exists to stop.** 🔵 The count is `grep -cE '^## T[0-9]+' intel/trends.md`; **do not hand-edit it.** *(prior banner:* **Fifty-six trends, re-counted mechanically in `p921`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **56**; `T55`–`T56` added in `p921`, command run after writing them and before writing this number — 🟢 three passes running that the rule has held. *(prior banner:* **Fifty-four trends, re-counted mechanically in `p920`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **54**; `T53`–`T54` added in `p920`, and the command was run after writing them and before writing this number. 🟢 Two passes running that the rule has held.*)* *(prior banner:* **Fifty-two trends, re-counted mechanically in `p919`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **52**; `T51`–`T52` added in `p919`, and the command was run after writing them and before writing this number. `T50` was added in `p918` without this banner being re-run, which is the drift this sentence exists to catch — caught one pass later this time.)*) (*prior banner:* **Forty-nine trends, re-counted mechanically in `p917`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **49**; `T48`–`T49` added in `p917`, and the command was run before the word was written, not after). (*prior banner:* **Forty-seven trends, re-counted mechanically in `p916`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **47**; `T44`–`T47` added in `p916`. 🔵 The rule this line has now carried through four passes finally held: `p916` ran the command rather than editing the word.).) (*prior banner:* **Forty-three trends, re-counted mechanically in `p915`** (🔴 **this line read *"Thirty-nine"* and was four short — `T40`–`T42` were added in `p914` and `T43` in `p915`, and `p914` incremented nothing. That is the *third* consecutive recurrence of the drift this very sentence was written to stop, which makes the rule worth restating as a procedure rather than a warning: 🔵 the count is `grep -cE '^## T[0-9]+' intel/trends.md`, it is **43**, and a pass that adds a trend re-runs that command instead of editing the word.*)* (🔴 this line read *"Thirty-one"* and was **eight short**: `T32`–`T38` were added in `p908`–`p912` and `T39` in `p913`. `compose/patterns.md` carries the rule — *a pass that adds one should re-count, not increment* — and this file drifted the same way and further. 🔵 The count is `grep -cE '^## T[0-9]+' intel/trends.md`; **do not hand-edit it.** `T37` is **materially corrected in `p913`** and `T38` has a second chapter added in `p913`.) (**T30 and T31 added in `p907`** — the LMS-to-agent bridge being built per-institution on the *user's own credentials*, which needs no institutional consent; and the agent-skill marketplaces having no education tier at all, which makes `T26`'s distribution channel measurably empty. Both are the first trends in this file derived from **global code search**, an instrument this base had recorded as unusable; **T29 added in `p906`** — vernacular open education supply measured across eight languages and found to be a single-country phenomenon, with *no licence at all* the default state in the other seven; **T26 added in `p903`** — the unit of publication shifting from the
+**Seventy-six trends, re-counted mechanically in `p937`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **76**; `T75`–`T76` added in `p937`, command run after writing them and before writing this number). 🔴 **This line read *"Sixty-seven"* and was SEVEN short on arrival: `T68`–`T74` were added across `p928`–`p930` and not one of those passes re-ran the command — the longest drift this banner has recorded, and the sixth recurrence. 🔵 `p930` in particular added `T73`–`T74` in the same pass that published a licence census computed over prose cells; both errors have the same cause, which is a number written by hand where a command was available.** 🔵 The count is `grep -cE '^## T[0-9]+' intel/trends.md`; **do not hand-edit it.** *(prior banner:* **Sixty-seven trends, re-counted mechanically in `p927`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **67**; `T63`–`T67` added in `p927`, command run after writing them and before writing this number — 🟢 **three passes running that the rule has held**). 🔵 The count is `grep -cE '^## T[0-9]+' intel/trends.md`; **do not hand-edit it.** *(prior banner:* **Sixty-two trends, re-counted mechanically in `p926`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **62**; `T61`–`T62` added in `p926`, command run after writing them and before writing this number — 🟢 **two passes running that the rule has held, and the first time this banner has been correct on arrival rather than corrected on the next pass**). 🔵 The count is `grep -cE '^## T[0-9]+' intel/trends.md`; **do not hand-edit it.** *(prior banner:* **Sixty trends, re-counted mechanically in `p925`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **60**; `T59`–`T60` added in `p925`, command run after writing them and before writing this number). *)* 🔴 **This line read *"Fifty-six"* and was four short — `T57`–`T58` were added in `p922` and neither that pass nor the two after it re-ran the command, which is the fifth recurrence of the drift this sentence exists to stop.** 🔵 The count is `grep -cE '^## T[0-9]+' intel/trends.md`; **do not hand-edit it.** *(prior banner:* **Fifty-six trends, re-counted mechanically in `p921`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **56**; `T55`–`T56` added in `p921`, command run after writing them and before writing this number — 🟢 three passes running that the rule has held. *(prior banner:* **Fifty-four trends, re-counted mechanically in `p920`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **54**; `T53`–`T54` added in `p920`, and the command was run after writing them and before writing this number. 🟢 Two passes running that the rule has held.*)* *(prior banner:* **Fifty-two trends, re-counted mechanically in `p919`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **52**; `T51`–`T52` added in `p919`, and the command was run after writing them and before writing this number. `T50` was added in `p918` without this banner being re-run, which is the drift this sentence exists to catch — caught one pass later this time.)*) (*prior banner:* **Forty-nine trends, re-counted mechanically in `p917`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **49**; `T48`–`T49` added in `p917`, and the command was run before the word was written, not after). (*prior banner:* **Forty-seven trends, re-counted mechanically in `p916`** (`grep -cE '^## T[0-9]+' intel/trends.md` → **47**; `T44`–`T47` added in `p916`. 🔵 The rule this line has now carried through four passes finally held: `p916` ran the command rather than editing the word.).) (*prior banner:* **Forty-three trends, re-counted mechanically in `p915`** (🔴 **this line read *"Thirty-nine"* and was four short — `T40`–`T42` were added in `p914` and `T43` in `p915`, and `p914` incremented nothing. That is the *third* consecutive recurrence of the drift this very sentence was written to stop, which makes the rule worth restating as a procedure rather than a warning: 🔵 the count is `grep -cE '^## T[0-9]+' intel/trends.md`, it is **43**, and a pass that adds a trend re-runs that command instead of editing the word.*)* (🔴 this line read *"Thirty-one"* and was **eight short**: `T32`–`T38` were added in `p908`–`p912` and `T39` in `p913`. `compose/patterns.md` carries the rule — *a pass that adds one should re-count, not increment* — and this file drifted the same way and further. 🔵 The count is `grep -cE '^## T[0-9]+' intel/trends.md`; **do not hand-edit it.** `T37` is **materially corrected in `p913`** and `T38` has a second chapter added in `p913`.) (**T30 and T31 added in `p907`** — the LMS-to-agent bridge being built per-institution on the *user's own credentials*, which needs no institutional consent; and the agent-skill marketplaces having no education tier at all, which makes `T26`'s distribution channel measurably empty. Both are the first trends in this file derived from **global code search**, an instrument this base had recorded as unusable; **T29 added in `p906`** — vernacular open education supply measured across eight languages and found to be a single-country phenomenon, with *no licence at all* the default state in the other seven; **T26 added in `p903`** — the unit of publication shifting from the
 application to the agent-addressable curriculum corpus, the first trend in this file derived from a
 non-English repository channel; **T25 added in `p902`** — the licence trap moving from code to the data
 and content assets, where no index can see it; **T24 added in `p901`** — path-dependent licences, the first trend in this file derived from repositories the SPDX channel refused to resolve at all; **T23 added in `p900`** — the first trend in this file derived from a
@@ -2969,3 +2969,68 @@ per-repository and real. 🔴 **One instrument caveat that must travel with this
 `repo:` qualifiers (20 per call, which is how 594 addresses were covered in 30 calls) converts a
 loud per-row `422` into a **silent omission**. Absence under batching means *unresolved*; re-query
 individually before calling anything unindexed.
+
+## T75 — The narrowed-permissive grant: a licence that **opens** with the MIT sentence and restricts it three paragraphs later. It fails *silently and permissively*, which is the opposite of `T73` and the direction that reaches a client (measured `p937`)
+
+`T73` recorded a classifier failing toward **false divergence** — matching licence *names* inside
+licence *text*, so an LGPL-3.0 body that names the *"GNU Affero General Public License"* in its
+§13 heading gets read as AGPL. 🔴 **`p937` measured the inverse, and it is worse.**
+
+`CaviraOSS/PageLM` (**2,070 ★**) serves a `LICENSE.md` that begins with the MIT grant sentence
+verbatim — *"Permission is hereby granted, free of charge, to any person obtaining a copy of this
+software and associated documentation files (the "Software"), to use, copy, modify, and run the
+Software"* — and then closes that sentence with **"for personal, educational, or non-commercial
+research purposes"**, followed by a `Commercial Use` definition covering *"any business,
+revenue-generating activity, or commercial purpose"*. **It is titled the "PageLM Community
+License".** A detector keying on the opening sentence returns `MIT`.
+
+🔵 **Why this is the dangerous shape.** The other four ways a `200` response fails to be a grant —
+an unfilled `usethis` template (`LJKelly3141/coursepack`), a pointer to another filename
+(`flammie/omorfi`), a pointer to a licence *name* (`frappe/education`), a title with no body
+(`yonasab12/amharicNLP`) — **all fail loudly**. The classifier gets nothing and escalates. A
+narrowed MIT returns a confident, permissive, wrong answer, and nothing downstream questions it.
+
+🔴 **The measurement.** `p937` byte-read 61 grants with a fresh classifier and compared each to this
+base's published cell. It diverged on four, and **in two of those the automated read turned a
+non-commercial licence into a permissive one** (`PageLM` → `MIT`; `xiaoyang111222/cn-math-taxonomy`,
+CC BY-NC 4.0, → `CC0-1.0` off one incidental `CC0` mention against six of `NonCommercial`). The
+curated prose was right both times. 🟢 **So the rule is not "byte-read the grant" — this base has
+done that for 100+ passes and it is necessary. The rule is: after reading it, look for a narrowing
+clause before accepting a permissive title**, because the title, the opening sentence and the SPDX
+field can all three agree and all three be wrong.
+
+🟡 **Scope.** Both instances are **content-heavy education repos** — a study-material generator and
+a curriculum taxonomy — which is `T25` and `T32` arriving through the licence *text* rather than
+through an asset-class split. The shape should be expected wherever the repository's value is the
+corpus rather than the code.
+
+## T76 — Governance has overtaken capability as the binding constraint on education AI, and the EU's own high-risk deadline is in dispute (`p937`)
+
+🔵 Across the 2026 trend channel the framing has moved from *does it work* to *can we defend it*.
+1EdTech describes the year as a shift **"from experimentation to governance"**; HolonIQ puts ethics,
+transparency and *proven instructional benefit* at the centre; and the OECD's 2026 Digital Education
+Outlook is cited as recommending a move **beyond general-purpose assistants toward purpose-built
+educational AI** with durable learning gains. The gating question in a 2026 engagement is
+procurement-and-policy, not model quality.
+
+🔴 **And the supply of policy lags the demand for it.** In North America **35+ states** had
+education-department AI guidance by mid-2026 and **134 bills across 31 states** were introduced in
+the 2026 session, with the trackers reading the posture as *measured* — research, transparency and
+guardrails rather than adoption mandates. Several states (Maryland, Idaho, Oklahoma, Virginia) now
+require **district-level** policy, and North Carolina's Session Law 2026-41 sets a dated cascade
+(state model policy by 2026-12-31, local policies by 2027-06-30, teacher PD by 2028-06-30). Against
+that, a survey figure in the same channel puts faculty reporting **a formal institutional AI
+policy at only about a quarter**. 🔵 **The deliverable a 2026 education client most reliably lacks
+is not a model: it is the policy, audit trail and disclosure surface around one** — which is
+buildable, and which `compose/patterns.md` P59 now addresses.
+
+🔴 **EMEA carries a live date conflict that any engagement must resolve before it scopes.** The EU
+AI Act puts education AI used for **admissions, assessment and exam scoring in Annex III
+high-risk**. The channel reports **two different commencement dates** for those obligations —
+**August 2026**, and **2027-12-02** for standalone Annex III systems following a **2026 "AI
+Omnibus"** amendment. 🟡 **This base cannot adjudicate it: `eur-lex.europa.eu` does not resolve from
+this environment** (`937-F7`), so the Official Journal text cannot be byte-read, and both dates are
+recorded as snippet-sourced and unverified. **Treat the earlier date as the planning assumption and
+confirm against the OJ before committing a compliance timeline.** By contrast **Article 4's
+AI-literacy duty is not in dispute and has applied since February 2025** — it binds the
+*institution*, which makes it the one obligation a vendor can help discharge immediately.

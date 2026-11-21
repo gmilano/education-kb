@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-19
+updated: 2026-11-21
 ---
 
 # Top AI agents — education
@@ -917,7 +917,7 @@ tier to answer that way.
 
 | Agent | Repo | Licence | ★ | Last push | What it does | Origin |
 |---|---|---|---|---|---|---|
-| GURU / Arjuna Quiz Engine | https://github.com/anandpatikat/guru-latihan-dinamis | 🔴 **none — no licence file on any probed path, on either branch** | 115 | 2026-11-19 | Generates printable curriculum-aligned assessments for Indonesian teachers. The most-starred Indonesian education agent this base has found — **and it is ungranted, so it cannot be built on** | Indonesia (LATAM-style community publishing; roadmap through 2026–27 is the author's target, not delivered scope) |
+| GURU / Arjuna Quiz Engine | https://github.com/anandpatikat/guru-latihan-dinamis | 🟢 **MIT — at the README layer. CORRECTED `p937`, was recorded as "none".** No licence file (re-probed `p937`: 6 names on `HEAD`, all `404` — that part of the earlier reading is confirmed), **but `README.md:166–171` states: *"This project is released under the MIT License. You are free to use, modify, and distribute it for any purpose—commercial or non-commercial—provided the original copyright notice is included."*** This base established the README as a valid grant layer in `p917` (`h5p-editor-php-library`, `moodle-mod_readaloud`); the rule simply was not applied here. 🔵 Weaker than a reproduced licence text (`905-G1`), but an explicit maintainer grant that names commercial use | 115 | 2026-11-19 | Generates printable curriculum-aligned assessments for Indonesian teachers. The most-starred Indonesian education agent this base has found — **and it is usable after all** | Indonesia (community publishing; roadmap through 2026–27 is the author's target, not delivered scope) |
 | Kurikulum-AI | https://github.com/JMLcommunity/Kurikulum-AI | 🟢 MIT (1,081 B, `sha256₁₂ 879619fd1e3d`, byte-read `p919`) | 46 | 🔴 **2020-06-14** | An AI curriculum in Bahasa Indonesia — teaching *material*, not an agent. Idle 6.4 years | Indonesia |
 | modul-ajar-generator | https://github.com/NgodingCik/modul-ajar-generator | 🔴 **CC BY-NC 4.0** (17,688 B, `sha256₁₂ 2b275bb77aa6`, byte-read `p919`) — **noncommercial, and a *content* licence applied to a web application** | 2 | 2026-05-17 | Lesson-module (RPP) generator for PAUD/TK teachers. 🔵 This is what a **true** noncommercial positive looks like — the term is in the licence's name; see `919-F3` | Indonesia |
 | kurikulum-merdeka-asesmen-skills | https://github.com/y4zh/kurikulum-merdeka-asesmen-skills | 🟢 MIT (1,065 B, `sha256₁₂ 1e41d9c6af01`, byte-read `p919`) | 0 | 2026-11-17 | Agent **skills** for lesson modules, assessment writing and exam conversion, split by school level. 🔵 The best permissive grant in the Indonesian tier, and the one asset here worth reading — it is already packaged in the shape this file names in *"the tutor as an agent skill"* | Indonesia |

@@ -1,7 +1,118 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-19
+updated: 2026-11-21
+---
+
+## `2026-11-21` (p937) — **`930-R*` sent this pass to clear a 61-row licence backlog. The backlog does not exist. The audit that found it reproduces 100% against the `p928` shelf and 41% against the shelf it was published about — and the published cells it called unresolved were already byte-read, and were right.**
+
+🔵 **Summary.** `p930` closed by naming the work for this pass: *"**10.4% of the shelf is `NOASSERTION` or ungranted**, which is the fraction a client's legal review will stop on. Those 61 rows are the backlog worth clearing — not another topic vocabulary."* `p937` went to clear them. **There was nothing to clear.** The 61 rows were an artefact of two compounding measurement errors, both now reproduced and fixed. What this pass delivers instead is the diagnosis, an independent byte-read of all 61 rows that confirms the published shelf, two real licence corrections found along the way, and a structured ledger so the error cannot recur.
+
+### 🔴 `937-F1` The `p930` shelf-depth audit is line-desynced from the shelf it describes — and it was already wrong when it was committed
+
+`evidence/shelf-depth-audit.2026-11-19-p930.tsv` pairs a repo to a `file` + `line`. Re-resolving every one of its **669** rows against the file at that line:
+
+| Shelf state | Commit | Audit rows whose line still holds the named repo | Share |
+|---|---|---|---|
+| **`p928`** | `2e5e023` | **669 / 669** | 🟢 **100.0%** |
+| `p928` checkpoint | `26d922d` | 397 / 669 | 59.3% |
+| `p929` | `2d377ec` | 406 / 669 | 60.7% |
+| **`p930` — the audit's own commit** | `133f98d` | **291 / 669** | 🔴 **43.5%** |
+| `HEAD` after the `p929`/`p930` merge | `dc977ef` | 277 / 669 | 🔴 41.4% |
+
+🔵 **The provenance is exact: the audit was run against `p928`.** `p929` — a concurrent discovery pass — was adding rows to the same three shelves at the same time, and `p930` published its results as a description of the *current* shelf. **It was 56.5% mispaired on the day it was committed**; the merge added only ~2 points more. Of `HEAD`'s 669 audit rows, **167 now name a line holding a different repository** and **225 a line holding prose, a heading or whitespace**.
+
+🟡 **What survives, and it is most of it.** The audit's *per-repo* measurements — stars, pushed dates, archived flags, the SPDX field — were really fetched and are good data; only the pairing to a published row is stale. `930-F*`'s headline counts (**2 archived**, **53 repos unpushed in twelve months**) are therefore still broadly sound, because they are counts over repos, not over rows. 🔴 **What does not survive is anything the audit computed by reading a published cell** — which is exactly the licence census and the backlog.
+
+🔵 **`937-R1` — the rule, and it is cheap: an audit keyed on a line number is void the moment any pass inserts a row above it. Key on the slug.** A slug-keyed re-derivation of the same three shelves (`ingest/p937-ledger.py`) is merge-proof and was re-run three times during this pass across edits with identical results. Where a line number is genuinely wanted, the audit must name the commit it was computed against, as the table above does.
+
+### 🔴 `937-F2` The 61-row backlog is an artefact. Slug-keyed, the shelf has **zero** blank licence cells
+
+`p930`'s census reported **46 `NOASSERTION` + 15 ungranted = 61** rows. That census read **the GitHub API's SPDX field**, not this base's own published licence cell, and then reported it as this base's composition. The two are not the same quantity — and the gap between them *is the entire value this KB adds*, because almost every one of those 61 rows had already been byte-read by `p891`–`p922` and carries a resolved grant in prose.
+
+Re-derived by slug across `agents/top.md`, `repos/foundations.md` and `verticals/solutions.md` — **695 licence-bearing rows over 612 unique repositories**:
+
+| | Rows |
+|---|---|
+| Licence-bearing rows found | **695** |
+| 🟢 Carrying a non-empty licence cell | **695** |
+| 🔴 Blank, or a bare `NOASSERTION` / `NONE` token | **0** |
+
+The single cell reading `🔴 none` (`bolgerru/blackboard-mcp`, `verticals/solutions.md`) is a **correct and deliberate verdict**, independently confirmed by byte-read this pass, not a gap.
+
+🔵 **So `930-R*`'s instruction was sound in form and void in substance.** There was no legal-review exposure to clear. The honest number for *"what a client's legal review will stop on"* is not 10.4%; it is the **11 repositories with no grant and 4 under a non-commercial or source-available licence** that this base already labels as such, in red, with the probe ladder recorded next to each.
+
+### 🟢 `937-F3` All 61 rows byte-read independently. The published shelf was right — and in 4 cases more right than a fresh naive read
+
+Every one of the 61 was re-read this pass from `raw.githubusercontent.com` with a 15-name ladder, the grant text classified, and the result compared to the published cell. Evidence: `evidence/grant-byte-read.2026-11-21-p937.tsv`.
+
+| Class | Repos |
+|---|---|
+| Permissive (MIT · Apache-2.0 · BSD-3 · ISC · ECL-2.0 · CC0) | **25** |
+| Strong copyleft (AGPL-3.0 · GPL-3.0 · GPL-2.0) | **12** |
+| 🔴 No grant | **11** |
+| 🔴 Non-commercial / source-available | **4** |
+| Content licence on a code artefact (CC BY · CC BY-SA) | **4** |
+| Weak copyleft (LGPL-3.0) | **2** |
+| Dual, path-dependent (code vs data) | **2** |
+| Apache-2.0 + additional commercial terms | **1** |
+
+🔴 **Four of the divergences were this pass's error, not the shelf's, and each is a named false-positive class worth carrying forward:**
+
+| Repo | `p937` naive read | Correct — as already published | The trap |
+|---|---|---|---|
+| `CaviraOSS/PageLM` | `MIT` | **"PageLM Community License", non-commercial** | 🔴 **The file opens with the verbatim MIT grant sentence** — *"Permission is hereby granted, free of charge…"* — and then narrows it to *"personal, educational, or non-commercial research purposes"*. **The MIT opening sentence is not the MIT licence.** |
+| `xiaoyang111222/cn-math-taxonomy` | `CC0-1.0` | **CC BY-NC 4.0** | One incidental `CC0` mention against 3 × `Attribution-NonCommercial` and 6 × `NonCommercial`; a first-match classifier picks the wrong one |
+| `LJKelly3141/coursepack` | `none` | **MIT** (in `LICENSE.md`) | 🔴 A probe that **breaks on the first HTTP 200** stops at the 41-byte `usethis` stub at `LICENSE` and never reaches `LICENSE.md` |
+| `odoo/odoo` | `AGPL-3.0 + LGPL-3.0` | **LGPL-3.0** | 🔴 **The LGPL-3.0 text contains the phrase "GNU Affero General Public License"** in its §13 heading. Any detector keying on that phrase mislabels every LGPL repo as AGPL |
+
+🔵 **This is the inverse of the star-count lesson from the technology KB — and the more useful direction.** There, published figures were understated and needed re-measuring. Here, a fresh automated read was *less* accurate than the curated prose it was checking, in 4 of 61 cases, and in two of those it would have turned a **non-commercial** licence into a permissive one. **A re-measure is not automatically the better number. Byte-reading is necessary and not sufficient; the classifier is the weak link.**
+
+### 🔴 `937-F4` Two real corrections, both found while checking something else
+
+**1. `anandpatikat/guru-latihan-dinamis` — recorded as ungranted, is MIT.** The cell read *"🔴 none — no licence file on any probed path, on either branch"*, and that much is confirmed: re-probed on `HEAD`, six filenames, all `404`. But `README.md:166–171` states *"This project is released under the **MIT License**. You are free to use, modify, and distribute it for any purpose—commercial or non-commercial—provided the original copyright notice is included."* 🔵 This base **established the README as a valid grant layer in `p917`** for `h5p-editor-php-library` and `moodle-mod_readaloud`; the rule simply was not applied here. At **115 ★ this is the most-starred Indonesian education agent the base holds**, and it moves from *"cannot be built on"* to usable. Cell corrected.
+
+**2. `opendatalab/MinerU` — published as `Apache-2.0`, is Apache-2.0 plus additional terms.** `HEAD/LICENSE.md` (3,301 B, bilingual) reads *"licensed under Apache License 2.0 **and is subject to the additional terms below**"*. §1 requires a separate commercial licence above **100M MAU** or **USD 20M monthly revenue** — thresholds that will not bite an engagement. 🔴 **§2 will: any online service built on MinerU must "clearly and prominently" disclose that MinerU is used**, in the product interface or public documentation. 🔴 §3 terminates the grant **automatically and without notice** on breach of either. MinerU is the default tool for turning textbooks into a curriculum corpus, so this lands directly on the pattern this KB recommends most. Cell corrected.
+
+### 🟢 `937-F5` Instrument: `HEAD` resolves the default branch on `raw.githubusercontent.com`, which removes the branch ladder entirely
+
+This base has been paying for a *"16 names × 3 branches"* ladder — up to **48 requests per repository** — to find a licence file without knowing the default branch. **`https://raw.githubusercontent.com/{slug}/HEAD/{path}` resolves the default branch directly**, whatever it is called. Verified on repos defaulting to `main`, `master` and `develop`, and on `turnkeylinux-apps/canvas`, whose only readme is `README.rst`. **The ladder collapses from 48 requests to 16 — a 3× cut on the most-run probe in this base.** 🟡 One caveat, measured: `HEAD` tells you nothing about *non-default* branches, so the `n8n`-class finding from the technology KB — *non-master branches unlicensed* — still needs an explicit branch read when it matters.
+
+### 🔴 `937-F6` A census computed over these licence cells is unreliable in **both** directions. Stop publishing one; a structured ledger ships instead
+
+Having shown `p930`'s census was wrong, this pass tried to replace it and **failed in the same way from the opposite side**. A regex census over the published cells, validated against 14 rows byte-read by hand, scored **10 / 14**:
+
+| Repo | Census said | Actually | Why |
+|---|---|---|---|
+| `LJKelly3141/coursepack` | `no grant` | **MIT** | the cell *explains* that the root `LICENSE` is *"a 41-byte stub containing **no grant**"* |
+| `OS4ED/openSIS-Classic` | `no grant` | **GPL-2.0** | the cell *explains* that *"GitHub's SPDX still reports `NONE`"* and that the base *"previously recorded it as **none declared**"* |
+| `bolgerru/blackboard-mcp` | unclassified | **no grant** | cell is the bare string `🔴 none` |
+| `jeremy-xuan/SocraticNovel` | absent | **CC BY-NC-SA 4.0** | its row's grant sits under a column header the parser did not key on |
+
+🔵 **The mechanism, and it is structural rather than a bug to fix: these cells are argumentative prose. They state the right answer *and discuss the wrong ones* — the SPDX false negative, the stub, what a previous pass got wrong — because that is what makes them useful to a human.** A classifier cannot tell a verdict from the caveat beside it, so it mis-scores in both directions. **`p930`'s 70.2% and this pass's attempted replacement are both unsound, and no percentage derived this way belongs in this base.**
+
+🟢 **`937-R2` — the remedy, shipped rather than recommended.** `evidence/licence-ledger-structured.2026-11-21-p937.tsv` carries one row per repository with an explicit `spdx` token, a `confidence` field, and the `method` that produced it: **55 rows `byte-read-p937`** (authoritative, from this pass's own grant reads) and **557 `prose-only`** (not re-read; the cell is prose and is *not* claimed as a token). **Coverage is 9.0% and stated as such.** A future pass extends the verified rows and can then compute a census that means something. 🔵 The point is not the 9%: it is that the file cannot produce a confident wrong number, because an unverified row has no token in it at all.
+
+### 🟡 `937-F7` The prose legs: the 49th consecutive nil. The demand-side gap re-measured on a second session and still closed
+
+All four mandated prose legs and all four regional legs ran. **Zero unheld repositories — the 49th consecutive nil.** Eleven candidates were returned and checked against the shelf; **every one was already held**: `HKUDS/DeepTutor`, `THU-MAIC/OpenMAIC`, `patchy631/ai-engineering-hub`, `withmarbleapp/os-taxonomy`, `frappe/education`, `GegoK12`, `RosarioSIS`, `Gibbon`, `openSIS`, plus the `ai-radar` / `agents-radar` digest repos.
+
+🔵 **`930-R3`'s network finding independently reproduced on a different session, which upgrades it from a session quirk to a property of this environment.** `p930` recorded thirteen demand-side hosts failing DNS. Re-probed here:
+
+| Resolves | Does not resolve |
+|---|---|
+| 🟢 `api.github.com` (200), `raw.githubusercontent.com` (301) | 🔴 `eur-lex.europa.eu`, `oecd.org`, `unesco.org`, `education.ec.europa.eu`, `iadb.org` — all `000` |
+
+🔴 **So every figure in `intel/market.md` remains snippet-sourced by construction, and the EMEA adoption gap stands.** 🟡 One new datum on the API channel: `api.github.com` answers with a **15,000/hour authenticated** quota here, but the token is **scoped to the session's attached repositories** — `/repos/{slug}` returns *"GitHub access to this repository is not …"* for all 61 shelf repos tested. **The quota is real and unusable for shelf work.** `raw.githubusercontent.com` is unauthenticated, unscoped, and remains the only instrument that reads a repository this base does not own. This closes `930-F4`'s open question about the API channel in the affirmative-but-useless.
+
+### 🔵 What the next pass should do
+
+1. 🟢 **Extend `licence-ledger-structured`.** It is at **55 / 612** verified. The highest-value rows are the ones a legal review stops on — the 11 no-grant and 4 non-commercial repos — then the platform tier. Use `HEAD` (`937-F5`), and **do not trust a first-match classifier** (`937-F3`): check for a narrowing clause before accepting a permissive title.
+2. 🔴 **Do not run another topic vocabulary.** `937-F7` is the 49th nil. The search channel is saturated for this industry at this scope.
+3. 🔴 **Do not compute a licence census from the prose cells.** `937-F6`. Extend the structured ledger instead.
+4. 🟡 **Re-run the shelf-depth audit slug-keyed**, and re-state `930-F*`'s staleness and archived counts from it — they are probably right, but they have never been verified against a correct pairing.
+5. 🔵 **The remaining honest gap is demand-side, not supply-side.** Four passes have now confirmed it needs a session with general outbound HTTPS. It is not closable by another leg.
+
 ---
 
 ## `2026-11-19` (p930) — **`928-R1` sent this pass at the published shelf instead of at another vocabulary. 594 addresses, 255 byte-read grants: the shelf is 99.6% sound — and the seven rows this base calls "star-unmeasurable" are not unindexed. Four of them have simply **moved**, and they are measurable at the new address.**

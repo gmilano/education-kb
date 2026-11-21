@@ -1,7 +1,48 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-19
+updated: 2026-11-21
+---
+
+## `2026-11-21` (p937) — **No new repos, and that is the finding for the 49th pass running. What changed is the instrument: `HEAD` resolves the default branch, which cuts the licence ladder 3×, and the `p930` audit's row pairing is void — it was computed against the `p928` shelf.**
+
+### 🔴 The audit this file has been citing is line-desynced
+
+`repos/foundations.md` carries **291** of the rows in `evidence/shelf-depth-audit.2026-11-19-p930.tsv`. That audit keys each row on `(file, line)`, and **41.4% of its 669 rows still point at the repository they name**; it reproduces **100% against `p928`** (`2e5e023`) and **43.5% against its own commit** (`133f98d`). `p929` was adding rows to these same shelves concurrently. See `937-F1` in `agents/trending.md` for the full provenance table.
+
+🟡 **The dependency-reproducibility table in this file is where the desync is most visible**, and it is worth stating plainly because a reader could be misled: the audit's blank `pub_lic` values for `GibbonEdu/core`, `overhangio/tutor`, `odoo/odoo`, `THU-MAIC/OpenMAIC` and `HKUDS/DeepTutor` are **not missing licences**. Those rows sit in a *dependency* table — `| Base | Direct deps | Pinning | Reproducible | Discloses |` — which has no licence column at all. The licences for all five are recorded correctly elsewhere in the shelf. 🔵 An audit that extracts "the licence column" positionally will invent gaps in every table that has not got one.
+
+### 🟢 Instrument: the licence ladder collapses from 48 requests to 16
+
+This base has been probing *16 filenames × 3 branches* to find a licence file without knowing the default branch. **`raw.githubusercontent.com/{slug}/HEAD/{path}` resolves the default branch directly.** Confirmed against repositories defaulting to `main`, `master` and `develop` in the same run, and against `turnkeylinux-apps/canvas`, which has no `README.md` at all (its readme is `README.rst` — the earlier "nothing at any address" reading for that repo was a *filename* miss, not a ref miss).
+
+| | Requests per repo |
+|---|---|
+| `16 names × 3 branches` ladder | 48 |
+| `16 names × HEAD` | **16** |
+
+🟡 **Caveat, and it matters for exactly one known class:** `HEAD` says nothing about non-default branches, so the *non-master-branches-are-unlicensed* pattern still needs an explicit per-branch read where it is suspected.
+
+### 🔴 A licence file returning `200` is not a grant — five shapes, all live on this shelf
+
+Re-reading 61 grants this pass turned up five distinct ways a `200` response fails to be a licence, each with a repo on this shelf behind it:
+
+| Shape | Live example | What the byte-read actually returns |
+|---|---|---|
+| **Unfilled template** | `LJKelly3141/coursepack` | a 41-byte `usethis` stub: `YEAR:` / `COPYRIGHT HOLDER:` and no grant — the real MIT text is in `LICENSE.md` |
+| **Pointer to another file** | `flammie/omorfi` | a 7-byte `LICENSE` containing the word `COPYING` (the GPL-3.0 text is there) |
+| **Pointer to a name** | `frappe/education` | 19 bytes: `License: GNU GPL V3` |
+| **Title with no body** | `yonasab12/amharicNLP` | 11 bytes: `MIT License` — a name, not a grant |
+| 🔴 **Narrowed MIT** | `CaviraOSS/PageLM` | opens with the verbatim *"Permission is hereby granted, free of charge…"* sentence, then restricts it to *"personal, educational, or non-commercial research purposes"* |
+
+🔵 **The last shape is the dangerous one and it is new to this file.** The first four fail loudly — a classifier gets nothing and asks for help. **A narrowed MIT fails silently and permissively**: a detector keying on the opening sentence returns `MIT` for a non-commercial licence. `CaviraOSS/PageLM` (2,070 ★) and `chadyi/StudyOnTV` (1,712 ★) are both this shape, and both are already correctly red on the shelf. 🟢 **The published cells caught both; this pass's fresh automated read did not.**
+
+### 🟡 Nothing new, and the search channel is saturated
+
+All four mandated repo legs ran. **Zero unheld repositories — the 49th consecutive nil.** The GitHub-trending digests surfaced `HKUDS/DeepTutor` (~61k ★), `THU-MAIC/OpenMAIC` (~44k ★), `patchy631/ai-engineering-hub` (~40k ★) and `withmarbleapp/os-taxonomy`; the vertical-platform leg surfaced `OpenEduCat`, `frappe/education`, `GegoK12`, `RosarioSIS`, `Gibbon` and `openSIS`. **All ten were already held, with correct grants.** 🔵 Two aggregator repos (`HuggerHustle/ai-radar`, `kouweizhu/agents-radar`) are daily-digest issue trackers, not education artefacts, and are not shelf candidates.
+
+🔵 **`937-R*` for this file: the next pass should not run another repo vocabulary.** Extend `evidence/licence-ledger-structured.2026-11-21-p937.tsv` instead — it is at 55 of 612 repositories verified, and the 15 rows a legal review stops on are the ones worth doing first.
+
 ---
 
 ## `2026-11-19` (p930) — **`928-R1` said stop widening and start auditing. The published shelf is 99.6% sound, 9.0% of it has not been touched in a year, and four rows this file calls unindexed are simply at the wrong address.**

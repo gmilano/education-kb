@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-19
+updated: 2026-11-21
 ---
 
 # Globant AI Studios — Education KB
@@ -37,7 +37,13 @@ and concrete recipes that name specific repos.
    story. **And a second seam opened**: Moodle now has seven community MCP servers, with
    read-only and read-write split across two separately maintained MIT projects. MCP exposes the
    LMS to your agent the way LTI ships your tool into the LMS — use both (`compose/patterns.md`
-   P11).
+   P11). 🟢 **Refined `p937`: "copyleft" is too coarse for the ERP tier, and the distinction is
+   commercial.** **Odoo is LGPL-3.0, not AGPL-3.0** (byte-read `HEAD/LICENSE`: *"Odoo is published
+   under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3"*), and **OpenEduCat**, the main open
+   education ERP, is **LGPL-3.0** on top of it. 🔵 **Under LGPL a proprietary module that links the
+   platform is permitted** — which is precisely what GPL-3.0 (`frappe/education`, ERPNext) and
+   AGPL-3.0 (Open edX, Canvas, `portabilis/i-diario`) do not allow. **So the SIS/ERP tier has a
+   closed-derivative route that the LMS tier does not**, and it is the OpenEduCat/Odoo stack.
 
 2. **The best open education agents are academic, not commercial — with one loud new
    exception.** DeepTutor (HKU, Apache-2.0, **60,258 ★**), OpenMAIC (Tsinghua, MIT,
@@ -173,7 +179,53 @@ append-only and retain their full history below the newest dated section.
 One substantive error was reported corrected — and `p896` found the correction itself was the
 error. See *Pass p896* below.
 
-### Pass p927 (2026-11-19, latest)
+### Pass p937 (2026-11-21, latest)
+
+🔴 **The headline is a retraction.** `p930` closed by instructing the next pass to clear a **61-row
+licence backlog** — *"10.4% of the shelf is `NOASSERTION` or ungranted, which is the fraction a
+client's legal review will stop on"*. **That backlog does not exist**, and the reasons are now
+measured and reproducible:
+
+- 🔴 **`p930`'s shelf-depth audit is line-keyed and desynced.** Of its 669 rows, **41.4%** still
+  point at the repository they name. It reproduces **100% against the `p928` shelf** and **43.5%
+  against its own commit** — `p929` was adding rows concurrently. **Its licence census and its
+  backlog were computed by reading published cells at wrong line numbers.** The audit's *per-repo*
+  data (stars, push dates, archived flags) is unaffected and still good.
+- 🔴 **The census also measured the wrong quantity** — the GitHub API's SPDX field, not this base's
+  own published grant. The difference between those two *is the value this KB adds*, since almost
+  every one of the 61 rows had already been byte-read in `p891`–`p922`.
+- 🟢 **Re-derived by slug (merge-proof): 695 licence-bearing rows, 612 repositories, and **zero**
+  blank or bare-token licence cells.** Script: `ingest/p937-ledger.py`.
+- 🟢 **All 61 rows byte-read independently to check.** The published shelf was right — and **more
+  precise than a fresh automated read in 4 cases**, twice in the dangerous direction (a
+  non-commercial licence read as permissive). See `T75`.
+
+🔴 **Two real corrections did come out of it.** `anandpatikat/guru-latihan-dinamis` (115 ★, the
+most-starred Indonesian education agent here) was recorded as ungranted and is **MIT at the README
+layer** — this base's own `p917` rule, not applied. And `opendatalab/MinerU` was published as plain
+`Apache-2.0` but is **Apache-2.0 plus additional terms**: a commercial-licence threshold, an
+**online-service disclosure obligation (§2)** that constrains any white-labelled deliverable, and
+**automatic termination without notice (§3)**.
+
+🟢 **Two instrument gains.** `raw.githubusercontent.com/{slug}/HEAD/{path}` resolves the default
+branch, collapsing the licence ladder from **48 requests to 16**. And `evidence/licence-ledger-structured.2026-11-21-p937.tsv`
+now carries an explicit `spdx` token per repository with a `confidence` field — **55 of 612
+byte-read, stated as 9.0% coverage**, empty elsewhere — so the base can no longer produce a
+confident wrong census. 🔴 **`T75`/`937-F6`: do not compute a licence census from the prose cells.**
+They state the verdict *and argue with the wrong answers beside it*, and a classifier mis-scores in
+both directions — validated 10/14 against hand byte-reads.
+
+🔵 **Research:** 49th consecutive nil on the prose legs (11 candidates returned, all already held).
+Four regional legs added `T76` and fresh regional blocks: **APAC now has binding statute naming
+education high-risk** (Vietnam, in force 2026-03-01, transition already expired; South Korea
+2026-01-22) **while the EU's Annex III date is in dispute** (2026-08-02 vs 2027-12-02 under the
+Digital/AI Omnibus). LATAM is the best-measured region — **87% of HE institutions using AI, 26% with
+a strategy**. New pattern **P59** builds the governance layer that gap implies. 🔴 The demand-side
+DNS gap was re-measured on a second, independent session and **stands**: no primary legal or analyst
+document is byte-readable from this environment, so every figure in `intel/market.md` is
+snippet-sourced by construction.
+
+### Pass p927 (2026-11-19)
 
 **One job: take `926-R1` seriously.** `p926` had opened thirteen topic words `p925` never asked,
 returned **601 unheld repositories**, and written the rule — *a discovery channel is exhausted only

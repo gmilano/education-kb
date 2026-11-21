@@ -1,0 +1,62 @@
+slug	prior	verdict	class	channel	note
+Andiii208/seu-handbook-skill	NOASSERTION	MIT	permissive	LICENSE	full MIT grant text
+BerriAI/litellm	NOASSERTION	MIT	permissive	LICENSE	MIT except litellm/enterprise/
+CaviraOSS/PageLM	NOASSERTION	"""PageLM Community License"" (NOT MIT)"	NON-COMMERCIAL	LICENSE.md	"opens with the verbatim MIT grant sentence then narrows it to ""personal, educational, or non-commercial research""; p937 classifier called it MIT and was WRONG - published cell was right"
+Gego-K12/gegok12	NOASSERTION	MIT	permissive	LICENSE	confirms vendor MIT claim
+HyNuwa/UniMCP	NOASSERTION	MIT	permissive	LICENSE	MIT plus ISC portions
+aaryansamanta/NextGen-AI	NOASSERTION	MIT	permissive	LICENSE	full MIT grant text
+dfdb76/bncc-mcp	NOASSERTION	MIT	permissive	LICENSE	full MIT grant text
+inducer/relate	NOASSERTION	MIT	permissive	LICENSE	full MIT grant text
+instructure/instructure-ui	NOASSERTION	MIT	permissive	LICENSE.md	Canvas design system
+langfuse/langfuse	NOASSERTION	MIT	permissive	LICENSE	MIT except ee/
+virtualryder/edu-ai-agents	NOASSERTION	MIT	permissive	LICENSE	full MIT grant text
+pupilfirst/pupilfirst	NOASSERTION	MIT	permissive	LICENSE	MIT default; docs/ CC BY-SA 4.0
+anandpatikat/guru-latihan-dinamis	blank	MIT	permissive	README.md	declared in README; no LICENSE file
+h5p/h5p-editor-php-library	blank	MIT	permissive	README.md	code MIT; Open Sans Apache-2.0
+OpenOLAT/OpenOLAT	NOASSERTION	Apache-2.0	permissive	LICENSE	full Apache-2.0 text
+OpenThaiGPT/openthaigpt	NOASSERTION	Apache-2.0	permissive	LICENSE	full Apache-2.0 text
+ahmetaa/zemberek-nlp	NOASSERTION	Apache-2.0	permissive	LICENSE	Turkish NLP
+apache/openmeetings	NOASSERTION	Apache-2.0	permissive	LICENSE	EPL deps listed in NOTICE
+apereo/java-cas-client	NOASSERTION	Apache-2.0	permissive	LICENSE	BSD-3 portions listed
+thm-mni-ii/feedbacksystem	NOASSERTION	Apache-2.0	permissive	LICENSE	full Apache-2.0 text
+Apereo-Learning-Analytics-Initiative/OpenLRS	NOASSERTION	ECL-2.0	permissive	LICENSE	Apache-derived, OSI-approved; repo ARCHIVED
+Apereo-Learning-Analytics-Initiative/OpenLRW	NOASSERTION	ECL-2.0	permissive	LICENSE	Apache-derived, OSI-approved
+computationalmodelling/nbval	NOASSERTION	BSD-3-Clause	permissive	LICENSE	notebook test plugin
+swl10/pyslet	NOASSERTION	BSD-3-Clause	permissive	LICENSE.txt	IMS/QTI library
+jupyterhub/zero-to-jupyterhub-k8s	NOASSERTION	BSD-3-Clause	permissive	LICENSE	Project Jupyter
+xiaoyang111222/cn-math-taxonomy	NOASSERTION	CC-BY-NC-4.0	NON-COMMERCIAL	LICENSE	"3x ""Attribution-NonCommercial"" vs 1 incidental ""CC0"" mention; p937 classifier called it CC0-1.0 and was WRONG - published cell was right"
+odoo/odoo	NOASSERTION	LGPL-3.0	weak-copyleft	LICENSE	NOT AGPL: proprietary modules permitted
+openeducat/openeducat_erp	NOASSERTION	LGPL-3.0	weak-copyleft	LICENSE	Odoo-based education ERP
+ankitects/anki	NOASSERTION	AGPL-3.0	strong-copyleft	LICENSE	SRS engine
+ankimcp/anki-mcp-server-addon	NOASSERTION	AGPL-3.0	strong-copyleft	LICENSE	inherits Anki AGPL
+claroline/Claroline	NOASSERTION	AGPL-3.0	strong-copyleft	LICENSE	French LMS
+portabilis/i-diario	NOASSERTION	AGPL-3.0	strong-copyleft	LICENSE	pt-BR TRANSLATION of AGPL-3.0 defeats SPDX
+Lumieducation/Lumi	blank	AGPL-3.0	strong-copyleft	package.json	H5P desktop app
+PrairieLearn/PrairieLearn	NOASSERTION	AGPL-3.0	strong-copyleft	LICENSE	MIT portions noted in file
+flammie/omorfi	NOASSERTION	GPL-3.0	strong-copyleft	LICENSE->COPYING	LICENSE contained only the word COPYING
+frappe/education	NOASSERTION	GPL-3.0	strong-copyleft	license.txt	"19-byte pointer: ""License: GNU GPL V3"""
+pawtograder/platform	NOASSERTION	GPL-3.0	strong-copyleft	LICENSE	autograder platform
+LearnPress/learnpress	blank	GPL-3.0	strong-copyleft	readme.txt	WordPress convention header
+justinhunt/moodle-mod_readaloud	blank	GPL-3.0-or-later	strong-copyleft	README.md	Moodle plugin convention
+OS4ED/openSIS-Classic	blank	GPL-2.0	strong-copyleft	docs/License.txt	"GPL v2 NOT v3 - README said only ""GNU GPL"""
+GarethManning/education-agent-skills	NOASSERTION	CC-BY-SA-4.0	content-licence	LICENSE	content, not a software grant
+bncc-dev/bncc-pacotes	NOASSERTION	CC-BY-4.0	content-licence	LICENSE	BR curriculum packages
+kaveheng/GenAi-in-education	NOASSERTION	CC-BY-4.0	content-licence	LICENSE	course material
+parmentelat/nbautoeval	NOASSERTION	CC-BY-SA-4.0	content-licence	LICENSE	share-alike applied to a CODE library
+bncc-dev/bncc-benchmark	NOASSERTION	MIT + CC-BY-4.0	dual-path	LICENSE	code harness/ test/ MIT; item bank + results CC BY 4.0
+learning-commons-org/knowledge-graph	NOASSERTION	MIT + mixed data	dual-path	LICENSE.md	code MIT; datasets Open/Open+Gated/GATED - Gated is NOT open
+opendatalab/MinerU	NOASSERTION	Apache-2.0 + extra terms	conditional	LICENSE.md	commercial-use thresholds added; NOT plain Apache-2.0
+NgodingCik/modul-ajar-generator	NOASSERTION	CC-BY-NC-4.0	NON-COMMERCIAL	LICENSE.md	BLOCKS client delivery
+jeremy-xuan/SocraticNovel	NOASSERTION	CC-BY-NC-SA-4.0	NON-COMMERCIAL	LICENSE	BLOCKS client delivery
+chadyi/StudyOnTV	NOASSERTION	"""Source Available - Personal Use Only"""	no-grant	LICENSE	"redistribution to third parties explicitly prohibited; more precise than p937 initial read of ""all-rights-reserved"""
+LJKelly3141/coursepack	NOASSERTION	MIT	permissive	LICENSE.md	grant is in LICENSE.md (1,070 B); root LICENSE is a 41-byte usethis stub with no grant. p937 probe broke on the first HTTP 200 and missed it - published cell was right
+yonasab12/amharicNLP	NOASSERTION	none	no-grant	LICENSE	"11 bytes: title ""MIT License"", no grant body"
+vincenzo-afk/KingstonConnect	blank	none	no-grant	README.md	"MIT badge + ""See LICENSE"" but NO LICENSE file exists"
+1EdTech/openbadges-specification	blank	none	no-grant	none	no grant at 32 probed addresses
+Nutlope/llamatutor	blank	none	no-grant	none	no licence field in package.json either
+Piyushtanwani/DAU-buddy	blank	none	no-grant	none	no grant at 32 probed addresses
+aaryansamanta/AI-Ethos	blank	none	no-grant	none	no grant at 32 probed addresses
+bolgerru/blackboard-mcp	blank	none	no-grant	none	no grant at 32 probed addresses
+steve-ongera/KNEC-Exam-Management-System	blank	none	no-grant	none	no grant at 32 probed addresses
+summeraprx/topik-shortcut	blank	none	no-grant	none	exam PDFs copyright-excluded, kept out of git
+turnkeylinux-apps/canvas	blank	none	no-grant	none	live repo, README.rst, no grant

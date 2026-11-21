@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-19
+updated: 2026-11-21
 ---
 
 # Foundational repos — education
@@ -344,7 +344,7 @@ education RAG projects actually fail.
 |---|---|---|
 | https://github.com/docling-project/docling | MIT | Document parsing to structured form. Strong on PDF layout, tables and reading order. |
 | https://github.com/datalab-to/marker | Apache-2.0 | PDF to Markdown at high fidelity, including equations. |
-| https://github.com/opendatalab/MinerU | Apache-2.0 | PDF extraction with strong CJK and formula handling — notably better than Western-trained alternatives on APAC textbooks. |
+| https://github.com/opendatalab/MinerU | 🔴 **Apache-2.0 PLUS ADDITIONAL TERMS — NOT plain Apache-2.0. CORRECTED `p937`, was `Apache-2.0`.** Byte-read `HEAD/LICENSE.md` (3,301 B, bilingual EN/zh): *"licensed under Apache License 2.0 **and is subject to the additional terms below**"*. **§1 Commercial thresholds** — a separate commercial licence is required above **100M MAU** or **USD 20M monthly revenue** (consolidated with Affiliates); these will not bite a normal engagement. 🔴 **§2 is the one that does: any online service built on MinerU must "clearly and prominently" disclose that MinerU is used**, in the product UI or public docs — which constrains a white-labelled client SaaS. 🔴 **§3 terminates the licence automatically, with no notice**, if §1 or §2 is breached. An instance of the modified-Apache pattern: the SPDX field and every listicle say `Apache-2.0` | PDF extraction with strong CJK and formula handling — notably better than Western-trained alternatives on APAC textbooks. **The default choice for building a curriculum corpus from textbooks, which is exactly why its §2 matters.** |
 | https://github.com/Unstructured-IO/unstructured | Apache-2.0 | Broad-format ingestion into chunked, embeddable records. |
 | https://github.com/SYSTRAN/faster-whisper | MIT | Fast CTranslate2 Whisper inference. The practical choice for lecture transcription at volume. |
 | https://github.com/openai/whisper | MIT | Reference speech-to-text weights and code. |

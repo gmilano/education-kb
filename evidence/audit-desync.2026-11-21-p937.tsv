@@ -1,0 +1,670 @@
+file	audit_line	audit_slug	slug_actually_at_that_line	match
+agents/top.md	332	HKUDS/DeepTutor	(no github slug on this line)	NO-SLUG
+agents/top.md	333	THU-MAIC/OpenMAIC	(no github slug on this line)	NO-SLUG
+agents/top.md	334	amosblomqvist/learnharness	(no github slug on this line)	NO-SLUG
+agents/top.md	335	sitor-ai/frametell	(no github slug on this line)	NO-SLUG
+agents/top.md	336	ai-shifu/ai-shifu	(no github slug on this line)	NO-SLUG
+agents/top.md	337	Faixiang/Moodle-MCP	(no github slug on this line)	NO-SLUG
+agents/top.md	338	aieducations/edumcp	(no github slug on this line)	NO-SLUG
+agents/top.md	339	GeminiLight/gen-mentor	(no github slug on this line)	NO-SLUG
+agents/top.md	340	Selleo/mentingo	(no github slug on this line)	NO-SLUG
+agents/top.md	341	vishalsachdev/canvas-mcp	(no github slug on this line)	NO-SLUG
+agents/top.md	342	Li-Evan/BloomTutor	(no github slug on this line)	NO-SLUG
+agents/top.md	343	CAHLR/OATutor	HKUDS/DeepTutor	WRONG-SLUG
+agents/top.md	344	molly554/whiteboard-ai-tutor	THU-MAIC/OpenMAIC	WRONG-SLUG
+agents/top.md	345	OpenPronounce/OpenPronounce	amosblomqvist/learnharness	WRONG-SLUG
+agents/top.md	346	zijinz456/OpenTutor	sitor-ai/frametell	WRONG-SLUG
+agents/top.md	347	boyuchengz/canvas-mcp	ai-shifu/ai-shifu	WRONG-SLUG
+agents/top.md	348	Open-TutorAi/open-tutor-ai-CE	Faixiang/Moodle-MCP	WRONG-SLUG
+agents/top.md	349	brian901106/japanese-tutor-mugi	aieducations/edumcp	WRONG-SLUG
+agents/top.md	350	itsme-ganzu/belajar-ngoding-byGanzu	GeminiLight/gen-mentor	WRONG-SLUG
+agents/top.md	351	ArnaudGuiovanna/tutor-mcp	Selleo/mentingo	WRONG-SLUG
+agents/top.md	352	Zenglian990/AI_Tutor_Release	vishalsachdev/canvas-mcp	WRONG-SLUG
+agents/top.md	353	liangxiao777/TeachMeCoding	Li-Evan/BloomTutor	WRONG-SLUG
+agents/top.md	354	luumlabs/aula	CAHLR/OATutor	WRONG-SLUG
+agents/top.md	355	SirhanMacx/Claw-ED	molly554/whiteboard-ai-tutor	WRONG-SLUG
+agents/top.md	356	G36maid/moodle-mcp	OpenPronounce/OpenPronounce	WRONG-SLUG
+agents/top.md	357	CaioCastro1/usp-mcp	zijinz456/OpenTutor	WRONG-SLUG
+agents/top.md	358	acheamponge/wassce-benchmark	boyuchengz/canvas-mcp	WRONG-SLUG
+agents/top.md	359	wenflow-org/wenflow	Open-TutorAi/open-tutor-ai-CE	WRONG-SLUG
+agents/top.md	360	moodlehq/wiki-rag	brian901106/japanese-tutor-mugi	WRONG-SLUG
+agents/top.md	361	ECNU/EduWork	itsme-ganzu/belajar-ngoding-byGanzu	WRONG-SLUG
+agents/top.md	362	smashburger-dev/socratic-workshop	ArnaudGuiovanna/tutor-mcp	WRONG-SLUG
+agents/top.md	363	ls1intum/edutelligence	Zenglian990/AI_Tutor_Release	WRONG-SLUG
+agents/top.md	364	AI-for-Education/pedagogy-benchmark	liangxiao777/TeachMeCoding	WRONG-SLUG
+agents/top.md	365	ls1intum/Pyris	luumlabs/aula	WRONG-SLUG
+agents/top.md	366	warleysr/ankipa	SirhanMacx/Claw-ED	WRONG-SLUG
+agents/top.md	367	virtualryder/edu-ai-agents	G36maid/moodle-mcp	WRONG-SLUG
+agents/top.md	368	vulinh1704/ai-tutor-agent	CaioCastro1/usp-mcp	WRONG-SLUG
+agents/top.md	369	HowieWang1121/Socratic-Education-System	acheamponge/wassce-benchmark	WRONG-SLUG
+agents/top.md	370	flysheep-ai/education-skills	wenflow-org/wenflow	WRONG-SLUG
+agents/top.md	371	zhangl1001/civil-ai	moodlehq/wiki-rag	WRONG-SLUG
+agents/top.md	372	virgiliojr94/book-to-skill	ECNU/EduWork	WRONG-SLUG
+agents/top.md	373	DozenTwelve/Papermorph	smashburger-dev/socratic-workshop	WRONG-SLUG
+agents/top.md	374	Miaotofu01/Study-Mate	ls1intum/edutelligence	WRONG-SLUG
+agents/top.md	375	dmoshehun-prog/learn-from-materials	AI-for-Education/pedagogy-benchmark	WRONG-SLUG
+agents/top.md	376	beltromatti/get-it	ls1intum/Pyris	WRONG-SLUG
+agents/top.md	377	assafkip/claudemy	warleysr/ankipa	WRONG-SLUG
+agents/top.md	378	ZeKaiNie/universal-examprep-skill	virtualryder/edu-ai-agents	WRONG-SLUG
+agents/top.md	379	helixnow/deep-student	vulinh1704/ai-tutor-agent	WRONG-SLUG
+agents/top.md	380	artcc/freelingo	HowieWang1121/Socratic-Education-System	WRONG-SLUG
+agents/top.md	381	SenmuuuuW/universal-diagnostic-tutor-skill	flysheep-ai/education-skills	WRONG-SLUG
+agents/top.md	382	KeWang0622/kaogong-skill	zhangl1001/civil-ai	WRONG-SLUG
+agents/top.md	383	nichochar/ari	virgiliojr94/book-to-skill	WRONG-SLUG
+agents/top.md	384	SimonsTang/feifei-companion	DozenTwelve/Papermorph	WRONG-SLUG
+agents/top.md	385	ahmedEid1/lumen	Miaotofu01/Study-Mate	WRONG-SLUG
+agents/top.md	386	OPTIMETA/PAIDEIA	dmoshehun-prog/learn-from-materials	WRONG-SLUG
+agents/top.md	387	oaknational/oak-ai-lesson-assistant	beltromatti/get-it	WRONG-SLUG
+agents/top.md	388	towardsai/ai-tutor-app	assafkip/claudemy	WRONG-SLUG
+agents/top.md	389	Orenda-Project/rumi-platform	ZeKaiNie/universal-examprep-skill	WRONG-SLUG
+agents/top.md	392	anthropics/k12-teacher-skills	SenmuuuuW/universal-diagnostic-tutor-skill	WRONG-SLUG
+agents/top.md	393	ankimcp/anki-mcp-server	KeWang0622/kaogong-skill	WRONG-SLUG
+agents/top.md	394	satvik314/educhain	nichochar/ari	WRONG-SLUG
+agents/top.md	395	dfdb76/bncc-mcp	SimonsTang/feifei-companion	WRONG-SLUG
+agents/top.md	396	bruchris/canvas-lms-mcp	ahmedEid1/lumen	WRONG-SLUG
+agents/top.md	397	matheussilvano/mooose	OPTIMETA/PAIDEIA	WRONG-SLUG
+agents/top.md	398	CREARED-EDU-CO/GenPrompt-Pre-ICFES-11	oaknational/oak-ai-lesson-assistant	WRONG-SLUG
+agents/top.md	400	SalehGNUTUX/GT-MISHKATKIDS	Orenda-Project/rumi-platform	WRONG-SLUG
+agents/top.md	401	migueldsants/AI-Skill-Corretor-Redacao-ENEM	mitodl/open-learning-ai-tutor	WRONG-SLUG
+agents/top.md	402	suellenferraz/Projeto-GabirIA	DaRL-GenAI/instructional_agents	WRONG-SLUG
+agents/top.md	403	yinuoguan/nengdou-ai-review-helper-web	anthropics/k12-teacher-skills	WRONG-SLUG
+agents/top.md	404	QwenStorm/xl-frontend	ankimcp/anki-mcp-server	WRONG-SLUG
+agents/top.md	405	weishao2/tizhuang-agent-skills	satvik314/educhain	WRONG-SLUG
+agents/top.md	406	ai-lingnan/econai-agent-platform	dfdb76/bncc-mcp	WRONG-SLUG
+agents/top.md	407	shellery1988/k12-smart-teacher	bruchris/canvas-lms-mcp	WRONG-SLUG
+agents/top.md	408	wenliu3/ai-smart-homework-review	matheussilvano/mooose	WRONG-SLUG
+agents/top.md	409	cculb/schoolconnect	CREARED-EDU-CO/GenPrompt-Pre-ICFES-11	WRONG-SLUG
+agents/top.md	410	andrsnrua/universidad-pacifico-mcp	(no github slug on this line)	NO-SLUG
+agents/top.md	411	andbriha/ExamGuardian	SalehGNUTUX/GT-MISHKATKIDS	WRONG-SLUG
+agents/top.md	412	geekjourneyx/interactive-learning	migueldsants/AI-Skill-Corretor-Redacao-ENEM	WRONG-SLUG
+agents/top.md	413	BaijayantaRoy/bandup	suellenferraz/Projeto-GabirIA	WRONG-SLUG
+agents/top.md	414	Mocas-12/jlpt-n1-Yomitaku	yinuoguan/nengdou-ai-review-helper-web	WRONG-SLUG
+agents/top.md	415	metrovoc/immersive-memorize	QwenStorm/xl-frontend	WRONG-SLUG
+agents/top.md	416	AriusKing/edubot-backend	weishao2/tizhuang-agent-skills	WRONG-SLUG
+agents/top.md	417	peleg-jpg/israeli-bagrut-psychometric	ai-lingnan/econai-agent-platform	WRONG-SLUG
+agents/top.md	418	summeraprx/topik-shortcut	shellery1988/k12-smart-teacher	WRONG-SLUG
+agents/top.md	419	ArushJain-697/namma-ai	wenliu3/ai-smart-homework-review	WRONG-SLUG
+agents/top.md	420	siyegs/rung	cculb/schoolconnect	WRONG-SLUG
+agents/top.md	421	xingjunm/autoppt	andrsnrua/universidad-pacifico-mcp	WRONG-SLUG
+agents/top.md	422	proyecto26/notebooklm-ai-plugin	andbriha/ExamGuardian	WRONG-SLUG
+agents/top.md	423	firekern/zusia	geekjourneyx/interactive-learning	WRONG-SLUG
+agents/top.md	424	logitsolutionsai/teachback	BaijayantaRoy/bandup	WRONG-SLUG
+agents/top.md	425	d-wwei/learn-anything	Mocas-12/jlpt-n1-Yomitaku	WRONG-SLUG
+agents/top.md	426	VuongPhan-09/vuongedu	metrovoc/immersive-memorize	WRONG-SLUG
+agents/top.md	427	wysking/postgrad-study-engine	AriusKing/edubot-backend	WRONG-SLUG
+agents/top.md	428	robzilla1738/Memorwise	peleg-jpg/israeli-bagrut-psychometric	WRONG-SLUG
+agents/top.md	429	MuhammadLutfiMuzakiiVY/Litera-AI-Android	summeraprx/topik-shortcut	WRONG-SLUG
+agents/top.md	430	ChangjinHe2000/one-tutor	ArushJain-697/namma-ai	WRONG-SLUG
+agents/top.md	431	ubermenchh/anki-cli	siyegs/rung	WRONG-SLUG
+agents/top.md	490	edunelsonit/Jambora	(no github slug on this line)	NO-SLUG
+agents/top.md	491	ALIYUAAM10/NAIJASCHOLAR	(no github slug on this line)	NO-SLUG
+agents/top.md	492	001kenji/KCSE-predictor	(no github slug on this line)	NO-SLUG
+agents/top.md	493	theteacherbot/ICFES-Exam-Engine	(no github slug on this line)	NO-SLUG
+agents/top.md	494	matmiidu/paes-ensayos	(no github slug on this line)	NO-SLUG
+agents/top.md	495	Reethureddy8/Study-assistant	(no github slug on this line)	NO-SLUG
+agents/top.md	496	praj2408/RAG-Enhanced-NCERT-Tutor	(no github slug on this line)	NO-SLUG
+agents/top.md	497	MichealQuelazar/Ncert__RAG__Chatbot	(no github slug on this line)	NO-SLUG
+agents/top.md	498	datastiltskin/Sanshodhan	(no github slug on this line)	NO-SLUG
+agents/top.md	499	lindnerju/ePaeko	(no github slug on this line)	NO-SLUG
+agents/top.md	521	DeepBlue-dot/Ethio-Adaptive-Learning	(no github slug on this line)	NO-SLUG
+agents/top.md	522	ElnatanAnbelu/ethioexam	(no github slug on this line)	NO-SLUG
+agents/top.md	523	robelasefa/eaes-bot	(no github slug on this line)	NO-SLUG
+agents/top.md	554	GarethManning/education-agent-skills	(no github slug on this line)	NO-SLUG
+agents/top.md	555	CogitoNTNU/TutorAI	(no github slug on this line)	NO-SLUG
+agents/top.md	556	kad-xyz/spbstu-mcp	(no github slug on this line)	NO-SLUG
+agents/top.md	557	isakskogstad/Skolverket-MCP	(no github slug on this line)	NO-SLUG
+agents/top.md	558	nialvape/utn-mcp	(no github slug on this line)	NO-SLUG
+agents/top.md	559	changazo/udesa-mcp	(no github slug on this line)	NO-SLUG
+agents/top.md	560	HyNuwa/UniMCP	(no github slug on this line)	NO-SLUG
+agents/top.md	561	jpmanson/siu-guarani-mcp	(no github slug on this line)	NO-SLUG
+agents/top.md	562	jamestesting0/tum-mcp	(no github slug on this line)	NO-SLUG
+agents/top.md	563	simonseifert/merlin-mcp	(no github slug on this line)	NO-SLUG
+agents/top.md	564	LabSirius/TutorIA	(no github slug on this line)	NO-SLUG
+agents/top.md	565	falkenslab/miyagi	GarethManning/education-agent-skills	WRONG-SLUG
+agents/top.md	566	GuilhermeScarpini/agente-bncc-professores	CogitoNTNU/TutorAI	WRONG-SLUG
+agents/top.md	567	alejooroncoy/campus-cli	kad-xyz/spbstu-mcp	WRONG-SLUG
+agents/top.md	568	Victor-Blasco/UJI-MCP	isakskogstad/Skolverket-MCP	WRONG-SLUG
+agents/top.md	569	kta41/mcp-uned	nialvape/utn-mcp	WRONG-SLUG
+agents/top.md	570	Just253/autonoma-cli	changazo/udesa-mcp	WRONG-SLUG
+agents/top.md	571	JOSETRA44/DUTIC-mcp	HyNuwa/UniMCP	WRONG-SLUG
+agents/top.md	572	franc1sc0sv/udb-copilot	jpmanson/siu-guarani-mcp	WRONG-SLUG
+agents/top.md	573	SebasB76/poli	jamestesting0/tum-mcp	WRONG-SLUG
+agents/top.md	574	VxGM/IAula-Virtual-Uleam	simonseifert/merlin-mcp	WRONG-SLUG
+agents/top.md	575	alanmagno1/tuaulavirtual-unam-mcp	LabSirius/TutorIA	WRONG-SLUG
+agents/top.md	576	MarcoXMarquez/CampusUNSA	falkenslab/miyagi	WRONG-SLUG
+agents/top.md	577	Group-Active-IA/Skill-Moodle	GuilhermeScarpini/agente-bncc-professores	WRONG-SLUG
+agents/top.md	578	alexFiorenza/aulasvirtuales-toolkit	alejooroncoy/campus-cli	WRONG-SLUG
+agents/top.md	579	PabloPC05/campus-usc	Victor-Blasco/UJI-MCP	WRONG-SLUG
+agents/top.md	598	openedx/openedx-ai-extensions	(no github slug on this line)	NO-SLUG
+agents/top.md	599	openedx/edx-ora2	(no github slug on this line)	NO-SLUG
+agents/top.md	600	blend-ed/openedx-mcp	(no github slug on this line)	NO-SLUG
+agents/top.md	608	crewAIInc/crewAI	(no github slug on this line)	NO-SLUG
+agents/top.md	609	langchain-ai/langgraph	openedx/openedx-ai-extensions	WRONG-SLUG
+agents/top.md	610	patchy631/ai-engineering-hub	openedx/edx-ora2	WRONG-SLUG
+agents/top.md	611	stanford-oval/storm	blend-ed/openedx-mcp	WRONG-SLUG
+agents/top.md	612	assafelovic/gpt-researcher	(no github slug on this line)	NO-SLUG
+agents/top.md	613	OpenHands/OpenHands	(no github slug on this line)	NO-SLUG
+agents/top.md	614	LibreChat-AI/LibreChat	(no github slug on this line)	NO-SLUG
+agents/top.md	730	JuneYaooo/teacher-to-skills	(no github slug on this line)	NO-SLUG
+agents/top.md	731	orionsheep/wordlink	(no github slug on this line)	NO-SLUG
+agents/top.md	732	Berserk-hub150/moodle-ai-skill-navigator	(no github slug on this line)	NO-SLUG
+agents/top.md	733	Fazmin/AILearningGuide	(no github slug on this line)	NO-SLUG
+agents/top.md	734	liuliu667/cram-engine	(no github slug on this line)	NO-SLUG
+agents/top.md	735	munitkala/SelfSemester	(no github slug on this line)	NO-SLUG
+agents/top.md	736	RohanMuppa/brightspace-mcp-server	(no github slug on this line)	NO-SLUG
+agents/top.md	737	SaadRahman01/claude-moodle-dev	(no github slug on this line)	NO-SLUG
+agents/top.md	738	TovTechOrg/Tov-learn	(no github slug on this line)	NO-SLUG
+agents/top.md	739	jurimaxam-dotcom/chemdraw-mcp	(no github slug on this line)	NO-SLUG
+agents/top.md	740	saylordotorg/moodle-local_ai_course_assistant	(no github slug on this line)	NO-SLUG
+agents/top.md	741	tong666-bit/liu-xiaoyan-skill	JuneYaooo/teacher-to-skills	WRONG-SLUG
+agents/top.md	742	SonAIengine/ku-portal-mcp	orionsheep/wordlink	WRONG-SLUG
+agents/top.md	743	danieltyukov/ieee-mcp	Berserk-hub150/moodle-ai-skill-navigator	WRONG-SLUG
+agents/top.md	749	aaryansamanta/AI-Ethos	TovTechOrg/Tov-learn	WRONG-SLUG
+agents/top.md	750	jeremy-xuan/SocraticNovel	jurimaxam-dotcom/chemdraw-mcp	WRONG-SLUG
+agents/top.md	751	vincenzo-afk/KingstonConnect	saylordotorg/moodle-local_ai_course_assistant	WRONG-SLUG
+agents/top.md	752	Piyushtanwani/DAU-buddy	tong666-bit/liu-xiaoyan-skill	WRONG-SLUG
+agents/top.md	763	aaryansamanta/NextGen-AI	Piyushtanwani/DAU-buddy	WRONG-SLUG
+agents/top.md	764	Andiii208/seu-handbook-skill	(no github slug on this line)	NO-SLUG
+agents/top.md	781	justinhunt/moodle-mod_readaloud	(no github slug on this line)	NO-SLUG
+agents/top.md	782	OSU-slatelab/AIRFluTe	(no github slug on this line)	NO-SLUG
+agents/top.md	783	JambuOverflow/lepic	(no github slug on this line)	NO-SLUG
+agents/top.md	784	dungnotnull/ReadPulse-AI-Agent	(no github slug on this line)	NO-SLUG
+agents/top.md	785	Aaryan-Kapoor/degreeworks-cli	(no github slug on this line)	NO-SLUG
+agents/top.md	786	Kanjo-Elkamira-Ndi/Compass	(no github slug on this line)	NO-SLUG
+agents/top.md	812	ctrlaltwill/LearnKit	(no github slug on this line)	NO-SLUG
+agents/top.md	813	kirill-markin/flashcards-open-source-app	(no github slug on this line)	NO-SLUG
+agents/top.md	814	ankimcp/anki-mcp-server-addon	(no github slug on this line)	NO-SLUG
+agents/top.md	815	pieralukasz/true-recall	(no github slug on this line)	NO-SLUG
+agents/top.md	816	NaEs25/studiamo	(no github slug on this line)	NO-SLUG
+agents/top.md	817	Vladyslav-Soldatenko/ProcrastiLearn	(no github slug on this line)	NO-SLUG
+agents/top.md	818	RakeshBabuGajula/Exam_Intellect	(no github slug on this line)	NO-SLUG
+agents/top.md	819	Yuanpeng-Li/gradescope-mcp	(no github slug on this line)	NO-SLUG
+agents/top.md	820	forgemorrow/Chinese-Teaching-AI-Agent	(no github slug on this line)	NO-SLUG
+agents/top.md	840	DigitalHarborFoundation/llm-math-education	(no github slug on this line)	NO-SLUG
+agents/top.md	869	GitHubDaily/AI-Course-Generator	(no github slug on this line)	NO-SLUG
+agents/top.md	870	kenoharada/AI-LaBuddy	(no github slug on this line)	NO-SLUG
+agents/top.md	871	jetyu/Dawn	(no github slug on this line)	NO-SLUG
+agents/top.md	872	hapince-code/AI-EduForge	(no github slug on this line)	NO-SLUG
+agents/top.md	873	SNOOPY-alt/heuristic-learning-system	(no github slug on this line)	NO-SLUG
+agents/top.md	874	cxkzai/ai-admissions-platform	(no github slug on this line)	NO-SLUG
+agents/top.md	875	uczltw6/course-tutor	(no github slug on this line)	NO-SLUG
+agents/top.md	876	MathMindCanvas/MathMind	(no github slug on this line)	NO-SLUG
+agents/top.md	877	mousam100/Montessori-Agentic-AI-Tutor	(no github slug on this line)	NO-SLUG
+agents/top.md	909	anandpatikat/guru-latihan-dinamis	(no github slug on this line)	NO-SLUG
+agents/top.md	910	JMLcommunity/Kurikulum-AI	(no github slug on this line)	NO-SLUG
+agents/top.md	911	NgodingCik/modul-ajar-generator	(no github slug on this line)	NO-SLUG
+agents/top.md	912	y4zh/kurikulum-merdeka-asesmen-skills	(no github slug on this line)	NO-SLUG
+agents/top.md	913	dikkayulianto/ebook-generator	(no github slug on this line)	NO-SLUG
+agents/top.md	930	PyThaiNLP/pythainlp	(no github slug on this line)	NO-SLUG
+agents/top.md	931	vistec-AI/thai2transformers	(no github slug on this line)	NO-SLUG
+agents/top.md	932	OpenThaiGPT/openthaigpt	(no github slug on this line)	NO-SLUG
+agents/top.md	1007	microsoft/StudentSim	(no github slug on this line)	NO-SLUG
+agents/top.md	1008	lynote-ai/ai-tutor	(no github slug on this line)	NO-SLUG
+agents/top.md	1009	chuma-beep/mathua	(no github slug on this line)	NO-SLUG
+agents/top.md	1010	zuhairhalawa/studyai	(no github slug on this line)	NO-SLUG
+agents/top.md	1011	shigella520/MindTrain	(no github slug on this line)	NO-SLUG
+agents/top.md	1012	3yangyang9/DeepTutor-AILearning	(no github slug on this line)	NO-SLUG
+agents/top.md	1013	five-plus-one/AI-Marker-Suite	(no github slug on this line)	NO-SLUG
+agents/top.md	1014	ERRRC/kaogong-shuati	(no github slug on this line)	NO-SLUG
+agents/top.md	1015	AkshitIreddy/AI-Powered-Video-Tutorial-Generator	(no github slug on this line)	NO-SLUG
+agents/top.md	1016	zoonk/zoonk	(no github slug on this line)	NO-SLUG
+agents/top.md	1017	thm-mni-ii/feedbacksystem	(no github slug on this line)	NO-SLUG
+agents/top.md	1026	CaviraOSS/PageLM	AkshitIreddy/AI-Powered-Video-Tutorial-Generator	WRONG-SLUG
+agents/top.md	1027	chadyi/StudyOnTV	zoonk/zoonk	WRONG-SLUG
+agents/top.md	1028	xiaoyang111222/cn-math-taxonomy	thm-mni-ii/feedbacksystem	WRONG-SLUG
+agents/top.md	1029	Nutlope/llamatutor	(no github slug on this line)	NO-SLUG
+agents/top.md	1030	LearnPress/learnpress	(no github slug on this line)	NO-SLUG
+agents/top.md	1031	learning-commons-org/knowledge-graph	(no github slug on this line)	NO-SLUG
+agents/top.md	1067	SHUBHJAIN139/Local-Exam-Proctoring-Engine	(no github slug on this line)	NO-SLUG
+agents/top.md	1068	tanzir71/tinyproctorjs	(no github slug on this line)	NO-SLUG
+agents/top.md	1069	Aryansh909/Examshield-AI	(no github slug on this line)	NO-SLUG
+agents/top.md	1089	alberto2005-coder/detector-ia	(no github slug on this line)	NO-SLUG
+agents/top.md	1090	DerickxP/Learn-Quest-Serious-Game	(no github slug on this line)	NO-SLUG
+agents/top.md	1091	Gehiner/KodlandFaster	(no github slug on this line)	NO-SLUG
+agents/top.md	1092	uemanet/harpia	(no github slug on this line)	NO-SLUG
+agents/top.md	1098	xxinjie21/Smart-Quiz-Tutor	(no github slug on this line)	NO-SLUG
+agents/top.md	1099	haison8x/geogebra-mcp	(no github slug on this line)	NO-SLUG
+agents/top.md	1100	fireheartjerry/mathos-webmcp	alberto2005-coder/detector-ia	WRONG-SLUG
+agents/top.md	1101	devissaputra/self_regulated_learning_copilot	DerickxP/Learn-Quest-Serious-Game	WRONG-SLUG
+agents/top.md	1102	siberius/learning-methodologies	Gehiner/KodlandFaster	WRONG-SLUG
+agents/top.md	1103	nijataliyev7/elifba	uemanet/harpia	WRONG-SLUG
+agents/top.md	1104	angel-georgiev/daskal.ai	(no github slug on this line)	NO-SLUG
+agents/top.md	1105	orangewk/MathDesk-snapshot	(no github slug on this line)	NO-SLUG
+agents/top.md	1106	WDMoonMoonBird/exam-deep-seek	(no github slug on this line)	NO-SLUG
+agents/top.md	1107	deeding2030-boop/bestteach-public	(no github slug on this line)	NO-SLUG
+agents/top.md	1108	Apurba94/autograder-py	(no github slug on this line)	NO-SLUG
+agents/top.md	1109	CarlosEkRaigoza/privacy-preserving-educational-telemetry	xxinjie21/Smart-Quiz-Tutor	WRONG-SLUG
+agents/top.md	1110	JaneKoch/openbridge	haison8x/geogebra-mcp	WRONG-SLUG
+agents/top.md	1111	willfeldman/readu	fireheartjerry/mathos-webmcp	WRONG-SLUG
+agents/top.md	1112	uloya1234/faq-assistant	devissaputra/self_regulated_learning_copilot	WRONG-SLUG
+agents/top.md	1113	xx-hub/craft-your-textbook	siberius/learning-methodologies	WRONG-SLUG
+agents/top.md	1114	Yari-tuber/math-rap-video	nijataliyev7/elifba	WRONG-SLUG
+agents/top.md	1115	heimi51168/planyourtv	angel-georgiev/daskal.ai	WRONG-SLUG
+repos/foundations.md	88	openedx/openedx-platform	openedx/openedx-platform	MATCH
+repos/foundations.md	89	moodle/moodle	moodle/moodle	MATCH
+repos/foundations.md	90	instructure/canvas-lms	instructure/canvas-lms	MATCH
+repos/foundations.md	91	ls1intum/Artemis	ls1intum/Artemis	MATCH
+repos/foundations.md	92	learningequality/kolibri	learningequality/kolibri	MATCH
+repos/foundations.md	93	elimu-ai/webapp	elimu-ai/webapp	MATCH
+repos/foundations.md	94	oppia/oppia	oppia/oppia	MATCH
+repos/foundations.md	95	sakaiproject/sakai	sakaiproject/sakai	MATCH
+repos/foundations.md	96	chamilo/chamilo-lms	chamilo/chamilo-lms	MATCH
+repos/foundations.md	97	ILIAS-eLearning/ILIAS	ILIAS-eLearning/ILIAS	MATCH
+repos/foundations.md	98	OpenOLAT/OpenOLAT	OpenOLAT/OpenOLAT	MATCH
+repos/foundations.md	107	Cvmcosta/ltijs	Cvmcosta/ltijs	MATCH
+repos/foundations.md	108	tsugiproject/tsugi	tsugiproject/tsugi	MATCH
+repos/foundations.md	109	Ed-Fi-Alliance-OSS/Ed-Fi-ODS	Ed-Fi-Alliance-OSS/Ed-Fi-ODS	MATCH
+repos/foundations.md	110	1EdTech/openbadges-validator-core	1EdTech/openbadges-validator-core	MATCH
+repos/foundations.md	111	Citolab/qti-components	Citolab/qti-components	MATCH
+repos/foundations.md	112	apereo/cas	apereo/cas	MATCH
+repos/foundations.md	113	Faixiang/Moodle-MCP	Faixiang/Moodle-MCP	MATCH
+repos/foundations.md	114	G36maid/moodle-mcp	G36maid/moodle-mcp	MATCH
+repos/foundations.md	115	blend-ed/openedx-mcp	blend-ed/openedx-mcp	MATCH
+repos/foundations.md	116	openedx/XBlock	openedx/XBlock	MATCH
+repos/foundations.md	117	openedx/xblock-sdk	openedx/xblock-sdk	MATCH
+repos/foundations.md	118	instructure/common-cartridge-viewer	instructure/common-cartridge-viewer	MATCH
+repos/foundations.md	119	QFlowLearn/qti3	QFlowLearn/qti3	MATCH
+repos/foundations.md	120	Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard	Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard	MATCH
+repos/foundations.md	121	dmitry-viskov/pylti1.3	dmitry-viskov/pylti1.3	MATCH
+repos/foundations.md	122	academic-innovation/django-lti	academic-innovation/django-lti	MATCH
+repos/foundations.md	123	ucfopen/cookiecutter-python-lti	ucfopen/cookiecutter-python-lti	MATCH
+repos/foundations.md	124	GSU-CETLOE/lti1p3Library-python	GSU-CETLOE/lti1p3Library-python	MATCH
+repos/foundations.md	125	blackboard/BBDN-lti-1p3-tool-example	blackboard/BBDN-lti-1p3-tool-example	MATCH
+repos/foundations.md	126	christophse/django-lti-tool	christophse/django-lti-tool	MATCH
+repos/foundations.md	127	lmddc-lu/microlms	lmddc-lu/microlms	MATCH
+repos/foundations.md	128	jcputney/scorm-again	jcputney/scorm-again	MATCH
+repos/foundations.md	129	ucfopen/canvasapi	ucfopen/canvasapi	MATCH
+repos/foundations.md	131	StevenACoffman/roster	StevenACoffman/roster	MATCH
+repos/foundations.md	132	swl10/pyslet	swl10/pyslet	MATCH
+repos/foundations.md	133	LJKelly3141/coursepack	LJKelly3141/coursepack	MATCH
+repos/foundations.md	134	GuanmingQiao/POLITEMALL-MCP	GuanmingQiao/POLITEMALL-MCP	MATCH
+repos/foundations.md	135	aleka07/scorm_agents	aleka07/scorm_agents	MATCH
+repos/foundations.md	148	UniTime/unitime	UniTime/unitime	MATCH
+repos/foundations.md	149	UniTime/cpsolver	UniTime/cpsolver	MATCH
+repos/foundations.md	150	GEOSOFT-GLOBAL/timetablely	GEOSOFT-GLOBAL/timetablely	MATCH
+repos/foundations.md	160	CAHLR/pyBKT	CAHLR/pyBKT	MATCH
+repos/foundations.md	161	pykt-team/pykt-toolkit	pykt-team/pykt-toolkit	MATCH
+repos/foundations.md	183	mad707/masar	mad707/masar	MATCH
+repos/foundations.md	184	clementina-tom/Personalized-Learning-Recommendation-System	clementina-tom/Personalized-Learning-Recommendation-System	MATCH
+repos/foundations.md	185	Jiaclv/error-driven-question-recommender	Jiaclv/error-driven-question-recommender	MATCH
+repos/foundations.md	186	farroshsy/hcie-system	farroshsy/hcie-system	MATCH
+repos/foundations.md	187	Aditya-Ranjan1234/NS-CausalKT-Agentic-Grader	Aditya-Ranjan1234/NS-CausalKT-Agentic-Grader	MATCH
+repos/foundations.md	188	Rishabh-bgp/vedic-math-hybrid-kt	Rishabh-bgp/vedic-math-hybrid-kt	MATCH
+repos/foundations.md	189	BhimPrasadAdhikari/lagnever-learning-knowledge-graph	BhimPrasadAdhikari/lagnever-learning-knowledge-graph	MATCH
+repos/foundations.md	203	yetanalytics/lrsql	yetanalytics/lrsql	MATCH
+repos/foundations.md	204	davidpesce/moodle-logstore_xapi	davidpesce/moodle-logstore_xapi	MATCH
+repos/foundations.md	205	openedx/openedx-aspects	openedx/openedx-aspects	MATCH
+repos/foundations.md	206	openfun/ralph	openfun/ralph	MATCH
+repos/foundations.md	207	adlnet/ADL_LRS	adlnet/ADL_LRS	MATCH
+repos/foundations.md	208	LearningLocker/learninglocker	LearningLocker/learninglocker	MATCH
+repos/foundations.md	209	agentscope-ai/OpenJudge	agentscope-ai/OpenJudge	MATCH
+repos/foundations.md	210	adlnet/xapi-spec	adlnet/xapi-spec	MATCH
+repos/foundations.md	211	peblproject/PEBL	peblproject/PEBL	MATCH
+repos/foundations.md	212	ProfeAnaEslavaEdTech/mllde-xapi	ProfeAnaEslavaEdTech/mllde-xapi	MATCH
+repos/foundations.md	218	PrairieLearn/PrairieLearn	PrairieLearn/PrairieLearn	MATCH
+repos/foundations.md	219	Submitty/Submitty	Submitty/Submitty	MATCH
+repos/foundations.md	220	ucbds-infra/otter-grader	ucbds-infra/otter-grader	MATCH
+repos/foundations.md	221	webtech-network/autograder	webtech-network/autograder	MATCH
+repos/foundations.md	222	eecs-autograder/autograder-server	eecs-autograder/autograder-server	MATCH
+repos/foundations.md	223	pawtograder/platform	pawtograder/platform	MATCH
+repos/foundations.md	224	jupyter/nbgrader	jupyter/nbgrader	MATCH
+repos/foundations.md	225	autolab/Autolab	autolab/Autolab	MATCH
+repos/foundations.md	226	autolab/Tango	autolab/Tango	MATCH
+repos/foundations.md	227	PrairieLearn/grader-python-v2	PrairieLearn/grader-python-v2	MATCH
+repos/foundations.md	228	ls1intum/Ares	ls1intum/Ares	MATCH
+repos/foundations.md	229	openedx/edx-ora2	openedx/edx-ora2	MATCH
+repos/foundations.md	230	openedx/codejail	openedx/codejail	MATCH
+repos/foundations.md	231	Udayraj123/OMRChecker	Udayraj123/OMRChecker	MATCH
+repos/foundations.md	232	dodona-edu/dolos	dodona-edu/dolos	MATCH
+repos/foundations.md	233	openedx/edx-proctoring	openedx/edx-proctoring	MATCH
+repos/foundations.md	253	dongbeixiaohuo/writing-agent	dongbeixiaohuo/writing-agent	MATCH
+repos/foundations.md	254	PGshen/thinking-map	PGshen/thinking-map	MATCH
+repos/foundations.md	255	yf-team/yf-exam-lite	yf-team/yf-exam-lite	MATCH
+repos/foundations.md	256	zijian-optics/SolaireEPDA	zijian-optics/SolaireEPDA	MATCH
+repos/foundations.md	257	BBkjdayup/BCTK	BBkjdayup/BCTK	MATCH
+repos/foundations.md	284	HostServer001/jee_mains_pyqs_data_base	HostServer001/jee_mains_pyqs_data_base	MATCH
+repos/foundations.md	285	alvaretto/r-exams_matematicas	alvaretto/r-exams_matematicas	MATCH
+repos/foundations.md	286	SettibathulaJyothi/Aritificial-Intelligence-Code-417-Skill-Education-Class-10	SettibathulaJyothi/Aritificial-Intelligence-Code-417-Skill-Education-Class-10	MATCH
+repos/foundations.md	287	zayn-anwar/NCERTTBDL	zayn-anwar/NCERTTBDL	MATCH
+repos/foundations.md	288	LiraJ07/Temario_Comipems_Crissbeck001	LiraJ07/Temario_Comipems_Crissbeck001	MATCH
+repos/foundations.md	295	steve-ongera/KNEC-Exam-Management-System	steve-ongera/KNEC-Exam-Management-System	MATCH
+repos/foundations.md	308	jupyterhub/binderhub	jupyterhub/binderhub	MATCH
+repos/foundations.md	309	nbgallery/nbgallery	nbgallery/nbgallery	MATCH
+repos/foundations.md	310	computationalmodelling/nbval	computationalmodelling/nbval	MATCH
+repos/foundations.md	311	parmentelat/nbautoeval	parmentelat/nbautoeval	MATCH
+repos/foundations.md	313	pyta-uoft/pyta	pyta-uoft/pyta	MATCH
+repos/foundations.md	325	h5p/h5p-php-library	h5p/h5p-php-library	MATCH
+repos/foundations.md	326	Khan/perseus	Khan/perseus	MATCH
+repos/foundations.md	327	learningequality/studio	learningequality/studio	MATCH
+repos/foundations.md	328	learningequality/ricecooker	learningequality/ricecooker	MATCH
+repos/foundations.md	329	learningequality/le-utils	learningequality/le-utils	MATCH
+repos/foundations.md	330	openfun/richie	openfun/richie	MATCH
+repos/foundations.md	331	openfun/marsha	openfun/marsha	MATCH
+repos/foundations.md	332	h5p/h5p-interactive-video	h5p/h5p-interactive-video	MATCH
+repos/foundations.md	333	h5p/h5p-course-presentation	h5p/h5p-course-presentation	MATCH
+repos/foundations.md	334	h5p/h5p-audio-recorder	h5p/h5p-audio-recorder	MATCH
+repos/foundations.md	335	h5p/h5p-speak-the-words	h5p/h5p-speak-the-words	MATCH
+repos/foundations.md	336	h5p/h5p-cli	h5p/h5p-cli	MATCH
+repos/foundations.md	345	docling-project/docling	docling-project/docling	MATCH
+repos/foundations.md	346	datalab-to/marker	datalab-to/marker	MATCH
+repos/foundations.md	347	opendatalab/MinerU	opendatalab/MinerU	MATCH
+repos/foundations.md	348	Unstructured-IO/unstructured	Unstructured-IO/unstructured	MATCH
+repos/foundations.md	349	SYSTRAN/faster-whisper	SYSTRAN/faster-whisper	MATCH
+repos/foundations.md	350	openai/whisper	openai/whisper	MATCH
+repos/foundations.md	356	ollama/ollama	ollama/ollama	MATCH
+repos/foundations.md	357	vllm-project/vllm	vllm-project/vllm	MATCH
+repos/foundations.md	358	BerriAI/litellm	BerriAI/litellm	MATCH
+repos/foundations.md	359	qdrant/qdrant	qdrant/qdrant	MATCH
+repos/foundations.md	360	chroma-core/chroma	chroma-core/chroma	MATCH
+repos/foundations.md	361	HKUDS/LightRAG	HKUDS/LightRAG	MATCH
+repos/foundations.md	362	infiniflow/ragflow	infiniflow/ragflow	MATCH
+repos/foundations.md	363	deepset-ai/haystack	deepset-ai/haystack	MATCH
+repos/foundations.md	364	mem0ai/mem0	mem0ai/mem0	MATCH
+repos/foundations.md	365	temporalio/temporal	temporalio/temporal	MATCH
+repos/foundations.md	376	traceloop/openllmetry	traceloop/openllmetry	MATCH
+repos/foundations.md	377	Helicone/helicone	Helicone/helicone	MATCH
+repos/foundations.md	378	openlit/openlit	openlit/openlit	MATCH
+repos/foundations.md	379	langfuse/langfuse	langfuse/langfuse	MATCH
+repos/foundations.md	390	EleutherAI/lm-evaluation-harness	EleutherAI/lm-evaluation-harness	MATCH
+repos/foundations.md	391	promptfoo/promptfoo	promptfoo/promptfoo	MATCH
+repos/foundations.md	392	HumanSignal/label-studio	HumanSignal/label-studio	MATCH
+repos/foundations.md	393	argilla-io/argilla	argilla-io/argilla	MATCH
+repos/foundations.md	394	AI-for-Education/pedagogy-benchmark	AI-for-Education/pedagogy-benchmark	MATCH
+repos/foundations.md	395	acheamponge/wassce-benchmark	acheamponge/wassce-benchmark	MATCH
+repos/foundations.md	401	jupyterhub/jupyterhub	jupyterhub/jupyterhub	MATCH
+repos/foundations.md	402	jupyterhub/zero-to-jupyterhub-k8s	jupyterhub/zero-to-jupyterhub-k8s	MATCH
+repos/foundations.md	403	jupyterhub/nbgitpuller	jupyterhub/nbgitpuller	MATCH
+repos/foundations.md	404	open-spaced-repetition/fsrs4anki	open-spaced-repetition/fsrs4anki	MATCH
+repos/foundations.md	405	appsmithorg/appsmith	appsmithorg/appsmith	MATCH
+repos/foundations.md	406	Crosstalk-Solutions/project-nomad	Crosstalk-Solutions/project-nomad	MATCH
+repos/foundations.md	407	learningequality/morango	learningequality/morango	MATCH
+repos/foundations.md	408	instructure/instructure-ui	instructure/instructure-ui	MATCH
+repos/foundations.md	409	openedx/paragon	openedx/paragon	MATCH
+repos/foundations.md	410	mitodl/ol-infrastructure	mitodl/ol-infrastructure	MATCH
+repos/foundations.md	411	apereo/java-cas-client	apereo/java-cas-client	MATCH
+repos/foundations.md	412	apereo/phpCAS	apereo/phpCAS	MATCH
+repos/foundations.md	413	jitsi/jitsi-meet	jitsi/jitsi-meet	MATCH
+repos/foundations.md	424	deeplearningturkiye/turkce-yapay-zeka-kaynaklari	deeplearningturkiye/turkce-yapay-zeka-kaynaklari	MATCH
+repos/foundations.md	425	barnamenevisi/free-resources	barnamenevisi/free-resources	MATCH
+repos/foundations.md	426	m7medVision/nakhlah.js	m7medVision/nakhlah.js	MATCH
+repos/foundations.md	470	PyThaiNLP/pythainlp	PyThaiNLP/pythainlp	MATCH
+repos/foundations.md	490	hankcs/HanLP	hankcs/HanLP	MATCH
+repos/foundations.md	491	messense/jieba-rs	messense/jieba-rs	MATCH
+repos/foundations.md	492	undertheseanlp/underthesea	undertheseanlp/underthesea	MATCH
+repos/foundations.md	493	bab2min/Kiwi	bab2min/Kiwi	MATCH
+repos/foundations.md	494	ongjin/garu	ongjin/garu	MATCH
+repos/foundations.md	495	taishi-i/nagisa	taishi-i/nagisa	MATCH
+repos/foundations.md	496	daac-tools/vibrato	daac-tools/vibrato	MATCH
+repos/foundations.md	497	ku-nlp/jumanpp	ku-nlp/jumanpp	MATCH
+repos/foundations.md	498	himkt/konoha	himkt/konoha	MATCH
+repos/foundations.md	556	ahmetaa/zemberek-nlp	ahmetaa/zemberek-nlp	MATCH
+repos/foundations.md	557	CAMeL-Lab/camel_tools	CAMeL-Lab/camel_tools	MATCH
+repos/foundations.md	558	otuncelli/turkish-stemmer-python	otuncelli/turkish-stemmer-python	MATCH
+repos/foundations.md	570	bretttolbert/verbecc	bretttolbert/verbecc	MATCH
+repos/foundations.md	612	sagorbrur/bnlp	sagorbrur/bnlp	MATCH
+repos/foundations.md	613	ufal/udpipe	ufal/udpipe	MATCH
+repos/foundations.md	614	huspacy/huspacy	huspacy/huspacy	MATCH
+repos/foundations.md	615	mikahama/uralicNLP	mikahama/uralicNLP	MATCH
+repos/foundations.md	616	ljvmiranda921/calamanCy	ljvmiranda921/calamanCy	MATCH
+repos/foundations.md	617	sefineh-ai/Amharic-Tokenizer	sefineh-ai/Amharic-Tokenizer	MATCH
+repos/foundations.md	618	flammie/omorfi	flammie/omorfi	MATCH
+repos/foundations.md	633	EthioNLP/Ethiopian-Language-Survey	EthioNLP/Ethiopian-Language-Survey	MATCH
+repos/foundations.md	634	czcorpus/kontext	czcorpus/kontext	MATCH
+repos/foundations.md	635	czcorpus/manatee-open	czcorpus/manatee-open	MATCH
+repos/foundations.md	636	czcorpus/cnc-tskit	czcorpus/cnc-tskit	MATCH
+repos/foundations.md	637	yonasab12/amharicNLP	yonasab12/amharicNLP	MATCH
+repos/foundations.md	667	inducer/relate	inducer/relate	MATCH
+repos/foundations.md	668	tutors-sdk/tutors	tutors-sdk/tutors	MATCH
+repos/foundations.md	669	haxtheweb/haxcms-php	haxtheweb/haxcms-php	MATCH
+repos/foundations.md	670	pacewisdomhq/TutorLoom	pacewisdomhq/TutorLoom	MATCH
+repos/foundations.md	671	iblai/lms	iblai/lms	MATCH
+repos/foundations.md	672	onemnemo/mnemo	onemnemo/mnemo	MATCH
+repos/foundations.md	673	SJRiz/pytogether	SJRiz/pytogether	MATCH
+repos/foundations.md	674	langx/langx	langx/langx	MATCH
+repos/foundations.md	680	Azure/Moodle	Azure/Moodle	MATCH
+repos/foundations.md	681	microsoft/o365-moodle	microsoft/o365-moodle	MATCH
+repos/foundations.md	682	learning-commons-org/knowledge-graph	learning-commons-org/knowledge-graph	MATCH
+repos/foundations.md	695	bncc-dev/bncc-dados	bncc-dev/bncc-dados	MATCH
+repos/foundations.md	696	bncc-dev/bncc-pacotes	bncc-dev/bncc-pacotes	MATCH
+repos/foundations.md	697	eumakerdev/bncc_api	eumakerdev/bncc_api	MATCH
+repos/foundations.md	698	bncc-dev/bncc-benchmark	bncc-dev/bncc-benchmark	MATCH
+repos/foundations.md	699	HuemulSolutions/Enola-AI	HuemulSolutions/Enola-AI	MATCH
+repos/foundations.md	737	ls1intum/Apollon	ls1intum/Apollon	MATCH
+repos/foundations.md	738	ls1intum/artemis-android	ls1intum/artemis-android	MATCH
+repos/foundations.md	739	ls1intum/artemis-ios	ls1intum/artemis-ios	MATCH
+repos/foundations.md	740	ls1intum/artemis-ansible-collection	ls1intum/artemis-ansible-collection	MATCH
+repos/foundations.md	741	ls1intum/standardized-competency-catalog	ls1intum/standardized-competency-catalog	MATCH
+repos/foundations.md	751	UniversityOfHelsinkiCS/sis-importer	UniversityOfHelsinkiCS/sis-importer	MATCH
+repos/foundations.md	752	UniversityOfHelsinkiCS/suoritustarkistin	UniversityOfHelsinkiCS/suoritustarkistin	MATCH
+repos/foundations.md	753	UniversityOfHelsinkiCS/sis-ns-manager	UniversityOfHelsinkiCS/sis-ns-manager	MATCH
+repos/foundations.md	754	KTH/canvas-api	KTH/canvas-api	MATCH
+repos/foundations.md	755	AaltoGIS/classroom-grader	AaltoGIS/classroom-grader	MATCH
+repos/foundations.md	756	kyoto-u/comfortable-sakai	kyoto-u/comfortable-sakai	MATCH
+repos/foundations.md	757	cilt-uct/sakai-skin-vula	cilt-uct/sakai-skin-vula	MATCH
+repos/foundations.md	758	cilt-uct/tsugi-migrate-to-brightspace	cilt-uct/tsugi-migrate-to-brightspace	MATCH
+repos/foundations.md	759	cilt-uct/tsugi-request-gradebook-upload	cilt-uct/tsugi-request-gradebook-upload	MATCH
+repos/foundations.md	769	cmu-db/bustub	cmu-db/bustub	MATCH
+repos/foundations.md	770	RWTH-OS/eduOS-rs	RWTH-OS/eduOS-rs	MATCH
+repos/foundations.md	791	openwallet-foundation/multipaz	openwallet-foundation/multipaz	MATCH
+repos/foundations.md	792	eu-digital-identity-wallet/eudi-lib-android-wallet-core	eu-digital-identity-wallet/eudi-lib-android-wallet-core	MATCH
+repos/foundations.md	793	eu-digital-identity-wallet/eudi-lib-jvm-openid4vci-kt	eu-digital-identity-wallet/eudi-lib-jvm-openid4vci-kt	MATCH
+repos/foundations.md	794	eu-digital-identity-wallet/eudi-srv-pid-issuer	eu-digital-identity-wallet/eudi-srv-pid-issuer	MATCH
+repos/foundations.md	795	procivis/one-core	procivis/one-core	MATCH
+repos/foundations.md	796	procivis/one-wallet	procivis/one-wallet	MATCH
+repos/foundations.md	797	Sphereon-Opensource/OID4VC	Sphereon-Opensource/OID4VC	MATCH
+repos/foundations.md	798	a-sit-plus/vck	a-sit-plus/vck	MATCH
+repos/foundations.md	799	wwWallet/wallet-frontend	wwWallet/wallet-frontend	MATCH
+repos/foundations.md	800	impierce/openid4vc	impierce/openid4vc	MATCH
+repos/foundations.md	801	Lumoin/Verifiable	Lumoin/Verifiable	MATCH
+repos/foundations.md	869	GibbonEdu/core	GibbonEdu/core	MATCH
+repos/foundations.md	872	overhangio/tutor	overhangio/tutor	MATCH
+repos/foundations.md	873	odoo/odoo	odoo/odoo	MATCH
+repos/foundations.md	875	THU-MAIC/OpenMAIC	THU-MAIC/OpenMAIC	MATCH
+repos/foundations.md	876	HKUDS/DeepTutor	HKUDS/DeepTutor	MATCH
+repos/foundations.md	915	trycua/cua	trycua/cua	MATCH
+repos/foundations.md	916	freeCodeCamp/freeCodeCamp	freeCodeCamp/freeCodeCamp	MATCH
+repos/foundations.md	917	terracotta-education/terracotta	terracotta-education/terracotta	MATCH
+repos/foundations.md	918	lplnufpi/essay-br	lplnufpi/essay-br	MATCH
+repos/foundations.md	919	EduardoKrausME/moodle-local_mcp	EduardoKrausME/moodle-local_mcp	MATCH
+repos/foundations.md	920	kaveheng/GenAi-in-education	kaveheng/GenAi-in-education	MATCH
+repos/foundations.md	951	tristcoil/hanabira.org	tristcoil/hanabira.org	MATCH
+repos/foundations.md	952	aiktb/furiganamaker	aiktb/furiganamaker	MATCH
+repos/foundations.md	953	jamsinclair/open-anki-jlpt-decks	jamsinclair/open-anki-jlpt-decks	MATCH
+repos/foundations.md	954	davidluzgouveia/kanji-data	davidluzgouveia/kanji-data	MATCH
+repos/foundations.md	955	AnchorI/jlpt-kanji-dictionary	AnchorI/jlpt-kanji-dictionary	MATCH
+repos/foundations.md	956	StudentSuite/awesome-study-resources	StudentSuite/awesome-study-resources	MATCH
+repos/foundations.md	957	SpiderIkun/korean-study-web	SpiderIkun/korean-study-web	MATCH
+repos/foundations.md	958	JUPASCal/JUPASCal.github.io	JUPASCal/JUPASCal.github.io	MATCH
+repos/foundations.md	959	milesberry/networx	milesberry/networx	MATCH
+repos/foundations.md	960	nsip/nias2	nsip/nias2	MATCH
+repos/foundations.md	961	lerlerchan/Prompt-libraries-for-Malaysia-Educators	lerlerchan/Prompt-libraries-for-Malaysia-Educators	MATCH
+repos/foundations.md	962	l-yohai/suneung	l-yohai/suneung	MATCH
+repos/foundations.md	963	fattaillabs/mogo-print	fattaillabs/mogo-print	MATCH
+repos/foundations.md	978	hasensaramii977-cpu/Grade-12-National-Exam-Training-Model	hasensaramii977-cpu/Grade-12-National-Exam-Training-Model	MATCH
+repos/foundations.md	979	Nugestudent2026/EdTech	Nugestudent2026/EdTech	MATCH
+repos/foundations.md	1076	Lumieducation/H5P-Nodejs-library	Lumieducation/H5P-Nodejs-library	MATCH
+repos/foundations.md	1077	h5p/h5p-editor-php-library	h5p/h5p-editor-php-library	MATCH
+repos/foundations.md	1078	Lumieducation/Lumi	Lumieducation/Lumi	MATCH
+repos/foundations.md	1114	adaptlearning/adapt_framework	adaptlearning/adapt_framework	MATCH
+repos/foundations.md	1115	adaptlearning/adapt_authoring	adaptlearning/adapt_authoring	MATCH
+repos/foundations.md	1116	course-code-framework/coursecode	course-code-framework/coursecode	MATCH
+repos/foundations.md	1117	course-code-framework/coursecode-desktop	course-code-framework/coursecode-desktop	MATCH
+repos/foundations.md	1118	QFlowLearn/qflow-author	QFlowLearn/qflow-author	MATCH
+repos/foundations.md	1137	bcgov/SIMS	bcgov/SIMS	MATCH
+repos/foundations.md	1138	nomadicjosh/etsis	nomadicjosh/etsis	MATCH
+repos/foundations.md	1139	opensacorg/learning-blocks	opensacorg/learning-blocks	MATCH
+repos/foundations.md	1160	ctrlaltwill/LearnKit	ctrlaltwill/LearnKit	MATCH
+repos/foundations.md	1161	kirill-markin/flashcards-open-source-app	kirill-markin/flashcards-open-source-app	MATCH
+repos/foundations.md	1162	pieralukasz/true-recall	pieralukasz/true-recall	MATCH
+repos/foundations.md	1180	Apereo-Learning-Analytics-Initiative/OpenLRW	Apereo-Learning-Analytics-Initiative/OpenLRW	MATCH
+repos/foundations.md	1181	Apereo-Learning-Analytics-Initiative/OpenLRS	Apereo-Learning-Analytics-Initiative/OpenLRS	MATCH
+repos/foundations.md	1182	rwthanalytics/moodle-local_learning_analytics	rwthanalytics/moodle-local_learning_analytics	MATCH
+repos/foundations.md	1183	marceloschmitt/moodle-block_analytics_graphs	marceloschmitt/moodle-block_analytics_graphs	MATCH
+repos/foundations.md	1184	kirstykitto/CLAtoolkit	kirstykitto/CLAtoolkit	MATCH
+repos/foundations.md	1185	sandboxnu/graduatenu	sandboxnu/graduatenu	MATCH
+repos/foundations.md	1186	Longhorn-Developers/Degree-Audit-Plus	Longhorn-Developers/Degree-Audit-Plus	MATCH
+repos/foundations.md	1187	chtzvt/PyEdsby	chtzvt/PyEdsby	MATCH
+repos/foundations.md	1188	sinothando/student-early-warning-system	sinothando/student-early-warning-system	MATCH
+repos/foundations.md	1224	parthdhanani/scorm-kit	parthdhanani/scorm-kit	MATCH
+repos/foundations.md	1225	parthdhanani/storycraft	parthdhanani/storycraft	MATCH
+repos/foundations.md	1226	wonmortech/sanad	wonmortech/sanad	MATCH
+repos/foundations.md	1227	parler-haut-interagir-librement/open-badges-bundle	parler-haut-interagir-librement/open-badges-bundle	MATCH
+repos/foundations.md	1228	parler-haut-interagir-librement/certificates-bundle	parler-haut-interagir-librement/certificates-bundle	MATCH
+repos/foundations.md	1229	missing-elements/h5p-toolkit	missing-elements/h5p-toolkit	MATCH
+repos/foundations.md	1230	jonsorr/D2L_Brightspace_APIs	jonsorr/D2L_Brightspace_APIs	MATCH
+repos/foundations.md	1231	openpatch/bitflow	openpatch/bitflow	MATCH
+repos/foundations.md	1232	mrlvsb/kelvin	mrlvsb/kelvin	MATCH
+repos/foundations.md	1233	artevelde-uas/canvas-lms-app	artevelde-uas/canvas-lms-app	MATCH
+repos/foundations.md	1234	dbosk/canvaslms	dbosk/canvaslms	MATCH
+repos/foundations.md	1244	10kH/MisconceptDialogue	10kH/MisconceptDialogue	MATCH
+repos/foundations.md	1246	online-ml/river	cognitive-engineering-lab/mdbook-quiz	WRONG-SLUG
+repos/foundations.md	1247	cognitive-engineering-lab/mdbook-quiz	david-04/quiz-mate	WRONG-SLUG
+repos/foundations.md	1248	david-04/quiz-mate	cmlonder/notebooklm-chunker	WRONG-SLUG
+repos/foundations.md	1249	cmlonder/notebooklm-chunker	mcgrizzz/Yomine	WRONG-SLUG
+repos/foundations.md	1251	mcgrizzz/Yomine	14flavius/GradeShelf	WRONG-SLUG
+repos/foundations.md	1252	mistval/kotoba	houselearning/home	WRONG-SLUG
+repos/foundations.md	1253	14flavius/GradeShelf	(no github slug on this line)	NO-SLUG
+repos/foundations.md	1254	houselearning/home	(no github slug on this line)	NO-SLUG
+repos/foundations.md	1450	crownpku/Awesome-Chinese-NLP	(no github slug on this line)	NO-SLUG
+repos/foundations.md	1451	wannaphong/Awesome-Lao-NLP	(no github slug on this line)	NO-SLUG
+repos/foundations.md	1457	taishi-i/awesome-japanese-nlp-resources	(no github slug on this line)	NO-SLUG
+repos/foundations.md	1458	bilalabic/awesome-turkish-datasets	(no github slug on this line)	NO-SLUG
+repos/foundations.md	1459	JousiaPiha/awesome-finnish-nlp	(no github slug on this line)	NO-SLUG
+repos/foundations.md	1460	tuanone123/awesome-vietnamese-llm-dataset	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	40	moodle/moodle	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	41	openedx/openedx-platform	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	42	instructure/canvas-lms	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	43	ls1intum/Artemis	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	44	learningequality/kolibri	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	45	chamilo/chamilo-lms	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	46	ILIAS-eLearning/ILIAS	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	47	sakaiproject/sakai	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	48	OpenOLAT/OpenOLAT	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	49	oppia/oppia	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	50	frappe/lms	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	51	Selleo/mentingo	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	52	pupilfirst/pupilfirst	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	53	overhangio/tutor	moodle/moodle	WRONG-SLUG
+verticals/solutions.md	54	youufis/SmartKBS	openedx/openedx-platform	WRONG-SLUG
+verticals/solutions.md	67	GuanmingQiao/POLITEMALL-MCP	youufis/SmartKBS	WRONG-SLUG
+verticals/solutions.md	68	andrsnrua/universidad-pacifico-mcp	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	69	bolgerru/blackboard-mcp	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	70	cculb/schoolconnect	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	106	academico-sis/academico	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	107	Gego-K12/gegok12	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	108	francoisjacquet/rosariosis	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	109	GibbonEdu/core	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	110	OS4ED/openSIS-Classic	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	111	portabilis/i-educar	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	112	openeducat/openeducat_erp	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	113	odoo/odoo	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	114	frappe/education	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	115	UniTime/unitime	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	116	GEOSOFT-GLOBAL/timetablely	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	117	portabilis/i-diario	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	118	Antonio-Neves/Gestao-Escolar	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	119	bcgov/SIMS	academico-sis/academico	WRONG-SLUG
+verticals/solutions.md	120	nomadicjosh/etsis	Gego-K12/gegok12	WRONG-SLUG
+verticals/solutions.md	121	opensacorg/learning-blocks	francoisjacquet/rosariosis	WRONG-SLUG
+verticals/solutions.md	157	AnubisLMS/Anubis	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	158	Submitty/Submitty	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	159	PrairieLearn/PrairieLearn	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	160	autolab/Autolab	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	161	pawtograder/platform	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	171	DSpace/DSpace	Submitty/Submitty	WRONG-SLUG
+verticals/solutions.md	172	Koha-Community/Koha	PrairieLearn/PrairieLearn	WRONG-SLUG
+verticals/solutions.md	173	pkp/ojs	autolab/Autolab	WRONG-SLUG
+verticals/solutions.md	179	jitsi/jitsi-meet	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	180	bigbluebutton/bigbluebutton	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	181	opencast/opencast	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	182	OpenVidu/openvidu	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	183	netless-io/flat	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	184	openfun/marsha	DSpace/DSpace	WRONG-SLUG
+verticals/solutions.md	194	jupyterhub/binderhub	opencast/opencast	WRONG-SLUG
+verticals/solutions.md	195	jupyterhub/jupyterhub	OpenVidu/openvidu	WRONG-SLUG
+verticals/solutions.md	196	nbgallery/nbgallery	netless-io/flat	WRONG-SLUG
+verticals/solutions.md	210	ankitects/anki	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	213	CTFd/CTFd	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	214	Udayraj123/OMRChecker	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	215	open-scratch/teaching-open	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	216	migueldsants/OpENEM	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	217	UnitedOpen-Source/microHelium	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	226	iiab/iiab	CTFd/CTFd	WRONG-SLUG
+verticals/solutions.md	227	kiwix/kiwix-tools	Udayraj123/OMRChecker	WRONG-SLUG
+verticals/solutions.md	228	Crosstalk-Solutions/project-nomad	open-scratch/teaching-open	WRONG-SLUG
+verticals/solutions.md	230	elimu-ai/webapp	UnitedOpen-Source/microHelium	WRONG-SLUG
+verticals/solutions.md	231	SalehGNUTUX/GT-MISHKATKIDS	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	237	apereo/cas	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	238	apereo/phpCAS	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	239	apereo/java-cas-client	iiab/iiab	WRONG-SLUG
+verticals/solutions.md	240	openedx/openedx-aspects	kiwix/kiwix-tools	WRONG-SLUG
+verticals/solutions.md	241	openfun/richie	Crosstalk-Solutions/project-nomad	WRONG-SLUG
+verticals/solutions.md	243	appsmithorg/appsmith	elimu-ai/webapp	WRONG-SLUG
+verticals/solutions.md	255	moodlehq/moodleapp	jupyterhub/jupyterhub	WRONG-SLUG
+verticals/solutions.md	256	openedx/openedx-app-android	appsmithorg/appsmith	WRONG-SLUG
+verticals/solutions.md	257	openedx/openedx-app-ios	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	258	oppia/oppia-android	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	273	kamlendras/OpenProctor	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	274	SriSatyaLokesh/pariksha	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	275	sudosylabs/proctor	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	276	amaanwarsi/Proctora	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	277	code-by-abrar/Online-Proctoring-system	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	278	ganesh-786/Proctor	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	300	tanzir71/tinyproctorjs	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	301	SHUBHJAIN139/Local-Exam-Proctoring-Engine	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	302	Aryansh909/Examshield-AI	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	320	withmarbleapp/os-taxonomy	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	321	DeanChensj/jiangshan-map	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	374	pacewisdomhq/TutorLoom	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	375	iblai/lms	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	376	tutors-sdk/tutors	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	377	haxtheweb/haxcms-php	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	378	inducer/relate	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	379	thm-mni-ii/feedbacksystem	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	380	SJRiz/pytogether	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	388	learnhouse/learnhouse	iblai/lms	WRONG-SLUG
+verticals/solutions.md	389	codelitdev/courselit	tutors-sdk/tutors	WRONG-SLUG
+verticals/solutions.md	390	claroline/Claroline	haxtheweb/haxcms-php	WRONG-SLUG
+verticals/solutions.md	391	elmsln/elmsln	inducer/relate	WRONG-SLUG
+verticals/solutions.md	392	xiaochong0302/course-tencent-cloud	thm-mni-ii/feedbacksystem	WRONG-SLUG
+verticals/solutions.md	393	Automattic/sensei	SJRiz/pytogether	WRONG-SLUG
+verticals/solutions.md	394	gocodebox/lifterlms	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	395	ucfopen/UDOIT	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	396	microsoft/o365-moodle	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	402	CaviraOSS/PageLM	codelitdev/courselit	WRONG-SLUG
+verticals/solutions.md	403	chadyi/StudyOnTV	claroline/Claroline	WRONG-SLUG
+verticals/solutions.md	404	LearnPress/learnpress	elmsln/elmsln	WRONG-SLUG
+verticals/solutions.md	405	Azure/Moodle	xiaochong0302/course-tencent-cloud	WRONG-SLUG
+verticals/solutions.md	415	tep00018/LEA-platform	CaviraOSS/PageLM	WRONG-SLUG
+verticals/solutions.md	416	Noggin-Labs/Noggin	chadyi/StudyOnTV	WRONG-SLUG
+verticals/solutions.md	475	uemanet/harpia	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	476	ahamana/canvas-lms-docker	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	539	apache/openmeetings	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	540	Open-TutorAi/open-tutor-ai-CE	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	541	classroomio/classroomio	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	542	FenixEdu/fenixedu-academic	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	543	turnkeylinux-apps/canvas	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	603	tristcoil/hanabira.org	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	604	DeJavi08/cat-snbt-skd	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	605	SISUBEN/DSE-ICT-Master	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	606	Goodbilly/BillyStreet-HKDSE-Math-Mock-Platform	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	626	Kirchhoff-dev/cbt-app-updates	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	627	idrismukthar/TTL_CBT	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	628	Toochidennis/cbt-app	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	629	Dramoscuello/simic	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	733	RohanMuppa/brightspace-mcp-server	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	753	adaptlearning/adapt_authoring	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	754	course-code-framework/coursecode	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	767	QkeleQ10/Study-Tools	course-code-framework/coursecode	WRONG-SLUG
+verticals/solutions.md	790	openbadgefactory/salava	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	791	gdgguadalajara/open-badges-platform	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	792	totara/openbadges	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	793	1EdTech/openbadges-specification	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	883	ahmetaa/zemberek-nlp	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	884	CAMeL-Lab/camel_tools	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	906	wannaphong/LaoNLP	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	907	ufal/udpipe	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	908	mikahama/uralicNLP	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	909	ljvmiranda921/calamanCy	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	910	sagorbrur/bnlp	(no github slug on this line)	NO-SLUG
+verticals/solutions.md	911	sefineh-ai/Amharic-Tokenizer	(no github slug on this line)	NO-SLUG

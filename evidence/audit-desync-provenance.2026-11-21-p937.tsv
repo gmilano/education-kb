@@ -1,0 +1,6 @@
+state	commit	audit_rows_matching	total	pct	note
+p928	2e5e023	669	669	100.0	EXACT - the shelf state the p930 audit was actually run against
+p928-checkpoint	26d922d	397	669	59.3	
+p929	2d377ec	406	669	60.7	concurrent discovery pass added rows
+p930 (own commit)	133f98d	291	669	43.5	the audit was ALREADY 56.5pct mispaired when it was committed
+HEAD (post-merge)	dc977ef	277	669	41.4	merge with p929 added only ~2pct further drift

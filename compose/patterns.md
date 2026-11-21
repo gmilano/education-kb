@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-19
+updated: 2026-11-21
 ---
 
 # Compose patterns — education
@@ -4280,3 +4280,72 @@ false**; a byte-read classifier produced **6, of which 5 were false**; `928-G1` 
 32 false**. 🟢 **One real finding survived all of it** (`nengdou-ai-review-helper-web`, Apache-2.0 →
 MulanPSL-2.0, payload replaced). **Use the gate to produce a shortlist of rows to read by hand, and
 never to publish a correction unread.**
+
+## P59 — The institutional governance layer: the deliverable that *87% adoption and 26% strategy* actually implies — added `p937`
+
+🔵 **Why this pattern exists.** Every other recipe in this file builds a *capability*. `p937`'s
+regional legs say the binding constraint in 2026 is not capability (`T76`): UNESCO IESALC reports
+**87% of LATAM higher-education institutions using AI and 26% with a formal strategy**; in Brazil
+**22% of school administrators** report school AI guidelines; in North America **134 bills across 31
+states** and a **dated** policy cascade (North Carolina model policy **2026-12-31**, district
+policies **2027-06-30**); in EMEA the **EU AI Act Article 4 AI-literacy duty has bound institutions
+since February 2025**. 🟢 **The client already has the tools and lacks the defensible wrapper around
+them.** This pattern is that wrapper, and it is largely the *same build* in all four regions, which
+is what makes it worth productising rather than bespoking.
+
+🟢 **It is also the pattern most robust to the one thing this base cannot see.** `937-F7` records
+that no primary legal text is reachable from this environment, and the EU's Annex III commencement
+date is **in dispute (2026-08-02 vs 2027-12-02)**. Every component below is driven by a *requirement
+that is not in dispute* — consent, an age gate, a human-decision record, an audit trail, literacy
+evidence — so the build does not move when the date is settled.
+
+### The stack, all verified on this shelf
+
+| Layer | Repo | Grant | Why this one |
+|---|---|---|---|
+| **Identity + consent state** | `apereo/java-cas-client` | 🟡 **Apache-2.0 + JA-SIG BSD, conjunctive — two notice obligations** | Consent and opt-out are meaningless unless bound to the institution's real SSO identity, which in HE is usually CAS or SAML |
+| **Policy enforcement point** | `BerriAI/litellm` | 🟡 **MIT — exclude `litellm/enterprise/`** | One gateway in front of every model. The **age gate** (NY A 9190's grade-9 floor) and **parental opt-out** (Alabama H.B. 1227) are enforced here **once**, not re-implemented per application |
+| **Audit trail — default** | `traceloop/openllmetry` | 🟢 **Apache-2.0** | OpenTelemetry-native, so traces land in the observability stack the client **already runs**. Nothing new to operate, which is what makes it survive handover |
+| **Audit trail — when a purpose-built trace UI is wanted** | `langfuse/langfuse` | 🔴 **MIT core — exclude `ee/`, `web/src/ee/`, `worker/src/ee/`, `packages/shared/src/server/ee/`.** Copyright now reads **ClickHouse, Inc.** | Richer LLM-specific UI; needs licence diligence before it enters a deliverable, and the permissive grant covers less than the repository |
+| **Regression gate** | `promptfoo/promptfoo` | 🟢 **MIT** | The numeric before/after. A governance claim with no baseline is a policy document, not a control |
+| **LMS seam — ship the tool in** | **LTI 1.3** into Moodle (**GPL-3.0**) / Open edX (**AGPL-3.0**) | 🟢 tool stays a **separate work** | Integrate, never fork: the whole copyleft problem disappears at the LTI boundary |
+| **LMS seam — expose the LMS to the agent** | `G36maid/moodle-mcp` | 🟢 **MIT** | Read-**write** Moodle MCP. Use **both** seams — LTI ships your tool into the LMS, MCP exposes the LMS to your agent |
+| **AI-literacy evidence (EU Art. 4)** | **Open Badges 3.0** | 🔴 **implement from the published 1EdTech specification** | Art. 4 requires an institution to *show* staff and student AI literacy. A verifiable credential is the natural artefact. 🔴 **`1EdTech/openbadges-specification` carries no grant at all — re-confirmed by byte-read `p937`. Read the standard; do not vendor the repo's files.** |
+
+### Wiring
+
+1. **CAS/SAML in front, LiteLLM behind it.** Every model call carries a resolved institutional
+   identity. Consent, opt-out and age are attributes on that identity, evaluated at the gateway.
+2. **Deny by default at the gateway for consequential actions.** Grading and discipline outputs are
+   marked `requires_human_decision`. The gateway will emit them only with a reviewer id attached —
+   which is what makes Alabama's *"not the primary basis for grading or discipline"* an
+   architectural property instead of a policy promise.
+3. **OpenLLMetry spans on every call**, exported to the client's existing collector. The span is
+   the audit record: prompt, model, consent state, reviewer id, outcome.
+4. **promptfoo in CI** against a fixed item set. Publish the delta per release; this is the
+   *"proven instructional benefit"* evidence the 2026 channel keeps asking for.
+5. **Ship the learner-facing tool over LTI 1.3**; pull roster, assignment and gradebook context over
+   `moodle-mcp` where the client runs Moodle.
+6. **Issue an Open Badge** on completion of the institution's AI-literacy path. Art. 4 discharged,
+   with evidence.
+
+### Licence posture of the result
+
+🟢 **A closed, branded derivative is clean**, provided three exclusions hold: drop
+`litellm/enterprise/`, drop every `ee/` path if Langfuse is used, and keep the LMS integration at
+the **LTI/MCP boundary rather than forking Moodle or Open edX**. 🟡 Carry **two** attribution
+notices for `java-cas-client`, not one. 🔴 **If `opendatalab/MinerU` is anywhere in the content
+pipeline, its §2 applies to this deliverable**: an online service built on MinerU must *"clearly and
+prominently"* disclose that MinerU is used, and §3 terminates the grant automatically on breach
+(corrected `p937`). That disclosure requirement is incompatible with a silent white-label, so decide
+it at design time, not at launch.
+
+### Build estimate
+
+**6–9 weeks** for the gateway, consent model, audit trail and CI gate against one LMS, assuming the
+client's SSO exists and is reachable — it usually does, and that assumption is the main schedule
+risk. **Add 2–3 weeks** per additional LMS seam, and **2 weeks** for the Open Badges issuance path.
+🔵 **The compliance-remediation variant is shorter and more urgent**: in **Vietnam** (Law on AI in
+force **2026-03-01**, education named high-risk, transition **already expired 2026-06-30**) and
+**South Korea** (AI Basic Act in force **2026-01-22**) this is retrofitted onto a *running*
+deployment, which is mostly steps 1–3 and lands in **4–6 weeks**.

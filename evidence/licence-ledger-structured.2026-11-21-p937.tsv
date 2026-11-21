@@ -1,0 +1,613 @@
+slug	spdx	confidence	method	rows	files	prose_cell_excerpt
+001kenji/KCSE-predictor		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	Apache-2.0 (11,357 B · `c71d239df917`)
+10kH/MisconceptDialogue		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**MIT** (`LICENSE@main`, 1,129 B, `sha256₁₂ 1d987d9bdc2a`)
+14flavius/GradeShelf		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟢 **MIT** (`LICENSE@main`, 1,070 B, `sha256₁₂ a0fab3c5090c`)
+1EdTech/openbadges-specification	none	byte-read-p937	raw.githubusercontent HEAD/none	1	verticals/solutions.md	🔴 **UNGRANTED AT FOUR LAYERS — re-probed `p917`.** No licence file (16 names × 3 branches), no grant header, no manifest field, an
+1EdTech/openbadges-validator-core		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	Apache-2.0
+3yangyang9/DeepTutor-AILearning		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	Apache-2.0 (11,407 B, `596087a7f098`)
+AI-for-Education/pedagogy-benchmark		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	agents/top.md,repos/foundations.md	MIT
+ALIYUAAM10/NAIJASCHOLAR		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (1,082 B · `6fd3e72cd64d`)
+AaltoGIS/classroom-grader		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	BSD-3-Clause
+Aaryan-Kapoor/degreeworks-cli		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	🟢 **MIT**
+Aditya-Ranjan1234/NS-CausalKT-Agentic-Grader		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**MIT** (`main/LICENSE`, 1,056 B, `sha256₁₂ 1126322e2cc8`)
+AkshitIreddy/AI-Powered-Video-Tutorial-Generator		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (1,069 B, `6c87c23cbf5c`)
+AlphaNerdFx/Tango		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (byte-read `1,070 B`)
+AnchorI/jlpt-kanji-dictionary		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**MIT** — `main/LICENSE`, 1,069 B, `sha256₁₂ d0ce81237400`
+Antonio-Neves/Gestao-Escolar		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	MIT
+AnubisLMS/Anubis		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	**MIT**
+Apereo-Learning-Analytics-Initiative/OpenLRS	ECL-2.0	byte-read-p937	raw.githubusercontent HEAD/LICENSE	1	repos/foundations.md	🟢 ECL-2.0
+Apereo-Learning-Analytics-Initiative/OpenLRW	ECL-2.0	byte-read-p937	raw.githubusercontent HEAD/LICENSE	1	repos/foundations.md	🟢 **ECL-2.0** (field says `NOASSERTION`)
+Apurba94/autograder-py		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (1,071 B, `2d870f5fb212`)
+AriusKing/edubot-backend		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (byte-read `p910`, `LICENSE@main`, 1,065 B, `sha256₁₂ c115ae89efc8`)
+ArnaudGuiovanna/tutor-mcp		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT
+ArushJain-697/namma-ai		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (byte-read `main/LICENSE`, 1,095 B, `sha256₁₂ 7bbee3d2e00e`)
+Aryansh909/Examshield-AI		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	agents/top.md,verticals/solutions.md	**MIT** (1,070 B, `75107b398587`)
+AsadullahAlMunib/MathMind		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	Apache-2.0 (byte-read `11,351 B`)
+Automattic/sensei		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	GPL-2.0 (18,091 B, `f9c375a1be4a`)
+AyusmanNanda/college-management-system		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT (byte-read `1,090 B`)
+Azure/Moodle		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT (1,090 B, `91f7258203fd`)
+BBkjdayup/BCTK		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT (`main/LICENSE`, 1,065 B, `sha256₁₂ 7208c5cd9088`)
+BaijayantaRoy/bandup		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (byte-read `p910`, `LICENSE@main`, 1,071 B, `sha256₁₂ c4411a4cb83b`)
+BerriAI/litellm	MIT	byte-read-p937	raw.githubusercontent HEAD/LICENSE	1	repos/foundations.md	**MIT, except `litellm/enterprise/`** (byte-verified p891: the root `LICENSE` grants MIT to everything *outside* `litellm/enterpri
+Berserk-hub150/moodle-ai-skill-navigator		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	🔴 **GPL-3.0** (`main/LICENSE`, 35,153 B, `sha256₁₂ ebdc0e5b7005`)
+BhimPrasadAdhikari/lagnever-learning-knowledge-graph		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	"**MIT** (`main/LICENSE`, 1,094 B, `sha256₁₂ 3d54cdda6168`, *""Copyright (c) 2026 Lagnever Technologies Private Limited""*)"
+CAHLR/OATutor		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (1,105 B, byte-read `p927`)
+CAHLR/pyBKT		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	"**MIT** (`LICENSE@master`, 1,132 B, `sha256₁₂ ad0c7a38bf01`, *""Copyright (c) 2021 Computational Approaches to Human Learning""*)"
+CAMeL-Lab/camel_tools		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	🟢 MIT — 1,087 B, `sha256₁₂ 7a3ef160e895`
+CREARED-EDU-CO/GenPrompt-Pre-ICFES-11		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**AGPL-3.0** (byte-read `main/LICENSE`, 34,523 B)
+CTFd/CTFd		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	Apache-2.0
+CaioCastro1/usp-mcp		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT
+CarlosEkRaigoza/privacy-preserving-educational-telemetry		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (1,117 B, `760d2ca71ae9`)
+CaviraOSS/PageLM	MIT	byte-read-p937	raw.githubusercontent HEAD/LICENSE.md	1	agents/top.md	"**""PageLM Community License""** (8,562 B, `20a39a9c5993`)"
+ChangjinHe2000/one-tutor		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (byte-read `main/LICENSE`, 1,071 B, `sha256₁₂ 68a1316b6627`)
+Citolab/qti-components		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	GPL-3.0
+Codexia-afk/PDFtoAudio		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	agents/top.md,verticals/solutions.md	MIT (byte-read `1,067 B`)
+CogitoNTNU/TutorAI		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** `1,140 B`
+Crosstalk-Solutions/project-nomad		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	Apache-2.0
+Cvmcosta/ltijs		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	Apache-2.0
+DSpace/DSpace		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	BSD-3-Clause
+DaRL-GenAI/instructional_agents		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (`LICENSE@HEAD`, 1,066 B, byte-read p900)
+DeJavi08/cat-snbt-skd		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	🟢 **MIT** — `main/LICENSE`, 1,077 B, `sha256₁₂ e6e7edb3e2b8`
+DeanChensj/jiangshan-map		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	GPL-3.0
+DeepBlue-dot/Ethio-Adaptive-Learning		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	Apache-2.0 (11,357 B · `c71d239df917`)
+DerickxP/Learn-Quest-Serious-Game		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (1,071 B, `da1aeec572db`)
+Dhruv-Cmds/University-Management		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT (byte-read `1,067 B`)
+DigitalHarborFoundation/llm-math-education		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (`main/LICENSE`, 1,073 B)
+DozenTwelve/Papermorph		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT
+Dramoscuello/simic		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	🟢 Apache-2.0 (11,357 B · `c71d239df917`)
+ECNU/EduWork		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MulanPSL-2.0
+ERRRC/kaogong-shuati		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (1,061 B, `b7722af28e18`)
+Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	Apache-2.0
+Ed-Fi-Alliance-OSS/Ed-Fi-ODS		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	Apache-2.0
+EduardoKrausME/moodle-local_mcp		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🔴 **GPL-3.0** (`35,149 B`)
+EleutherAI/lm-evaluation-harness		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT
+ElnatanAnbelu/ethioexam		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (1,072 B · `fba331165d0b`)
+EthioNLP/Ethiopian-Language-Survey		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟢 **MIT** — 1,103 B, `sha256₁₂ e268928bea59` (`search` agrees)
+Faixiang/Moodle-MCP		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	agents/top.md,repos/foundations.md	MIT
+Fazmin/AILearningGuide		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (`main/LICENSE`, 1,081 B, `sha256₁₂ e29ef713b542`)
+FenixEdu/fenixedu-academic		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	🔴 **LGPL-3.0** (`7,652 B`)
+G36maid/moodle-mcp		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	agents/top.md,repos/foundations.md	MIT
+GEOSOFT-GLOBAL/timetablely		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	MIT
+GSU-CETLOE/lti1p3Library-python		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**MIT** — byte-read `p917` (`LICENSE@main`, 1,083 B)
+GarethManning/education-agent-skills	CC-BY-SA-4.0	byte-read-p937	raw.githubusercontent HEAD/LICENSE	1	agents/top.md	🔴 **CC BY-SA 4.0** `1,230 B`
+Gego-K12/gegok12	MIT	byte-read-p937	raw.githubusercontent HEAD/LICENSE	1	verticals/solutions.md	MIT
+Gehiner/KodlandFaster		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (1,064 B, `61c63d0a04e1`)
+GeminiLight/gen-mentor		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**CC0-1.0**
+Gestusition/Quiz-LMS		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	MIT (byte-read `1,068 B`)
+GibbonEdu/core		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	GPL-3.0
+GitHubDaily/AI-Course-Generator		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (`main/LICENSE`, 1,068 B, `sha256₁₂ 5297e38c125c`)
+Goodbilly/BillyStreet-HKDSE-Math-Mock-Platform		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	🟡 **MIT grant text, 1,059 B, `sha256₁₂ cd35957e7f35` — but the copyright holder line reads `GitHub, Inc.`** (`910-G2`)
+Group-Active-IA/Skill-Moodle		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** `1,079 B`
+GuanmingQiao/POLITEMALL-MCP		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	**MIT** — byte-read `p907` (`LICENSE@main`, 1,070 B)
+GuilhermeScarpini/agente-bncc-professores		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** `1,074 B`
+HKUDS/DeepTutor		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	Apache-2.0
+HKUDS/LightRAG		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT
+Helicone/helicone		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	Apache-2.0
+HostServer001/jee_mains_pyqs_data_base		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟢 **MIT** (1,070 B · `ad8519669214`)
+HowieWang1121/Socratic-Education-System		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT
+HuemulSolutions/Enola-AI		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**BSD-3-Clause** (`main/LICENSE`, 1,503 B)
+HumanSignal/label-studio		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	Apache-2.0
+HyNuwa/UniMCP	MIT	byte-read-p937	raw.githubusercontent HEAD/LICENSE	1	agents/top.md	🟡 **MIT + inherited ISC, conjunctive** `1,980 B`
+ILIAS-eLearning/ILIAS		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	GPL-3.0
+InHyunseo/pdf2md-study		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (byte-read `1,067 B`)
+JMLcommunity/Kurikulum-AI		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	🟢 MIT (1,081 B, `sha256₁₂ 879619fd1e3d`, byte-read `p919`)
+JOSETRA44/DUTIC-mcp		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** `1,066 B`
+JUPASCal/JUPASCal.github.io		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**MIT** — `main/LICENSE`, 1,065 B, `sha256₁₂ bf45e6d51cdf`
+JambuOverflow/lepic		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	🔴 GPL-3.0
+JaneKoch/openbridge		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (1,080 B, `caa5e03bca02`)
+Jasonsu22/Nomi		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (byte-read `1,065 B`)
+JeromeWang6066/syllabus-reader-skill		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (byte-read `1,068 B`)
+Jiaclv/error-driven-question-recommender		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**MIT** (`main/LICENSE`, 1,056 B, `sha256₁₂ 06dcddbb6908`)
+JousiaPiha/awesome-finnish-nlp		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟡 **CC0-1.0** — same payload as `taishi-i`
+JuneYaooo/teacher-to-skills		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**Apache-2.0** (`main/LICENSE`, 11,358 B, `sha256₁₂ cfc7749b96f6`)
+Just253/autonoma-cli		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** `1,064 B`
+KTH/canvas-api		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT
+Kanjo-Elkamira-Ndi/Compass		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	🟢 **MIT**
+KeWang0622/kaogong-skill		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT
+Khan/perseus		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT
+Kirchhoff-dev/cbt-app-updates		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	🟢 MIT (1,071 B · `9f194f984482`)
+Koha-Community/Koha		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	GPL-3.0
+KoukeNeko/Moodle-CLI		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT (byte-read `1,066 B`)
+LJKelly3141/coursepack	none	byte-read-p937	raw.githubusercontent HEAD/LICENSE	1	repos/foundations.md	**MIT** — byte-read `p907` from **`LICENSE.md`** (1,070 B). 🔴 Root `LICENSE` is a **41-byte `usethis` metadata stub containing no 
+LabSirius/TutorIA		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** `1,069 B`
+LearnPress/learnpress	GPL-3.0	byte-read-p937	raw.githubusercontent HEAD/readme.txt	1	agents/top.md	🔴 **no licence file on 18 probed paths** (3 branches × 6 filenames)
+LearningLocker/learninglocker		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	GPL-3.0
+Li-Evan/BloomTutor		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT
+Liangzhen-Chen/literature-guide-read		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (byte-read `1,091 B`)
+LibreChat-AI/LibreChat		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT
+Lintao-Lab/faithful-lecture-notes		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (byte-read `1,066 B`)
+LiraJ07/Temario_Comipems_Crissbeck001		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟡 **Apache-2.0** (11,357 B · `c71d239df917`)
+Longhorn-Developers/Degree-Audit-Plus		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟢 **MIT** (1,076 B, `sha256₁₂ 27477ecee35a`)
+Lumieducation/H5P-Nodejs-library		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🔴 **GPL-3.0** (`master/LICENSE`, 35,146 B, `sha256₁₂ c53a65c2fd56` — *byte-identical to the PHP core's*)
+Lumieducation/Lumi	AGPL-3.0	byte-read-p937	raw.githubusercontent HEAD/package.json	1	repos/foundations.md	🔴 **AGPL-3.0 — resolved `p917` at the MANIFEST layer** (`license` field of `package.json@main`). No licence payload (16×3 ladder, 
+Lumoin/Verifiable		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**Apache-2.0** (`LICENSE@main`, 11,345 B)
+Macro002/AnkiBase		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	agents/top.md,verticals/solutions.md	MIT (byte-read `1,065 B`)
+MarcoXMarquez/CampusUNSA		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** `1,130 B`
+MathMindCanvas/MathMind		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (1,071 B, `sha256₁₂ 0773606d562e`)
+Miaotofu01/Study-Mate		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT
+MichealQuelazar/Ncert__RAG__Chatbot		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (1,075 B · `13908cd9b08e`)
+Mocas-12/jlpt-n1-Yomitaku		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (byte-read `p910`, `LICENSE@main`, 1,065 B, `sha256₁₂ b17ceb82d82e`)
+Mohamed-El-Sharqawy/agent-tutor		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (byte-read `1,076 B`)
+MuhammadLutfiMuzakiiVY/Litera-AI-Android		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (byte-read `main/LICENSE`, 1,103 B, `sha256₁₂ f98ead38d342`)
+NaEs25/studiamo		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	🔴 **AGPL-3.0** (`main/LICENSE`, 33,880 B, `sha256₁₂ f0c3e444e06d`)
+NgodingCik/modul-ajar-generator	CC-BY-NC-4.0	byte-read-p937	raw.githubusercontent HEAD/LICENSE.md	1	agents/top.md	🔴 **CC BY-NC 4.0** (17,688 B, `sha256₁₂ 2b275bb77aa6`, byte-read `p919`) — **noncommercial, and a *content* licence applied to a w
+Noggin-Labs/Noggin		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	**Apache-2.0**, byte-read `main/LICENSE` (11,357 B, `sha256₁₂ c71d239df917`)
+Nugestudent2026/EdTech		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**BSL-1.0** — Boost Software License 1.0 (1,338 B · `c9bff7573892`)
+Nutlope/llamatutor	none	byte-read-p937	raw.githubusercontent HEAD/none	1	agents/top.md	*(no grant to read)*
+OMI-KALIX/campuscore-API		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT (byte-read `1,072 B`)
+OPTIMETA/PAIDEIA		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT
+OS4ED/openSIS-Classic	GPL-2.0	byte-read-p937	raw.githubusercontent HEAD/docs/License.txt	1	verticals/solutions.md	🔴 **GPL-2.0 — resolved p897.** Byte-read at **`master/docs/License.txt`** (17,286 B, `sha256₁₂ 224ac3d403e3`); the `README.md` lin
+OSU-slatelab/AIRFluTe		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	🟢 **Apache-2.0**
+Open-TutorAi/open-tutor-ai-CE		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	agents/top.md,verticals/solutions.md	BSD-3-Clause
+OpenHands/OpenHands		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT
+OpenOLAT/OpenOLAT	Apache-2.0	byte-read-p937	raw.githubusercontent HEAD/LICENSE	2	repos/foundations.md,verticals/solutions.md	Apache-2.0
+OpenOLAT/qtiworks		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**BSD-3-Clause** (`LICENSE.txt` `2,058 B`)
+OpenPronounce/OpenPronounce		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	🔴 **AGPL-3.0 — CORRECTED `p913`, was published here as `MIT`** (byte-read `main/LICENSE`, 34,523 B, `sha256₁₂ 0d96a4ff68ad`; title
+OpenThaiGPT/openthaigpt	Apache-2.0	byte-read-p937	raw.githubusercontent HEAD/LICENSE	1	agents/top.md	🟢 Apache-2.0 (595 B, `sha256₁₂ b2a8a8f529b3`, byte-read `p919`) — 🔴 the search channel reports `NOASSERTION` for this repo; the tw
+OpenVidu/openvidu		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	Apache-2.0
+Orenda-Project/rumi-platform		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	Apache-2.0
+PGshen/thinking-map		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	Apache-2.0 (`main/LICENSE`, 11,356 B, `sha256₁₂ 43070e2d4e53`) — **patent grant included**
+PabloPC05/campus-usc		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** `1,066 B`
+PrairieLearn/PrairieLearn	AGPL-3.0	byte-read-p937	raw.githubusercontent HEAD/LICENSE	3	repos/foundations.md,verticals/solutions.md	🔴 **NOT MIT — multi-grant, open-core. Corrected p899.** CE is **AGPL-3.0**; `apps/prairielearn/src/ee/` **and `apps/course-agent/`
+PrairieLearn/grader-python-v2		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT
+ProfeAnaEslavaEdTech/mllde-xapi		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟡 **CC-BY-4.0** — byte-read `p907` (17,145 B)
+PyThaiNLP/pythainlp		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	agents/top.md,repos/foundations.md	🟢 Apache-2.0 (11,357 B, `sha256₁₂ b40930bbcf80`, byte-read `p919`)
+QFlowLearn/qflow-author		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🔴 **AGPL-3.0** (`main/LICENSE`, 34,020 B)
+QFlowLearn/qti3		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**MIT** — re-byte-read `p912` (`LICENSE@main`, 1,072 B · `00ed05b90bf8`); `p900` read `LICENSE.md@HEAD`, 1,071 B
+QkeleQ10/Study-Tools		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	🔴 **AGPL-3.0** (byte-read `p915`, `main/LICENSE`, **34,523 B** — 🟢 exactly `p913`'s measured true-AGPL byte count, a positive cont
+QwenStorm/xl-frontend		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (byte-read `master/LICENSE`, 1,060 B, `sha256₁₂ 3b0284114591`)
+RWTH-OS/eduOS-rs		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**`MIT/Apache-2.0` (disjunctive — licensee chooses)**
+RakeshBabuGajula/Exam_Intellect		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (byte-read on `ExamIntellect/LICENSE`, 1,075 B, `sha256₁₂ a4e58d1074c9`; the identical payload is also on `master`)
+Reethureddy8/Study-assistant		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (1,069 B · `ff3eb0698f8a`)
+Rishabh-bgp/vedic-math-hybrid-kt		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**MIT** (`main/LICENSE`, 1,074 B, `sha256₁₂ 45267e9b5775`)
+RohanMuppa/brightspace-mcp-server		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (`main/LICENSE`, 1,068 B, `sha256₁₂ 047079fbd491`)
+SHUBHJAIN139/Local-Exam-Proctoring-Engine		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	agents/top.md,verticals/solutions.md	**MIT** (1,067 B, `91a47a93bbca`)
+SISUBEN/DSE-ICT-Master		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	🟢 **MIT** — `main/LICENSE`, 1,065 B, `sha256₁₂ c20159ff7a53`
+SJRiz/pytogether		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	MIT (1,072 B, `c8df073d1320`)
+SNOOPY-alt/heuristic-learning-system		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (1,067 B, `sha256₁₂ f0012497d3e1`)
+SYSTRAN/faster-whisper		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT
+SaadRahman01/claude-moodle-dev		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (`main/LICENSE`, 1,068 B, `sha256₁₂ df0b3e71710c`)
+SalehGNUTUX/GT-MISHKATKIDS		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	agents/top.md,verticals/solutions.md	**GPL-3.0**
+SebasB76/poli		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** `1,065 B`
+Selleo/mentingo		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	agents/top.md,verticals/solutions.md	MIT
+SenmuuuuW/universal-diagnostic-tutor-skill		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT
+SettibathulaJyothi/Aritificial-Intelligence-Code-417-Skill-Education-Class-10		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟢 **MIT** (1,076 B · `40a516b92bfb`)
+SimonsTang/feifei-companion		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	Apache-2.0
+SirhanMacx/Claw-ED		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT
+SonAIengine/ku-portal-mcp		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (`main/LICENSE`, 1,068 B, `sha256₁₂ aa35608133a4`)
+Sphereon-Opensource/OID4VC		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**Apache-2.0** (`LICENSE@develop`, 11,347 B)
+SpiderIkun/korean-study-web		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**MIT** — `main/LICENSE`, 1,084 B, `sha256₁₂ 83bd45bc2c0c`
+SriSatyaLokesh/pariksha		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	**AGPL-3.0**
+StevenACoffman/roster		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**MIT** — byte-read `p907` (`LICENSE@main`, 1,070 B)
+StudentSuite/awesome-study-resources		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**MIT** — `main/LICENSE`, 1,069 B, `sha256₁₂ 537c697c69a5`
+Submitty/Submitty		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	"**BSD-3-Clause** (`LICENSE.md@main`, 1,542 B, `sha256₁₂ c123708cb4ef`, *""Copyright (c) 2014-2026 Submitty team""*)"
+THU-MAIC/OpenMAIC		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT
+TheCodeHeist-Coder/Rexial		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	agents/top.md,verticals/solutions.md	MIT (byte-read `1,076 B`)
+Toochidennis/cbt-app		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	🟢 MIT (1,073 B · `093eb2efcb60`)
+TovTechOrg/Tov-learn		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (`master/LICENSE`, 1,064 B, `sha256₁₂ 092d389ac156`)
+Udayraj123/OMRChecker		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	MIT
+UniTime/cpsolver		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**LGPL-3.0**
+UniTime/unitime		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	Apache-2.0 (`LICENSE@master`, payload `11,357 B`)
+UnitedOpen-Source/microHelium		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	**AGPL-3.0** (byte-read `master/LICENSE`, 34,523 B)
+UniversityOfHelsinkiCS/sis-importer		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT (byte-read 1,111 B)
+UniversityOfHelsinkiCS/sis-ns-manager		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	Apache-2.0
+UniversityOfHelsinkiCS/suoritustarkistin		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT
+Unstructured-IO/unstructured		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	Apache-2.0
+Victor-Blasco/UJI-MCP		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** `1,063 B`
+Vladyslav-Soldatenko/ProcrastiLearn		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**Apache-2.0** (`master/LICENSE`, 11,351 B, `sha256₁₂ 45386cd5bf35`)
+VuongPhan-09/vuongedu		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (byte-read `main/LICENSE`, 1,072 B, `sha256₁₂ 52ac0b85ef3b`)
+VxGM/IAula-Virtual-Uleam		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** `1,061 B`
+WDMoonMoonBird/exam-deep-seek		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (1,089 B, `ebd20e036a20`)
+Yari-tuber/math-rap-video		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	🟢 **MIT** (`LICENSE@main`, 1,067 B, `sha256₁₂ 3adf69adbec0`)
+Yuanpeng-Li/gradescope-mcp		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (`main/LICENSE`, 1,068 B, `sha256₁₂ 29d0f3f4463a`)
+ZeKaiNie/universal-examprep-skill		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT
+Zenglian990/AI_Tutor_Release		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT
+a-sit-plus/vck		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**Apache-2.0** (`LICENSE@main`, 11,358 B)
+academic-innovation/django-lti		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**MIT** — byte-read `p917` (`LICENSE@main`, 1,098 B)
+academico-sis/academico		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	**MIT**
+acheamponge/wassce-benchmark		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	agents/top.md,repos/foundations.md	MIT
+adaptlearning/adapt_authoring		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	🔴 **GPL** (`master/LICENSE`, 35,140 B)
+adaptlearning/adapt_framework		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🔴 **GPL** (`master/LICENSE`, 35,129 B, `sha256₁₂ —`)
+adlnet/ADL_LRS		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	Apache-2.0
+adlnet/xapi-spec		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	Apache-2.0
+agentscope-ai/OpenJudge		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	Apache-2.0
+ahamana/canvas-lms-docker		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	**MIT** (`LICENSE@main`, 1,071 B, `sha256₁₂ 21ba971d464e`)
+ahmedEid1/lumen		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT
+ahmetaa/zemberek-nlp	Apache-2.0	byte-read-p937	raw.githubusercontent HEAD/LICENSE	2	repos/foundations.md,verticals/solutions.md	🟢 **Apache-2.0** — 572 B notice, `sha256₁₂ c55ac4a942b0`. 🔴 `search/repositories` reports **`NOASSERTION`**
+ai-lingnan/econai-agent-platform		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**AGPL-3.0** (byte-read `master/LICENSE`, 34,522 B, `sha256₁₂ 4df3c306ddda`)
+ai-shifu/ai-shifu		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	Apache-2.0
+aieducations/edumcp		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	Apache-2.0
+aiktb/furiganamaker		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**MIT** grant text, no title line — `main/LICENSE`, 1,095 B, `sha256₁₂ a13d4cbed2ef`
+aimerfeng/ists		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	agents/top.md,verticals/solutions.md	MIT (byte-read `1,067 B`)
+alanmagno1/tuaulavirtual-unam-mcp		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** `1,067 B`
+alberto2005-coder/detector-ia		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (1,079 B, `d7766590a996`)
+alejooroncoy/campus-cli		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**ISC** (API)
+aleka07/scorm_agents		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**MIT** — byte-read `p907` (`LICENSE@master`, 1,077 B)
+alexFiorenza/aulasvirtuales-toolkit		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** `1,070 B`
+alexmodrono/Findle		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	Apache-2.0 (byte-read `11,353 B`)
+alvaretto/r-exams_matematicas		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟢 **MIT** (1,078 B · `67a6e5e5a2af`)
+amaanwarsi/Proctora		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	MIT
+amosblomqvist/learnharness		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**AGPL-3.0**
+anandpatikat/guru-latihan-dinamis	MIT	byte-read-p937	raw.githubusercontent HEAD/README.md	1	agents/top.md	🔴 **none — no licence file on any probed path, on either branch**
+andbriha/ExamGuardian		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (byte-read `p907`, `LICENSE@main`, 1,065 B)
+andrsnrua/universidad-pacifico-mcp		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	agents/top.md,verticals/solutions.md	**ISC** (byte-read `p907`, `LICENSE@main`, 748 B)
+angel-georgiev/daskal.ai		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (1,071 B, `394e9f40c94d`)
+ankimcp/anki-mcp-server		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT
+ankimcp/anki-mcp-server-addon	AGPL-3.0	byte-read-p937	raw.githubusercontent HEAD/LICENSE	1	agents/top.md	🔴 **AGPL-3.0** (`main/LICENSE`, **227 B**, `sha256₁₂ 34b58d896fdb`) — a **by-reference** grant, see `T43`
+ankitects/anki	AGPL-3.0	byte-read-p937	raw.githubusercontent HEAD/LICENSE	1	verticals/solutions.md	AGPL-3.0
+anthropics/k12-teacher-skills		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	Apache-2.0
+apache/openmeetings	Apache-2.0	byte-read-p937	raw.githubusercontent HEAD/LICENSE	1	verticals/solutions.md	**Apache-2.0** (`50,907 B`)
+apereo/cas		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	Apache-2.0
+apereo/java-cas-client	Apache-2.0	byte-read-p937	raw.githubusercontent HEAD/LICENSE	2	repos/foundations.md,verticals/solutions.md	🔴 **CONJUNCTIVE: Apache-2.0 + JA-SIG BSD — CORRECTED `p913`, was `Apache-2.0`** (byte-read `master/LICENSE`, 2,321 B)
+apereo/phpCAS		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	Apache-2.0
+appsmithorg/appsmith		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	Apache-2.0
+argilla-io/argilla		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	Apache-2.0
+artcc/freelingo		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**AGPL-3.0**
+artevelde-uas/canvas-lms-app		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟢 **ISC** (`LICENSE@main`, 771 B, `sha256₁₂ 4291d4cd3e71`)
+assafelovic/gpt-researcher		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	Apache-2.0
+assafkip/claudemy		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT
+autolab/Autolab		prose-only	not re-read in p937 - cell is annotated prose, not a token	3	repos/foundations.md,verticals/solutions.md	Apache-2.0
+autolab/Tango		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	Apache-2.0
+bab2min/Kiwi		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟢 Apache-2.0 — 11,372 B, `sha256₁₂ 4070ef926941`
+barnamenevisi/free-resources		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT (`master/LICENSE`, byte-read 1,069 B)
+bcgov/SIMS		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	🟢 **Apache-2.0** (`main/LICENSE`, 11,358 B, `sha256₁₂ cfc7749b96f6`)
+beltromatti/get-it		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	Apache-2.0
+bigbluebutton/bigbluebutton		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	LGPL
+bilalabic/awesome-turkish-datasets		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟡 **CC-BY-4.0** — 18,657 B, `9ba9550ad484`
+blackboard/BBDN-lti-1p3-tool-example		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**Apache-2.0** — byte-read `p917` (`LICENSE@main`, 11,357 B)
+blend-ed/openedx-mcp		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	agents/top.md,repos/foundations.md	AGPL-3.0
+bncc-dev/bncc-benchmark	MIT + CC-BY-4.0	byte-read-p937	raw.githubusercontent HEAD/LICENSE	1	repos/foundations.md	🔴 **MIT** (`harness/`, `test/`) + **CC BY 4.0** (items, results, methodology)
+bncc-dev/bncc-dados		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🔴 **MIT** (`main/LICENSE`, 1,092 B) for `pipeline/` **and CC BY 4.0** (`main/dados/LICENSE.md`, 1,583 B) for the data
+bncc-dev/bncc-pacotes	CC-BY-4.0	byte-read-p937	raw.githubusercontent HEAD/LICENSE	1	repos/foundations.md	🔴 **MIT** code + **CC BY 4.0** embedded data + **name and visual identity not licensed** (`main/LICENSE`, 1,299 B)
+bolgerru/blackboard-mcp	none	byte-read-p937	raw.githubusercontent HEAD/none	1	verticals/solutions.md	🔴 none
+boyuchengz/canvas-mcp		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT
+bretttolbert/verbecc		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	A curated **list**, not a library. The only maintained member is https://github.com/bretttolbert/verbecc (106 ★, **LGPL-3.0** byte
+brian901106/japanese-tutor-mugi		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT
+bruchris/canvas-lms-mcp		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (`LICENSE@HEAD`, 1,069 B, byte-read p900)
+cculb/schoolconnect		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	agents/top.md,verticals/solutions.md	**MIT** (byte-read `p907`, `LICENSE@main`, 1,071 B)
+chadyi/StudyOnTV	all-rights-reserved	byte-read-p937	raw.githubusercontent HEAD/LICENSE	1	agents/top.md	"**""Source Available License — Personal Use Only""** (1,042 B, `fdc484954b1b`)"
+chamilo/chamilo-lms		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	GPL-3.0
+changazo/udesa-mcp		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**Apache-2.0** `10,173 B`
+christophse/django-lti-tool		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**BSD** — byte-read `p917` (`LICENSE@main`, 1,525 B)
+chroma-core/chroma		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	Apache-2.0
+chtzvt/PyEdsby		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟢 **MIT**
+chuma-beep/mathua		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (1,074 B, `6bd7c2a354d5`)
+cilt-uct/sakai-skin-vula		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	ECL-2.0 (byte-read 11,120 B)
+cilt-uct/tsugi-migrate-to-brightspace		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	Apache-2.0
+cilt-uct/tsugi-request-gradebook-upload		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	Apache-2.0
+claroline/Claroline	AGPL-3.0	byte-read-p937	raw.githubusercontent HEAD/LICENSE	1	verticals/solutions.md	**AGPL-3.0** (34,615 B, `426f3f93060d`)
+classroomio/classroomio		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	🔴 **AGPL-3.0** (`34,523 B`)
+clementina-tom/Personalized-Learning-Recommendation-System		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**MIT** (`main/LICENSE`, 1,071 B, `sha256₁₂ 2471962b29fc`)
+cmlonder/notebooklm-chunker		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟢 **MIT** (`LICENSE@main`, 1,065 B, `sha256₁₂ 19ce1724bc9e`)
+cmu-db/bustub		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT (byte-read 1,075 B)
+code-by-abrar/Online-Proctoring-system		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	MIT
+codelitdev/courselit		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	**AGPL-3.0** (34,142 B, `9c0cb21c26d8`)
+cognitive-engineering-lab/mdbook-quiz		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟢 **`MIT OR Apache-2.0`** (disjunctive — **no root `LICENSE`**; `LICENSE-MIT` 1,035 B `sha256₁₂ 1847e0e06981` + `LICENSE-APACHE` 1
+commoncrawl/awesome-low-resource-languages		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🔴 **CC-BY-SA-4.0 — IN PROSE ONLY, no `LICENSE` file**
+computationalmodelling/nbval	BSD-3-Clause	byte-read-p937	raw.githubusercontent HEAD/LICENSE	1	repos/foundations.md	🟡 **BSD-3-Clause — SPDX says `NOASSERTION`.** Byte-read `LICENSE@master` (1,910 B, `sha256₁₂ 1dbc744b78bb`): the file has **no tit
+course-code-framework/coursecode		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	🟢 **MIT** (`main/LICENSE`, 1,069 B)
+course-code-framework/coursecode-desktop		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟢 **MIT** (`main/LICENSE`, 1,069 B)
+crewAIInc/crewAI		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT
+crownpku/Awesome-Chinese-NLP		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟢 **Apache-2.0** — 11,357 B, `c71d239df917`
+cskwork/supertutor-skill		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (byte-read `1,064 B`)
+ctrlaltwill/LearnKit		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	agents/top.md,repos/foundations.md	**MIT** (`main/LICENSE.md`, 1,068 B, `sha256₁₂ 38a90d0f7738`)
+cxkzai/ai-admissions-platform		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (1,065 B, `sha256₁₂ 811e88db2038`)
+cyyyp100/meta-capp		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (byte-read `1,069 B`)
+czcorpus/cnc-tskit		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟢 Apache-2.0 — 11,357 B
+czcorpus/kontext		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🔴 **GPL-2.0** — 17,989 B
+czcorpus/manatee-open		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🔴 GPL-2.0
+d-wwei/learn-anything		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (byte-read `main/LICENSE`, 1,063 B, `sha256₁₂ 163a805ef10a`)
+daac-tools/vibrato		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟢 **MIT *OR* Apache-2.0, disjunctive** — `LICENSE-MIT` 1,076 B, `sha256₁₂ d0104f0f2368`
+danieltyukov/ieee-mcp		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (`master/LICENSE`, 1,071 B, `sha256₁₂ fc20bfdfe931`)
+datalab-to/marker		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	Apache-2.0
+datastiltskin/Sanshodhan		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (1,073 B · `909fd4f320c0`)
+david-04/quiz-mate		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟢 **ISC** (`LICENSE@main`, 779 B, `sha256₁₂ 80724804a81d`)
+davidluzgouveia/kanji-data		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**MIT** — `master/LICENSE`, 1,070 B, `sha256₁₂ 4c4fe92a5adf`
+davidpesce/moodle-logstore_xapi		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**GPL-3.0**
+dbosk/canvaslms		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**MIT** (`LICENSE@master`, 1,074 B, `sha256₁₂ 37f4cab1bcf3`)
+deeding2030-boop/bestteach-public		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (1,159 B, `3fae65c81ef1`)
+deeplearningturkiye/turkce-yapay-zeka-kaynaklari		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT (`master/LICENSE`, byte-read 1,079 B)
+deepset-ai/haystack		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	Apache-2.0
+devissaputra/self_regulated_learning_copilot		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (1,076 B, `c10726bddc58`)
+dfdb76/bncc-mcp	MIT	byte-read-p937	raw.githubusercontent HEAD/LICENSE	1	agents/top.md	**MIT** (byte-read `main/LICENSE`, 1,218 B)
+digitalcredentials/learner-credential-wallet		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**MIT** — byte-read p900 (`LICENSE@HEAD`, 1,091 B)
+dikkayulianto/ebook-generator		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	🟢 MIT (1,070 B, `sha256₁₂ ceb34bc8f5b0`, byte-read `p919`)
+dmitry-viskov/pylti1.3		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT
+dmoshehun-prog/learn-from-materials		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT
+docling-project/docling		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT
+dodona-edu/dolos		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT
+dongbeixiaohuo/writing-agent		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT (`main/LICENSE`, 1,078 B, `sha256₁₂ 185ea2efea06`)
+dungnotnull/ReadPulse-AI-Agent		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	🟢 **MIT**
+edunelsonit/Jambora		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	Apache-2.0 (11,357 B · `c71d239df917`)
+eecs-autograder/autograder-server		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**LGPL-3.0** (`LICENSE.txt@master`, 7,652 B, `sha256₁₂ b96e8c21c928`)
+elimu-ai/webapp		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	MIT (`main/LICENSE`, byte-read 1,065 B)
+elmsln/elmsln		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	GPL-3.0 (35,192 B, `78ccc98f3768`)
+eu-digital-identity-wallet/eudi-lib-android-wallet-core		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**Apache-2.0** (`LICENSE@main`, 11,357 B)
+eu-digital-identity-wallet/eudi-lib-jvm-openid4vci-kt		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**Apache-2.0** (`LICENSE@main`, 9,425 B)
+eu-digital-identity-wallet/eudi-srv-pid-issuer		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**Apache-2.0** (`LICENSE@main`, 9,425 B)
+eumakerdev/bncc_api		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**MIT** (`main/LICENSE`, 1,081 B)
+falkenslab/miyagi		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** `1,078 B`
+farroshsy/hcie-system		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**MIT** (`main/LICENSE`, 1,076 B, `sha256₁₂ bca6680cab90`)
+fattaillabs/mogo-print		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**MIT** — `main/LICENSE`, 1,069 B, `sha256₁₂ f9479d61666b`
+fireheartjerry/mathos-webmcp		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (1,075 B, `2388ed41fa64`)
+firekern/zusia		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (byte-read `main/LICENSE`, 1,072 B, `sha256₁₂ e4572f44947f`)
+five-plus-one/AI-Marker-Suite		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	🔴 **GPL-3.0** (35,153 B, `8d13aacc9396`)
+flammie/omorfi	GPL-3.0	byte-read-p937	raw.githubusercontent HEAD/LICENSE->COPYING	1	repos/foundations.md	🔴 **GPL-3.0** — 35,140 B, `sha256₁₂ 39ebd7598688`, read through a **7-byte `LICENSE` pointer stub** (`922-F5`)
+flysheep-ai/education-skills		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT
+forgemorrow/Chinese-Teaching-AI-Agent		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (`main/LICENSE`, 1,068 B, `sha256₁₂ 2e7ffdde3eb5`)
+franc1sc0sv/udb-copilot		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** `1,066 B`
+francoisjacquet/rosariosis		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	GPL-2.0
+frappe/education	GPL-3.0	byte-read-p937	raw.githubusercontent HEAD/license.txt	1	verticals/solutions.md	"GPL-3.0 (`license.txt`: ""License: GNU GPL V3"")"
+frappe/lms		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	AGPL-3.0
+freeCodeCamp/freeCodeCamp		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**BSD-3-Clause** (`LICENSE.md` `1,513 B`)
+ganesh-786/Proctor		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	MIT
+gdgguadalajara/open-badges-platform		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	🔴 **AGPL-3.0**
+geekjourneyx/interactive-learning		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	"**MIT** (byte-read `p909`, `LICENSE@HEAD`, 1,069 B, `sha256₁₂ 02b7dc1969f4`, *""MIT License / Copyright (c) 2026 geekjourneyx""*)"
+gocodebox/lifterlms		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	GPL-3.0 (35,140 B, `b98fbb37db5b`)
+h5p/h5p-audio-recorder		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟡 **MIT, manifest-declared only — flagged `p913`** (no licence payload: `LICENSE`, `LICENSE.txt`, `LICENSE.md`, `license.txt` and 
+h5p/h5p-cli		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT
+h5p/h5p-course-presentation		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟡 **MIT, manifest-declared only — flagged `p913`** (no licence payload: `LICENSE`, `LICENSE.txt`, `LICENSE.md`, `license.txt` and 
+h5p/h5p-editor-php-library	MIT	byte-read-p937	raw.githubusercontent HEAD/README.md	1	repos/foundations.md	🟢 **MIT (code) + Apache-2.0 (bundled Open Sans font) — resolved `p917` at the FOURTH layer.** No licence payload (16×3 ladder, all
+h5p/h5p-interactive-video		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟡 **MIT, manifest-declared only — flagged `p913`** (no licence payload: `LICENSE`, `LICENSE.txt`, `LICENSE.md`, `license.txt` and 
+h5p/h5p-php-library		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md	GPL-3.0
+h5p/h5p-speak-the-words		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT
+haison8x/geogebra-mcp		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (1,065 B, `32508be1d078`)
+hankcs/HanLP		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟢 Apache-2.0 — 11,357 B, `sha256₁₂ c71d239df917`
+hapince-code/AI-EduForge		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (1,072 B, `sha256₁₂ 0a83fabb2ba6`)
+hasensaramii977-cpu/Grade-12-National-Exam-Training-Model		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**CC0-1.0** (7,048 B · `a2010f343487`)
+haxtheweb/haxcms-php		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	Apache-2.0 (11,362 B, `b662f44e55e8`)
+heimi51168/planyourtv		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	🟢 **MIT** (`LICENSE@main`, 1,110 B, `sha256₁₂ 6f725ade50a7`)
+helixnow/deep-student		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**AGPL-3.0**
+himkt/konoha		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟢 MIT — 1,067 B, `sha256₁₂ 9e818940bbfa`
+houselearning/home		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟢 **Apache-2.0** (`LICENSE@main`, 11,357 B, `sha256₁₂ c71d239df917` — byte-identical to the canonical Apache text)
+huspacy/huspacy		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟢 Apache-2.0 — 11,347 B, `sha256₁₂ 04108063fd07`
+iblai/lms		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	MIT (1,062 B, `d9d62c94b512`)
+idrismukthar/TTL_CBT		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	🟢 MIT (1,087 B · `30062651a966`)
+iiab/iiab		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	GPL-2.0
+impierce/openid4vc		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**Apache-2.0** (`LICENSE@main`, 9,145 B)
+inducer/relate	MIT	byte-read-p937	raw.githubusercontent HEAD/LICENSE	2	repos/foundations.md,verticals/solutions.md	**MIT/X Consortium** (1,144 B, `e6c20b652766`)
+infiniflow/ragflow		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	Apache-2.0
+instructure/canvas-lms		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	AGPL-3.0
+instructure/common-cartridge-viewer		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT
+instructure/instructure-ui	MIT	byte-read-p937	raw.githubusercontent HEAD/LICENSE.md	1	repos/foundations.md	MIT (`master/LICENSE.md`, byte-read 1,175 B)
+isakskogstad/Skolverket-MCP		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** `1,093 B`
+itsme-ganzu/belajar-ngoding-byGanzu		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT
+jackdsjk/awesome-monash-tools		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT (byte-read `1,065 B`)
+jamestesting0/tum-mcp		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** `1,092 B`
+jamsinclair/open-anki-jlpt-decks		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**MIT** — `main/LICENSE`, 1,071 B, `sha256₁₂ dfb974763030`
+jcputney/scorm-again		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT
+jetyu/Dawn		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**Apache-2.0** (11,340 B, `sha256₁₂ bef48216cd56`)
+jitsi/jitsi-meet		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	🔴 **CONJUNCTIVE: Apache-2.0 + MIT — CORRECTED `p913`, was `Apache-2.0`** (byte-read `master/LICENSE`, 12,596 B, `sha256₁₂ eae52e20
+jonsorr/D2L_Brightspace_APIs		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**MIT** (`LICENSE@main`, 1,074 B, `sha256₁₂ 9d02fbcfc698`)
+jpmanson/siu-guarani-mcp		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** `1,074 B`
+jupyter/nbgrader		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	BSD-3-Clause (1,370 ★)
+jupyterhub/binderhub		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	**BSD-3-Clause** (`LICENSE@main`, 1,522 B, `sha256₁₂ 611f531642d5`; SPDX agrees)
+jupyterhub/jupyterhub		prose-only	not re-read in p937 - cell is annotated prose, not a token	3	repos/foundations.md,verticals/solutions.md	BSD-3-Clause
+jupyterhub/nbgitpuller		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	BSD-3-Clause
+jupyterhub/zero-to-jupyterhub-k8s	BSD-3-Clause	byte-read-p937	raw.githubusercontent HEAD/LICENSE	1	repos/foundations.md	🔴 **BSD-3-Clause + Apache-2.0 (CONJUNCTIVE) — CORRECTED `p913`, was `Apache-2.0`** (byte-read `main/LICENSE`, 13,206 B; **title li
+jurimaxam-dotcom/chemdraw-mcp		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**Apache-2.0** (`main/LICENSE`, 11,358 B, `sha256₁₂ cfc7749b96f6`)
+justinhunt/moodle-mod_readaloud	GPL-3.0-or-later	byte-read-p937	raw.githubusercontent HEAD/README.md	1	agents/top.md	🔴 **GPL-3.0-or-later — and there is no licence file.** Byte-read over 16 filenames × 3 branches: `404` on every one. The grant is 
+kad-xyz/spbstu-mcp		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** `1,064 B`
+kamlendras/OpenProctor		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	**AGPL-3.0**
+kaveheng/GenAi-in-education	CC-BY-4.0	byte-read-p937	raw.githubusercontent HEAD/LICENSE	1	repos/foundations.md	🔴 **CC BY 4.0** (`442 B`)
+kenoharada/AI-LaBuddy		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (1,067 B, `sha256₁₂ 807c3b4466ec`)
+kirill-markin/flashcards-open-source-app		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	agents/top.md,repos/foundations.md	**MIT** (`main/LICENSE`, 1,070 B, `sha256₁₂ 0e319ca9aaa9`)
+kirstykitto/CLAtoolkit		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🔴 GPL-3.0
+kiwix/kiwix-tools		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	GPL-3.0
+kta41/mcp-uned		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** `1,071 B`
+ku-nlp/jumanpp		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟢 Apache-2.0 — 11,357 B, `sha256₁₂ c71d239df917`
+kyoto-u/comfortable-sakai		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	Apache-2.0
+l-yohai/suneung		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**MIT** — `main/LICENSE`, 1,066 B, `sha256₁₂ fc5a26453227`
+langchain-ai/langgraph		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT
+langfuse/langfuse	MIT	byte-read-p937	raw.githubusercontent HEAD/LICENSE	1	repos/foundations.md	**Split — see note**
+langx/langx		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**BSD-3-Clause** (1,519 B, `f90e8a082588`, **non-endorsement clause present, no advertising clause**)
+learnhouse/learnhouse		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	**AGPL-3.0** (34,522 B, `20b067f86de3`)
+learning-commons-org/knowledge-graph	MIT + mixed data	byte-read-p937	raw.githubusercontent HEAD/LICENSE.md	2	agents/top.md,repos/foundations.md	🔵 **split grant** (5,788 B, `86b7ebf9b61d`)
+learningequality/kolibri		prose-only	not re-read in p937 - cell is annotated prose, not a token	3	repos/foundations.md,verticals/solutions.md	MIT
+learningequality/le-utils		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT
+learningequality/morango		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT
+learningequality/ricecooker		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT
+learningequality/studio		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT
+lerlerchan/Prompt-libraries-for-Malaysia-Educators		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**MIT** — `main/LICENSE`, 1,102 B, `sha256₁₂ 9bd543a84b9a`
+liangxiao777/TeachMeCoding		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	Apache-2.0
+lindnerju/ePaeko		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (1,086 B · `5a44d126d2e6`, on `master`)
+liuliu667/cram-engine		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (`main/LICENSE`, 1,064 B, `sha256₁₂ c33ea68946e4`)
+ljvmiranda921/calamanCy		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	🟢 MIT — 1,095 B, `sha256₁₂ 09da5a2dfb62`
+lmddc-lu/microlms		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🔴 **AGPL-3.0** — byte-read `p917` (`LICENSE@main`, **34,523 B**, the exact true-AGPL signature `913-F1` established)
+logitsolutionsai/teachback		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (byte-read `main/LICENSE`, 1,075 B, `sha256₁₂ 4a4f80cb0d46`)
+lplnufpi/essay-br		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**MIT** (`1,114 B`)
+ls1intum/Apollon		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT (`main/LICENSE`, byte-read 1,091 B)
+ls1intum/Ares		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT
+ls1intum/Artemis		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	MIT
+ls1intum/Pyris		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT
+ls1intum/artemis-android		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT
+ls1intum/artemis-ansible-collection		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT
+ls1intum/artemis-ios		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT
+ls1intum/edutelligence		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT
+ls1intum/standardized-competency-catalog		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT
+luumlabs/aula		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	AGPL-3.0
+lynote-ai/ai-tutor		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (1,062 B, `017037465041`)
+m7medVision/nakhlah.js		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT (`main/LICENSE.md`, byte-read 1,064 B)
+mad707/masar		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**MIT** (`main/LICENSE`, 1,083 B, `sha256₁₂ cd63915e037f`)
+marceloschmitt/moodle-block_analytics_graphs		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟢 **GPL-3.0-or-later — resolved `p917` at the FILE-HEADER layer.** Full GNU header block in `version.php@master`. ⚠️ `LICENSE.md` 
+matheussilvano/mooose		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**Apache-2.0** (byte-read `main/LICENSE`, 11,358 B)
+matmiidu/paes-ensayos		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (1,065 B · `db233fe3a19a`)
+mcgrizzz/Yomine		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟢 **`MIT OR Apache-2.0`** (disjunctive — **no root `LICENSE`**; `LICENSE-MIT` 1,065 B `sha256₁₂ 116f5aa90c69` + `LICENSE-APACHE` 1
+mem0ai/mem0		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	Apache-2.0
+messense/jieba-rs		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟢 MIT — 1,101 B, `sha256₁₂ 92257c8d1c7a`
+metrovoc/immersive-memorize		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (byte-read `p910`, `LICENSE@main`, 1,074 B, `sha256₁₂ 51ae850d5688`)
+microsoft/StudentSim		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (1,073 B, `a03acaea0251`)
+microsoft/o365-moodle		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	GPL-3.0 (35,146 B, `c53a65c2fd56`)
+migueldsants/AI-Skill-Corretor-Redacao-ENEM		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (byte-read `main/LICENSE`, 1,082 B)
+migueldsants/OpENEM		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	**AGPL-3.0** (byte-read `main/LICENSE`, 34,523 B)
+mikahama/uralicNLP		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	🟢 Apache-2.0 — 11,353 B, `sha256₁₂ 82727434fd5f`
+milesberry/networx		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**MIT** — `main/LICENSE`, 1,068 B, `sha256₁₂ 9cbc8ea74b49`
+missing-elements/h5p-toolkit		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**MIT** (`LICENSE@main`, 1,073 B, `sha256₁₂ 18f305a9c256`)
+mistval/kotoba		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟢 **MIT** (`LICENSE@master`, 1,064 B, `sha256₁₂ 32aad86d5c86`)
+mitodl/ol-infrastructure		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	BSD-3-Clause
+mitodl/open-learning-ai-tutor		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (`LICENSE@HEAD`, 1,068 B, byte-read p900)
+molly554/whiteboard-ai-tutor		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT
+moodle/moodle		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	GPL-3.0 (no root `LICENSE`; verified in `COPYING.txt`)
+moodlehq/moodleapp		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	**Apache-2.0** ⟂ Moodle is GPL-3.0
+moodlehq/wiki-rag		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	BSD-3-Clause
+mousam100/Montessori-Agentic-AI-Tutor		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (1,064 B, `sha256₁₂ a1adc7ed2fc0`)
+mrlvsb/kelvin		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**MIT** (`LICENSE@master`, 1,063 B, `sha256₁₂ d94b8adebb28`)
+munitkala/SelfSemester		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (`main/LICENSE`, 1,081 B, `sha256₁₂ f5fe104e348d`)
+nbgallery/nbgallery		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	**MIT** (`LICENSE@master`, 1,071 B, `sha256₁₂ 7900749dcb3b`, `MIT License` title line; SPDX agrees)
+netless-io/flat		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	MIT
+neuronection/study-assistant		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	agents/top.md,verticals/solutions.md	Apache-2.0 (byte-read `10,173 B`)
+nialvape/utn-mcp		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**ISC** `748 B`
+nichochar/ari		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT
+nijataliyev7/elifba		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (1,069 B, `c79aae99a979`)
+nomadicjosh/etsis		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	**MIT** (`main/LICENSE.md`, 1,114 B, `sha256₁₂ 8f8a3e4bfffc`)
+nsip/nias2		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**Apache-2.0** — `master/LICENSE`, 11,371 B, `sha256₁₂ b0d65685ad40`
+oaknational/oak-ai-lesson-assistant		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (code) — see the multi-grant note
+odoo/odoo	LGPL-3.0	byte-read-p937	raw.githubusercontent HEAD/LICENSE	1	verticals/solutions.md	LGPL-3.0
+ollama/ollama		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT
+onemnemo/mnemo		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	Apache-2.0 (11,325 B, `9e43fad60ad0`)
+ongjin/garu		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟢 Apache-2.0 — 11,358 B, `sha256₁₂ cfc7749b96f6`
+online-ml/river		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟢 **BSD-3-Clause** (`LICENSE@main`, 1,528 B, `sha256₁₂ e87f2c8f1ba6`)
+open-scratch/teaching-open		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	Apache-2.0
+open-spaced-repetition/fsrs4anki		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT
+openai/whisper		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT
+openbadgefactory/salava		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	🟢 **Apache-2.0** (9,720 B, `sha256₁₂ e9852865aedf`)
+opencast/opencast		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	ECL-2.0
+opendatalab/MinerU	Apache-2.0 + extra terms	byte-read-p937	raw.githubusercontent HEAD/LICENSE.md	1	repos/foundations.md	Apache-2.0
+openeducat/openeducat_erp	LGPL-3.0	byte-read-p937	raw.githubusercontent HEAD/LICENSE	1	verticals/solutions.md	LGPL-3.0 (byte-verified p891 from `LICENSE@master`; the GitHub API reports `NOASSERTION` because the file is a preamble plus the G
+openedx/XBlock		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	Apache-2.0
+openedx/codejail		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	Apache-2.0
+openedx/edx-ora2		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	agents/top.md,repos/foundations.md	AGPL-3.0
+openedx/edx-proctoring		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	AGPL-3.0
+openedx/openedx-ai-extensions		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	AGPL-3.0
+openedx/openedx-app-android		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	**Apache-2.0** ⟂ Open edX is AGPL-3.0
+openedx/openedx-app-ios		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	**Apache-2.0** ⟂ Open edX is AGPL-3.0
+openedx/openedx-aspects		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	Apache-2.0
+openedx/openedx-platform		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	AGPL-3.0
+openedx/paragon		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	Apache-2.0
+openedx/xblock-sdk		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	Apache-2.0
+openfun/marsha		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	MIT
+openfun/ralph		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT
+openfun/richie		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	MIT
+openlit/openlit		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	Apache-2.0
+openpatch/bitflow		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**MIT** (`LICENSE.md@main`, 1,069 B, `sha256₁₂ 6c8866c27129`)
+opensacorg/learning-blocks		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	**MIT** (`master/LICENSE`, 1,076 B, `sha256₁₂ 06145c4016db`)
+openwallet-foundation/multipaz		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**Apache-2.0** (`LICENSE@main`, 11,358 B)
+oppia/oppia		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	Apache-2.0
+oppia/oppia-android		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	Apache-2.0 ⟂ Oppia is Apache-2.0
+orangewk/MathDesk-snapshot		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (1,065 B, `92511e2244a8`)
+orionsheep/wordlink		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (`main/LICENSE`, 1,093 B, `sha256₁₂ b0f3e0f68927`)
+otuncelli/turkish-stemmer-python		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟢 Apache-2.0 — 11,344 B, `sha256₁₂ 511c590688e4`
+overhangio/tutor		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	AGPL-3.0
+pacewisdomhq/TutorLoom		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	Apache-2.0 (11,361 B, `a7f87303f2e9`)
+parler-haut-interagir-librement/certificates-bundle		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**MIT** (identical grant, `sha256₁₂ 2da07e888147`)
+parler-haut-interagir-librement/open-badges-bundle		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**MIT** (`LICENSE@main`, 1,155 B, `sha256₁₂ 2da07e888147`)
+parmentelat/nbautoeval	CC-BY-SA-4.0	byte-read-p937	raw.githubusercontent HEAD/LICENSE	1	repos/foundations.md	"🔴 **CC-BY-SA-4.0 — a content licence on executable code.** Byte-read `LICENSE@master` (289 B, `sha256₁₂ 1bb69236081f`): *""made ava"
+parthdhanani/scorm-kit		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**MIT** (`LICENSE@main`, 1,070 B, `sha256₁₂ 51b37fff352e`)
+parthdhanani/storycraft		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**MIT** (`LICENSE@main`, 1,070 B, **identical** `sha256₁₂ 51b37fff352e`)
+patchy631/ai-engineering-hub		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT
+pawtograder/platform	GPL-3.0	byte-read-p937	raw.githubusercontent HEAD/LICENSE	2	repos/foundations.md,verticals/solutions.md	"🔴 **GPL-3.0-or-later — SPDX says `NOASSERTION`. Corrected p899.** Byte-read `LICENSE@main` (658 B, `sha256₁₂ 61d7698783f4`): *""Thi"
+peblproject/PEBL		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**Apache-2.0** — byte-read `p907` (`LICENSE@master`, 11,350 B)
+peleg-jpg/israeli-bagrut-psychometric		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (byte-read `p910`, `LICENSE@main`, 1,150 B, `sha256₁₂ 2b20dde3e647`)
+pieralukasz/true-recall		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	agents/top.md,repos/foundations.md	**MIT** (`main/LICENSE`, 1,070 B, `sha256₁₂ 23444362494b`)
+pkp/ojs		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	GPL-3.0
+portabilis/i-diario	AGPL-3.0	byte-read-p937	raw.githubusercontent HEAD/LICENSE	1	verticals/solutions.md	**AGPL-3.0** — 🔴 **byte-read correction, p896**
+portabilis/i-educar		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	GPL-2.0
+praj2408/RAG-Enhanced-NCERT-Tutor		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (1,072 B · `8a909947f61b`)
+procivis/one-core		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**Apache-2.0** (`LICENSE@main`, 11,340 B)
+procivis/one-wallet		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**Apache-2.0** (`LICENSE@main`, 11,340 B)
+promptfoo/promptfoo		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT
+proyecto26/notebooklm-ai-plugin		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (byte-read `main/LICENSE`, 1,068 B, `sha256₁₂ 775ec66aca27`)
+pupilfirst/pupilfirst	MIT	byte-read-p937	raw.githubusercontent HEAD/LICENSE	1	verticals/solutions.md	**MIT** — multi-grant, byte-read p899 (`LICENSE@master`, 1,684 B, `sha256₁₂ bda0aa6d49f2`)
+pykt-team/pykt-toolkit		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT
+pyta-uoft/pyta		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🔴 **GPL-3.0** (`LICENSE@master`, 35,141 B, `sha256₁₂ 589ed823e9a8`, GNU GPL title line; SPDX agrees)
+qdrant/qdrant		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	Apache-2.0
+robelasefa/eaes-bot		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (1,067 B · `cb1a9de3b176`)
+robzilla1738/Memorwise		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (byte-read `main/LICENSE`, 1,069 B, `sha256₁₂ f141bdd69966`)
+rwthanalytics/moodle-local_learning_analytics		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🔴 GPL-3.0 (`LICENSE@master`, 35,148 B)
+sagorbrur/bnlp		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	🟢 **MIT** — 1,069 B, `sha256₁₂ 643fa15c5813`
+sakaiproject/sakai		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	ECL-2.0
+sandboxnu/graduatenu		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🔴 GPL-3.0
+satvik314/educhain		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT
+sayanpal514-hue/Student-Management-System		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT (byte-read `1,072 B`)
+saylordotorg/moodle-local_ai_course_assistant		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	🔴 **GPL-3.0** (`main/LICENSE`, 35,149 B, `sha256₁₂ 3972dc9744f6`)
+sefineh-ai/Amharic-Tokenizer		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	🟢 MIT — 1,069 B, `sha256₁₂ 83e775edbdd9`
+shbernal/pdfanki		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (byte-read `1,145 B`)
+shellery1988/k12-smart-teacher		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (byte-read `main/LICENSE`, 1,073 B, `sha256₁₂ 4c5f6e74a09b`)
+shigella520/MindTrain		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (1,066 B, `d69b0f7c3228`)
+siberius/learning-methodologies		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (1,072 B, `55b44f528c81`)
+simonseifert/merlin-mcp		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** `1,070 B`
+sinothando/student-early-warning-system		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟢 **MIT**
+sitor-ai/frametell		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**AGPL-3.0**
+siyegs/rung		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (byte-read `main/LICENSE`, 1,081 B, `sha256₁₂ fd3995809614`)
+smashburger-dev/socratic-workshop		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT
+stanford-oval/storm		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT
+stegra05/Lectern		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (byte-read `1,072 B`)
+steve-ongera/KNEC-Exam-Management-System	none	byte-read-p937	raw.githubusercontent HEAD/none	1	repos/foundations.md	🔴 **No `LICENSE` file — unusable**
+sudosylabs/proctor		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	**AGPL-3.0**
+suellenferraz/Projeto-GabirIA		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (byte-read `main/LICENSE.md`, 1,085 B)
+summeraprx/topik-shortcut	none	byte-read-p937	raw.githubusercontent HEAD/none	1	agents/top.md	🔴 **NO GRANT** (byte-read `p910`: 8-path ladder on `main`, all `404`; field `NULL`)
+swl10/pyslet	BSD-3-Clause	byte-read-p937	raw.githubusercontent HEAD/LICENSE.txt	1	repos/foundations.md	"🔴 **BSD-3-Clause** — byte-read `p907` (`LICENSE.txt@master`, 2,906 B, *""Copyright 2017 Steve Lay""*); **the API reports `NOASSERTIO"
+taishi-i/awesome-japanese-nlp-resources		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟡 **CC0-1.0** — 7,048 B, `a2010f343487`
+taishi-i/nagisa		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟢 MIT — 1,065 B, `sha256₁₂ fa2fb3121bd2`
+tanzir71/tinyproctorjs		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	agents/top.md,verticals/solutions.md	**MIT** (1,085 B, `cc1b9d2387e8`)
+temporalio/temporal		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT
+tep00018/LEA-platform		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	**Apache-2.0**, byte-read `main/LICENSE.txt` (11,378 B, `sha256₁₂ d17f7fd47c98`) — 🔵 note the path: `LICENSE.txt`, which an 8-path
+terracotta-education/terracotta		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**Apache-2.0** (`11,323 B`)
+theteacherbot/ICFES-Exam-Engine		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (1,067 B · `95927f6f69fa`)
+thm-mni-ii/feedbacksystem	Apache-2.0	byte-read-p937	raw.githubusercontent HEAD/LICENSE	2	agents/top.md,verticals/solutions.md	Apache-2.0 (10,784 B, `824e945ea176`)
+tong666-bit/liu-xiaoyan-skill		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (`master/LICENSE`, 1,068 B, `sha256₁₂ 8626b7112026`)
+totara/openbadges		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	🔴 GPL-3.0
+towardsai/ai-tutor-app		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	Apache-2.0
+traceloop/openllmetry		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	Apache-2.0
+tridpt/LectureDigest		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (byte-read `1,063 B`)
+tristcoil/hanabira.org		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	**MIT** — `main/LICENSE`, 1,061 B, `sha256₁₂ fb81a218ce1c`
+trycua/cua		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**MIT** (`LICENSE.md` `1,069 B`)
+tsugiproject/tsugi		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	Apache-2.0
+tuanone123/awesome-vietnamese-llm-dataset		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟡 **CC0-1.0** — 6,460 B, `f0f96b4f190e`
+turnkeylinux-apps/canvas	none	byte-read-p937	raw.githubusercontent HEAD/none	1	verticals/solutions.md	🔴 **no licence file** (`README.rst` `200`; Canvas itself is AGPL-3.0)
+tutors-sdk/tutors		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	MIT (1,087 B, `b418e808b99a`)
+ubermenchh/anki-cli		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (byte-read `main/LICENSE`, 1,069 B, `sha256₁₂ e8cf0ccc5dd2`)
+ucbds-infra/otter-grader		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	"**BSD-3-Clause** (`LICENSE@master`, 1,560 B, `sha256₁₂ 6af203d41a01`, *""Copyright (c) 2019, UC Berkeley Division of Data Sciences"""
+ucfopen/UDOIT		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	GPL-3.0 (35,146 B, `c53a65c2fd56`)
+ucfopen/canvasapi		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT
+ucfopen/cookiecutter-python-lti		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**MIT** — byte-read `p917` (`LICENSE@main`, 1,130 B)
+uczltw6/course-tutor		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (1,082 B, `sha256₁₂ f4f4a2cdaa54`)
+uemanet/harpia		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	agents/top.md,verticals/solutions.md	**MIT** (1,063 B, `afa9cfe1dcb6`)
+ufal/udpipe		prose-only	not re-read in p937 - cell is annotated prose, not a token	2	repos/foundations.md,verticals/solutions.md	🟡 **MPL-2.0** — 16,725 B, `sha256₁₂ 1f256ecad192`. 🔴 Published as a bare `MPL` until `922-F3`
+uloya1234/faq-assistant		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	🟡 **MPL-2.0** (16,726 B, `3f3d9e0024b1`)
+undertheseanlp/underthesea		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟢 Apache-2.0 — 10,765 B, `sha256₁₂ 05e32ccfed98`
+virgiliojr94/book-to-skill		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT
+virtualryder/edu-ai-agents	MIT	byte-read-p937	raw.githubusercontent HEAD/LICENSE	1	agents/top.md	MIT (SPDX: NOASSERTION; licence text reads MIT)
+vishalsachdev/canvas-mcp		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT
+vistec-AI/thai2transformers		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	🟢 Apache-2.0 (11,357 B, `sha256₁₂ 58d1e17ffe51`, byte-read `p919`)
+vllm-project/vllm		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	Apache-2.0
+vulinh1704/ai-tutor-agent		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT
+wannaphong/Awesome-Lao-NLP		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟢 **MIT**
+wannaphong/LaoNLP		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	Budget a multilingual model plus your own evaluation set and glossary. 🔵 Lao fails on **stars alone**; one engagement's contributi
+warleysr/ankipa		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT
+webtech-network/autograder		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**Apache-2.0** (`LICENSE@main`, 11,357 B, `sha256₁₂ c71d239df917`)
+weishao2/tizhuang-agent-skills		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (byte-read `main/LICENSE`, 1,077 B, `sha256₁₂ 881348270e41`)
+wenflow-org/wenflow		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT
+wenliu3/ai-smart-homework-review		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MulanPSL-2.0** (byte-read `main/LICENSE`, 9,246 B, `sha256₁₂ 2a7ffa7fcf2e`, Chinese text, `license.coscl.org.cn/MulanPSL2`)
+willfeldman/readu		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	**MIT** (1,069 B, `8fe5f43417ff`)
+withmarbleapp/os-taxonomy		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	**ODbL-1.0**
+wonmortech/sanad		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**Apache-2.0** (`LICENSE@main`, 11,337 B, `sha256₁₂ 2dfd7238870e`)
+wwWallet/wallet-frontend		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**BSD** (`LICENSE@master`, 1,309 B)
+wysking/postgrad-study-engine		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (byte-read `main/LICENSE`, 1,091 B, `sha256₁₂ 4e7a7ccdeb86`)
+xiaochong0302/course-tencent-cloud		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	GPL-2.0 (18,430 B, `b0f38548973d`)
+xiaoyang111222/cn-math-taxonomy	CC0-1.0	byte-read-p937	raw.githubusercontent HEAD/LICENSE	1	agents/top.md	**`CC BY-NC 4.0`** (19,345 B, `db2e35513dba`)
+xingjunm/autoppt		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (byte-read `main/LICENSE`, 1,092 B, `sha256₁₂ db50831211a3`)
+xx-hub/craft-your-textbook		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	🟢 **MIT** (`LICENSE@main`, 1,089 B, `sha256₁₂ f987e7f53e06`)
+xxinjie21/Smart-Quiz-Tutor		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	🟢 **0BSD** (664 B, `2cb3ff984068`)
+y4zh/kurikulum-merdeka-asesmen-skills		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	🟢 MIT (1,065 B, `sha256₁₂ 1e41d9c6af01`, byte-read `p919`)
+yetanalytics/lrsql		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	Apache-2.0
+yf-team/yf-exam-lite		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	MIT (`main/LICENSE`, 1,074 B, `sha256₁₂ b4cf55353a49`)
+yinuoguan/nengdou-ai-review-helper-web		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	🔴 **MulanPSL-2.0 — CORRECTED `p930`, was published here as `Apache-2.0`** (`HEAD/LICENSE`, **9,247 B**, `sha256₁₂ f0dade5c9337`, o
+yonasab12/amharicNLP	none	byte-read-p937	raw.githubusercontent HEAD/LICENSE	1	repos/foundations.md	🔴 **an 11-byte file reading `MIT License` — a name, not a grant**; `search` says `NOASSERTION` and is right
+youufis/SmartKBS		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	verticals/solutions.md	**AGPL-3.0** (byte-read `master/LICENSE`, 34,833 B, `sha256₁₂ c017a2e33418`)
+zayn-anwar/NCERTTBDL		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	🟢 **MIT** (1,067 B · `c2cd195af659`)
+zhangl1001/civil-ai		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT
+zijian-optics/SolaireEPDA		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	repos/foundations.md	**AGPL-3.0** (`master/LICENSE`, 34,522 B, `sha256₁₂ 20b067f86de3`)
+zijinz456/OpenTutor		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT
+zoonk/zoonk		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (1,061 B, `34f44fc04045`)
+zuhairhalawa/studyai		prose-only	not re-read in p937 - cell is annotated prose, not a token	1	agents/top.md	MIT (1,068 B, `326f6a6b9c20`)
