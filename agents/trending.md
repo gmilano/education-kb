@@ -4,6 +4,43 @@ region: Global
 updated: 2026-11-21
 ---
 
+## `2026-11-21` (p938) — **A verification pass, because the remote already had today's ingest while `rotation.json` still pointed here. It found the largest single-cell star error this base has recorded — and it was understated, not inflated.**
+
+🔵 **Why this pass verified instead of rewriting.** `rotation.json` in `globant-kb` read `{"next": 8}` — education — with `last_industry: technology`. But this base's remote already carried **`27c6acf`, `ingest: education KB update 2026-11-21 (p937)`, committed 09:16Z the same day**. That is the signature of a pass that *pushed its content and failed to advance the rotation*, not of a stale base: `p937`'s eight files were present, correctly frontmattered and internally consistent. 🟢 **Rewriting them would have destroyed a good pass's work to re-derive the same facts.** So `p938` spent its budget on the one thing `p937` could not do for itself — independent verification — and on advancing the rotation `p937` left behind.
+
+### 🟢 `938-F1` Structural audit: `p937`'s eight files pass every mechanical check this base applies
+
+| Check | Result |
+|---|---|
+| Frontmatter present, `industry`/`region`/`updated` | 🟢 **8 / 8** |
+| `region` in the closed vocabulary | 🟢 **8 / 8** (`Global`) |
+| `updated` matches the commit date | 🟢 **8 / 8** (`2026-11-21`) |
+| All-empty or placeholder data rows (`\| - \| - \|`, `TBD`, `Por completar`) | 🟢 **0** |
+| Header-shaped lines **not** followed by a separator | 🟢 **0 compiled as data** |
+| `## Opportunities by region` headings in `intel/market.md` | 🟢 **exactly 1**, with 4 regional `###` subsections |
+
+🟡 **One sub-check deserves recording because it is a false positive this base should stop re-raising.** A naive scan for header-shaped rows reports **74 hits** across the live files. All 74 are **transposed two-column attribute tables** — `| Repo | <url> |`, `| Licence | <grant> |` — where the left cell is a field *name* and the row is legitimate data. 🔵 **The gate is not "does the row look like a header", it is "is this row followed by a separator".** Keyed that way the count is zero, and the 74 are correct markdown.
+
+### 🔴 `938-F2` `molly554/whiteboard-ai-tutor`: published `345 ★`, measures `491` — understated by **42.3%**
+
+The single largest star error this base has recorded, and the direction is the one the instrument was not watching for. The cell's own prose reads *"Created after Aug 2026 — one of the fastest-growing new entrants"*, which is the whole explanation: **a carried star number for a fast-growing repo decays downward, and it decays in proportion to the growth the cell is describing.** The same pass's eleven other anchors drifted upward by 0.0–3.3%; this one drifted 42.3% because it is small and compounding, not large and settled.
+
+🔵 **The rule is a scheduling rule, not an arithmetic one.** A 60,000-star anchor can carry a three-day-old number safely — `HKUDS/DeepTutor` moved 0.7% in that window. A 300-star repo on a steep curve cannot. **Re-measurement priority should be inverse to star count and proportional to recency of creation**, which is the opposite of how this base has been sampling: it re-measures the anchors it quotes most, which are precisely the ones that need it least.
+
+### 🔴 `938-F3` `kad-xyz/spbstu-mcp` has now declined three times — and it is the one failure mode no other instrument here can see
+
+`19 → 10 → 8 ★`, **−58% from peak**, across three independent measurements (`p926`, `p927`-era shelf, `p938`). 🟡 **And it passes everything else:** resolves on `ls-remote`, `MIT` at 1,064 B, not archived, pushed **2026-11-19**. 🔵 An archived flag or a stale push date reports that *the maintainer* stopped; a sustained star decline reports that *the adopters* stopped, **while the repo still looks maintained**. Promoted to `intel/trends.md` **`T77`** with an explicit threshold — two or more consecutive declines — because `p926` recorded two one-off drops (`boyuchengz/canvas-mcp` −2, `zuhairhalawa/studyai` −1) that have **not** continued, and a single drop is noise.
+
+### 🔴 `938-F4` The forty-fifth consecutive English-prose nil, and the listicle channel is now characterised
+
+The four mandated global legs ran. **Zero unheld education repositories.** What the two agent legs returned instead is worth naming once so no later pass re-runs them hoping for better: general-purpose agent listicles (`dev.to`, `agenta.ai`, `nocobase.com`, `agnt.gg`, `toolradar.com`) whose "education" entries are **courses about building agents** — `ai-agents-for-beginners`, the Hugging Face Agents Course, `LLMs-from-scratch` — not agents that teach. 🔵 **The channel conflates *AI for education* with *education about AI*, and that conflation is structural, not incidental** — it is why 45 passes of prose search have produced nothing the topic-qualified repository channel did not already hold. The education-specific hits were `HKUDS/DeepTutor` and `amosblomqvist/learnharness`, both long-shelved here. 🟡 Both named sources also got their licences wrong or left them unstated, which `925-F*`'s licence traps already predicted.
+
+### 🟢 `938-F5` `openedx/openedx-platform` resolved normally — `p901`'s false absence did **not** recur
+
+`p901` recorded `422 "resources do not exist"` from `search/repositories` on the AGPL anchor of the entire LMS tier. This sweep it returns cleanly: **8,250 ★, `AGPL-3.0`, pushed 2026-11-20, `archived: false`**. 🔵 **So the false-absence class is intermittent *per repository and per sweep*, not a stable property of a slug** — which means `p926`'s 1.0% rate is a rate, not a blacklist, and a `422` must be re-probed rather than inherited as a permanent exclusion. That is the same conclusion the sibling `technology` KB reached from the opposite evidence (siblings in one org resolving while three named repos did not), and it is now confirmed from both sides.
+
+🟡 **`938-F6` `gnmyt/Quizzle` has stopped moving.** `p928` named it *"the largest genuine education repository in the entire haul"* at **37 ★**. It is still 37, and its last push is **2026-05-06** — six and a half months quiet. 🔵 `p928`'s ceiling finding is stronger than `p928` could state it: the ceiling is not just low, **the repo that defines it has been abandoned**, and the 966-of-1,065 two-stars-or-fewer tail beneath it has no successor.
+
 ## `2026-11-21` (p937) — **`930-R*` sent this pass to clear a 61-row licence backlog. The backlog does not exist. The audit that found it reproduces 100% against the `p928` shelf and 41% against the shelf it was published about — and the published cells it called unresolved were already byte-read, and were right.**
 
 🔵 **Summary.** `p930` closed by naming the work for this pass: *"**10.4% of the shelf is `NOASSERTION` or ungranted**, which is the fraction a client's legal review will stop on. Those 61 rows are the backlog worth clearing — not another topic vocabulary."* `p937` went to clear them. **There was nothing to clear.** The 61 rows were an artefact of two compounding measurement errors, both now reproduced and fixed. What this pass delivers instead is the diagnosis, an independent byte-read of all 61 rows that confirms the published shelf, two real licence corrections found along the way, and a structured ledger so the error cannot recur.

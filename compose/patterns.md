@@ -788,6 +788,26 @@ engagements are the same build with the curriculum corpus and the language swapp
 Vietnam's 12-periods-per-year mandate and, with the student tier removed, the EU Article 4
 staff-literacy duty.
 
+🆕 **`p938` adds Taiwan, and it is the cleanest fit this pattern has.** Taiwan's **AI Basic
+Act** (promulgated **2026-01-14**) obliges the government to **promote AI and AI-ethics education
+across schools, industries, organisations, society and public institutions**, with the central
+education authority to issue **school AI-use and learning guidelines**. 🟢 **No modification to
+this pattern is required** — it already assumes a state mandate, a client-owned curriculum and a
+teacher-capacity constraint, and Taiwan supplies all three. 🟡 Two cautions specific to this
+jurisdiction, both from `intel/market.md`'s APAC block: the **article number is contested** across
+sources (7 vs 9) and the reported **2026-07-14** guideline deadline rests on a single garbled
+snippet, so **neither belongs in a proposal**; and the **Ipsos Education Monitor 2026** has support
+for *banning* school AI **rising** in the region (Japan 21%→29%, Korea 27%→31%, Australia
+47%→52% — a majority). 🔵 **In Taiwan the risk-bearing half of this pattern is the
+teacher-and-parent-facing half, not the technology**, which inverts the usual weighting: budget the
+communications and consent surface as a first-class deliverable rather than a change-management
+afterthought.
+
+🔴 **And the supply side is empty.** No Taiwan-origin, permissively licensed education
+repository has surfaced in this base. The curriculum corpus and the delivery platform both have to
+come from elsewhere in this file (`OpenOLAT` Apache-2.0 for the institutional tier), with
+localisation as studio work — priced as build, not as adoption.
+
 ### Why this pattern exists
 
 Every other pattern in this file answers a constraint on AI *use*. This one answers a state

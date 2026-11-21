@@ -4,6 +4,59 @@ region: Global
 updated: 2026-11-21
 ---
 
+## `2026-11-21` (p938) — **Every address this base publishes was re-resolved: 683 slugs, 683 accounted for. No new repos for the 50th pass running — and the permissive-LMS scarcity this file has asserted for months got its cleanest confirmation yet, from a leg that went looking for the opposite.**
+
+🔵 **This pass verified rather than ingested** — `p937`'s commit was already on the remote while `rotation.json` still pointed at education. The repo-layer contribution is therefore an **address audit at full coverage**, which this file has never had, plus one genuine market finding from the verticals leg.
+
+### 🟢 `938-R1` Full address audit: 683 distinct slugs, 682 live, 1 accounted for
+
+Every `github.com/<owner>/<repo>` string in the six live content files was extracted and re-resolved with `git ls-remote` — **the only existence oracle this base trusts**, per the standing rule that `github.com` HTML returns `403` through this proxy and `search/repositories` produces silent false absences.
+
+| | Count |
+|---|---|
+| Distinct slugs written across the live content files | **683** |
+| 🟢 Resolve on `git ls-remote` | **682** |
+| 🔴 Do not resolve | **1** |
+| 🟢 Dead slugs published **as data** | **0** |
+
+🔵 **The single non-resolving string is `OWNER/REPO`**, inside `agents/top.md:1540` — a prose sentence stating that *`curl -sI https://github.com/OWNER/REPO` is not a usable existence check in this environment*. It is a command template in a methodological note, **not a table row**, and it is the correct thing for that sentence to contain. 🟢 **So the audit's true reading is 683 of 683 correct**, and this base currently publishes **no dead repository address anywhere in its live content.**
+
+🟡 **Two controls, because an audit that cannot fail is not an audit.** The verifier was run against `gmilano/this-repo-does-not-exist-xyz123` and `fakeorg999/nothinghere` (both correctly `DEAD`) and against `moodle/moodle` (correctly `LIVE`) in the same invocation as the sweep. 🔵 **683 slugs resolved in 17 seconds at 14-way concurrency**, which is the fact that makes this a *per-pass* check rather than an occasional one: full address verification costs under half a minute and should run on every pass from here, not only on verification passes.
+
+### 🟢 `938-R2` The licence column held across every re-measured row — including the three known divergences
+
+Twelve anchors re-measured through `search/repositories`. **Zero renames, zero newly archived, and no SPDX field contradicted a published cell.** The three rows whose SPDX disagrees with this base's byte-read grant are the three already carried as known, and all three disagreed in exactly the recorded way:
+
+| Repo | SPDX field | Published (byte-read) | Status |
+|---|---|---|---|
+| `withmarbleapp/os-taxonomy` | `ODbL-1.0` | `ODbL-1.0` — a *database* licence on a curriculum graph | 🟢 agrees, trap stands |
+| `xiaoyang111222/cn-math-taxonomy` | `NOASSERTION` | **`CC BY-NC 4.0`** (19,345 B) | 🟢 known divergence, unchanged |
+| `CaviraOSS/PageLM` | `NOASSERTION` | **"PageLM Community License"** (8,562 B) | 🟢 known divergence, unchanged |
+| `chadyi/StudyOnTV` | `NOASSERTION` | **"Source Available — Personal Use Only"** (1,042 B) | 🟢 known divergence, unchanged |
+| `amosblomqvist/learnharness` | `AGPL-3.0` | `AGPL-3.0` | 🟢 agrees |
+
+🔵 **`NOASSERTION` continues to mean "the index could not parse this", never "this repo is unlicensed"** — and the three repos it fires on here carry, between them, **12,611 stars and three separate commercial prohibitions**. That is the single highest-value correction this base makes over any public index, and it reproduced cleanly a fourth time.
+
+### 🔴 `938-R3` The verticals leg went looking for a permissive education platform and confirmed there is still not one
+
+The mandated platform leg (`open source platform education LMS SIS ERP MIT Apache license 2026`) returned a full field and **not one MIT-licensed LMS, SIS or education ERP**:
+
+| Platform | Licence | Note |
+|---|---|---|
+| `OpenOLAT/OpenOLAT` | 🟢 **Apache-2.0** | Still the **only** permissively licensed full LMS — byte-read in `p905`, holds |
+| `moodle/moodle` | GPL-3.0 | |
+| `instructure/canvas-lms` | AGPL-3.0 | |
+| `openedx/openedx-platform` | AGPL-3.0 | Some components Apache-2.0; the platform is AGPL |
+| OpenEduCat Community | LGPL-3.0 | SIS + LMS + fees + attendance |
+| `francoisjacquet/rosariosis` | GPL-2.0 | |
+| `GibbonEdu/core` | GPL-3.0 | |
+
+🔵 **This matters because the leg was adversarial to the claim and failed to break it.** The query named MIT and Apache explicitly, in a market with a dozen mature platforms, and the permissive set is still **a single entry**. 🟢 **`OpenOLAT` is therefore not merely "this base's recommendation for a proprietary derivative" — it is the only available one**, and that should be stated as a structural fact about the market rather than as a preference. 🟡 The secondary sources also disagreed with themselves on Open edX's licence (one listing "AGPL v3 platform, Apache 2.0 some components", another just "AGPL"), which is the ordinary reason this base byte-reads.
+
+🟡 **`938-R4` A vendor TCO claim, named so it is not re-harvested.** OpenEduCat's own marketing pages carry a **"60–80% lower five-year total cost of ownership"** figure. 🔴 It is a **vendor claim on a vendor page with no methodology**, it is the kind of number that reads as independent once it is in a deck, and it is recorded here as **unusable** rather than quoted. This is the same class as the placeholder-figure trap the sibling `technology` and `travel` KBs both hit the same week.
+
+🔵 **`938-R5` No new repositories, for the 50th consecutive pass.** Consistent with `926-R1` — a discovery channel is exhausted only against the vocabulary it was asked with — and with `928-F*`'s measured ceiling: the population is large (21,238 unique repositories retrieved) and **90.7% of the unheld remainder has two stars or fewer**. 🟡 The honest statement for a client is not "we have found everything" but **"the permissive education-repository population above a usable quality floor is small, bounded, and this base holds it"** — and `938-F6` in `agents/trending.md` adds that the repo defining the ceiling has itself been quiet since May.
+
 ## `2026-11-21` (p937) — **No new repos, and that is the finding for the 49th pass running. What changed is the instrument: `HEAD` resolves the default branch, which cuts the licence ladder 3×, and the `p930` audit's row pairing is void — it was computed against the `p928` shelf.**
 
 ### 🔴 The audit this file has been citing is line-desynced

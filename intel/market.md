@@ -2250,6 +2250,55 @@ self-hostable campus bridge.
 
 ### APAC
 
+#### 🆕 `p938` (2026-11-21) — Taiwan: the one APAC statute that **creates education demand instead of constraining it**, and this base was carrying it as a bare name
+
+🟡 Snippet-sourced. `moda.gov.tw` does not resolve from this environment (the same network
+constraint as `937-F7`), so the Act's text could **not** be byte-read and no article number is
+asserted below.
+
+🔴 **Taiwan appeared exactly once in this file** — grouped with South Korea and Vietnam as a
+jurisdiction that "brought AI-specific statutes into force" — **and that grouping hides the only
+structural difference in the set.** Korea's and Vietnam's statutes *regulate* education AI: they
+classify it, assign risk tiers and attach compliance deadlines. Taiwan's **AI Basic Act** does that
+too, and then adds an affirmative duty running the other way.
+
+| | Taiwan AI Basic Act |
+|---|---|
+| Passed | **2025-12-23** (Legislative Yuan) |
+| Promulgated | **2026-01-14** |
+| Education duty | Government **obliged to promote AI and AI-ethics education** across *schools, industries, organisations, society and public institutions* |
+| School guidelines | Central education authority to formulate **AI usage and learning guidelines for schools at all levels** |
+| Reported deadline | 🔴 **2026-07-14** (six months) for the Ministry of Education's school AI-use guidelines — **one source only, in a garbled snippet; treat as unconfirmed** |
+| Related programme | Taiwan **AI Action Plan 2.0** (2023–2026), which already carries AI-ethics and legislation workstreams |
+
+🔴 **Two unresolved conflicts, recorded rather than papered over.** Sources place the education
+provision in **Article 7** in one reading and **Article 9** in another, and this pass could not
+resolve it without the official text. **Do not cite an article number for Taiwan in a proposal.**
+The *duty* is consistently reported across government summaries, law-firm notes and the Executive
+Yuan's own English page; only its location and the guideline deadline are contested.
+
+🔵 **Why this is commercially different from every other row in this section.** Every other
+instrument this file catalogues — Korea, Vietnam, the EU, the US states — is a **constraint** on
+deploying education AI, and the engagement it generates is conformity work: classify the system,
+document it, keep a human in the loop. A statutory duty to *promote AI and AI-ethics education
+across schools and public institutions* is a **budgeted delivery programme**, and the buyer is a
+ministry rather than a compliance function. 🟢 **It is the APAC analogue of the mandate this
+base already sells against in `compose/patterns.md` `P10` — national curriculum-mandate delivery,
+teacher enablement at system scale** — and `P10` needs no modification to serve it: the pattern is
+jurisdiction-agnostic and Taiwan supplies the mandate it assumes.
+
+🔴 **The counter-signal, and it belongs next to the opportunity.** The **Ipsos Education Monitor
+2026** measures support for *banning* AI in schools **rising** across the APAC markets it covers —
+Japan **21% → 29%**, South Korea **27% → 31%**, Australia **47% → 52%**. 🔵 **Australia is at a
+majority**, and these are the same markets whose governments are legislating promotion. A
+ministry-funded AI-literacy programme in this region is being bought into a public opinion that is
+moving against it, which makes the **teacher-and-parent-facing** half of `P10` the risk-bearing half,
+not the technology.
+
+🟡 **What this leg could not establish.** No Taiwan-origin, permissively licensed education
+repository surfaced in this pass; Taiwan remains **absent from this base's supply side** while
+present on its demand side. Recorded as a gap, not as coverage.
+
 #### 🔵 `p937` (2026-11-21) — APAC: the region now has **binding statute that names education high-risk**, which EMEA's is still arguing about
 
 🟡 Snippet-sourced; no primary legislative host in this leg resolves from this environment.
