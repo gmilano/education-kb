@@ -4369,3 +4369,65 @@ risk. **Add 2–3 weeks** per additional LMS seam, and **2 weeks** for the Open 
 force **2026-03-01**, education named high-risk, transition **already expired 2026-06-30**) and
 **South Korea** (AI Basic Act in force **2026-01-22**) this is retrofitted onto a *running*
 deployment, which is mostly steps 1–3 and lands in **4–6 weeks**.
+
+## P497 — Vietnam education-AI conformity pack: classify first, and bill the negative answer (`p939`)
+
+**When to reach for this.** A client sells or operates education software in **Vietnam** — or sells
+into it from elsewhere in APAC — and has heard that "education is high-risk" under
+`Law 134/2025/QH15` and `Decree 142/2026/ND-CP`. 🔵 **This is the only education-AI pattern in this
+base that ends in a filing rather than a recommendation**, because Vietnam is the only jurisdiction
+here with an enumerated high-risk list *and* a live portal (`intel/trends.md` **`T78`**).
+
+**Why the classification step comes first, and why it is the profitable one.** The high-risk list
+enumerates **46 systems across 6 categories, of which education is 3** — student assessment and
+admissions. 🟢 **Most of an edtech portfolio is therefore out of scope**: tutoring, content
+generation, scheduling, analytics and administrative automation are not listed. The engagement that
+proves a product is *not* one of the three named systems is cheap, fast, and worth as much to the
+client as a positive finding — and it is only defensible because the list is **enumerated rather
+than categorical**, so a negative answer can be argued from the text instead of from judgement.
+
+### Stage 1 — Classify (days, not weeks)
+
+| Step | What you do | Repo / artefact |
+|---|---|---|
+| Inventory every AI feature in the portfolio | One row per feature: input, output, who the decision binds | Spreadsheet; no tooling needed |
+| Map each row against the **3 enumerated education systems** | Assessment? Admissions? Neither? | `Decision 33/2026/QD-TTg` list |
+| Separate **medium-risk** from out-of-scope | Medium- **and** high-risk must be notified to the Ministry of Science and Technology | Decree 142 notification duty |
+| Produce a signed classification memo | The deliverable: per-feature in/out, with the textual basis for each | — |
+
+🔴 **Stop here and get the client's counsel to sign the memo before building anything.** The
+transition deadline for already-operating systems is **unresolved across sources** — `2027-09-01`,
+`2027-03-01`, and a `2026-06-30` self-assessment date — so the *timing* is a client-side legal
+determination. Scope your work against the **duties**, which every source agrees on.
+
+### Stage 2 — Build the evidence the duties actually require
+
+For each feature that *is* one of the three systems, Decree 142 requires pre-market **conformity
+assessment**, **registration in the National AI Database**, ongoing **incident reporting**,
+**transparency documentation** and **human oversight**. Wire it from parts this base already holds
+with permissive grants:
+
+| Duty | Concrete wiring | Licence |
+|---|---|---|
+| **Human oversight** on an assessment decision | Put a human-review gate in front of any grade or admission outcome. `CAHLR/OATutor` (**284 ★**, `MIT`, pushed 2026-11-21) is the reference implementation of transparent **BKT** mastery estimation — its per-skill state *is* the explanation a reviewer needs, unlike an opaque score | 🟢 `MIT` |
+| **Transparency documentation** | Generate a model/system card per feature: inputs, training provenance, known failure modes, the oversight gate. Keep it in-repo and version it with the model | — |
+| **Conformity evidence** on assessment quality | Hold out a scored set and publish measured accuracy per subgroup *before* filing, so the conformity claim is numeric. 🔵 Start here, exactly as the LATAM `piloto→producción` recipe does: **get a baseline number first** | — |
+| **Incident reporting** | A logged, queryable decision trail per assessment/admission outcome, with a defined severity threshold and a named filing owner | — |
+| **Registration** | File on the live portal — **`ai.dda.gov.vn`**, operated by the Ministry of Science and Technology, in operation since **2026-08-28** | — |
+
+### Stage 3 — Keep the AI layer outside the LMS process
+
+🔴 **Do not modify the LMS in-tree.** There is still no permissive LMS at anchor scale
+(`repos/trending.md` **`939-R2`**): Open edX is `AGPL-3.0` (`openedx/openedx-platform`, **8,250 ★**),
+Moodle and Chamilo are `GPL`, OpenEduCat is `LGPL-3.0`. 🟢 **Integrate across a service boundary** —
+LTI / REST out of the LMS into your own assessment service — so the copyleft obligation stays with
+the platform and your conformity artefacts stay in a repository you control and can hand to a
+regulator. 🔵 That boundary is required by the licence tier and *also* happens to be what makes the
+evidence trail auditable, which is the rare case where the legal constraint and the compliance
+requirement push the same way.
+
+🔴 **Two things not to put in the proposal.** The transition **date** (unresolved, above) and any
+claim built on a byte-read of the statute: **neither `ai.dda.gov.vn` nor the Official Gazette text
+resolves from this environment** (`939-F5`), so every element above is snippet-sourced from
+commercial compliance guides and the duties should be confirmed against the primary text by the
+client's counsel before a fixed price is quoted.

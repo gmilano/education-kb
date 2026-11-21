@@ -4,6 +4,45 @@ region: Global
 updated: 2026-11-21
 ---
 
+## `2026-11-21` (p939) — **670 addresses re-resolved, 670 live, zero dead. No new repos for the 51st pass running — and the vertical-platform leg confirmed the permissive-LMS scarcity for the second consecutive day, again from a leg that went looking for the opposite.**
+
+🔵 **Second verification pass of the day on this base**, because `p938` pushed its ingest at `10:47Z` without advancing `rotation.json`, which still read `next: 8`. Nothing below rewrites `p938`; it reproduces it and adds what the regulatory and platform legs returned.
+
+### `939-R1` 🟢 Address integrity — 670 of 670 live
+
+| Measurement | Result |
+|---|---|
+| Distinct real `github.com` slugs across the six live content files | **670** |
+| Resolve on `git ls-remote` | 🟢 **670 (100%)** |
+| Dead | 🟢 **0** |
+| Non-repository strings correctly excluded | `OWNER/REPO` (prose `curl` example), `search/repositories` (API path) |
+| Archived among the 12 re-measured anchors | 🟢 **0** |
+
+🟢 Independently matches `p938`'s count of 683 accounted-for slugs under a slightly wider extraction regex; the two scans agree that **no published address in this base is dead**.
+
+### `939-R2` 🔴 The permissive-LMS gap survives a second direct assault — and the leg named an `Apache-2.0` LMS this base should check
+
+The mandated vertical leg (`open source platform education LMS SIS MIT Apache`) returned the established tier and, once again, **no permissive LMS at the anchor tier**:
+
+| Platform | Licence as the leg reports it | Standing |
+|---|---|---|
+| Open edX | 🔴 **Inconsistent across sources** — `AGPL-3.0` (platform) with `Apache-2.0` on some components; one source wrongly implies whole-platform `Apache-2.0` | Held; this base measures `openedx/openedx-platform` as `AGPL-3.0` by API, **8,250 ★** |
+| OpenEduCat | `LGPL-3.0` | Held — the SIS/ERP tier, and the licence that makes proprietary modules tractable |
+| Moodle, Chamilo | `GPL` | Held — modifications must be opened |
+| Sakai | `Apache-2.0` | Held |
+| OpenOlat | `Apache-2.0` (Java, modular toolkit) | 🟡 **Named by the leg; verify standing on this base** |
+| Edonis | `Apache-2.0` | 🟡 **Named by the leg; verify standing on this base** |
+| RosarioSIS | 🔴 Licence **not stated** by the leg | 🟡 Requires a byte-read before any row asserts a licence |
+| dotLRN (MIT-origin, academic) | 🔴 **No licence found in any source** | Historical; MIT *provenance* is not an MIT *grant* |
+
+🔵 **The trap in this leg is a licence-by-association error worth recording.** One source describes Open edX as *"stewarded by Axim Collaborative, a nonprofit founded by Harvard and MIT"* — and a second source in the same leg renders that as the platform being available *"under Apache 2.0"*. 🔴 **"MIT" there is a university, not a licence**, and the slide from one to the other happened inside a single search leg. The same error class sits on `dotLRN`, developed at MIT with **no licence file located at all**. This base measures the Open edX anchor as `AGPL-3.0` on the API, which is the value to trust.
+
+🔴 **The standing assertion is undamaged: there is no permissive (MIT/Apache/BSD) LMS at the scale Globant would anchor a delivery on.** The permissive options are peripheral (Sakai, OpenOlat, Edonis); the platforms with real installed bases are `AGPL-3.0` (Open edX), `GPL` (Moodle, Chamilo) or `LGPL-3.0` (OpenEduCat). 🔵 **That is an architecture consequence, not a shopping problem** — it dictates service-boundary separation rather than in-tree modification, which is why `compose/patterns.md` keeps the AI layer out of the LMS process.
+
+### `939-R3` 🟡 Two `Apache-2.0` LMS candidates carried forward for the next pass
+
+`OpenOlat` and `Edonis` were both named as `Apache-2.0` by this pass's vertical leg. 🟡 **Neither licence was byte-read and neither repository address was resolved here**, so no row is written for them in `verticals/solutions.md` this pass. 🔵 **Declared as an open item rather than asserted**: if either is a genuinely `Apache-2.0` LMS with a real installed base, it is the first permissive anchor this base would have found in months, and that makes it worth a dedicated leg — byte-read the grant, resolve the canonical slug, and measure the installed base before it enters a platform table. An `Apache-2.0` *badge* on a listicle is the exact artefact `939-R2`'s licence-by-association finding warns about.
+
 ## `2026-11-21` (p938) — **Every address this base publishes was re-resolved: 683 slugs, 683 accounted for. No new repos for the 50th pass running — and the permissive-LMS scarcity this file has asserted for months got its cleanest confirmation yet, from a leg that went looking for the opposite.**
 
 🔵 **This pass verified rather than ingested** — `p937`'s commit was already on the remote while `rotation.json` still pointed at education. The repo-layer contribution is therefore an **address audit at full coverage**, which this file has never had, plus one genuine market finding from the verticals leg.

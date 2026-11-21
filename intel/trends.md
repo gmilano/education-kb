@@ -3073,3 +3073,70 @@ threshold is **two or more consecutive declines**, which `spbstu-mcp` is the fir
 shelf to cross. 🔵 And the first row of the table is the standing warning against the reflex the
 second invites: **do not adjust a star cell by reflex in either direction — re-measure it.** The two
 errors here have the same cause, which is a number carried forward instead of taken again.
+
+## T78 — Education-AI regulation is now **operational** in exactly one jurisdiction, and it is not in EMEA (`p939`)
+
+Across four passes this base has accumulated education-AI regulatory material from all four regions,
+and it has implicitly ranked them the way the market does: **EMEA writes the binding rules, North
+America fragments, APAC diverges, LATAM lags.** On education specifically that ranking is wrong, and
+`p939` can name the jurisdiction where the duty is not merely enacted but **switched on**.
+
+| Region | Education-AI high-risk duty | Can a client file against it **today**? |
+|---|---|---|
+| **APAC — Vietnam** | `Law 134/2025/QH15` + `Decree 142/2026/ND-CP`; high-risk list via `Decision 33/2026/QD-TTg` enumerates **46 systems in 6 categories, education = 3** (student assessment, admissions) | 🟢 **Yes.** National AI portal and database **live at `ai.dda.gov.vn` since 2026-08-28**, accepting registration, risk-classification notification and incident reporting |
+| **EMEA — EU** | AI Act Annex III lists admissions, student evaluation and exam scoring as high-risk | 🔴 **No.** The commencement date is **in dispute** — `2026-08` vs `2027-12-02` via the Digital Omnibus (political agreement 2026-05-07, formal adoption pending) |
+| **EMEA — EU, Art. 4** | AI-literacy duty | 🟢 **Already live since 2025-02** — the one EMEA education duty that is not contested |
+| **North America** | No federal floor; **134 bills across 31 states**; NC `Session Law 2026-41` sets a state model policy by 2026-12-31 and local policies by 2027-06-30 | 🟡 **Partly** — against *state* instruments with real dates, not a national one |
+| **LATAM** | 716 instruments across 23 countries (U. de los Andes); **87% of HEIs use AI, 26% have a formal AI strategy** (UNESCO IESALC) | 🔴 **No** — the gap is institutional strategy, not statute |
+
+🔵 **The operative distinction is between a rule that exists and a rule that has a filing counter.**
+An enacted obligation with a contested commencement date produces *advisory* work: readiness
+assessments, gap analyses, architecture options — all of it hedged, none of it final, because the
+date can move and this base has watched it move. An obligation with an enumerated list and a live
+portal produces *deliverable* work: classify the system, run the conformity assessment, file the
+registration, stand up incident reporting. 🔴 **Those are different engagements with different
+billing shapes, and the second one is only available in Vietnam.**
+
+🔵 **And the enumeration cuts the scope in the client's favour, which is the part a listicle never
+reports.** "Education is high-risk in Vietnam" sounds sweeping. **Education is 3 of 46 listed
+systems** — behind transport's 31 — and the three attach to **assessment and admissions**. Tutoring,
+content generation, scheduling, analytics and administrative automation are *not* on the list. 🟢
+**A scoping exercise that proves a product is not one of the three named systems is therefore a
+cheap first deliverable with a large answer**, and it is only runnable because the list is
+enumerated rather than defined by category.
+
+🔴 **What must not enter a proposal.** The transition deadline for already-operating systems is
+**unresolved across sources — `2027-09-01`, `2027-03-01`, and a `2026-06-30` self-assessment date**
+— and the risk-list publication date conflicts the same way (`2026-06-30` / `2026-08-15` / "July").
+🟡 All of it is snippet-sourced from commercial compliance blogs. The authoritative texts are the
+Official Gazette text of Decree 142 and the portal itself, and **neither resolves from this
+environment** (`939-F5`). Carry the finding; carry the uncertainty with it.
+
+## T79 — `T77`'s growth mechanism is now observed prospectively, not inferred from an error (`p939`)
+
+`T77` asserted that a fast-growing repository's carried star count errs **downward**, and that the
+faster it grows the worse the error. The evidence was **retrospective**: `p938` found
+`molly554/whiteboard-ai-tutor` published at `345 ★` against a true `491` and reasoned backwards from
+the 42.3% gap to a growth rate.
+
+🟢 **`p939` measured the same repository roughly three hours later: `491 → 494`.** That is +3 stars
+in ~3h on a 494-star base, and it closes the logical gap in `T77` — the growth is **currently
+running and directly observable**, not an artefact of a cell that went stale at some unknown past
+moment. 🔵 **The upgrade matters because the two readings carry different weight.** A star gap can
+be produced by a single old measurement; a measured rate cannot. `T77`'s downward-error claim now
+rests on an observation of the mechanism rather than on an inference from its consequence.
+
+| Anchor | `p938` | `p939` (~3h later) | Δ | Reading |
+|---|---|---|---|---|
+| `HKUDS/DeepTutor` | 61,206 | 61,217 | +11 | Large base, steady accrual |
+| `amosblomqvist/learnharness` | 10,803 | 10,813 | +10 | 🔵 Highest relative drift of the large rows |
+| `molly554/whiteboard-ai-tutor` | 491 | **494** | **+3** | 🟢 **~0.6%/3h — `T77` confirmed prospectively** |
+| `THU-MAIC/OpenMAIC` | 44,052 | 44,053 | +1 | Flattening |
+| `patchy631/ai-engineering-hub` | 42,045 | 42,046 | +1 | Flattening; last push 2026-11-01 |
+| `openedx/openedx-platform`, `withmarbleapp/os-taxonomy`, `CaviraOSS/PageLM`, `Li-Evan/BloomTutor`, `CAHLR/OATutor`, `kad-xyz/spbstu-mcp`, `gnmyt/Quizzle` | — | unchanged | 0 | Stable across a 3h window |
+
+🔵 **The practical rule this yields: a 3h re-measurement window is long enough to detect motion on a
+fast-growing small repo and too short to detect it anywhere else.** Seven of twelve anchors did not
+move at all. 🟢 **So same-day re-verification is worth running for drift *direction* on the fast
+rows and is not worth running as a general star refresh** — which is the cheaper instrument this
+base should reach for when, as here, rotation sends two passes at the same industry in one day.

@@ -30,6 +30,28 @@ $11.4B**, and diverge sharply on growth.
 | Coherent Market Insights | $11.40B | $57.25B by 2033 | 16.8% |
 | Precedence Research | $9.58B | ~$136.79B by 2035 | 34.52% |
 
+🆕 **`p939` (2026-11-21) — a fourth 2026 base-year figure, and a warning about how the 2035 number
+is now travelling.** This pass's market leg returned **$10.4B** for 2026 (AI Business Weekly),
+which sits inside the **$9.6B–$11.4B** cluster above and corroborates it from a fourth source.
+🔴 **But two things in the same leg should change how the table is quoted.**
+
+**(1) A figure above the stated cluster ceiling, from a source this file already excludes.** The leg
+returned **$12.3B** for 2026, attributed to **HolonIQ** and carried by **x-pilot** — a host named in
+the *Caveat on secondary sources* paragraph above as quoting untraceable outcome statistics.
+🟡 **The $12.3B figure is therefore NOT adopted into the cluster**, and the cluster's stated ceiling
+stays at $11.4B. 🔵 Recorded because the next pass will meet the same number: when it does, the
+question to ask is whether **HolonIQ** published it directly, not whether x-pilot reported it.
+
+**(2) The `$136.79B by 2035` figure is detaching from its attribution, which is how one estimate
+becomes a consensus.** This file attributes it to **Precedence Research**. `p939`'s leg returned it
+from a **GlobeNewswire press release dated 2026-11-20** — three days after the 2026-11-17 release
+already cited above — framed around three named drivers (*free AI tools reaching classrooms,
+campus-wide deals spreading, governments making AI literacy a priority*) and **with no analyst house
+named in the headline**. 🔴 **A single house's 2035 estimate is now circulating as an unattributed
+market fact via newswire.** 🔵 **The rule this base applies elsewhere applies here: trace the figure
+to the house, and if it traces to one house, say so in the deck.** The defensible form is *"one
+analyst house projects ~$137B by 2035"* — never *"the market will reach $137B by 2035."*
+
 **Agentic AI in education specifically** — a much smaller base, and the single widest
 disagreement we found in any industry:
 
@@ -2250,6 +2272,59 @@ self-hostable campus bridge.
 
 ### APAC
 
+#### 🆕 `p939` (2026-11-21) — APAC: Vietnam's education-AI duty is **operational**, the portal is live, and the high-risk list is enumerated — education is **3 of 46 systems**
+
+🟡 Snippet-sourced from commercial compliance guides. 🔴 **Neither the Official Gazette text of
+`Decree 142/2026/ND-CP` nor the portal at `ai.dda.gov.vn` was byte-read from this environment**
+(`939-F5`), so no article number is asserted and the conflicting dates below are **not adjudicated**.
+
+**What this base already held:** `Law 134/2025/QH15`, `Decree 142/2026/ND-CP` (effective
+**2026-05-01**), `Decision 33/2026/QD-TTg` as the instrument carrying the high-risk list, and the
+fact that education is a high-risk category.
+
+**What `p939` adds — the machinery is switched on:**
+
+| Element | Detail | New? |
+|---|---|---|
+| National AI **portal + database** | 🟢 **Live at `ai.dda.gov.vn`, in operation since 2026-08-28**, operated by the **Ministry of Science and Technology** | 🔴 **New** |
+| What the portal accepts | Registration for **controlled testing**, **risk-classification notification**, **AI system registration**, **serious-incident reporting** | 🔴 **New** |
+| High-risk list composition | **46 systems across 6 categories** — transport **31**, ethnicity/religion **7**, **education 3**, healthcare **2**, banking **2**, litigation **1** | 🔴 **New** |
+| The education systems | **Student assessment** and **admissions** as the guides name them | Refined |
+| Duties on a high-risk system | Pre-market **conformity assessment** · **registration in the National AI Database** · ongoing **incident reporting** · transparency documentation · **human oversight** mechanisms | Refined |
+| Notification threshold | **Medium- and high-risk** systems must be notified to the Ministry of Science and Technology | Refined |
+
+🔵 **The enumeration is the commercially useful part, and it cuts scope in the client's favour.**
+"Education is high-risk in Vietnam" reads as a sweeping obligation across an edtech portfolio.
+**Education is 3 of 46 listed systems — the third-smallest category, against transport's 31** — and
+the three attach to **assessment and admissions**. Tutoring, content generation, scheduling,
+analytics and administrative automation are **not** on the enumerated list. 🟢 **Opportunity: a
+fixed-price classification exercise that establishes which products in a client's portfolio are
+*not* among the three named systems.** It is cheap, it is defensible because the list is enumerated
+rather than categorical, and a negative answer is worth as much to the client as a positive one.
+
+🔴 **Do not put a transition date in a proposal.** Three sources give three answers for systems
+already in operation — **2027-09-01**, **2027-03-01**, and a **2026-06-30** self-assessment date —
+and the risk-list publication date conflicts identically (**2026-06-30** / **2026-08-15** / "July").
+Scope the compliance work against the **duties**, which are stable across all sources, and treat the
+**deadline** as a client-side legal determination.
+
+🔵 **Regional framing for a pitch:** Vietnam is, on this base's evidence, **the only jurisdiction in
+any region where an education-AI high-risk obligation has an enumerated list and a live filing
+counter at the same time.** The EU has the rule and a contested date; the US has 134 state bills and
+no federal floor; LATAM has 716 instruments and a strategy gap. See `intel/trends.md` **`T78`** and
+`compose/patterns.md` **`P497`**.
+
+🟡 **South Korea context, consistent with what this base holds:** the `AI Basic Act` entered force
+**2026-01-22**, and MSIT has signalled that **2026 is effectively a pilot period with limited
+enforcement** — so the region's first comprehensive statute is in force but not yet biting.
+🟡 **Australia:** no AI-specific statute; the proposed mandatory guardrails cover high-risk uses
+**including education**. 🟡 **China:** generative-AI service measures and synthetic-content
+identification rules enforced from **2025-09-01**. 🟡 **Singapore:** toolkit-led via **AI Verify**.
+🔴 **Extraterritorial exposure, and it runs the other way for APAC vendors:** the EU AI Act reaches
+APAC edtech whose outputs are used in the EU — the worked example in this leg is **APAC edtech
+selling proctoring or admissions tools to EU schools**, which lands squarely on Annex III.
+
+
 #### 🆕 `p938` (2026-11-21) — Taiwan: the one APAC statute that **creates education demand instead of constraining it**, and this base was carrying it as a bare name
 
 🟡 Snippet-sourced. `moda.gov.tw` does not resolve from this environment (the same network
@@ -3479,6 +3554,43 @@ curriculum mandate and a high-risk classification** — the clearest single-coun
 engagement that must satisfy a regulator and a curriculum at once.
 
 ### LATAM
+
+#### 🟢 `p939` (2026-11-21) — LATAM: the UNESCO figure this base leans on now has its **provenance and sample size** attached
+
+🟡 Snippet-sourced. 🔴 **`iesalc.unesco.org` and `dig.watch` both fail DNS from this environment**
+(`939-F5`), so the figures below are **not** byte-read from the report PDF. Confirmed instead on
+**two independent search legs** that agree on every number.
+
+This base has published UNESCO IESALC's **87% / 26%** for two passes. `p939` adds what makes it
+citable in a client document:
+
+| Element | Detail | New? |
+|---|---|---|
+| Report title | **"AI Implementation in Higher Education in Latin America and the Caribbean"** | 🔴 **New** |
+| Sample | 🟢 **200 higher education institutions across 19 countries** in LAC | 🔴 **New — 0 prior mentions** |
+| Produced with | **UNU-IAS** | Held (×2) |
+| Launch | **Digital Learning Week 2026, UNESCO HQ, Paris** | 🔴 **New** |
+| Launch date | 🟡 **8 or 9 September 2026 — sources disagree**; the study's own page says 8 Sept, UNESCO news items and HEILAB say 9 Sept | 🔴 **New (with the conflict)** |
+| Headline | **87% of institutions use AI in at least one area; only 26% have a formal AI strategy** | Held — 🟢 **and the wording is confirmed correct: a formal *AI strategy*, not a framework** |
+| Mechanism | 🔵 **Adoption is driven by individual academics, researchers and students rather than institution-wide strategies** | 🔴 **New** |
+| UNESCO's own recommendations | AI literacy as a **core graduate competency** · expanded training · **dedicated governance structures** · clearer **academic-integrity** rules | 🔴 **New** |
+
+🔵 **The mechanism sentence is the one that converts this from a statistic into a sales argument.**
+87%/26% could describe an institution that adopted centrally and simply has not written the policy
+yet. UNESCO says the opposite: **adoption is happening bottom-up, by individuals, outside any
+institutional plan.** 🔴 That is not a governance *gap*, it is a governance *vacuum with live usage
+already inside it* — which means the first engagement is discovery and consolidation of what is
+already running, not a greenfield strategy document. 🟢 **And UNESCO has published the shopping list
+itself**: AI literacy as a graduate competency, dedicated governance structures, academic-integrity
+rules. A proposal that maps onto those four recommendations is arguing with the region's own
+reference institution behind it.
+
+🟡 **Separately held, unchanged, and weaker evidence:** the Digital Education Council LATAM survey
+2026's **92% of students / 79% of faculty** comes from a smaller, self-selected sample and should
+not be quoted beside the IESALC figures as if equivalent. 🔴 The **Mendeley** country-level dataset
+surfaced by this leg (e.g. Mexico at 68% in higher education) is an **unvetted database** and is
+**not** adopted by this base.
+
 
 #### 🔵 `p937` (2026-11-21) — LATAM: the best-measured region in this file, and the gap it measures is **strategy**, not adoption
 

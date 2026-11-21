@@ -10,6 +10,8 @@ The substrate an education engagement is built on. All URLs and licences verifie
 2026-11-18 via `raw.githubusercontent.com`, with the `p918` re-measure of 21 anchor rows in
 [this record](../evidence/shelf-remeasure.2026-11-19-p918.tsv) (see `agents/top.md` for method and limits).
 
+🟢 **`p939` (2026-11-21) — address integrity re-confirmed across the whole base, and this shelf holds.** 670 distinct real `github.com` addresses across the six live content files were re-resolved by `git ls-remote`: **670 live, zero dead.** The only two non-resolving strings this base's scanner reports are **`OWNER/REPO`** (a prose `curl` example) and **`search/repositories`** (an API path) — neither is a repository address. 🟢 **Zero placeholder rows anywhere: 1,228 header-shaped table lines were checked and 1,228 of 1,228 are followed by a separator row**, so every header-looking line in this file is a real header and none has been compiled as an entity. 🟡 **Two `Apache-2.0` LMS candidates are declared open rather than added** — `OpenOlat` and `Edonis` were both named as `Apache-2.0` by this pass's vertical leg, but **neither grant was byte-read and neither slug was resolved here**, so no row is written for them. If either is a genuine `Apache-2.0` LMS with a real installed base it would be the first permissive anchor this base has found in months — see `repos/trending.md` **`939-R3`** for the leg to run, and **`939-R2`** for why a badge on a listicle is not evidence.
+
 🔴 **`p924` — the instrument that fills the licence column was audited against 37 canonical licence
 texts, and the column has one measured residue.** Run through a primary legal-text channel this base
 did not have yesterday (`spdx/license-list-data` on `raw.githubusercontent.com`, 37/37 `200`), the

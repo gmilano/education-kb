@@ -4,6 +4,81 @@ region: Global
 updated: 2026-11-21
 ---
 
+## `2026-11-21` (p939) — **A second verification pass on the same day, because `rotation.json` *still* pointed here after `p938` pushed content without advancing it. It reproduces `p938` exactly — and the regulatory leg found the one jurisdiction on earth where education-AI high-risk duty is already **operational**, with a live registration portal, while the EU's equivalent date is still in dispute.**
+
+🔵 **Why this pass exists at all, and the rule it confirms for the third time.** `p938` committed to this base's remote at `10:47Z` and **did not** advance `rotation.json` in `globant-kb`, whose `main` still read `next: 8` at `1bff62b`. That is the *second* half of the `p936` pattern — travel pushed content and failed to advance; technology advanced and failed to push — now seen a third time, on education, in the push-but-don't-advance direction. 🔵 **The first action of every pass remains: compare rotation intent against the target remote's last commit date.** Had this pass trusted `rotation.json` alone it would have rewritten a base that had been rewritten three hours earlier.
+
+### `939-F1` 🟢 `p938` reproduces — 12 anchors, 2 grants, 670 addresses, zero corrections
+
+Everything `p938` published was re-measured against the live API ~3h later. **Nothing it wrote is wrong.**
+
+| Repo | `p938` | `p939` | Δ | Licence (API) | Pushed | Archived |
+|---|---|---|---|---|---|---|
+| `HKUDS/DeepTutor` | 61,206 | **61,217** | +11 | `Apache-2.0` | 2026-11-20 | false |
+| `THU-MAIC/OpenMAIC` | 44,052 | **44,053** | +1 | `MIT` | 2026-11-21 | false |
+| `patchy631/ai-engineering-hub` | 42,045 | **42,046** | +1 | `MIT` | 2026-11-01 | false |
+| `amosblomqvist/learnharness` | 10,803 | **10,813** | +10 | `AGPL-3.0` | 2026-11-21 | false |
+| `openedx/openedx-platform` | 8,250 | **8,250** | 0 | `AGPL-3.0` | 2026-11-20 | false |
+| `withmarbleapp/os-taxonomy` | 7,791 | **7,791** | 0 | `ODbL-1.0` | 2026-11-19 | false |
+| `CaviraOSS/PageLM` | 2,071 | **2,071** | 0 | `NOASSERTION` | 2026-11-15 | false |
+| `molly554/whiteboard-ai-tutor` | 491 | **494** | 🔵 **+3** | `MIT` | 2026-11-17 | false |
+| `Li-Evan/BloomTutor` | 324 | **324** | 0 | `MIT` | 2026-11-21 | false |
+| `CAHLR/OATutor` | 284 | **284** | 0 | `MIT` | 2026-11-21 | false |
+| `kad-xyz/spbstu-mcp` | 8 | **8** | 0 | `MIT` | 2026-11-19 | false |
+| `gnmyt/Quizzle` | 37 | **37** | 0 | `MIT` | **2026-05-06** | false |
+
+🔵 **The `whiteboard-ai-tutor` row is the methodologically interesting one, and it upgrades `T77` from an inference to an observation.** `p938` concluded the repo was fast-growing *from the magnitude of its own star error* — a retrospective argument from a 42.3% understatement. `p939` measured **+3 stars in roughly three hours** on a 494-star repo. That is ~0.6%/3h on a base this small, and it is **direct, prospective confirmation** of the mechanism `T77` asserted: the growth is real and currently running, not an artefact of a stale cell. See `intel/trends.md` **`T79`**.
+
+### `939-F2` 🟢 Both `NOASSERTION` grants byte-read independently — 2 of 2 reproduce exactly
+
+The two rows where the API declines to name a licence were re-fetched from `raw.githubusercontent.com` and read as text, without reference to what this base already published.
+
+| Repo | API says | `p939` byte-read says | Matches published cell? |
+|---|---|---|---|
+| `CaviraOSS/PageLM` | `NOASSERTION` | **"PageLM Community License"**, `Copyright (c) 2025 nullure & recabasic` — grants use for *"personal, educational, or non-commercial research purposes"* only; defines **Commercial Use** as any use *"in connection with any business, revenue-generating activity, or commercial purpose"* | 🟢 **Yes, exactly** |
+| `xiaoyang111222/cn-math-taxonomy` | `NOASSERTION` | **`Attribution-NonCommercial 4.0 International`** (CC BY-NC 4.0) | 🟢 **Yes, exactly** |
+
+🔴 **Both remain unusable for a client engagement and both are correctly marked so.** A Globant delivery is Commercial Use under PageLM's own definition, and CC BY-NC 4.0 forbids commercial use of the curriculum graph. 🔵 The standing rule holds and is now evidenced twice more: **a `NOASSERTION` SPDX is a pointer to go read the file, never a licence** — here it concealed one bespoke non-commercial grant and one Creative Commons non-commercial grant, neither of which any SPDX field would have told us.
+
+### `939-F3` 🔴 Vietnam is the **only** jurisdiction found with an operational education-AI high-risk regime — and this base was missing the portal that makes it operational
+
+This base already held Vietnam's `Law 134/2025/QH15` and `Decree 142/2026/ND-CP`, and `Decision 33/2026/QD-TTg` as the instrument carrying the high-risk list. **It did not hold the fact that the machinery is switched on.**
+
+| Element | Status | Held before `p939`? |
+|---|---|---|
+| National AI portal + database **live at `ai.dda.gov.vn`**, operated by the Ministry of Science and Technology, **in operation since 2026-08-28** | 🔴 **Operational** — handles registration for controlled testing, risk-classification notification, AI system registration and serious-incident reporting | 🔴 **No — 0 mentions** |
+| High-risk list composition: **46 systems across 6 categories** — transport 31, ethnicity/religion 7, **education 3**, healthcare 2, banking 2, litigation 1 | Published | 🔴 **No — 0 mentions** |
+| The 3 education systems, as the guides name them: **student assessment** and **admissions** | Published | Partially (as prose, not as a count) |
+| Duties on a high-risk system: pre-market **conformity assessment**, **registration in the National AI Database**, ongoing **incident reporting**, transparency documentation, **human oversight** | Published | Partially |
+
+🔵 **The composition figure changes the engagement scope, and it changes it in the client's favour.** "Education is high-risk in Vietnam" reads as a sweeping obligation. **Education is 3 of 46 listed systems — the third-smallest category, ahead of only healthcare, banking and litigation, against transport's 31.** The duty is *narrow and targetable*: it attaches to assessment and admissions systems, not to tutoring, content generation, scheduling or analytics. A scoping exercise that establishes a given product is **not** one of the three listed systems is a cheap, high-value first deliverable — and it is only possible to run because the list is enumerated.
+
+🔴 **The transition deadline for already-operating systems is NOT resolved and must not enter a proposal.** Three sources give three dates: **2027-09-01**, **2027-03-01**, and a **2026-06-30** self-assessment date for existing systems. The risk-list publication date conflicts the same way (**2026-06-30** / **2026-08-15** / "July"). 🟡 All of it is snippet-sourced from commercial compliance blogs; the authoritative texts are the Official Gazette text of Decree 142 and the portal itself, **neither of which was byte-read** — see `939-F5`.
+
+🔵 **The sellable contrast, and it inverts the usual assumption.** The standing expectation across these bases is that **EMEA leads on AI regulation**. On education specifically it does not. In EMEA the Annex III education obligations sit behind a date this base has recorded as *in dispute* for two consecutive passes (**2026-08** vs **2027-12-02** via the Digital Omnibus, political agreement 2026-05-07, formal adoption pending). In Vietnam the duty exists, the list is enumerated, and **the registration portal is accepting filings today**. For an APAC edtech engagement there is a concrete compliance deliverable now; for an EMEA one there is a moving target and an architecture conversation. Recorded as `intel/trends.md` **`T78`** and `compose/patterns.md` **`P497`**.
+
+### `939-F4` 🔴 Forty-sixth consecutive pass with zero new unheld education repositories from the English-prose legs
+
+All four mandated global legs ran. Every repository they surfaced is **already on this shelf**, measured by mention count in the live content files:
+
+| Candidate surfaced | Mentions already held | Verdict |
+|---|---|---|
+| `HKUDS/DeepTutor` | 1,288 | Held |
+| `THU-MAIC/OpenMAIC` | 462 | Held |
+| `microsoft/ai-agents-for-beginners` | 457 | Held |
+| `ashishpatel26/500-AI-Agents-Projects` | 152 | Held |
+| `microsoft/generative-ai-for-beginners` | 106 | Held |
+| `mlabonne/llm-course` | 47 | Held |
+| `molly554/whiteboard-ai-tutor` | 22 | Held |
+
+🟡 The vertical-platform leg returned the same LMS/SIS tier this base has held for months (Open edX, OpenEduCat `LGPL-3.0`, Moodle/Chamilo `GPL`, Sakai, OpenOlat `Apache-2.0`, Edonis `Apache-2.0`, RosarioSIS) and **named no permissive LMS** — the permissive-LMS scarcity this base has asserted for months took no damage from a leg that went looking for exactly that, for the second day running. 🔵 **The `p926` rule still governs the negative result: a channel is exhausted only against the vocabulary it was asked with.** These four legs are English prose asked in English words; `939-F4` is a statement about *them*, not about supply.
+
+### `939-F5` 🟡 Instrument note — the primary-source DNS wall is unchanged, and it now has four named hosts
+
+Two hosts were attempted directly this pass and **both fail DNS from this environment**, exactly as `p937` recorded: **`iesalc.unesco.org`** and **`dig.watch`**. Combined with `p937`'s `eur-lex.europa.eu` and `p938`'s `moda.gov.tw`, **four primary or near-primary hosts are now confirmed unreachable**, which is why every regulatory block in `intel/market.md` carries a 🟡 snippet-sourced marker. 🔵 **This is a standing property of the environment, not a per-pass accident** — the honest form is to keep publishing the figures with the marker attached rather than to omit them, and to state that the adjudication of any conflicting date **cannot be performed here**.
+
+🟢 **Addresses re-resolved:** 670 distinct real `github.com` slugs across the six live content files, **670 live by `git ls-remote`, zero dead**. The two non-resolving strings this base's own scanner reports are **`OWNER/REPO`** (a prose `curl` example) and **`search/repositories`** (an API path) — neither is a repository address, both are correctly excluded, and `p938` characterised them identically. 🟢 **Structural audit: 1,228 header-shaped table lines checked across all eight files, 1,228 of 1,228 proven to be followed by a separator row — zero placeholder or example rows are live as data.**
+
 ## `2026-11-21` (p938) — **A verification pass, because the remote already had today's ingest while `rotation.json` still pointed here. It found the largest single-cell star error this base has recorded — and it was understated, not inflated.**
 
 🔵 **Why this pass verified instead of rewriting.** `rotation.json` in `globant-kb` read `{"next": 8}` — education — with `last_industry: technology`. But this base's remote already carried **`27c6acf`, `ingest: education KB update 2026-11-21 (p937)`, committed 09:16Z the same day**. That is the signature of a pass that *pushed its content and failed to advance the rotation*, not of a stale base: `p937`'s eight files were present, correctly frontmattered and internally consistent. 🟢 **Rewriting them would have destroyed a good pass's work to re-derive the same facts.** So `p938` spent its budget on the one thing `p937` could not do for itself — independent verification — and on advancing the rotation `p937` left behind.
