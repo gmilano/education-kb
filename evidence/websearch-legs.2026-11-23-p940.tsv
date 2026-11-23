@@ -1,0 +1,9 @@
+leg	query	new_repositories	new_instruments	disposition
+global-agents	top open source AI agents education 2026 github MIT	0	0	general-purpose listicles (dev.to, nocobase, aimultiple, sourceforge); no education-specific MIT agent not already held
+global-trending	github trending education AI 2026	0	0	DeepTutor, GarethManning/education-agent-skills, SirhanMacx/Claw-ED, TapXWorld/ChinaTextbook - all four already held
+global-verticals	open source platform education student information system MIT Apache 2026	0	0	iblai/sis (held, front end), OpenEduCat LGPL-3.0 (held), openSIS/RosarioSIS (held); no Apache-licensed SIS found
+global-trends	AI education industry trends 2026	0	0	86% genAI adoption, 54% weekly student use, $7.57B base / $112B 2034, CAGR 39.7% - all held by string or variant
+north-america	AI education North America 2026 adoption regulation players	0	0	Illinois SB 1920 / PA 104-0399 held (p723); NEW DETAIL: guidance is 409 pages, AI-assisted. ~100 state bills, Ohio/Virginia held
+emea	AI education EMEA 2026 adoption regulation players	0	1	CoE EDU-IA dates + 2nd plenary 2026-09-16/17 reviewing a DRAFT legal instrument; committee held, dates and draft status NEW
+apac	AI education APAC 2026 adoption regulation players	0	0	Arizton >45% share, THE 30% virtual tutors / 44% 5G, World Bank Seoul academy - all held or vendor-tier
+latam	AI education LATAM 2026 adoption regulation players	0	0	UNESCO IESALC/UNU-IAS 200 HEIs/19 countries held; "30% of universities have published policies" held; IDB 193 initiatives held

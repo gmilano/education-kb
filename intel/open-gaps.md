@@ -1,8 +1,81 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-19
+updated: 2026-11-23
 ---
+## 🆕 `p940` · 2026-11-23 — **The fixture layer was never verified by anything. 14 published licence hashes do not reproduce from the file as served, the ledger that should have caught it was seeded from the prose it checks, and this pass's own first three sweep arms were artefacts.**
+
+🔵 **Summary.** 8 mandated WebSearch legs filed as one line (`920-G3`), **37 published grant fixtures
+re-fetched live**, **14 proven unreproducible and corrected**, **19 proven clean**, **4
+indeterminate**, 16 anchors re-measured, **4 new grants byte-read** for `P498`, **zero new agent or
+substrate rows (forty-seventh consecutive nil)**, one instrument state change (`EDU-IA`) filed
+`ATTRIBUTED-UNVERIFIED` because its host does not resolve.
+
+🔴 **`Gap 540` — nothing in this base verifies a published `(bytes, sha256₁₂)` fixture against the
+file it claims to describe.** 14 of 37 measured fixtures were computed over a payload stripped of
+trailing newlines and **cannot be reproduced by any third party**; the licence *class* was correct
+in all 14, which is why every existing gate passed them. 🔵 The gate is cheap — re-fetch, hash the
+**file** (never a shell-interpolated string), compare — and is pre-registered as `940-B`.
+🔴 It will fail on `agents/trending.md` and `repos/trending.md`, which this pass deliberately did
+not rewrite because they are append-only records of what each pass published, so the gate needs an
+**append-only exemption that still reports** or it will never go green.
+
+🔴 **`Gap 541` — `evidence/licence-ledger-structured.2026-11-21-p937.tsv` can read the artefact it
+verifies, so it agrees with it by construction.** It records `chadyi/StudyOnTV` under
+`method = byte-read-p937` with the wrong pair, while its own final column is named
+`prose_cell_excerpt` and holds that cell verbatim. 🟢 557 of its rows honestly carry
+`confidence = prose-only`; the defect is confined to the ~40 claiming `byte-read` provenance.
+🔵 **The structural rule: a verifier must not have the page as an available input.** Until that is
+enforced, "re-verified" in this base's prose means "re-read our own sentence".
+
+🟡 **`Gap 542` — 322 strict-arm hash candidates are unadjudicated and are NOT claimed as defects.**
+The offline sweep flagged them because a slug legitimately carries several hashes (LICENSE vs
+README vs COPYING, `main` vs `master`), so non-membership is not divergence. 🔵 They need a live
+byte-read pass with the network budget to resolve each to its artefact; pre-registered as `940-A`
+with the prediction that **stripped will be the minority** and wrong-artefact the bulk.
+
+🔴 **`Gap 543` — this environment can verify code and cannot verify law, which is backwards for
+this base's recent findings.** `git ls-remote`, `gh api search/repositories` and
+`raw.githubusercontent.com` all work. `www.coe.int` and `rm.coe.int` (the `EDU-IA` terms of
+reference, the one document that would settle the 2026-vs-2027 deadline conflict),
+`www.franczek.com` and `www.nprillinois.org` all return `ENOTFOUND`. 🔵 The last four headline
+findings on this base have been regulatory and every one of them is snippet-tier for this reason.
+🟢 **Remedy is configuration, not effort: allow `coe.int` in the session network policy.**
+
+🟡 **`Gap 544` — 4 of the 37 fixtures cannot discriminate and this base has no field to say so.**
+Their grant files end without a trailing newline, so the stripped and served payloads are
+identical. They are recorded as indeterminate rather than clean, which is the honest verdict and
+one `ACTION p379-C`'s proposed vocabulary (`LIVE-VERIFIED` / `ATTRIBUTED-UNVERIFIED` / `DEAD`)
+still cannot express — it needs a fourth value, `INDETERMINATE`.
+
+🔴 **`Gap 545` — the canonical licence corpus has no licence, and this was found while verifying a
+pattern written in the same pass.** `spdx/license-list-data` serves `404` on `LICENSE`,
+`LICENSE.md`, `LICENSE.txt`, `COPYING` and `NOTICE` on both `main` and `master`, with API licence
+`null`. 🔵 `P498` originally asserted `CC0-1.0` for it **from memory**; the assertion was false and
+was caught before the commit, not after. The row is now published with the absence stated.
+🔵 Generalised: **the repository a studio reaches for to resolve licence questions is itself
+unlicensed**, which is `T23` landing on the tooling tier rather than the supply tier.
+
+🟡 **`Gap 546` — `search/repositories` returned `422 "resources do not exist"` for
+`nexB/scancode-toolkit` on two consecutive calls** while `git ls-remote` resolved it and
+`raw.githubusercontent.com` served its `Apache-2.0` grant from the non-standard path
+`master/apache-2.0.LICENSE`. 🔵 `p938` characterised the false-absence class as *intermittent per
+repository*; this slug did not recover within the pass, so the characterisation is **not
+contradicted but not confirmed either** — it needs a slug observed across passes. The two-channel
+rule caught it, again.
+
+### 🔴 Carried and explicitly NOT run this pass
+
+🔴 **`ACTION 940-A`** (live byte-read of the 322 candidates) — **NOT RUN**, registered above.
+🔴 **`ACTION 940-B`** (the reproduction gate) — **NOT RUN**; this pass corrected the data by hand
+and did not build the instrument, which is the same debt `Gap 537` and `ACTION ZZ-av` record for
+`gate-tables`. 🔴 **`ACTION 940-C`** (re-read `EDU-IA`'s terms of reference) — **BLOCKED** by
+`Gap 543`, not deferred by choice. 🔵 **Re-registered, not run:** `ACTION p379-A`, `p378-B`,
+`p378-C`, `ACTION ZZ-ap` (now with a **third** live two-grant fixture class — bespoke grants whose
+text is author-mutable), `ACTION ZZ-aq`, `ACTION p379-D` (OECD *Digital Education Outlook 2026*,
+still needs a fetch channel and `Gap 543` is why), `ACTION p379-E` (pattern expiry dates — `P498`
+was written this pass **without** one, which is the same omission `Gap 536` records).
+
 ## 🆕 `p924` · 2026-11-19 — **`923-G1`, `923-G2` and `923-G4` all discharged with measurement, and the live half of `923-G6` is discharged by a channel that was on the one host this base already trusts. 🔴 Seven defects in the grant authority, measured on canonical texts — and one claim of mine was false and was caught before the commit, not after.**
 
 🔵 **Summary.** 8 mandated WebSearch legs filed as one line (`920-G3`), **a new primary legal-text
@@ -1795,7 +1868,7 @@ repairing backwards — so the gates demand a repair that the base's own rules p
 both times:** `h5p/h5p-php-library` is **GPL-3.0** (`master/LICENSE.txt`, **35,146 B**,
 `sha256₁₂ c53a65c2fd56`, *"Version 3, 29 June 2007"*) as `verticals/solutions.md` said and *not*
 Apache-2.0 as line `11690` said; `HKUDS/DeepTutor` is **Apache-2.0** (`main/LICENSE`, **11,407 B**,
-`sha256₁₂ 596087a7f098`) as `agents/top.md` said and not MIT as line `14894` said.
+`sha256₁₂ cd2f54e1e506`) as `agents/top.md` said and not MIT as line `14894` said.
 
 🟢 **Acceptance test:** give both gates the live-region cut this file's own structure already defines,
 re-run, and publish the live-finding count before and after. 🔴 Treat a post-fix count of `0` as a
@@ -12783,7 +12856,7 @@ WebSearch **10 legs** (4 global supply/trend, 4 regional, 2 follow-up). 🔴 `cu
 
 | gap | finding | closure condition |
 | --- | --- | --- |
-| 🔴 **`560-A`** | **Three byte conventions are in live use on this shelf, and the pinned one is the rarest.** 13 rows re-read with all four candidates computed: 🟢 **`raw` 8** (`arsnova/core` 35 147, `frappe/lms` 33 893, `educhain` 1 092, `Horus-Taleeq` 1 080 + all four sub-200 B grants); 🔴 **`raw−1NL` 1** (`learnharness` 34 522 · `4df3c306ddda`); `raw−1NL`-or-`strip()` 1 (`kolibri` 1 096); 🔴 **`strip()` 1** (`cn-math-taxonomy` **19 345** · `db2e35513dba` — against 19 347 raw and 19 346 conv, at a HEAD identical to `p557`'s, so the content never moved); invariant 2. 🔴 **And `p557`'s evidence column is named `bytes_nl_stripped`, which on that file would give 18 939 — a fourth number** | 🟢 **Adopted: publish `raw`** — what `wc -c` returns and what a client's scanner computes — **and name the convention beside the figure**. 🔵 `raw` is already the shelf majority and the only convention a third party reproduces without being told the rule. 🔴 Closure: a pass re-reads the remaining digest-bearing rows and labels each, or the ledger carries a `convention` column. **Not done this pass — 13 rows of an unknown total** |
+| 🔴 **`560-A`** | **Three byte conventions are in live use on this shelf, and the pinned one is the rarest.** 13 rows re-read with all four candidates computed: 🟢 **`raw` 8** (`arsnova/core` 35 147, `frappe/lms` 33 893, `educhain` 1 092, `Horus-Taleeq` 1 080 + all four sub-200 B grants); 🔴 **`raw−1NL` 1** (`learnharness` 34 522 · `4df3c306ddda`); `raw−1NL`-or-`strip()` 1 (`kolibri` 1 096); 🔴 **`strip()` 1** (`cn-math-taxonomy` **19 345** · `41003d4a7474` — against 19 347 raw and 19 346 conv, at a HEAD identical to `p557`'s, so the content never moved); invariant 2. 🔴 **And `p557`'s evidence column is named `bytes_nl_stripped`, which on that file would give 18 939 — a fourth number** | 🟢 **Adopted: publish `raw`** — what `wc -c` returns and what a client's scanner computes — **and name the convention beside the figure**. 🔵 `raw` is already the shelf majority and the only convention a third party reproduces without being told the rule. 🔴 Closure: a pass re-reads the remaining digest-bearing rows and labels each, or the ledger carries a `convention` column. **Not done this pass — 13 rows of an unknown total** |
 | 🔴 **`560-B`** | **Two published digests were never measured, and 19 bytes is what made it provable.** [`frappe/education`](https://github.com/frappe/education)'s `license.txt` is **19 B**, `License: GNU GPL V3`, **no trailing newline** ⇒ all four conventions give one digest, 🟢 **`1fcecf395312`**. The base also published 🔴 `61408d3da518` (`agents/top.md`, `repos/foundations.md`) and 🔴 `73ce33ef2719` (`repos/trending.md`). **13 hash conventions × 6 byte conventions × 31 string variants × 3 encodings = 372 candidates: neither appears.** 🟢 Decisive: `git log --all -- license.txt` over a blobless clone returns **exactly one blob, ever** (`beca17940a71`) ⇒ content drift excluded | 🟢 **Amended in place** on the two pages that permit it; recorded in `repos/trending.md`'s dated section instead, since append-only byte containment is that page's contract. 🔵 **The general test is adopted:** on a digest mismatch, enumerate the path's blob history — *published digest **in** history* ⇒ **stale** (measured right, file moved on); *absent from a single-blob history* ⇒ **manufactured**. 🔴 Closure: apply it to every digest-bearing row, not just the three found this pass |
 | 🔴 **`560-C`** | **`559-C`'s canonical Apache-2.0 reference is unreproducible.** It graded against `11 356 B` / `43070e2d4e53`; two independent sources — [`apache.org`](https://www.apache.org/licenses/LICENSE-2.0.txt) and [`openedx/XBlock`](https://github.com/openedx/XBlock) `master/LICENSE.TXT` — both give **`11 358 B` / `cfc7749b96f6`** (`raw`) and `11 357` / `58d1e17ffe51` (`conv`). 🟢 **The verdict `559-C` reached survived anyway, because it graded on clauses rather than bytes** — the rule protected the conclusion from the baseline | 🟢 Canonical Apache-2.0 **re-pinned** at `11 358` / `cfc7749b96f6`. 🔴 Closure: pin canonical digests for the other families this shelf grades against — AGPL-3.0, GPL-3.0, MIT (🔵 which has no single canonical form, so the existing fold constant is the right instrument there), CC0, BSD-3 — **each from two independent sources**, since one source is how `559-C` got it wrong. 🔴 `gnu.org` returned `000` this pass; `spdx/license-list-data` is the working substitute (`AGPL-3.0-only` **34 020 B** `d8a6cc31abc1` raw) |
 | 🔴 **`560-D`** | **The shelf's flagship agent ships a hand-edited Apache-2.0, and this base recorded the wrong mechanism.** It held DeepTutor's `+50 B` as *"its appendix is filled in — a filled appendix is a copyright line"*. A normalised diff against the publisher copy returns **four hunks, three in the operative body**: § 1 `submitted to Licensor` → `to **the** Licensor`; § 1 `received by Licensor` → `by **the** Licensor`; § 4 NOTICE `excluding **those** notices` → `excluding **any** notices`; plus a **garbled** appendix paragraph (*"Please also get an \"Alarm or alarm\" copyright header … (Alarm is the umbrella trademark …)"*) and the copyright line filled to *Data Intelligence Lab, The University of Hong Kong*. [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) `main/LICENSE` **11 408 B** `cd2f54e1e506`, HEAD `1ea7df155447` | 🟢 **Verdict Apache-2.0 holds** — header, all four operative grants and `END OF TERMS` present; the edits are grammatical or synonymous and change no obligation. 🔴 **Delivery flag added:** a client scanner hashing `LICENSE` against canonical Apache-2.0 **will** flag the largest education agent on this shelf, and the garbled appendix will not pass a legal read unexplained. 🔵 Closure: the SBOM note is written at engagement start, not after the audit asks |
@@ -12847,7 +12920,7 @@ sessions that maintain it. 🟢 Every check below was re-implemented inline this
 | 🟢 **`558-B`** | **Probe adopted and run at full shelf scale.** 375 distinct addresses; **374 resolve**, 1 `NOTFOUND` (`github.com/topics/ai-tutor` — this pass's own extractor artefact, not a dead row). 🔴 **121/374 = 32.4 % are not on `main`**: `master` 85, `develop` 15, `dev` 5, **16 on version/release branches**. `p558` estimated 3-in-6 from six addresses; the full-shelf figure is **1-in-3**. 🟢 `P558-B`'s probe is now the only read permitted to emit `NOASSERTION`, and `559-G` names the sixteen rows it rescues |
 | 🟢 **`558-C`** | **Paired sweep run in one session, both yields published.** `topic:edtech created:>2026-10-23`: unfiltered `total_count` **204**, 30 returned, **25/30 at 0★**, 13/30 synthetic signature, 🔴 **~17 % promotable**; with `stars:>5` → `total_count` **2**, 🟢 **2/2 real and both grant-read (100 %)**. 🟢 Standing `stars:>5` floor adopted for topic sweeps, and a sweep published without one must publish its unfiltered yield beside it |
 | 🟢 **`558-D`** | **One call, as prescribed.** `…/kolibri/develop/LICENSE` → 200. `MIT License`, `Copyright (c) 2021 Learning Equality and other contributors`, raw **1 097 B**, **1 096 B** by convention, `sha256/12` **`fa4c9d2697f9`**. 🟢 Row amended **in place** in `repos/foundations.md` from *carried* to **read**. 🟢 The `MIT` carry was correct; the evidence was what was missing. 🔵 **Zero Tier-1 rows now carry a bare *"carried, unchanged"* grant** |
-| 🟢 **`558-A`** | **Discharged on both limbs.** (a) Cell-level proof published: the `PageLM` verdict row split on `\|` yields **0** cells equal to `NOASSERTION`, while a line-level `grep` returns **1** — the false positive `558-A` predicted, reproduced and discounted. (b) The grant was **re-read independently**: `main` · `LICENSE.md` · `# PageLM Community License` · **8 562 B** · **`20a39a9c5993`** — 🟢 digit-for-digit what `p558` published |
+| 🟢 **`558-A`** | **Discharged on both limbs.** (a) Cell-level proof published: the `PageLM` verdict row split on `\|` yields **0** cells equal to `NOASSERTION`, while a line-level `grep` returns **1** — the false positive `558-A` predicted, reproduced and discounted. (b) The grant was **re-read independently**: `main` · `LICENSE.md` · `# PageLM Community License` · **8 562 B** · **`c834209c5f33`** — 🟢 digit-for-digit what `p558` published |
 
 ### 🔴 Registered this pass
 
@@ -12955,7 +13028,7 @@ heading, incidental), line 112 (`p557`'s blockquote **of the defect**, legitimat
 and its own section spans 7–184, so `114 + ~178 → 293`.
 
 🟢 **Fixed in place this pass, and not on `p557`'s authority** — the grant was re-read first:
-🔴 `LICENSE` → **404**; 🟢 **`LICENSE.md`** → 200, **8 562 B** `20a39a9c5993`,
+🔴 `LICENSE` → **404**; 🟢 **`LICENSE.md`** → 200, **8 562 B** `c834209c5f33`,
 `# PageLM Community License`. 🟢 **The byte count and hash reproduce this shelf's own prior
 figure exactly**, a second cross-pass reproducibility check alongside OpenOLAT's.
 
@@ -13052,7 +13125,7 @@ tree.
 #### 🟢 `Gap 556-H` — CLOSED, against availability
 
 🟢 [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) is
-**`CC-BY-NC-4.0`** — 19 345 B, `db2e35513dba`, *"for NonCommercial purposes only"* read verbatim.
+**`CC-BY-NC-4.0`** — 19 345 B, `41003d4a7474`, *"for NonCommercial purposes only"* read verbatim.
 🔴 **`BLOCK` stands.** 🟢 `556-H` said *"if it is not permissive, the `Trend 60` gap is confirmed
 rather than merely suspected, which is also worth having"* — that is the branch that obtained, and
 it converts a suspicion into a priced build (`P557-B`).

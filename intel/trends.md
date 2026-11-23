@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-21
+updated: 2026-11-23
 ---
 
 # Current trends — education
@@ -3140,3 +3140,78 @@ fast-growing small repo and too short to detect it anywhere else.** Seven of twe
 move at all. 🟢 **So same-day re-verification is worth running for drift *direction* on the fast
 rows and is not worth running as a general star refresh** — which is the cheaper instrument this
 base should reach for when, as here, rotation sends two passes at the same industry in one day.
+
+## T80 — A published hash is evidence only if a stranger can reproduce it, and this base has been publishing hashes that nobody could (`p940`)
+
+🔴 **Fourteen licence fixtures on `agents/top.md` carried a `sha256` prefix that does not match the
+grant file as served.** Each was computed over the payload with its trailing newline(s) removed —
+the signature of shell command substitution, `$(cat LICENSE)`, which strips *all* trailing
+newlines. `xiaoyang111222/cn-math-taxonomy` is short by **two** bytes and still reproduces exactly
+under that hypothesis, which is what pins the mechanism rather than merely fitting it. 14 of 14
+reproduce when stripped; **none** reproduce as served.
+
+🟢 **Nothing commercial moved, and that is precisely what makes this a trend rather than an
+incident.** The operative licence text was identical in every case, so no grant class, no
+copyleft call and no `DELIVERABLE` verdict changed. The defect was invisible to every gate this
+base runs *because* every gate asks the question that was never wrong — *is this repo MIT?* — and
+none asked the question the fixture exists to answer: **can a third party fetch this file and get
+this hash?**
+
+🔵 **The general form, and it is not about newlines.** This base publishes three kinds of claim:
+a **verdict** (MIT, copyleft, refused), a **measurement** (stars, push dates) and a **fixture**
+(bytes plus hash). Verdicts get re-argued, measurements get re-measured, and **fixtures get
+copied**. A fixture is the only one of the three that is *supposed* to be checkable by someone who
+does not trust us, so it is the only one whose value is destroyed entirely by being
+unreproducible — a wrong star count is stale, a wrong hash is **decoration**. `T19` established
+that published licence *metadata* is wrong often enough to be a procurement risk; `T80` is the
+sharper version aimed at this base's own output: **the artefact we offer as proof was, in fourteen
+places, unverifiable.**
+
+🔴 **And the verifier was circular.** `evidence/licence-ledger-structured.2026-11-21-p937.tsv`
+records the wrong pair under `method = byte-read-p937` while its own last column,
+`prose_cell_excerpt`, holds the markdown cell verbatim: the value was harvested from the page it
+was meant to check. Three consecutive verification passes (`p937`, `p938`, `p939`) then reported
+that the licence column held, truthfully, about the class. 🟢 **The cheap rule: a verifier must not
+be able to read the artefact it verifies.** If a ledger's input can come from the prose, it will,
+and it will report green for ever.
+
+🔵 **Operational consequence for an engagement.** A client licence inventory or SBOM handover
+(`P24`, and now `P498`) is worth exactly what an auditor gets when they re-run it. **Ship the
+command, not the digest** — or ship both and let a gate prove they agree — because a digest the
+client's auditor cannot reproduce converts a compliance deliverable into a liability the moment it
+is tested.
+
+## T81 — The Council of Europe's education instrument has a draft and a plenary, its deadline is disputed, and its reach is not regional (`p940`)
+
+🟡 **`ATTRIBUTED-UNVERIFIED` — every source below is a search snippet, because `coe.int` and
+`rm.coe.int` both return `ENOTFOUND` from this environment** (`940-F8`). The authoritative terms of
+reference would settle most of this in one fetch and could not be fetched. Treat the shape as
+load-bearing and the dates as not.
+
+🟢 **What changed against this base's held position.** `p28` recorded the **Committee of Experts on
+AI and Education (`EDU-IA`)** and its four deliverables *without dates*, and read the Council of
+Europe as producing **guidance layered on the AI Act** — "a services engagement, not a product
+sale". Two things are now different. First, a **draft legal instrument on AI systems in education
+was tabled and reviewed at the committee's 2nd plenary, Strasbourg, 16–17 September 2026**,
+alongside an updated **Compass for AI and *Digital Transformation* in Education** — a retitling
+that widens the object from AI to digital transformation generally. Second, the deliverables have
+dates, and **the legal instrument's date is in dispute: one summary gives 31 December 2026, another
+2027.**
+
+🔴 **Do not quote a date; scope against the stable elements.** This is `T78`'s discipline applied a
+second time, and the second application is what makes it a rule rather than a Vietnam anecdote.
+Stable across sources: the committee exists under the **Committee of Ministers** reporting to
+**CDEDU**, with a mandate to **31 December 2027**; a draft instrument exists and has been reviewed
+in plenary; and a **European Reference Framework for the Evaluation of Educational Technologies**
+is a named deliverable of the same body.
+
+🔵 **The reach is the commercially important part, and it inverts the regional filing.** The
+instrument is framed as applying the **Framework Convention on AI, Human Rights, Democracy and the
+Rule of Law** to the education sector — and that Convention is **open to non-member states**. An
+education-sector protocol under it is therefore **not EMEA-bounded**, which means filing it as an
+EMEA row understates it in the same way `T78` showed EMEA-leads-on-regulation overstated the EU.
+🟢 **Together with `T78` the pair is now symmetric and usable:** Vietnam offers *deliverable* work
+today against an enumerated list, while the Council of Europe offers a **dated specification
+pipeline** whose evaluation framework — due inside weeks on the earlier reading — is the artefact
+North American districts are, on this pass's own NA leg, spending billions without
+(`T9`, `940-F9`).

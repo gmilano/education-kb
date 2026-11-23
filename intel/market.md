@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-21
+updated: 2026-11-23
 ---
 
 # Market intelligence — education
@@ -133,6 +133,35 @@ data access* rather than education agents.
 
 
 ### North America
+
+#### 🔵 `p940` (2026-11-23) — North America: Illinois shipped 409 pages, and the buyers still cannot tell what is worth buying
+
+🟡 Snippet-sourced. 🔴 **`www.franczek.com` and `www.nprillinois.org` do not resolve from this
+environment**, so neither the ISBE document nor the legal summaries of it were byte-read.
+
+- 🟢 **Illinois has published, and the instruments were already corrected here.** `p723` replaced a
+  fabricated *"Act 964"* with the real pair: **PA 104-0399**, the ISBE guidance mandate, and
+  **PA 104-0565 / SB 2909**, which bans AI-assigned scores in **teacher evaluation**. New this
+  pass: the guidance **runs 409 pages**, was itself **written with AI assistance**, and ISBE has
+  committed to further guidance plus **no-cost professional learning through the 2026–27 school
+  year**. The statutory deadline was **1 July 2026**; publication was **9 July 2026**.
+- 🔵 **The page count is the opportunity, not the lateness.** A 409-page state guidance document is
+  a **deliverable specification** that no district operationalises unaided — which is exactly the
+  50-state configurable engagement `compose/patterns.md` **`P3`** describes. The eight-day overrun
+  is trivia; the volume is the work.
+- 🔴 **And the demand-side confirmation of `T9` arrived in the same leg.** *Education Week*
+  (August 2026) reports districts **spending billions on AI while struggling to determine what is
+  worth buying**. 🔵 Read against `940-F7`: the artefact that would answer that question — a
+  framework for **evaluating** educational technology — is being drafted by the Council of Europe,
+  not in North America. **The region with the budget lacks the rubric; the region writing the rubric
+  is not the one spending.** An engagement that builds the evaluation harness (`P23`) sells into
+  both halves of that asymmetry.
+- 🟡 Carried, unchanged and still snippet-tier: ~**100 state bills** tracked this year affecting
+  student AI use; **Virginia SB 394**; **Ohio**'s July 2026 mandate; enforcement exposure at
+  **PowerSchool** and **Illuminate Education**. Named vendors across the leg remain Microsoft,
+  Google, AWS, IBM, Pearson, Instructure, Anthology and Coursera — 🔴 **none of them open source**,
+  which is the standing shape of this region's buy-side.
+
 
 #### 🔵 `p937` (2026-11-21) — North America: the policy cascade now has dates, and they are the engagement
 
@@ -958,6 +987,39 @@ regulatory surface in this KB**, so a client conversation here starts from speci
 from discovery.
 
 ### EMEA
+
+#### 🔵 `p940` (2026-11-23) — EMEA: the Council of Europe's education instrument is in draft, and its deadline is disputed
+
+🟡 `ATTRIBUTED-UNVERIFIED`. 🔴 **`www.coe.int` and `rm.coe.int` both return `ENOTFOUND` from this
+environment**, so the `EDU-IA` terms of reference — the one document that would settle the dates —
+could not be fetched. See `940-F8`; the remedy is to allow `coe.int` in the session's network
+policy.
+
+- 🟢 **The committee this base already held now has a draft instrument and a plenary history.**
+  The **Committee of Experts on AI and Education (`EDU-IA`)** sits under the **Committee of
+  Ministers**, reports to the Steering Committee for Education (**CDEDU**), has **15 members**, runs
+  **January 2026 → 31 December 2027**, and first met in **Strasbourg on 14–15 January 2026** (chair
+  **Daniela Hau**, Luxembourg; vice-chair **Vassilis Koutsoumpas**, Greece). Its **2nd plenary,
+  Strasbourg 16–17 September 2026**, reviewed an updated **Compass for AI and *Digital
+  Transformation* in Education** *and* **a draft legal instrument on AI systems in education**,
+  with day two covering the Reference Framework, the Policy Toolbox and a **4th Working Conference
+  on AI Governance in Education**.
+- 🔴 **The legal instrument's deadline is in dispute — 31 December 2026 in one summary, 2027 in
+  another — and this base does not pick one.** `T78` set the discipline on Vietnam and it applies
+  here: scope against the duties and the stable facts, not the calendar. Stable: the committee
+  exists, a draft has been reviewed in plenary, and the **European Reference Framework for the
+  Evaluation of Educational Technologies** is a deliverable of the same body.
+- 🔵 **This changes how EMEA should be sold.** The held reading — Council of Europe output is
+  *guidance* layered on the AI Act, hence advisory services — understates a draft legal instrument
+  under active plenary review. 🔴 **And the reach is not regional:** the instrument applies the
+  **Framework Convention on AI, Human Rights, Democracy and the Rule of Law**, which is **open to
+  non-member states**, so an education protocol under it is a candidate global template rather than
+  an EMEA rule. Filing it only here understates it.
+- 🟡 Carried from this pass's leg, snippet-tier: Eurydice's *Digital education at school in Europe
+  2026*; the OECD *Digital Education Outlook 2026*; BCG's Bett Ministerial Symposium finding that
+  **the binding constraint is ministerial misalignment, not technology**; **Spain still has no
+  specific national rule** on classroom AI. 🔴 **Zero repositories from this region this pass.**
+
 
 #### 🔵 `p937` (2026-11-21) — EMEA: one binding duty already live, one high-risk deadline in dispute
 
@@ -2272,6 +2334,22 @@ self-hostable campus bridge.
 
 ### APAC
 
+#### 🔵 `p940` (2026-11-23) — APAC: a measured nil on supply, and share figures that remain vendor-tier
+
+🔴 **Zero new repositories and zero new instruments from the APAC leg this pass** — an informed nil,
+not an unsearched region. 🟡 Everything the leg returned is snippet- or vendor-tier and is already
+held or declined: Arizton putting APAC at **over 45% of global EdTech share**; Ken Research's
+**13.89% CAGR (2020–2025)** with China the largest revenue pool and Japan the high-value
+institutional buyer; *Times Higher Education*'s survey of Asian universities finding **30% virtual
+tutor adoption** and only **44% with 5G access**; the World Bank's **Global EdTech Policy Academy,
+Seoul, 31 August – 4 September 2026**. 🔵 **The one durable item is the THE pair**: a region can lead
+on market share and still have **fewer than half** its surveyed universities on the network tier a
+synchronous AI deployment assumes — which is an infrastructure qualification to attach to any APAC
+delivery estimate, and the reason `P14`'s offline-first posture keeps earning its place here.
+🔴 **`T78`'s Vietnam finding is unchanged this pass and remains the region's — and this base's —
+only operational education-AI duty.**
+
+
 #### 🆕 `p939` (2026-11-21) — APAC: Vietnam's education-AI duty is **operational**, the portal is live, and the high-risk list is enumerated — education is **3 of 46 systems**
 
 🟡 Snippet-sourced from commercial compliance guides. 🔴 **Neither the Official Gazette text of
@@ -3554,6 +3632,24 @@ curriculum mandate and a high-risk classification** — the clearest single-coun
 engagement that must satisfy a regulator and a curriculum at once.
 
 ### LATAM
+
+#### 🔵 `p940` (2026-11-23) — LATAM: a measured nil, and the governance-vacuum mechanism re-confirmed from a fresh source
+
+🔴 **Zero new repositories and zero new instruments from the LATAM leg this pass.** 🟢 Every
+substantive figure it returned is already held with provenance: the **UNESCO IESALC / UNU-IAS**
+working paper (September 2026, **200 HEIs across 19 countries**) finding adoption *"neither uniform
+nor evenly distributed"* with pronounced private/public gaps; the **ILIA 2025** index
+(**ECLAC/CEPAL with CENIA**) and its regulation sub-dimension; the **IDB**'s map of **193** real
+classroom and school-management AI initiatives; **OEI/ProFuturo**'s judgement that system-level
+adoption remains *very limited*. 🟡 The *"only **30%** of LATAM universities have published AI
+policies"* figure is held and still rests on a single presentation — 🔴 **do not quote it beside the
+IESALC survey as an equal measurement.**
+🔵 **What the nil confirms is the mechanism, which is the part that sells.** Adoption here is driven
+by **individual academics and students**, not institutional plans, so the first engagement is
+**discovery and consolidation of what is already running** — not a greenfield strategy document.
+A leg that goes looking for new regulation and returns institutional-policy gaps instead is
+evidence *for* that reading, not an empty result.
+
 
 #### 🟢 `p939` (2026-11-21) — LATAM: the UNESCO figure this base leans on now has its **provenance and sample size** attached
 

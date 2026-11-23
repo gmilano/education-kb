@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-21
+updated: 2026-11-23
 ---
 
 # Foundational repos — education
@@ -681,7 +681,7 @@ byte size and `sha256₁₂` recorded so a later pass can detect an edit without
 |---|---|---|---|
 | https://github.com/Azure/Moodle | 186 | MIT (1,090 B, `91f7258203fd`) | Deployment tooling for scalable Moodle clusters on Azure — **MIT templates wrapping a GPL-3.0 application**. Genuinely useful and genuinely permissive, but it is infrastructure-as-code for someone else's LMS, so it belongs beside the Moodle row in `verticals/solutions.md`, not on the substrate shelf. |
 | https://github.com/microsoft/o365-moodle | 216 | GPL-3.0 (35,146 B, `c53a65c2fd56`) | Microsoft 365 / Entra ID plugins for Moodle. 🔵 **Byte-identical licence file to `ucfopen/UDOIT`** — same `sha256₁₂` — which is the expected result for two canonical GPL-3.0 texts and a useful control on the read method. Copyleft, so `DELIVERABLE — COPYLEFT` at best. |
-| https://github.com/learning-commons-org/knowledge-graph | 169 | 🔵 split: **code MIT, data per-dataset** (5,788 B, `86b7ebf9b61d`) | The data layer this tier most needs, and the one row that **cannot carry a licence cell** — its datasets run across *Open*, *Open+Gated* and *Gated* tiers and the licence says in terms that the gated ones are **not** covered by CC BY 4.0, CC0 "or any other open license referenced here". Adopting it means reading per dataset, every time. |
+| https://github.com/learning-commons-org/knowledge-graph | 169 | 🔵 split: **code MIT, data per-dataset** (5,789 B, `d849ffef4f98`) | The data layer this tier most needs, and the one row that **cannot carry a licence cell** — its datasets run across *Open*, *Open+Gated* and *Gated* tiers and the licence says in terms that the gated ones are **not** covered by CC BY 4.0, CC0 "or any other open license referenced here". Adopting it means reading per dataset, every time. |
 
 ## National-curriculum data as an agent substrate — added `p904`
 

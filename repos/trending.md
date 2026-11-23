@@ -1,8 +1,49 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-21
+updated: 2026-11-23
 ---
+
+## `2026-11-23` (p940) — **No new repositories for the 53rd pass running. The integrity work moved from addresses to *fixtures*: 14 published licence hashes do not reproduce from the file as served, and the cause is one line of shell.**
+
+🔵 **Rotation consistent** — `rotation.json` read `next: 8` / `last_industry: technology` / `2026-11-23`, and this remote last carried `p939` from `2026-11-21`. No `p936`-pattern anomaly this pass.
+
+### `940-R1` 🟢 Address integrity — anchors re-resolved, licence column holds
+
+| Measurement | Result |
+|---|---|
+| Anchors re-measured on `gh api search/repositories` | **16** |
+| Live, non-archived | 🟢 **16 (100%)** |
+| Licence (SPDX) unchanged against `p939` | 🟢 **16 of 16** |
+| Renamed or archived | 🟢 **0** |
+| `openedx/openedx-platform` `422` false-absence (`p901`) | 🟢 **did not recur** |
+| Control (fabricated slug) | 🟢 refused, `ec=128` |
+
+🔵 **Grants byte-read this pass: 2 of 2 reproduce exactly** — `GarethManning/education-agent-skills` is **`CC BY-SA 4.0`** (`1,230 B`, `sha256₁₂ f952182df4eb`, matching the published cell to the byte) and `chadyi/StudyOnTV` is the bespoke **"Source Available License — Personal Use Only"** (`1,043 B`, `sha256₁₂ 67ae8445017e`). Both carry SPDX `NOASSERTION` on the API, so **the rule that a `NOASSERTION` is a pointer and not a licence is evidenced twice more** — now at a count where it should be treated as settled rather than re-discovered.
+
+### `940-R2` 🔴 The fixture defect, stated for the repository shelves
+
+Full account in `agents/trending.md` `940-F1`–`940-F4`; what matters here is the blast radius across shelf files and what was **not** touched.
+
+| File | Bad fixture tokens | Action |
+|---|---|---|
+| `agents/top.md` | 14 | 🟢 **corrected** |
+| `intel/open-gaps.md` | 5 | 🟢 **corrected** |
+| `compose/patterns.md` | 3 | 🟢 **corrected** |
+| `repos/foundations.md` | 1 | 🟢 **corrected** |
+| `verticals/solutions.md` | 1 | 🟢 **corrected** |
+| `agents/trending.md`, `repos/trending.md` | present in dated historical entries | 🔴 **deliberately NOT rewritten** |
+
+🔵 **Why the trending shelves keep the wrong value.** These two files are append-only by this base's own rule, and a dated entry is a record of *what a pass published*, not a claim about the world today. Rewriting `p925`'s entry would erase the only evidence that the defect happened. 🔴 **The cost is explicit and is registered as a gap**: a reader who greps `fdc484954b1b` still finds it in the history, so the planned reproduction gate (`940-B`) will fail on these files until it carries an append-only exemption that still reports.
+
+### `940-R3` 🔴 Supply — the vertical leg, and a measured absence worth writing down
+
+| Leg | Repositories returned | New |
+|---|---|---|
+| `open source platform education student information system MIT Apache 2026` | `iblai/sis`, `OpenEduCat`, `openSIS`, `RosarioSIS` | 🔴 **0** |
+| `github trending education AI 2026` | `HKUDS/DeepTutor`, `GarethManning/education-agent-skills`, `SirhanMacx/Claw-ED`, `TapXWorld/ChinaTextbook` | 🔴 **0** |
+
+🔴 **The measured absence: there is no Apache-2.0 student information system in this channel's reach.** The SIS tier remains what this base has recorded for months — `OpenEduCat` (`LGPL-3.0`, Odoo-framework), `openSIS` and `RosarioSIS` (copyleft), and `iblai/sis`, which is `MIT` over a **front end** whose backend is sold under an enterprise licence and which measures **1 ★** (`940-F6`). 🔵 **This keeps `P12`'s registrarial gap open and names why**: the gap is not that nobody has written an SIS, it is that **every open one is copyleft and the one permissive one is a storefront.** An engagement needing a closed registrarial deliverable still has no permissive substrate to start from, and that should be said to a client in the first week rather than the fourth.
 
 ## `2026-11-21` (p939) — **670 addresses re-resolved, 670 live, zero dead. No new repos for the 51st pass running — and the vertical-platform leg confirmed the permissive-LMS scarcity for the second consecutive day, again from a leg that went looking for the opposite.**
 

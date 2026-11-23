@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-21
+updated: 2026-11-23
 ---
 
 # Compose patterns — education
@@ -3758,7 +3758,7 @@ and a deployment per client.
 | Layer | Component | Licence | Role |
 |---|---|---|---|
 | **Platform core** | https://github.com/pacewisdomhq/TutorLoom | Apache-2.0 (11,361 B, `a7f87303f2e9`) | 🟢 **Self-hosted multi-tenant LMS** — Django 6 + DRF + React; course builder, trainer and student portals, progress tracking. The **first permissive multi-tenant LMS on this base** |
-| Tenancy + billing reference | https://github.com/3yangyang9/DeepTutor-AILearning | Apache-2.0 (11,407 B, `596087a7f098`) | 🟢 Read this for the **four-level tenancy model** (platform → institution → campus → class) and the **billing-policy layer**. APAC-origin, and the only permissive artefact here that treats *who pays* as a first-class concern |
+| Tenancy + billing reference | https://github.com/3yangyang9/DeepTutor-AILearning | Apache-2.0 (11,408 B, `cd2f54e1e506`) | 🟢 Read this for the **four-level tenancy model** (platform → institution → campus → class) and the **billing-policy layer**. APAC-origin, and the only permissive artefact here that treats *who pays* as a first-class concern |
 | Competency graph | https://github.com/iblai/lms | MIT | Competencies, not courses, as the primary object — the model a corporate-academy tenant actually wants |
 | Per-tenant microsites | https://github.com/haxtheweb/haxcms-php | Apache-2.0 | 🟢 **No database.** Generate a site per cohort and discard it; carries an **OpenSSF Scorecard** badge, which is the only supply-chain posture on this shelf |
 | Content as files | https://github.com/tutors-sdk/tutors | MIT | Course-as-filesystem: an agent authors content by writing files, with no API to go through |
@@ -3788,9 +3788,9 @@ field, sees something plausible, and ships, has shipped a licence breach.
 
 | Asset | ★ | Grant (byte-read `p925`) | Kind of licence | Can a client engagement ship it? |
 |---|---|---|---|---|
-| https://github.com/xiaoyang111222/cn-math-taxonomy | **8,648** | **`CC BY-NC 4.0`** (19,345 B, `db2e35513dba`) | 🔴 **content**, **NonCommercial** | 🔴 **No.** 1,644 knowledge points, 2,403 prerequisite edges, 6,723 items, aligned to the Chinese national standard, with an adaptive prerequisite diagnostic — the best structure for the region and it forbids commercial use |
+| https://github.com/xiaoyang111222/cn-math-taxonomy | **8,648** | **`CC BY-NC 4.0`** (19,347 B, `41003d4a7474`) | 🔴 **content**, **NonCommercial** | 🔴 **No.** 1,644 knowledge points, 2,403 prerequisite edges, 6,723 items, aligned to the Chinese national standard, with an adaptive prerequisite diagnostic — the best structure for the region and it forbids commercial use |
 | https://github.com/withmarbleapp/os-taxonomy | 7,725 | `ODbL-1.0` | 🔴 **database** | 🟡 **Yes, with share-alike on the database.** A derived or extended graph must be released under ODbL. Model the obligation before building on it |
-| https://github.com/learning-commons-org/knowledge-graph | 169 | 🔵 **split: code MIT, data per dataset** (5,788 B, `86b7ebf9b61d`) | 🔴 **per-asset** | 🟡 **Per dataset, every time.** *Open* tiers are usable; the licence states in terms that **Open+Gated** and **Gated** content are "not covered by CC BY 4.0, CC0, or any other open license referenced here" |
+| https://github.com/learning-commons-org/knowledge-graph | 169 | 🔵 **split: code MIT, data per dataset** (5,789 B, `d849ffef4f98`) | 🔴 **per-asset** | 🟡 **Per dataset, every time.** *Open* tiers are usable; the licence states in terms that **Open+Gated** and **Gated** content are "not covered by CC BY 4.0, CC0, or any other open license referenced here" |
 | https://github.com/chuma-beep/mathua | 430 | 🟢 **MIT** (1,074 B, `6bd7c2a354d5`) | 🟢 **software**, and the graph ships inside it | 🟢 **Yes.** **3,015 concepts** with mastery gating and FSRS review, Go + Next.js, self-hostable |
 
 ### The two days
@@ -4431,3 +4431,97 @@ claim built on a byte-read of the statute: **neither `ai.dda.gov.vn` nor the Off
 resolves from this environment** (`939-F5`), so every element above is snippet-sourced from
 commercial compliance guides and the duties should be confirmed against the primary text by the
 client's counsel before a fixed price is quoted.
+
+## P498 — Reproducible licence inventory: ship the command, not the digest (added `p940`)
+
+**When to use it.** Any engagement that hands a client a licence inventory, an SBOM, an
+open-source attribution file or a compliance pack — so `P24`'s rebuildable handover, and the
+pre-flight gate `G1` that every other pattern here depends on. **Use it specifically when the
+deliverable will be audited by someone who does not trust you**, which is the normal case in
+procurement.
+
+**The failure it prevents, measured in this base rather than imagined.** `p940` found **14
+published licence fixtures** whose `sha256` could not be reproduced from the grant file as served
+(`T80`). The cause was one line of shell: the payload was interpolated through command
+substitution, `$(cat LICENSE)`, which strips **all** trailing newlines, so every digest was
+computed over a payload one or two bytes shorter than the file anyone else would fetch. No licence
+verdict was wrong. Every digest was useless. 🔴 **An auditor who re-runs your hash and gets a
+different answer does not conclude "trailing newline"; they conclude the inventory was not
+produced the way you said it was** — and then they re-audit the verdicts too.
+
+### The pieces
+
+| Role | Use | Licence (byte-read `p940`) | ★ | Why this one |
+|---|---|---|---|---|
+| Grant corpus | [`spdx/license-list-data`](https://github.com/spdx/license-list-data) | 🔴 **no grant file at any conventional path**; SPDX API reports `null` | 720 | Canonical licence texts to diff against — **but see the caveat below; this row is the pattern's own `T23` specimen** |
+| SPDX tooling | [`spdx/tools-python`](https://github.com/spdx/tools-python) | `Apache-2.0` (11,356 B, `c5accbbd8546`) | 261 | Emits and validates the SBOM document the client keeps |
+| Scanner, second channel | [`nexB/scancode-toolkit`](https://github.com/nexB/scancode-toolkit) | `Apache-2.0` (11,357 B, `c71d239df917`) at the **non-standard path `master/apache-2.0.LICENSE`** | 🔴 unmeasured — `422` | Independent licence detection; `T24` showed grants change **by directory**, which a root-only read misses |
+| Dependency graph | [`anchore/syft`](https://github.com/anchore/syft) | `Apache-2.0` (11,357 B, `c71d239df917`) | 9,956 | Transitive inventory; `T28` records that the top of this shelf is unpinnable |
+| Reproduction gate | `compose/code/p940-fixture-vs-payload/` | this KB | — | The two arms below, including the one that must **abstain** |
+
+🔴 **Two caveats found while verifying this very table, and both belong in the pattern rather than
+in a footnote.** 🔵 **First: the canonical grant corpus has no grant.** `spdx/license-list-data`
+serves `404` on `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING` and `NOTICE` on both `main` and
+`master`, and the API reports `null` — so the repository everyone reaches for to *resolve* licence
+questions is itself a `T23` specimen with no readable grant. Its own README states it is
+**generated** output whose source is [`spdx/license-list-XML`](https://github.com/spdx/license-list-XML);
+treat it as a convenience mirror, take canonical texts from `spdx.org/licenses/`, and **do not
+represent it to a client as a licensed dependency.** 🔵 **Second: `nexB/scancode-toolkit` returns
+`422 "resources do not exist"` from `search/repositories` on two consecutive calls**, while
+`git ls-remote` resolves it and `raw.githubusercontent.com` serves its Apache grant — `p901`'s
+false-absence class, recurring here on a fresh slug. **Keep both channels in the gate**: a scanner
+that concludes a dependency does not exist because one API said so will silently drop rows from a
+client's inventory.
+
+### The build
+
+1. **Fetch and hash the bytes as served — never a shell-interpolated copy.** Write the payload to
+   a file and hash the file. The defect `T80` names is created entirely by passing the grant
+   through a string.
+
+   ```bash
+   # correct: the file is the artefact
+   curl -fsS "https://raw.githubusercontent.com/$SLUG/$REF/LICENSE" -o grant.bin
+   BYTES=$(wc -c < grant.bin); SHA=$(sha256sum grant.bin | cut -d' ' -f1)
+
+   # WRONG, and this is the p940 defect verbatim:
+   #   printf '%s' "$(cat grant.bin)" | sha256sum     <- strips every trailing newline
+   ```
+
+2. **Record the reproduction command beside every digest, not just the digest.** Each inventory row
+   carries `slug`, `ref` (a **commit SHA**, not a branch — `P24`'s pinning rule), `path`, `bytes`,
+   `sha256`, and the literal command. The client's auditor runs the command; agreement is the
+   deliverable.
+3. **Gate it, and make the gate independent.** A second job re-fetches every row and fails the
+   build on any mismatch. 🔴 **The gate must not be able to read the inventory's prose** — `p940`'s
+   `licence-ledger-structured` recorded a wrong pair under `method = byte-read` while its own last
+   column held the markdown cell it had scraped, so it agreed with the page by construction and
+   reported green through three verification passes.
+4. **Make the gate abstain rather than guess.** `p940`'s first sweep arm reported **1,502**
+   conflicts, its second **728**, its third **322** — and all three were artefacts: cross-pairing
+   several slugs and hashes on one line, and reading HTTP status codes (`200`) out of a TSV column
+   as byte counts. Only the arm restricted to one-slug-one-hash rows with a **live re-fetch**
+   produced data. A row the gate cannot adjudicate is reported `ABSTAIN`; it is never reported
+   clean.
+5. **Flag the rows that cannot discriminate.** A grant file ending without a trailing newline
+   produces the same digest stripped or not — **4 of `p940`'s 37 rows** were in this state. They are
+   not evidence that the instrument was correct, and they are labelled indeterminate.
+6. **Re-read bespoke grants on a schedule; canonical ones need it once.** `MIT` and `Apache-2.0`
+   texts are fixed by their stewards. A bespoke grant — `CaviraOSS/PageLM`'s "PageLM Community
+   License", `chadyi/StudyOnTV`'s "Source Available License — Personal Use Only" — is whatever its
+   author last committed, and `T25`/`T27` show the traps concentrate exactly there. Give those rows
+   a re-confirm interval and an owner.
+
+### What the client gets
+
+A licence inventory in which **every row can be independently re-derived by a third party**, a gate
+that fails the build when one cannot be, and an explicit list of rows the method cannot adjudicate.
+🟢 **The commercial argument in one sentence:** an inventory whose digests reproduce converts a
+licence review from an assertion about your diligence into a measurement the client's own auditor
+can repeat — and that is the difference between a compliance pack that closes a procurement and one
+that reopens it.
+
+🔴 **What not to claim.** Do not present reproduction as a licence *opinion*. This pattern proves
+that the bytes you read are the bytes upstream serves; it says nothing about whether the grant
+permits the client's use. That judgement is `G1`'s, it is a lawyer's, and `T19`'s both-ways
+metadata errors are the reason the two must stay separate deliverables.

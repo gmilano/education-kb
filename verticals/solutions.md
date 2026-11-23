@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-21
+updated: 2026-11-23
 ---
 
 # Vertical solutions — education
@@ -391,7 +391,7 @@ deployment has had nothing permissive to start from.
 | **Tutors** | https://github.com/tutors-sdk/tutors | MIT (1,087 B, `b418e808b99a`) | 125 | Course-as-filesystem reader, published to `tutors.dev` | 🟢 **No database** — an agent authors content by writing files |
 | **HAXcms** | https://github.com/haxtheweb/haxcms-php | Apache-2.0 (11,362 B, `b662f44e55e8`) | 130 | A *universe of microsites*, PHP backend, no database, Lit web components; carries an **OpenSSF Scorecard** badge | Per-course or per-cohort sites generated and discarded on demand |
 | **RELATE** | https://github.com/inducer/relate | **MIT/X Consortium** (1,144 B, `e6c20b652766`) | 439 | University courseware with git-versioned content and automatic grading; released on PyPI as `relate-courseware` | 🔴 Reported `NOASSERTION` by the search channel — see `agents/top.md` `925-F4`; the grant is permissive |
-| **Feedbacksystem** | https://github.com/thm-mni-ii/feedbacksystem | Apache-2.0 (10,784 B, `824e945ea176`) | 24 | TH Mittelhessen's personalised-feedback system — **EMEA**, institution-run | 🟢 **Published Helm chart on Artifact Hub** — the only row in this file with a packaged install path maintained by the authors |
+| **Feedbacksystem** | https://github.com/thm-mni-ii/feedbacksystem | Apache-2.0 (10,785 B, `65125d9e480b`) | 24 | TH Mittelhessen's personalised-feedback system — **EMEA**, institution-run | 🟢 **Published Helm chart on Artifact Hub** — the only row in this file with a packaged install path maintained by the authors |
 | **pytogether** | https://github.com/SJRiz/pytogether | MIT (1,072 B, `c8df073d1320`) | 262 | Browser-based collaborative Python IDE: real-time editing, shared drawing canvas, voice | Classroom coding an agent can observe with nothing installed on the student machine |
 
 ### 🔴 Copyleft platforms — real, deployable, and `DELIVERABLE — COPYLEFT` at best
@@ -415,7 +415,7 @@ Shelved so a later pass does not rediscover them and mistake them for permissive
 | Repo | ★ | Why refused |
 |---|---|---|
 | https://github.com/CaviraOSS/PageLM | 2,070 | **"PageLM Community License"** — non-commercial only, and it defines commercial use to include any business or revenue-generating activity. A client engagement is excluded. |
-| https://github.com/chadyi/StudyOnTV | 1,712 | **"Source Available — Personal Use Only"**; redistribution to third parties explicitly prohibited. |
+| https://github.com/chadyi/StudyOnTV | 1,779 | **"Source Available — Personal Use Only"**; redistribution to third parties explicitly prohibited. |
 | https://github.com/LearnPress/learnpress | 275 | 🔴 **No licence file on 18 probed paths.** `readme.txt` serves `200` — the WordPress convention of a `License:` header inside the readme. The grant is **unresolved by file**, so the row is not shelved. |
 | https://github.com/Azure/Moodle | 186 | Not refused on the grant (MIT, 1,090 B, `91f7258203fd`) — it is **deployment tooling for Moodle**, so it belongs beside the Moodle row above rather than as a platform of its own. Worth knowing it exists before anyone rebuilds it. |
 

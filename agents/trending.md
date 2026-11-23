@@ -1,8 +1,153 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-21
+updated: 2026-11-23
 ---
+
+## `2026-11-23` (p940) — **Fourteen published licence fixtures carried a hash that cannot be reproduced from the file as served. The cause is one line of shell: the grant was stripped of its trailing newline before it was counted and hashed. No licence verdict moves; every one of those fixtures failed the only job a fixture has.**
+
+🔵 **Rotation was consistent this pass** — `rotation.json` read `next: 8` with `last_industry: technology` at `2026-11-23`, and this base's remote last carried `p939` at `2026-11-21`. No push-but-don't-advance anomaly, so the `p936` pattern did not recur for a fourth time. The first action of every pass stands and was run: compare rotation intent against the target remote's last commit date before writing anything.
+
+### `940-F1` 🔴 The headline — a published `sha256` that nobody can reproduce
+
+`agents/top.md` publishes each licence as a byte count and a 12-hex `sha256` prefix so a reader can fetch the grant and check it. **Fourteen of those pairs cannot be checked**, because they were not computed over the file that is served.
+
+| Repo | Published | Served | Reproduces when stripped? |
+|---|---|---|---|
+| `microsoft/StudentSim` | `1,073 B / a03acaea0251` | `1,074 B / 7df20dcdf919` | 🔴 yes |
+| `lynote-ai/ai-tutor` | `1,062 B / 017037465041` | `1,063 B / 7a1aecaf14eb` | 🔴 yes |
+| `zuhairhalawa/studyai` | `1,068 B / 326f6a6b9c20` | `1,069 B / 24ef01c8186a` | 🔴 yes |
+| `shigella520/MindTrain` | `1,066 B / d69b0f7c3228` | `1,067 B / 8078815070f9` | 🔴 yes |
+| `3yangyang9/DeepTutor-AILearning` | `11,407 B / 596087a7f098` | `11,408 B / cd2f54e1e506` | 🔴 yes |
+| `five-plus-one/AI-Marker-Suite` | `35,153 B / 8d13aacc9396` | `35,154 B / 1ab858f515df` | 🔴 yes |
+| `ERRRC/kaogong-shuati` | `1,061 B / b7722af28e18` | `1,062 B / 449d0e5f8c86` | 🔴 yes |
+| `AkshitIreddy/AI-Powered-Video-Tutorial-Generator` | `1,069 B / 6c87c23cbf5c` | `1,070 B / deffdff30dfd` | 🔴 yes |
+| `zoonk/zoonk` | `1,061 B / 34f44fc04045` | `1,062 B / 800377a15e7c` | 🔴 yes |
+| `thm-mni-ii/feedbacksystem` | `10,784 B / 824e945ea176` | `10,785 B / 65125d9e480b` | 🔴 yes |
+| `CaviraOSS/PageLM` | `8,562 B / 20a39a9c5993` | `8,563 B / c834209c5f33` | 🔴 yes |
+| `chadyi/StudyOnTV` | `1,042 B / fdc484954b1b` | `1,043 B / 67ae8445017e` | 🔴 yes |
+| `xiaoyang111222/cn-math-taxonomy` | `19,345 B / db2e35513dba` | `19,347 B / 41003d4a7474` | 🔴 yes (**−2 B**) |
+| `learning-commons-org/knowledge-graph` | `5,788 B / 86b7ebf9b61d` | `5,789 B / d849ffef4f98` | 🔴 yes |
+
+🟢 **The diagnosis is exact and not a guess. 14 of 14 reproduce under the stripped hypothesis and under no other.** Demonstrated end to end on one row:
+
+```
+$ curl -s …/chadyi/StudyOnTV/main/LICENSE | wc -c ; sha256sum
+1043   67ae8445017e…          <- as served, and what agents/top.md now publishes
+$ printf '%s' "$(cat LICENSE)" | wc -c ; sha256sum
+1042   fdc484954b1b…          <- exactly what p925 published
+```
+
+🔵 **`cn-math-taxonomy` is the row that names the mechanism.** It is short by **two** bytes, not one, and still reproduces exactly — so the instrument was not trimming a single `\n`. It was interpolating the payload through shell command substitution, and `$(cat f)` strips *every* trailing newline. That is a one-line defect with a signature.
+
+🟢 **No commercial consequence, and that distinction is the point.** The operative licence text is byte-identical in all fourteen cases; only the framing whitespace differs. Every grant class, every `DELIVERABLE` / `REFUSED` call and every copyleft verdict on this shelf stands. What broke is **independent reproducibility** — the single property that separates "we byte-read the grant" from "we say we byte-read the grant".
+
+### `940-F2` 🔴 The regression: a correct value, published for six weeks, overwritten by a wrong one
+
+`chadyi/StudyOnTV` is not a fixture that was always wrong.
+
+| Pass | Date | Pair | Channel |
+|---|---|---|---|
+| `p686`, `p692` | 2026-11-07 | 🟢 `1,043 / 67ae8445017e` | byte-read, `evidence/grant-payloads.2026-11-07-p692.tsv` |
+| `p866` | 2026-11-17 | 🟢 `1,043 / 67ae8445017e` | byte-read, twice (`payload-probe`, `licence-band-mechanism`) |
+| **`p925`** | **2026-11-19** | 🔴 **`1,042 / fdc484954b1b`** | **stripped — overwrote the correct pair** |
+| `p937`, `p938`, `p939` | 2026-11-21 | 🔴 carried forward | re-asserted "the licence column holds" |
+| **`p940`** | **2026-11-23** | 🟢 **`1,043 / 67ae8445017e`** | **byte-read, live; corrected** |
+
+🔵 **This is the exact class `p28`'s `ACTION A` pre-registered** — *"an older correct statement overwritten by a newer wrong one"*, the `oat-sa/lib-lti1p3-core` shape — predicted then to be the dominant source of prose error. It is still live roughly 900 passes later, which says the prediction was right and nothing was ever built to enforce it. 🔵 **`p881` also wrote one stripped fixture** (`3yangyang9/DeepTutor-AILearning`), so the defective instrument spans at least two passes and is not a single bad run.
+
+### `940-F3` 🔴 The instrument that should have caught this is seeded from the page it checks
+
+`evidence/licence-ledger-structured.2026-11-21-p937.tsv` exists to bind published licence cells to byte-reads. For `chadyi/StudyOnTV` it records the **wrong** pair under `method = byte-read-p937`, and its own final column is named **`prose_cell_excerpt`** and contains the markdown cell verbatim.
+
+| Column | Value for `chadyi/StudyOnTV` |
+|---|---|
+| `method` | `byte-read-p937` |
+| `prose_cell_excerpt` | `**"Source Available License — Personal Use Only"** (1,042 B, `fdc484954b1b`)` |
+
+🔴 **A verifier whose value is harvested from the prose it is verifying agrees with that prose by construction, and reports green.** 🟢 **In fairness to the file, it is mostly honest about this**: 557 of its rows carry `confidence = prose-only` and the note *"not re-read in p937 — cell is annotated prose, not a token"*. The defect is confined to the ~40 rows that claim `byte-read-p937` provenance while carrying a value identical to the page. 🔵 **That is how three consecutive verification passes could truthfully report that the licence column held**: they tested the licence *class*, which was never wrong, and the fixture was outside what any gate read.
+
+### `940-F4` 🔵 The control had to be controlled first — `928-G1` reproduced on this pass's own instrument
+
+The first arm of this sweep compared every hash-bearing prose line against every evidence TSV and reported **1,502 conflicts**. **It was wrong, and wrong in two mechanical ways**, both found before any of it was written to a file:
+
+| Arm | Reported | Verdict |
+|---|---|---|
+| naive (any slug, any hash on a line) | 1,502 conflicts | 🔴 **discarded** — cross-pairs multiple slugs and hashes on one line, and invents `main/LICENSE` as a repo slug from URL fragments |
+| strict, bytes compared | 728 conflicts | 🔴 **discarded** — the "byte count" it read out of the TSVs was in many rows an **HTTP status code** (`200`, `50`), so hashes agreed while bytes "differed" |
+| strict, hash identity only | 322 conflicts | 🟡 **not published as data** — a slug legitimately carries several hashes (LICENSE vs README vs COPYING, main vs master), so non-membership is not divergence |
+| **one slug + one hash + live byte-read** | **14 of 37** | 🟢 **the only arm that is data** |
+
+🔵 **`928-G1` said it in one sentence — a control reported 32 divergences and every one was manufactured by the control itself.** This pass reproduced that failure three times in a row on its own instrument. The rule earns restating in operational form: **an offline sweep over this corpus proposes candidates; only a live fetch adjudicates them.** The 322 strict-arm candidates are *not* claimed as defects and are registered as a gap for a pass with the network budget to byte-read them.
+
+### `940-F5` 🔴 Supply: the forty-seventh consecutive nil
+
+| Leg (year computed, 2026) | Result |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **0 new** — general-purpose listicles (`dev.to`, `nocobase`, `aimultiple`, `sourceforge`); OpenHands, Browser-Use, Flowise, AutoGen, Dify, Langflow, all held by string and none education-specific |
+| `github trending education AI 2026` | 🔴 **0 new** — `HKUDS/DeepTutor`, `GarethManning/education-agent-skills`, `SirhanMacx/Claw-ED`, `TapXWorld/ChinaTextbook`: **all four already held** |
+| `open source platform education student information system MIT Apache 2026` | 🔴 **0 new** — `iblai/sis` (held, front end), `OpenEduCat` `LGPL-3.0` (held), `openSIS` / `RosarioSIS` (held). 🔵 **No Apache-licensed SIS exists in this channel's reach**, stated as a measured absence |
+| `AI education industry trends 2026` | 🔴 **0 new** — 86% genAI adoption, 54% weekly student use, $7.57B base, $112B by 2034, CAGR 39.7%: held by string or as a variant of a held triple |
+
+🔵 **Four regional legs, zero new repositories, one instrument state change** (`940-F7`). Recorded in `evidence/websearch-legs.2026-11-23-p940.tsv`.
+
+### `940-F6` 🔵 `iblai/sis` measures 1 ★ — and the marketing that this base already refuted is being re-published
+
+The vertical leg returned an `ibl.ai` post dated **2026-11-16** presenting an **MIT, self-hostable "Agentic SIS"**, and the search layer surfaced it as the one MIT candidate in the category. 🟢 **This base already byte-read that grant and read the README**: the `MIT` text is real, and the repository's own words are *"ibl.ai/sis is a front end for the ibl.ai platform"* and *"if you need the full backend, reach out … for an enterprise license."* 🔵 **It measures `1 ★`, pushed 2026-11-20.** The finding is not that the vendor is lying about the licence — the licence is MIT. It is that **an MIT grant over a front end whose backend is sold separately is not an open-source SIS**, and the claim is now circulating with a fresher date than this base's refutation of it. The star count is the cheapest corroboration available and is recorded so the next pass does not have to re-derive it.
+
+### `940-F7` 🟡 EMEA — the Council of Europe's education instrument now has a draft and a plenary, and two sources give it two different deadlines
+
+This base holds the **Committee of Experts on AI and Education (`EDU-IA`)** and its four work-programme deliverables **without dates** (`p28`, Finding 7). The dates exist, and the instrument has moved.
+
+| Element | Status | Confidence |
+|---|---|---|
+| Committee, under the **Committee of Ministers**, reporting to the Steering Committee for Education (**CDEDU**) | 15 members; mandate **January 2026 → 31 December 2027**; 1st meeting **Strasbourg, 14–15 January 2026**; chaired by **Daniela Hau** (Luxembourg), vice-chair **Vassilis Koutsoumpas** (Greece) | 🟡 `ATTRIBUTED-UNVERIFIED` |
+| **2nd plenary meeting** | **Strasbourg, 16–17 September 2026** — reviewed the updated **Compass for AI and *Digital Transformation* in Education** *and* **a draft legal instrument on AI systems in education**. Day 2 covered the European Reference Framework, the Policy Toolbox, and preparations for a **4th Working Conference on AI Governance in Education** | 🟡 `ATTRIBUTED-UNVERIFIED` |
+| Policy Toolbox on teaching and learning about AI | due **31 March 2026** | 🟡 single source |
+| **European Reference Framework for the Evaluation of Educational Technologies** | due **31 December 2026** | 🟡 single source |
+| **Proposal for a draft legal instrument** on AI systems in education, applying the **Framework Convention on AI** to the education sector | 🔴 **DISPUTED — one summary says 31 December 2026, another says 2027** | 🔴 **do not quote a date** |
+| Draft guidelines on education data and learning analytics | due **31 December 2027** | 🟡 single source |
+
+🔴 **Apply this base's Vietnam rule rather than picking a date.** `T78` established the discipline: when sources disagree on an instrument's date, scope against the **stable elements**, not the calendar. Here the stable elements are that **the committee exists, a draft legal instrument has been tabled and reviewed in plenary, and the evaluation framework is a named deliverable of the same body.** 🔵 **Two substantive changes to this base's EMEA position follow.** First, `p28` read the CoE as producing *guidance layered on the AI Act* — "a services engagement, not a product sale". A **draft legal instrument reviewed in plenary** is a different object, and the Compass has been retitled to cover *digital transformation*, not AI alone. Second, the instrument is framed as applying the **Framework Convention on AI**, which is open to **non-member** states — so an education-sector protocol under it is **not regionally bounded**, and filing it only under EMEA would understate its reach. Recorded as `intel/trends.md` **`T81`**.
+
+### `940-F8` 🔴 The channel that produced EMEA's only yield cannot be read from this environment
+
+`p28` recorded that the EMEA yield came from *"the Council of Europe education directorate — a treaty body, not a search term."* **That channel is now unreadable from here.**
+
+| Host | Result |
+|---|---|
+| `www.coe.int` | 🔴 `ENOTFOUND` |
+| `rm.coe.int` (serves the `EDU-IA` terms of reference) | 🔴 `ENOTFOUND` |
+| `www.franczek.com`, `www.nprillinois.org` | 🔴 `ENOTFOUND` |
+
+🔴 **Consequence stated plainly: everything in `940-F7` is search-snippet tier.** The authoritative terms-of-reference document (`rm.coe.int/cm-2025-131-addfinal-2411-2025-en-tors-edu-ia`) is the document that would settle the deadline conflict in one fetch, and it could not be fetched. These rows are filed `ATTRIBUTED-UNVERIFIED` — the vocabulary `ACTION p379-C` proposed and this base still has no field for. 🟢 **The remedy is one line of configuration, not more searching:** allow `coe.int` in the session's network policy. 🔵 Note the asymmetry worth carrying: `git ls-remote`, `gh api search/repositories` and `raw.githubusercontent.com` all work, so **this environment can verify code and cannot verify law** — which is backwards for a base whose last four headline findings were regulatory.
+
+### `940-F9` 🟢 North America — Illinois, and a 409-page state guidance document
+
+`p723` already corrected a bogus *"Illinois Act 964"* to the real instruments (**PA 104-0399**, an ISBE *guidance* mandate; **PA 104-0565 / SB 2909**, banning AI-assigned scores in teacher evaluation) and recorded the 2026-07-09 publication date. New detail this pass: **the guidance runs 409 pages**, it was itself **written with AI assistance**, and ISBE has committed to further guidance plus **no-cost professional learning across the 2026–27 school year** (NPR Illinois, 2026-07-15). 🔵 **Why a page count is a finding.** The statutory deadline was **1 July 2026** and publication was **9 July 2026** — late, and the lateness is the smaller fact. A 409-page document is a **deliverable specification** for the 50-state configurable work in `compose/patterns.md` `P3`: it is too large for a district to operationalise unaided, which is the engagement. 🔵 It also corroborates `T9` from the demand side, alongside this pass's NA leg returning *Education Week*'s August 2026 framing — districts "spend billions on AI but struggle to figure out what's worth buying" — the same void the CoE's Reference Framework (`940-F7`) is being written to fill.
+
+### `940-F10` 🔴 Verifying this pass's own new pattern found two defects in the licence-tooling tier
+
+`P498` names the dependencies a studio would use to build a reproducible licence inventory. Verifying those four addresses — which the brief requires and which this pass would otherwise have skipped, since they are tooling rather than education supply — produced two findings worth more than the pattern.
+
+| Repo | `git ls-remote` | `search/repositories` | Grant (byte-read) |
+|---|---|---|---|
+| `anchore/syft` | 🟢 live | 🟢 9,956 ★ | `Apache-2.0`, 11,357 B, `c71d239df917` |
+| `spdx/tools-python` | 🟢 live | 🟢 261 ★ | `Apache-2.0`, 11,356 B, `c5accbbd8546` |
+| `spdx/license-list-data` | 🟢 live | 🟡 720 ★, licence `null` | 🔴 **none — `404` on `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `NOTICE`, on both `main` and `master`** |
+| `nexB/scancode-toolkit` | 🟢 live | 🔴 **`422` — "resources do not exist", twice** | `Apache-2.0`, 11,357 B, `c71d239df917`, at **`master/apache-2.0.LICENSE`** |
+
+🔴 **The canonical licence corpus has no licence.** `spdx/license-list-data` is the repository a studio reaches for to *resolve* licence questions, and it is itself a `T23` specimen: no readable grant at any conventional path, `null` on the API. Its own README states it is **generated** output whose source is `spdx/license-list-XML`. 🔵 **This pass asserted `CC0-1.0` for it from memory when `P498` was first written, and the assertion was false.** It was caught by the verification step rather than by review, which is the only reason it is a finding here instead of a defect a later pass would have had to correct. The row now publishes the absence, and the pattern tells the reader to take canonical texts from `spdx.org/licenses/` and not to represent the mirror to a client as a licensed dependency.
+
+🔴 **`nexB/scancode-toolkit` returned `422 "resources do not exist"` on two consecutive calls** while `git ls-remote` resolved it and `raw.githubusercontent.com` served its Apache grant. That is `p901`'s false-absence class on a slug this base had never queried. 🔵 **`p938` characterised the class as *intermittent per repository*; this slug did not recover within the pass**, so the characterisation is neither contradicted nor confirmed — it needs the same slug observed across passes, which is registered as `Gap 546`. 🟢 **Its grant also sits at `master/apache-2.0.LICENSE`**, a path no root-only probe would find: `T24`'s by-directory grant problem reaching the tooling tier. 🔵 **The operational point for a client deliverable:** a scanner that concludes a dependency does not exist because one API said so silently drops rows from an inventory, so `P498` keeps both channels in its gate.
+
+### 🔵 Pre-registered for the next pass
+
+| # | Action | Prediction written **before** running it |
+|---|---|---|
+| **A** | Byte-read the **322** strict-arm hash candidates (`940-F4`) and classify each as stripped, wrong-artefact (README vs LICENSE), or stale | ⚠️ Expect **stripped** to be a *minority* — most should resolve to a different grant file on the same slug, because the published cell and the evidence row were reading different artefacts. If stripped exceeds ~60, the defective instrument ran far more widely than `p881`+`p925` and the correction is a sweep, not 14 edits |
+| **B** | Make fixture reproduction a **gate**: re-fetch every published `(bytes, sha256₁₂)` pair and fail on any that reproduces only when stripped | 🔴 Expect it to fail on first run against `agents/trending.md` and `repos/trending.md`, which this pass deliberately did **not** rewrite — so the gate needs an append-only exemption that still reports, or it will never go green |
+| **C** | Re-read `EDU-IA`'s terms of reference from `rm.coe.int` once `coe.int` is reachable, and settle the 31 December 2026 vs 2027 conflict | ⚠️ Expect the **2027** figure to be the legal instrument and the **2026** figure to be the Reference Framework, with one summary having merged two rows of the same deliverables table — the splice shape `p378` found in this base's own market headline |
 
 ## `2026-11-21` (p939) — **A second verification pass on the same day, because `rotation.json` *still* pointed here after `p938` pushed content without advancing it. It reproduces `p938` exactly — and the regulatory leg found the one jurisdiction on earth where education-AI high-risk duty is already **operational**, with a live registration portal, while the EU's equivalent date is still in dispute.**
 
