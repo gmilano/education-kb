@@ -1,0 +1,13 @@
+host	curl_http_code	mechanism	getent_resolves	class	prior_base_characterisation	host_plausibly_dead
+rm.coe.int	000	CONNECT tunnel failed response 403	no	EGRESS-REFUSED-BY-POLICY	ENOTFOUND / DNS-DEAD (p930,p937-p940)	unknown - not tested
+www.coe.int	000	CONNECT tunnel failed response 403	no	EGRESS-REFUSED-BY-POLICY	ENOTFOUND / DNS-DEAD	unknown - not tested
+iesalc.unesco.org	000	CONNECT tunnel failed response 403	no	EGRESS-REFUSED-BY-POLICY	ENOTFOUND / DNS-DEAD	unknown - not tested
+ai.dda.gov.vn	000	CONNECT tunnel failed response 403	no	EGRESS-REFUSED-BY-POLICY	ENOTFOUND / DNS-DEAD	unknown - not tested
+eur-lex.europa.eu	000	CONNECT tunnel failed response 403	no	EGRESS-REFUSED-BY-POLICY	ENOTFOUND / DNS-DEAD	unknown - not tested
+example.com	000	CONNECT tunnel failed response 403	no	EGRESS-REFUSED-BY-POLICY	CONTROL - never tested before p941	NO - canonical always-up host
+www.google.com	000	CONNECT tunnel failed response 403	no	EGRESS-REFUSED-BY-POLICY	CONTROL - never tested before p941	NO
+en.wikipedia.org	000	CONNECT tunnel failed response 403	no	EGRESS-REFUSED-BY-POLICY	CONTROL - never tested before p941	NO
+api.github.com	200	allowlisted	yes	ALLOWED	works	n/a
+raw.githubusercontent.com	301	allowlisted	yes	ALLOWED	works	n/a
+pypi.org	200	allowlisted (in no_proxy)	yes	ALLOWED	not previously recorded	n/a
+registry.npmjs.org	200	allowlisted (in no_proxy)	yes	ALLOWED	not previously recorded	n/a

@@ -4,6 +4,173 @@ region: Global
 updated: 2026-11-23
 ---
 
+## `2026-11-23` (p941) — **`p940` corrected fourteen stripped licence fixtures in one file and read the class as closed. The defect was corpus-wide: twenty-six more were live in the five files it never swept. And the `−1 B` signature that identifies them cannot, by itself, prove the defect — canonical Apache-2.0 circulates in four byte-forms, one of which has no trailing newline at all.**
+
+🔴 **Rotation anomaly, FOURTH sighting — and it is now the normal case, not the exception.** `rotation.json` read `next: 8` / `last_industry: technology` / `2026-11-23`, while this base's remote already carried **`cf7217a`, `ingest: education KB update 2026-11-23 (p940)`, committed 22:01Z the same day**. That is the push-but-don't-advance half of the `p936` pattern for the **fourth** time, and the **third consecutive education pass** to meet it (`p938`, `p939`, `p941`). 🔵 `p940`'s own section opens by recording that rotation was *consistent* for it — so the anomaly re-appeared within one pass of being absent. **The first action of every pass stands and was run.** Had this pass trusted `rotation.json`, it would have rewritten a base rewritten 40 minutes earlier.
+
+### `941-F1` 🔴 The headline — the correction was scoped to one file; the defect was not
+
+`p940` swept `agents/top.md`'s licence fixtures, found **14 of 37** computed over a newline-stripped payload, and corrected them. That sweep was sound. **Its population was one file.**
+
+This pass adjudicated **every** published `(slug, bytes, sha256₁₂)` triple in all six non-append-only content files — **275 distinct triples across 274 slugs** — by fetching each grant live and comparing the published pair against that repository's own served bytes.
+
+| Verdict | Count | Meaning |
+|---|---|---|
+| 🟢 `AS-SERVED-OK` | **248** | published pair reproduces exactly from the file as served |
+| 🔴 `STRIPPED-LF` | **26** | reproduces **only** after stripping trailing newlines — the `p881`/`p925` instrument |
+| 🟡 control artefact | **1** | this pass's own extractor cross-paired a commit SHA (`941-F8`) |
+
+🔴 **All 26 are corrected in this commit — 37 row instances, 37 hash edits, 37 byte edits, 0 misses.** They were spread across **five** files, and `agents/top.md` — the one file `p940` swept — held the fewest:
+
+| File | Stripped fixtures | Row instances |
+|---|---|---|
+| `verticals/solutions.md` | 🔴 **11** | 14 |
+| `repos/foundations.md` | 🔴 **11** | 13 |
+| `compose/patterns.md` | 3 | 4 |
+| `agents/top.md` | 3 | 5 |
+| `intel/market.md` | 1 | 1 |
+
+🔵 **Three of the five surviving `agents/top.md` fixtures sit at plain `main/LICENSE`** — reachable by exactly the probe `p940` ran. They were not missed by a weak instrument; they were **outside the 37 rows it chose to populate**. The lesson is about denominators, not about probes: a sweep reports on its population, and `p940`'s section does not state what that population excluded.
+
+🟢 **No licence verdict moves, for the 26 as for the 14.** Every grant is byte-identical in its operative text; only framing whitespace differed. What was broken, and is now fixed, is independent reproducibility.
+
+### `941-F2` 🟡 `p940`'s pre-registered prediction: magnitude right, mechanism wrong
+
+`p940` pre-registered **Action A** with a falsifiable prediction. Both halves are now adjudicated.
+
+| Claim | Prediction | Measured | Verdict |
+|---|---|---|---|
+| Scale | *"Expect **stripped** to be a **minority**… if stripped exceeds ~60, the correction is a sweep, not 14 edits"* | **26 of 275 (9.5%)** | 🟢 **Confirmed** — minority, and under the 60 threshold |
+| Mechanism | *"**most** should resolve to a different grant file on the same slug, because the published cell and the evidence row were reading different artefacts"* | 🔴 **Zero** resolved that way. 248 of 275 reproduce **as served, at a conventional path** | 🔴 **Falsified** |
+
+🔵 **The wrong-artefact hypothesis was a reasonable inference from the wrong instrument.** It came from `940-F4`'s offline strict arm, which compared prose hashes against *evidence-TSV* hashes and found 322 non-members — and a slug legitimately carries several hashes, so non-membership looked like artefact confusion. **Adjudicating against the repository instead of against the archive dissolves the entire category.** The published cells were not reading the wrong file; they were reading the right file through a defective pipe.
+
+🟢 **`940-F4`'s own rule is what made this measurable, and it is now proven in the affirmative as well as the negative:** *an offline sweep over this corpus proposes candidates; only a live fetch adjudicates them.* The 322 are not 322 defects. They are 26.
+
+### `941-F3` 🔴 Why `p940`'s **Action B** gate would have been wrong — canonical Apache-2.0 has four byte-forms, and one has no trailing newline
+
+`p940` pre-registered **Action B**: *"re-fetch every published pair and fail on any that reproduces only when stripped."* The intent is right and this pass implemented it. 🔴 **But the tempting cheap version of it — flag any grant one byte short of the canonical licence text — produces false positives that are indistinguishable from the real defect.** Measured on repositories this base already cites:
+
+| Bytes | `sha256₁₂` | Final byte | Seen at |
+|---|---|---|---|
+| **11,358** | `cfc7749b96f6` | `\n` | `openedx/XBlock@master/LICENSE.TXT` (`p905`'s control), `mathjax` vendored in `course-tencent-cloud` |
+| **11,357** | `c71d239df917` | `\n` | `anchore/syft`, `nexB/scancode-toolkit`, `PGshen/thinking-map` (as corrected here) |
+| **11,356** | `c5accbbd8546` | 🔴 **`.`** | `spdx/tools-python` — **the grant genuinely ends without a newline** |
+| **11,362** | `a89039268428` | `\n` | `pacewisdomhq/TutorLoom` |
+
+🔴 **`spdx/tools-python` at 11,356 B is exactly one byte below the 11,357 form, and it is *correct*.** `p940` published it as `Apache-2.0, 11,356 B, c5accbbd8546` and was right to. A gate comparing against a canonical constant flags it as stripped; a gate comparing against **its own served bytes** passes it. 🔵 **This is the operative design rule and it is why this pass's instrument compared per repository and never against a canonical hash.** `−1 B` is a *hypothesis generator*, never a verdict — the same discipline `940-F4` applied to its own three discarded arms, now applied to the gate `p940` proposed to replace them.
+
+### `941-F4` 🔴 The grant is not at `main/LICENSE`, and the base's own probe ladder is the reason 60 rows looked unreachable
+
+This pass's first arm probed a `main`-first ladder and returned **60 `NO-GRANT-REACHED`** — on repositories including `jitsi/jitsi-meet`, `hankcs/HanLP`, `CAHLR/pyBKT` and `PrairieLearn/PrairieLearn`, which unquestionably carry grants. 🟢 **The instrument was wrong, it was caught before anything was written, and resolving the default branch first cleared 59 of the 60.** Where the grants actually live:
+
+| Default branch | Count | Notable |
+|---|---|---|
+| `master` | **50** | the plurality — a `main`-only probe misses every one |
+| `trunk` | 2 | `Automattic/sensei`, `gocodebox/lifterlms` (WordPress estate) |
+| `develop` / `dev` | 3 | |
+| `v2` | 2 | `xiaochong0302/course-tencent-cloud` |
+| 🔴 **`15.0`** | 1 | `claroline/Claroline` — the grant is on a **version branch** |
+| `ExamIntellect` | 1 | a branch named after the project |
+
+🔴 **Two further shapes, both of which defeat a filename ladder:**
+- **`OS4ED/openSIS-Classic` carries no root grant at all.** Its own licence is at **`master/docs/License.txt`** (17,286 B, `224ac3d403e3`) — which this base **already byte-read in `p897` and already publishes with that exact path**. 🟢 **The row is correct; this pass's ladder missed it on filename case** (`docs/LICENSE` ≠ `docs/License.txt`). Its tree holds **20+ vendored dependency grants** and no root file, so a scanner taking the first `LICENSE` it finds reports a dependency's licence as the project's — the `P498` noise problem, with a named specimen.
+- **`polm/unidic-lite` publishes two grants deliberately, and both are right.** `LICENSE` (1,051 B) is MIT and covers *packaging code only*; **`LICENSE.unidic` (1,515 B, `d2cfdec25d7a`) is BSD © The UniDic Consortium and governs the data you actually install.** This pass's ladder found only the first and reported a mismatch. 🟢 **The shelf is right and the instrument was wrong** — `T25`'s dual-grant work, validated by an attempt to contradict it.
+
+### `941-F5` 🔴 The "DNS wall" is not DNS. It is an egress allowlist, and five passes have mis-stated it
+
+`p930` named the instrument constraint and `p937`–`p940` carried it forward as **`ENOTFOUND`** / *"confirmed DNS-DEAD from this env"*, over five named hosts. 🔴 **The diagnosis is wrong, and this pass proves it with controls the earlier passes did not run.**
+
+| Host | Result | Is the host plausibly dead? |
+|---|---|---|
+| `rm.coe.int`, `www.coe.int` | `CONNECT tunnel failed, response 403` | — |
+| `eur-lex.europa.eu`, `iesalc.unesco.org`, `ai.dda.gov.vn` | `403` | — |
+| 🔵 **`example.com`** | 🔴 **`403`** | 🟢 **No. It is the canonical always-up host on the internet** |
+| 🔵 **`www.google.com`**, **`en.wikipedia.org`** | 🔴 **`403`** | 🟢 **No** |
+| `api.github.com`, `raw.githubusercontent.com`, `pypi.org`, `registry.npmjs.org` | `200` | allowlisted |
+
+🔴 **`example.com` and `google.com` are not DNS-dead, so the failure says nothing whatever about the hosts.** The mechanism is the session's agent proxy refusing the `CONNECT` tunnel for any host outside a small allowlist; because `CLAUDE_CODE_PROXY_RESOLVES_HOSTS=true` hands name resolution to that proxy, every refused host *also* presents locally as a name that will not resolve — which is why `getent hosts rm.coe.int` returns nothing while `api.github.com` resolves. 🔵 **`WebFetch` shares the same allowlist** and its own error text states the ambiguity outright: *"outside the session's allowed network domains, **or does not exist**"*.
+
+🟢 **Why this correction is worth a finding rather than a footnote.** Every figure in `intel/market.md` is marked snippet-sourced *because* of this wall, and that marking stays exactly as it is. What changes is what the base may claim about the hosts: **"`ai.dda.gov.vn` is DNS-dead" is not a measurement of Vietnam's portal**, and `p939` was right to treat the portal's existence as snippet-sourced rather than reading its own unreachability as evidence either way. 🔵 `p940`'s remedy sentence survives intact and is now correctly grounded: *"the remedy is one line of configuration, not more searching"* — **allow `coe.int` in the session's network policy.** 🔴 **`Action C` is therefore BLOCKED, not failed**, and the `31 December 2026 vs 2027` conflict on the `EDU-IA` legal instrument remains open with no date quoted.
+
+### `941-F6` 🟢 `939-R3` CLOSED — Edonis resolved for the first time, and the leg that named it was licence-true but materially misleading
+
+`p939` left a standing open item: the vertical leg named **OpenOlat** *and* **Edonis** as Apache-2.0 LMSs, *"NEITHER byte-read nor slug-resolved"*, with the note that either would be *"the FIRST permissive anchor in months."* Both are now resolved, in opposite directions.
+
+| | `OpenOLAT/OpenOLAT` | `argile-agency/edonis` |
+|---|---|---|
+| Slug resolution | 🟢 `OpenOLAT/OpenOLAT` (also answers at `openolat/openolat`, `OpenOlat/OpenOlat`) | 🟢 **first resolution** — `argile-agency/edonis` |
+| Grant (byte-read) | `master/LICENSE` **10,982 B**, `6dbc5b605ed0` | `main/LICENSE` **11,343 B**, `04cefdeaa71a` |
+| Licence | 🟢 **Apache-2.0** — all nine operative sections verbatim, **0** restriction keywords | 🟢 **Apache-2.0**, genuine |
+| API SPDX | 🔴 `NOASSERTION` | 🟢 `Apache-2.0` |
+| Weight | 🟢 **451 ★, 165 forks, 686 MB, Java, pushed 2026-11-23 (today)** | 🔴 **1 ★, 0 forks, 4 MB**, pushed 2026-11-17 |
+| What it is | Swiss university LMS, `NOTICE.TXT` 14,412 B `050762f27bb3` also states Apache-2.0, 0 restrictions | An **AdonisJS** hobby LMS — the name is a pun on the framework |
+
+🔵 **The finding is not the licences — both claims were true. It is the equivalence.** A single search snippet placed a 451-★, 686 MB LMS in production at universities beside a 1-★, 4 MB personal project, as two interchangeable "Apache-2.0 LMS" options. 🔴 **A studio that picked the second off that list would be building on a weekend project.** Star count is the cheapest available discriminator and the leg carried none.
+
+🟢 **OpenOLAT is NOT a new find, and this pass does not claim it as one.** `905-F5` byte-read it 18 days ago and named the `NOASSERTION` mechanism. **This pass reproduces `p905` exactly** — 10,982 B, `6dbc5b605ed0`, nine sections verbatim, `END OF TERMS AND CONDITIONS` absent, APPENDIX replaced by two *"Additional license statement"* provenance paragraphs. 🔵 **An 18-day-old fixture reproducing to the byte is the strongest single result in this pass**, and it is the counter-example to `941-F1`: the fixtures that were byte-read properly have held perfectly.
+
+### `941-F7` 🟡 The vertical leg produced two more licence-flattening errors, and the shelf was already right about both
+
+| Platform | Aggregators said | Shelf says | Adjudication |
+|---|---|---|---|
+| **Sakai** | *"Permissive educational license (based on Apache 2.0)"*, and one page flatly *"Apache 2.0 license"* | 🟢 **`ECL-2.0`** — *"Apache-2.0 with an education-oriented patent clause"* (`repos/foundations.md:97`, `verticals/solutions.md:62`) | 🟢 **Shelf correct.** ECL-2.0 is a distinct OSI licence, not Apache-2.0 |
+| **Chamilo** | one source `GPL-3.0`, another *"Chamilo LMS Actively maintained Apache-2.0"* | 🟢 **`GPL-3.0`** | 🟢 **Shelf correct** |
+
+🔵 **Third sighting of the class `p939` named** — after OpenOlat/Edonis and the Open edX *"founded by Harvard and MIT"* → *"under Apache 2.0"* splice. **Near-permissive licences get rounded to "Apache 2.0" by aggregators, and the rounding always travels toward the more permissive claim.** That direction is the commercially dangerous one, and it is why `P58`'s intake gate resolves the grant and not the summary.
+
+### `941-F8` 🔴 Two defects the gate found in this base that no hash could have caught, plus the control failure that found them
+
+🔴 **A 12-hex prefix in this corpus means two different things, and nothing in its shape distinguishes them.** This pass's first arm paired `digitalcredentials/learner-credential-wallet` with `1c46a82ba384` and reported an unreproducible fixture. **`1c46a82ba384` is the repository's git `HEAD` commit** (`1c46a82ba38447f164998903e88944b67fc2a2e6`), recorded as such in nine evidence files — not a grant digest at all. 🔵 **Any gate built on "12-hex token near a slug" inherits this**, and `p940`'s Action B as worded would have.
+
+🟢 **Chasing that false positive found a real defect underneath it.** The row published the grant as **`1,091 B`** with no hash. The file serves **1,092 B**, and `evidence/promotion-backlog-grants.2026-10-25-p435.tsv` recorded `1092 / 1032f65dd2f6` correctly at the time. **`1,091 B` is the stripped length** — the same defective instrument, in a cell with no digest to betray it. 🔴 **Corrected to 1,092 B.** The lesson is uncomfortable and worth stating: **a cell that publishes bytes without a hash is not safer, it is merely unfalsifiable** — this one carried the defect for ~29 days and only a byte comparison could see it.
+
+🟡 **Second defect, same family, different cause.** `xiaochong0302/course-tencent-cloud` was published **twice with two different pairs**, and exactly one was wrong:
+
+| File | Published | Branch read | Verdict |
+|---|---|---|---|
+| `verticals/solutions.md` | `18,430 B / b0f38548973d` | `master` | 🔴 **stripped** → corrected to `v2/LICENSE`, `18,092 B / 8177f9751321` |
+| `intel/trends.md` | `18,092 B / 8177f9751321` | `v2` (the default) | 🟢 **correct, as served** |
+
+🔵 **`master` and `v2` carry the same GPL-2.0 text with different line endings** — 18,431 B vs 18,092 B, a delta of **339 bytes = 339 CRLF line terminators**. Both are GPL-2.0, so no licence consequence; the row now cites the default branch and the two files agree.
+
+### `941-F9` 🔴 Supply: the forty-eighth consecutive nil, and the first dead address in this base in months
+
+All four mandated global legs and all four regional legs ran, year computed as **2026**. Recorded in `evidence/websearch-legs.2026-11-23-p941.tsv`.
+
+| Candidate surfaced | Mentions already held | Verdict |
+|---|---|---|
+| `HKUDS/DeepTutor` | 562 | Held |
+| `GarethManning/education-agent-skills` | 164 | Held |
+| `sakaiproject/sakai` | 139 | Held |
+| `browser-use`, `chamilo/chamilo-lms` | 108 / 89 | Held |
+| `TapXWorld/ChinaTextbook`, `microsoft/autogen` | 49 / 49 | Held |
+| `crewAIInc/crewAI`, `All-Hands-AI/OpenHands` | 22 / 17 | Held |
+| 🟢 `argile-agency/edonis` | **0** | 🟡 **New address — but 1 ★, and it closes `939-R3` rather than adding supply** |
+
+🔴 **`Just253/autonoma-cli` is DEAD, and it was filed six days ago.** `agents/top.md` carried it as `🆕 filed`, MIT, 1,064 B, 1 ★, pushed 2026-11-17. All three channels now refuse it: `git ls-remote` auth-prompts on **three** consecutive attempts, `raw` README `404`, and it is absent from `search/repositories`. 🔵 **It is not a rename** — `ls-remote` follows rename redirects, as `p930` established on the wallet chain, and this address does not resolve at all. So the repository was **deleted or made private within six days of being filed.** A same-named `SergioTijero/autonoma-cli` exists (0 ★, pushed 2026-08-01, *earlier* than Just253's last push) and is **not** claimed as a successor. 🟢 **Row marked DEAD rather than deleted**, so the lifecycle stays legible. 🔵 **The general point, against this base's own habit of filing 1-★ finds:** `683 of 684` addresses in the six live files are live, and the single death is the newest, smallest row on the shelf.
+
+### `941-F10` 🟢 Structural audit
+
+| Check | Result |
+|---|---|
+| Frontmatter, 8 files | 🟢 **8/8** — `industry: education`, closed-vocab `region`, `updated: 2026-11-23` |
+| `region` values | 🟢 all `Global` — within the five-value vocabulary |
+| Header-shaped table lines | 🟢 **5,532 of 5,532** proven followed by a separator row |
+| Placeholder/example rows live as data | 🟢 **0** |
+| Address liveness, 6 live files | 🟡 **683 of 684** live by `git ls-remote`; 1 dead (`941-F9`) |
+| Published licence fixtures | 🟢 **275 of 275** adjudicated; 248 reproduced, 26 corrected, 1 control artefact |
+| `intel/market.md` regional structure | 🟢 single `## Opportunities by region`, five `###` subsections, no LATAM-only section |
+
+### 🔵 Pre-registered for the next pass
+
+| # | Action | Prediction written **before** running it |
+|---|---|---|
+| **A** | Run the `941-F1` sweep over the **two append-only trending files** (1,987 adjudicable lines, ~1,504 slugs) with the per-repo comparison, and report **without rewriting history** | ⚠️ Expect a **higher** stripped rate than the live files' 9.5%, because `p881` and `p925` wrote into trending at the time they ran and no later pass has corrected those sections. If the rate is *lower*, the defective instrument was used preferentially for shelf rows over narrative rows, which would newly localise it |
+| **B** | Byte-read the grants of the **8 repos whose default branch is not `main`/`master`** and the **2 whose grant is outside the root**, and add branch+path to the published cell for each | ⚠️ Expect at least one more version-branch grant like `claroline/Claroline@15.0`; a grant pinned to a version branch can **disappear when that branch is retired**, which no liveness probe of the repo would detect |
+| **C** | Re-run `941-F5`'s control set (`example.com`, `google.com`) alongside `coe.int` at the start of any pass that needs a primary source | 🟢 Expect `403` on all of them until the network policy changes. **Stop recording these as `ENOTFOUND` or `DNS-DEAD`**; the honest field is `EGRESS-REFUSED-BY-POLICY`, which says nothing about the host |
+
+
 ## `2026-11-23` (p940) — **Fourteen published licence fixtures carried a hash that cannot be reproduced from the file as served. The cause is one line of shell: the grant was stripped of its trailing newline before it was counted and hashed. No licence verdict moves; every one of those fixtures failed the only job a fixture has.**
 
 🔵 **Rotation was consistent this pass** — `rotation.json` read `next: 8` with `last_industry: technology` at `2026-11-23`, and this base's remote last carried `p939` at `2026-11-21`. No push-but-don't-advance anomaly, so the `p936` pattern did not recur for a fourth time. The first action of every pass stands and was run: compare rotation intent against the target remote's last commit date before writing anything.

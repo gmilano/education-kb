@@ -1,0 +1,7 @@
+bytes	sha256_12	final_byte	representative_slug	path	note
+11358	cfc7749b96f6	\n	openedx/XBlock	master/LICENSE.TXT	p905 and 560-C control
+11358	cfc7749b96f6	\n	xiaochong0302/course-tencent-cloud	v2/public/static/lib/vditor/dist/js/mathjax/LICENSE	vendored copy, same form
+11357	c71d239df917	\n	anchore/syft	main/LICENSE	most common form on this shelf
+11357	c71d239df917	\n	nexB/scancode-toolkit	master/apache-2.0.LICENSE	non-root grant path
+11356	c5accbbd8546	.	spdx/tools-python	main/LICENSE	NO TRAILING NEWLINE IN FILE - correct as published by p940; would be FALSELY flagged as stripped by a canonical-constant gate
+11362	a89039268428	\n	pacewisdomhq/TutorLoom	main/LICENSE	longer variant

@@ -2245,10 +2245,10 @@ restriction that does not exist.** Run `G1` before this pattern, not after — s
 
 | Layer | Component | Licence posture |
 |---|---|---|
-| **Item bank + exam delivery** | https://github.com/yf-team/yf-exam-lite (**MIT**, 173 ★, byte-read `main/LICENSE` 1,074 B `sha256₁₂ b4cf55353a49`) — bank and item management, bulk import/export, automatic paper composition, wrong-answer drilling, enrolment, scoring | ✅ MIT. **Deliberately not an AI project**, which is why it is the spine: take the schema and exam delivery, add generation. 🟡 Idle since 2025-05-07 — **fork and own it**; treat it as a data model, not a live dependency. |
-| **Offline/local item authoring** | https://github.com/BBkjdayup/BCTK (**MIT**, 58 ★, byte-read 1,065 B `sha256₁₂ 7208c5cd9088`) — Windows desktop bank + paper composer, local-by-default storage, maths formulae, Word/Excel import-export, duplicate-question detection | ✅ MIT. The **local-first** tier: no student data leaves the machine, so no data-processing argument is needed. |
+| **Item bank + exam delivery** | https://github.com/yf-team/yf-exam-lite (**MIT**, 173 ★, byte-read `main/LICENSE` 1,075 B `sha256₁₂ ecb2a17e710b`) — bank and item management, bulk import/export, automatic paper composition, wrong-answer drilling, enrolment, scoring | ✅ MIT. **Deliberately not an AI project**, which is why it is the spine: take the schema and exam delivery, add generation. 🟡 Idle since 2025-05-07 — **fork and own it**; treat it as a data model, not a live dependency. |
+| **Offline/local item authoring** | https://github.com/BBkjdayup/BCTK (**MIT**, 58 ★, byte-read 1,066 B `sha256₁₂ 3e7c7c1a9f39`) — Windows desktop bank + paper composer, local-by-default storage, maths formulae, Word/Excel import-export, duplicate-question detection | ✅ MIT. The **local-first** tier: no student data leaves the machine, so no data-processing argument is needed. |
 | **Marking engine (prose + handwriting)** | https://github.com/yinuoguan/nengdou-ai-review-helper-web (**Apache-2.0 on byte read**, 193 ★) — multi-subject marking with written feedback; and https://github.com/QwenStorm/xl-frontend (**MIT**, 50 ★) for **essay marking + OCR** of handwritten work | ✅ Apache-2.0 (patent grant) + MIT. 🔴 **Record the byte read in the SBOM**, or the client's own scanner will flag `nengdou` as Mulan. 🟡 `xl-frontend` was created and last pushed the same day — read the pipeline, do not depend on the repo. |
-| **Error → targeted practice loop** | https://github.com/shellery1988/k12-smart-teacher (**MIT**, 16 ★, byte-read 1,073 B `sha256₁₂ 4c5f6e74a09b`) — wrong-answer analysis and generation of fresh analogous items from the specific error made (举一反三) | ✅ MIT. **The pedagogically load-bearing step** and the one every other grading row in this KB stops short of. Small — reimplement the loop, vendor nothing. |
+| **Error → targeted practice loop** | https://github.com/shellery1988/k12-smart-teacher (**MIT**, 16 ★, byte-read 1,074 B `sha256₁₂ 327facc37a63`) — wrong-answer analysis and generation of fresh analogous items from the specific error made (举一反三) | ✅ MIT. **The pedagogically load-bearing step** and the one every other grading row in this KB stops short of. Small — reimplement the loop, vendor nothing. |
 | **Reliability signal** | The dual-agent parallel-review control read from https://github.com/ai-lingnan/econai-agent-platform (**AGPL-3.0**, 41 ★) | 🔴 **AGPL — read, do not link.** Reimplement: two independent marking passes over one submission, disagreement above threshold routes to a human. **Design, not dependency.** |
 | **Item-bank-as-a-skill (optional)** | https://github.com/weishao2/tizhuang-agent-skills (**MIT**, 42 ★) — question sampling and knowledge-point retrieval exposed as an agent skill | ✅ MIT **on the skill**. 🔴 The bank itself is a **hosted third-party service**: the MIT grant does not cover availability, terms or the claimed 20M items. Contract for it separately or do not depend on it. |
 | **Reasoning trace (optional)** | https://github.com/PGshen/thinking-map (**Apache-2.0**, 187 ★) | ✅ Apache-2.0, patent grant. Externalises the marking rationale as a navigable graph — the appealability surface a parent or regulator asks for. |
@@ -3757,7 +3757,7 @@ and a deployment per client.
 
 | Layer | Component | Licence | Role |
 |---|---|---|---|
-| **Platform core** | https://github.com/pacewisdomhq/TutorLoom | Apache-2.0 (11,361 B, `a7f87303f2e9`) | 🟢 **Self-hosted multi-tenant LMS** — Django 6 + DRF + React; course builder, trainer and student portals, progress tracking. The **first permissive multi-tenant LMS on this base** |
+| **Platform core** | https://github.com/pacewisdomhq/TutorLoom | Apache-2.0 (11,362 B, `a89039268428`) | 🟢 **Self-hosted multi-tenant LMS** — Django 6 + DRF + React; course builder, trainer and student portals, progress tracking. The **first permissive multi-tenant LMS on this base** |
 | Tenancy + billing reference | https://github.com/3yangyang9/DeepTutor-AILearning | Apache-2.0 (11,408 B, `cd2f54e1e506`) | 🟢 Read this for the **four-level tenancy model** (platform → institution → campus → class) and the **billing-policy layer**. APAC-origin, and the only permissive artefact here that treats *who pays* as a first-class concern |
 | Competency graph | https://github.com/iblai/lms | MIT | Competencies, not courses, as the primary object — the model a corporate-academy tenant actually wants |
 | Per-tenant microsites | https://github.com/haxtheweb/haxcms-php | Apache-2.0 | 🟢 **No database.** Generate a site per cohort and discard it; carries an **OpenSSF Scorecard** badge, which is the only supply-chain posture on this shelf |
@@ -4525,3 +4525,72 @@ that reopens it.
 that the bytes you read are the bytes upstream serves; it says nothing about whether the grant
 permits the client's use. That judgement is `G1`'s, it is a lawyer's, and `T19`'s both-ways
 metadata errors are the reason the two must stay separate deliverables.
+
+## P499 — The licence fixture gate that actually holds: resolve the branch, then compare against the repo's own bytes — added `p941`
+
+🔵 **What this replaces.** `P498` (`p940`) ships a reproducible licence *inventory*. This pattern is the **gate** that keeps the inventory honest over time, and it exists because `p940`'s pre-registered version of it would have failed in two specific ways that `p941` measured. Both failure modes are cheap to avoid and expensive to discover in front of a client.
+
+### The two traps, stated before the recipe
+
+🔴 **Trap 1 — do not compare against a canonical licence hash.** Canonical Apache-2.0 circulates in at least four byte-forms among repositories this base cites: `11,358 / cfc7749b96f6`, `11,357 / c71d239df917`, `11,356 / c5accbbd8546` (**ends `.` — no trailing newline**) and `11,362 / a89039268428`. `spdx/tools-python`'s grant is one byte shorter than the common form **and is correct**. A gate that flags `−1 B` against a constant reports it as tampered.
+
+🔴 **Trap 2 — do not key on "a 12-hex token near a slug."** This corpus uses 12-hex prefixes for **both** a grant's `sha256₁₂` **and** a repository's git `HEAD` commit, and nothing in the shape distinguishes them. `digitalcredentials/learner-credential-wallet`'s `1c46a82ba384` is a commit, recorded as such in nine evidence files; a naive gate reports an unreproducible licence.
+
+🟢 **The rule both traps reduce to: a published fixture is adjudicated against *that repository's own served bytes*, and against nothing else.**
+
+### The recipe
+
+```bash
+#!/usr/bin/env bash
+# p941 fixture gate. Input: slug + published (bytes, sha256_12). Output: one verdict.
+set -uo pipefail
+slug="$1"; pub_bytes="$2"; pub_sha="$3"
+
+# 1. Resolve the DEFAULT BRANCH first. `master` is the plurality (50 of 61 measured),
+#    and `trunk`, `develop`, `dev`, `v2` and version branches like `15.0` are all real.
+br=$(git ls-remote --symref "https://github.com/$slug" HEAD 2>/dev/null \
+     | sed -n 's|^ref: refs/heads/\([^[:space:]]*\).*|\1|p')
+[ -z "$br" ] && { echo "$slug REPO-UNRESOLVABLE"; exit 0; }
+
+# 2. Ladder filenames AND out-of-root paths. Case matters: openSIS-Classic's own grant
+#    is docs/License.txt, not docs/LICENSE. unidic-lite has TWO grants (LICENSE, LICENSE.unidic).
+for f in LICENSE LICENSE.md LICENSE.txt LICENCE COPYING COPYING.LESSER NOTICE \
+         LICENSE-MIT LICENSE-APACHE apache-2.0.LICENSE LICENSE.unidic \
+         docs/License.txt docs/LICENSE docs/LICENSE.txt; do
+  body=$(curl -fsS --max-time 25 "https://raw.githubusercontent.com/$slug/$br/$f") || continue
+
+  # 3. Hash the payload AS SERVED. Never via $(...) — command substitution strips
+  #    EVERY trailing newline and is the exact defect that produced 40 bad fixtures.
+  srv_b=$(printf '%s' "$body" | wc -c)          # informational only
+  read -r srv_sha _ < <(curl -fsS "https://raw.githubusercontent.com/$slug/$br/$f" \
+                        | tee /tmp/g.$$ | sha256sum)
+  srv_b=$(wc -c < /tmp/g.$$); srv_sha=${srv_sha:0:12}
+  strip_sha=$(printf '%s' "$(cat /tmp/g.$$)" | sha256sum | cut -c1-12)
+  rm -f /tmp/g.$$
+
+  if [ "$srv_sha" = "$pub_sha" ] && [ "$srv_b" = "$pub_bytes" ]; then
+    echo "$slug AS-SERVED-OK $br/$f"; exit 0
+  elif [ "$strip_sha" = "$pub_sha" ]; then
+    echo "$slug STRIPPED-LF $br/$f published=$pub_bytes/$pub_sha served=$srv_b/$srv_sha"; exit 1
+  fi
+done
+echo "$slug NO-GRANT-MATCHED branch=$br"; exit 1
+```
+
+🔵 **Line 3 is the whole pattern.** `$(cat f)` and `$(curl …)` both strip every trailing newline, so a fixture computed through command substitution can never match the file a client fetches. Pipe the bytes; do not interpolate them.
+
+### Dependencies, with grants verified this pass
+
+| Component | Address | Grant | Role |
+|---|---|---|---|
+| `git` | — | GPL-2.0 | `ls-remote --symref` is the only reliable default-branch resolver here |
+| `curl`, `sha256sum` (coreutils) | — | MIT / GPL-3.0 | fetch + digest |
+| `anchore/syft` | https://github.com/anchore/syft | 🟢 **Apache-2.0**, 11,357 B `c71d239df917` | SBOM generation for the wider inventory (`P498`) |
+| `nexB/scancode-toolkit` | https://github.com/nexB/scancode-toolkit | 🟢 **Apache-2.0**, 11,357 B `c71d239df917`, at `master/apache-2.0.LICENSE` | per-file licence detection; note the **non-root grant path** |
+| `spdx/license-list-data` | https://github.com/spdx/license-list-data | 🔴 **no readable grant at any conventional path** (`p940`) | take canonical texts from `spdx.org/licenses/`, and **do not** represent this mirror to a client as a licensed dependency |
+
+### Where to run it, and what it is worth
+
+🟢 **Run it as a pre-commit gate on any shelf that publishes licence fixtures**, and on the dependency manifest of a client deliverable. 🔵 **Report format matters as much as the check:** emit `AS-SERVED-OK` / `STRIPPED-LF` / `NO-GRANT-MATCHED` / `REPO-UNRESOLVABLE` per row and **exempt append-only narrative files from failing the build while still reporting on them** — `p940` predicted correctly that a gate without that exemption never goes green.
+
+🔴 **The client-facing argument for charging for this.** Of 275 published fixtures on this shelf, **248 reproduced, 26 did not, and 1 was the gate's own false positive** — a 9.5% defect rate in a corpus maintained by an instrument that was *trying* to be rigorous, with **zero** licence verdicts actually wrong. That is the honest sales line: the gate does not find mislicensed dependencies, it finds **unverifiable claims about correctly licensed ones** — and an inventory a client cannot re-derive is an inventory that will not survive their legal review.

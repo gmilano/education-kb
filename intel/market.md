@@ -986,6 +986,24 @@ framework of March 2026, EO 14277. 🔵 **North American AI-in-education policy 
 regulatory surface in this KB**, so a client conversation here starts from specifics rather than
 from discovery.
 
+
+#### Added `p941` — the federal frame arrived, and the state volume is now the deliverable
+
+🟡 All figures below are **search-snippet tier** per `T82`; no primary source is reachable from this environment.
+
+| Element | Detail | Confidence |
+|---|---|---|
+| **White House AI policy framework** | released **March 2026**; the Education Commission of the States reads federal executive orders from **2025 → early 2026** as having produced a *national framework* for AI in education | 🟡 `ATTRIBUTED-UNVERIFIED` |
+| **State bill volume** | the PIE Network tracked **~100 state bills this year** capable of directly affecting students' AI use in K-12 | 🟡 single source |
+| **Virginia `S.B. 394`** | directs guidance that **includes teacher training** — a second named state instrument beside Illinois' `PA 104-0399` / `PA 104-0565` already held | 🟡 `ATTRIBUTED-UNVERIFIED` |
+| **Ohio** | district compliance ahead of a **July 2026** mandate; **Columbus City Schools** adopted a formal AI policy in advance of it | 🟡 single source |
+| **NYC DOE** | preliminary AI guidance issued | 🟡 single source |
+| Adoption | **86%** of NA educational organisations have adopted genAI (Technavio); institution-wide implementation *"surging to 66%"* | 🟡 vendor report |
+| US sizing | **USD 3,280M (2025) → USD 15,250M (2031)** (Ken Research) | 🟡 vendor report — **not** averaged into the global cluster |
+
+🟢 **The opportunity, and it sharpened this pass.** `p940` established that Illinois' guidance runs **409 pages** and is itself too large for a district to operationalise unaided. The federal framework plus **~100 state bills** plus district-level policies (Columbus, NYC) means the `P3` 50-state configurable work now has **three** layers to reconcile rather than one, and the reconciliation — not the policy writing — is the billable artefact.
+
+🔴 **The wedge is enforcement, not strategy.** Federal settlements over the **Illuminate Education** and **PowerSchool** breaches, alongside ongoing state privacy investigations, point at **2026 enforcement** against edtech data handling. A district buying AI tooling now inherits vendor data risk, so a **vendor data-flow and retention audit** is a concrete first engagement that does not require any policy question to be settled first. 🔵 Vendors named across these reports — **Microsoft, Google, AWS, IBM, Pearson, Instructure, Anthology, Coursera** — are the incumbents such an audit would be scoping against.
 ### EMEA
 
 #### 🔵 `p940` (2026-11-23) — EMEA: the Council of Europe's education instrument is in draft, and its deadline is disputed
@@ -2332,6 +2350,24 @@ and `Mohamed-El-Sharqawy/agent-tutor` (Egypt, 9 ★) are this pass's two EMEA ro
 holds: **bring the tutor, adopt the institutional spine** — and the spine now includes a
 self-hostable campus bridge.
 
+
+#### Added `p941` — Greece names the *roles*, and the first dated outcome-scepticism from a vendor's own study
+
+🟡 Search-snippet tier per `T82`; `coe.int`, `rm.coe.int` and `eur-lex.europa.eu` are **`EGRESS-REFUSED-BY-POLICY`** from this environment, so nothing here is primary.
+
+| Element | Detail | Confidence |
+|---|---|---|
+| 🟢 **Greece — national framework, May 2026** | establishes requirements for **teacher oversight, data protection, assessments, and AI coordinators** in participating secondary schools | 🟡 `ATTRIBUTED-UNVERIFIED` |
+| 🔴 **OpenAI / ThinkYoung, 2026-11-10** | **5,000 secondary students, ages 13–19, across 10 European countries.** Finds a **guidance gap**, and states that classroom adoption and reported time savings **do not establish better educational outcomes** | 🟡 named methodology, vendor-published |
+| **EU AI Omnibus** | **May 2026** simplification of the AI Act, landing alongside the Greek OpenAI partnership | 🟡 single analysis |
+| **Eurydice digital-education report** | **September 2026** — access to advanced AI at school level *"remains uneven"* | 🟡 single source |
+| **Council of Europe** | advanced AI/EdTech governance work at **BETT UK 2026** following the `EDU-IA` launch; 46 member states | 🟡 `ATTRIBUTED-UNVERIFIED` |
+| **Vendor-state partnerships** | OpenAI working with education systems in **Estonia, Slovakia, Greece, Italy** | 🟡 single source |
+| 🔴 `EDU-IA` draft legal instrument date | **STILL DISPUTED** (`940-F7`): 31 Dec 2026 vs 2027 | 🔴 **do not quote a date** |
+
+🟢 **Greece is the sellable item, because it names a role rather than a principle.** *"AI coordinators in participating secondary schools"* is a **staffing and training specification** — it implies role definition, a competency profile, induction material and an escalation path to teacher oversight. That is deliverable work on the `T78`/`T83` enumeration test, and it is the first EMEA instrument in this base to pass it. By contrast the `EDU-IA` instrument, with its date in dispute for three consecutive passes, remains advisory work.
+
+🔴 **The OpenAI/ThinkYoung line is the most useful sentence EMEA has produced for a proposal, and it comes from the vendor side.** *Adoption and time savings do not establish better outcomes*, measured over 5,000 students in 10 countries. 🔵 **Quote it as the reason an engagement needs an evaluation design, not as a reason to delay deployment** — it converts the `940-F7` Reference Framework and the *Education Week* "billions spent, no idea what's worth buying" void into the same ask: **measurement**. A client who accepts that sentence has accepted the need for a baseline and a control, which is scope.
 ### APAC
 
 #### 🔵 `p940` (2026-11-23) — APAC: a measured nil on supply, and share figures that remain vendor-tier
@@ -3631,6 +3667,31 @@ existing law. 🔵 **Vietnam is the only jurisdiction in this base that has made
 curriculum mandate and a high-risk classification** — the clearest single-country case for an
 engagement that must satisfy a regulator and a curriculum at once.
 
+
+#### Added `p941` — mandates enumerated in hours and grades, while private capital contracts
+
+🔵 Full treatment in `intel/trends.md` **`T83`**. 🟡 Search-snippet tier per `T82`.
+
+| Jurisdiction | The enumerated duty | Confidence |
+|---|---|---|
+| 🔴 **China** | AI education **compulsory** in some regions — **8 hours annually (Beijing)**, **6 hours (Guangdong)** | 🟡 `ATTRIBUTED-UNVERIFIED` |
+| 🔴 **India** | **AI + Computational Thinking in all schools from Grade 3**, beginning **2026–27** | 🟡 `ATTRIBUTED-UNVERIFIED` |
+| 🟡 **Japan** | MEXT **neutral** — monitors pilots, does not mandate | 🟡 single source |
+| 🟡 **Malaysia** | **not mandated** (April 2026) | 🟡 single source |
+| 🟢 **Vietnam** | high-risk list: education = **3 of 46** systems (assessment, admissions) — `T78` | held |
+
+| Market / governance | Detail |
+|---|---|
+| **Governance locus** | **sector ministries, not a single AI law** (EdTech Hub, ASEAN) — so scope against national instruments, as there is no regional one |
+| **ASEAN readiness** | *AI Ready ASEAN* (ASEAN Foundation): stages *"deeply uneven"*, **gap between countries widening** |
+| 🔴 **Private capital** | PE/VC investment in APAC **education services fell significantly in 2025** YoY; **India took 4 of the 10 largest deals** (S&P Global Market Intelligence) |
+| Convenings | World Bank **Global EdTech Policy Academy on AI**, Seoul, **31 Aug – 4 Sep 2026**; Cambridge English convened **200+** senior leaders incl. Ministries, May 2026 |
+| Public opinion | Ipsos **Education Monitor 2026**, 9 markets — **39%** think AI should be banned in schools, vs **73%** supporting a social-media ban for under-14s |
+| Sizing | **USD 591.6M (2024) → ~USD 1.85B (2029)** (MarketsandMarkets) — 🟡 vendor estimate, **not** averaged into the global cluster |
+
+🟢 **The opportunity is curriculum procurement, and the hours figure is what makes it costable.** Eight hours a year in Beijing, six in Guangdong, and India from Grade 3 in 2026–27 fix **volume, year-level and start date** — enough to scope content production, teacher training and assessment without resolving a single policy ambiguity.
+
+🔴 **Two disciplines, both load-bearing.** First, **do not generalise across the region**: an APAC proposition built on the Chinese or Indian posture is wrong for Japan and Malaysia, two of the five jurisdictions here. Second, **mandates are expanding while private investment contracts** — which points the work at **publicly funded curriculum and teacher-training programmes and at ministry buyers**, not at venture-backed product bets.
 ### LATAM
 
 #### 🔵 `p940` (2026-11-23) — LATAM: a measured nil, and the governance-vacuum mechanism re-confirmed from a fresh source
@@ -4762,6 +4823,27 @@ language (`T29`'s own caution); it is not counted as LATAM supply.
 `MuriloLimadeSouza/Project-ABC` (MIT, early-years teaching), alongside `p927`'s `uemanet/harpia`,
 the nine-year-old academic system of a Brazilian **state** university.
 
+
+#### Added `p941` — the governance vacuum now has a five-dimension map, a 33-country index and a counted initiative base
+
+🟡 Search-snippet tier per `T82`; `iesalc.unesco.org` is **`EGRESS-REFUSED-BY-POLICY`** from this environment.
+
+| Element | Detail | Confidence |
+|---|---|---|
+| 🟢 **UNESCO / UNU working paper, Sept 2026** | maps university AI use on **five dimensions** — teaching & learning, research, community engagement, administration, **governance**; adoption *"neither uniform nor evenly distributed"*; calls for more investment and stronger governance | 🟡 `ATTRIBUTED-UNVERIFIED` |
+| **UNESCO IESALC study** | **200 institutions / 19 countries**; the **adoption-vs-governance gap is particularly pronounced** in the region (held since `p939`, provenance unchanged) | 🟡 snippet-sourced |
+| 🟢 **ILIA 2025** (Latin America AI Index, with CEPAL) | **33 countries**, includes a **regulation subdimension**; LATAM ≈ **15–20% of the global market for AI applications** | 🟡 single source |
+| 🟢 **IDB regional snapshot** | **193 AI initiatives** counted; concludes the region is building *"hybrid, context-sensitive AI systems"* rather than copying models designed elsewhere | 🟡 single source |
+| 🟢 **EdTech Hub + Fundación Ceibal** | partnership announced **Sept 2026** on **AI governance in education** | 🟡 single source |
+| **OEI – ProFuturo** | adoption described as *"very limited with few exceptions"* | 🟡 single source |
+| **Mexico** | calls for regulatory alignment, institutional reform and curriculum redesign | 🟡 single source |
+| 🔴 Student-use figures | a 2026 LATAM survey reports **92% using AI regularly / 67% at least weekly**, alongside *"a lack of formal policies for the use of AI in universities"* | 🔴 **self-selected sampling risk — do NOT quote beside the IESALC 200-institution figures as an equal measurement** |
+
+🟢 **The `p939` mechanism sentence still governs the engagement, and this pass gives it a structure to work from.** Adoption is driven by **individual academics, researchers and students, not institution-wide plans** — so the first engagement is **discovery and consolidation of what is already running**, not a greenfield strategy document. 🔵 **What is new is that UNESCO has now published the axes to consolidate along**: the five dimensions are a ready-made audit frame, and *governance* is one of them rather than an afterthought.
+
+🟢 **Two further concrete openings.** The **IDB's 193 counted initiatives** are a sourcing list — a region where someone has already enumerated what exists is a region where a consolidation engagement can be scoped from public data rather than from a discovery phase the client pays for. And **ILIA's regulation subdimension across 33 countries** is the only regional instrument in this base that scores *regulatory* maturity per country, which is what a multi-country rollout needs in order to sequence.
+
+🔴 **The standing caution is unchanged and now has a second specimen.** `p939` rejected a self-selected 92%/79% pair; this pass's 92%/67% is the same shape from the same channel. **Use IESALC's 200-institution / 19-country framing for any claim a client will act on**, and treat the high percentages as evidence that usage precedes policy — which is the argument for the engagement — not as a measured adoption rate.
 ### Global
 
 #### 🆕 `p928` — the four mandated prose legs are a **nil for the forty-seventh consecutive pass**, and this pass measured the channel that is not nil
@@ -5199,7 +5281,7 @@ coverage.
 - 🔴 **New gate `906-G1` — the SPDX field can be wrong in the *restrictive* direction, and this base
   had only ever recorded the permissive direction.** `yinuoguan/nengdou-ai-review-helper-web`
   (193 ★) is labelled `MulanPSL-2.0` by GitHub and its `LICENSE` is **verbatim Apache-2.0**
-  (11,356 B, `sha256₁₂ 43070e2d4e53`, byte-identical to `PGshen/thinking-map`'s, which is labelled
+  (11,357 B, `sha256₁₂ c71d239df917`, byte-identical to `PGshen/thinking-map`'s, which is labelled
   correctly). Prior cases in `intel/measured-unusable.md` were all fields *silent about a
   prohibition*; this is a field **inventing** one. **A scanner reading the field rejects software the
   byte-read clears.** The gate: for any repository a studio intends to adopt, the SPDX field decides

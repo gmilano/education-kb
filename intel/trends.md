@@ -3215,3 +3215,33 @@ today against an enumerated list, while the Council of Europe offers a **dated s
 pipeline** whose evaluation framework — due inside weeks on the earlier reading — is the artefact
 North American districts are, on this pass's own NA leg, spending billions without
 (`T9`, `940-F9`).
+
+## T82 — An unreachable host is evidence about the network, not about the host (`p941`)
+
+🔴 **This base spent five passes (`p930`, `p937`–`p940`) recording five primary sources as `ENOTFOUND` / *"confirmed DNS-DEAD from this env"*. The diagnosis was wrong.** The mechanism is the session's agent proxy refusing the `CONNECT` tunnel with **`403`** for any host outside a small allowlist. Because `CLAUDE_CODE_PROXY_RESOLVES_HOSTS=true` delegates name resolution to that proxy, a refused host *also* fails to resolve locally — the two failures are indistinguishable from inside.
+
+🟢 **The controls that settle it, and that no earlier pass ran:** `example.com`, `www.google.com` and `en.wikipedia.org` all return **`403`** from this environment. Those hosts are not dead. `api.github.com`, `raw.githubusercontent.com`, `pypi.org` and `registry.npmjs.org` return `200` because they are allowlisted.
+
+🔵 **Why it matters commercially, not just hygienically.** The base's regulatory findings now rest on jurisdictional portals and treaty-body documents. Recording *"`ai.dda.gov.vn` is DNS-dead"* reads as a measurement of **Vietnam's registration portal** — a fact about the world that would, if true, undercut `T78`'s claim that the regime is operational. It is nothing of the kind: it is a fact about this container's egress policy. 🟢 **`p939` was right to treat the portal as snippet-sourced** and did not infer death from unreachability; the wording in the instrument notes is what was wrong.
+
+🔴 **The standing rule, which replaces the DNS framing.** The honest status for a refused host is **`EGRESS-REFUSED-BY-POLICY`**, and it licenses exactly one inference: *this pass could not adjudicate from the primary source.* It licenses **no** inference about the document, the portal or the institution. Every `🟡` snippet-sourced marker in `intel/market.md` stands unchanged and for the same reason as before; what changes is that the base no longer claims the hosts are dead.
+
+🟢 **And the remedy is unchanged and cheap:** allow `coe.int` (and the four other hosts) in the session's network policy. **`WebFetch` shares the same allowlist**, so there is no second channel to try — which also means a pass should stop after the first two refusals rather than spending budget proving the wall again.
+
+## T83 — APAC is where education-AI duty is *enumerated in hours and grades*, and that makes it the region where scope is cheapest to fix (`p941`)
+
+🔵 **`T78` established that education-AI regulation is operational in exactly one jurisdiction (Vietnam) and that EMEA's equivalent date is in dispute. This pass extends the pattern: APAC's instruments are specified in countable units, while EMEA's and LATAM's are specified in frameworks.**
+
+| Jurisdiction | Instrument | The countable part |
+|---|---|---|
+| 🔴 **China** | AI education **compulsory** in some regions | **8 hours annually in Beijing**, **6 hours in Guangdong** |
+| 🔴 **India** | AI + Computational Thinking into **all** schools | from **Grade 3**, beginning the **2026–27 academic year** |
+| 🟡 **Japan** | MEXT posture | **neutral** — monitors pilots, does **not** mandate |
+| 🟡 **Malaysia** | — | **not mandated** (April 2026) |
+| 🟢 **Vietnam** (`T78`) | Decision 33/2026/QD-TTg high-risk list | **3** of 46 listed systems are education: assessment + admissions only |
+
+🟢 **Why an hours figure is a commercial fact and not trivia.** *"AI literacy is now compulsory"* is a strategy conversation. ***"Eight hours per year in Beijing, six in Guangdong, from Grade 3 in India in 2026–27"*** is a **curriculum procurement specification**: it fixes volume, year-level and start date, which is everything needed to scope content production and teacher training. 🔵 It is the same property that makes Vietnam's list sellable in `T78` — **enumeration, not severity** — and it is now observed across four APAC jurisdictions rather than one.
+
+🔴 **The region is emphatically not uniform, and the divergence is the second half of the finding.** Japan is deliberately neutral and Malaysia has no mandate, so an "APAC education AI" proposition that assumes the Chinese or Indian posture is wrong in two of the five jurisdictions here. The ASEAN Foundation's *AI Ready ASEAN* research finds readiness stages *"deeply uneven"* with **the gap between countries widening**, and EdTech Hub's ASEAN analysis records that governance sits with **sector ministries rather than a single AI law** — so there is no regional instrument to scope against, only national ones.
+
+🟡 **Demand-side counterweight, and it cuts against a naive growth read.** S&P Global Market Intelligence reports private-equity and venture investment in APAC **education services fell significantly in 2025** year on year, with India taking **4 of the 10 largest deals**. Mandates are expanding while private capital contracts — which points at **publicly funded curriculum and teacher-training work**, not at venture-backed product bets. 🔵 All figures here are search-snippet tier per `T82`; the Ipsos *Education Monitor 2026* (9 markets) and MarketsandMarkets' APAC sizing (**$591.6M 2024 → $1.85B 2029**) are recorded as vendor estimates and **not** averaged against the global cluster.

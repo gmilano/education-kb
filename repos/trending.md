@@ -4,6 +4,67 @@ region: Global
 updated: 2026-11-23
 ---
 
+## `2026-11-23` (p941) — **Where the grant actually lives: `master` is the plurality, `trunk` and a version branch are real, and two projects keep their licence outside the repository root. A `main/LICENSE` probe is wrong about 60 of 275 rows.**
+
+🔵 Full pass narrative, the corpus-wide fixture sweep and the rotation anomaly are in `agents/trending.md` `p941`. This section records the repository-shaped results.
+
+### `941-R1` 🔴 Default-branch distribution, measured across the 61 rows a `main`-first ladder could not reach
+
+A `main`-first probe returned 60 unreachable grants on repositories that plainly have them (`jitsi/jitsi-meet`, `hankcs/HanLP`, `CAHLR/pyBKT`, `PrairieLearn/PrairieLearn`, `nexB/scancode-toolkit`). Resolving `HEAD` with `git ls-remote --symref` **first** cleared 59 of 60.
+
+| Default branch | Repos | Notable |
+|---|---|---|
+| `master` | 🔴 **50** | the plurality of this cohort |
+| `main` | 2 | |
+| `trunk` | 2 | `Automattic/sensei`, `gocodebox/lifterlms` — the WordPress estate convention |
+| `develop` | 2 | |
+| `v2` | 2 | `xiaochong0302/course-tencent-cloud` |
+| `dev` | 1 | |
+| 🔴 **`15.0`** | 1 | **`claroline/Claroline` — the grant is served from a *version* branch** |
+| `ExamIntellect` | 1 | branch named for the project |
+
+🔴 **`claroline/Claroline@15.0/LICENSE` is the row to worry about structurally.** A grant pinned to a version branch is a grant that can vanish when the project retires that branch — and **no liveness probe of the repository would register it**, because the repository stays perfectly alive. Registered as `Action B` for the next pass.
+
+### `941-R2` 🔴 Two projects keep the grant outside the root, and one of them is a dependency-noise specimen
+
+| Repo | Grant location | Why a root probe fails |
+|---|---|---|
+| **`OS4ED/openSIS-Classic`** | 🟢 **`master/docs/License.txt`** — 17,286 B, `224ac3d403e3`, GPL-2.0, BOM-prefixed | 🔴 **No root licence file exists.** Byte-read in `p897` and already published with this exact path — the shelf is right; this pass's ladder missed it on filename **case** (`docs/LICENSE` ≠ `docs/License.txt`) |
+| **`polm/unidic-lite`** | 🟢 **two** grants: `master/LICENSE` 1,051 B (MIT, *packaging code only*) and `master/LICENSE.unidic` 1,515 B `d2cfdec25d7a` (**BSD © The UniDic Consortium**, governs the installed data) | A one-file ladder sees one of them and reports the other as a mismatch — `T25`'s dual-grant shape, validated by an instrument that went looking for a contradiction and found the shelf correct |
+
+🔵 **`openSIS-Classic`'s tree is the `P498` noise problem with a name.** It carries **20+ vendored dependency grants** (`ckeditor`, `PhpSpreadsheet`, `htmlpurifier`, `psr/*`, `zipstream-php`, …) and **no root file**, out of 5,656 tracked paths. A scanner that reports the first `LICENSE` it encounters attributes a *dependency's* licence to the project. For a client inventory this is the difference between "GPL-2.0, in `docs/`" and a false MIT.
+
+### `941-R3` 🟢 Canonical Apache-2.0 is not one string — four byte-forms among repos this base already cites
+
+| Bytes | `sha256₁₂` | Final byte | Representative |
+|---|---|---|---|
+| 11,358 | `cfc7749b96f6` | `\n` | `openedx/XBlock@master/LICENSE.TXT` |
+| 11,357 | `c71d239df917` | `\n` | `anchore/syft`, `nexB/scancode-toolkit` |
+| 11,356 | `c5accbbd8546` | 🔴 **`.`** | `spdx/tools-python` — **no trailing newline in the file at all** |
+| 11,362 | `a89039268428` | `\n` | `pacewisdomhq/TutorLoom` |
+
+🔴 **Consequence for any licence gate: `−1 B` against "canonical" is not evidence of anything.** `spdx/tools-python` at 11,356 B sits one byte below the 11,357 form and is correct as published. Compare a published fixture against **that repository's own served bytes**, never against a canonical constant.
+
+### `941-R4` 🟢 `OpenOLAT/OpenOLAT` re-measured 18 days on — the strongest reproduction in this pass
+
+| Element | `p905` (2026-11-05) | `p941` (2026-11-23) |
+|---|---|---|
+| `master/LICENSE` | 10,982 B, `6dbc5b605ed0` | 🟢 **10,982 B, `6dbc5b605ed0`** |
+| Nine operative Apache sections | verbatim | 🟢 verbatim; **0** restriction keywords |
+| `END OF TERMS AND CONDITIONS` | absent | 🟢 absent (0 occurrences) |
+| APPENDIX boilerplate | replaced by two *"Additional license statement"* provenance paragraphs | 🟢 identical |
+| API SPDX | `NOASSERTION` | 🟢 `NOASSERTION` — mechanism unchanged |
+| Weight | — | 🟢 **451 ★, 165 forks, 686 MB, Java, pushed 2026-11-23, `archived:false`, `fork:false`** |
+
+🟢 **`master/NOTICE.TXT` also byte-read this pass: 14,412 B, `050762f27bb3`** — *"Licensed under the Apache License, Version 2.0"*, **0** restriction keywords. 🟡 **One internal inconsistency worth carrying:** the README directs the reader to *"file LICENSE.TXT"*, which **404s**; the grant is at `LICENSE`. A ladder that trusts the README's filename finds nothing.
+
+🔵 **`argile-agency/edonis` resolved for the first time** (closing `p939`'s open item `939-R3`): `main/LICENSE` **11,343 B**, `04cefdeaa71a`, genuine **Apache-2.0**, API SPDX `Apache-2.0` — but **1 ★, 0 forks, 4 MB, pushed 2026-11-17**, an AdonisJS hobby LMS. **Filed as resolved, not promoted as supply.**
+
+### `941-R5` 🔴 `Just253/autonoma-cli` — dead six days after being filed
+
+Three channels refuse it: `git ls-remote` auth-prompts ×3, `raw` README `404`, absent from `search/repositories`. **Not a rename** (`ls-remote` follows rename redirects). Filed `p9xx` as `🆕 filed`, MIT, 1,064 B, **1 ★**, pushed 2026-11-17 — deleted or privatised inside a week. `683 of 684` addresses in the six live files remain live; **the one death is the newest and smallest row on the shelf.**
+
+
 ## `2026-11-23` (p940) — **No new repositories for the 53rd pass running. The integrity work moved from addresses to *fixtures*: 14 published licence hashes do not reproduce from the file as served, and the cause is one line of shell.**
 
 🔵 **Rotation consistent** — `rotation.json` read `next: 8` / `last_industry: technology` / `2026-11-23`, and this remote last carried `p939` from `2026-11-21`. No `p936`-pattern anomaly this pass.
