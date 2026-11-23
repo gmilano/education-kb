@@ -4594,3 +4594,39 @@ echo "$slug NO-GRANT-MATCHED branch=$br"; exit 1
 🟢 **Run it as a pre-commit gate on any shelf that publishes licence fixtures**, and on the dependency manifest of a client deliverable. 🔵 **Report format matters as much as the check:** emit `AS-SERVED-OK` / `STRIPPED-LF` / `NO-GRANT-MATCHED` / `REPO-UNRESOLVABLE` per row and **exempt append-only narrative files from failing the build while still reporting on them** — `p940` predicted correctly that a gate without that exemption never goes green.
 
 🔴 **The client-facing argument for charging for this.** Of 275 published fixtures on this shelf, **248 reproduced, 26 did not, and 1 was the gate's own false positive** — a 9.5% defect rate in a corpus maintained by an instrument that was *trying* to be rigorous, with **zero** licence verdicts actually wrong. That is the honest sales line: the gate does not find mislicensed dependencies, it finds **unverifiable claims about correctly licensed ones** — and an inventory a client cannot re-derive is an inventory that will not survive their legal review.
+
+## P500 — A ministry-grade admissions-and-entitlement agent built entirely on permissive code, with the copyleft platform kept behind LTI — added `p942`
+
+🔵 **Why this pattern exists.** Every other platform recipe in this file has to manage a copyleft obligation, because every LMS/SIS anchor this base holds is `GPL`, `AGPL`, `LGPL` or `ECL` — `P497` exists precisely to keep the AI layer out of the platform process for that reason. **This recipe has no copyleft obligation at all on the pieces it builds *from*.** `p942` byte-read a permissive education estate that is not in the platform tier at all but in government service repositories (`T84`, `repos/foundations.md`, `intel/market.md` EMEA). It is the one recipe here a studio can relicense end to end.
+
+🔴 **Read the honest constraint first, because it determines who this is for.** The reusable systems are **9–37 ★** repositories. They are reference implementations, not communities: nobody should present them to a client as an ecosystem, and there is no upstream to receive contributions back at scale. **They are also not an LMS** — they are workflow services. The engagement this fits is a *ministry, awarding body, regional education authority or large multi-academy trust* that needs an admissions, entitlement or establishment-data capability, where the argument is "the production reference implementation exists, is MIT, and we can start from it" rather than "this is a thriving open-source project".
+
+### Pieces, with the licence each one actually grants (all byte-read in `p942` unless noted)
+
+| Role | Repo | Licence | Why this one |
+|---|---|---|---|
+| **Admissions workflow reference** | https://github.com/DFE-Digital/apply-for-teacher-training | 🟢 **MIT** (Crown Copyright) · `main/LICENCE`, 1,094 B `1018ba112e86` | England's *national* teacher-training admissions service — multi-provider applications, references, offers, conditions. **37 ★**, pushed `2026-11-23` |
+| **Establishment reference data / entity resolution** | https://github.com/DFE-Digital/get-information-about-schools | 🟢 **MIT** (Crown Copyright) · `main/LICENCE`, 1,116 B `e18299fd1942` | The national schools and colleges register (GIAS). **This is the piece an education agent cannot do without**: a canonical establishment identifier to resolve "which school" before any reasoning happens |
+| **Eligibility / entitlement rules** | https://github.com/DFE-Digital/accessing-childcare-entitlement-checker | 🟢 **MIT** · `main/LICENCE`, 1,102 B `97952c3f6069` | A worked eligibility-checking service — the rules-plus-evidence shape every entitlement question takes |
+| | https://github.com/DFE-Digital/teacher-training-entitlement | 🟢 **MIT** · `main/LICENCE`, 1,091 B `af7b3fcaafcb` | Entitlement calculation |
+| **Curriculum content substrate** | https://github.com/oaknational/oak-open-curriculum-ecosystem | 🟢 **MIT** · `main/LICENCE`, 1,086 B `02c5a8e84229` | Oak National Academy — the English national curriculum body's own ecosystem. **9 ★**, pushed `2026-11-23` |
+| **Agent orchestration** | https://github.com/microsoft/autogen | 🟢 **MIT** | Multi-agent conversation where a caseworker-style flow needs several specialised roles; MIT keeps the permissive posture intact |
+| | https://github.com/huggingface/smolagents | 🟢 **Apache-2.0** | Preferred when the flow is *one* agent calling tools, which most entitlement checks are. Smaller surface than AutoGen |
+| **Explainable learner state** (only if the scope reaches tutoring) | https://github.com/CAHLR/OATutor | 🟢 **MIT** | Per-skill BKT state **is** the reviewer's explanation — the reason `P497` chose it for human-oversight evidence |
+| **The platform, if one is in scope at all** | Moodle (`GPL-3.0`, `COPYING.txt`) / Open edX (`AGPL-3.0`) | 🔴 copyleft | **Stays behind an LTI 1.3 / REST boundary, in its own process.** `P497` Stage 3 |
+
+### Wiring
+
+1. **Resolve the establishment first.** Stand up GIAS as a read-only reference service and give the agent a single `resolve_establishment(name|URN|postcode) → URN` tool over it. 🔵 **Do not let the model guess institution identity**; every downstream rule keys on the URN, and an agent that infers "which school" from a free-text name will be wrong in exactly the cases that matter (multi-academy trusts, renamed and merged establishments).
+2. **Lift the rules, not the UI.** Take the entitlement/eligibility *rule expression* from the two checker services and expose each rule as a deterministic tool the agent calls. 🔴 **The rules must not be reimplemented as prompt text** — an entitlement decision has to be reproducible and auditable, and a tool call is both where a generation is neither.
+3. **Put the agent on top as orchestration only.** `smolagents` for a single tool-calling agent, `autogen` where distinct roles genuinely help (applicant-facing, caseworker-facing, reviewer). The model's job is intake, clarification, routing and explanation — **never the decision**.
+4. **Keep the decision boundary explicit.** Every determination returns the rule that fired plus the evidence, so a human reviewer approves a *decision with a reason*, not a verdict. This is the human-oversight artefact a regulator asks for, and it falls out of step 2 rather than needing to be built.
+5. **Integrate the LMS, if present, across LTI 1.3** — the agent and its rules stay in the permissive estate; Moodle or Open edX keeps its copyleft inside its own process. `P497` Stage 3 covers the boundary.
+
+### Licence posture of the result
+
+🟢 **MIT in, your choice out.** Every component above is MIT or Apache-2.0, so the deliverable may be relicensed, including commercially — **the only recipe in this file for which that is true.** 🔴 **The one obligation is attribution, and it is per repository, not per estate:** the five DfE repositories carry **three** different copyright-notice forms and two different licence titles (`repos/foundations.md`), so a single "contains DfE code" line does not satisfy MIT. Carry each notice verbatim, attributed to its repository of origin. 🔵 Ten minutes when scoped at the start; an audit finding when discovered at the end.
+
+🟡 **Estimate.** Steps 1–2 on a defined entitlement scope: **4–6 weeks**. Adding step 3–4 orchestration and the reviewer artefact: **+3–4 weeks**. 🔴 **The estimate assumes the client's own establishment and rule data, which is the part that is never clean** — budget discovery separately and do not quote steps 1–2 against an unseen data estate.
+
+🔵 **Verification note.** Every grant in the table was read in full in `p942`, not inferred from byte count. The first draft of the underlying shelf section published four of them on length and digest alone and they were read before commit — publishing a measured row as a read one is the error class this base has spent several passes correcting.

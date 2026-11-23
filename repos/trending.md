@@ -4,6 +4,96 @@ region: Global
 updated: 2026-11-23
 ---
 
+## `2026-11-23` (p942) — **`item B` at 125 slugs instead of 10: twelve default branches are neither `main` nor `master`, one of them is a slash-bearing maintenance branch, and thirty-five grants sit outside the four-path root ladder. The British spelling `LICENCE` is a jurisdictional cluster, not a typo.**
+
+🔵 Full pass narrative, the fixture adjudication and the two instruments this pass had to debug are in `agents/trending.md` `p942`. This section records the repository-shaped results.
+
+### `942-R1` 🔴 Where the grant actually lives, measured on the 125 slugs that served nothing on the root ladder
+
+`p941`'s `item B` named **8** repos whose default branch is not `main`/`master` and **2** whose grant is outside the root. The fixture sweep produced the population mechanically — every slug whose published digest could not be matched against `{main,master} × {LICENSE, LICENSE.md, LICENSE.txt, COPYING}` — and it is **125** real slugs, probed on a 16-path ladder against the branch `git ls-remote --symref` reports.
+
+| Outcome | Count |
+|---|---|
+| Grant resolved off the root ladder | 🟢 **38** |
+| No grant on any of 16 paths | 🟡 **29** |
+| Address dead (all already published as dead — `942-F3`) | 🔴 **25** |
+| Path-shaped false slugs from this pass's own regex | ⚫ **33** |
+
+🔴 **Instrument note, and it cost this pass a rewrite.** `gh api repos/{slug}` **cannot** serve the default branch here: this session's GitHub API is scoped to the repositories attached to it, and a third-party slug returns `403 "GitHub access to this repository is not enabled for this session"`. All 125 failed that way on the first run. **Attaching 125 third-party repositories to read a branch name would be the wrong trade**, and it is unnecessary: `git ls-remote --symref <url> HEAD` answers the same question with no API, no attachment and no credentials, and doubles as the liveness probe. 🔵 The `gh api search/repositories` channel is unaffected and remains the star/licence channel.
+
+### `942-R2` 🔴 Twelve default branches are not `main` or `master` — and the worst case is worse than `p941` predicted
+
+`p941` predicted *"at least one more version-branch grant like `claroline/Claroline@15.0`; a grant pinned to a version branch can disappear when that branch is retired, which no liveness probe of the repo would detect."* **Confirmed, and the specimen is sharper than the prediction:** the version branch is not where a grant was *pinned* — it is the repository's **default**.
+
+| Repo | Default branch | Grant path | Bytes | `sha256₁₂` |
+|---|---|---|---|---|
+| 🔴 `edu-sharing/Edu-Sharing` | **`maven/fixes/10.0`** | `LICENSE.txt` | 35,148 | `8b1ba204bb69` |
+| 🔴 `DigitalPhonetics/IMS-Toucan` | **`MassiveScaleToucan`** | `LICENSE` | 11,475 | `3307e40fba5e` |
+| `frappe/erpnext` | `develop` | `license.txt` | 35,149 | `3972dc9744f6` |
+| `frappe/lms` | `develop` | `license.txt` | 33,893 | `db1a87ba81e8` |
+| `frappe/hrms` | `develop` | `license.txt` | 34,916 | `f333043685c8` |
+| 🔴 `frappe/education` | `develop` | `license.txt` | **19** | `1fcecf395312` |
+| `uccser/cs-field-guide` | `develop` | `LICENCE` | 1,128 | `d19875cf3401` |
+| `opencast/studio` | `develop` | `LICENSE` | 1,164 | `e61ce55bf49f` |
+| `nexB/scancode-toolkit` | `develop` | 🔴 none on 16 paths | — | — |
+| `pressbooks/pressbooks` | `dev` | `LICENSE.md` | 35,147 | `8ceb4b9ee5ad` |
+| `fasiha/ebisu` | `gh-pages` | 🔴 none on 16 paths | — | — |
+| `sketch-city/hou-literacy` | `gh-pages` | 🔴 none on 16 paths | — | — |
+
+🔵 **`edu-sharing/Edu-Sharing` is the row to carry.** A default branch named `maven/fixes/10.0` contains a **slash**, which breaks any tooling that builds a raw URL by string-joining `{slug}/{branch}/{path}` without encoding, and it is a *maintenance* branch: when 10.0 goes out of support, the repository's default — and with it the only path on which its grant was ever read — can move without the address ever going dead. 🔵 **`gh api search/repositories` returned `422 "resources do not exist or you do not have permission"` for this same slug** while `git ls-remote` resolved it and `raw.githubusercontent.com` served its 35,148-byte grant. That is the false-absence class (`Gap 546`) on a third observation, and the two-channel rule held: the slug is real.
+
+🟡 **`gh-pages` as a default branch means the published artefact is a website, and the licence usually is not deployed to it.** Both `gh-pages` repos returned no grant on any of 16 paths — their licences, if any, live on a source branch this ladder never looks at. Filed, not asserted.
+
+### `942-R3` 🔴 `LICENCE` is a jurisdiction, not a typo — the UK public-sector education estate is MIT under Crown Copyright
+
+Thirty-five grants resolved outside `{LICENSE, LICENSE.md, LICENSE.txt, COPYING}`. The dominant forms are lowercase (`license.txt`, `license`), `COPYING.txt`, and **British-spelled `LICENCE`** — and the `LICENCE` rows are not scattered. **Five of them are one government department.**
+
+| Repo | Branch · path | Licence (byte-read) | Bytes | ★ | Pushed |
+|---|---|---|---|---|---|
+| `DFE-Digital/apply-for-teacher-training` | `main` · **`LICENCE`** | 🟢 **MIT** — *"Copyright (c) Crown Copyright (Department for Education)"* | 1,094 | 37 | `2026-11-23` |
+| `DFE-Digital/get-information-about-schools` | `main` · **`LICENCE`** | 🟢 **MIT** (Crown Copyright) | 1,116 | 9 | `2026-11-23` |
+| `DFE-Digital/claim-additional-payments-for-teaching` | `master` · **`LICENCE`** | 🟢 MIT-length grant | 1,099 | — | — |
+| `DFE-Digital/teacher-training-entitlement` | `main` · **`LICENCE`** | 🟢 MIT-length grant | 1,091 | — | — |
+| `DFE-Digital/accessing-childcare-entitlement-checker` | `main` · **`LICENCE`** | 🟢 MIT-length grant | 1,102 | — | — |
+| `oaknational/oak-open-curriculum-ecosystem` | `main` · **`LICENCE`** | 🟢 **MIT** — *"Copyright (c) 2024-present Oak National Academy"* | 1,086 | 9 | `2026-11-23` |
+| `uccser/cs-field-guide` | `develop` · **`LICENCE`** | 🟢 MIT-length grant | 1,128 | — | — |
+| `jkbrzt/rrule`, `jakubroztocil/rrule` | `master` · **`LICENCE`** | 🟢 same grant, 3,493 B `6c12f89b62fc` | 3,493 | — | — |
+| `GitYCC/g2pW` | `master` · **`LICENCE`** | Apache-2.0 form, 11,356 B | 11,356 | — | — |
+
+🔴 **An American-spelling probe is blind to a national education estate.** Every `DFE-Digital` repository in this sample files its grant at `LICENCE`, and a ladder that stops at `LICENSE`/`LICENSE.md`/`LICENSE.txt`/`COPYING` reports *no licence found* for all of them — which, on a cell that then reads `NOASSERTION`, becomes a published claim that a permissively-licensed public-sector system has no grant. 🔵 **The ladder must carry `LICENCE`, `LICENCE.md` and `LICENCE.txt` for EMEA/UK coverage**, and this pass's 16-path ladder does.
+
+🟢 **The commercial reading, and it speaks to this base's longest-standing gap.** This base has recorded **permissive-LMS scarcity** for months — every platform tier anchor is GPL, AGPL, LGPL or ECL. The permissive education supply exists; it is simply **not in the platform tier**. It is in *government service repositories*: admissions (`apply-for-teacher-training`), the national schools reference dataset (`get-information-about-schools`), entitlement checking, and the English national curriculum body's own curriculum ecosystem (Oak National Academy) — **all MIT**. 🔴 **Stated against itself: these are 9–37 ★ repositories, not anchors, and nobody should present a 9-star repo to a client as a community.** Their value is not traction; it is that they are *production public-sector systems whose code a studio may copy, modify and relicense*, which no LMS in this base permits. Placed **EMEA (United Kingdom)**; see `intel/market.md` and `compose/patterns.md` **`P500`**.
+
+### `942-R4` 🟢 Other non-root grant paths worth carrying, with `moodle/moodle` reproduced rather than corrected
+
+| Repo | Branch · path | Bytes · `sha256₁₂` | Note |
+|---|---|---|---|
+| `moodle/moodle` | `main` · **`COPYING.txt`** | 35,147 · `8ceb4b9ee5ad` | 🟢 **reproduces the shelf** — `repos/foundations.md` already publishes *"no root `LICENSE`; verified in `COPYING.txt`"* |
+| `moodlehq/moodleapp` | `main` · `COPYING.txt` | 11,358 · `cfc7749b96f6` | Apache-2.0 form, not Moodle's GPL |
+| `maths/moodle-qtype_stack` | `master` · `COPYING.txt` | 35,147 · `8ceb4b9ee5ad` | same GPL-3.0 payload as core |
+| `OS4ED/openSIS-Classic` | `master` · **`docs/License.txt`** | 17,286 · `224ac3d403e3` | 🟢 reproduces `p941`'s path claim exactly |
+| `Kosudo/nextSIS` | `master` · `license.txt` | 39,890 · `cd7a49230f22` | |
+| `kuali/kc` | `master` · `license.txt` | 33,755 · `55618c37d2ae` | |
+| `european-commission-empl/European-Learning-Model` | `master` · `license` | 13,865 · `6e5399ad2f45` | EMEA — EU institutional publisher |
+| `processing/p5.js` | `main` · `license.txt` | 24,480 · `eb2f25f8f165` | |
+| `labmlai/annotated_deep_learning_paper_implementations` | `master` · `license` | 1,082 · `22c7cae23a2b` | |
+| `LearningLocker/xapi-service`, `xapi-validation` | `master` · `license` | 1,070 · `99a909b026f0` | identical grant, both repos |
+| `LIST-LUXEMBOURG/eagle-aig` | `master` · `license.txt` | 11,358 · `cfc7749b96f6` | EMEA — Luxembourg |
+| `anvc/scalar` | `master` · `license.txt` | 11,193 · `11ce2365d157` | |
+| `ad1-kamath/coursecraft` | `main` · **`LICENSE-MIT`** | 1,081 · `66d27c2a9dbf` | |
+| `daac-tools/vibrato` | `main` · **`LICENSE-MIT`** | 1,076 · `d0104f0f2368` | APAC — Japanese tokenizer |
+
+### `942-R5` 🟡 Star drift on the Frappe education tier, and why `NOASSERTION` sits on it
+
+Measured via `gh api search/repositories` this pass against `p897`'s byte-read:
+
+| Repo | `p897` ★ | This pass ★ | Δ | API licence | Byte-read grant |
+|---|---|---|---|---|---|
+| `frappe/lms` | 3,429 | **3,447** | +18 | `AGPL-3.0` | 33,893 B verbatim AGPL, `develop/license.txt` |
+| `frappe/education` | 712 | **718** | +6 | 🔴 **`NOASSERTION`** | 🔴 **19 B** — the entire file is `License: GNU GPL V3` |
+
+🔵 **This pass reproduces `p897` exactly and can now state the *cause* of the `NOASSERTION`.** The base's standing rule — **`NOASSERTION` is a pointer, not a licence** — gains a third mechanism beside bespoke and non-commercial grants: **a licence file that *names* a licence instead of *containing* one.** GitHub's classifier cannot match 19 bytes to any SPDX text, so it declines; the sibling `frappe/lms`, which ships the full text on the same branch at the same path, classifies cleanly. 🔴 **For a client engagement the 19 bytes are the problem, not the `NOASSERTION`:** `"GNU GPL V3"` does not distinguish `GPL-3.0-only` from `GPL-3.0-or-later`, names no copyright holder, and carries no permission grant, conditions or warranty disclaimer. 🟢 **`frappe/education` is a 718 ★ production education ERP module** and the correct posture is to treat its licence as an **open question to put to the vendor in writing**, not as GPL-3.0 read off a sentence — see `verticals/solutions.md`.
+
 ## `2026-11-23` (p941) — **Where the grant actually lives: `master` is the plurality, `trunk` and a version branch are real, and two projects keep their licence outside the repository root. A `main/LICENSE` probe is wrong about 60 of 275 rows.**
 
 🔵 Full pass narrative, the corpus-wide fixture sweep and the rotation anomaly are in `agents/trending.md` `p941`. This section records the repository-shaped results.

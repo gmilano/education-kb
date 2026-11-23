@@ -86,6 +86,24 @@ in `repos/trending.md`: **diff a canonical table against the append-only history
 rewriting it**, because a verified finding that does not reach this file is not available to an
 engagement.
 
+## Public-sector education systems — permissive, added `p942`
+
+🟢 **Every row below was byte-read this pass** (`git ls-remote --symref` for the branch, `raw.githubusercontent.com` for the grant) and files its licence at the **British spelling `LICENCE`**, which is why a `LICENSE`-only ladder reports them as having no grant. 🔴 **Read the caveat before using these:** these are **9–37 ★ service repositories**, not platforms and not communities. Their value is that they are *production* public-sector systems under **MIT**, so a studio may copy, modify and relicense them — which no LMS core in this file permits. Placed **EMEA (United Kingdom)**.
+
+| Repo | Licence (byte-read) | Branch · path | Bytes · `sha256₁₂` | Role |
+|---|---|---|---|---|
+| https://github.com/DFE-Digital/apply-for-teacher-training | **MIT** — *"Copyright (c) Crown Copyright (Department for Education)"* | `main` · `LICENCE` | 1,094 · `1018ba112e86` | England's national teacher-training admissions service. **37 ★**, pushed `2026-11-23`. The reference implementation of a government-scale admissions workflow |
+| https://github.com/DFE-Digital/get-information-about-schools | **MIT** (Crown Copyright) | `main` · `LICENCE` | 1,116 · `e18299fd1942` | The national schools/colleges reference register (GIAS). **9 ★**, pushed `2026-11-23`. Authoritative establishment data — the entity resolution layer an education agent needs |
+| https://github.com/oaknational/oak-open-curriculum-ecosystem | **MIT** — *"Copyright (c) 2024-present Oak National Academy"* | `main` · `LICENCE` | 1,086 · `02c5a8e84229` | Oak National Academy's open curriculum ecosystem — the English national curriculum body. **9 ★**, pushed `2026-11-23` |
+| https://github.com/DFE-Digital/claim-additional-payments-for-teaching | **MIT** — *"MIT License / Copyright (c) 2019 Crown Copyright (Department for Education)"* | `master` · `LICENCE` | 1,099 · `7d38b1b17881` | Teacher-retention payment claims — an eligibility-and-evidence workflow |
+| https://github.com/DFE-Digital/teacher-training-entitlement | **MIT** — *"Copyright (c) 2018 Department for Education - Digital"* | `main` · `LICENCE` | 1,091 · `af7b3fcaafcb` | Training-entitlement calculation |
+| https://github.com/DFE-Digital/accessing-childcare-entitlement-checker | **MIT** — *"The MIT License / Copyright (C) 2026 Crown Copyright (Department for Education)"* | `main` · `LICENCE` | 1,102 · `97952c3f6069` | Entitlement eligibility checker |
+| https://github.com/uccser/cs-field-guide | **MIT** — *"Copyright (c) 2016-2022 University of Canterbury Computer Science Education Research Group"* | `develop` · `LICENCE` | 1,128 · `d19875cf3401` | University of Canterbury CS education resource. **APAC (New Zealand)** — note the non-`main` default branch |
+
+🟢 **All seven grants above were read in full, not inferred from length.** The first draft of this section published four of them as *"MIT-length grant"* on byte count and digest alone; reading them cost four `curl` calls and was done before this pass committed, because publishing a measured row as a read one is the error class this base has spent four passes correcting.
+
+🔴 **The holder string is not uniform even inside one department, which matters for the attribution notice in a deliverable.** MIT requires the copyright notice to be reproduced, and these five DfE repositories carry **three different** forms: `Crown Copyright (Department for Education)` (no year), `Copyright (c) 2019 Crown Copyright (Department for Education)`, and `Copyright (c) 2018 Department for Education - Digital` — plus two different titles, `MIT License` and `The MIT License`. 🔵 **A studio reusing several of these cannot write one attribution line for "the DfE estate"**; each repository's notice must be carried verbatim, per file of origin. That is a ten-minute task when scoped and an audit finding when not.
+
 ## LMS and platform cores
 
 | Repo | Licence | Role |
@@ -1381,7 +1399,7 @@ then the one to trust. No repo in this set is archived.
 | `netless-io/flat` | 6,443 | MIT | MIT | 2026-11-10 | 8 |
 | `argilla-io/argilla` | 5,204 | Apache-2.0 | Apache-2.0 | 2026-11-16 | 2 |
 | `open-spaced-repetition/fsrs4anki` | 4,142 | MIT | MIT | 2026-08-14 | 96 |
-| `frappe/lms` | 3,429 | AGPL-3.0 | AGPL-3.0 | 2026-11-18 | 0 |
+| `frappe/lms` | 3,429 → **3,447** (`p942`) | AGPL-3.0 | AGPL-3.0 | 2026-11-23 | 0 |
 | `OpenVidu/openvidu` | 2,146 | Apache-2.0 | Apache-2.0 | 2026-11-17 | 1 |
 | `iiab/iiab` | 2,053 | GPL-2.0 | LGPL | 2026-11-13 | 5 |
 | `jupyterhub/zero-to-jupyterhub-k8s` | 1,727 | NOASSERTION | Apache-2.0 | 2026-11-15 | 3 |

@@ -4,6 +4,68 @@ region: Global
 updated: 2026-11-23
 ---
 
+## `2026-11-23` (p942) — **The append-only corpus is adjudicated for the first time: 218 of its published fixtures reproduce only when stripped, at the *same* rate as the shelf — so the defective shell was never localised to two passes. And the byte-count defect this pass set out to measure does not exist: both of its own instruments manufactured one.**
+
+🔴 **Rotation anomaly, FIFTH sighting — and the fourth consecutive education pass to meet it.** `rotation.json` read `next: 8` / `last_industry: technology` / `2026-11-23`, while this base's remote already carried **`64e34b7`, `ingest: education KB update 2026-11-23 (p941)`, committed `23:02:49Z` the same day — 35 minutes before this pass fired.** `p941` pushed content and did not advance rotation, exactly as `p938` and `p940` did before it. 🔵 **The first action of every pass stands and was run**, and it is the only reason this pass did not rewrite a base rewritten half an hour earlier. 🟢 **This pass advances `rotation.json` to `9` (automotive) as its last act** — the step four consecutive passes have skipped. If the next education pass finds `next: 8` again, the failure is not in any single pass's discipline but in the scheduler re-firing a stored index, and that is the thing to report rather than the thing to work around.
+
+### `942-F1` 🔴 The headline — the stripped-fixture rate in the append-only files equals the shelf's, which refutes the prediction that produced it
+
+`p941` pre-registered this sweep (`item A`) with a prediction: **expect a *higher* stripped rate than the live files' 9.5%**, on the reasoning that `p881` and `p925` wrote into trending at the time they ran and no later pass has corrected those sections. If the rate came back *lower*, the defective instrument would have been shown to run preferentially over shelf rows.
+
+It came back **the same**.
+
+| Measure | Live files (`p941`) | Append-only files (this pass) |
+|---|---|---|
+| Published fixtures adjudicated | **275** | **3,470** |
+| Distinct slugs | — | **1,936** |
+| Reproduce exactly, as served | 248 | **1,992** |
+| Reproduce **only when stripped** | **26** | **218** |
+| Stripped rate among adjudicable fixtures | **9.5%** (26/275) | **9.8%** (218/2,224) |
+
+🔵 **Neither the prediction nor its inverse holds: 9.8% against 9.5% is the same rate.** The consequence is a correction to this base's model of its own defect. The stripping shell was **not** a thing two passes did to the narrative they were writing; it was applied **uniformly across shelf cells and narrative cells alike**, which means it was in the *measurement path* every pass shared, not in any pass's prose. 🟢 **No licence verdict moves** — every one of the 218 is a digest computed over a payload one trailing newline short of the file as served, and the grant text underneath is byte-identical.
+
+🟢 **The 218 are instrument-independent, which is the strongest claim this pass makes.** The fixtures were extracted twice, by two regexes that disagree about 366 fixtures and 158 slugs, and the stripped population came back **identical**: 194 distinct `(slug, hash)` pairs, **symmetric difference 0**. A defect list that survives a change of instrument is a defect list.
+
+### `942-F2` 🔴 The byte-count defect does not exist — and this pass's own two instruments each invented one before being caught
+
+The sweep's first instrument reported **62** fixtures whose hash reproduced but whose published byte count did not. Had that number been written up, it would have been this pass's second headline. **Every one of the 62 was the instrument's own.** Inspecting the lines behind the list — before publishing it — found four separate parser defects, and the honest count of real byte-count defects in 3,470 published fixtures is **zero**.
+
+| # | Instrument defect | What it manufactured | Real line |
+|---|---|---|---|
+| **1** | Thousands separators are **locale-plural** in this corpus. A `[0-9, ]` class captures `078` out of the Spanish `1.078 B` and `357` out of `11.357 B` | *"published 78 B vs served 1078 B"* | `SimonsTang/haoyun-stem-tutor` publishes **`1.078 B`** and serves **1,078 B** — correct |
+| **2** | The unit often sits **outside the code span**: ``` `34 273` B ```. A regex demanding `\s*B` after the digits skips it and takes the line's *next* byte count, which belongs to the prose | *"published 250 B vs served 34273 B"* | `lingdojo/kana-dojo` publishes `34 273 B`; the `250` is the prose phrase *"sits 250 B outside the carried AGPL range"* |
+| **3** | Pairing the *i*-th hash with the *i*-th byte count, falling back to the **first** count on length mismatch, crosses cells on any line that mentions a byte count in prose | assorted | fixed by pairing each hash with the **nearest** byte count; the surviving 14 all have `d ≤ 22` chars |
+| **4** | 🔴 **A licence identifier ending in a version number is absorbed into the byte count.** `Apache-2.0, 11,356 B` parses as **`2011356`** once `.` and `,` are both separators; `CC BY-SA 4.0, 1 230 B` parses as `401230` | the final 14 "defects", including `spdx/tools-python` and `GarethManning/education-agent-skills` | both cells are **correct** |
+
+🔵 **Defect 4 is a new error class for this base, and it is worth a name: `VERSION-GLUED BYTE COUNT`.** It bites exactly the rows that matter most — a cell is *more* likely to carry `Apache-2.0` or `CC BY-SA 4.0` immediately before its byte count than not. 🔴 **The direct consequence is that `p940`'s pre-registered `item B` — *"make fixture reproduction a gate"* — is unbuildable as specified.** A gate over these files must first parse **four** byte-count forms (`1,074 B`, `1.078 B`, `34 273 B`, `1 230 B`), anchor on the code span rather than on a character class, and pair by proximity. A gate that does none of these reports ~4% of a clean corpus as broken, and a gate that cries wolf at 4% will be switched off.
+
+🟡 **A fifth artefact, recorded because it contaminated a liveness count rather than a licence count:** the slug regex matches **path-shaped strings**. `main/LICENSE`, `master/LICENSE`, `refs/tags`, `refs/heads`, `html/lib`, `agents/top.md`, `verticals/solutions.md` and 26 others were probed as if they were repositories. They account for **33 of the 58** addresses the first liveness arm called dead.
+
+### `942-F3` 🟢 Zero new dead addresses — and the base's redirect tables are why
+
+After removing the 33 path-shaped artefacts, **25 real slugs** failed `git ls-remote`. 🔵 **The failure mode is worth recording because it does not look like a 404:** an anonymous probe of a non-existent repository returns `fatal: could not read Username for 'https://github.com': terminal prompts disabled`, not a `404`. A pass reading that message as an auth problem would retry forever; a pass reading it as deadness is right.
+
+🟢 **All 25 are already published in this base, as dead, with the live successor beside them.** Spot-checked against the shelf: `🔴 mahara/mahara → 🟢 MaharaProject/mahara`, `🔴 tsugi/tsugi → 🟢 csev/tsugi`, `🔴 openedx/openassessment → 🟢 openedx/edx-ora2`, and `plastic-labs/bloom` carried as *"the slug really is absent (404, re-confirmed)"* with the project relocated to `Li-Evan/Bloom`. 🔵 **This is the redirect tables doing exactly the job they exist for**, and it is the cleanest evidence yet that this base's address hygiene is sound: a 1,936-slug sweep run by a pass that had not read those tables found nothing they had not already recorded.
+
+### `942-F4` 🟡 `item C` — both egress channels refuse, and the predicted `403` is not what happens
+
+`p941` pre-registered the control set with a prediction of **`403` on all of them**. Measured:
+
+| Host | `curl` | `WebFetch` |
+|---|---|---|
+| `example.com` | 🔴 **`000`** | — |
+| `google.com` | 🔴 **`000`** | — |
+| `rm.coe.int` | 🔴 **`000`** | 🔴 **`ENOTFOUND`** |
+| `raw.githubusercontent.com` | 🟢 **`200`** | — |
+
+🔵 **The substance holds and the mechanism is corrected: there is no HTTP status at all.** `000` is curl reporting that no response was obtained, and `WebFetch` — an independent channel, tested because it might have reached where `curl` could not — fails the same host with `ENOTFOUND`. The honest field is **`EGRESS-REFUSED-BY-POLICY`**, as `p941` proposed; it should **not** be recorded as `403`, and it says nothing about whether the host exists. 🔴 **`p941`'s asymmetry is confirmed on two channels: this environment can verify code and cannot verify law.** The `EDU-IA` terms of reference that would settle the December 2026-vs-2027 deadline conflict in one fetch remain unfetchable, and the remedy remains one line of network policy, not more searching.
+
+### `942-F5` 🔵 Discovery — 47th consecutive pass with no new unheld repository, and a caution about this pass's own grep
+
+All five mandated legs ran (global ×4, plus North America, EMEA, APAC, LATAM). **Every candidate they returned was already held.** The one genuinely unfamiliar name, `GarethManning/education-agent-skills` (TypeScript, *"165 evidence-grounded AI skills for teachers, school leaders and EdTech builders"*, surfaced via Trendshift), is carried on four shelves already — at **877 ★**, `CC BY-SA 4.0`, `1 230 B`, `f952182df4eb`. The generic rankings offered `OpenHands`, `browser-use`, `Flowise` and `Langflow`: all held, none education-vertical.
+
+🔴 **A caution on this pass's own search instrument, recorded because it nearly produced a false novelty claim.** A `grep` for `"25 generative AI prohibitions"` — the UAE Ministry of Education instrument returned by the APAC leg — came back **empty**, and the finding was briefly treated as new. The base writes it **hyphenated**: *"25 generative-AI prohibitions"*, in `intel/market.md` in four places. 🔵 **A novelty check that greps the phrase as a search engine rendered it will keep finding false novelty**, because this base hyphenates compound modifiers as a matter of style. Grep the distinctive **number and noun** (`25 generative`), not the phrase.
+
 ## `2026-11-23` (p941) — **`p940` corrected fourteen stripped licence fixtures in one file and read the class as closed. The defect was corpus-wide: twenty-six more were live in the five files it never swept. And the `−1 B` signature that identifies them cannot, by itself, prove the defect — canonical Apache-2.0 circulates in four byte-forms, one of which has no trailing newline at all.**
 
 🔴 **Rotation anomaly, FOURTH sighting — and it is now the normal case, not the exception.** `rotation.json` read `next: 8` / `last_industry: technology` / `2026-11-23`, while this base's remote already carried **`cf7217a`, `ingest: education KB update 2026-11-23 (p940)`, committed 22:01Z the same day**. That is the push-but-don't-advance half of the `p936` pattern for the **fourth** time, and the **third consecutive education pass** to meet it (`p938`, `p939`, `p941`). 🔵 `p940`'s own section opens by recording that rotation was *consistent* for it — so the anomaly re-appeared within one pass of being absent. **The first action of every pass stands and was run.** Had this pass trusted `rotation.json`, it would have rewritten a base rewritten 40 minutes earlier.

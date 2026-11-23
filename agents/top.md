@@ -6,6 +6,8 @@ updated: 2026-11-23
 
 # Top AI agents — education
 
+🔵 **`p942` (2026-11-23) — this base's licence fixtures are now adjudicated end to end, and the class `p940` opened here is closed with a number.** `p940` corrected **14** stripped fixtures in this file; `p941` swept the six live files and adjudicated **275**; `p942` swept the two append-only files and adjudicated **3,470** more, against each repository's own served bytes. 🟢 **Corpus total: 3,745 published fixtures, and no licence verdict has moved at any stage** — every defect was a digest computed one trailing newline short of the file as served, never a wrong grant. 🔴 **The rate is the finding:** **9.8%** stripped in the append-only files against **9.5%** in the live files, which **refutes** `p941`'s prediction of a higher rate and corrects this base's model of its own defect — the stripping shell was in the shared measurement path, **not** something two passes did to the narrative they were writing. 🟢 **The 218 are instrument-independent**: extracted twice by regexes that disagree about 366 fixtures, the stripped population came back identical (194 `(slug, hash)` pairs, symmetric difference **0**). 🔴 **And the byte-count defect does not exist** — this pass's own two instruments reported 62 then 14, and every one was the parser's, four distinct parser bugs including a new named class, `VERSION-GLUED BYTE COUNT` (`Apache-2.0, 11,356 B` parses as `2011356`). See `agents/trending.md` `p942`.
+
 Every repo below was verified on 2026-11-18 on two independent channels:
 
 1. **Existence + licence text** — fetched the actual `LICENSE`/`COPYING` file from

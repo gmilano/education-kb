@@ -1006,6 +1006,25 @@ from discovery.
 🔴 **The wedge is enforcement, not strategy.** Federal settlements over the **Illuminate Education** and **PowerSchool** breaches, alongside ongoing state privacy investigations, point at **2026 enforcement** against edtech data handling. A district buying AI tooling now inherits vendor data risk, so a **vendor data-flow and retention audit** is a concrete first engagement that does not require any policy question to be settled first. 🔵 Vendors named across these reports — **Microsoft, Google, AWS, IBM, Pearson, Instructure, Anthology, Coursera** — are the incumbents such an audit would be scoping against.
 ### EMEA
 
+#### 🟢 `p942` (2026-11-23) — EMEA/UK: the permissive supply is in the state, not in the platforms — and it is MIT
+
+🟢 **This is a supply-side finding, which makes it rare in this file: every other EMEA entry below is demand.** A 125-slug grant-path sweep (`repos/trending.md` `942-R3`, `repos/foundations.md`) byte-read the UK **Department for Education** engineering estate and **Oak National Academy** and found them **MIT under Crown Copyright** — seven repositories, all read in full, all filing their grant at the British spelling `LICENCE`:
+
+| System | What it is | Licence |
+|---|---|---|
+| `apply-for-teacher-training` | England's national teacher-training admissions service, **37 ★** | **MIT**, Crown Copyright |
+| `get-information-about-schools` | The national schools/colleges reference register (GIAS) | **MIT**, Crown Copyright |
+| `oak-open-curriculum-ecosystem` | Oak National Academy — the English national curriculum body | **MIT**, Oak National Academy |
+| `claim-additional-payments-for-teaching`, `teacher-training-entitlement`, `accessing-childcare-entitlement-checker` | Teacher retention, entitlement calculation, eligibility checking | **MIT**, Crown Copyright |
+
+🔵 **Why this is commercially interesting, stated against this base's own longest-running gap.** This base has recorded **permissive-platform scarcity** for months: every LMS and SIS anchor in it is GPL, AGPL, LGPL or ECL, so the standing advice has been to keep the AI layer *outside* the platform process and integrate over LTI/REST (`compose/patterns.md` `P497`). The permissive education code exists — it is simply in **government service repositories** rather than in platforms. A studio may copy, modify and **relicense** these, which no LMS in this base permits.
+
+🔴 **Stated against itself, because the numbers do not support a traction argument:** these are **9–37 ★** repositories. They are not communities, they are not ecosystems, and presenting one to a client as either would be indefensible. What they are is *reference implementations of government-scale education workflows* — admissions, entitlement, establishment data — published under a licence that permits commercial reuse.
+
+🟡 **Two live constraints.** (1) **Attribution is not uniform**: the five DfE repositories carry **three** different copyright-notice forms and two different licence titles, so MIT's notice requirement must be satisfied per repository of origin, not once for "the estate" (`repos/foundations.md`). (2) **This is a supply finding, not a demand signal** — nothing measured here says the DfE is buying. The engagement shape it supports is a *build* argument to a ministry or awarding body elsewhere in EMEA: the reference implementation already exists, is production, and is MIT.
+
+🔵 **Regulatory position unchanged and still unverifiable from here:** `coe.int` was re-probed this pass on **two independent channels** (`curl` → `000`, `WebFetch` → `ENOTFOUND`) and refuses both, so the EU Annex III education date and the `EDU-IA` deadline conflict recorded below remain `ATTRIBUTED-UNVERIFIED`. The honest field is **`EGRESS-REFUSED-BY-POLICY`**, not `403` and not `DNS-DEAD` — the remedy is one line of network policy.
+
 #### 🔵 `p940` (2026-11-23) — EMEA: the Council of Europe's education instrument is in draft, and its deadline is disputed
 
 🟡 `ATTRIBUTED-UNVERIFIED`. 🔴 **`www.coe.int` and `rm.coe.int` both return `ENOTFOUND` from this
