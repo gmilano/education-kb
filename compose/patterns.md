@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-23
+updated: 2026-11-28
 ---
 
 # Compose patterns — education
@@ -4630,3 +4630,50 @@ echo "$slug NO-GRANT-MATCHED branch=$br"; exit 1
 🟡 **Estimate.** Steps 1–2 on a defined entitlement scope: **4–6 weeks**. Adding step 3–4 orchestration and the reviewer artefact: **+3–4 weeks**. 🔴 **The estimate assumes the client's own establishment and rule data, which is the part that is never clean** — budget discovery separately and do not quote steps 1–2 against an unseen data estate.
 
 🔵 **Verification note.** Every grant in the table was read in full in `p942`, not inferred from byte count. The first draft of the underlying shelf section published four of them on length and digest alone and they were read before commit — publishing a measured row as a read one is the error class this base has spent several passes correcting.
+
+## P501 — Open-access compliance as a deposit agent: resolve the mandate, resolve the institution, then let the model draft only the metadata — added `p965`
+
+🔵 **The gap this fills, stated honestly first.** `agents/top.md` `p965` measured 17 agent-shaped artefacts in the scholarly plane and **not one touches a repository's deposit API**. Screening, discovery and extraction are represented; deposit, metadata mapping and compliance reporting are empty. This pattern is written **against** that gap, which means every component below is a verified repo from `repos/foundations.md` and the orchestration is the part a studio builds.
+
+**The engagement.** A research office must show a funder that every output of a funded project is deposited, on time, in the right repository, with the right rights statement. Today this is a person with a spreadsheet. The 2026 mandate map (`intel/market.md`, `p965`) makes it a recurring obligation in **APAC** and a **retreating** one in North America — which is exactly why the deliverable must be the *evidence*, not the *compliance claim*.
+
+**Wiring, in order. The first three stages contain no model at all.**
+
+1. 🟢 **Resolve the institution — `ror-community/ror-api` (MIT `1,079 B` `3b427452506f`).** Affiliation strings are free text and a model will guess. Resolve every affiliation to a ROR id **deterministically** and fail closed when it does not resolve. This is `P500`'s GIAS rule transplanted: *never let the model establish identity.*
+2. 🟢 **Resolve the output — `ourresearch/oadoi` (MIT `1,079 B` `6f1472c95b46`) + `ourresearch/openalex-guts` (MIT `1,068 B` `233592e3c6b9`).** Given a DOI, Unpaywall answers *is there already a legally free copy, and where*. **That one call decides whether a deposit is needed at all**, and it is the cheapest step in the pipeline. OpenAlex supplies the funding and authorship graph.
+3. 🟢 **Extract the manuscript — `grobidOrg/grobid` (Apache-2.0 `11,189 B` `83559ecf8fcf`), client `grobid-client-python` (Apache-2.0).** PDF → TEI. 🔴 **Never hand a raw PDF to the model.** GROBID gives titles, authors, affiliations, funding statements and references as structured fields; the model's job starts after this, not before.
+4. 🟡 **Only now, the model, and only for mapping.** TEI fields → the target repository's metadata schema (DataCite, Dublin Core, JATS). The model proposes; a deterministic validator accepts. 🔴 **Mandatory `needs_review` category** — rights status, embargo, licence and funder-acknowledgement are the four fields that must *never* be auto-accepted, because they are the four a publisher can dispute. An agent that returns a compliance percentage with no `needs_review` bucket is lying by construction (the technology pass's accessibility rule, which transfers to this plane unchanged).
+5. 🟢 **Deposit through the platform's own API** — Dataverse native API ([`IQSS/dataverse`](https://github.com/IQSS/dataverse), Apache-2.0, branch **`develop`**), InvenioRDM REST ([`invenio-app-rdm`](https://github.com/inveniosoftware/invenio-app-rdm), **MIT**), or DSpace REST ([`DSpace/DSpace`](https://github.com/DSpace/DSpace), BSD-3-Clause). 🟢 **Pick the platform by licence posture, not by feature list:** MIT InvenioRDM if the client wants a product they own; BSD DSpace if they already run one; Apache Dataverse for datasets.
+6. 🟢 **Emit the plan, not the promise — `DMPRoadmap/roadmap` (MIT `1,186 B` `91a3b5bff2fd`).** The data-management plan is the funder-facing artefact; generate it from the same resolved records so the plan and the deposits cannot drift.
+7. 🟢 **Report against the funder's own graph — `openaire/iis` (Apache-2.0 `11,358 B` `cfc7749b96f6`)** for Horizon Europe, and the agency repository for a US federal award.
+
+🔴 **The three things that make this billable rather than a demo.** (a) The output is an **evidence file per deposit** — the ROR id, the DOI, the Unpaywall verdict with its timestamp, the GROBID TEI, the submitted metadata and the repository's receipt — because a funder audit asks *show me*, not *tell me*. (b) **Every licence above is MIT, Apache-2.0 or BSD**, so the integration is a deliverable the client owns. (c) The deterministic stages (1-3, 5) run without a model, so the token cost scales with *exceptions*, not with the catalogue.
+
+🔴 **Where this pattern must refuse the work.** If the client's platform is **OJS** (GPL-3.0) the integration is a *plugin*; if it is **Janeway** (AGPL-3.0) a hosted AI layer inherits the AGPL obligation. Say so at the quote, not at delivery (`verticals/solutions.md`, `p965`).
+
+## P502 — Systematic-review screening that a methodologist will sign: one permissive engine, PRISMA as the record, and the human kept at the decision — added `p965`
+
+🔵 The one artefact in the scholarly plane with both scale and a permissive grant is [`ChaokunHong/MetaScreener`](https://github.com/ChaokunHong/MetaScreener) (**Apache-2.0** `11,238 B` `8868b9851436`, `1,345★`, abstract **and** full-PDF screening). This pattern is how to build on it without reproducing the field's standard failure.
+
+**Wiring.**
+1. 🟢 **Retrieve** with [`surendranb/find-research-papers-mcp`](https://github.com/surendranb/find-research-papers-mcp) (MIT `1,068 B` `ee084ef40e2a`) across arXiv, **OpenAlex**, **Crossref** and Semantic Scholar — four registers, one MCP surface, so the search is reproducible rather than remembered.
+2. 🟢 **Snowball** with [`YS0meone/Corvus`](https://github.com/YS0meone/Corvus) (MIT `1,065 B` `46d3b67e6124`): citation-graph expansion catches the papers a keyword query structurally cannot reach. 🔵 This is the step reviewers most often skip and referees most often catch.
+3. 🟢 **Screen** with **MetaScreener** (Apache-2.0) at title/abstract, then full text. 🟡 Pin the version: HEAD and `pushed_at` both sit at `2026-06-11`, so it is *stable*, not *active* — a dependency to vendor, not to track.
+4. 🟢 **Extract** with [`aurumz-rgb/ReviewAid`](https://github.com/aurumz-rgb/ReviewAid) (Apache-2.0 `11,340 B` `3d1f6e5d0477`) and structure the flow with [`Black-Lights/prisma-review-tool`](https://github.com/Black-Lights/prisma-review-tool) (MIT `1,079 B` `e0206dd4adb5`) or [`AngelChen-HC/systematic-review-skill`](https://github.com/AngelChen-HC/systematic-review-skill) (Apache-2.0 `11,357 B` `c71d239df917`) so the **PRISMA 2020 flow diagram is generated from the run**, not drawn afterwards.
+5. 🟢 **Ingest full texts** through [`grobidOrg/grobid`](https://github.com/grobidOrg/grobid) (Apache-2.0) — never raw PDFs.
+6. 🟢 **Record every decision** with the inclusion/exclusion reason, the model version and the screener identity. The PRISMA diagram **is** the audit trail; if it cannot be regenerated from the log, the review is not reproducible.
+
+🔴 **The two refusals that make this trustworthy.** (a) **The agent never excludes a record alone.** Dual screening with a human on all conflicts, and single-agent exclusions quarantined to a `needs_review` queue — the same rule that `exergyleizhou-ux/PaperGuard` applies to itself when it says it *"flags anomalies, never fraud"*. (b) 🔴 **Do not use [`htlin222/meta-pipe`](https://github.com/htlin222/meta-pipe)** (`164★`, the second-most-starred artefact in the plane): its licence is a bespoke **"Academic and Non-Commercial Use License"** (`3,153 B` `f64565c93cae`) and a studio cannot bill a line of it. 🔴 **Do not use [`MikkelVembye/AIscreenR`](https://github.com/MikkelVembye/AIscreenR)** (GPL-3.0) inside a deliverable.
+
+## P503 — Research-integrity triage that survives being wrong, built on signals you can cite — added `p965`
+
+🔴 **Written as a bounded pattern because the supply is thin and this base will not pad it.** There is **no open institutional paper-mill detector** (`agents/top.md` `965-F2`): the PyPI package the search layer recommends resolves to **five unrelated repositories**, none matching its claims; the Problematic Paper Screener has no locatable repository; the production instruments (Wiley, STM Integrity Hub, Clear Skies) are closed. What *can* be built is a triage queue over citable public signals.
+
+**Wiring.**
+1. 🟢 **Resolve identity first** — `ror-community/ror-api` (MIT) for affiliations, OpenAlex (MIT) for authorship and venue.
+2. 🟢 **Structure the text** — `grobidOrg/grobid` (Apache-2.0): references, figure captions and statistics are where the signals live.
+3. 🟡 **Public signals only, each one cited in the output:** the Retraction Watch/Crossref retraction data, PubPeer commentary, and tortured-phrase detection. 🔴 The only open tortured-phrase code located is [`giladfeldman/torturedcheck`](https://github.com/giladfeldman/torturedcheck) — **AGPL-3.0** (`34,524 B` `8d56b405468a`), `0★`, alive `2026-11-19`. **AGPL means it runs as a separate service behind an API, never linked into a product.**
+4. 🟢 **Statistical anomaly screening** — [`exergyleizhou-ux/PaperGuard`](https://github.com/exergyleizhou-ux/PaperGuard) (MIT `1,080 B` `1237210bae62`, `3★`). Tiny, and the right size: its own description promises it *"flags anomalies, never fraud"*.
+5. 🔴 **The output is a queue with citations, never a verdict.** Every item carries the signal, the source and the date; the system assigns **no score to a person**, and the word "fraud" never appears in a generated artefact. 🔵 A false accusation of research misconduct is career-ending and defamation-shaped, which is why this pattern caps its own ambition at *triage* and says so to the client in writing.
+
+🟡 **The honest sell.** This pattern reduces the reading load on an integrity officer and makes their shortlist reproducible. It does **not** detect paper mills, and a studio that says it does is selling the thing that gets sued — the research-integrity analogue of the overlay finding the technology pass recorded for accessibility.

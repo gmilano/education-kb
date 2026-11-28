@@ -1,8 +1,81 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-23
+updated: 2026-11-28
 ---
+
+## `2026-11-28` (p965) — **A rename serves the identical HEAD and the identical licence hash while the search API answers 422; a live repo answers with silence; and a keyword search for a project returns five of its satellites. Three shapes of false absence, one pass.**
+
+🔵 Full pass narrative, the plane probe and the licence findings are in `agents/trending.md` `p965`. This section records the repository-shaped results. **48 slugs probed, 48 alive, 0 dead addresses.**
+
+### `965-R1` 🔴 Three shapes of false absence, all on repos `git ls-remote --symref` served without complaint
+
+| Instrument | Slug | Verdict returned | Truth, measured |
+|---|---|---|---|
+| `gh api search/repositories -f q='repo:kermitt2/grobid'` | [`kermitt2/grobid`](https://github.com/kermitt2/grobid) | 🔴 **HTTP 422** — *"resources do not exist or you do not have permission"* | 🟢 Alive; HEAD **`eb9dad5fc1c1`** and licence **`83559ecf8fcf`/`11,189 B`** — **both identical to [`grobidOrg/grobid`](https://github.com/grobidOrg/grobid)**. It is the same repository under its historical name. **`search/repositories` does not follow renames; `git` does.** |
+| `gh api search/repositories -f q='repo:CDLUC3/dmptool'` | [`CDLUC3/dmptool`](https://github.com/CDLUC3/dmptool) | 🔴 **Empty. No error, no row.** | 🟢 Alive at `main` `fa9dc0100d14`, MIT `LICENSE.md` `1,186 B` `91a3b5bff2fd` — **byte-identical to [`DMPRoadmap/roadmap`](https://github.com/DMPRoadmap/roadmap)'s** |
+| keyword search `DMPRoadmap` | [`DMPRoadmap/roadmap`](https://github.com/DMPRoadmap/roadmap) | 🔴 **Five satellites** (`roadmap-devenv`, `dmptool_deploy`, `dev-workflow`, `test-dmproadmap`, a branding demo) **and not the project** | 🟢 **`119★`, `118` forks, pushed `2026-11-27`** |
+
+🟢 **The rule: `git ls-remote --symref <url> HEAD` answers liveness, default branch AND rename in one call, needs no API and no repo attachment.** 🔵 Sixth, seventh and eighth observations of Gap 546, and the **first with the rename mechanism named**. 🔴 The silent shape is the dangerous one: a 422 makes you look again, an empty result looks exactly like a correct negative.
+
+### `965-R2` 🔴 Default branches, again — four of 48 are not `main`/`master`, and all four carry their grant
+
+| Repo | Default branch | Consequence for a `{main,master}` ladder |
+|---|---|---|
+| [`IQSS/dataverse`](https://github.com/IQSS/dataverse) | 🔴 **`develop`** | the `1,081★` flagship reports as **ungranted** |
+| [`IQSS/dataverse-frontend`](https://github.com/IQSS/dataverse-frontend) | 🔴 **`develop`** | same |
+| [`DSpace/xoai`](https://github.com/DSpace/xoai) | 🔴 **`3.x`** | second slash-free version-named default after `edu-sharing`'s `maven/fixes/10.0` |
+| [`scieloorg/scielo-manager`](https://github.com/scieloorg/scielo-manager) | 🔴 **`beta`** | LATAM infrastructure reports as ungranted |
+
+### `965-R3` 🔴 Ungranted and live — two repos, named, not inferred from a sibling
+
+| Repo | ★ | Default branch · HEAD | Ladder result |
+|---|---|---|---|
+| [`DSpace/xoai`](https://github.com/DSpace/xoai) | 31★ / 55 | `3.x` · `2e08be1efe08` · HEAD `2026-07-27`, pushed `2026-10-26` | ⛔ **no root licence on 16 paths** — and it is **the OAI-PMH toolkit DSpace itself ships** under a BSD-3 platform |
+| [`scieloorg/Web`](https://github.com/scieloorg/Web) | 7★ / 22 | `master` · `2046fba28e0d` · pushed `2026-11-24` | ⛔ **no root licence on 16 paths** — alive four days before measurement |
+
+🟢 **Neither is published as BSD-by-sibling-inference**, although both sit in orgs whose other repos are BSD. **A sibling's grant is not a grant.**
+
+### `965-R4` 🔵 Grants that are byte-identical across different projects — and what that is and is not evidence of
+
+| Hash · bytes | Licence | Repos sharing it | Reading |
+|---|---|---|---|
+| `91a3b5bff2fd` · `1,186 B` | MIT | `DMPRoadmap/roadmap`, `CDLUC3/dmptool` | 🟢 **Same codebase, two national instances** (Edinburgh/UK and University of California) — the clean *configure-don't-fork* case |
+| `2f976aeae6ab` · `7,048 B` | CC0-1.0 | `O0000-code/awesome-academic-skills`, `brycewang-stanford/lit-review-agent-tools` | 🔴 **Unrelated projects, identical boilerplate** — two of the five most-starred artefacts in the plane, both *lists* |
+| `baf9ee18d437` · `1,504 B` | BSD-3-Clause | `DSpace/DSpace`, `DSpace/dspace-angular` | 🟢 **One org keeping one notice** — the exception worth naming |
+| `57c8ff33c9c0` · `34,520 B` | AGPL-3.0 | `openlibhums/janeway`, `openlibhums/Hydra` | 🟢 org-consistent |
+| `3972dc9744f6` · `35,149 B` | GPL-3.0 | `pkp/ojs`, `pkp/pkp-lib` | 🟢 org-consistent |
+| `c71d239df917` · `11,357 B` | Apache-2.0 | `IQSS/dataverse-frontend`, `AngelChen-HC/systematic-review-skill` | 🔵 **the canonical text** — and the server repo of that same project does **not** match it |
+
+🔴 **And the counter-case that kills byte-length as identity:** `openaire/iis` and `allenai/papermage` both serve Apache-2.0 at **exactly `11,358 B`** with **different** sha256 (`cfc7749b96f6` vs `51b88fd3e9e2`). See `intel/trends.md` `T89`.
+
+### `965-R5` 🟢 `scieloorg` — one licence family, three different notices, and the DfE rule confirmed on a second continent
+
+| Repo | Bytes | sha256₁₂ | Holder string |
+|---|---|---|---|
+| [`scieloorg/packtools`](https://github.com/scieloorg/packtools) | `1,289 B` | `03aa7e926b57` | `SciELO` |
+| [`scieloorg/opac`](https://github.com/scieloorg/opac) | `1,294 B` | `edc3be5186be` | `SciELO ORG` |
+| [`scieloorg/scielo-manager`](https://github.com/scieloorg/scielo-manager) | `1,328 B` | `c0182a8ef5bb` | `SciELO <scielo-dev@googlegroups.com>` |
+
+🟢 **Second independent confirmation of `p942`'s DfE finding, now in LATAM, in BSD-2-Clause instead of MIT: attribution is PER-REPO, not per-estate.** One *"contains SciELO code"* line does not satisfy three notices. Two continents, two legal traditions, two licence families — **this is now a procedure, not an anecdote.**
+
+### `965-R6` 🔴 Dormancy, with the two classes kept apart
+
+| Repo | ★ | HEAD date | `pushed_at` | Class |
+|---|---|---|---|---|
+| [`titipata/scipdf_parser`](https://github.com/titipata/scipdf_parser) | 458★ | `2024-03-19` | `2024-03-21` | 🔴 **plain abandonment, ~32 months** — both measures agree |
+| [`allenai/papermage`](https://github.com/allenai/papermage) | 820★ | `2024-11-07` | `2024-11-08` | 🔴 **plain abandonment, ~25 months** |
+| [`scieloorg/opac`](https://github.com/scieloorg/opac) | 10★ | `2024-11-05` | `2026-01-26` | 🔴 **divergence, 14.7 months** — looks maintained, mainline is two years old |
+| [`htlin222/meta-pipe`](https://github.com/htlin222/meta-pipe) | 164★ | `2026-09-23` | `2026-11-21` | 🟡 divergence, 2 months |
+| [`ChaokunHong/MetaScreener`](https://github.com/ChaokunHong/MetaScreener) | 1,345★ | `2026-06-11` | `2026-06-11` | 🟡 **stable, not active** — 5.5 months, measures agree |
+| [`inveniosoftware/invenio`](https://github.com/inveniosoftware/invenio) | 663★ | — | `2026-06-29` | 🟡 5 months; the activity is in `invenio-app-rdm` |
+
+🔵 **The classes answer different questions.** Divergence asks *is the index lying to me*; plain dormancy asks *is anyone home*. `p964`'s record (GSA/openacr, 26 months) belongs to the first class and is **not** beaten by `scipdf_parser`'s 32 months, which belongs to the second.
+
+### `965-R7` 🟢 New verified addresses published this pass — 40 slugs, all resolved after writing
+
+🔵 Full shelves: `repos/foundations.md` (23 rows, the systems of record) and `agents/top.md` (17 rows, the agent tier). Headline permissive finds: [`grobidOrg/grobid`](https://github.com/grobidOrg/grobid) Apache-2.0 `5,249★`; [`ChaokunHong/MetaScreener`](https://github.com/ChaokunHong/MetaScreener) Apache-2.0 `1,345★`; [`DSpace/DSpace`](https://github.com/DSpace/DSpace) BSD-3-Clause `1,119★`; [`IQSS/dataverse`](https://github.com/IQSS/dataverse) Apache-2.0 `1,081★`; [`inveniosoftware/invenio-app-rdm`](https://github.com/inveniosoftware/invenio-app-rdm) **MIT** © CERN; [`scieloorg/packtools`](https://github.com/scieloorg/packtools) **BSD-2-Clause**; [`ourresearch/oadoi`](https://github.com/ourresearch/oadoi) + [`openalex-guts`](https://github.com/ourresearch/openalex-guts) MIT; [`ror-community/ror-api`](https://github.com/ror-community/ror-api) MIT © Crossref; [`openaire/iis`](https://github.com/openaire/iis) Apache-2.0; [`opencitations/ramose`](https://github.com/opencitations/ramose) **ISC**; [`DMPRoadmap/roadmap`](https://github.com/DMPRoadmap/roadmap) MIT; [`eLifePathways/sciencebeam-parser`](https://github.com/eLifePathways/sciencebeam-parser) MIT; [`samvera/hyrax`](https://github.com/samvera/hyrax) Apache-2.0.
+
 
 ## `2026-11-23` (p942) — **`item B` at 125 slugs instead of 10: twelve default branches are neither `main` nor `master`, one of them is a slash-bearing maintenance branch, and thirty-five grants sit outside the four-path root ladder. The British spelling `LICENCE` is a jurisdictional cluster, not a typo.**
 

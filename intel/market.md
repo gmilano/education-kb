@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-23
+updated: 2026-11-28
 ---
 
 # Market intelligence — education
@@ -1004,6 +1004,27 @@ from discovery.
 🟢 **The opportunity, and it sharpened this pass.** `p940` established that Illinois' guidance runs **409 pages** and is itself too large for a district to operationalise unaided. The federal framework plus **~100 state bills** plus district-level policies (Columbus, NYC) means the `P3` 50-state configurable work now has **three** layers to reconcile rather than one, and the reconciliation — not the policy writing — is the billable artefact.
 
 🔴 **The wedge is enforcement, not strategy.** Federal settlements over the **Illuminate Education** and **PowerSchool** breaches, alongside ongoing state privacy investigations, point at **2026 enforcement** against edtech data handling. A district buying AI tooling now inherits vendor data risk, so a **vendor data-flow and retention audit** is a concrete first engagement that does not require any policy question to be settled first. 🔵 Vendors named across these reports — **Microsoft, Google, AWS, IBM, Pearson, Instructure, Anthology, Coursera** — are the incumbents such an audit would be scoping against.
+
+#### `p965` — North America retreats for the **third consecutive industry**, and this time the retreating mandate is the one that funds the open repository tier
+
+🔴 **The measurement, and it is the headline of this pass's regional work.** The **Nelson memo** (OSTP, 2022) removed the 12-month publisher embargo and required **immediate** public access to publications and underlying data from *all* federal R&D funders, with a universal effective date of **2025-12-31**. As of this pass **it is reported to be in the process of being repealed and has not been confirmed repealed**:
+
+| Element | Measured state, `2026-11-28` |
+|---|---|
+| Nelson memo formally rescinded? | 🔴 **No primary OSTP or Federal Register document located.** Trade reporting (AIP *FYI*, May 2026) says OSTP is "apparently in the process of repealing" it |
+| Congressional posture | 🔴 A **January 2026** appropriations statement asked OSTP to report on the status of that repeal process; the **House FY2027 Commerce-Justice-Science report directs NSF to "pause implementation of new public access policies"** until the repeal completes |
+| Agency policies today | 🟢 **Still operative.** NIH's 2024 Public Access Policy and its `2025-07-01` effective date remain the binding compliance requirement; agency plans (PubMed Central, DOE PAGES, NSF-PAR) still require deposit of the Author Accepted Manuscript at publication |
+| What repeal would even mean | 🔴 **Unresolved in the sources themselves** — it may restore the 2013 Holdren memo's 12-month embargo option, or merely remove the obligation on agencies to adopt zero-embargo policies |
+| A second, colliding instrument | 🟡 OMB `2 CFR 200.461`'s treatment of publication costs is reported as colliding with the open-access mandate on an **October 2026** timeline |
+
+🔴 **THIRD CONSECUTIVE INDUSTRY IN WHICH NORTH AMERICA HAS RETREATED, AND THE THREE WERE MEASURED IN THREE CONSECUTIVE PASSES.** Retail `p8`: **FSMA 204 extended**. Technology `p13`: **ADA Title II web rule extended one year** by interim final rule to `2027-04-26`/`2028-04-26`. Education `p965`: **the federal public-access mandate is in repeal and NSF is being told to pause.** 🟢 **This is no longer an anecdote; it is three independent observations across three industries, and it changes how a studio sells in this region.** Recorded as a falsifiable trend in `intel/trends.md` `T86`.
+
+🔵 **CONSEQUENCE FOR DELIVERY, and it is the opposite of the EMEA and APAC pitch.** 🔴 **Do not sell a deadline in North America.** The agency policies are still in force, so the honest NA sell is **cost and audit**: the research office must still deposit under NIH/NSF/DOE plans, the deposit work is still manual, and an evidence-producing pipeline (`compose/patterns.md` `P501`) is worth buying whether or not the umbrella memo survives. 🟢 Frame it as *reducing the cost of a duty the client already has*, never as *meeting a deadline that may be withdrawn*.
+
+🟢 **The NA open supply in this plane is strong and is institutional, not commercial** (full evidence `repos/foundations.md` `p965`): [`IQSS/dataverse`](https://github.com/IQSS/dataverse) (Harvard, **Apache-2.0**, `1,081★`), [`samvera/hyrax`](https://github.com/samvera/hyrax) + [`hyku`](https://github.com/samvera/hyku) (**Apache-2.0**, Stanford-held notice), [`ourresearch/oadoi`](https://github.com/ourresearch/oadoi) and [`openalex-guts`](https://github.com/ourresearch/openalex-guts) (**MIT**, Unpaywall/OpenAlex), [`CDLUC3/dmptool`](https://github.com/CDLUC3/dmptool) (**MIT**, University of California), [`gallantlab/literature-review-toolkit`](https://github.com/gallantlab/literature-review-toolkit) (**MIT**, UC Berkeley lab). 🔴 **And the NA dormancy is also institutional:** [`allenai/papermage`](https://github.com/allenai/papermage) is `820★` and **~25 months** without a commit.
+
+🔵 **K-12 context measured on the same legs, for completeness of the regional picture.** More than **130 AI-in-education bills** across **31 states** were under consideration as of March 2026 and at least **28 states** had published official school AI guidance; Illinois requires its state board to publish district guidance by **2026-07-01**; executive orders from 2025 into early 2026 produced a national framework and a K-12 AI instruction task force. 🔴 Adoption outruns governance: **>4 in 5 teens** report having used AI tools and **>2/3** use them regularly, while one report finds **half of American students' schools have no AI policy at all**, and the Stanford AI Index 2026 reports **only 6% of teachers** say their school's AI policy is clear. 🔵 One North Carolina pilot measured the gap between provisioning and use precisely: **98.5% of eligible students registered** for a generative-AI tool and **28% actually used it** — a number to quote whenever a client proposes licence seats as a success metric.
+
 ### EMEA
 
 #### 🟢 `p942` (2026-11-23) — EMEA/UK: the permissive supply is in the state, not in the platforms — and it is MIT
@@ -2387,6 +2408,17 @@ self-hostable campus bridge.
 🟢 **Greece is the sellable item, because it names a role rather than a principle.** *"AI coordinators in participating secondary schools"* is a **staffing and training specification** — it implies role definition, a competency profile, induction material and an escalation path to teacher oversight. That is deliverable work on the `T78`/`T83` enumeration test, and it is the first EMEA instrument in this base to pass it. By contrast the `EDU-IA` instrument, with its date in dispute for three consecutive passes, remains advisory work.
 
 🔴 **The OpenAI/ThinkYoung line is the most useful sentence EMEA has produced for a proposal, and it comes from the vendor side.** *Adoption and time savings do not establish better outcomes*, measured over 5,000 students in 10 countries. 🔵 **Quote it as the reason an engagement needs an evaluation design, not as a reason to delay deployment** — it converts the `940-F7` Reference Framework and the *Education Week* "billions spent, no idea what's worth buying" void into the same ask: **measurement**. A client who accepts that sentence has accepted the need for a baseline and a control, which is scope.
+
+#### `p965` — EMEA funds the capacity instead of mandating the duty, and the 2026-27 EOSC programme names **AI-readiness** as the goal
+
+🟢 **What was measured.** The **INFRAEOSC** call (`HORIZON-INFRA-2026-01-EOSC`) carried an indicative **€50 M**, closed **2026-06-16**, with selection notices expected **November 2026**; its subject is uptake of FAIR data-management practice and of EOSC by research communities. The **2026-2027 work programme** grows EOSC into a federation of national and thematic nodes and explicitly targets **"AI-readiness and machine actionability"**. Separate Horizon Europe funding strengthens **non-profit open-access institutional publishing** and the capacity of research-performing organisations to work strategically on open access. A 2027 EOSC Federation topic describes a *"trusted, sovereign and secure environment … for FAIR research data"*.
+
+🔴 **Declared gap, and it is a coverage gap rather than a finding of absence.** This pass **did not locate a new 2026 instrument obliging universities to meet open-access obligations through EOSC**. Horizon Europe's existing grant-agreement open-access terms are the operative obligation, and they were **not byte-read**: the general annexes and model grant agreement are not on `raw.githubusercontent.com` and every non-GitHub host is refused by this session's network policy (`T82` — an unreachable host is evidence about the network, not about the host). **The EMEA mandate position in this plane is therefore ATTRIBUTED-UNVERIFIED and must not be quoted to a client as a deadline.**
+
+🟢 **The EMEA open supply in this plane is the deepest of the four regions, and it is permissive** (`repos/foundations.md` `p965`): [`grobidOrg/grobid`](https://github.com/grobidOrg/grobid) (**Apache-2.0**, `5,249★`, France — the most-starred artefact in the whole plane), [`inveniosoftware/invenio-app-rdm`](https://github.com/inveniosoftware/invenio-app-rdm) (**MIT**, © CERN — the platform under Zenodo), [`openaire/iis`](https://github.com/openaire/iis) (**Apache-2.0** — the EU publication/data/funding graph), [`opencitations/ramose`](https://github.com/opencitations/ramose) (**ISC**, Bologna), [`eLifePathways/sciencebeam-parser`](https://github.com/eLifePathways/sciencebeam-parser) (**MIT**, eLife, UK). 🔴 The EMEA **journal** platform is [`openlibhums/janeway`](https://github.com/openlibhums/janeway) and it is **AGPL-3.0**: hosting an AI layer over it inherits the obligation.
+
+🔵 **Governance context on the same legs.** The Council of Europe **launched a new expert committee on AI and EdTech governance at Bett UK 2026** (January, London) and its policy-options paper proposes a **legally binding instrument specific to AI in education**, grounded in human rights and child protection, building on the AI Act, GDPR and UN frameworks — which keeps `T76` and `T81` live and still **disputed as to deadline**. Eurydice published a 2026 report on digital education in European schools. Reported adoption: **67% of teachers** now use AI tools (Futuresource), with higher education projected to lead AI-PC adoption from **4.3 M units in 2026 to 15 M by 2030**. National divergence persists — Lithuania above the European average; **Spain with widespread classroom use and no specific national regulation**. BCG's April 2026 report argues the binding constraint is **institutional alignment across ministries, providers, employers and funders**, not technology — which is `T76` restated by a consultancy and is the single most useful sentence to quote in a ministry conversation.
+
 ### APAC
 
 #### 🔵 `p940` (2026-11-23) — APAC: a measured nil on supply, and share figures that remain vendor-tier
@@ -3711,6 +3743,29 @@ engagement that must satisfy a regulator and a curriculum at once.
 🟢 **The opportunity is curriculum procurement, and the hours figure is what makes it costable.** Eight hours a year in Beijing, six in Guangdong, and India from Grade 3 in 2026–27 fix **volume, year-level and start date** — enough to scope content production, teacher training and assessment without resolving a single policy ambiguity.
 
 🔴 **Two disciplines, both load-bearing.** First, **do not generalise across the region**: an APAC proposition built on the Chinese or Indian posture is wrong for Japan and Malaysia, two of the five jurisdictions here. Second, **mandates are expanding while private investment contracts** — which points the work at **publicly funded curriculum and teacher-training programmes and at ministry buyers**, not at venture-backed product bets.
+
+#### `p965` — APAC is where the open-access duty is **operational**, and the register is fund-years and deposit deadlines rather than hours and grades
+
+🟢 **Japan — a live, dated, enforceable mandate, and the compliance route is the institutional repository.** The national policy (formulated by the Integrated Innovation Strategy Promotion Council, February 2024) requires **immediate open access, no embargo**, to publications **and underlying data** from designated competitive funds. Measured specifics:
+
+| Element | Measured state |
+|---|---|
+| Who it binds | 🔴 **JST FOREST and the Strategic Basic Research Programs, for applications from FY2025 onward** |
+| The cut, and it matters | 🔴 **Only funds *announced* in FY2025 or later.** Funds announced in or before FY2024 are **not** subject, even if approved in FY2025 |
+| Compliance route | 🟢 **Deposit in an institutional repository** — which is precisely why the open repository tier in `repos/foundations.md` is the APAC delivery surface |
+| Non-compliance | 🟡 Recipients who cannot comply **must report the reasons to the funding agency in writing** |
+| Rights conflict, named in the literature | 🔴 Subscription-journal copyright transfer can conflict with immediate deposit; Japanese commentary recommends a **Rights Retention Strategy** of the Plan S kind |
+| Budget | 🟡 Reported as carrying **no dedicated national APC budget and no gold-OA requirement** — publishers must tolerate deposit, not change licences. 🔵 *Secondary commentary; treat as attributed.* |
+| Infrastructure | 🟢 **J-STAGE Data** (JST) assigns DOIs automatically and distributes open access; from **2025-03-04** it supports registration of Common Metadata Elements for publicly funded research, searchable on the **NII Research Data Cloud** |
+
+🟢 **India — ONOS, in year two of three, and it is an access programme rather than a deposit mandate.** ~**₹6,000 crore** for calendar years **2025, 2026 and 2027** as a new Central Sector Scheme; **13,000+ journals from 30 international publishers**; phase one covers **all 6,300 central- and state-government higher-education institutions and research institutes**, ~**1.8 crore** students, faculty and researchers. First-year uptake: **>11.3 crore articles downloaded**, led by IIT Madras overall, with BHU (15.3 lakh) and Delhi University (14.2 lakh) the leading central universities. 🟡 **Phase 2 — extension to private and private deemed-to-be universities — is reported as *under consideration* (September 2026) with no confirmed decision or date; recorded as proposed, not as policy.**
+
+🔴 **The APAC open supply in this plane is the weakest of the four regions, and the shape of the weakness is specific.** `0` permissive APAC-authored agents. The two APAC artefacts measured are [`bajianle/PaperGuard`](https://github.com/bajianle/PaperGuard) (Apache-2.0, `14★`, no description — one of five unrelated repos sharing that name) and [`htlin222/meta-pipe`](https://github.com/htlin222/meta-pipe) (Taiwan, `164★` — **the second-most-starred artefact in the plane and unusable**, under a bespoke *Academic and Non-Commercial Use License*). 🟢 **So APAC has the clearest duty and the thinnest permissive supply simultaneously** — which is the most favourable commercial configuration in this plane, and it is the one to act on: the mandate is dated, the compliance route is an open platform from EMEA or NA, and no local permissive competitor exists.
+
+🔵 **Declared gaps, written down rather than left silent.** **China's CSTR identifier system, any China-Japan repository interoperability, and any 2026 Chinese open-science instrument were NOT located** — the one source reached was a 2026 National Library of China paper discussing *Japan's* FY2025 policy shift and CiNii upgrades for Chinese higher-education information services. That is a **coverage** gap, not a finding of low activity, and it would need Chinese-language government sources. **Korea, Australia and ASEAN open-access mandates were not probed.**
+
+🔵 **Regional context on the same legs.** The **Ipsos Education Monitor 2026** finds *lower* support for banning AI in Asian schools than for restricting children's social media. Times Higher Education reports uneven university uptake — **44%** with 5G access, **30%** virtual-tutor adoption. Market research (Ken Research, Arizton — commercial estimates) puts APAC above **45%** of global EdTech share with China the largest revenue pool and India the growth market. Convenings: Cambridge English gathered **200+** senior leaders including ministries in Singapore (May 2026); the World Bank ran its Global EdTech Policy Academy in Seoul (**2026-08-31** to **2026-09-04**). 🔵 The **UAE's 25 generative-AI prohibitions** (February 2026) remain the operational instrument this base already holds — **written hyphenated in four places in this file**, so grep the number and the noun, not the phrase as a search engine renders it.
+
 ### LATAM
 
 #### 🔵 `p940` (2026-11-23) — LATAM: a measured nil, and the governance-vacuum mechanism re-confirmed from a fresh source
@@ -4863,6 +4918,29 @@ the nine-year-old academic system of a Brazilian **state** university.
 🟢 **Two further concrete openings.** The **IDB's 193 counted initiatives** are a sourcing list — a region where someone has already enumerated what exists is a region where a consolidation engagement can be scoped from public data rather than from a discovery phase the client pays for. And **ILIA's regulation subdimension across 33 countries** is the only regional instrument in this base that scores *regulatory* maturity per country, which is what a multi-country rollout needs in order to sequence.
 
 🔴 **The standing caution is unchanged and now has a second specimen.** `p939` rejected a self-selected 92%/79% pair; this pass's 92%/67% is the same shape from the same channel. **Use IESALC's 200-institution / 19-country framing for any claim a client will act on**, and treat the high percentages as evidence that usage precedes policy — which is the argument for the engagement — not as a measured adoption rate.
+
+#### `p965` — LATAM is the **supply side** of this plane, not its localisation problem, and that is a reversal of this base's own prior finding
+
+🟢 **The measurement, and it is the one regional result in this pass that inverts an existing trend rather than extending it.** In the scholarly plane LATAM does not adopt infrastructure built elsewhere — **it built the reference implementation and licensed it permissively.**
+
+| Element | Measured state, `2026-11-28` |
+|---|---|
+| Diamond OA prevalence, SciELO journals | 🟢 **89.15%** under the diamond model |
+| Diamond OA among LatAm open-science journals | 🟢 **39.86%** diamond, 34.15% hybrid |
+| Redalyc scale (August 2026) | 🟢 **>770,000 articles** from **>1,800 journals** |
+| Funding model | 🟢 **Institutional and stable** — SciELO, Latindex, Redalyc and AmeliCA are hosted by FAPESP, UNAM and UAEM on **standing institutional funding, not project grants** |
+| Shared technical layer | 🟢 SciELO offers **XML production, hosting and DOI registration as a service** to member journals |
+| The code | 🟢 **BSD-2-Clause** — [`scieloorg/packtools`](https://github.com/scieloorg/packtools) `1,289 B` `03aa7e926b57`, [`scieloorg/opac`](https://github.com/scieloorg/opac) `1,294 B` `edc3be5186be`, [`scieloorg/scielo-manager`](https://github.com/scieloorg/scielo-manager) `1,328 B` `c0182a8ef5bb` — **the most permissive grant measured anywhere in this plane** |
+| Metadata route out | 🟢 Redalyc exposes **OAI-PMH** harvesting at journal, institutional and country level |
+
+🔴 **Contrast this with `T462`, which this base recorded for the skills-taxonomy register:** there, the LATAM and APAC path was *"localisation of a permissive platform, not adoption of a local one, because no local one exists."* 🟢 **In this plane the local one exists, it is permissive, and it is the global reference.** First plane in this knowledge base where LATAM is the supply. Recorded as `intel/trends.md` `T87`.
+
+🔴 **And the honest caveats, because a studio that quotes only the table above will be caught.** `scieloorg/opac`'s mainline is **14.7 months behind its `pushed_at`** (HEAD `2024-11-05` vs pushed `2026-01-26`); `scieloorg/scielo-manager`'s default branch is **`beta`**, so a `main`/`master` licence ladder reports it as ungranted; [`scieloorg/Web`](https://github.com/scieloorg/Web) is **alive and carries no root licence file at all** on a 16-path ladder. Star counts are **7-16**, i.e. this is national infrastructure with a hobby-scale GitHub footprint — **judge it by the 770,000 articles, never by the stars.** 🔴 **`0` of 17 agents in this plane are LATAM-authored.** The regional opportunity is therefore the **agent layer over LATAM's own open platform**, not another platform.
+
+🔵 **LA Referencia was NOT found by this pass's searches** and is recorded as an unmeasured gap rather than as covered: the diamond-OA leg returned SciELO, Latindex, Redalyc and AmeliCA and **nothing on LA Referencia at all**, despite it being the regional repository-harvesting network. **Declared.**
+
+🔵 **Adoption and governance context on the same legs.** An **AI in Higher Education LATAM Survey 2026** reports **92% of students using AI regularly and 67% at least weekly**; UNESCO IESALC finds adoption *"neither uniform nor evenly distributed"*, with marked public/private gaps, and a survey of **200 institutions across 19 countries** finds the **gap between adoption and institutional governance particularly pronounced in LAC**, with respondents reporting a *lack of formal policies for the use of AI in universities*. The IDB counts **193 AI initiatives** regionally and describes hybrid, context-sensitive systems; OEI/ProFuturo find K-12 system-level adoption *"very limited"* with few exceptions. **EdTech Hub and Fundación Ceibal launched a partnership on AI governance in education in September 2026.** ECLAC/CEPAL publishes the Latin American AI Index (ILIA) with a regulation subdimension. 🟢 **This is `T59`/`P59` in regional form: the binding constraint is governance capacity, and the deliverable is the institutional governance layer — which in this plane has an unusually concrete anchor, because the institution already owns its publishing stack.**
+
 ### Global
 
 #### 🆕 `p928` — the four mandated prose legs are a **nil for the forty-seventh consecutive pass**, and this pass measured the channel that is not nil
@@ -5078,6 +5156,30 @@ it. A small repository and a large door.
 a `total_count` of **817** and serves **499** — below the API's 1,000-row ceiling, with no error and
 `incomplete_results: false`. **A leg that returns fewer rows than it promised has not necessarily
 been exhausted**, and neither this pass's instrument nor `p928`'s detects the condition.
+
+
+#### `p965` — the scholarly plane, globally: the sector opened its systems of record and did not open its agents
+
+🟢 **Market map of the open scholarly tier, measured `2026-11-28`** (addresses and grants in `repos/foundations.md`):
+
+| Layer | Open artefact that actually runs the layer | Grant | Is there an open **agent** on top? |
+|---|---|---|---|
+| Institutional repository | **DSpace** (>3,300 installations) | 🟢 BSD-3-Clause | 🔴 **None** |
+| Research data archive | **Dataverse** (Harvard), **InvenioRDM** (CERN/Zenodo) | 🟢 Apache-2.0 / **MIT** | 🔴 **None** |
+| Journal platform | **OJS** (1,049 forks), **Janeway** | 🔴 GPL-3.0 / AGPL-3.0 | 🔴 **None** |
+| Regional publishing network | **SciELO stack** | 🟢 BSD-2-Clause | 🔴 **None** |
+| PDF → structure | **GROBID** (5,249★) | 🟢 Apache-2.0 | 🟢 consumed by several |
+| Open catalogue / OA status | **OpenAlex**, **Unpaywall** | 🟢 MIT | 🟢 consumed by several |
+| Institutional identity | **ROR** | 🟢 MIT | 🟡 rarely used |
+| Funder graph | **OpenAIRE IIS** | 🟢 Apache-2.0 | 🔴 **None** |
+| Data-management plans | **DMPRoadmap / DMPTool** | 🟢 MIT | 🔴 **None** |
+| Review screening | **MetaScreener** (1,345★) | 🟢 Apache-2.0 | 🟢 **the one engine** |
+| Research integrity | ⛔ **nothing open at institutional scale** | — | 🔴 triage only |
+| **Deposit & compliance reporting** | the platforms' own APIs | 🟢 permissive | 🔴 **EMPTY — `P501` is written against this** |
+
+🔴 **The pattern across the four regions, stated once.** The duty is **operational in APAC** (Japan FY2025 funds, repository deposit, written opt-out), **funded-but-unverified in EMEA** (EOSC €50 M, "AI-readiness" as a programme goal, no new 2026 university mandate located), **retreating in North America** (Nelson memo in repeal, NSF told to pause), and **structurally solved in LATAM** (89.15% of SciELO journals diamond, on standing institutional funding). 🟢 **A single global pitch does not survive this map; four regional pitches do, and they are different sales, not different slides.**
+
+🔵 **Opportunity, sized by what is missing rather than by a market figure.** The global AI-in-education market estimates this base already carries disagree by orders of magnitude and are not re-quoted here. What *is* measurable: **every layer of the scholarly system of record is open and permissive or near-permissive, and the deposit/compliance/reporting layer above it has zero open agents.** That is a buildable, ownable integration in the one industry tier where the client already controls the substrate.
 
 ## Declared gaps
 

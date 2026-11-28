@@ -1,8 +1,61 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-23
+updated: 2026-11-28
 ---
+
+## `2026-11-28` (p965) — **The research side of a university, measured for the first time: it runs on open systems of record and has no open agents on top of them. Four discovery instruments failed in four different ways on repos that `ls-remote` served without complaint, and `NOASSERTION` was wrong twice and right once in the same hour.**
+
+🟢 **Rotation was correct this time and the anomaly did not recur.** `rotation.json` read `next: 8` / `last_industry: technology` / `2026-11-28`, and `education-kb`'s remote HEAD was `1609e7a` *"ingest: education KB update 2026-11-23 (p942)"* — **five days old, and the stalest of the twelve KBs** on the one-call freshness probe. 🔵 So `p942`'s warning (*"if the next education pass still finds `next: 8`, the fault is the scheduler"*) **does not fire**: the technology pass `p964` legitimately advanced `7 → 8`, and this is education's slot. 🟢 **The freshness probe, run first, cost one call and confirmed the pointer rather than contradicting it:** `gh api -X GET search/repositories -f q='user:gmilano' -f per_page=100 --jq '.items[]|"\(.pushed_at) \(.name)"' | sort` → education `11-23 23:58` (stalest), automotive `11-24 02:54`, energy `11-24 06:57`, enterprise `11-25`, gaming `11-25`, legal `11-25`, financial `11-25`, healthcare `11-25`, media `11-28 08:54`, retail `11-28 09:57`, travel `11-28 11:55`, technology `11-28 12:55`.
+
+🔵 **Plane: scholarly and research infrastructure** — repositories, journal platforms, research data management, persistent identifiers, open-access compliance, research integrity. Chosen by bounded probe over the six live files: `open access` → **0**, `research data management` → **0**, `persistent identifier` → **0**, `paper mill` → **0**, `Open Science` → **0**, `SciELO`/`Dataverse`/`Invenio` → **0**; `Zenodo` → **1**, and that one was a DOI on a Brazilian curriculum dataset. 🔴 **Two candidate planes were rejected by probe before this one was chosen, and both rejections were the probe doing its job:** *skills taxonomy / TVET* looked empty on `skills taxonomy` (0), `O*NET` (0) and `TVET` (0) but `Tabiya` returned **9** hits and the trending files already held `tabiya-tech/compass`, `taxonomy-model-application`, `tabiya-esco-datasets-and-tools`, `esco skill extraction` and `onet occupation api` — **covered**; *autograding / rostering* looked plausible but `Ed-Fi` (310), `OneRoster` (468), `xAPI` (812), `nbgrader` (95), `Judge0` (28) and `INGInious` (64) are all held. 🔵 **`ESCO` returned 112 case-insensitive hits of which `329+156` were `UNESCO` and `107` were `radescope`** — the substring trap `p964` warned about, caught this time before it chose a plane.
+
+### `965-F1` 🔴 The headline: the sector opened its systems of record, and the integration layer above them is empty
+
+Full shelves in `repos/foundations.md` and `agents/top.md`; the law it revises is `intel/trends.md` `T85`.
+
+| Layer | Open artefact | Grant, read as served bytes | Open agent on top? |
+|---|---|---|---|
+| Institutional repository | `DSpace/DSpace` `1,119★`/`1,510` forks | 🟢 BSD-3-Clause `1,504 B` `baf9ee18d437` | 🔴 **none** |
+| Research data archive | `IQSS/dataverse` `1,081★` | 🟢 Apache-2.0 `10,889 B` `194b865caa80` | 🔴 **none** |
+| Research data archive | `inveniosoftware/invenio-app-rdm` | 🟢 **MIT** `1,244 B` `5bc24a42896d` © CERN | 🔴 **none** |
+| Journal platform | `pkp/ojs` `1,061★`/`1,049` forks | 🔴 GPL-3.0 `35,149 B` `3972dc9744f6` | 🔴 **none** |
+| Regional network | `scieloorg/packtools` | 🟢 **BSD-2-Clause** `1,289 B` `03aa7e926b57` | 🔴 **none** |
+| PDF → TEI | `grobidOrg/grobid` **`5,249★`** | 🟢 Apache-2.0 `11,189 B` `83559ecf8fcf` | 🟢 consumed |
+| OA status / catalogue | `ourresearch/oadoi`, `openalex-guts` | 🟢 MIT | 🟢 consumed |
+| Review screening | `ChaokunHong/MetaScreener` `1,345★` | 🟢 Apache-2.0 `11,238 B` `8868b9851436` | 🟢 **the one engine** |
+| **Deposit / compliance** | the platforms' own APIs | 🟢 permissive | 🔴 **ZERO of 17 agents touch them** |
+
+🔴 **The agent tier's shape, measured rather than characterised:** 17 artefacts, median `17★`; **two of the top five are lists of prompts** (`O0000-code/awesome-academic-skills` `77★` CC0 and `brycewang-stanford/lit-review-agent-tools` `61★` CC0 — *shipping the same licence file to the byte*, `7,048 B` `2f976aeae6ab`); the **second-most-starred** artefact (`htlin222/meta-pipe`, `164★`) is under a **bespoke non-commercial licence** and is unusable; and exactly one artefact (`MetaScreener`) has both scale and a permissive grant.
+
+### `965-F2` 🔴 "PaperGuard": the recommended open paper-mill detector has no repository, and the name returns five that look like it
+
+The industry leg recommended **PaperGuard** (PyPI) as the open paper-mill screener — `2.17.0` stable, **41 detectors**, 150+ tortured-phrase fingerprints, citation-graph signatures, PubPeer and Retraction Watch cross-checks. The name resolves to **five unrelated repositories**: `bajianle/PaperGuard` (`14★`, Apache-2.0 `11,560 B` `3ddf9be5c28f`, no description), `UNITES-Lab/PaperGuard` (`5★`, ICML-2025 code on **attacking** AI reviewers), `exergyleizhou-ux/PaperGuard` (`3★`, MIT, tabular anomaly screener), `SalehaSamreen/paperguard` (`1★`, MIT), and ⚫ `LucasTHCRR/PaperProxy` (`2★`, **a Minecraft server proxy**). 🔴 **None matches the claims.** Published as **ATTRIBUTED-UNVERIFIED, no repository located** — and the near-miss is worth naming: the Apache-2.0 `14★` repo would have made a plausible-looking table row. 🟢 **A registry package name is not an address.**
+
+### `965-F3` 🔴 `NOASSERTION` was wrong twice, right once and under-specified once — four cases, one plane, one hour
+
+Evidence table in `intel/trends.md` `T88`. 🟢 **The new named cause is the valuable part: `IQSS/dataverse` is genuinely Apache-2.0** — `grep -c 'TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION'` → `1`, `grep -c '"Derivative Works" shall mean'` → `1`, 192 lines, `10,889 B` — **and it is invisible to SPDX detection because of ONE SENTENCE OF PROSE above the canonical text.** Sixth named form of the licence defect in this base, and the only one whose fix is *deleting a sentence*. 🔴 Against that: `htlin222/meta-pipe`'s `NOASSERTION` was **correct** — `3,153 B` of bespoke *"Academic and Non-Commercial Use License / 學術與非商業使用授權"*. 🟢 **Both halves of the procedure are now evidenced on the same shelf: never discard a `NOASSERTION` repo you need, and never adopt one either.**
+
+### `965-F4` 🔴 This pass's own instruments: three real defects found, and one prediction of mine refuted
+
+🟢 **Refuted, mine, before it was published:** I expected licence **byte length** to be a usable weak identity check after `p941`'s four parser bugs. It is not. `openaire/iis` and `allenai/papermage` both serve Apache-2.0 at **exactly `11,358 B` with different sha256** (`cfc7749b96f6` vs `51b88fd3e9e2`), and Apache-2.0 appears at **nine distinct lengths** on one shelf because the appendix carries the holder. Length is a weak fingerprint of the *publisher*, never a test of the *licence* (`T89`).
+
+🔴 **Defect 1 — the 16-path ladder still misses, and the misses cluster on default branches.** `IQSS/dataverse` and `IQSS/dataverse-frontend` default to **`develop`**; `DSpace/xoai` to **`3.x`** (second slash-free version-named default after `edu-sharing`'s `maven/fixes/10.0`); `scieloorg/scielo-manager` to **`beta`**. A `{main,master}` ladder reports all four as ungranted. 🟢 Every probe in this pass ran against the branch `git ls-remote --symref` reported, and this is why.
+
+🔴 **Defect 2 — `pushed_at` vs default-branch HEAD, two more cases:** `scieloorg/opac` `pushed 2026-01-26` vs HEAD **`2024-11-05`** = **14.7 months**; `htlin222/meta-pipe` `pushed 2026-11-21` vs HEAD `2026-09-23` = 2 months. 🔵 And a *plain* dormancy record that must not be conflated with that class: `titipata/scipdf_parser` `458★`, HEAD `2024-03-19` and `pushed_at 2024-03-21` **agree** — ~32 months of abandonment, not divergence; `allenai/papermage` `820★`, HEAD `2024-11-07`, ~25 months.
+
+🔴 **Defect 3 — three discovery failures in one pass, catalogued in `T90`:** a **422** on a renamed slug (`kermitt2/grobid`, which serves the identical HEAD and licence hash as `grobidOrg/grobid`), a **silent empty result** on a live slug (`CDLUC3/dmptool`), and a keyword search for `DMPRoadmap` that returned **five satellites and not the `119★` project**.
+
+### `965-F5` 🔵 The regional legs, and the one that inverts a finding of ours
+
+🔴 **North America retreated for the THIRD consecutive industry** — Nelson memo reported in repeal, House FY2027 CJS report directing NSF to *pause implementation of new public access policies*, no primary rescission document locatable. After retail's FSMA 204 and technology's ADA Title II. **`T86`, and it is falsifiable.** 🟢 **APAC is where the duty is operational**: Japan's immediate-OA requirement binds **JST FOREST and Strategic Basic Research applications from FY2025 onward**, compliance is **repository deposit**, and non-compliance requires a **written reason to the funder**; India's ONOS is in year 2 of 3 (~₹6,000 crore for 2025-2027, 13,000+ journals, 6,300 institutions, **11.3 crore downloads in year one**). 🟡 **EMEA funds capacity rather than mandating duty** (INFRAEOSC **€50 M**, closed `2026-06-16`, selections Nov 2026; the 2026-27 programme names **"AI-readiness and machine actionability"**) — and **no new 2026 university mandate was located, which is declared as ATTRIBUTED-UNVERIFIED, not as absence.** 🟢 **LATAM is the supply side**: `89.15%` of SciELO journals diamond OA, Redalyc `>770,000` articles / `>1,800` journals, standing institutional funding, and the stack is **BSD-2-Clause** — the first plane in this base where LATAM supplies rather than localises (**`T87`**, against our own `T462`).
+
+🔴 **Gaps written as gaps.** **LA Referencia returned nothing at all** on the diamond-OA leg and is recorded as unmeasured. **China's CSTR, any China-Japan interoperability and any 2026 Chinese open-science instrument were NOT located** — a coverage gap needing Chinese-language sources, not a finding of low activity. **Korea, Australia and ASEAN OA mandates unprobed.** **Crossref's own code has MOVED OFF GITHUB to GitLab** (`CrossRef/pdfextract` `508★`, `pdfstamp`, `pdfmark`, `reference-matching-evaluation` all carry *"MOVED TO gitlab.com/crossref/…"*), so any GitHub-only census of this plane **systematically understates one of its four registries**. **CRIS/RIMS (VIVO, Pure, Symplectic, Converis), preprint servers (OSF, SciELO Preprints) and reference managers (Zotero, JabRef) unprobed.** **No open institutional research-integrity screener exists** — Wiley, STM Integrity Hub and Clear Skies are closed, and the Problematic Paper Screener has **no locatable repository**.
+
+### The 49th consecutive nil-supply leg on the mandated English-prose searches
+
+🔴 All five mandated legs ran and returned **zero repositories this base did not already hold**: `DeepTutor`, `GarethManning/education-agent-skills`, `TapXWorld/ChinaTextbook`, `microsoft/generative-ai-for-beginners`, `microsoft/AI-For-Beginners`, `OpenEduCat`, plus general-purpose frameworks (`OpenHands`, `browser-use`, `CrewAI`, `Dify`, `Langflow`) that are not education artefacts. 🟢 **All 40 verified repos in this pass came from register-specific heads** — `user:scieloorg`, `user:inveniosoftware`, `user:ourresearch`, `user:ror-community`, `systematic review screening AI`, `peer review AI agent open source`, `mcp server openalex semantic scholar`, `grobid`. **`P210` holds, 49-for-49.**
+
 
 ## `2026-11-23` (p942) — **The append-only corpus is adjudicated for the first time: 218 of its published fixtures reproduce only when stripped, at the *same* rate as the shelf — so the defective shell was never localised to two passes. And the byte-count defect this pass set out to measure does not exist: both of its own instruments manufactured one.**
 
